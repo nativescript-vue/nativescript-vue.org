@@ -13,9 +13,9 @@ const watch = require('metalsmith-watch');
 const when = require('metalsmith-if');
 
 // custom plugins
+const link_index = require('./plugins/link_index');
 const changeExt = require('./plugins/change-ext');
 const markdown = require('./plugins/markdown');
-const partials = require('./plugins/partials');
 const layouts = require('./plugins/layouts');
 const toc = require('./plugins/toc');
 
@@ -104,6 +104,7 @@ Metalsmith(cwd)
   .use(linkcheck({
     failMissing: false
   }))
+  .use(link_index())
   // build the site
   .build((err) => {
     if (err) {

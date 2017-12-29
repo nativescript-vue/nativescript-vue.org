@@ -2,21 +2,40 @@
 layout: landing.ejs
 ---
 
-<div class="bg-blue-dark">
-    <div class="container mx-auto p-8">
-        Index
+<div class="bg-blue-light">
+    <div class="container mx-auto px-4 py-8">
+
+        <div class="w-1/2 my-8">
+            <h1 class="text-5xl leading-tight text-white">Truly native apps using Vue.js and NativeScript</h1>
+
+            <p class="w-4/5 leading-loose text-white mt-4">
+                Want to release that app you've been dreaming about
+                without the hassle of learning new languages?
+
+                NativeScript-Vue is the right choice for you!
+            </p>
+
+            <a href="#" class="px-8 py-4 inline-block bg-green text-white font-bold text-lg no-underline mt-8">
+                Get Started
+            </a>
+        </div>
+
     </div>
 </div>
 
-<div class="container mx-auto p-8">
-    <div class="flex -mx-8">
-        <div class="w-1/2 px-8 bg-grey-light">
-            <h4>Docs</h4>
-            <%- include('_partials/links', { posts: collections.blog }) %>
+<div class="container mx-auto py-8 ">
+    <div class="flex -mx-4">
+        <div class="w-1/2 px-4">
+            <div class="bg-grey-lighter p-4">
+                <h4>Docs</h4>
+                <%- include('_partials/links', { posts: collections.blog }) %>
+            </div>
         </div>
-        <div class="w-1/2 px-8 bg-grey-light">
-            <h4>Posts</h4>
-            <%- include('_partials/links', { posts: collections.docs }) %>
+        <div class="w-1/2 px-4">
+            <div class="bg-grey-lighter p-4">
+                <h4>Posts</h4>
+                <%- include('_partials/links', { posts: collections.docs }) %>
+            </div>
         </div>
     </div>
 </div>

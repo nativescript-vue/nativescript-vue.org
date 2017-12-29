@@ -1,7 +1,7 @@
-<ul>
+<ul class="list-reset">
     <% posts.forEach((post) => { %>
     <li>
-        <a href="/<%= post.path %>"><%= post.title %></a>
+        <a class="no-underline text-green hover:underline" href="/<%= post.path %>"><%= post.title %></a>
     </li>
     <% }) %>
 </ul>

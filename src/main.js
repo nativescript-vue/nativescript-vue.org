@@ -18,9 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
       window.removeEventListener('resize', this._resizeListener)
     },
     methods: {
-      switchLang(new_lang) {
-        window.location.href = window.location.href + '/' + new_lang === 'en' ? '' : new_lang
-      }
     }
   });
 });
