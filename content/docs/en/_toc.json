@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Introduction",
+    "type": "main-category",
+    "children": [
+      {
+        "name": "Welcome",
+        "type": "link",
+        "children": []
+      }
+    ]
+  }
+]

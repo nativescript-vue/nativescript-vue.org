@@ -1,0 +1,111 @@
+const path = require('path');
+
+const Metalsmith = require('metalsmith');
+
+// plugins
+const multiLanguage = require('metalsmith-multi-language');
+const collections = require('metalsmith-collections');
+const permalinks = require('metalsmith-permalinks');
+const linkcheck = require('metalsmith-linkcheck');
+const dates = require('metalsmith-jekyll-dates');
+const inPlace = require('metalsmith-in-place');
+const layouts = require('metalsmith-layouts');
+const watch = require('metalsmith-watch');
+const when = require('metalsmith-if');
+
+// custom plugins
+const changeExt = require('./plugins/change-ext');
+const markdown = require('./plugins/markdown');
+const toc = require('./plugins/toc');
+
+const isDev = process.argv[2] === '--dev';
+const cwd = path.resolve(__dirname, '..');
+
+Metalsmith(cwd)
+// set globally available metadata
+  .metadata({
+    sitename: 'NativeScript-Vue',
+    siteurl: 'https://nativescript-vue.org/',
+    description: 'Build truly native apps using Vue.js'
+  })
+  // look for files in the content directory
+  .source('./content')
+  // output files to the dist directory
+  .destination('./dist')
+  // clean the dist directory before building
+  .clean(true)
+  // ignore directories and files starting with an _
+  .ignore([
+    '_**/*',
+    '**/_*',
+  ])
+  // watch the content dir when in dev mode (--dev)
+  .use(when(isDev, watch({
+    paths: {
+      "${source}/**/*.{md, ejs}": true,
+      "layouts/**/*": '**/*.md',
+    }
+  })))
+  // group certain files into collections
+  .use(collections({
+    blog: 'blog/*.md',
+    docs: {
+      pattern: 'docs/**/*.md',
+      refer: false
+    }
+  }))
+  // use jekyll style dates in the file names
+  .use(dates())
+  // use multiple languages
+  .use(multiLanguage({
+    default: 'en',
+    locales: ['en', 'hu']
+  }))
+  // render markdown using our own plugin around marked
+  .use(markdown())
+  // add table of contents using our own plugin
+  .use(toc())
+  // generate the final files to have pretty urls
+  .use(permalinks({
+    relative: false,
+
+    linksets: [
+      {
+        match: {collection: 'blog'},
+        pattern: 'blog/:date/:slug',
+      },
+      {
+        match: {collection: 'docs'},
+        pattern: ':locale/docs/:title'
+      }
+    ]
+  }))
+  // allow inPlace to process files
+  .use(changeExt({
+    pattern: `*.html`,
+    ext: '.ejs'
+  }))
+  // wrap content in handlebars layouts
+  .use(layouts({
+    engine: 'ejs',
+    default: 'default.ejs',
+    partials: 'layouts/_partials',
+    partialExtension: '.ejs',
+    rename: false
+  }))
+  // allow using template features inside the content directory
+  .use(inPlace({
+    engineOptions: {
+      partials: 'layouts/_partials',
+    }
+  }))
+  // finally check if we have broken links
+  .use(linkcheck({
+    failMissing: false
+  }))
+  // build the site
+  .build((err) => {
+    if (err) {
+      console.log(err.toString())
+    }
+  });
