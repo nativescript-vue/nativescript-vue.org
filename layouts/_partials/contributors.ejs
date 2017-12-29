@@ -1,7 +1,13 @@
-<h1>Contributors</h1>
-
-<ul>
-    <% contributors.forEach((contributor) => { %>
-    <li><%= contributor %></li>
+<div class="text-blue-dark text-center text-2xl mt-8">Contributors</div>
+<hr class="border-t-2 border-blue-lighter w-24">
+<div class="flex flex-wrap justify-center">
+    <% contributors.forEach((username) => { %>
+    <a class="flex flex-col p-4 items-center no-underline text-blue-dark font-bold hover:text-green"
+       href="https://github.com/<%= username %>" target="_blank">
+        <span class="w-16 h-16 rounded-full border-2 border-green overflow-hidden">
+            <img src="https://github.com/<%= username %>.png" alt="<%= username %>">
+        </span>
+        <span class="mt-1"><%= username %></span>
+    </a>
     <% }) %>
-</ul>
+</div>

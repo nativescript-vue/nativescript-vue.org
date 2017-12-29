@@ -11,6 +11,7 @@ const dates = require('metalsmith-jekyll-dates');
 const assets = require('metalsmith-assets');
 const watch = require('metalsmith-watch');
 const when = require('metalsmith-if');
+const moment = require('moment');
 
 // custom plugins
 const link_index = require('./plugins/link_index');
@@ -27,7 +28,8 @@ Metalsmith(cwd)
   .metadata({
     sitename: 'NativeScript-Vue',
     siteurl: 'https://nativescript-vue.org/',
-    description: 'Build truly native apps using Vue.js'
+    description: 'Build truly native apps using Vue.js',
+    moment
   })
   // look for files in the content directory
   .source('./content')
@@ -49,7 +51,11 @@ Metalsmith(cwd)
   })))
   // group certain files into collections
   .use(collections({
-    blog: 'blog/*.md',
+    blog: {
+      pattern: 'blog/*.md',
+      sortBy: 'date',
+      reverse: true,
+    },
     docs: {
       pattern: 'docs/**/*.md',
       refer: false
@@ -83,8 +89,12 @@ Metalsmith(cwd)
   }))
   // render all files in side a layout if specified
   .use(layouts({
+    default: 'post.ejs',
+    pattern: 'blog/**/*',
+  }))
+  .use(layouts({
     default: 'default.ejs',
-    pattern: '**/*',
+    pattern: ['**/*', '!blog/**/*'],
   }))
   // re-run the render for newly inserted template features
   .use(layouts({

@@ -19,11 +19,19 @@
         <div class="min-h-screen">
             <div class="container mx-auto flex">
                 <div class="w-full bg-white min-h-screen">
-                    <div class="p-4 md:p-8">
+                    <div class="p-4">
+                        <% if (typeof title !== 'undefined') { %>
+                        <div class="text-blue-dark text-4xl mt-4"><%= title %></div>
+                        <hr class="border-t-2 border-blue-lighter w-24 mx-0 mb-8">
+                        <% } %>
+
                         <div class="markdown-body">
                             <%- contents %>
                         </div>
 
+                        <% if (typeof contributors !== 'undefined') { %>
+                        <%- include('_partials/contributors', { contributors }) %>
+                        <% } %>
                     </div>
                 </div>
             </div>

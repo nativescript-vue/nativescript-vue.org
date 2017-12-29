@@ -1,0 +1,8 @@
+<% children.forEach(item => { %>
+<span><%= item.name %></span>
+<div>
+    <% if(item.children) { %>
+    <%- include('_partials/toc', { children: item.children }) %>
+    <% } %>
+</div>
+<% }) %>

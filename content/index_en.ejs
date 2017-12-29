@@ -27,14 +27,14 @@ layout: landing.ejs
     <div class="flex -mx-4">
         <div class="w-1/2 px-4">
             <div class="bg-grey-lighter p-4">
-                <h4>Docs</h4>
-                <%- include('_partials/links', { posts: collections.blog }) %>
+                <h4>Blog</h4>
+                <%- include('_partials/links', { items: collections.blog }) %>
             </div>
         </div>
         <div class="w-1/2 px-4">
             <div class="bg-grey-lighter p-4">
-                <h4>Posts</h4>
-                <%- include('_partials/links', { posts: collections.docs }) %>
+                <h4>Docs</h4>
+                <%- include('_partials/links', { items: collections.docs }) %>
             </div>
         </div>
     </div>

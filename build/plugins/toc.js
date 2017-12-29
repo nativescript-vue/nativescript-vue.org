@@ -13,12 +13,13 @@ function plugin(opts) {
       if (data.toc === true) {
         try {
           data.toc = new tocJSON().generateJSON(data.contents.toString());
+          console.log(data.contents.toString())
         } catch (err) {
           return done(err);
         }
       } else if (!!data.toc) {
-        const tocPath = path.resolve(metalsmith._source, data.paths.dir, data.toc);
         try {
+          const tocPath = metalsmith.path(metalsmith._source, path.dirname(file), data.toc);
           const toc = fs.readFileSync(tocPath);
           data.toc = JSON.parse(toc);
         } catch (err) {

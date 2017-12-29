@@ -19,17 +19,17 @@ function handlebarPartials(renderer) {
 function plugin(opts) {
   const renderer = new marked.Renderer();
 
-  renderer.heading = function(text, level, raw) {
-    let parsed = parseAnchor(raw);
-    let id = parsed.id;
-
-    return (
-      `<h${level} class="header">` +
-      `<a class="anchor" href="#${id}" id="${id}"></a>` +
-      `<a class="icon-link" href="#${id}">${text}</a>` +
-      `</h${level}>\n`
-    );
-  };
+  // renderer.heading = function(text, level, raw) {
+  //   let parsed = parseAnchor(raw);
+  //   let id = parsed.id;
+  //
+  //   return (
+  //     `<h${level} class="header">` +
+  //     `<a class="anchor" href="#${id}" id="${id}"></a>` +
+  //     `<a class="icon-link" href="#${id}">${text}</a>` +
+  //     `</h${level}>\n`
+  //   );
+  // };
 
   handlebarPartials(renderer);
 

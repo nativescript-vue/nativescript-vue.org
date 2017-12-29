@@ -20,23 +20,35 @@
             <div class="container mx-auto flex">
                 <div class="hidden md:w-1/4 md:block">
                     <div class="p-4 py-4 md:py-8">
-                        <%- include('_partials/toc', { children: toc }) %>
+                        <div class="uppercase tracking-wide text-blue-light text-sm mb-4">Recent posts</div>
+                        <ul class="list-reset">
+                            <% collections.blog.forEach((item) => { %>
+                            <li class="mb-3 border-l-2 pl-2 <%= path === item.path ? 'border-blue-dark' : 'border-transparent' %>">
+                                <a class="no-underline text-green leading-tight hover:underline"
+                                   href="/<%= item.path %>">
+                                    <%= item.title %>
+                                </a>
+                            </li>
+                            <% }) %>
+                        </ul>
                     </div>
                 </div>
                 <div class="w-full md:w-3/4 bg-white min-h-screen">
                     <div class="pl-8 py-4 pr-4">
                         <% if (typeof title !== 'undefined') { %>
                         <div class="text-blue-dark text-4xl mt-4"><%= title %></div>
-                        <hr class="border-t-2 border-blue-lighter w-24 mx-0 mb-8">
+                        <hr class="border-t-2 border-blue-lighter w-24 mx-0 mb-2">
+                        <% } %>
+                        <% if(typeof authors !== 'undefined') { %>
+                        <div class="text-blue-light mb-8">
+                            <%= moment(date).format('MMMM DD, YYYY') %>
+                            by <%- authors.map(author => `<a class="no-underline text-green hover:text-blue-dark" href="#">${author}</a>`).join(', ') %>
+                        </div>
                         <% } %>
 
                         <div class="markdown-body">
                             <%- contents %>
                         </div>
-
-                        <% if (typeof contributors !== 'undefined' ) { %>
-                        <%- include('_partials/contributors', { contributors }) %>
-                        <% } %>
                     </div>
                 </div>
             </div>

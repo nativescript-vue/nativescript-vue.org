@@ -1,7 +1,7 @@
 <ul class="list-reset">
-    <% posts.forEach((post) => { %>
+    <% items.forEach((item) => { %>
     <li>
-        <a class="no-underline text-green hover:underline" href="/<%= post.path %>"><%= post.title %></a>
+        <a class="no-underline text-green hover:underline" href="/<%= item.path %>"><%= item.title %></a>
     </li>
     <% }) %>
 </ul>

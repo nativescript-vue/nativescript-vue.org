@@ -3,7 +3,7 @@ const fs = require('fs');
 const ejs = require('ejs');
 
 function plugin(opts) {
-  const options = Object.assign({
+  const options = Object.assign({}, {
     directory: 'layouts',
     default: 'layout.ejs',
     inPlace: false,
@@ -18,7 +18,6 @@ function plugin(opts) {
       if (!multimatch(file, options.pattern).length) {
         return;
       }
-
       const data = files[file];
       data.contents = data.contents.toString();
       const context = Object.assign({}, metalsmith.metadata(), data);
