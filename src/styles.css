@@ -1,0 +1,16 @@
+@tailwind preflight;
+@tailwind utilities;
+
+@responsive {
+    .bg-docs-gradient {
+        background: linear-gradient(90deg, #f1f5f8 50%, #fff 50%)
+    }
+}
+
+.markdown-body a {
+    @apply .text-green
+}
+
+.transition-all-ease {
+    transition: all .3s ease;
+}

@@ -1,1 +1,22 @@
-Index
+---
+layout: landing.ejs
+---
+
+<div class="bg-blue-dark">
+    <div class="container mx-auto p-8">
+        Index
+    </div>
+</div>
+
+<div class="container mx-auto p-8">
+    <div class="flex -mx-8">
+        <div class="w-1/2 px-8 bg-grey-light">
+            <h4>Docs</h4>
+            <%- include('_partials/links', { posts: collections.blog }) %>
+        </div>
+        <div class="w-1/2 px-8 bg-grey-light">
+            <h4>Posts</h4>
+            <%- include('_partials/links', { posts: collections.docs }) %>
+        </div>
+    </div>
+</div>

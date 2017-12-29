@@ -15,16 +15,14 @@
         <!--<QuickStart />-->
         <%- include('_partials/header') %>
 
-        <div class="md:bg-docs-gradient min-h-screen">
+        <div class="min-h-screen">
             <div class="container mx-auto flex">
-                <div class="hidden md:w-1/4 md:block">
-                    <%- include('_partials/sidebar') %>
-                </div>
-                <div class="w-full md:w-3/4 bg-white min-h-screen">
+                <div class="w-full bg-white min-h-screen">
                     <div class="p-4 md:p-8">
                         <div class="markdown-body">
                             <%- contents %>
                         </div>
+
                     </div>
                 </div>
             </div>

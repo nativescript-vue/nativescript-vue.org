@@ -26,6 +26,7 @@ function plugin(opts) {
         }
       } else {
         data.toc = false;
+        data.layout = data.layout || 'no_sidebar.ejs'
       }
     });
     done();

@@ -5,16 +5,21 @@
   "main": "index.js",
   "scripts": {
     "dev": "node build/index.js --dev",
-    "build": "node build/index.js"
+    "build": "node build/index.js",
+    "build:css": "tailwind build src/styles.css -c ./tailwind.js -o static/styles.css",
+    "build:js": "babel src -d static"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "ejs": "^2.5.7",
     "jstransformer-ejs": "0.0.3",
     "marked": "^0.3.9",
     "metalsmith": "^2.3.0",
+    "metalsmith-assets": "^0.1.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-if": "^0.1.1",
     "metalsmith-ignore": "^0.1.2",
@@ -26,6 +31,7 @@
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-watch": "^1.0.3",
     "multimatch": "^2.1.0",
-    "table-of-contents-json": "^1.2.0"
+    "table-of-contents-json": "^1.2.0",
+    "tailwindcss": "^0.4.0"
   }
 }

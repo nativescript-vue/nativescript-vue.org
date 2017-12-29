@@ -8,14 +8,15 @@ const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
 const linkcheck = require('metalsmith-linkcheck');
 const dates = require('metalsmith-jekyll-dates');
-const inPlace = require('metalsmith-in-place');
-const layouts = require('metalsmith-layouts');
+const assets = require('metalsmith-assets');
 const watch = require('metalsmith-watch');
 const when = require('metalsmith-if');
 
 // custom plugins
 const changeExt = require('./plugins/change-ext');
 const markdown = require('./plugins/markdown');
+const partials = require('./plugins/partials');
+const layouts = require('./plugins/layouts');
 const toc = require('./plugins/toc');
 
 const isDev = process.argv[2] === '--dev';
@@ -80,24 +81,24 @@ Metalsmith(cwd)
       }
     ]
   }))
-  // allow inPlace to process files
-  .use(changeExt({
-    pattern: `*.html`,
-    ext: '.ejs'
-  }))
-  // wrap content in handlebars layouts
+  // render all files in side a layout if specified
   .use(layouts({
-    engine: 'ejs',
     default: 'default.ejs',
-    partials: 'layouts/_partials',
-    partialExtension: '.ejs',
-    rename: false
+    pattern: '**/*',
   }))
-  // allow using template features inside the content directory
-  .use(inPlace({
-    engineOptions: {
-      partials: 'layouts/_partials',
-    }
+  // re-run the render for newly inserted template features
+  .use(layouts({
+    inPlace: true,
+    pattern: '**/*'
+  }))
+  // rename remaining .ejs files to html
+  .use(changeExt({
+    pattern: `**/*.ejs`,
+    ext: '.html'
+  }))
+  // include our static assets
+  .use(assets({
+    source: './static'
   }))
   // finally check if we have broken links
   .use(linkcheck({
@@ -106,6 +107,6 @@ Metalsmith(cwd)
   // build the site
   .build((err) => {
     if (err) {
-      console.log(err.toString())
+      throw err;
     }
   });
