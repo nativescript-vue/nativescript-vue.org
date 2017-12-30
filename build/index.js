@@ -15,6 +15,7 @@ const moment = require('moment');
 
 // custom plugins
 const link_index = require('./plugins/link_index');
+const categories = require('./plugins/categories');
 const changeExt = require('./plugins/change-ext');
 const markdown = require('./plugins/markdown');
 const layouts = require('./plugins/layouts');
@@ -49,6 +50,7 @@ Metalsmith(cwd)
       "layouts/**/*": '**/*.md',
     }
   })))
+  .use(categories())
   // group certain files into collections
   .use(collections({
     blog: {
@@ -66,7 +68,7 @@ Metalsmith(cwd)
   // use multiple languages
   .use(multiLanguage({
     default: 'en',
-    locales: ['en', 'hu']
+    locales: ['en']
   }))
   // render markdown using our own plugin around marked
   .use(markdown())

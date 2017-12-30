@@ -4,7 +4,7 @@ title: Using NativeScript Plugins
 
 Plugins work as in any other NativeScript app, but you may wonder how UI plugins would work with Vue.
 
-UI plugins work almost identically to how you'd use a NativeScript UI plugin in an Angular app. For instance consider this example usage of [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient) which is used in the [listview sample](samples/app/app-with-list-view.js):
+UI plugins work almost identically to how you'd use a NativeScript UI plugin in an Angular app. For instance consider this example usage of [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient) which is used in the [listview sample](https://github.com/rigor789/nativescript-vue/tree/master/samples/app/app-with-list-view.js):
 
 Install the plugin by running this command in the samples folder:
 

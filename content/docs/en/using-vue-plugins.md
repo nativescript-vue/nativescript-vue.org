@@ -1,5 +1,5 @@
 ---
-title: Using NativeScript Plugins
+title: Using Vue Plugins
 ---
 
 ## vue-router

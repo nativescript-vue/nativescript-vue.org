@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
       window.removeEventListener('resize', this._resizeListener);
     },
 
-    methods: {}
+    methods: {},
+    directives: {
+      nav: function nav(el) {
+        el.addEventListener('change', function (e) {
+          window.location.href = e.target.value;
+        });
+      }
+    }
   });
 });

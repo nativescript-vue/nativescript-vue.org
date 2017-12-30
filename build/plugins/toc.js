@@ -13,7 +13,7 @@ function plugin(opts) {
       if (data.toc === true) {
         try {
           data.toc = new tocJSON().generateJSON(data.contents.toString());
-          console.log(data.contents.toString())
+          // console.log(data.contents.toString())
         } catch (err) {
           return done(err);
         }
@@ -27,7 +27,7 @@ function plugin(opts) {
         }
       } else {
         data.toc = false;
-        data.layout = data.layout || 'no_sidebar.ejs'
+        data.layout = data.layout || 'no_sidebar.ejs';
       }
     });
     done();

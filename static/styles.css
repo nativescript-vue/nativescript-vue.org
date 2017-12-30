@@ -3183,6 +3183,37 @@ button,
   transition: all .3s ease;
 }
 
+#docs-toc .level-1 > span {
+  display: block;
+  color: #3c495e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: .875rem;
+  margin-bottom: 0.5rem;
+}
+
+#docs-toc .level-2 > span {
+  display: block;
+  color: #3c495e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: .875rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#docs-toc .level-1 > ul {
+  padding-left: 0.5rem;
+}
+
+#docs-toc .level-2 > ul {
+  padding-left: 0.5rem;
+}
+
+.markdown-body {
+  margin-top: 2rem;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;

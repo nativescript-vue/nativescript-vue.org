@@ -18,6 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
       window.removeEventListener('resize', this._resizeListener)
     },
     methods: {
+    },
+    directives: {
+      nav(el) {
+        el.addEventListener('change', (e) => {
+          window.location.href = e.target.value
+        })
+      }
     }
   });
 });

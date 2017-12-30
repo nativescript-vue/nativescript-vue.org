@@ -10,23 +10,15 @@
     <div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
         <!--<QuickStart />-->
         <%- include('_partials/header') %>
-        <%- include('_partials/navselect', { title: 'Recent posts', items: collections.blog }) %>
+        <%- include('_partials/navselect', { title: 'Recent posts', items: collections.docs }) %>
 
 
         <div class="md:bg-docs-gradient min-h-screen">
             <div class="container mx-auto flex">
                 <div class="hidden md:w-1/4 md:block">
                     <div class="pl-4 md:pl-0 pt-4 md:pt-8">
-                        <div class="uppercase tracking-wide text-blue-light text-sm mb-4">Recent posts</div>
-                        <ul class="list-reset">
-                            <% collections.blog.forEach((item) => { %>
-                            <li>
-                                <a class="block border-r-4 pr-2 hover:border-green py-3 no-underline leading-tight hover:underline <%= path === item.path ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %>"
-                                   href="/<%= item.path %>">
-                                    <%= item.title %>
-                                </a>
-                            </li>
-                            <% }) %>
+                        <ul id="docs-toc" class="list-reset">
+                            <%- include('_partials/categories', { entry: { children: docs_categories } }) %>
                         </ul>
                     </div>
                 </div>

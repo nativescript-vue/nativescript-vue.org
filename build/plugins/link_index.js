@@ -10,7 +10,7 @@ function plugin(opts) {
       }
     });
 
-    console.log(links);
+    // console.log(links);
     done();
   }
 }
