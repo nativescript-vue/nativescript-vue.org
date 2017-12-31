@@ -21,7 +21,7 @@
                         <ul class="list-reset">
                             <% collections.blog.forEach((item) => { %>
                             <li>
-                                <a class="block border-r-4 pr-2 hover:border-green py-3 no-underline leading-tight hover:underline <%= path === item.path ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %>"
+                                <a class="block border-r-4 py-1 pr-2 hover:border-green no-underline leading-tight hover:underline <%= path === item.path ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %>"
                                    href="/<%= item.path %>">
                                     <%= item.title %>
                                 </a>

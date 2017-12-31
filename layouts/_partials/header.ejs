@@ -35,7 +35,7 @@
         <!-- Nav -->
         <div :class="{ hidden: isMobile && !navOpen, flex: isMobile && navOpen }"
              class="flex-col md:flex-row w-full md:w-auto">
-            <span class="no-underline text-blue-lightest md:ml-6 mr-4 py-4">Quick Start</span>
+            <a href="/en/docs/quick-start" class="no-underline text-blue-lightest md:ml-6 mr-4 py-4">Quick Start</a>
             <a href="/en/docs/about-nativescript-vue" class="no-underline text-blue-lightest mr-4 py-4">Docs</a>
             <a href="/<%= collections.blog[0].path %>" class="no-underline text-blue-lightest mr-4 py-4">Blog</a>
             <div class="inline text-blue-lightest mr-4 py-4 relative group">
@@ -44,8 +44,10 @@
                 <div class="pl-4 mt-3 md:pl-0 md:hidden group-hover:block hover:block md:absolute md:bg-white md:shadow md:rounded md:pin-r overflow-hidden">
                     <div class="flex flex-col">
                         <a href="https://github.com/rigor789/nativescript-vue"
+                           target="_blank"
                            class="no-underline text-blue-lightest md:text-blue-dark hover:bg-green hover:text-white px-4 py-2">GitHub</a>
                         <a href="https://developer.telerik.com/wp-login.php?action=slack-invitation"
+                           target="_blank"
                            class="no-underline text-blue-lightest md:text-blue-dark hover:bg-green hover:text-white px-4 py-2">Slack</a>
                     </div>
                 </div>

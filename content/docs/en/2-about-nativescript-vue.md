@@ -1,6 +1,6 @@
 ---
 title: About NativeScript-Vue
-contributors: [rigor789, tralves, jlooper, TheLarkinn, EddyVerbruggen, tjvantoll, sean-perkins, atilacamurca, shemsiu]
+contributors: [rigor789, tjvantoll]
 ---
 ## What is [NativeScript](https://www.nativescript.org/)?
 

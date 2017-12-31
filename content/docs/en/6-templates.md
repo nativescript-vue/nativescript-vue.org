@@ -1,7 +1,7 @@
 ---
 title: Templates
 toc: _toc.json
-contributors: [rigor789]
+contributors: [rigor789, tralves]
 ---
 
 You can also use NativeScript's [template system](https://docs.nativescript.org/tooling/app-templates) to bootstrap your `nativescript-vue` app. All these templates generate a NativeScript app that uses the `nativescript-vue` plugin. Some templates are equipped with more features such as support for Vue.js Single File Component (`.vue`) and livereload.
@@ -69,8 +69,3 @@ tns create sample-app --template https://github.com/tralves/nativescript-vue-web
 ```
 *Follow the [project link](https://github.com/tralves/nativescript-vue-webpack-template) for further instructions.*
 
-# What's next?
-
-<a router-link="/articles" class="docute-button docute-button-success">
-    Go to Articles
-</a>

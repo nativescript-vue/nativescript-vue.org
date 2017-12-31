@@ -10,8 +10,3 @@ remove:
     - '## What’s Next'
 ---
 
-# What's next?
-
-<a router-link="/installation-nativescript-vue" class="docute-button docute-button-success">
-    Go to Installation - Vue Plugin
-</a>

@@ -1,5 +1,6 @@
 ---
 title: Articles
+contributors: [rdlauer, naderio]
 ---
 
 - [A new Vue for NativeScript](https://www.nativescript.org/blog/a-new-vue-for-nativescript)
@@ -8,8 +9,3 @@ title: Articles
 - [Native apps with Vue.js: Weex or NativeScript?
 ](https://hackernoon.com/native-apps-with-vue-js-weex-or-nativescript-8d8f0bac041d)
 
-# What's next?
-
-<a router-link="/troubleshooting" class="docute-button docute-button-success">
-    Go to Troubleshooting
-</a>

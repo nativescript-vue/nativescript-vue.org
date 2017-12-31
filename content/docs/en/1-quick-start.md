@@ -1,5 +1,6 @@
 ---
 title: Quick Start
+contributors: [naderio, galaxyblur]
 ---
 
 ## Using `nativescript-vue-template`
@@ -71,8 +72,3 @@ or
 tns run ios
 ```
 
-# What's next?
-
-<a router-link="/using-nativescript-plugins" class="docute-button docute-button-success">
-    Go to Using NativeScript Plugins
-</a>

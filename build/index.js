@@ -19,6 +19,7 @@ const categories = require('./plugins/categories');
 const changeExt = require('./plugins/change-ext');
 const markdown = require('./plugins/markdown');
 const layouts = require('./plugins/layouts');
+const order = require('./plugins/order');
 const toc = require('./plugins/toc');
 
 const isDev = process.argv[2] === '--dev';
@@ -50,6 +51,7 @@ Metalsmith(cwd)
       "layouts/**/*": '**/*.md',
     }
   })))
+  .use(order())
   .use(categories())
   // group certain files into collections
   .use(collections({
@@ -60,7 +62,8 @@ Metalsmith(cwd)
     },
     docs: {
       pattern: 'docs/**/*.md',
-      refer: false
+      sortBy: 'order',
+      refer: true
     }
   }))
   // use jekyll style dates in the file names

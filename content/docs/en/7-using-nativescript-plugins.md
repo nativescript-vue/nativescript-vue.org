@@ -1,5 +1,6 @@
 ---
 title: Using NativeScript Plugins
+contributors: [naderio]
 ---
 
 Plugins work as in any other NativeScript app, but you may wonder how UI plugins would work with Vue.
@@ -27,8 +28,3 @@ Then in your view template, add this to recreate the gradient in the sample:
 </gradient>
 ```
 
-# What's next?
-
-<a router-link="/using-vue-modules" class="docute-button docute-button-success">
-    Go to Using Vue Modules
-</a>

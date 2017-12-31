@@ -38,6 +38,14 @@
                         <div class="markdown-body">
                             <%- contents %>
                         </div>
+
+                        <% if(typeof next !== 'undefined') { %>
+                        <%- include('_partials/next', { next }) %>
+                        <% } %>
+
+                        <% if (typeof contributors !== 'undefined' ) { %>
+                        <%- include('_partials/contributors', { contributors }) %>
+                        <% } %>
                     </div>
                 </div>
             </div>

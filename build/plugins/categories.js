@@ -23,11 +23,11 @@ function plugin(opts) {
       }
     });
 
-    console.log(map);
     meta.docs_categories = Object.keys(map).reduce((acc, curr) => {
+      // console.log(map[curr]);
       acc.push({
         title: curr || 'introduction',
-        children: map[curr],
+        children: map[curr].sort((a, b) => a.order - b.order),
         level: curr.split(':').length
       });
       return acc;
