@@ -18,6 +18,7 @@ const link_index = require('./plugins/link_index');
 const categories = require('./plugins/categories');
 const changeExt = require('./plugins/change-ext');
 const markdown = require('./plugins/markdown');
+const locales = require('./plugins/locales');
 const layouts = require('./plugins/layouts');
 const order = require('./plugins/order');
 const toc = require('./plugins/toc');
@@ -51,6 +52,10 @@ Metalsmith(cwd)
       "layouts/**/*": '**/*.md',
     }
   })))
+  .use(locales({
+    defaultLocale: 'en',
+    locales: ['en', 'hu']
+  }))
   .use(order())
   .use(categories())
   // group certain files into collections

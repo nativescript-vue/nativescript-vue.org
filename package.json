@@ -29,6 +29,7 @@
     "metalsmith-multi-language": "^0.3.0",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-watch": "^1.0.3",
+    "mkdirp": "^0.5.1",
     "moment": "^2.20.1",
     "multimatch": "^2.1.0",
     "table-of-contents-json": "^1.2.0",
