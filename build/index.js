@@ -74,10 +74,10 @@ Metalsmith(cwd)
   // use jekyll style dates in the file names
   .use(dates())
   // use multiple languages
-  .use(multiLanguage({
-    default: 'en',
-    locales: ['en']
-  }))
+  // .use(multiLanguage({
+  //   default: 'en',
+  //   locales: ['en']
+  // }))
   // render markdown using our own plugin around marked
   .use(markdown())
   // add table of contents using our own plugin

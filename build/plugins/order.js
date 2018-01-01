@@ -15,6 +15,7 @@ function plugin() {
 
         // rename file to not include the order
         files[file.replace(res[0], '')] = data;
+        delete files[file];
       }
     });
     done();

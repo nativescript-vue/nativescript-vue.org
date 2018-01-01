@@ -17,7 +17,7 @@ function plugin(opts) {
         } catch (err) {
           return done(err);
         }
-      } else if (!!data.toc) {
+      /* } else if (!!data.toc) {
         try {
           const tocPath = metalsmith.path(metalsmith._source, path.dirname(file), data.toc);
           const toc = fs.readFileSync(tocPath);
@@ -25,6 +25,7 @@ function plugin(opts) {
         } catch (err) {
           done(err);
         }
+      */
       } else {
         data.toc = false;
         data.layout = data.layout || 'no_sidebar.ejs';

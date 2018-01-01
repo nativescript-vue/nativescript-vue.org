@@ -1,6 +1,5 @@
 ---
 title: Templates
-toc: _toc.json
 contributors: [rigor789, tralves]
 ---
 
