@@ -27,4 +27,3 @@ Then in your view template, add this to recreate the gradient in the sample:
   <Label class="p-5 c-white" horizontalAlignment="center" text="It's true." textWrap="true"></Label>
 </gradient>
 ```
-

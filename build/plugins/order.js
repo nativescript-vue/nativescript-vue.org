@@ -14,8 +14,7 @@ function plugin() {
         data.order = res[1];
 
         // rename file to not include the order
-        files[file.replace(res[0], '')] = data;
-        delete files[file];
+        metalsmith.rename(file, file.replace(res[0], ''));
       }
     });
     done();

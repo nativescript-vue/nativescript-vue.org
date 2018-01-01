@@ -71,4 +71,3 @@ or
 ```sh
 tns run ios
 ```
-

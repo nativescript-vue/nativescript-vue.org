@@ -1,11 +1,10 @@
 const path = require('path');
 
 const Metalsmith = require('metalsmith');
+const multimatch = require('multimatch');
 
 // plugins
-const multiLanguage = require('metalsmith-multi-language');
 const collections = require('metalsmith-collections');
-const permalinks = require('metalsmith-permalinks');
 const linkcheck = require('metalsmith-linkcheck');
 const dates = require('metalsmith-jekyll-dates');
 const assets = require('metalsmith-assets');
@@ -16,8 +15,9 @@ const moment = require('moment');
 // custom plugins
 const link_index = require('./plugins/link_index');
 const categories = require('./plugins/categories');
+const permalinks = require('./plugins/permalinks');
 const changeExt = require('./plugins/change-ext');
-const markdown = require('./plugins/markdown');
+const markdown = require('./plugins/remark');
 const locales = require('./plugins/locales');
 const layouts = require('./plugins/layouts');
 const order = require('./plugins/order');
@@ -32,7 +32,23 @@ Metalsmith(cwd)
     sitename: 'NativeScript-Vue',
     siteurl: 'https://nativescript-vue.org/',
     description: 'Build truly native apps using Vue.js',
-    moment
+    moment,
+    lang(locale) {
+      const found = this.links.find(l => l.endsWith(`${this.slug}/index.html`) && l.includes(locale));
+      if(found) {
+        return found;
+      }
+      return `/${locale === 'en' ? '' : locale}`;
+    }
+  })
+  .use((files, metalsmith, done) => {
+    metalsmith.matches = (name, pattern) => multimatch(name, pattern).length > 0;
+    metalsmith.rename = (file, to) => {
+      const data = files[file];
+      delete files[file];
+      files[to] = data;
+    };
+    done();
   })
   // look for files in the content directory
   .source('./content')
@@ -42,8 +58,9 @@ Metalsmith(cwd)
   .clean(true)
   // ignore directories and files starting with an _
   .ignore([
-    '_**/*',
-    '**/_*',
+    '_**',
+    '.**',
+    '**.json',
   ])
   // watch the content dir when in dev mode (--dev)
   .use(when(isDev, watch({
@@ -52,11 +69,11 @@ Metalsmith(cwd)
       "layouts/**/*": '**/*.md',
     }
   })))
+  .use(order())
   .use(locales({
     defaultLocale: 'en',
-    locales: ['en', 'hu']
+    locales: ['en']
   }))
-  .use(order())
   .use(categories())
   // group certain files into collections
   .use(collections({
@@ -64,11 +81,12 @@ Metalsmith(cwd)
       pattern: 'blog/*.md',
       sortBy: 'date',
       reverse: true,
+      refer: false
     },
     docs: {
       pattern: 'docs/**/*.md',
       sortBy: 'order',
-      refer: true
+      refer: false
     }
   }))
   // use jekyll style dates in the file names
@@ -84,19 +102,18 @@ Metalsmith(cwd)
   .use(toc())
   // generate the final files to have pretty urls
   .use(permalinks({
-    relative: false,
-
-    linksets: [
+    sets: [
       {
-        match: {collection: 'blog'},
-        pattern: 'blog/:date/:slug',
+        pattern: 'blog/**/*',
+        format: 'blog/:slug',
       },
       {
-        match: {collection: 'docs'},
-        pattern: ':locale/docs/:title'
+        pattern: 'docs/**/*',
+        format: ':locale/docs/:slug/index.html'
       }
     ]
   }))
+  .use(link_index())
   // render all files in side a layout if specified
   .use(layouts({
     default: 'post.ejs',
@@ -124,7 +141,6 @@ Metalsmith(cwd)
   .use(linkcheck({
     failMissing: false
   }))
-  .use(link_index())
   // build the site
   .build((err) => {
     if (err) {

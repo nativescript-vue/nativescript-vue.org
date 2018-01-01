@@ -9,4 +9,3 @@ rename:
 remove:
     - '## What’s Next'
 ---
-

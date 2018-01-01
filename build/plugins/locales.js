@@ -19,7 +19,7 @@ function plugin(opts) {
       if (!Array.isArray(locales)) {
         locales = [locales]
       }
-      return new RegExp(`.*\\/(?:${locales.join('|')})\\/(.+)(\\..+)`)
+      return new RegExp(`.*\\/(${locales.join('|')})\\/(.+)(\\..+)`)
     };
 
     // creates a list of required files based on the default locale
@@ -33,7 +33,6 @@ function plugin(opts) {
 
     // builds out the file structure for all the other locales
     otherLocales.forEach((locale) => {
-
       requiredFiles.forEach((file) => {
         const original_file = file.replace('{LOCALE}', defaultLocale);
 
@@ -49,13 +48,22 @@ function plugin(opts) {
           fs.writeFileSync(new_file_path, contents);
 
           new_files[new_file] = Object.assign({}, data, {
-            contents: new Buffer(contents)
+            contents: new Buffer(contents),
+            locale: locale
           });
         }
       })
     });
 
     Object.assign(files, new_files);
+
+    Object.keys(files).forEach(file => {
+      const res = file.match(pattern(locales));
+      if (res) {
+        files[file].locale = res[1];
+        files[file].slug = res[2];
+      }
+    });
 
     if (!!Object.keys(new_files).length) {
       console.log(chalk.yellow('-'.repeat(process.stdout.columns)));

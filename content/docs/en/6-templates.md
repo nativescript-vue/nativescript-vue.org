@@ -9,7 +9,7 @@ You can also use NativeScript's [template system](https://docs.nativescript.org/
 
 #### Project link
 
-https://github.com/tralves/nativescript-vue-template
+[](https://github.com/tralves/nativescript-vue-template)
 
 #### Description
 
@@ -26,7 +26,7 @@ tns create sample-app --template nativescript-vue-template
 
 #### Project link
 
-https://github.com/tralves/nativescript-vue-rollup-template
+[](https://github.com/tralves/nativescript-vue-rollup-template)
 
 #### Description
 Originally a [fork from rigor789's](https://github.com/rigor789/nativescript-vue-rollup-template), this template is currently the most stable and feature complete. You can see it in action in the [🍏 🍍 🍓 Groceries Vue](https://github.com/tralves/groceries-ns-vue) app.
@@ -48,7 +48,7 @@ tns create sample-app --template nativescript-vue-rollup-template
 
 #### Project link
 
-https://github.com/tralves/nativescript-vue-webpack-template
+[](https://github.com/tralves/nativescript-vue-webpack-template)
 
 #### Description
 
@@ -67,4 +67,3 @@ The webpack template leverages webpack to provide the same functionality as the 
 tns create sample-app --template https://github.com/tralves/nativescript-vue-webpack-template
 ```
 *Follow the [project link](https://github.com/tralves/nativescript-vue-webpack-template) for further instructions.*
-
