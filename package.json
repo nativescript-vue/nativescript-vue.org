@@ -33,6 +33,7 @@
     "moment": "^2.20.1",
     "multimatch": "^2.1.0",
     "table-of-contents-json": "^1.2.0",
-    "tailwindcss": "^0.4.0"
+    "tailwindcss": "^0.4.0",
+    "chalk": "latest"
   }
 }
