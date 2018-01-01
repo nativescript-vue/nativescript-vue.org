@@ -1,6 +1,7 @@
 <li class="level-<%= entry.level || 0 %>">
     <% if(entry.path) { %>
-    <a class="block py-1 border-r-4 pr-2 hover:border-green <%= path === entry.path ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %> no-underline leading-tight hover:underline" href="/<%= entry.path %>">
+    <a class="block py-1 border-r-4 pr-2 hover:border-green <%= slug === entry.slug ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %> no-underline leading-tight hover:underline"
+       href="<%= lang(null, entry.slug) %>">
         <%= entry.title %>
     </a>
     <% } else if(entry.title) { %>
@@ -9,7 +10,10 @@
 
     <% if(entry.children) { %>
     <ul class="list-reset">
-        <% entry.children.forEach((item) => { %>
+        <% entry.children
+                .filter(item => item.locale != (locale || 'en'))
+                .sort(sortCategories)
+        .forEach((item) => { %>
         <%- include('_partials/categories', { entry: item }) %>
         <% }) %>
     </ul>

@@ -35,6 +35,7 @@ function plugin(opts) {
     otherLocales.forEach((locale) => {
       requiredFiles.forEach((file) => {
         const original_file = file.replace('{LOCALE}', defaultLocale);
+        const original_file_path = path.resolve(sourcePath, original_file);
 
         const new_file = file.replace('{LOCALE}', locale);
         const new_file_path = path.resolve(sourcePath, new_file);
@@ -43,13 +44,11 @@ function plugin(opts) {
 
         if (!fs.existsSync(new_file_path)) {
           const data = files[original_file];
-          const contents = data ? data.contents : '';
-
+          const contents = fs.readFileSync(original_file_path);
           fs.writeFileSync(new_file_path, contents);
 
           new_files[new_file] = Object.assign({}, data, {
-            contents: new Buffer(contents),
-            locale: locale
+            contents: new Buffer(data.contents || '')
           });
         }
       })

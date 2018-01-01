@@ -8,10 +8,13 @@ function plugin() {
         return
       }
 
+
       const res = path.basename(file).match(/^(\d+)-/);
       if (res) {
         const data = files[file];
         data.order = res[1];
+
+        data.slug = data.slug.replace(res[0], '');
 
         // rename file to not include the order
         metalsmith.rename(file, file.replace(res[0], ''));

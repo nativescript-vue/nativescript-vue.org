@@ -33,12 +33,23 @@ Metalsmith(cwd)
     siteurl: 'https://nativescript-vue.org/',
     description: 'Build truly native apps using Vue.js',
     moment,
-    lang(locale) {
-      const found = this.links.find(l => l.endsWith(`${this.slug}/index.html`) && l.includes(locale));
-      if(found) {
+    lang(locale, slug) {
+      locale = locale || this.locale || this.defaultLocale;
+      slug = slug || this.slug;
+      const found = this.links.find(l => l.endsWith(`${slug}/index.html`) && l.includes(locale));
+
+      if (found) {
         return found;
       }
-      return `/${locale === 'en' ? '' : locale}`;
+      return `/${locale === this.defaultLocale ? '' : locale}`;
+    },
+    sortCategories(a, b) {
+      if (a.fileName) {
+        return a.fileName.localeCompare(b.fileName);
+      } else if (a.level) {
+        // todo: we might need to alter this for correct ordering
+        return a.level - b.level;
+      }
     }
   })
   .use((files, metalsmith, done) => {
@@ -69,11 +80,18 @@ Metalsmith(cwd)
       "layouts/**/*": '**/*.md',
     }
   })))
-  .use(order())
+  .use((files, metalsmith, done) => {
+    Object.keys(files).forEach(file => {
+      files[file].fileName = path.basename(file);
+    });
+
+    done();
+  })
   .use(locales({
     defaultLocale: 'en',
-    locales: ['en']
+    locales: ['en', 'hu']
   }))
+  .use(order())
   .use(categories())
   // group certain files into collections
   .use(collections({
@@ -104,8 +122,12 @@ Metalsmith(cwd)
   .use(permalinks({
     sets: [
       {
+        pattern: ['index.*', 'index_*.*'],
+        format: ':dest'
+      },
+      {
         pattern: 'blog/**/*',
-        format: 'blog/:slug',
+        format: 'blog/:slug/index.html',
       },
       {
         pattern: 'docs/**/*',

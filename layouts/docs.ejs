@@ -10,13 +10,18 @@
     <div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
         <!--<QuickStart />-->
         <%- include('_partials/header') %>
-        <%- include('_partials/navselect', { title: 'Recent posts', items: collections.docs }) %>
-
+        <div class="bg-grey-lighter md:hidden">
+            <div class="container mx-auto p-4">
+                <select v-nav class="w-full p-2" title="Navigation">
+                    <%- include('_partials/categories_select', { entry: { children: docs_categories } }) %>
+                </select>
+            </div>
+        </div>
 
         <div class="md:bg-docs-gradient min-h-screen">
             <div class="container mx-auto flex">
                 <div class="hidden md:w-1/4 md:block">
-                    <div class="pl-4 md:pl-0 pt-4 md:pt-8">
+                    <div class="pl-4 md:pl-0 py-4 md:py-8">
                         <ul id="docs-toc" class="list-reset">
                             <%- include('_partials/categories', { entry: { children: docs_categories } }) %>
                         </ul>

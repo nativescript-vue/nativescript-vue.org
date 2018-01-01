@@ -27,7 +27,7 @@ function plugin(opts) {
       // console.log(map[curr]);
       acc.push({
         title: curr || 'introduction',
-        children: map[curr].sort((a, b) => a.order - b.order),
+        children: map[curr],
         level: curr.split(':').length
       });
       return acc;

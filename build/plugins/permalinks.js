@@ -14,10 +14,6 @@ module.exports = function permalinks(options = {}) {
       let format = (set && set.format) || opts.format;
 
       try {
-        if (file.includes('index.')) {
-          format = format.replace('/index.html', '.html');
-        }
-
         const l = pl.format(format, file, files[file]);
         files[file].path = l;
         metalsmith.rename(file, l)
