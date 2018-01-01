@@ -1,16 +1,36 @@
 const remark = require('remark');
 const lint = require('remark-preset-lint-recommended');
 const html = require('remark-html');
+const highlight = require('remark-highlight.js');
+const slug = require('remark-slug');
+const github = require('remark-github');
+const headings = require('remark-autolink-headings');
+const squeezeParagraphs = require('remark-squeeze-paragraphs');
+const remarkPing = require('remark-ping');
 const report = require('vfile-reporter');
 
 function processMarkdown(contents) {
   return new Promise((resolve, reject) => {
     remark()
       .use(lint)
+      .use(slug)
+      // todo: figure out why this isn't creating any anchors
+      // .use(headings, {
+      //   behaviour: 'wrap',
+      // })
+      .use(highlight)
+      .use(squeezeParagraphs)
+      .use(github, {
+        repository: 'rigor789/nativescript-vue'
+      })
+      .use(remarkPing, {
+        pingUsername: () => true,
+        userURL: (user) => `https://github.com/${user}`
+      })
       .use(html)
       .process(contents, (err, file) => {
         if (err) reject(err);
-
+        // console.log(file.toString());
         resolve(file);
       })
   })
