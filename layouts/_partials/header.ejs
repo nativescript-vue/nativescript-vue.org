@@ -1,17 +1,26 @@
 <div class="bg-blue-dark border-t-8 border-green">
     <div class="container flex items-center flex-wrap px-4 md:px-0 mx-auto">
-        <a href="/" class="w-1/4 flex-1">
-            <div class="relative w-16 h-16">
-                <img class="w-16 h-16 absolute pin"
-                     src="https://art.nativescript-vue.org/NativeScript-Vue-White-Green.svg"
-                     alt="NativeScript-Vue Logo">
-                <img class="w-16 h-16 absolute pin transition-all-ease hover:opacity-0"
-                     src="https://art.nativescript-vue.org/NativeScript-Vue-Green-White.svg"
-                     alt="NativeScript-Vue Logo">
+        <div class="flex-1 flex items-center">
+            <a href="/">
+                <div class="relative w-16 h-16">
+                    <img class="w-16 h-16 absolute pin"
+                         src="https://art.nativescript-vue.org/NativeScript-Vue-White-Green.svg"
+                         alt="NativeScript-Vue Logo">
+                    <img class="w-16 h-16 absolute pin transition-all-ease hover:opacity-0"
+                         src="https://art.nativescript-vue.org/NativeScript-Vue-Green-White.svg"
+                         alt="NativeScript-Vue Logo">
+                </div>
+            </a>
+
+            <span class="hidden lg:block w-1 h-1 bg-blue-light rounded-full ml-2"></span>
+            <span class="hidden lg:block w-2 h-2 bg-blue-light rounded-full ml-2"></span>
+            <span class="hidden lg:block w-4 h-4 bg-blue-light rounded-full ml-2"></span>
+            <div class="hidden md:block px-4 py-1 rounded-full bg-blue-light ml-2">
+                <a href="#" class="no-underline text-white hover:text-green text-sm truncate">Announcing v1.0! Click to read more.</a>
             </div>
-        </a>
+        </div>
         <div class="w-auto text-center relative">
-            <input class="w-full md:w-48 px-4 py-2 text-blue-lightest bg-blue-light rounded-full"
+            <input class="w-full md:w-32 px-4 py-2 text-blue-lightest bg-blue-light rounded-full"
                    type="search"
                    aria-label="Search"
                    placeholder="Search coming soon."
@@ -35,10 +44,10 @@
         <!-- Nav -->
         <div :class="{ hidden: isMobile && !navOpen, flex: isMobile && navOpen }"
              class="flex-col md:flex-row w-full md:w-auto">
-            <a href="<%= lang(null, 'docs/quick-start') %>" class="no-underline text-blue-lightest md:ml-6 mr-4 py-4">Quick
-                Start</a>
+            <!--<a href="<%= lang(null, 'docs/quick-start') %>" class="no-underline text-blue-lightest md:ml-6 mr-4 py-4">Quick-->
+                <!--Start</a>-->
             <a href="<%= lang(null, 'docs/about-nativescript-vue') %>"
-               class="no-underline text-blue-lightest mr-4 py-4">Docs</a>
+               class="no-underline text-blue-lightest md:ml-6 mr-4 py-4">Docs</a>
             <a href="/<%= collections.blog[0].path %>" class="no-underline text-blue-lightest mr-4 py-4">Blog</a>
             <div class="inline text-blue-lightest mr-4 py-4 relative group">
                 Community

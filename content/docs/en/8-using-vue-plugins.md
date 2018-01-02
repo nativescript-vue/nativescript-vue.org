@@ -1,5 +1,6 @@
 ---
 title: Using Vue Plugins
+contributors: [jlooper]
 ---
 
 ## vue-router

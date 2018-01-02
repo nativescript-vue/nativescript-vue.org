@@ -1,6 +1,6 @@
 <li class="level-<%= entry.level || 0 %>">
     <% if(entry.path) { %>
-    <a class="block py-1 border-r-4 pr-2 hover:border-green <%= slug === entry.slug ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %> no-underline leading-tight hover:underline"
+    <a class="-mr-1 block py-1 border-r-4 pr-2 hover:border-green <%= slug === entry.slug ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %> no-underline leading-tight hover:underline"
        href="<%= lang(null, entry.slug) %>">
         <%= entry.title %>
     </a>

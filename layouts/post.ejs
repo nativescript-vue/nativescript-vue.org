@@ -15,13 +15,13 @@
 
         <div class="md:bg-docs-gradient min-h-screen">
             <div class="container mx-auto flex">
-                <div class="hidden md:w-1/4 md:block">
+                <div class="hidden md:w-1/4 md:block border-r-4 min-h-full">
                     <div class="pl-4 md:pl-0 pt-4 md:pt-8">
                         <div class="uppercase tracking-wide text-blue-light text-sm mb-4">Recent posts</div>
                         <ul class="list-reset">
                             <% collections.blog.forEach((item) => { %>
                             <li>
-                                <a class="block border-r-4 py-1 pr-2 hover:border-green no-underline leading-tight hover:underline <%= path === item.path ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %>"
+                                <a class="-mr-1 block border-r-4 py-1 pr-2 hover:border-green no-underline leading-tight hover:underline <%= path === item.path ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %>"
                                    href="/<%= item.path %>">
                                     <%= item.title %>
                                 </a>
