@@ -39,7 +39,7 @@
                         <% if(typeof authors !== 'undefined') { %>
                         <div class="text-blue-light mb-8">
                             <%= moment(date).format('MMMM DD, YYYY') %>
-                            by <%- authors.map(author => `<a href="https://github.com/${author}" target="_blank" class="no-underline text-green hover:text-blue-dark">${author}</a>`).join(', ') %>
+                            by <%- authors.map(author => `<a href="https://github.com/${author}" target="_blank" rel="noopener" class="no-underline text-green hover:text-blue-dark">${author}</a>`).join(', ') %>
                         </div>
                         <% } %>
 

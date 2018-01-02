@@ -33,6 +33,10 @@ Metalsmith(cwd)
     siteurl: 'https://nativescript-vue.org/',
     description: 'Build truly native apps using Vue.js',
     moment,
+    localeMap: {
+      'en': 'English',
+      'hu': 'Magyar',
+    },
     lang(locale, slug) {
       locale = locale || this.locale || this.defaultLocale;
       slug = slug || this.slug;
