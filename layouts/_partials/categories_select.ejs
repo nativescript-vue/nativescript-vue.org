@@ -1,5 +1,5 @@
 <% if(entry.path) { %>
-<option value="<%= lang(null, entry.slug) %>" <%= slug === entry.slug ? 'selected' : '' %>>
+<option value="<%= meta.lang(current, null, entry.slug) %>" <%= current.slug === entry.slug ? 'selected' : '' %>>
     <%= entry.title %>
 </option>
 <% } else if(entry.children) { %>
@@ -7,8 +7,8 @@
 <optgroup label="<%= entry.title %>">
     <% } %>
     <% entry.children
-            .filter(item => item.locale != (locale || 'en'))
-            .sort(sortCategories)
+            .filter(item => item.locale != (current.locale || 'en'))
+            .sort(meta.sortCategories)
     .forEach((item) => { %>
     <%- include('_partials/categories_select', { entry: item }) %>
     <% }) %>

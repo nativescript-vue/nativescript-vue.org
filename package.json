@@ -22,6 +22,8 @@
     "metalsmith": "^2.3.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-collections": "^0.9.0",
+    "metalsmith-gzip": "^1.1.0",
+    "metalsmith-html-minifier": "^3.0.0",
     "metalsmith-if": "^0.1.1",
     "metalsmith-ignore": "^0.1.2",
     "metalsmith-jekyll-dates": "0.0.5",

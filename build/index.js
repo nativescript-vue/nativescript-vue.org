@@ -8,6 +8,8 @@ const collections = require('metalsmith-collections');
 const linkcheck = require('metalsmith-linkcheck');
 const dates = require('metalsmith-jekyll-dates');
 const assets = require('metalsmith-assets');
+const gzip = require('metalsmith-gzip');
+const minify = require('metalsmith-html-minifier');
 const watch = require('metalsmith-watch');
 const when = require('metalsmith-if');
 const moment = require('moment');
@@ -37,9 +39,9 @@ Metalsmith(cwd)
       'en': 'English',
       'hu': 'Magyar',
     },
-    lang(locale, slug) {
-      locale = locale || this.locale || this.defaultLocale;
-      slug = slug || this.slug;
+    lang(current, locale, slug) {
+      locale = locale || current.locale || this.defaultLocale;
+      slug = slug || current.slug;
       const found = this.links.find(l => l.endsWith(`${slug}/index.html`) && l.includes(locale));
 
       if (found) {
@@ -167,6 +169,8 @@ Metalsmith(cwd)
   .use(linkcheck({
     failMissing: false
   }))
+  .use(minify())
+  .use(gzip())
   // build the site
   .build((err) => {
     if (err) {

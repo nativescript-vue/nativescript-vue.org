@@ -20,7 +20,10 @@ function plugin(opts) {
       }
       const data = files[file];
       data.contents = data.contents.toString();
-      const context = Object.assign({}, metalsmith.metadata(), data);
+      const context = Object.assign({}, {
+        meta: metalsmith.metadata(),
+        current: data
+      });
 
       let rendered;
       if (options.inPlace) {

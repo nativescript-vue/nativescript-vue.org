@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('_partials/meta') %>
-    <title><%= sitename %></title>
+    <title><%= meta.sitename %></title>
 </head>
 <body>
 
@@ -10,7 +10,7 @@
     <div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
         <!--<QuickStart />-->
         <%- include('_partials/header') %>
-        <%- include('_partials/navselect', { title: 'Recent posts', items: collections.blog }) %>
+        <%- include('_partials/navselect', { title: 'Recent posts', items: meta.collections.blog }) %>
 
 
         <div class="md:bg-docs-gradient min-h-screen">
@@ -19,9 +19,9 @@
                     <div class="pl-4 md:pl-0 pt-4 md:pt-8">
                         <div class="uppercase tracking-wide text-blue-light text-sm mb-4">Recent posts</div>
                         <ul class="list-reset">
-                            <% collections.blog.forEach((item) => { %>
+                            <% meta.collections.blog.forEach((item) => { %>
                             <li>
-                                <a class="-mr-1 block border-r-4 py-1 pr-2 hover:border-green no-underline leading-tight hover:underline <%= path === item.path ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %>"
+                                <a class="-mr-1 block border-r-4 py-1 pr-2 hover:border-green no-underline leading-tight hover:underline <%= current.path === item.path ? 'border-green text-green' : 'border-green-lightest text-blue-dark' %>"
                                    href="/<%= item.path %>">
                                     <%= item.title %>
                                 </a>
@@ -32,19 +32,19 @@
                 </div>
                 <div class="w-full md:w-3/4 bg-white min-h-screen">
                     <div class="pl-8 py-4 pr-4">
-                        <% if (typeof title !== 'undefined') { %>
-                        <div class="text-blue-dark text-4xl mt-4"><%= title %></div>
+                        <% if (current.title) { %>
+                        <div class="text-blue-dark text-4xl mt-4"><%= current.title %></div>
                         <hr class="border-t-2 border-blue-lighter w-24 mx-0 mb-2">
                         <% } %>
-                        <% if(typeof authors !== 'undefined') { %>
+                        <% if(current.authors) { %>
                         <div class="text-blue-light mb-8">
-                            <%= moment(date).format('MMMM DD, YYYY') %>
-                            by <%- authors.map(author => `<a href="https://github.com/${author}" target="_blank" rel="noopener" class="no-underline text-green hover:text-blue-dark">${author}</a>`).join(', ') %>
+                            <%= meta.moment(current.date).format('MMMM DD, YYYY') %>
+                            by <%- current.authors.map(author => `<a href="https://github.com/${author}" target="_blank" rel="noopener" class="no-underline text-green hover:text-blue-dark">${author}</a>`).join(', ') %>
                         </div>
                         <% } %>
 
                         <div class="markdown-body">
-                            <%- contents %>
+                            <%- current.contents %>
                         </div>
                     </div>
                 </div>

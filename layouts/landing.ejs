@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('_partials/meta') %>
-    <title><%= sitename %></title>
+    <title><%= meta.sitename %></title>
 </head>
 <body>
 
@@ -12,7 +12,7 @@
         <%- include('_partials/header') %>
 
         <div class="min-h-screen">
-            <%- contents %>
+            <%- current.contents %>
         </div>
     </div>
 </div>

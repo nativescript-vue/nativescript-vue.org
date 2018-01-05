@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     data: {
       modalVisible: false,
+      modalLoaded: false,
       isMobile: false,
       navOpen: false
     },

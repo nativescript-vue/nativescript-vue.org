@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('_partials/meta') %>
-    <title><%= sitename %></title>
+    <title><%= meta.sitename %></title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
         <div class="bg-grey-lighter md:hidden">
             <div class="container mx-auto p-4">
                 <select v-nav class="w-full p-2" title="Navigation">
-                    <%- include('_partials/categories_select', { entry: { children: docs_categories } }) %>
+                    <%- include('_partials/categories_select', { entry: { children: meta.docs_categories } }) %>
                 </select>
             </div>
         </div>
@@ -23,33 +23,33 @@
                 <div class="hidden md:w-1/4 md:block border-r-4 min-h-full">
                     <div class="pl-4 md:pl-0 py-4 md:py-8">
                         <ul id="docs-toc" class="list-reset">
-                            <%- include('_partials/categories', { entry: { children: docs_categories } }) %>
+                            <%- include('_partials/categories', { entry: { children: meta.docs_categories } }) %>
                         </ul>
                     </div>
                 </div>
                 <div class="w-full md:w-3/4 bg-white min-h-screen">
                     <div class="p-4 md:pl-8">
-                        <% if (typeof title !== 'undefined') { %>
-                        <div class="text-blue-dark text-4xl mt-4"><%= title %></div>
+                        <% if (current.title) { %>
+                        <div class="text-blue-dark text-4xl mt-4"><%= current.title %></div>
                         <hr class="border-t-2 border-blue-lighter w-24 mx-0 mb-2">
                         <% } %>
-                        <% if(typeof authors !== 'undefined') { %>
+                        <% if(current.authors) { %>
                         <div class="text-blue-light mb-8">
-                            <%= moment(date).format('MMMM DD, YYYY') %>
-                            by <%- authors.map(author => `<a href="https://github.com/${author}" target="_blank" rel="noopener" class="no-underline text-green hover:text-blue-dark">${author}</a>`).join(', ') %>
+                            <%= meta.moment(date).format('MMMM DD, YYYY') %>
+                            by <%- current.authors.map(author => `<a href="https://github.com/${author}" target="_blank" rel="noopener" class="no-underline text-green hover:text-blue-dark">${author}</a>`).join(', ') %>
                         </div>
                         <% } %>
 
                         <div class="markdown-body">
-                            <%- contents %>
+                            <%- current.contents %>
                         </div>
 
-                        <% if(typeof next !== 'undefined') { %>
+                        <% if(current.next) { %>
                         <%- include('_partials/next', { next }) %>
                         <% } %>
 
-                        <% if (typeof contributors !== 'undefined' ) { %>
-                        <%- include('_partials/contributors', { contributors }) %>
+                        <% if (current.contributors) { %>
+                        <%- include('_partials/contributors', { contributors: current.contributors }) %>
                         <% } %>
                     </div>
                 </div>

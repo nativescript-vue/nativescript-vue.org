@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('_partials/meta') %>
-    <title><%= sitename %></title>
+    <title><%= meta.sitename %></title>
 </head>
 <body>
 
@@ -15,17 +15,17 @@
             <div class="container mx-auto flex">
                 <div class="w-full bg-white min-h-screen">
                     <div class="mt-8">
-                        <% if (typeof title !== 'undefined') { %>
-                        <div class="text-blue-dark text-4xl mt-4"><%= title %></div>
+                        <% if (current.title) { %>
+                        <div class="text-blue-dark text-4xl mt-4"><%= current.title %></div>
                         <hr class="border-t-2 border-blue-lighter w-24 mx-0 mb-8">
                         <% } %>
 
                         <div class="markdown-body">
-                            <%- contents %>
+                            <%- current.contents %>
                         </div>
 
-                        <% if (typeof contributors !== 'undefined') { %>
-                        <%- include('_partials/contributors', { contributors }) %>
+                        <% if (current.contributors) { %>
+                        <%- include('_partials/contributors', { current.contributors }) %>
                         <% } %>
                     </div>
                 </div>
