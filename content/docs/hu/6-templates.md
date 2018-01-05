@@ -17,8 +17,8 @@ This one the most basic template. It contains a number of app samples that you c
 
 #### Installation
 
-```sh
-tns create sample-app --template nativescript-vue-template
+```shell
+$ tns create sample-app --template nativescript-vue-template
 ```
 *Follow the [project link](https://github.com/tralves/nativescript-vue-template) for further instructions.*
 
@@ -39,8 +39,8 @@ It supports:
 - babel with `es2015` and `stage-2` presets;
 
 #### Installation
-```sh
-tns create sample-app --template nativescript-vue-rollup-template
+```shell
+$ tns create sample-app --template nativescript-vue-rollup-template
 ```
 *Follow the [project link](https://github.com/tralves/nativescript-vue-rollup-template) for further instructions.*
 
@@ -63,7 +63,7 @@ The webpack template leverages webpack to provide the same functionality as the 
 - (soon) native/web code sharing;
 
 #### Installation
-```sh
-tns create sample-app --template https://github.com/tralves/nativescript-vue-webpack-template
+```shell
+$ tns create sample-app --template https://github.com/tralves/nativescript-vue-webpack-template
 ```
 *Follow the [project link](https://github.com/tralves/nativescript-vue-webpack-template) for further instructions.*

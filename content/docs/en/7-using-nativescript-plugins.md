@@ -9,8 +9,8 @@ UI plugins work almost identically to how you'd use a NativeScript UI plugin in 
 
 Install the plugin by running this command in the samples folder:
 
-```sh
-tns plugin add nativescript-gradient
+```shell
+$ tns plugin add nativescript-gradient
 ```
 
 Open your vue file and right after the imports at the top, add:

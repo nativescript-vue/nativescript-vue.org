@@ -1,5 +1,5 @@
 ---
-title: Quick Start HU
+title: Quick Start
 contributors: [naderio, galaxyblur]
 ---
 
@@ -7,34 +7,34 @@ contributors: [naderio, galaxyblur]
 
 1) Create a NativeScript app using `nativescript-vue-template`
 
-```sh
-tns create MyApp --template nativescript-vue-template
+```shell
+$ tns create MyApp --template nativescript-vue-template
 ```
 
 2) Run the app on Android or iOS:
 
-```sh
-tns run android
+```shell
+$ tns run android
 ```
 
 or
 
-```sh
-tns run ios
+```shell
+$ tns run ios
 ```
 
 ## Using `tns` CLI
 
 1) Create a NativeScript app
 
-```sh
-tns create sample-app
+```shell
+$ tns create sample-app
 ```
 
 2) Install `nativescript-vue`
 
-```sh
-npm install --save nativescript-vue
+```shell
+$ npm install --save nativescript-vue
 ```
 3) Change `app.js` content to:
 
@@ -62,12 +62,12 @@ new Vue({
 
 4) Run the app on Android or iOS:
 
-```sh
-tns run android
+```shell
+$ tns run android
 ```
 
 or
 
-```sh
-tns run ios
+```shell
+$ tns run ios
 ```

@@ -1,5 +1,6 @@
 ---
 title: Using Vue Plugins
+contributors: [jlooper]
 ---
 
 ## vue-router
@@ -14,7 +15,9 @@ Vuex is Vue.js's state management pattern and library. It serves as a store for 
 
 Install Vuex as you would normally in your Vue.js app. With npm, for example:
 
-`npm install vuex --save`.
+```shell
+$ npm install vuex --save
+```
 
 The most recent version of Vuex will be added to your package.json file.
 
@@ -22,7 +25,7 @@ The most recent version of Vuex will be added to your package.json file.
 
 In your app's `main.js` file, import Vuex at the top:
 
-```sh
+```js
 import Vuex from 'vuex'
 Vue.use(Vuex)
 ```
@@ -32,7 +35,7 @@ Now you can use Vuex in the app similar to how you would use it in a standard Vu
 
 Above your creation of a new Vue instance, or in a separate folder (for example `/store` in your app folder), create a new constant to store your state. This is where you will invoke Vuex API calls. A simple store constant would include the state of a counter whose state you control throughout your app by means of tracking its mutations:
 
-```sh
+```js
 const store = new Vuex.Store({
     state: {
       count: 0
@@ -48,7 +51,7 @@ const store = new Vuex.Store({
 
 Now you can manage state by calling the store you just created. In the example below, the app tracks the count value as you press a '+' or '-' button. Note that you don't manipulate the state itself, but rather call mutations to increment and decrement its value.
 
-```sh
+```js
 new Vue({
 
     computed: {

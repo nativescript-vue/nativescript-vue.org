@@ -3234,6 +3234,13 @@ button,
   margin-top: 2rem;
 }
 
+.markdown-body pre {
+  background-color: #3c495e;
+  border-left-width: 8px;
+  border-color: #53ba82;
+  /*background-color: #282b2e;*/
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;

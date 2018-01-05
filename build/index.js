@@ -39,6 +39,10 @@ Metalsmith(cwd)
       'en': 'English',
       'hu': 'Magyar',
     },
+    home(current) {
+      const locale = current.locale || this.defaultLocale;
+      return `/${locale === this.defaultLocale ? '' : locale}`
+    },
     lang(current, locale, slug) {
       locale = locale || current.locale || this.defaultLocale;
       slug = slug || current.slug;

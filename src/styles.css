@@ -31,3 +31,8 @@
 .markdown-body {
     @apply .mt-8;
 }
+
+.markdown-body pre {
+    @apply .bg-blue-dark .border-l-8 .border-green;
+    /*background-color: #282b2e;*/
+}
