@@ -11,7 +11,7 @@
     <% if(entry.children) { %>
     <ul class="list-reset">
         <% entry.children
-                .filter(item => item.locale !== (current.locale || 'en'))
+                .filter(item => item.locale ? item.locale === current.locale : true)
                 .sort(meta.sortCategories)
         .forEach((item) => { %>
         <%- include('_partials/categories', { entry: item }) %>

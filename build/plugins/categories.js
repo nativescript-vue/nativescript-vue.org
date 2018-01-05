@@ -28,6 +28,7 @@ function plugin(opts) {
       acc.push({
         title: curr || 'introduction',
         children: map[curr],
+        locale: false,
         level: curr.split(':').length
       });
       return acc;
