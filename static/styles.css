@@ -1,3 +1,6 @@
+@import "https://unpkg.com/highlight.js@9.12.0/styles/obsidian.css";
+@import "https://unpkg.com/github-markdown-css@2.9.0/github-markdown.css";
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -540,6 +543,7 @@ ul {
  *
  * We can remove this when the reversion is in a normal Chrome release.
  */
+
 button,
 [type="button"],
 [type="reset"],
