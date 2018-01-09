@@ -10,8 +10,8 @@
     "build:js": "babel src -d static"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Igor Randjelovic",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
