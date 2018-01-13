@@ -99,7 +99,7 @@ Metalsmith(cwd)
   })
   .use(locales({
     defaultLocale: 'en',
-    locales: ['en', 'hu']
+    locales: ['en']
   }))
   .use(order())
   .use(categories())

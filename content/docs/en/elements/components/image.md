@@ -1,5 +1,12 @@
 ---
 title: Image
+apiRef: https://docs.nativescript.org/api-reference/classes/_ui_image_.image
 ---
 
-TODO
+The Image component is used to display images.
+
+## Props
+
+| name | type | description |
+|------|------|-------------|
+| `src` | `String` | The source of the image, can be an URL or a path.
