@@ -24,7 +24,7 @@ The GridLayout is a layout that arranges its child elements in a table structure
   <Label text="2,2" row="2" col="2" backgroundColor="#43b883"/>
 </GridLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout.svg" />
 
 #### Grid layout with star sizing
 
@@ -36,7 +36,7 @@ The GridLayout is a layout that arranges its child elements in a table structure
   <Label text="1,1" row="1" col="1" backgroundColor="#43b883"/>
 </GridLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_star_sizing.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_star_sizing.svg" />
 
 #### Grid layout with fixed and auto sizing
 
@@ -48,7 +48,7 @@ The GridLayout is a layout that arranges its child elements in a table structure
   <Label text="1,1" row="1" col="1" backgroundColor="#43b883"/>
 </GridLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_fixed_auto.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_fixed_auto.svg" />
 
 
 ## Props

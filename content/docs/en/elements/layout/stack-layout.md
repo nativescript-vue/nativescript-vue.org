@@ -16,7 +16,7 @@ The StackLayout container stacks the child elements either vertically (default),
   <Label text="third" height="70" backgroundColor="#1c6b48"/>
 </StackLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical.svg" />
 
 #### Horizontal StackLayout
 
@@ -27,7 +27,7 @@ The StackLayout container stacks the child elements either vertically (default),
   <Label text="third" width="70" backgroundColor="#1c6b48"/>
 </StackLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal.svg" />
 
 #### StackLayout with horizontally aligned children
 
@@ -43,7 +43,7 @@ The StackLayout container stacks the child elements either vertically (default),
          height="70" backgroundColor="#43b883"/>
 </StackLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical_align_children.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical_align_children.svg" />
 
 #### Horizontal StackLayout with vertically aligned children
 
@@ -59,7 +59,7 @@ The StackLayout container stacks the child elements either vertically (default),
          width="70" backgroundColor="#43b883"/>
 </StackLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal_align_children.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal_align_children.svg" />
 
 ## Props
 

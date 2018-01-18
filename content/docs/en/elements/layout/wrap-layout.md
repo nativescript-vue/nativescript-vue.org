@@ -17,7 +17,7 @@ The WrapLayout container positions its children in rows or columns, based on the
   <Label text="fourth" width="30%" height="30%" backgroundColor="#289062"/>
 </WrapLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_horizontal.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_horizontal.svg" />
 
 #### Vertical WrapLayout
 
@@ -29,7 +29,7 @@ The WrapLayout container positions its children in rows or columns, based on the
   <Label text="fourth" width="30%" height="30%" backgroundColor="#289062"/>
 </WrapLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_vertical.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_vertical.svg" />
 
 ## Props
 

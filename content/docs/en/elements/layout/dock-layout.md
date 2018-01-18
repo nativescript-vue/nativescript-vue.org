@@ -17,7 +17,7 @@ DockLayout is a layout that provides a docking mechanism for child elements to t
   <Label text="bottom" dock="bottom" height="40" backgroundColor="#289062"/>
 </DockLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_no_stretch.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_no_stretch.svg" />
 
 #### Dock to every side with stretching last child
 
@@ -29,7 +29,7 @@ DockLayout is a layout that provides a docking mechanism for child elements to t
   <Label text="bottom" dock="bottom" backgroundColor="#1c6b48"/>
 </DockLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_stretch.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_stretch.svg" />
 
 #### Multiple children on the same side
 
@@ -41,7 +41,7 @@ DockLayout is a layout that provides a docking mechanism for child elements to t
   <Label text="last child" backgroundColor="#43b883"/>
 </DockLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_multiple_on_same_side.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_multiple_on_same_side.svg" />
 
 ## Props
 

@@ -17,7 +17,7 @@ The AbsoluteLayout container simplest layout container in NativeScript. It uses 
   <Label text="120,120" left="120" top="120" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_grid.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_grid.svg" />
 
 #### Overlapping elements
 
@@ -27,7 +27,7 @@ The AbsoluteLayout container simplest layout container in NativeScript. It uses 
   <Label text="30,40" left="30" top="40" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_overlap.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_overlap.svg" />
 
 
 ## Props

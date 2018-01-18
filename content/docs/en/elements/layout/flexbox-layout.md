@@ -16,7 +16,7 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
   <Label text="third" width="70" backgroundColor="#289062"/>
 </FlexboxLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_stretch.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_stretch.svg" />
 
 #### Column flex layout
 
@@ -27,7 +27,7 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
   <Label text="third" height="70" backgroundColor="#289062"/>
 </FlexboxLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_column_stretch.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_column_stretch.svg" />
 
 #### Row layout with items aligned to flex-start
 
@@ -38,7 +38,7 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
   <Label text="third" width="70" height="70" backgroundColor="#289062"/>
 </FlexboxLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_flex-start.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_flex-start.svg" />
 
 #### Row layout with custom order
 
@@ -49,7 +49,7 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
   <Label text="third" order="1" width="70" height="70" backgroundColor="#289062"/>
 </FlexboxLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_custom_order.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_custom_order.svg" />
 
 #### Wrapping
 
@@ -61,7 +61,7 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
   <Label text="fourth" width="30%" backgroundColor="#289062"/>
 </FlexboxLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_wrap.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_wrap.svg" />
 
 #### Reverse column, with different alignSelf
 
@@ -70,11 +70,11 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
                justifyContent="space-around" backgroundColor="#3c495e">
   <Label text="first" height="70" backgroundColor="#43b883"/>
   <Label text="second" alignSelf="center" width="70" height="70" backgroundColor="#1c6b48"/>
-  <Label text="third" alignSelf="flex-end" width="70" height="70" backgroundColor="#289062"/>
+  <Label text="third\nflex-end" alignSelf="flex-end" width="70" height="70" backgroundColor="#289062"/>
   <Label text="fourth" height="70" backgroundColor="#289062"/>
 </FlexboxLayout>
 ```
-<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_column_reverse_space_around_align_self.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_column_reverse_space_around_align_self.svg" />
 
 ## Props
 
