@@ -7,7 +7,8 @@
     "dev": "node build/index.js --dev",
     "build": "node build/index.js",
     "build:css": "tailwind build src/styles.css -c ./tailwind.js -o static/styles.css",
-    "build:js": "babel src -d static"
+    "build:js": "babel src -d static",
+    "build:samples": "node build/build-samples.js"
   },
   "keywords": [],
   "author": "Igor Randjelovic",
@@ -47,6 +48,7 @@
     "remark-squeeze-paragraphs": "^3.0.1",
     "table-of-contents-json": "^1.2.0",
     "tailwindcss": "^0.4.0",
-    "vfile-reporter": "^4.0.0"
+    "vfile-reporter": "^4.0.0",
+    "vue-template-compiler": "^2.5.13"
   }
 }
