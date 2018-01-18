@@ -3,7 +3,7 @@ title: AbsoluteLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_absolute_layout_
 ---
 
-The AbsoluteLayout container simplest layout container in NativeScript. It uses absolute top-left coordinates to position its children. The AbsoluteLayout will not enforce any layout constraints on its children and will not resize them at runtime when its size changes.
+The AbsoluteLayout container is the simplest layout container in NativeScript. It uses absolute top-left coordinates to position its children. The AbsoluteLayout will not enforce any layout constraints on its children and will not resize them at runtime when its size changes.
 
 ### Samples
 
