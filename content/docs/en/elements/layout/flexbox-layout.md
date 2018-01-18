@@ -44,12 +44,37 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
 
 ```html
 <FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
-  <Label text="first" order="3" width="70" height="70" backgroundColor="#43b883"/>
-  <Label text="second" order="2" width="70" height="70" backgroundColor="#1c6b48"/>
+  <Label text="first" order="2" width="70" height="70" backgroundColor="#43b883"/>
+  <Label text="second" order="3" width="70" height="70" backgroundColor="#1c6b48"/>
   <Label text="third" order="1" width="70" height="70" backgroundColor="#289062"/>
 </FlexboxLayout>
 ```
 <img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_custom_order.svg" />
+
+#### Wrapping
+
+```html
+<FlexboxLayout flexWrap="wrap" backgroundColor="#3c495e">
+  <Label text="first" width="30%" backgroundColor="#43b883"/>
+  <Label text="second" width="30%" backgroundColor="#1c6b48"/>
+  <Label text="third" width="30%" backgroundColor="#289062"/>
+  <Label text="fourth" width="30%" backgroundColor="#289062"/>
+</FlexboxLayout>
+```
+<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_wrap.svg" />
+
+#### Reverse column, with different alignSelf
+
+```html
+<FlexboxLayout flexDirection="column-reverse"
+               justifyContent="space-around" backgroundColor="#3c495e">
+  <Label text="first" height="70" backgroundColor="#43b883"/>
+  <Label text="second" alignSelf="center" width="70" height="70" backgroundColor="#1c6b48"/>
+  <Label text="third" alignSelf="flex-end" width="70" height="70" backgroundColor="#289062"/>
+  <Label text="fourth" height="70" backgroundColor="#289062"/>
+</FlexboxLayout>
+```
+<img class="w-1/2 md:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_column_reverse_space_around_align_self.svg" />
 
 ## Props
 
