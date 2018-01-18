@@ -5,22 +5,27 @@ dest: index.html
 
 <div class="bg-blue-light">
     <div class="container mx-auto py-8">
+        <div class="flex">
+            <div class="w-1/2 my-8">
+                <h1 class="text-5xl leading-tight text-white">Truly native apps using Vue.js and NativeScript</h1>
 
-        <div class="w-1/2 my-8">
-            <h1 class="text-5xl leading-tight text-white">Truly native apps using Vue.js and NativeScript</h1>
+                <p class="w-4/5 leading-loose text-white mt-4">
+                    Want to release that app you've been dreaming about
+                    without the hassle of learning new languages?
 
-            <p class="w-4/5 leading-loose text-white mt-4">
-                Want to release that app you've been dreaming about
-                without the hassle of learning new languages?
+                    NativeScript-Vue is the right choice for you!
+                </p>
 
-                NativeScript-Vue is the right choice for you!
-            </p>
+                <!-- TODO set the correct link for getting started -->
+                <a href="<%= meta.lang(current, null, 'docs/quick-start') %>"
+                   class="px-8 py-4 inline-block bg-green text-white font-bold text-lg no-underline mt-8">
+                    Get Started
+                </a>
+            </div>
 
-            <!-- TODO set the correct link for getting started -->
-            <a href="<%= meta.lang(current, null, 'docs/quick-start') %>" class="px-8 py-4 inline-block bg-green text-white font-bold text-lg no-underline mt-8">
-                Get Started
-            </a>
+            <div class="w-1/2 my-8">
+                <img src="https://art.nativescript-vue.org/misc/phone.svg" alt="phone">
+            </div>
         </div>
-
     </div>
 </div>

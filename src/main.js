@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     destroyed() {
       window.removeEventListener('resize', this._resizeListener)
     },
-    methods: {
-    },
+    methods: {},
     directives: {
       nav(el) {
         el.addEventListener('change', (e) => {

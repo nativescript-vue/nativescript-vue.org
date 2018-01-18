@@ -173,8 +173,8 @@ Metalsmith(cwd)
   .use(linkcheck({
     failMissing: false
   }))
-  .use(minify())
-  .use(gzip())
+  .use(when(!isDev, minify()))
+  .use(when(!isDev, gzip()))
   // build the site
   .build((err) => {
     if (err) {
