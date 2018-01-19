@@ -40,11 +40,11 @@ function processMarkdown(contents) {
           }
           const url = (platform) => `https://raw.githubusercontent.com/rigor789/nativescript-vue-ui-tests/master/screenshots/${platforms[platform]}/${attrs.for}.png`;
 
-          return `<div class="flex bg-blue-dark p-8">
-              <div class="w-1/2">
+          return `<div class="flex flex-wrap bg-blue-dark p-4 sm:p-8">
+              <div class="w-full sm:w-1/2">
                     <img src="${url('android')}"/>
               </div>
-              <div class="w-1/2 pl-8">
+              <div class="w-full sm:w-1/2 sm:pl-8">
                   <img src="${url('ios')}"/>
               </div>
           </div>`;
