@@ -5,7 +5,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_image_.image
 
 The Image component is used to display images.
 
-# Sample
+---
 
 ```html
 <Image src="res://icon" stretch="none"/>

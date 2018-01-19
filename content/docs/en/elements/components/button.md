@@ -5,7 +5,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
 
 The Button component is used to display a button.
 
-# Sample
+---
 
 ```html
 <Button text="Button"/>

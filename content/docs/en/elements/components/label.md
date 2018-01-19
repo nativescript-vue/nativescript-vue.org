@@ -22,7 +22,7 @@ Example:
 </Label>
 ```
 
-# Sample
+---
 
 ```html
 <Label text="Label"/>
