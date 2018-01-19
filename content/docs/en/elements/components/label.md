@@ -22,6 +22,13 @@ Example:
 </Label>
 ```
 
+# Sample
+
+```html
+<Label text="Label"/>
+```
+[> screenshots for=Label <]
+
 ## Props
 
 | name | type | description |

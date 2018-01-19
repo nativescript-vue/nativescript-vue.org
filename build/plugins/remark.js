@@ -7,6 +7,7 @@ const github = require('remark-github');
 const headings = require('remark-autolink-headings');
 const squeezeParagraphs = require('remark-squeeze-paragraphs');
 const remarkPing = require('remark-ping');
+const shortcodes = require('remark-shortcodes');
 const report = require('vfile-reporter');
 
 function processMarkdown(contents) {
@@ -26,6 +27,28 @@ function processMarkdown(contents) {
       .use(remarkPing, {
         pingUsername: () => true,
         userURL: (user) => `https://github.com/${user}`
+      })
+      .use(shortcodes, {
+        startBlock: '[>',
+        endBlock: '<]'
+      })
+      .use(require('./remark/shortcodes'), {
+        screenshots(attrs) {
+          const platforms = {
+            android: 'android23',
+            ios: 'ios-simulator103iPhone6'
+          }
+          const url = (platform) => `https://raw.githubusercontent.com/rigor789/nativescript-vue-ui-tests/master/screenshots/${platforms[platform]}/${attrs.for}.png`;
+
+          return `<div class="flex bg-blue-dark p-8">
+              <div class="w-1/2">
+                    <img src="${url('android')}"/>
+              </div>
+              <div class="w-1/2 pl-8">
+                  <img src="${url('ios')}"/>
+              </div>
+          </div>`;
+        }
       })
       .use(html)
       .process(contents, (err, file) => {
