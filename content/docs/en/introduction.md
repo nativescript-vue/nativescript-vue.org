@@ -1,5 +1,5 @@
 ---
-title: About NativeScript-Vue
+title: Introduction
 contributors: [rigor789, tjvantoll]
 ---
 ## What is [NativeScript](https://www.nativescript.org/)?
