@@ -4,10 +4,9 @@ contributors: [rigor789]
 ---
 
 If you want try NativeScript-Vue easily, we strongly recommend trying
-it in the [NativeScript Playground](https://play.nativescript.org?template=play-vue). It is
-by far the easiest introduction you can get into NativeScript-Vue.
+it in the [NativeScript Playground](https://play.nativescript.org?template=play-vue). It is the easiest introduction you can get into NativeScript-Vue.
 
-
+## Using a template
 If you are ready to move on and work locally on your machine, and [you
 have your system ready for native development](/en/docs/getting-started/installation), start by creating a new project using a template:
 
@@ -18,7 +17,11 @@ $ tns create my-app --template nativescript-vue-template
 and run your project using:
 
 ```bash
-$ tns run android / ios
+$ tns run android # for android
+```
+
+```bash
+$ tns run ios # for ios
 ```
 
 To learn more about the available templates head over to the [templates documentation](/en/docs/getting-started/templates).
