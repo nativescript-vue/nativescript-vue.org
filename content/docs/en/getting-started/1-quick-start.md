@@ -9,17 +9,17 @@ it in the [NativeScript Playground](https://play.nativescript.org?template=play-
 If you are ready to move on and work locally on your machine, and [you
 have your system ready for native development](/en/docs/getting-started/installation), you can start by using a template:
 
-```bash
+```shell
 $ tns create my-app --template nativescript-vue-template
 ```
 
 and then run your app using:
 
-```bash
+```shell
 $ tns run android # for android
 ```
 
-```bash
+```shell
 $ tns run ios # for ios
 ```
 
