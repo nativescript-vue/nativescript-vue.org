@@ -3,9 +3,9 @@ title: Label
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_label_.label
 ---
 
-The Label component is used to display text.
+The Label component is used to display read-only text.
 
-**Note**: It is named the same as the `<label>` HTML tag, but it doesn't have the same meaning. (TODO: reword)
+**Note**: This `<Label>` is not the same as `<Label>` of HTML.
 
 ## FormattedString
 

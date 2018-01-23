@@ -1,14 +1,18 @@
 ---
 title: Image
-apiRef: https://docs.nativescript.org/api-reference/classes/_ui_image_.image
+apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
 ---
 
-The Image component is used to display images.
+The Image widget shows the image from an ImageSource or from an URL.
 
 ---
 
 ```html
-<Image src="res://icon" stretch="none"/>
+<Image src="~/logo.png" stretch="none" />
+```
+
+```html
+<Image src="https://art.nativescript-vue.org/NativeScript-Vue-White-Green.png" stretch="none" />
 ```
 [> screenshots for=Image <]
 
@@ -16,4 +20,4 @@ The Image component is used to display images.
 
 | name | type | description |
 |------|------|-------------|
-| `src` | `String` | The source of the image, can be an URL or a path.
+| `src` | `String` | ImageSource file location or URL address
