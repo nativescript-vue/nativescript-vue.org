@@ -8,8 +8,9 @@ The Button component is used to display a button that can react to a tap event.
 ---
 
 ```html
-<Button text="Button"/>
+<button text="Button"/>
 ```
+
 [> screenshots for=Button <]
 
 ## Props
@@ -23,3 +24,12 @@ The Button component is used to display a button that can react to a tap event.
 | name | description |
 |------|-------------|
 | `tap`| Emitted when the button is pressed
+
+## Native Component
+| Android | iOS |
+|---------|-----|
+| android.widget.Button | UIButton
+
+---
+contributors: [MisterBrownRSA]
+---

@@ -8,7 +8,7 @@ Adds a progress indicator that indicates that something is running in the backgr
 ---
 
 ```html
-<ActivityIndicator busy="true" />
+<ActivityIndicator busy="true" @busyChange="onBusyChanged" />
 ```
 
 [> screenshots for=ActivityIndicator <]
@@ -18,4 +18,20 @@ Adds a progress indicator that indicates that something is running in the backgr
 
 | name | type | description |
 |------|------|-------------|
-| `busy` | `Boolean` | if true, it will be active
+| `busy` | `Boolean` | if `true`, it will be active
+
+## Events
+
+| name | description |
+|------|-------------|
+| `busyChange`| Emitted when the `busy` property is changed
+
+## Native Component
+
+| Android | iOS |
+|---------|-----|
+| android.widget.ProgressBar (indeterminate = true)	| UIActivityIndicatorView
+
+---
+contributors: [MisterBrownRSA]
+---

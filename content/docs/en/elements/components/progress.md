@@ -8,7 +8,7 @@ The Progress widget is a visual bar indicator of a progress in a operation. It s
 ---
 
 ```html
-<Progress value="{{ someProperty }}" />
+<progress :value="{{ someProperty }}" />
 ```
 [> screenshots for=Progress <]
 
@@ -16,4 +16,21 @@ The Progress widget is a visual bar indicator of a progress in a operation. It s
 
 | name | type | description |
 |------|------|-------------|
-| `value` | `Integer` | The current level of progress out of max.
+| `value` | `Integer` | The current level of progress out of max
+| `max` | `Integer` | The maximum value that progress will use
+
+## Events
+
+| name | description |
+|------|-------------|
+| `valueChange` | Emitted when the value property changes
+
+## Native Component
+
+| Android | iOS |
+|---------|-----|
+| android.widget.ProgressBar (indeterminate = false) | UIProgressView
+
+---
+contributors: [MisterBrownRSA]
+---

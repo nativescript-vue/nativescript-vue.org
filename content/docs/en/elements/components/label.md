@@ -7,6 +7,26 @@ The Label component is used to display read-only text.
 
 **Note**: This `<Label>` is not the same as `<Label>` of HTML.
 
+---
+
+```html
+<label text="Label"/>
+```
+
+[> screenshots for=Label <]
+
+## Props
+
+| name | type | description |
+|------|------|-------------|
+| `text` | `String` | The text of the label
+
+## Native Component
+
+| Android | iOS |
+|---------|-----|
+| android.widget.TextView | UILabel
+
 ## FormattedString
 
 If you need to style certain parts of the text differently, you can use a combination of a FormattedString and Span elements.
@@ -23,14 +43,5 @@ Example:
 ```
 
 ---
-
-```html
-<Label text="Label"/>
-```
-[> screenshots for=Label <]
-
-## Props
-
-| name | type | description |
-|------|------|-------------|
-| `text` | `String` | The text of the label
+contributors: [MisterBrownRSA]
+---
