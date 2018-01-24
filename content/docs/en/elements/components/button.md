@@ -1,15 +1,17 @@
 ---
 title: Button
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
+contributors: [MisterBrownRSA]
 ---
 
-The Button component is used to display a button.
+The Button component is used to display a button that can react to a tap event.
 
 ---
 
 ```html
-<Button text="Button"/>
+<Button text="Button" />
 ```
+
 [> screenshots for=Button <]
 
 ## Props
@@ -23,3 +25,8 @@ The Button component is used to display a button.
 | name | description |
 |------|-------------|
 | `tap`| Emitted when the button is pressed
+
+## Native Component
+| Android | iOS |
+|---------|-----|
+| android.widget.Button | UIButton
