@@ -1,6 +1,7 @@
 ---
 title: Label
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_label_.label
+contributors: [MisterBrownRSA]
 ---
 
 The Label component is used to display read-only text.
@@ -10,7 +11,7 @@ The Label component is used to display read-only text.
 ---
 
 ```html
-<label text="Label"/>
+<Label text="Label"/>
 ```
 
 [> screenshots for=Label <]
@@ -41,7 +42,3 @@ Example:
     </FormattedString>
 </Label>
 ```
-
----
-contributors: [MisterBrownRSA]
----

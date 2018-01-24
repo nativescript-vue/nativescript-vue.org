@@ -1,6 +1,7 @@
 ---
 title: WebView
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_web_view_
+apiRef: https://docs.nativescript.org/api-reference/classes/_ui_web_view_.webview
+contributors: [MisterBrownRSA]
 ---
 
 The WebView component is used to display web content within your application. 
@@ -10,7 +11,7 @@ You can load a page from a URL or by navigating back and forward.
 ---
 
 ```html
-<web-view height="1200px" src="http://nativescript-vue.org/#/"></web-view>
+<WebView height="1200px" src="http://nativescript-vue.org/#/"></WebView>
 ```
 
 [> screenshots for=WebView <]
@@ -31,7 +32,3 @@ You can load a page from a URL or by navigating back and forward.
 | Android | iOS |
 |---------|-----|
 | android.webkit.WebView | UIWebView
-
----
-contributors: [MisterBrownRSA]
----

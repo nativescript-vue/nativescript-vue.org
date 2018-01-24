@@ -1,6 +1,7 @@
 ---
 title: DatePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker
+contributors: [MisterBrownRSA]
 ---
 
 The DatePicker allows the user to pick a date.
@@ -10,6 +11,7 @@ The DatePicker allows the user to pick a date.
 ```html
 <DatePicker @loaded="onDatePickerLoaded" @dateChanged="onDateChanged" />
 ```
+
 [> screenshots for=DatePicker <]
 
 ## Props
@@ -35,7 +37,3 @@ The DatePicker allows the user to pick a date.
 | Android |	iOS |
 |---------|-----|
 | android.widget.DatePicker | UIDatePicker
-
----
-contributors: [MisterBrownRSA]
----

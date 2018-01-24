@@ -1,24 +1,25 @@
 ---
 title: TabView
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_tab_view_
+apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
+contributors: [MisterBrownRSA]
 ---
 
-The Button component is used to display a button that can react to a tap event.
+The TabView component allows multiple content inputs in a row, which are represented as tabs.
 
 ---
 
 ```html
-<tab-view height="300px" :selectedIndex="selectedIndex" >
-  <tab-view-item title="Tab 1">
+<TabView height="300px" :selectedIndex="selectedIndex" >
+  <TabViewItem title="Tab 1">
     <label text="Label in Tab 1"></label>
-  </tab-view-item>
-  <tab-view-item title="Tab 2">
+  </TabViewItem>
+  <TabViewItem title="Tab 2">
     <label text="Label in Tab 2"></label>
-  </tab-view-item>
-</tab-view>
+  </TabViewItem>
+</TabView>
 ```
 
-**NOTE** Height must be explicitly set on `<tab-view>`
+**NOTE** Height must be explicitly set on `<TabView>`
 
 [> screenshots for=TabView <]
 
@@ -37,8 +38,4 @@ The Button component is used to display a button that can react to a tap event.
 ## Native Component
 | Android | iOS |
 |---------|-----|
-| android.support.v4.view.ViewPager	 | UITabBarController
-
----
-contributors: [MisterBrownRSA]
----
+| android.support.v4.view.ViewPager | UITabBarController

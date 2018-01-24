@@ -1,6 +1,7 @@
 ---
 title: Progress
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_progress_.progress
+contributors: [MisterBrownRSA]
 ---
 
 The Progress widget is a visual bar indicator of a progress in a operation. It shows a bar representing the current progress of the operation.
@@ -8,7 +9,7 @@ The Progress widget is a visual bar indicator of a progress in a operation. It s
 ---
 
 ```html
-<progress :value="{{ someProperty }}" />
+<Progress :value="{{ someProperty }}" />
 ```
 [> screenshots for=Progress <]
 
@@ -30,7 +31,3 @@ The Progress widget is a visual bar indicator of a progress in a operation. It s
 | Android | iOS |
 |---------|-----|
 | android.widget.ProgressBar (indeterminate = false) | UIProgressView
-
----
-contributors: [MisterBrownRSA]
----

@@ -1,31 +1,32 @@
 ---
 title: Image
-apiRef: https://docs.nativescript.org/api-reference/classes/_ui_image._image
+apiRef: https://docs.nativescript.org/api-reference/classes/_ui_Image._Image
+contributors: [MisterBrownRSA]
 ---
 
-The Image widget shows the image from an ImageSource or from an URL.
+The Image widget shows the Image from an ImageSource or from an URL.
 
 ---
 
 ```html
-<image src="~/logo.png" stretch="none" />
+<Image src="~/logo.png" stretch="none" />
 ```
 
 ```html
-<image src="https://art.nativescript-vue.org/NativeScript-Vue-White-Green.png" stretch="none" />
+<Image src="https://art.nativescript-vue.org/NativeScript-Vue-White-Green.png" stretch="none" />
 ```
 
 ```html
-<image src="res://icon" stretch="none" />
+<Image src="res://icon" stretch="none" />
 ```
 
 ```html
-<image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAAXNSR0IArs4c6QAAABxpRE9UAAAAAgAAAAAAAAACAAAAKAAAAAIAAAACAAAARiS4uJEAAAASSURBVBgZYvjPwABHSMz/DAAAAAD//0GWpK0AAAAOSURBVGNgYPiPhBgQAACEvQv1D5y/pAAAAABJRU5ErkJggg==" stretch="none" />
+<Image src="data:Image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAAXNSR0IArs4c6QAAABxpRE9UAAAAAgAAAAAAAAACAAAAKAAAAAIAAAACAAAARiS4uJEAAAASSURBVBgZYvjPwABHSMz/DAAAAAD//0GWpK0AAAAOSURBVGNgYPiPhBgQAACEvQv1D5y/pAAAAABJRU5ErkJggg==" stretch="none" />
 ```
 
 
 
-[> screenshots for=image <]
+[> screenshots for=Image <]
 
 ## Props
 
@@ -38,7 +39,3 @@ The Image widget shows the image from an ImageSource or from an URL.
 | Android | iOS |
 |---------|-----|
 | android.widget.ImageView | UIImageView
-
----
-contributors: [MisterBrownRSA]
----

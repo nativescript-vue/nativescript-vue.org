@@ -1,6 +1,7 @@
 ---
 title: SearchBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_search_bar_.searchbar
+contributors: [MisterBrownRSA]
 ---
 
 The SearchBar widget provides a user interface for entering search queries and submitting requests to the search provider.
@@ -8,7 +9,7 @@ The SearchBar widget provides a user interface for entering search queries and s
 ---
 
 ```html
-<SearchBar hint="Search hint" :text="searchPhrase" @textChange="onTextChanged" @submit="onSubmit"></SearchBar>
+<SearchBar hint="Search hint" :text="searchPhrase" @textChange="onTextChanged" @submit="onSubmit" />
 ```
 
 [> screenshots for=SearchBar <]
@@ -32,7 +33,3 @@ The SearchBar widget provides a user interface for entering search queries and s
 | Android | iOS |
 |---------|-----|
 | android.widget.SearchView	| UISearchBar
-
----
-contributors: [MisterBrownRSA]
----

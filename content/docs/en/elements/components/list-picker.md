@@ -1,6 +1,7 @@
 ---
 title: ListPicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_picker_.listpicker
+contributors: [MisterBrownRSA]
 ---
 
 The Listpicker component allows the user to pick a value from a list.
@@ -8,7 +9,7 @@ The Listpicker component allows the user to pick a value from a list.
 ---
 
 ```html
-<list-picker v-model="pokemons" selectedIndex="0" @selectedIndexChange="selectedIndexChanged"></list-picker>
+<ListPicker v-model="pokemons" selectedIndex="0" @selectedIndexChange="selectedIndexChanged"></ListPicker>
 ```
 [> screenshots for=ListPicker <]
 
@@ -29,7 +30,3 @@ The Listpicker component allows the user to pick a value from a list.
 | Android | iOS |
 |---------|-----|
 | android.widget.NumberPicker | UIPickerView
-
----
-contributors: [MisterBrownRSA]
----

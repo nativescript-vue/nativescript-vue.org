@@ -1,6 +1,7 @@
 ---
 title: SegmentedBar
 apiRef: http://docs.nativescript.org/api-reference/modules/_ui_segmented_bar_.html
+contributors: [MisterBrownRSA]
 ---
 
 Using a SegementedBar gives you a simple way to define a collection of tabbed views for discrete selection. 
@@ -8,7 +9,7 @@ Using a SegementedBar gives you a simple way to define a collection of tabbed vi
 ---
 
 ```html
-<segmented-bar :items="segmentedBarItems" v-model="selectedBarIndex" @selectedIndex="onSelectedIndexChange" ></segmented-bar>
+<SegmentedBar :items="segmentedBarItems" v-model="selectedBarIndex" @selectedIndex="onSelectedIndexChange" />
 ```
 
 [> screenshots for=SegmentedBar <]
@@ -30,7 +31,3 @@ Using a SegementedBar gives you a simple way to define a collection of tabbed vi
 | Android | iOS |
 |---------|-----|
 | android.widget.TabHost | UISegmentedControl
-
----
-contributors: [MisterBrownRSA]
----

@@ -1,6 +1,7 @@
 ---
 title: HtmlView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_html_view_.htmlview
+contributors: [MisterBrownRSA]
 ---
 
 HtmlView allows you to show static html content without the need of a WebView.
@@ -23,7 +24,3 @@ HtmlView allows you to show static html content without the need of a WebView.
 | Android | iOS |
 |---------|-----|
 | android.widget.TextView | UILabel
-
----
-contributors: [MisterBrownRSA]
----

@@ -1,6 +1,8 @@
 ---
 title: TextField
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_text_field_
+contributors: [MisterBrownRSA]
+
 ---
 
 The TextField component creates an editable single-line box.
@@ -8,11 +10,11 @@ The TextField component creates an editable single-line box.
 ---
 
 ```html
-<text-field v-model="textFieldValue" hint="Enter text..."></text-field>
+<TextField v-model="textFieldValue" hint="Enter text..."></TextField>
 ```
 
 ```html
-<text-field :text="textFieldValue" hint="Enter text..."></text-field>
+<TextField :text="textFieldValue" hint="Enter text..."></TextField>
 ```
 
 [> screenshots for=TextField <]
@@ -33,7 +35,3 @@ The TextField component creates an editable single-line box.
 | Android | iOS |
 |---------|-----|
 | android.widget.Button | UIButton
-
----
-contributors: [MisterBrownRSA]
----

@@ -1,6 +1,8 @@
 ---
 title: TimePicker
-apiRef: http://docs.nativescript.org/api-reference/modules/_ui_time_picker_.html
+apiRef: https://docs.nativescript.org/api-reference/classes/_ui_time_picker_.timepicker
+contributors: [MisterBrownRSA]
+
 ---
 
 The TimePicker component allows the user to select formatted time.
@@ -8,7 +10,7 @@ The TimePicker component allows the user to select formatted time.
 ---
 
 ```html
-<time-picker :hour="currentHour" :minute="currentMinute"></time-picker>
+<TimePicker :hour="currentHour" :minute="currentMinute"></TimePicker>
 ```
 
 [> screenshots for=TimePicker <]
@@ -24,7 +26,3 @@ The TimePicker component allows the user to select formatted time.
 | Android | iOS |
 |---------|-----|
 | android.widget.TimePicker | UIDatePicker
-
----
-contributors: [MisterBrownRSA]
----

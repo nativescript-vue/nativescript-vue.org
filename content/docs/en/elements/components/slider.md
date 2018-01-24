@@ -1,6 +1,8 @@
 ---
 title: Slider
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_slider_
+apiRef: https://docs.nativescript.org/api-reference/modules/_ui_slider_.slider
+contributors: [MisterBrownRSA]
+
 ---
 
 The slider allows the user to input from a numeric specified range.
@@ -8,7 +10,7 @@ The slider allows the user to input from a numeric specified range.
 ---
 
 ```html
-<slider value="80" @valueChange="onValueChanged"></slider>
+<Slider value="80" @valueChange="onValueChanged"></Slider>
 ```
 
 [> screenshots for=Slider <]
@@ -31,7 +33,3 @@ The slider allows the user to input from a numeric specified range.
 | Android | iOS |
 |---------|-----|
 | android.widget.SeekBar | UISlider
-
----
-contributors: [MisterBrownRSA]
----

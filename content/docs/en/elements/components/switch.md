@@ -1,6 +1,7 @@
 ---
 title: Switch
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_switch_.switch
+contributors: [MisterBrownRSA]
 ---
 
 The Switch component allows the user to toggle between two states. 
@@ -9,7 +10,7 @@ The default state is `false` or "off".
 ---
 
 ```html
-<switch checked="true"></switch>
+<Switch checked="true"></Switch>
 ```
 
 [> screenshots for=Switch <]
@@ -30,7 +31,3 @@ The default state is `false` or "off".
 | Android | iOS |
 |---------|-----|
 | android.widget.Switch | UISwitch
-
----
-contributors: [MisterBrownRSA]
----

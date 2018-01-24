@@ -1,6 +1,7 @@
 ---
 title: ActivityIndicator
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicator_.activityindicator
+contributors: [MisterBrownRSA]
 ---
 
 Adds a progress indicator that indicates that something is running in the background, prompting the user to pause.
@@ -31,7 +32,3 @@ Adds a progress indicator that indicates that something is running in the backgr
 | Android | iOS |
 |---------|-----|
 | android.widget.ProgressBar (indeterminate = true)	| UIActivityIndicatorView
-
----
-contributors: [MisterBrownRSA]
----
