@@ -29,10 +29,10 @@ new Vue({
 
 <ListView class="list-group" :items="countries" @itemTap="onItemTap" style="height:1250px">
   <v-template scope="item">
-    <flexbox-layout flexDirection="row" class="list-group-item">
+    <FlexboxLayout flexDirection="row" class="list-group-item">
       <image :src="item.imageSrc" class="thumb img-circle"></image>
       <label :text="item.name" class="list-group-item-heading" style="width: 60%"></label>
-    </flexbox-layout>
+    </FlexboxLayout>
   </v-template>
 </ListView>
 ```

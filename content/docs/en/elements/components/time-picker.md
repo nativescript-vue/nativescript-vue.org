@@ -10,7 +10,7 @@ The TimePicker component allows the user to select formatted time.
 ---
 
 ```html
-<TimePicker :hour="currentHour" :minute="currentMinute"></TimePicker>
+<TimePicker :hour="currentHour" :minute="currentMinute" />
 ```
 
 [> screenshots for=TimePicker <]

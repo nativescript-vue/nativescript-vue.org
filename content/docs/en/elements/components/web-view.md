@@ -11,7 +11,7 @@ You can load a page from a URL or by navigating back and forward.
 ---
 
 ```html
-<WebView height="1200px" src="http://nativescript-vue.org/#/"></WebView>
+<WebView height="1200px" src="http://nativescript-vue.org/#/" />
 ```
 
 [> screenshots for=WebView <]

@@ -9,7 +9,7 @@ The Button component is used to display a button that can react to a tap event.
 ---
 
 ```html
-<Button text="Button"/>
+<Button text="Button" />
 ```
 
 [> screenshots for=Button <]

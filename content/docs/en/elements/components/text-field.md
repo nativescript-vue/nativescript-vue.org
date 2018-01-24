@@ -10,11 +10,11 @@ The TextField component creates an editable single-line box.
 ---
 
 ```html
-<TextField v-model="textFieldValue" hint="Enter text..."></TextField>
+<TextField v-model="textFieldValue" hint="Enter text..." />
 ```
 
 ```html
-<TextField :text="textFieldValue" hint="Enter text..."></TextField>
+<TextField :text="textFieldValue" hint="Enter text..." />
 ```
 
 [> screenshots for=TextField <]

@@ -9,7 +9,7 @@ HtmlView allows you to show static html content without the need of a WebView.
 ---
 
 ```html
-<html-view html="<span><font color="#ff0000">Test</font></span>"/>
+<HtmlView html="<span><font color="#ff0000">Test</font></span>" />
 ```
 [> screenshots for=HtmlView <]
 

@@ -9,7 +9,7 @@ The TabView component allows multiple content inputs in a row, which are represe
 ---
 
 ```html
-<TabView height="300px" :selectedIndex="selectedIndex" >
+<TabView height="300px" :selectedIndex="selectedIndex">
   <TabViewItem title="Tab 1">
     <label text="Label in Tab 1"></label>
   </TabViewItem>

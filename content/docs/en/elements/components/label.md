@@ -11,7 +11,7 @@ The Label component is used to display read-only text.
 ---
 
 ```html
-<Label text="Label"/>
+<Label text="Label" />
 ```
 
 [> screenshots for=Label <]

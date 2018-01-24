@@ -5,12 +5,12 @@ contributors: [MisterBrownRSA]
 
 ---
 
-The slider allows the user to input from a numeric specified range.
+The Slider allows the user to input from a numeric specified range.
 
 ---
 
 ```html
-<Slider value="80" @valueChange="onValueChanged"></Slider>
+<Slider value="80" @valueChange="onValueChanged" />
 ```
 
 [> screenshots for=Slider <]

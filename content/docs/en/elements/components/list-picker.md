@@ -9,7 +9,7 @@ The Listpicker component allows the user to pick a value from a list.
 ---
 
 ```html
-<ListPicker v-model="pokemons" selectedIndex="0" @selectedIndexChange="selectedIndexChanged"></ListPicker>
+<ListPicker v-model="pokemons" selectedIndex="0" @selectedIndexChange="selectedIndexChanged" />
 ```
 [> screenshots for=ListPicker <]
 

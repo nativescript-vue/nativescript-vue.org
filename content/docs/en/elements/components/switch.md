@@ -10,7 +10,7 @@ The default state is `false` or "off".
 ---
 
 ```html
-<Switch checked="true"></Switch>
+<Switch checked="true" />
 ```
 
 [> screenshots for=Switch <]
