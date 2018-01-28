@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     directives: {
       nav: function nav(el) {
         el.addEventListener('change', function (e) {
-          window.location.href = e.target.value;
+          window.location.href = e.target.value.replace('index.html', '');
         });
       }
     }

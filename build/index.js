@@ -49,7 +49,7 @@ Metalsmith(cwd)
       const found = this.links.find(l => l.endsWith(`${slug}/index.html`) && l.includes(locale));
 
       if (found) {
-        return found;
+        return found.replace('index.html', '');
       }
       return `/${locale === this.defaultLocale ? '' : locale}`;
     },

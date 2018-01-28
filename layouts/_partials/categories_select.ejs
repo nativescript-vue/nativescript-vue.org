@@ -5,14 +5,14 @@
 <% } else if(entry.children) { %>
 <% if (entry.title) { %>
 <optgroup label="<%= entry.title %>">
-    <% } %>
+<% } %>
     <% entry.children
-            .filter(item => item.locale != (current.locale || 'en'))
+            .filter(item => item.locale ? item.locale === current.locale : true)
             .sort(meta.sortCategories)
     .forEach((item) => { %>
     <%- include('_partials/categories_select', { entry: item }) %>
     <% }) %>
-    <% if (entry.title) { %>
+<% if (entry.title) { %>
 </optgroup>
 <% } %>
 <% } %>
