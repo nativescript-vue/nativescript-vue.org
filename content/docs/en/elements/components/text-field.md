@@ -1,7 +1,7 @@
 ---
 title: TextField
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_text_field_
-contributors: [MisterBrownRSA]
+contributors: [MisterBrownRSA, rigor789]
 
 ---
 
@@ -10,11 +10,13 @@ The TextField component creates an editable single-line box.
 ---
 
 ```html
-<TextField v-model="textFieldValue" hint="Enter text..." />
+<TextField :text="textFieldValue" hint="Enter text..." />
 ```
 
+**Note**: This component supports two-way data binding using `v-model`:
+
 ```html
-<TextField :text="textFieldValue" hint="Enter text..." />
+<TextField v-model="textFieldValue" />
 ```
 
 [> screenshots for=TextField <]
@@ -23,13 +25,14 @@ The TextField component creates an editable single-line box.
 
 | name | type | description |
 |------|------|-------------|
-| `text` | `String` | The text value of the text-field
+| `text` | `String` | The value of the TextField.
+| `hint` | `String` | The placeholder text.
 
 ## Events
 
 | name | description |
 |------|-------------|
-| `tap`| Emitted when the button is pressed
+| `textChange`| Emitted when the text changes.
 
 ## Native Component
 | Android | iOS |

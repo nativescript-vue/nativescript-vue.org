@@ -1,10 +1,10 @@
 ---
 title: DatePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker
-contributors: [MisterBrownRSA]
+contributors: [MisterBrownRSA, rigor789]
 ---
 
-The DatePicker allows the user to pick a date.
+The DatePicker component allows the user to pick a date.
 
 ---
 
@@ -12,25 +12,31 @@ The DatePicker allows the user to pick a date.
 <DatePicker @loaded="onDatePickerLoaded" @dateChanged="onDateChanged" />
 ```
 
+**Note**: This component supports two-way data binding using `v-model`:
+
+```html
+<DatePicker v-model="selectedDate" />
+```
+
+
 [> screenshots for=DatePicker <]
 
 ## Props
 
 | name | type | description |
 |------|------|-------------|
-| `date` | `Date` | The current set date
-| `minDate` | `Date` | The minimum option for date range
-| `maxDate` | `Date` | The minimum option for date range
-| `day` | `Number` | The current set day
-| `month` | `Number` | The current set month
-| `year` | `Number` | The current set year
+| `date` | `Date` | The currently displayed date.
+| `minDate` | `Date` | The minimum selectable date.
+| `maxDate` | `Date` | The maximum selectable date.
+| `day` | `Number` | The currently set day.
+| `month` | `Number` | The currently set month.
+| `year` | `Number` | The currently set year.
 
 ## Events
 
 | name | description |
 |------|-------------|
-| `loaded`| Emitted after the component has been loaded
-| `dateChanged` | Emitted after every single change on component
+| `dateChanged` | Emitted when the selected date changes.
 
 ## Native Component
 

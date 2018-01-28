@@ -1,25 +1,25 @@
 ---
 title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [MisterBrownRSA]
+contributors: [MisterBrownRSA, rigor789]
 ---
 
-The TabView component allows multiple content inputs in a row, which are represented as tabs.
+The TabView component allows you to display content grouped into tabs.
 
 ---
 
 ```html
-<TabView height="300px" :selectedIndex="selectedIndex">
+<TabView :selectedIndex="selectedIndex">
   <TabViewItem title="Tab 1">
-    <label text="Label in Tab 1"></label>
+    <label text="Content for Tab 1"></label>
   </TabViewItem>
   <TabViewItem title="Tab 2">
-    <label text="Label in Tab 2"></label>
+    <label text="Contetn for Tab 2"></label>
   </TabViewItem>
 </TabView>
 ```
 
-**NOTE** Height must be explicitly set on `<TabView>`
+**NOTE**: On iOS height must be explicitly set on `<TabView>`
 
 [> screenshots for=TabView <]
 

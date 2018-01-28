@@ -1,10 +1,10 @@
 ---
 title: ActivityIndicator
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicator_.activityindicator
-contributors: [MisterBrownRSA]
+contributors: [MisterBrownRSA, rigor789]
 ---
 
-Adds a progress indicator that indicates that something is running in the background, prompting the user to pause.
+The ActivityIndicator component adds a progress indicator that indicates that something is running in the background, prompting the user to pause.
 
 ---
 
@@ -19,13 +19,13 @@ Adds a progress indicator that indicates that something is running in the backgr
 
 | name | type | description |
 |------|------|-------------|
-| `busy` | `Boolean` | if `true`, it will be active
+| `busy` | `Boolean` | When `true`, the indicator is active.
 
 ## Events
 
 | name | description |
 |------|-------------|
-| `busyChange`| Emitted when the `busy` property is changed
+| `busyChange`| Emitted when the `busy` property is changed.
 
 ## Native Component
 

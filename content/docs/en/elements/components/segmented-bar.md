@@ -1,15 +1,22 @@
 ---
 title: SegmentedBar
 apiRef: http://docs.nativescript.org/api-reference/modules/_ui_segmented_bar_.html
-contributors: [MisterBrownRSA]
+contributors: [MisterBrownRSA, rigor789]
 ---
 
-Using a SegementedBar gives you a simple way to define a collection of tabbed views for discrete selection. 
+The SegementedBar component gives you a simple way to display a collection of tabbed views for discrete selection.
 
 ---
 
 ```html
-<SegmentedBar :items="segmentedBarItems" v-model="selectedBarIndex" @selectedIndex="onSelectedIndexChange" />
+<SegmentedBar :items="listOfItems" selectedIndex="0"
+    @selectedIndexChange="onSelectedIndexChange" />
+```
+
+**Note**: This component supports two-way data binding using `v-model`:
+
+```html
+<SegmentedBar :items="listOfItems" v-model="selectedItem" />
 ```
 
 [> screenshots for=SegmentedBar <]
@@ -18,8 +25,8 @@ Using a SegementedBar gives you a simple way to define a collection of tabbed vi
 
 | name | type | description |
 |------|------|-------------|
-| `items` | `Array<SegmentedBarItem>` | Adds an item to the segmented
-| `selectedBarIndex` | `Number` | The default index for the selected option
+| `items` | `Array<SegmentedBarItem>` | A list of items to be displayed in the segmented bar.
+| `selectedIndex` | `Number` | The index of the selected item.
 
 ## Events
 
