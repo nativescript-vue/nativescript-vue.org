@@ -43,4 +43,3 @@ props get a meaning:
 |------|------|-------------|
 | `top` | `Number` | A value representing the distance from the top of the parent AbsoluteLayout
 | `left` | `Number` | A value representing the distance from the left of the parent AbsoluteLayout
-

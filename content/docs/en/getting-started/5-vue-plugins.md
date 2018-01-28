@@ -53,34 +53,32 @@ Now you can manage state by calling the store you just created. In the example b
 
 ```js
 new Vue({
-
-    computed: {
-        count(){
-            return store.state.count
-        }
-    },
-
-    template: `
-        <Page>
-            <ScrollView>
-                <StackLayout>
-                    <Button @tap="increment" text="+" />
-                    <Button @tap="decrement" text="-" />
-                    <Label :text="count" />
-                </StackLayout>
-            </ScrollView>
-        </Page>
-    `,
-
-    methods: {
-        increment() {
-            store.commit('increment')
-        },
-        decrement() {
-            store.commit('decrement')
-        }
+  computed: {
+    count(){
+      return store.state.count
     }
-   
+  },
+
+  template: `
+    <Page>
+      <ScrollView>
+        <StackLayout>
+          <Button @tap="increment" text="+" />
+          <Button @tap="decrement" text="-" />
+          <Label :text="count" />
+        </StackLayout>
+      </ScrollView>
+    </Page>
+  `,
+
+  methods: {
+    increment() {
+      store.commit('increment')
+    },
+    decrement() {
+      store.commit('decrement')
+    }
+  }
 }).$start()
 ```
 

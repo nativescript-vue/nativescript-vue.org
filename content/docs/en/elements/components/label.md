@@ -23,11 +23,11 @@ If you need to style certain parts of the text differently, you can use a combin
 Example:
 ```html
 <Label>
-    <FormattedString>
-        <Span text="This text has a" />
-        <Span text="red " style="color: red;" />
-        <Span text="piece of text." />
-    </FormattedString>
+  <FormattedString>
+    <Span text="This text has a" />
+    <Span text="red " style="color: red;" />
+    <Span text="piece of text." />
+  </FormattedString>
 </Label>
 ```
 

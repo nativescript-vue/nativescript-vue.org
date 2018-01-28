@@ -23,13 +23,13 @@ The component can also be used show any content by setting the `editable` proper
 
 ```html
 <TextView editable="false">
-   <FormattedString>
-       <Span text="You can use text attributes such as " />
-       <Span text="bold, " fontWeight="Bold" />
-       <Span text="italic " fontStyle="Italic" />
-       <Span text="and " />
-       <Span text="underline." textDecoration="Underline" />
-   </FormattedString>
+  <FormattedString>
+    <Span text="You can use text attributes such as " />
+    <Span text="bold, " fontWeight="Bold" />
+    <Span text="italic " fontStyle="Italic" />
+    <Span text="and " />
+    <Span text="underline." textDecoration="Underline" />
+  </FormattedString>
 </TextView>
 ```
 

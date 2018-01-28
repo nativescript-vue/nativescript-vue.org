@@ -98,6 +98,3 @@ props get a meaning:
 `flexShrink` | `Number` | A value indicating the "flex shrink factor", which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there is not enough space on the row. When omitted, it is set to 1 and the flex shrink factor is multiplied by the flex basis when distributing negative space.
 `alignSelf` | `String` | A value that overrides the `alignItems` value for specific flex items. This property accepts the same 5 values as `alignItems`: `flex-start` (cross-start margin edge of the item is placed on the cross-start line), `flex-end` (cross-end margin edge of the item is placed on the cross-end line), `center` (item is centered in the cross-axis), `baseline` (items are aligned such as their baselines are aligned), and `stretch` (stretch to fill the container but still respect `min-width`/`max-width`). The default value is `stretch`.
 `flexWrapBefore` | `Boolean` | A boolean value controlling item wrapping. Setting it to `true` will force the item to wrap onto a new line. The default value is `false`. (This property is not part of the official flexbox specification.)
-
-
-
