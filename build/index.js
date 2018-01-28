@@ -54,11 +54,19 @@ Metalsmith(cwd)
       return `/${locale === this.defaultLocale ? '' : locale}`;
     },
     sortCategories(a, b) {
+      const order = [
+        'introduction',
+        'getting-started',
+        'utilities',
+        'elements:layouts',
+        'elements:components',
+        'elements:dialogs'
+      ]
+
       if (a.fileName) {
         return a.fileName.localeCompare(b.fileName);
       } else if (a.level) {
-        // todo: we might need to alter this for correct ordering
-        return a.level - b.level;
+        return order.indexOf(a.title.toLowerCase()) - order.indexOf(b.title.toLowerCase())
       }
     }
   })

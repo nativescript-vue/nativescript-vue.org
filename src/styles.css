@@ -18,16 +18,11 @@
     transition: all .3s ease;
 }
 
-#docs-toc .level-1 > span {
-    @apply .block .text-blue-dark .uppercase .tracking-wide .text-sm .mb-2;
-}
-#docs-toc .level-2 > span {
+#docs-toc span {
     @apply .block .text-blue-dark .uppercase .tracking-wide .text-sm .mt-4 .mb-2;
 }
-#docs-toc .level-1 > ul {
-    @apply .pl-2;
-}
-#docs-toc .level-2 > ul {
+
+#docs-toc ul ul {
     @apply .pl-2;
 }
 
