@@ -9,7 +9,7 @@ The HtmlView component allows you to show static html content without the need o
 ---
 
 ```html
-<HtmlView html="<span><font color="#ff0000">HtmlView</font></span>" />
+<HtmlView html="<div><h1>HtmlView</h1></div>" />
 ```
 
 [> screenshots for=HtmlView <]
