@@ -1,6 +1,7 @@
 ---
 title: DockLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_layout_
+contributors: [rigor789]
 ---
 
 DockLayout is a layout that provides a docking mechanism for child elements to the `left`, `right`, `top`, `bottom` or center of the layout. To define the docking side of a child element, use its `dock` property. To dock a child element to the center of the DockLayout, it must be the **last child** of the DockLayout and the `stretchLastChild` property of the DockLayout must be set to `true`.

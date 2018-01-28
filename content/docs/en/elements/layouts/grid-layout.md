@@ -1,6 +1,7 @@
 ---
 title: GridLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_grid_layout_
+contributors: [rigor789]
 ---
 
 The GridLayout is a layout that arranges its child elements in a table structure of rows and columns. A cell can contain multiple child elements, they can span over multiple rows and columns, and even overlap each other. The GridLayout has one column and one row by default. To add additional columns and rows, you have to specify column definition items (separated by commas) to the `columns` property and row definition items (separated by commas) to the `rows` property of the GridLayout. The width of a column and the height of a row can be specified as an absolute amount of pixels, as a percentage of the available space or automatically:

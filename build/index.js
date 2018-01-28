@@ -101,6 +101,7 @@ Metalsmith(cwd)
   .use((files, metalsmith, done) => {
     Object.keys(files).forEach(file => {
       files[file].fileName = path.basename(file);
+      files[file].filePath = file;
     });
 
     done();

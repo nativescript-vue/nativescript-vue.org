@@ -30,9 +30,23 @@
                 <div class="w-full md:w-3/4 bg-white min-h-screen">
                     <div class="p-4 md:pl-8">
                         <% if (current.title) { %>
-                        <div class="text-blue-dark text-4xl mt-4"><%= current.title %></div>
+                        <div class="text-blue-dark text-4xl mt-4 relative">
+                            <%= current.title %>
+                        </div>
                         <hr class="border-t-2 border-blue-lighter w-24 mx-0 mb-2">
                         <% } %>
+
+                        <% if (current.apiRef && current.title) { %>
+                        <div class="text-blue-light mb-8">
+                            <a href="<%= current.apiRef %>"
+                               target="_blank"
+                               rel="noopener"
+                               class="no-underline text-green hover:text-blue-dark">
+                                Read the full API docs for <%= current.title %>
+                            </a>
+                        </div>
+                        <% } %>
+
                         <% if(current.authors) { %>
                         <div class="text-blue-light mb-8">
                             <%= meta.moment(date).format('MMMM DD, YYYY') %>
@@ -51,6 +65,15 @@
                         <% if (current.contributors) { %>
                         <%- include('_partials/contributors', { contributors: current.contributors }) %>
                         <% } %>
+
+                        <div class="flex justify-center">
+                            <a href="https://github.com/nativescript-vue/nativescript-vue.org/tree/master/content/<%= current.filePath %>"
+                               target="_blank"
+                               rel="noopener"
+                               class="border border-green px-4 py-2 no-underline text-green hover:border-blue-dark hover:text-blue-dark mt-8">
+                                Improve this document
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

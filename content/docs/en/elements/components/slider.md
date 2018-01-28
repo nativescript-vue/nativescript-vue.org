@@ -1,6 +1,6 @@
 ---
 title: Slider
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_slider_.slider
+apiRef: https://docs.nativescript.org/api-reference/classes/_ui_slider_.slider
 contributors: [MisterBrownRSA, rigor789]
 
 ---

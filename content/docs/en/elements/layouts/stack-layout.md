@@ -1,6 +1,7 @@
 ---
 title: StackLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_stack_layout_
+contributors: [rigor789]
 ---
 
 The StackLayout container stacks the child elements either vertically (default), or horizontally.

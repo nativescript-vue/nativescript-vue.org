@@ -1,6 +1,7 @@
 ---
 title: WrapLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_wrap_layout_
+contributors: [rigor789]
 ---
 
 The WrapLayout container positions its children in rows or columns, based on the orientation property, until the space is filled and then wraps them onto a new row or column.
