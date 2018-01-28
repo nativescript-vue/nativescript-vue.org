@@ -16,14 +16,14 @@ $ tns plugin add nativescript-gradient
 Open your app entry file and add the following to the top:
 
 ```js
-Vue.registerElement("gradient", () => require("nativescript-gradient").Gradient);
+Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient)
 ```
 
 Then in your template, you can use the newly installed element:
 
 ```html
-<gradient direction="to right" colors="#FF0077, red, #FF00FF">
+<Gradient direction="to right" colors="#FF0077, red, #FF00FF">
   <Label text="Best gradient." horizontalAlignment="center"
-         style="color: white; padding: 20"/>
-</gradient>
+         style="color: white; padding: 20" />
+</Gradient>
 ```

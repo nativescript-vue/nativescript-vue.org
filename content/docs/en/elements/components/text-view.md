@@ -24,7 +24,7 @@ The component can also be used show any content by setting the `editable` proper
 ```html
 <TextView editable="false">
    <FormattedString>
-       <Span text="This is a text view that uses attributed text. You can use text attributes such as "></Span>
+       <Span text="You can use text attributes such as " />
        <Span text="bold, " fontWeight="Bold" />
        <Span text="italic " fontStyle="Italic" />
        <Span text="and " />
