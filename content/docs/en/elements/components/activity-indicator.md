@@ -14,7 +14,6 @@ The ActivityIndicator component adds a progress indicator that indicates that so
 
 [> screenshots for=ActivityIndicator <]
 
-
 ## Props
 
 | name | type | description |

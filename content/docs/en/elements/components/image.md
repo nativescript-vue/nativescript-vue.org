@@ -20,7 +20,6 @@ The Image component displays an Image from an [ImageSource](https://docs.natives
 <Image src="https://art.nativescript-vue.org/NativeScript-Vue-White-Green.png" stretch="none" />
 ```
 
-
 #### Displaying an image from `App_Resources`
 
 ```html

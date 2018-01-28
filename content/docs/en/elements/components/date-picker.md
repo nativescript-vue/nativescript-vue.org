@@ -18,7 +18,6 @@ The DatePicker component allows the user to pick a date.
 <DatePicker v-model="selectedDate" />
 ```
 
-
 [> screenshots for=DatePicker <]
 
 ## Props

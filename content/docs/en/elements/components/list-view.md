@@ -27,7 +27,6 @@ To learn more about the `v-template` component, head over to the [`v-template` d
 
 [> screenshots for=ListView <]
 
-
 ## Props
 
 | name | type | description |
