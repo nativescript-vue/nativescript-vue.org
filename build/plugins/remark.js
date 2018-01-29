@@ -22,7 +22,7 @@ function processMarkdown(contents) {
       .use(highlight)
       .use(squeezeParagraphs)
       .use(github, {
-        repository: 'rigor789/nativescript-vue'
+        repository: 'nativescript-vue/nativescript-vue'
       })
       .use(remarkPing, {
         pingUsername: () => true,
@@ -38,7 +38,7 @@ function processMarkdown(contents) {
             android: 'android23',
             ios: 'ios-simulator103iPhone6'
           }
-          const url = (platform) => `https://raw.githubusercontent.com/rigor789/nativescript-vue-ui-tests/master/screenshots/${platforms[platform]}/${attrs.for}.png`;
+          const url = (platform) => `https://raw.githubusercontent.com/nativescript-vue/nativescript-vue-ui-tests/master/screenshots/${platforms[platform]}/${attrs.for}.png`;
 
           return `<div class="flex flex-wrap bg-blue-dark p-4 sm:p-8">
               <div class="w-full sm:w-1/2">
