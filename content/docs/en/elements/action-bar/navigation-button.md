@@ -10,7 +10,7 @@ The NavigationButton component is a NativeScript abstraction for the Android nav
 
 ```html
 <ActionBar title="My App">
-    <NavigationButton text="Go back" android.systemIcon="ic_menu_back" @tap="goBack" />
+  <NavigationButton text="Go back" android.systemIcon="ic_menu_back" @tap="goBack" />
 </ActionBar>
 ```
 
