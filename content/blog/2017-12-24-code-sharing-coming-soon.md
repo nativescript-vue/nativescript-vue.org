@@ -1,6 +1,7 @@
 ---
 title: Code Sharing is coming to NativeScript-Vue
 authors: [rigor789]
+toc: true
 ---
 
 One of our biggest goals is to allow developers to write

@@ -59,6 +59,7 @@ Metalsmith(cwd)
         'getting-started',
         'utilities',
         'elements:layouts',
+        'elements:action-bar',
         'elements:components',
         'elements:dialogs'
       ]
