@@ -33,8 +33,8 @@ The TextField component creates an editable single-line box.
 | name | description |
 |------|-------------|
 | `textChange`| Emitted when the text changes.
-| `focus`| Emitted when the text field is in focus.
-| `blur`| Emitted when the text field leaves focus.
+| `focus`| Emitted when the textfield is in focus.
+| `blur`| Emitted when the textfield leaves focus.
 
 ## Native Component
 | Android | iOS |
