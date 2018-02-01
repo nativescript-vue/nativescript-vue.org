@@ -33,7 +33,7 @@ You can verify the installation was successful by running `tns` in your terminal
 
 System Requirements and setup instructions for the Android SDK on Windows
 
-[Advanced setup : Windows](https://docs.nativescript.org/start/ns-setup-win)
+[Advanced setup: Windows](https://docs.nativescript.org/start/ns-setup-win)
 
 ### macOS
 
