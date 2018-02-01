@@ -48,8 +48,8 @@ The component can also be used show any content by setting the `editable` proper
 | name | description |
 |------|-------------|
 | `textChange`| Emitted when the text changes.
-| `focus`| Emitted when the text view is in focus.
-| `blur`| Emitted when the text view leaves focus.
+| `focus`| Emitted when the textview is in focus.
+| `blur`| Emitted when the textview leaves focus.
 
 ## Native Component
 | Android | iOS |
