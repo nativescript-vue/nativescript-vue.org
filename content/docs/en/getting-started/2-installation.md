@@ -12,7 +12,7 @@ so that your applications can compile.
 - [NativeScript-CLI](#nativescript-cli)
 - [Windows](#windows) (for developing Android applications on Windows)
 - [macOS](#macos) (for developing iOS and Android applications on macOS)
-- [Linux](#macos) (for developing Android applications on Linux)
+- [Linux](#linux) (for developing Android applications on Linux)
 
 ### Node.js
 
