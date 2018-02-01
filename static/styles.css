@@ -3222,7 +3222,7 @@ button,
   margin-bottom: .5rem;
 }
 
-#docs-toc ul {
+#docs-toc ul ul {
   padding-left: .5rem;
 }
 
@@ -3235,6 +3235,11 @@ button,
   border-left-width: 8px;
   border-color: #53ba82;
   /*background-color: #282b2e;*/
+}
+
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 576px) {
