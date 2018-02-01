@@ -1,7 +1,7 @@
 ---
 title: TextField
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_text_field_
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, TheOriginalJosh]
 
 ---
 
@@ -33,6 +33,8 @@ The TextField component creates an editable single-line box.
 | name | description |
 |------|-------------|
 | `textChange`| Emitted when the text changes.
+| `focus`| Emitted when the textfield is in focus.
+| `blur`| Emitted when the textfield leaves focus.
 
 ## Native Component
 | Android | iOS |
