@@ -15,7 +15,7 @@ function processMarkdown(contents) {
     remark()
       .use(lint)
       .use(slug)
-      // todo: figure out why this isn't creating any anchors
+      // todo: enable when https://github.com/ben-eb/remark-autolink-headings/pull/41 is merged
       // .use(headings, {
       //   behaviour: 'wrap',
       // })
