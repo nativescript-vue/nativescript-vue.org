@@ -23,7 +23,7 @@ Download and install the latest "LTS" version of Node.js from [https://nodejs.or
 To install the NativeScript CLI open your terminal and run the command
 
 ```shell
-npm install -g nativescript
+$ npm install -g nativescript
 ```
 
 You can verify the installation was successful by running `tns` in your terminal. You should see a list of all the available commands.
