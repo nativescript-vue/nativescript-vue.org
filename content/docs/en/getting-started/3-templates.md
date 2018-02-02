@@ -20,6 +20,7 @@ This one the most basic template. It contains a number of app samples that you c
 ```shell
 $ tns create sample-app --template nativescript-vue-template
 ```
+
 *Follow the [project link](https://github.com/tralves/nativescript-vue-template) for further instructions.*
 
 ## nativescript-vue-rollup-template
@@ -43,6 +44,7 @@ It supports:
 ```shell
 $ tns create sample-app --template nativescript-vue-rollup-template
 ```
+
 *Follow the [project link](https://github.com/tralves/nativescript-vue-rollup-template) for further instructions.*
 
 ## nativescript-vue-webpack-template
@@ -68,4 +70,5 @@ The webpack template leverages webpack to provide the same functionality as the 
 ```shell
 $ tns create sample-app --template https://github.com/tralves/nativescript-vue-webpack-template
 ```
+
 *Follow the [project link](https://github.com/tralves/nativescript-vue-webpack-template) for further instructions.*
