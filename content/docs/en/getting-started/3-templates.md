@@ -39,6 +39,7 @@ It supports:
 - babel with `es2015` and `stage-2` presets;
 
 #### Installation
+
 ```shell
 $ tns create sample-app --template nativescript-vue-rollup-template
 ```
@@ -63,6 +64,7 @@ The webpack template leverages webpack to provide the same functionality as the 
 - (soon) native/web code sharing;
 
 #### Installation
+
 ```shell
 $ tns create sample-app --template https://github.com/tralves/nativescript-vue-webpack-template
 ```
