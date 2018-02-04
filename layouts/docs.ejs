@@ -37,13 +37,18 @@
                         <% } %>
 
                         <% if (current.apiRef && current.title) { %>
-                        <div class="text-blue-light mb-8">
-                            <a href="<%= current.apiRef %>"
-                               target="_blank"
-                               rel="noopener"
-                               class="no-underline text-green hover:text-blue-dark">
-                                Read the full API docs for <%= current.title %>
-                            </a>
+                        <div class="bg-grey-lighter border-l-8 border-blue-dark
+                         text-blue-dark p-4 my-8">
+                            <p>
+                                This is an overview of the most common usage of the <%= current.title %>,
+                                to learn about all the available properties, methods and events head over
+                                to <a href="<%= current.apiRef %>"
+                                      target="_blank"
+                                      rel="noopener"
+                                      class="no-underline text-green hover:text-blue-dark">
+                                    the full API docs for the <%= current.title %>.
+                                </a>
+                            </p>
                         </div>
                         <% } %>
 
