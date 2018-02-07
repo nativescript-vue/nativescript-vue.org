@@ -1,24 +1,36 @@
 ---
-title: Alert
-apiRef: https://docs.nativescript.org/api-reference/interfaces/_ui_dialogs_.alertoptions
-contributors: [MisterBrownRSA]
+title: AlertDialog
+apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#alert
+contributors: [MisterBrownRSA, rigor789]
 ---
 
-The Alert dialog will act as a simple modal notification the requires confirmation input.
+The AlertDialog will act as a simple modal notification that requires confirmation.
 
 ---
 
 ```javascript
-const dialogs = require('ui/dialogs');
+const dialogs = require('ui/dialogs')
 
 module.exports = {
   mounted() {
     dialogs.alert('Hello!')
-        .then(function () {
-            console.log("Dialog closed");
-        })
+    .then(() => {
+      console.log("Dialog closed")
+    })
   }
-};
+}
 ```
 
-[> screenshots for=Alert <]
+The AlertDialog is also available globally, so instead of importing it from the dialogs module, you can simply call
+
+```javascript
+alert('Hello!')
+.then(() => {
+  console.log("Dialog closed")
+})
+```
+
+anywhere in your code.
+
+
+[> screenshots for=AlertDialog <]

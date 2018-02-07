@@ -1,24 +1,35 @@
 ---
-title: Prompt
-apiRef: https://docs.nativescript.org/api-reference/interfaces/_ui_dialogs_.promptoptions
-contributors: [MisterBrownRSA]
+title: PromptDialog
+apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#prompt
+contributors: [MisterBrownRSA, rigor789]
 ---
 
-The Prompt dialog has a simple text message that can be confirmed.
+The PromptDialog allows you to prompt the user for input.
 
 ---
 
 ```javascript
-const dialogs = require('ui/dialogs');
+const dialogs = require('ui/dialogs')
 
 module.exports = {
   mounted() {
     dialogs.prompt('How are you?', 'Amazing!')
-        .then(function (result) {
-            console.log("Dialog result: " + r.result + ", text: " + r.text);
-        });
+    .then(result => {
+      console.log(`Dialog result: ${result.result}, text: ${result.text}`)
+    })
   }
-};
+}
 ```
 
-[> screenshots for=Prompt <]
+The PromptDialog is also available globally, so instead of importing it from the dialogs module, you can simply call
+
+```javascript
+prompt('How are you?', 'Amazing!')
+.then(result => {
+  console.log(`Dialog result: ${result.result}, text: ${result.text}`)
+})
+```
+
+anywhere in your code.
+
+[> screenshots for=PromptDialog <]

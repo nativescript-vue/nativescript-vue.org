@@ -1,24 +1,24 @@
 ---
-title: Action
-apiRef: https://docs.nativescript.org/api-reference/interfaces/_ui_dialogs_.actionoptions
-contributors: [MisterBrownRSA]
+title: ActionDialog
+apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action 
+contributors: [MisterBrownRSA, rigor789]
 ---
 
-The Action dialog allows you to create a list of options for input.
+The ActionDialog allows you to create a dialog with a list of selectable options.
 
 ---
 
 ```javascript
-const dialogs = require('ui/dialogs');
+const dialogs = require('ui/dialogs')
 
 module.exports = {
   mounted() {
     dialogs.action('Choose one!', 'Or cancel...', ['cheese', 'wine'])
-    .then(function (result) {
-        console.log(result);
-    });
+    .then(result => {
+      console.log(result);
+    })
   }
-};
+}
 ```
 
-[> screenshots for=Action <]
+[> screenshots for=ActionDialog <]
