@@ -34,6 +34,12 @@ function processMarkdown(contents) {
       })
       .use(require('./remark/shortcodes'), {
         screenshots(attrs) {
+          if(attrs.soon) {
+            return `<div class="bg-blue-dark p-4 sm:p-8 text-blue-lightest">
+                Screenshots for ${attrs.for} coming soon...
+            </div>`
+          }
+
           const platforms = {
             android: 'android23',
             ios: 'ios-simulator103iPhone6'

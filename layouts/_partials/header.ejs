@@ -12,17 +12,21 @@
                 </div>
             </a>
 
-            <span role="presentation" aria-hidden="true"
-                  class="hidden lg:block w-1 h-1 bg-blue-light rounded-full ml-2"></span>
-            <span role="presentation" aria-hidden="true"
-                  class="hidden lg:block w-2 h-2 bg-blue-light rounded-full ml-2"></span>
-            <span role="presentation" aria-hidden="true"
-                  class="hidden lg:block w-4 h-4 bg-blue-light rounded-full ml-2"></span>
-            <div class="hidden md:block px-4 py-1 rounded-full bg-blue-light ml-2">
-                <a href="/" class="no-underline text-white hover:text-green text-sm truncate">
-                    Announcing v1.0
-                </a>
+            <% if(false) { %>
+            <div class="flex items-center ">
+                <span role="presentation" aria-hidden="true"
+                      class="hidden lg:block w-1 h-1 bg-blue-light rounded-full ml-2"></span>
+                <span role="presentation" aria-hidden="true"
+                      class="hidden lg:block w-2 h-2 bg-blue-light rounded-full ml-2"></span>
+                <span role="presentation" aria-hidden="true"
+                      class="hidden lg:block w-4 h-4 bg-blue-light rounded-full ml-2"></span>
+                <div class="hidden md:block px-4 py-1 rounded-full bg-blue-light ml-2">
+                    <a href="/" class="no-underline text-white hover:text-green text-sm truncate">
+                        Announcing v1.0
+                    </a>
+                </div>
             </div>
+            <% } %>
         </div>
         <div class="w-auto text-center relative">
             <input class="w-full md:w-48 px-4 py-2 text-blue-lightest bg-blue-light rounded-full"
@@ -55,20 +59,20 @@
             <div class="inline text-blue-lightest mr-4 py-4 relative group">
                 Community
 
-                <div class="pl-4 mt-3 md:pl-0 md:hidden group-hover:block hover:block md:absolute md:bg-white md:shadow md:rounded md:pin-r overflow-hidden">
+                <div class="pl-4 mt-3 md:pl-0 md:hidden group-hover:block hover:block md:absolute md:bg-white md:shadow md:rounded md:pin-r overflow-hidden z-50">
                     <div class="flex flex-col">
                         <a href="https://github.com/nativescript-vue/nativescript-vue"
                            target="_blank"
                            rel="noopener"
                            class="no-underline text-blue-lightest md:text-blue-dark hover:bg-green hover:text-white px-4 py-2">GitHub</a>
                         <a href="https://developer.telerik.com/wp-login.php?action=slack-invitation"
-                           @click.prevent="modalVisible = true"
                            target="_blank"
                            rel="noopener"
                            class="no-underline text-blue-lightest md:text-blue-dark hover:bg-green hover:text-white px-4 py-2">Slack</a>
                     </div>
                 </div>
             </div>
+            <% if(meta.locales.length > 1) { %>
             <div class="inline text-blue-lightest py-4 relative group">
                 <span class="-md:hidden">Translations</span>
 
@@ -83,6 +87,7 @@
                     </div>
                 </div>
             </div>
+            <% } %>
         </div>
     </div>
 </div>

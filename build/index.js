@@ -37,7 +37,6 @@ Metalsmith(cwd)
     moment,
     localeMap: {
       'en': 'English',
-      'hu': 'Magyar',
     },
     home(current) {
       const locale = current.locale || this.defaultLocale;
@@ -49,7 +48,7 @@ Metalsmith(cwd)
       const found = this.links.find(l => l.endsWith(`${slug}/index.html`) && l.includes(locale));
 
       if (found) {
-        return found.replace('index.html', '');
+        return found;
       }
       return `/${locale === this.defaultLocale ? '' : locale}`;
     },
@@ -185,6 +184,15 @@ Metalsmith(cwd)
   }))
   .use(when(!isDev, minify()))
   .use(when(!isDev, gzip()))
+  .use((files, metalsmith, done) => {
+    // remove /index.html from file contents
+    // todo: check if we can avoid doing this because it is error-prone
+    Object.keys(files).forEach(file => {
+      files[file].contents = files[file].contents.toString().replace(/\/index\.html/g, '');
+    });
+
+    done();
+  })
   // build the site
   .build((err) => {
     if (err) {

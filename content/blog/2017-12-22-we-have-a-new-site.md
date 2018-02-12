@@ -4,8 +4,18 @@ authors: [rigor789]
 toc: true
 ---
 
-It's 2018 and we have been hard at work to release [NativeScript-Vue 1.0](todo://link-here). It has been almost a year in the making, and it was quite the journey. It all started as a proof-of-concept
+We are thrilled to announce [NativeScript-Vue 1.0](https://github.com/nativescript-vue/nativescript-vue/releases/tag/v1.0.0)
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Managed to use a <a href="https://twitter.com/vuejs?ref_src=twsrc%5Etfw">@vuejs</a> instance to control a <a href="https://twitter.com/NativeScript?ref_src=twsrc%5Etfw">@NativeScript</a> native label! Can&#39;t express how happy I am about a label 😂 <a href="https://t.co/BQUdxNEfEJ">pic.twitter.com/BQUdxNEfEJ</a></p>&mdash; Igor Randjelovic (@igor_randj) <a href="https://twitter.com/igor_randj/status/854501034697383936?ref_src=twsrc%5Etfw">April 19, 2017</a></blockquote>
+It has been almost a year since we started this project, and we are finally at a stage where we think the project is ready to be used in production. Although we have been working with NativeScript-Vue and tested many sample applications across devices I'm sure there will be some issues for some users. This release in no way a final release, and we will continue working on improving the developer experience, fixing bugs and last but not least add new features.
 
-and the rest is history. 
+We are very excited about this release, here are the key features included in this release:
+
+- **A brand new documentation site** - We knew that releasing a project without any documentation would be a no-go, so for the past few months we have been writing docs to make using NativeScript-Vue as easy as possible. 
+- **Support for most NativeScript Elements** - There are many elements in NativeScript, we made sure to add almost all of them to NativeScript-Vue and made all the necessary modifications to make them work "the Vue way".
+
+### What's Next?
+
+There are a few plans which we would like to tackle next, there is no timeline for these projects, and we are more than happy to accept community contributions to get them going. 
+
+- **Code Sharing** -  We are working on an official webpack based template that will allow sharing code between your mobile and web application. You can [follow the project on GitHub](https://github.com/nativescript-vue/nativescript-vue-webpack-template)
+- **vue-cli 3 support** - The Vue team is working on a completely [new cli tool for Vue](https://github.com/vuejs/vue-cli) which is currently in alpha. We would love to add support for NativeScript-Vue so it can be part of the regular Vue workflow.

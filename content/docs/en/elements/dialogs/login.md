@@ -21,4 +21,4 @@ module.exports = {
 }
 ```
 
-[> screenshots for=LoginDialog <]
+[> screenshots for=LoginDialog soon=true <]
