@@ -7,6 +7,7 @@ const multimatch = require('multimatch');
 const collections = require('metalsmith-collections');
 const linkcheck = require('metalsmith-linkcheck');
 const dates = require('metalsmith-jekyll-dates');
+const sitemap = require('metalsmith-sitemap');
 const assets = require('metalsmith-assets');
 const gzip = require('metalsmith-gzip');
 const minify = require('metalsmith-html-minifier');
@@ -193,6 +194,10 @@ Metalsmith(cwd)
 
     done();
   })
+  .use(sitemap({
+    hostname: 'https://nativescript-vue.org',
+    omitIndex: true,
+  }))
   // build the site
   .build((err) => {
     if (err) {

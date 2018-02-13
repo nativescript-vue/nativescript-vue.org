@@ -18,6 +18,7 @@
     "babel-preset-env": "^1.6.1",
     "chalk": "latest",
     "ejs": "^2.5.7",
+    "hast-util-from-parse5": "latest",
     "hast-util-to-mdast": "^2.1.0",
     "jstransformer-ejs": "0.0.3",
     "marked": "^0.3.9",
@@ -33,10 +34,12 @@
     "metalsmith-linkcheck": "^0.3.0",
     "metalsmith-multi-language": "^0.3.0",
     "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-sitemap": "^1.2.0",
     "metalsmith-watch": "^1.0.3",
     "mkdirp": "^0.5.1",
     "moment": "^2.20.1",
     "multimatch": "^2.1.0",
+    "parse5": "latest",
     "permalinks": "^1.2.1",
     "remark": "^8.0.0",
     "remark-autolink-headings": "^5.0.0",
@@ -52,8 +55,6 @@
     "tailwindcss": "^0.4.0",
     "unist-util-visit": "latest",
     "vfile-reporter": "^4.0.0",
-    "vue-template-compiler": "^2.5.13",
-    "parse5": "latest",
-    "hast-util-from-parse5": "latest"
+    "vue-template-compiler": "^2.5.13"
   }
 }
