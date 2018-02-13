@@ -57,6 +57,9 @@ let colors = {
   'grey-lightest': '#f8fafc',
   'white': '#ffffff',
 
+  'orange-lightest': '#FFF5EB',
+  'orange-dark': '#DE751F',
+
   // NSVue colors
   'green': '#53BA82',
   'blue-dark': '#3C495E',

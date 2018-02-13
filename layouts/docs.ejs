@@ -52,6 +52,17 @@
                         </div>
                         <% } %>
 
+                        <% if (current.outdated) { %>
+                        <div class="bg-orange-lightest border-l-8 border-orange-dark
+                         text-orange-dark p-4 my-8">
+                            <p>
+                                This page contains outdated information. We are trying out best to update it to reflect
+                                the most recent changes, and we are also really happy to accept contributions.
+                            </p>
+                        </div>
+                        <% } %>
+
+
                         <% if(current.authors) { %>
                         <div class="text-blue-light mb-8">
                             <%= meta.moment(date).format('MMMM DD, YYYY') %>

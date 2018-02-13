@@ -1,6 +1,7 @@
 ---
 title: Templates
 contributors: [rigor789, tralves]
+outdated: true
 ---
 
 You can use NativeScript's [template system](https://docs.nativescript.org/tooling/app-templates) to bootstrap your `nativescript-vue` app. All these templates generate a NativeScript app that uses the `nativescript-vue` plugin. Some templates are equipped with more features such as support for Vue.js Single File Components (`.vue`) and livereload.
