@@ -4,7 +4,7 @@ const html = require('remark-html');
 const highlight = require('remark-highlight.js');
 const slug = require('remark-slug');
 const github = require('remark-github');
-// const headings = require('remark-autolink-headings');
+const headings = require('@rigor789/remark-autolink-headings');
 const squeezeParagraphs = require('remark-squeeze-paragraphs');
 const remarkPing = require('remark-ping');
 const shortcodes = require('remark-shortcodes');
@@ -15,10 +15,16 @@ function processMarkdown(contents) {
     remark()
       .use(lint)
       .use(slug)
-      // todo: enable when https://github.com/ben-eb/remark-autolink-headings/pull/41 is merged
-      // .use(headings, {
-      //   behaviour: 'wrap',
-      // })
+      .use(headings, {
+        content: {
+          type: 'element',
+          tagName: 'span',
+          properties: {
+            className: ['opacity-25', 'hover:opacity-100', 'inline-block', '-ml-6', 'mr-2', 'w-4', 'h-4', 'icon-link']
+          }
+        }
+      })
+      .use(require('./remark/algolia-classes'))
       .use(highlight)
       .use(squeezeParagraphs)
       .use(github, {
@@ -34,7 +40,7 @@ function processMarkdown(contents) {
       })
       .use(require('./remark/shortcodes'), {
         screenshots(attrs) {
-          if(attrs.soon) {
+          if (attrs.soon) {
             return `<div class="bg-blue-dark p-4 sm:p-8 text-blue-lightest">
                 Screenshots for ${attrs.for} coming soon...
             </div>`

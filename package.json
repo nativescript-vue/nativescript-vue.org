@@ -42,7 +42,7 @@
     "parse5": "latest",
     "permalinks": "^1.2.1",
     "remark": "^8.0.0",
-    "remark-autolink-headings": "^5.0.0",
+    "@rigor789/remark-autolink-headings": "^5.1.0",
     "remark-github": "^7.0.2",
     "remark-highlight.js": "^5.0.0",
     "remark-html": "^7.0.0",
