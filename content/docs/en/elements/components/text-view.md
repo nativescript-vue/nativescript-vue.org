@@ -5,7 +5,7 @@ contributors: [MisterBrownRSA, rigor789, TheOriginalJosh]
 ---
 
 The TextView component represents an editable multi-line box.
-The component can also be used show any content by setting the `editable` property to `false`.
+The component can also be used to show any content by setting the `editable` property to `false`.
 
 ---
 
@@ -39,7 +39,7 @@ The component can also be used show any content by setting the `editable` proper
 
 | name | type | description |
 |------|------|-------------|
-| `editable` | `Boolean` | Wen `true`, the user can edit the value of the TextView.
+| `editable` | `Boolean` | When `true`, the user can edit the value of the TextView.
 | `text` | `String` | The value of the TextView.
 | `hint` | `String` | The placeholder text.
 
