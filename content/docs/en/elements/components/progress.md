@@ -1,7 +1,7 @@
 ---
 title: Progress
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_progress_.progress
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
 ---
 
 The Progress component is a bar for visually indicating progress.
@@ -19,7 +19,7 @@ The Progress component is a bar for visually indicating progress.
 | name | type | description |
 |------|------|-------------|
 | `value` | `Number` | The current value of progress out of max.
-| `max` | `Number` | The maximum value of the progress.
+| `maxValue` | `Number` | The maximum value of the progress. Default `100`.
 
 ## Events
 
