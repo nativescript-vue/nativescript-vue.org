@@ -27,6 +27,7 @@ The TextField component creates an editable single-line box.
 |------|------|-------------|
 | `text` | `String` | The value of the TextField.
 | `hint` | `String` | The placeholder text.
+| `editable` | `Boolean` | When `true`, the user can edit the value of the TextField.
 | `maxLength` | `Number` | Limits input to a certain number of characters.
 | `secure` | `Boolean` | Hides the entered text when `true`. Default `false`.
 | `keyboardType` | `KeyboardType` | Shows a custom keyboard for easier text input. Can be one of `datetime`, `phone`, `number`, `url`, or `email`.
