@@ -1,6 +1,6 @@
 ---
 title: v-view directive
-contributors: [rigor789]
+contributors: [rigor789, eddyverbruggen]
 ---
 
 The `v-view` directive is used to set the current elements `View` as a parent property.
@@ -23,7 +23,7 @@ The `v-view` directive is used to set the current elements `View` as a parent pr
 
 There are many `NativeScript` components that require setting a property to a valid `View` instance, which is not possible using a template. Using this directive saves time by not having to register new directives / references to parent elements, and setting the parent properties manually.
 
-To better illustrate what this directive does, let's take a look at the `RadSideDrawer` component from the [NativeScript Pro UI]() package:
+To better illustrate what this directive does, let's take a look at the `RadSideDrawer` component from the [Progress NativeScript UI](http://docs.telerik.com/devtools/nativescript-ui/Controls/Angular/SideDrawer/getting-started) package:
 
 The `RadSideDrawer` component expects the `drawerContent` and `mainContent` properties to be set to `View` instances,
 using the `v-view` directive it would look like this:
