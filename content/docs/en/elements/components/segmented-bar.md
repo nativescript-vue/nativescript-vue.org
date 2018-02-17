@@ -1,7 +1,7 @@
 ---
 title: SegmentedBar
 apiRef: http://docs.nativescript.org/api-reference/modules/_ui_segmented_bar_.html
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
 ---
 
 The SegementedBar component gives you a simple way to display a collection of tabbed views for discrete selection.
@@ -27,6 +27,7 @@ The SegementedBar component gives you a simple way to display a collection of ta
 |------|------|-------------|
 | `items` | `Array<SegmentedBarItem>` | A list of items to be displayed in the segmented bar.
 | `selectedIndex` | `Number` | The index of the selected item.
+| `selectedBackgroundColor` | `Color` | Set the background color of the selected item. To set the background color of the entire bar, use `backgroundColor`.
 
 ## Events
 
