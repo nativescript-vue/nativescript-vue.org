@@ -24,11 +24,11 @@ Example:
 ```html
 <Label textWrap="true">
   <FormattedString>
-    <Span text="This text has a" />
+    <Span text="This text has a " />
     <Span text="red " style="color: red" />
-    <Span text="piece of text." />
-    <Span text=" This bit is italic." fontStyle="italic" />
-    <Span text=" And this bit is bold." fontWeight="bold" />
+    <Span text="piece of text. " />
+    <Span text="Also, this bit is italic, " fontStyle="italic" />
+    <Span text="and this bit is bold." fontWeight="bold" />
   </FormattedString>
 </Label>
 ```
