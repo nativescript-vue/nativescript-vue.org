@@ -1,7 +1,7 @@
 ---
 title: Slider
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_slider_.slider
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
 
 ---
 
@@ -26,8 +26,8 @@ The Slider component allows the user to input a numeric value from a specified r
 | name | type | description |
 |------|------|-------------|
 | `value` | `Number` | The value of the slider.
-| `min` | `Number` | The minimum value of the slider.
-| `max` | `Number` | The maximum value of the slider.
+| `minValue` | `Number` | The minimum value of the slider. Default `0`.
+| `maxValue` | `Number` | The maximum value of the slider. Default `100`.
 
 ## Events
 
