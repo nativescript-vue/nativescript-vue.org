@@ -1,7 +1,7 @@
 ---
 title: ListView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_view_.listview
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
 ---
 
 The ListView component shows items in a vertically scrolling list. You can set different `v-template`'s to specify how each item in the list should be displayed.
@@ -33,12 +33,13 @@ To learn more about the `v-template` component, head over to the [`v-template` d
 |------|------|-------------|
 | `for` | `String` | The expression for iterating through the items, examples:<br>- `item in listOfItems`<br>- `(item, index) in listOfItems`<br>- `item in [1, 2, 3, 4, 5]`
 | `items` | `Array<any>` | An array of items to be displayed in the ListView. **Note**: This property is only for advanced use, we recommend using the `for` property in most cases.
+| `separatorColor` | `Color` | Set the separator line color. Set to `transparent` to remove it.
 
 ## Events
 
 | name | description |
 |------|-------------|
-| `itemTap`| Emitted when an item in the ListView has been tapped. (To access the tapped item use `event.item`).
+| `itemTap`| Emitted when an item in the ListView has been tapped. To access the tapped item use `event.item`.
 
 ## Native Component
 | Android | iOS |
