@@ -8,7 +8,7 @@ const collections = require('metalsmith-collections');
 const linkcheck = require('metalsmith-linkcheck');
 const dates = require('metalsmith-jekyll-dates');
 const sitemap = require('metalsmith-sitemap');
-const assets = require('metalsmith-assets');
+const static = require('metalsmith-static');
 const gzip = require('metalsmith-gzip');
 const minify = require('metalsmith-html-minifier');
 const watch = require('metalsmith-watch');
@@ -176,8 +176,9 @@ Metalsmith(cwd)
     ext: '.html'
   }))
   // include our static assets
-  .use(assets({
-    source: './static'
+  .use(static({
+    src: './static',
+    dest: '.'
   }))
   // finally check if we have broken links
   .use(linkcheck({
