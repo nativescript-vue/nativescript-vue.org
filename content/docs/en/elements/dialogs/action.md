@@ -21,4 +21,4 @@ module.exports = {
 }
 ```
 
-[> screenshots for=ActionDialog soon=true <]
+[> screenshots for=ActionDialog <]

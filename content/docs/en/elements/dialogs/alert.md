@@ -33,4 +33,4 @@ alert('Hello!')
 anywhere in your code.
 
 
-[> screenshots for=AlertDialog soon=true <]
+[> screenshots for=AlertDialog <]

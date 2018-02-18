@@ -32,4 +32,4 @@ prompt('How are you?', 'Amazing!')
 
 anywhere in your code.
 
-[> screenshots for=PromptDialog soon=true <]
+[> screenshots for=PromptDialog <]

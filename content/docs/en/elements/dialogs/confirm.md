@@ -32,4 +32,4 @@ confirm('Are you ready?')
 
 anywhere in your code.
 
-[> screenshots for=ConfirmDialog soon=true <]
+[> screenshots for=ConfirmDialog <]
