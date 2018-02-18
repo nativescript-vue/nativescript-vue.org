@@ -25,14 +25,13 @@ For convenience you can use `$index`, `$even` and `$odd` helpers, but as needed 
 
 To learn more about the `v-template` component, head over to the [`v-template` documentation](/en/docs/utilities/v-template).
 
-The ListView does not loop through the items as you usually would using a [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for). Instead it reuses the ListView items when they go off-screen which makes it a lot more efficient. This means that you can quickly scroll through a list with thousands of items and experience very little slowdown compared to using [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) to loop over the items.
+The ListView does not loop through the items as you would expect when using a [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) loop. Instead it only creates the necessary views to display the currently visible items on the screen, and when scrolling it reuses the views that are already off-screen. This concept is called view recycling, and is commonly used in mobile applications to improve performance. This is important because you can't rely on event listeners attached inside the `v-template`, instead you should use the `itemTap` event which contains the index of the tapped item, as well as the actual item from the list.
 
-NOTE: when calling functions using `@itemTap` the function will have access to both the index and the item that was tapped as follows
 ```js
-onItemTap(event){
+onItemTap(event) {
   //logs out the contents to the console
-  console.dir(event.index)
-  console.dir(event.item)
+  console.log(event.index)
+  console.log(event.item)
 }
 ```
 
