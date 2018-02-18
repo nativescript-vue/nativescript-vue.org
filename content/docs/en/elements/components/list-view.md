@@ -29,7 +29,6 @@ The ListView does not loop through the items as you would expect when using a [`
 
 ```js
 onItemTap(event) {
-  //logs out the contents to the console
   console.log(event.index)
   console.log(event.item)
 }
