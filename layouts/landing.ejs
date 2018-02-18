@@ -6,14 +6,14 @@
 </head>
 <body>
 
-    <div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
-        <!--<QuickStart />-->
-        <%- include('_partials/header') %>
+<div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
+    <!--<QuickStart />-->
+    <%- include('_partials/header') %>
 
-        <div class="min-h-screen">
-            <%- current.contents %>
-        </div>
+    <div class="min-h-screen">
+        <%- current.contents %>
     </div>
+</div>
 
 <%- include('_partials/footer') %>
 </body>

@@ -6,36 +6,36 @@
 </head>
 <body>
 
-    <div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
-        <!--<QuickStart />-->
-        <%- include('_partials/header') %>
+<div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
+    <!--<QuickStart />-->
+    <%- include('_partials/header') %>
 
-        <div class="md:bg-docs-gradient min-h-screen">
-            <div class="container mx-auto flex">
-                <div class="hidden md:w-1/4 md:block">
-                    <div class="p-4 py-4 md:py-8">
-                        <%- include('_partials/toc', { children: current.toc }) %>
-                    </div>
+    <div class="md:bg-docs-gradient min-h-screen">
+        <div class="container mx-auto flex">
+            <div class="hidden md:w-1/4 md:block">
+                <div class="p-4 py-4 md:py-8">
+                    <%- include('_partials/toc', { children: current.toc }) %>
                 </div>
-                <div class="w-full md:w-3/4 bg-white min-h-screen">
-                    <div class="pl-8 py-4 pr-4">
-                        <% if (current.title) { %>
-                        <div class="text-blue-dark text-4xl mt-4"><%= current.title %></div>
-                        <hr class="border-t-2 border-blue-lighter w-24 mx-0 mb-8">
-                        <% } %>
+            </div>
+            <div class="w-full md:w-3/4 bg-white min-h-screen">
+                <div class="pl-8 py-4 pr-4">
+                    <% if (current.title) { %>
+                    <div class="text-blue-dark text-4xl mt-4"><%= current.title %></div>
+                    <hr class="border-t-2 border-blue-lighter w-24 mx-0 mb-8">
+                    <% } %>
 
-                        <div class="markdown-body">
-                            <%- current.contents %>
-                        </div>
-
-                        <% if (current.contributors) { %>
-                        <%- include('_partials/contributors', { current.contributors }) %>
-                        <% } %>
+                    <div class="markdown-body">
+                        <%- current.contents %>
                     </div>
+
+                    <% if (current.contributors) { %>
+                    <%- include('_partials/contributors', { current.contributors }) %>
+                    <% } %>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
 <script src="/main.js"></script>
