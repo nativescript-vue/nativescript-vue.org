@@ -62,7 +62,7 @@ Metalsmith(cwd)
         'elements:action-bar',
         'elements:components',
         'elements:dialogs'
-      ]
+      ];
 
       if (a.fileName) {
         return a.fileName.localeCompare(b.fileName);
