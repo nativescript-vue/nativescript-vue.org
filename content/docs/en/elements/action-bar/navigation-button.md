@@ -21,6 +21,8 @@ The NavigationButton component is a NativeScript abstraction for the Android nav
 | `text` | `String` | Sets the text to be shown on iOS.
 | `android.systemIcon` | `String` | The icon to be shown on Android.
 
+The icon list for Android can be found at <https://developer.android.com/reference/android/R.drawable.html>, and the icons are the ones that start with `ic_` prefix.
+
 ## Events
 
 | name | description |
