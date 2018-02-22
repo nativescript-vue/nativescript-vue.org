@@ -33,7 +33,7 @@ The component can also be used to show any content readonly by setting the `edit
 </TextView>
 ```
 
-[> screenshots for=TextField <]
+[> screenshots for=TextView <]
 
 ## Props
 
