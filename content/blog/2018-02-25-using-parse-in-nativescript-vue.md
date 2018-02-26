@@ -1,5 +1,5 @@
 ---
-title: NativeScript-Vue 1.0 and a new site!
+title: Using Parse in Nativescript-vue
 authors: [damain]
 toc: true
 ---
