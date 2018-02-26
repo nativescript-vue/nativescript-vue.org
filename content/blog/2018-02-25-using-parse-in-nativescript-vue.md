@@ -34,11 +34,11 @@ const Parse = require('parse')
 Parse.initialize("your api key", "your javascript key")
 Parse.serverURL="https://parseapi.back4app.com/"
 ```
-You will find the API key and Javascript key in the server settings of the parse dashboard
+You will find the API key and Javascript key in the server settings of the parse dashboard.
 Please note that **you must use the javascript key it is not optional**.
 That's all it took to get Parse working! But lets test it out.
 
-To test it out we will add a textfield and a button to the template and save it to the parse server when the save button is clicked.
+To test it out we will add a textfield and a button to the template and save the text to the parse server when the save button is clicked.
 ```xml
 <Page class="page">
     <ActionBar class="action-bar" title="NativeScript-Vue"></ActionBar>
@@ -67,7 +67,7 @@ methods:{
     person.set("firstname", this.firstname)
     person.save(null, {
       success(){
-        console.log("sucessfull posted")
+        console.log("sucessfully posted")
       },
       error(err){
         console.log("error", err.code)
