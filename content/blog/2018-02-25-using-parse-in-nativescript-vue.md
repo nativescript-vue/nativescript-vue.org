@@ -1,6 +1,6 @@
 ---
 title: NativeScript-Vue 1.0 and a new site!
-authors: [damain](https://github.com/damain)
+authors: [damain]
 toc: true
 ---
 
