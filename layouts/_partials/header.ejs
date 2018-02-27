@@ -78,7 +78,7 @@
             <div class="inline text-blue-lightest py-4 relative group">
                 <span class="-md:hidden">Translations</span>
 
-                <div class="pl-4 mt-3 md:pl-0 md:hidden group-hover:block hover:block md:absolute md:bg-white md:shadow md:rounded md:pin-r overflow-hidden">
+                <div class="pl-4 mt-3 md:pl-0 md:hidden group-hover:block hover:block md:absolute md:bg-white md:shadow md:rounded md:pin-r overflow-hidden z-50">
                     <div class="flex flex-col">
                         <% meta.locales.forEach(l => { %>
                         <a href="<%= meta.lang(current, l) %>"
