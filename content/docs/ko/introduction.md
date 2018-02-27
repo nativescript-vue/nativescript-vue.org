@@ -1,6 +1,6 @@
 ---
 title: 소개
-contributors: [rigor789, tjvantoll, qgp9]
+contributors: [qgp9]
 ---
 
 ## [네이티브스크립트](https://www.nativescript.org/)가 무엇인가요?
