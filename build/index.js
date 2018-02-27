@@ -38,7 +38,7 @@ Metalsmith(cwd)
     moment,
     localeMap: {
       'en': 'English',
-      'ko': 'Korean',
+      'ko': '한국어',
     },
     home(current) {
       const locale = current.locale || this.defaultLocale;
