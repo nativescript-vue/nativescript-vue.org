@@ -57,12 +57,13 @@ Metalsmith(cwd)
       const order = [
         'introduction',
         'getting-started',
+        'routing',
         'utilities',
         'elements:layouts',
         'elements:action-bar',
         'elements:components',
         'elements:dialogs'
-      ]
+      ];
 
       if (a.fileName) {
         return a.fileName.localeCompare(b.fileName);
