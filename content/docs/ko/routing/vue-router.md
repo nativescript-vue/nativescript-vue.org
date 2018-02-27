@@ -1,24 +1,22 @@
 ---
 title: Vue Router
-contributors: [eddyverbruggen]
+contributors: [qgp9]
 ---
 
-If [Manual Routing](/en/docs/routing/manual-routing) doesn't cut it for your use-case,
-then you'll be happy to learn [the Vue router](https://router.vuejs.org/en/) is fully supported.
+[수동 라우팅](/ko/docs/routing/manual-routing) 이 당신의 유스-케이스와 잘 맞지 않는다면, 완전히 지원되는 [Vue Router](https://router.vuejs.org/ko) 를 배워보세요.
 
-## Installation
-From a command prompt, run:
+## 설치
+명령줄에서 다음을 실행합니다:
 ```bash
 npm i vue-router --save
 ```
 
-## Usage
-Let's show a full example, broken down in a few pieces so we can provide some comments.
-Note that the Vue Router has more tricks up its sleeve, so be sure to visit
-[the official documentation](https://router.vuejs.org/en/).
+## 사용법
+전체 예제를 설명과 함께 잘라서 봅시다.
+Vue Router에는 더 다양한 트릭들이 있기 때문에 [공식문서](https://router.vuejs.org/ko/)를 꼭 방문해 보세요.
 
 ---
-Require Vue, VueRouter, and let them shake hands 🤝
+Vue, VueRouter 를 require 하고, 서로 악수하게 합니다 🤝
 ```js
 const Vue = require('nativescript-vue');
 const VueRouter = require('vue-router');
@@ -27,10 +25,10 @@ Vue.use(VueRouter);
 ```
 
 ---
-Define a `Master` page with the current router as its title (`$route.path`)
-and a button with a `@tap="$router.push('/detail')"` so a new page is pushed on the stack and navigated to.
+현재 라우터를 제목(`$route.path`)으로 `Master` 페이지를 정의합니다.
+그리고 `@tap="$router.push('/detail')"` 과 함께 버튼을  만들어서 새 페이지가 스택에 추가되고 그 페이지로 이동할 수 있게 합니다.
 
-Also, a button to the same page with a query param `user`.
+또한 `user` 쿼리 파라미터(query param)와 함께 같은 페이지로 향하는 버튼도 만듭니다.
 ```html
 const Master = {
   template: `
@@ -46,14 +44,16 @@ const Master = {
 ```
 
 ---
-Define a `Detail` page with a `NavigationButton`. On iOS this will automatically bring you back to the
-previous page in the stack, but for Android `tap` handler is required (which is ignored on iOS).
-So add `@tap="$router.back()"`.
+`Detail` 페이지를 `NavigationButton` 과 함께 정의합니다.
+iOS 에서 이 것은 자동으로 스택의 전페이지로 이동하게 만듭니다.
+하지만 안드로이드에선 `tap` 핸들러가 필요합니다.(iOS에서는 무시됩니다.)
+따라서  `@tap="$router.back()"` 를 추가합니다.
 
-Remember that `user` query param we passed from the second button of the `Master` page? You can use it in the `Details`
-page like this: `<Label :text="$route.query.user">`
+`Master` 페이지의 두번째 버튼에서 `user` query param을 썼던걸 기억하시나요?
+`Details` 페이지에서 다음처럼 그것을 참조할 수 있습니다:
+`<Label :text="$route.query.user">`
 
-Lastly, you can navigate back (and forth) with `$router.go(<number-of-pages>)` as demonstrated below.
+마지막으로, 아래 예제처럼 `$router.go(<number-of-pages>)` 이용해 뒤로 (혹은 앞으로) 이동할 수 있습니다.
 
 ```html
 const Detail = {
@@ -72,7 +72,7 @@ const Detail = {
 ```
 
 ---
-Define all the pages of your application as follows:
+아래처럼 어플리케이션의 모든 페이지를 정의합니다.
 ```js
 const router = new VueRouter({
   pageRouting: true,
@@ -85,13 +85,13 @@ const router = new VueRouter({
 ```
 
 ---
-And load one of those routes when the app starts:
+그리고 앱이 시작할때 라우트들 중 하나를 로드합니다:
 ```js
 router.replace('/master');
 ```
 
 ---
-Oh, and don't forget to tell `Vue` about your routes:
+오, 그리고 `Vue` 에가 당신의 라우트들에 대해 알려주는 걸 잊지 마세요:
 ```js
 new Vue({
   router
