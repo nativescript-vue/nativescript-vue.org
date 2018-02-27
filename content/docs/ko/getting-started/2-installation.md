@@ -1,48 +1,47 @@
 ---
-title: Installation
-contributors: [rigor789 , TheOriginalJosh, eddyverbruggen]
+title: 설치
+contributors: [qgp9]
 ---
 
-In order to use NativeScript-Vue, your system will need to be set up properly
-so that your applications can compile.
+NativeScript-Vue를 사용하기 위해서, 어플리케이션을 컴팔할 수 있도록 시스템이 적절히 설정되어야 합니다.
 
-## Prerequisites
+## 먼저 필요한 것들(Prerequisites)
 
 - [Node.js](#nodejs)
 - [NativeScript CLI](#nativescript-cli)
-- [Windows](#windows) (for developing Android applications on Windows)
-- [macOS](#macos) (for developing iOS and Android applications on macOS)
-- [Linux](#linux) (for developing Android applications on Linux)
+- [윈도우즈](#windows) (윈도우에서 안드로이드 앱을 개발할 경우)
+- [맥OS](#macos) (맥에서 안드로이드/iOS 앱을 개발할 경우)
+- [리눅스](#linux) (리눅스에서 안드로이드 앱을 개발할 경우)
 
 ### Node.js
 
-Download and install the latest "LTS" version of Node.js from [https://nodejs.org/](https://nodejs.org/). Restart your terminal and verify the installation was successful with the command `node --version`.
+최신 "LTS" 버젼의 Node.js를 [https://nodejs.org/](https://nodejs.org/)에서 다운받아 설치하세요. 설치 후 터미널을 재 시작 하고나서 `node --version` 명령어로 Node.js 가 잘 설치되어 있는지 확인하세요.
 
 ### NativeScript CLI
 
-To install the NativeScript CLI open your terminal and run the command
+네이티브-스크립트 CLI 를 설치하려면 터미널을 열고 다음 명령어를 실행합니다.
 
 ```shell
 $ npm install -g nativescript
 ```
 
-You can verify the installation was successful by running `tns` in your terminal. You should see a list of all the available commands.
+터미널에서 `tns` 명령어를 실행해 보면 잘 설치되었는지 확인할 수 있습니다. 명령어를 실행하면 가능한 명령들이 출력되어야 합니다.
 
 
-### Windows
+### 윈도우즈 (windows)
 
-System Requirements and setup instructions for the Android SDK on Windows:
+윈도우 시스템 필요조건과 안드로이드 SDK 설정 방법:
 
 [Advanced setup: Windows](https://docs.nativescript.org/start/ns-setup-win)
 
-### macOS
+### 맥OS (macOS)
 
-System Requirements and setup instructions to setup Xcode and the Android SDK development environments for your Mac:
+맥 시스템의 필요조건과 Xcode, 안드로이드 SDK 개발환경 설정 방법:
 
 [Advanced setup: macOS](https://docs.nativescript.org/start/ns-setup-os-x)
 
-### Linux
+### 리눅스 (Linux)
 
-System Requirements and setup instructions for the Android SDK on Linux:
+리눅스 시스템 필요조건과 안드로이드 SDK 설정 방법:
 
 [Advanced setup: Linux](https://docs.nativescript.org/start/ns-setup-linux)
