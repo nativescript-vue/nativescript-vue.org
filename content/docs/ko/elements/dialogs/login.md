@@ -1,10 +1,10 @@
 ---
-title: LoginDialog
+title: 로그인창 (LoginDialog)
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#login
-contributors: [MisterBrownRSA, rigor789]
+contributors: [qgp9]
 ---
 
-The LoginDialog has two inputs that are used for prompting the user for credentials.
+로그인창(LoginDialog)는 사용자 인증에 사용되는 두개의 인풋을 가집니다.
 
 ---
 
