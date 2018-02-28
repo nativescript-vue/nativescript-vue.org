@@ -9,7 +9,7 @@ The ActionDialog allows you to create a dialog with a list of selectable options
 ---
 
 ```javascript
-const dialogs = require('ui/dialogs')
+const dialogs = require('tns-core-modules/ui/dialogs')
 
 module.exports = {
   mounted() {

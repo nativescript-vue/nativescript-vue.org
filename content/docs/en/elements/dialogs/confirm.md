@@ -9,7 +9,7 @@ The ConfirmDialog acts as a boolean (Yes/No) input dialog.
 ---
 
 ```javascript
-const dialogs = require('ui/dialogs')
+const dialogs = require('tns-core-modules/ui/dialogs')
 
 module.exports = {
   mounted() {

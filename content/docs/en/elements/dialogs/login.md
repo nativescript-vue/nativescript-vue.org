@@ -9,7 +9,7 @@ The LoginDialog has two inputs that are used for prompting the user for credenti
 ---
 
 ```javascript
-const dialogs = require('ui/dialogs')
+const dialogs = require('tns-core-modules/ui/dialogs')
 
 module.exports = {
   mounted() {

@@ -9,7 +9,7 @@ The AlertDialog will act as a simple modal notification that requires confirmati
 ---
 
 ```javascript
-const dialogs = require('ui/dialogs')
+const dialogs = require('tns-core-modules/ui/dialogs')
 
 module.exports = {
   mounted() {

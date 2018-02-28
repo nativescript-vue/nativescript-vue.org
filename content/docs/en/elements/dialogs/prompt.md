@@ -9,7 +9,7 @@ The PromptDialog allows you to prompt the user for input.
 ---
 
 ```javascript
-const dialogs = require('ui/dialogs')
+const dialogs = require('tns-core-modules/ui/dialogs')
 
 module.exports = {
   mounted() {
