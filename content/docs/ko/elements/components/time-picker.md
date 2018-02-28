@@ -1,11 +1,11 @@
 ---
-title: TimePicker
+title: 시간 선택 (TimePicker)
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_time_picker_.timepicker
-contributors: [MisterBrownRSA, rigor789]
+contributors: [qgp9]
 
 ---
 
-The TimePicker component allows the user to select formatted time.
+시간선택(TimePicker) 컴포넌트는 사용자가 형식을 가진 시간을 선택할 수 있게 해줍니다.
 
 ---
 
@@ -13,7 +13,7 @@ The TimePicker component allows the user to select formatted time.
 <TimePicker :hour="selectedHour" :minute="selectedMinute" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
 
 ```html
 <TimePicker v-model="selectedTime" />
@@ -23,22 +23,22 @@ The TimePicker component allows the user to select formatted time.
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `hour` | `Number` | The hour of the TimePicker.
-| `minute` | `Number` | The minute of the TimePicker.
-| `time` | `Date` | The time of the TimePicker.
-| `minHour` | `Number` | The minimum selectable hour.
-| `maxHour` | `Number` | The maximum selectable hour.
-| `minMinute` | `Number` | The minimum selectable minute.
-| `maxMinute` | `Number` | The maximum selectable minute.
-| `minuteInterval` | `Number` | The interval between selectable minutes.
+| `hour` | `Number` | 시간 선택기의 시
+| `minute` | `Number` | 시간 선택기의 분
+| `time` | `Date` | 시간 선택기의 시간
+| `minHour` | `Number` | 선택 가능한 최소 시
+| `maxHour` | `Number` | 선택 가능한 최대 시
+| `minMinute` | `Number` | 선택 가능한 최소 분
+| `maxMinute` | `Number` | 선택 가능한 최대 분
+| `minuteInterval` | `Number` | 선택된 분들의 간격
 
 ## Events
 
 | name | description |
 |------|-------------|
-| `timeChanged` | Emitted when the selected time changes.
+| `timeChanged` | 선택된 시간이 바뀌면 발생
 
 ## Native Component
 | Android | iOS |

@@ -1,11 +1,11 @@
 ---
-title: WebView
+title: 웹뷰 (WebView)
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_web_view_.webview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
+contributors: [qgp9]
 ---
 
-The WebView component is used to display web content within your application. 
-You can use the component by providing a `src` attribute that points at a URL or a local HTML file.
+웹뷰(WebView) 컴포넌트는 어플리케이션 안에 웹 컨텐츠를 표시하기 위해 사용됩니다.
+Url 이나 로컬 HTML 파일을 가리키는 `src` 속성과 함께 컴포넌트를 사용할 수 있습니다.
 
 ---
 
@@ -17,16 +17,16 @@ You can use the component by providing a `src` attribute that points at a URL or
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `src` | `String` | The source of the displayed page.
+| `src` | `String` | 표시되는 페이지의 소스
 
 ## Events
 
 | name | description |
 |------|-------------|
-| `loadStarted`| Emitted when the page has started loading in the WebView.
-| `loadFinished`| Emitted when the page has been loaded in the WebView.
+| `loadStarted`| 웹뷰에서 페이지가 로딩되기 시작할때 발생
+| `loadFinished`| 웹뷰의 페이지가 다 로딩되었을때 발생
 
 ## Native Component
 | Android | iOS |

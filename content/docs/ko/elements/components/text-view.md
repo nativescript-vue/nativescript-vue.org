@@ -1,11 +1,11 @@
 ---
-title: TextView
+title: 텍스트뷰 (TextView)
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_text_view_.textview
-contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen]
+contributors: [qgp9]
 ---
 
-The TextView component represents an editable multi-line box.
-The component can also be used to show any content readonly by setting the `editable` property to `false`.
+텍스트뷰(TextView) 컴포넌트는 편집가능한 여러 줄 박스를 나타냅니다.
+이 컴포넌트는 `editable` 프로퍼티를 `false` 로 설정함으로써 읽기전용 컨텐츠를 표시하는 데도 사용할 수 있습니다.
 
 ---
 
@@ -13,13 +13,13 @@ The component can also be used to show any content readonly by setting the `edit
 <TextView text="Multi\nLine\nText" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
 
 ```html
 <TextView v-model="textViewValue" />
 ```
 
-### Displaying multi-line text with different styling
+### 다른 스타일의 여러 줄 텍스트를 표시
 
 ```html
 <TextView editable="false">
@@ -37,23 +37,23 @@ The component can also be used to show any content readonly by setting the `edit
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `text` | `String` | The value of the TextView.
-| `hint` | `String` | The placeholder text.
-| `editable` | `Boolean` | When `true`, the user can edit the value of the TextView.
-| `maxLength` | `Number` | Limits input to a certain number of characters.
-| `keyboardType` | `KeyboardType` | Shows a custom keyboard for easier text input. Can be one of `datetime`, `phone`, `number`, `url`, or `email`.
-| `returnKeyType` | `ReturnKeyType` | The label of the return key. Can be one of `done`, `next`, `go`, `search`, or `send`.
+| `text` | `String` | 텍스트 뷰의 값.
+| `hint` | `String` | 텍스트 플레이스홀더.
+| `editable` | `Boolean` | `true`로 설정되면 사용자가 텍스트뷰의 값을 변경할 수 있음.
+| `maxLength` | `Number` | 글자수를 제한.
+| `keyboardType` | `KeyboardType` | 쉬운 입력을 위한 커스텀 키보드를 보여줌. 가능한 값: `datetime`, `phone`, `number`, `url`, `email`.
+| `returnKeyType` | `ReturnKeyType` | 리턴키의 레이블. 가능한 값: `done`, `next`, `go`, `search`, `send`.
 
-## Events
+## 이벤트
 
-| name | description |
+| 이름 | 설명 |
 |------|-------------|
-| `textChange`| Emitted when the text changes.
-| `returnPress`| Emitted when the return key is pressed.
-| `focus`| Emitted when the textview is in focus.
-| `blur`| Emitted when the textview leaves focus.
+| `textChange`| 텍스트가 바뀌면 발생.
+| `returnPress`| 리턴키가 눌리면 발생
+| `focus`| 텍스트뷰가 포커스되면 발생
+| `blur`| 텍스트뷰가 포커스를 잃으면 발생
 
 ## Native Component
 | Android | iOS |
