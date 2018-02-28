@@ -1,18 +1,22 @@
 ---
-title: GridLayout
+title: 그리드 (GridLayout)
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_grid_layout_
-contributors: [rigor789]
+contributors: [qgp9]
 ---
 
-The GridLayout is a layout that arranges its child elements in a table structure of rows and columns. A cell can contain multiple child elements, they can span over multiple rows and columns, and even overlap each other. The GridLayout has one column and one row by default. To add additional columns and rows, you have to specify column definition items (separated by commas) to the `columns` property and row definition items (separated by commas) to the `rows` property of the GridLayout. The width of a column and the height of a row can be specified as an absolute amount of pixels, as a percentage of the available space or automatically:
+GridLayout은 자식 요소들을 행과 열의 테이블 구조로 배치합니다.
+하나의 셀(cell)은 여러 자식 요소를 가질 수 있고, 여러 행/열로 확장(span)되거나 겹쳐질(overlap) 수 있습니다.
+GridLayout은 기본값으로 하나의 행과 하나의 열을 가지고 있습니다.
+행/열을 추가하려면,  열의 정의를(쉼표로 분리) `columns` 프로퍼티에, 행의 정의를(쉼표로 분리) `rows` 프로퍼티에 명시해야 합니다.
+열의 너비와 행의 높이는  픽셀의 절대량, 사용 가능한 공간의 퍼센티지, 혹은 자동으로 지정할 수 있습니다.:
 
-- **Absolute**: Fixed size of pixels.
-- **Star (*)**: Takes as much space as available (after filling all auto and fixed sized columns), proportionally divided over all star-sized columns. So `3/7` means the same as `30/70`.
-- **Auto**: Takes as much space as needed by the contained child element(s).
+- **Absolute**: 고정된 픽셀 크기.
+- **Star (*)**: 가능한 최대 값(모든 auto 와, 고정 크기 열이 채워진 후), 모든 star-sized 열 크기에 비례하여 나누어짐. 따라서 `3/7` 은 `30/70` 과 같음.
+- **Auto**: 포함된 자식 요소들에 필요한 최대한의 공간을 차지.
 
-### Samples
+### 예제
 
-#### A complex grid layout
+#### 복잡한 그리드 레이아웃
 
 ```html
 <GridLayout columns="40, auto, *" rows="40, auto, *" backgroundColor="#3c495e">
@@ -27,7 +31,7 @@ The GridLayout is a layout that arranges its child elements in a table structure
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout.svg" />
 
-#### Grid layout with star sizing
+#### 그리드 레이아웃과 별-크기(star sizing)
 
 ```html
 <GridLayout columns="*, 2*" rows="2*, 3*" backgroundColor="#3c495e">
@@ -39,7 +43,7 @@ The GridLayout is a layout that arranges its child elements in a table structure
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_star_sizing.svg" />
 
-#### Grid layout with fixed and auto sizing
+#### 그리드 레이아웃과 고정/자동 크기
 
 ```html
 <GridLayout columns="80, auto" rows="80, 80" backgroundColor="#3c495e">
@@ -54,20 +58,19 @@ The GridLayout is a layout that arranges its child elements in a table structure
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-`columns` | `String` | A string value representing column widths delimited with commas. Column widths can be either an absolute number, `auto` or `*`. A number indicates an absolute column width, `auto` makes the column as wide as its widest child, and `*` makes the column occupy all available horizontal space.
-`rows` | `String` | A string value representing row heights delimited with commas. Row heights can be either an absolute number, `auto` or `*`. A number indicates an absolute row height, `auto` makes the row as high as its highest child, and `*` makes the row occupy all available vertical space.
+`columns` | `String` | 열의 너비를 나타내는 쉼표로 나누어진 문자열 값. 열의 너비는 절대값이나 `auto`, `*`가 가능. 숫자는 고정된 절대값 너비를 의미하고, `auto`는 가장 넓은 자식의 너비, `*` 는 컬럼이 가능한 모든 가로공간을 차지하도록 만듬.
+`rows` | `String` | 행의 높이를 나타내는 쉼표로 나누어진 문자열 값. 행의 높이는 절대값이나 `auto`, `*`가 가능. 숫자는 고정된 절대값 높이를 의미하고, `auto`는 가장 높은 자식의 높이, `*` 는 행이 가능한 모든 세로 공간을 차지하도록 만듬.
 
 
-## Additional Children Props
+## 추가적인 자식 Props
 
-When an element is a direct child of the GridLayout, the following
-props get a meaning:
+요소가 GridLayout의 직접적인 자식일때 다음 prop들이 가능합니다:
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-`row` | `Number` | Specifies the row which this element should be in
-`column` | `Number` | Specifies the column which this element should be in
-`rowSpan` | `Number` | Specifies the number of rows which this element should span across
-`columnSpan` | `Number` | Specifies the number of columns which this element should span across
+`row` | `Number` | 요소의 행
+`column` | `Number` | 요소의 열
+`rowSpan` | `Number` | 요소가 확장되는 행의 수
+`columnSpan` | `Number` | 요소가 확장되는 열의 수

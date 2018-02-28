@@ -1,14 +1,15 @@
 ---
-title: AbsoluteLayout
+title: 고정 (AbsoluteLayout)
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_absolute_layout_
-contributors: [rigor789]
+contributors: [qgp9]
 ---
 
-The AbsoluteLayout container is the simplest layout container in NativeScript. It uses absolute top-left coordinates to position its children. The AbsoluteLayout will not enforce any layout constraints on its children and will not resize them at runtime when its size changes.
+AbsoluteLayout 컨테이너는 네이티브-스크립트에서 가장 간단한 레이아웃 컨테이너입니다. 이 컨테이너는 자식들의 위치로 절대 top-left 좌표를 사용합니다.
+AbsoluteLayout은 자식들의 레이아웃을 제안하지 않고 런타임에 자신의 크기가 변경될때 자식들의 크기를 변경하지 않습니다.
 
-### Samples
+### 예제
 
-#### A grid-like layout
+#### 그리드 같은(grid-like) 레이아웃
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -20,7 +21,7 @@ The AbsoluteLayout container is the simplest layout container in NativeScript. I
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_grid.svg" />
 
-#### Overlapping elements
+#### 요소 겹침 (Overlapping elements)
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -33,14 +34,13 @@ The AbsoluteLayout container is the simplest layout container in NativeScript. I
 
 ## Props
 
-AbsoluteLayout has no props.
+AbsoluteLayout은 prop이 없습니다.
 
-## Additional Children Props
+## 추가적인 자식들의 Props (Additional Children Props)
 
-When an element is a direct child of the AbsoluteLayout, the following
-props get a meaning:
+요소가 AbsoluteLayout의 바로 아래 자식일때, 다음 prop들을 사용할 수 있습니다:
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `top` | `Number` | A value representing the distance from the top of the parent AbsoluteLayout
-| `left` | `Number` | A value representing the distance from the left of the parent AbsoluteLayout
+| `top` | `Number` | 부모 AbsoluteLayout의 top으로 부터 거리
+| `left` | `Number` | 부모 AbsoluteLayout의 left로 부터 거리

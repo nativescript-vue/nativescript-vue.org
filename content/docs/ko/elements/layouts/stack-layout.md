@@ -1,14 +1,14 @@
 ---
-title: StackLayout
+title: 스택 (StackLayout)
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_stack_layout_
-contributors: [rigor789]
+contributors: [qgp9]
 ---
 
-The StackLayout container stacks the child elements either vertically (default), or horizontally.
+StackLayout 컨테이너는 자식 요소들을 세로(기본값)나 가로로 쌓음(stack)
 
-### Samples
+### 예제
 
-#### Default StackLayout
+#### 기본 StackLayout
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -19,7 +19,7 @@ The StackLayout container stacks the child elements either vertically (default),
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical.svg" />
 
-#### Horizontal StackLayout
+#### 가로방향 StackLayout
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -30,7 +30,7 @@ The StackLayout container stacks the child elements either vertically (default),
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal.svg" />
 
-#### StackLayout with horizontally aligned children
+#### 가로로 자식들이 정렬된 StackLayout
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -46,7 +46,7 @@ The StackLayout container stacks the child elements either vertically (default),
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical_align_children.svg" />
 
-#### Horizontal StackLayout with vertically aligned children
+#### 수직으로 자식들이 정렬된 가로방향 StackLayout
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -64,11 +64,10 @@ The StackLayout container stacks the child elements either vertically (default),
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-`orientation` | `String` | Specifies the direction of the stacking. Possible values are `vertical` and `horizontal`. The default value is `vertical`.
+`orientation` | `String` | 쌓이는 방향을 지정. 2가지 값이 가능: `verticla`, `horizontal`. 기본값은 `verticla`
 
+## 추가적인 자식 Props
 
-## Additional Children Props
-
-There are no additional properties for child elements.
+없음.
