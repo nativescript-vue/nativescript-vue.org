@@ -1,12 +1,12 @@
 ---
-title: Label
+title: 레이블 (Label)
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_label_.label
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
+contributors: [qgp9]
 ---
 
-The Label component is used to display read-only text.
+레이블(Label) 컴포넌트는 읽기전용 텍스트를 표시하는데 사용됩니다.
 
-**Note**: This `<Label>` is **not** the same as the HTML `<Label>`.
+**노트**: `<Label>` HTML의 `<Label>` 과 **다릅니다**.
 
 ---
 
@@ -18,9 +18,9 @@ The Label component is used to display read-only text.
 
 ### FormattedString
 
-If you need to style certain parts of the text differently, you can use a combination of a `FormattedString` and `Span` elements.
+특정 부분의 텍스트를 다르게 스타일링해야 한다면 `FormattedString` `Span` 요소를 결합하여 사용할 수 있습니다.
 
-Example:
+예:
 ```html
 <Label textWrap="true">
   <FormattedString>
@@ -35,12 +35,12 @@ Example:
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `text` | `String` | The text of the label.
-| `textWrap` | `boolean` | Determines whether or not the Label wraps text. Default `false`.
+| `text` | `String` | 레이블의 텍트스.
+| `textWrap` | `boolean` | 레이블의 텍스트가 래핑될것 인지 지정. 기본값은 `false`.
 
-## Native Component
+## 네이티브 컴포넌트
 
 | Android | iOS |
 |---------|-----|

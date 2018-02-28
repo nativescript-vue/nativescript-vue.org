@@ -1,10 +1,10 @@
 ---
 title: ActivityIndicator
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicator_.activityindicator
-contributors: [MisterBrownRSA, rigor789]
+contributors: [qgp9]
 ---
 
-The ActivityIndicator component adds a progress indicator that indicates that something is running in the background, prompting the user to pause.
+ActivityIndicator 컴포넌트는 백그라운드에서 동작하는 것을 표시하는 프로그레스 인디케이터를 추가하고 사용자가 일시중지(pause) 할수 있게 도와줍니다.
 
 ---
 
@@ -16,17 +16,17 @@ The ActivityIndicator component adds a progress indicator that indicates that so
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `busy` | `Boolean` | When `true`, the indicator is active.
+| `busy` | `Boolean` | `true` 일때 인디케이터가 활성화됨.
 
-## Events
+## 이벤트
 
-| name | description |
+| 이름 | 설명 |
 |------|-------------|
-| `busyChange`| Emitted when the `busy` property is changed.
+| `busyChange`| `busy` 프로퍼티가 바뀔때 발생(Emit)
 
-## Native Component
+## 네이티브 컴포넌트
 
 | Android | iOS |
 |---------|-----|

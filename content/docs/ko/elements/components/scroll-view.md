@@ -1,10 +1,10 @@
 ---
-title: ScrollView
+title: 스크롤뷰 (ScrollView)
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_scroll_view_.scrollview
-contributors: [eddyverbruggen]
+contributors: [qgp9]
 ---
 
-The ScrollView component allows you to show scrollable content.
+스크롤뷰(ScrollView) 컴포넌트는 스크롤 가능한 컨텐츠를 표시할 수 있게 해줍니다.
 
 ---
 
@@ -24,12 +24,12 @@ The ScrollView component allows you to show scrollable content.
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `orientation` | `String` | Either `horizontal` or `vertical`. Default `vertical`.
+| `orientation` | `String` | `horizontal` 혹은 `vertical`. 기본값은 `vertical`.
 
-## Events
+## 이벤트
 
-| name | description |
+| 이름 | 설명 |
 |------|-------------|
-| `scroll`| Emitted when a scroll event occurs
+| `scroll`| 스크롤 이벤트가 발생했을때 발생(Emit)

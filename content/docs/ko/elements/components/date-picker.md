@@ -1,10 +1,10 @@
 ---
-title: DatePicker
+title: 날짜선택 (DatePicker)
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker
-contributors: [MisterBrownRSA, rigor789]
+contributors: [qgp9]
 ---
 
-The DatePicker component allows the user to pick a date.
+DatePicker 컴포넌트는 사용자가 날짜를 선택할 수 있도록 합니다.
 
 ---
 
@@ -12,7 +12,7 @@ The DatePicker component allows the user to pick a date.
 <DatePicker @loaded="onDatePickerLoaded" @dateChanged="onDateChanged" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
 
 ```html
 <DatePicker v-model="selectedDate" />
@@ -22,22 +22,22 @@ The DatePicker component allows the user to pick a date.
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `date` | `Date` | The currently displayed date.
-| `minDate` | `Date` | The minimum selectable date.
-| `maxDate` | `Date` | The maximum selectable date.
-| `day` | `Number` | The currently set day.
-| `month` | `Number` | The currently set month.
-| `year` | `Number` | The currently set year.
+| `date` | `Date` | 현재 표시되는 날짜.
+| `minDate` | `Date` | 최소 선택 가능 날짜.
+| `maxDate` | `Date` | 최대 선택 가능 날짜.
+| `day` | `Number` | 현재 선택된 날.
+| `month` | `Number` | 현재 선택된 달.
+| `year` | `Number` | 현재 선택된 년.
 
-## Events
+## 이벤트
 
-| name | description |
+| 이름 | 설명 |
 |------|-------------|
-| `dateChanged` | Emitted when the selected date changes.
+| `dateChanged` | 선택된 날짜가 바뀔때 발생(Emit)
 
-## Native Component
+## 네이티브 컴포넌트
 
 | Android |	iOS |
 |---------|-----|

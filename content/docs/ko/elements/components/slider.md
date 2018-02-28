@@ -1,11 +1,11 @@
 ---
-title: Slider
+title: 슬라이더 (Slider)
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_slider_.slider
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
+contributors: [qgp9]
 
 ---
 
-The Slider component allows the user to input a numeric value from a specified range.
+슬라이더(Slider) 컴포넌트는 사용자가 특정 범위의 숫자 값을 입력할 수 있도록 해줍니다.
 
 ---
 
@@ -13,7 +13,7 @@ The Slider component allows the user to input a numeric value from a specified r
 <Slider value="80" @valueChange="onValueChanged" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
 
 ```html
 <Slider v-model="value" />
@@ -23,17 +23,17 @@ The Slider component allows the user to input a numeric value from a specified r
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `value` | `Number` | The value of the slider.
-| `minValue` | `Number` | The minimum value of the slider. Default `0`.
-| `maxValue` | `Number` | The maximum value of the slider. Default `100`.
+| `value` | `Number` | 슬라이더의 값
+| `minValue` | `Number` | 슬라이더 최소값. 기본값은 `0`.
+| `maxValue` | `Number` | 슬라이더 최대값. 기본값은 `100`.
 
-## Events
+## 이벤트
 
-| name | description |
+| 이름 | 설명 |
 |------|-------------|
-| `valueChange`| Emitted when the value of the slider changes.
+| `valueChange`| 슬라이더 값이 바뀔때 발생.
 
 ## Native Component
 

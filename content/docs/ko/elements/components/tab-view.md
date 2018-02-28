@@ -1,10 +1,10 @@
 ---
-title: TabView
+title: 탭뷰 (TabView)
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
+contributors: [qgp9]
 ---
 
-The TabView component allows you to display content grouped into tabs.
+탭뷰(TabView) 컴포넌트는 탭으로 그룹화된 컨텐츠를  표시할 수 있도록 해줍니다.
 
 ---
 
@@ -23,15 +23,15 @@ The TabView component allows you to display content grouped into tabs.
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `selectedIndex` | `Number` | The currently selected tab. Default is `0`
+| `selectedIndex` | `Number` | 현재 선택된 탭. 기본값은 `0`
 
-## Events
+## 이벤트
 
-| name | description |
+| 이름 | 설명 |
 |------|-------------|
-| `selectedIndexChanged`| Emitted when one of the tab-view-item components are tapped
+| `selectedIndexChanged`| tab-view-item 컴포넌트중 하나가 탭되었을때 발생
 
 ## Native Component
 | Android | iOS |

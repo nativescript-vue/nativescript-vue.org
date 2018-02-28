@@ -1,11 +1,11 @@
 ---
-title: Switch
+title: 스위치 (Switch)
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_switch_.switch
-contributors: [MisterBrownRSA, rigor789]
+contributors: [qgp9]
 ---
 
-The Switch component allows the user to toggle between two states. 
-The default state is `false` or "off".
+스위치(Switch) 컴포넌트는 사용자가 두개의 상태를 토글 할수 있도록 해줍니다.
+기본 상태는 `false` 나 "off" 입니다.
 
 ---
 
@@ -13,7 +13,7 @@ The default state is `false` or "off".
 <Switch checked="true" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
 
 ```html
 <Switch v-model="itemEnabled" />
@@ -23,15 +23,15 @@ The default state is `false` or "off".
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `checked` | `Boolean` | A boolean value representing the state of the switch.
+| `checked` | `Boolean` | 스위치의 상태를 나타네는 부울값
 
-## Events
+## 이벤트
 
-| name | description |
+| 이름 | 설명 |
 |------|-------------|
-| `checkedChange`| Emitted when switch checked value changes.
+| `checkedChange`| 스위치의 값이 바뀔때 발생
 
 ## Native Component
 | Android | iOS |

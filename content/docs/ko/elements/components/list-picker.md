@@ -1,10 +1,10 @@
 ---
 title: ListPicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_picker_.listpicker
-contributors: [MisterBrownRSA, rigor789]
+contributors: [qgp9]
 ---
 
-The ListPicker component allows the user to pick a value from a list.
+ListPicker 컴포넌트는 사용자가 리스트로 부터 값을 선택할 수 있도록 해줍니다.
 
 ---
 
@@ -13,7 +13,7 @@ The ListPicker component allows the user to pick a value from a list.
     @selectedIndexChange="selectedIndexChanged" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
 
 ```html
 <ListPicker :items="listOfItems" v-model="selectedItem" />
@@ -23,18 +23,18 @@ The ListPicker component allows the user to pick a value from a list.
 
 ## Props
 
-| name | type | description |
+| 이름 | 타입 | 설명 |
 |------|------|-------------|
-| `items` | `Array<String>` | An Array of strings that will be displayed as options in the list picker.
-| `selectedIndex` | `Number` | The index of the currently selected item.
+| `items` | `Array<String>` | 리스트 선택기에 표시되는 옵션들의 스트링 배열.
+| `selectedIndex` | `Number` | 현재 선택된 아이템의 인덱스.
 
-## Events
+## 이벤트
 
-| name | description |
+| 이름 | 설명 |
 |------|-------------|
-| `selectedIndexChange`| Emitted when the selected option (index) of the ListPicker changes.
+| `selectedIndexChange`| 리스트 선택기에서 선택된 옵션(인덱스)가 바뀔때 발생(Emit)
 
-## Native Component
+## 네이티브 컴포넌트
 
 | Android | iOS |
 |---------|-----|
