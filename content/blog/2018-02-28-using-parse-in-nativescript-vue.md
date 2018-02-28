@@ -2,6 +2,7 @@
 title: Using Parse in NativeScript-Vue
 authors: [damain]
 toc: true
+intro: We are accustomed to using firebase as a backend in our native apps, and that requires using the native SDK because the JavaScript SDK does not work on native. But if we are using one codebase to deploy an app to web and native, we don't want to write our backend functions twice.
 ---
 
 We are accustomed to using firebase as a backend in our native apps, and that requires using the native SDK because the JavaScript SDK does not work on native. But if we are using one codebase to deploy an app to web and native, we don't want to write our backend functions twice. Which as of February 2018 is the case. 

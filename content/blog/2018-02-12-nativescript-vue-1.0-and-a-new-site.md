@@ -2,6 +2,7 @@
 title: NativeScript-Vue 1.0 and a new site!
 authors: [rigor789]
 toc: true
+intro: We are thrilled to announce NativeScript-Vue 1.0! It has been almost a year since we started this project, and we are finally at a stage where we think the project is ready to be used in production...
 ---
 
 We are thrilled to announce [NativeScript-Vue 1.0](https://github.com/nativescript-vue/nativescript-vue/releases/tag/v1.0.0)
