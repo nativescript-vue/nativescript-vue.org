@@ -1,6 +1,6 @@
 ---
 title: Templates
-contributors: [rigor789, tralves]
+contributors: [rigor789, tralves, damain]
 outdated: false
 ---
 
