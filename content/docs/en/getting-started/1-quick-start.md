@@ -22,7 +22,7 @@ $ npm install
 ```
 ## Run you app using either of the following
 ### Build, watch for changes and debug the application
-Plarform below would be `ios` or `android`
+Platform below would be `ios` or `android`
 ```sh
 $ npm run debug:<platform>
 ```
