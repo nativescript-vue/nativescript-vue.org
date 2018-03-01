@@ -16,12 +16,12 @@ $ cd <project-name>
 $ npm install
 ```
 
-Now lets run it 
+and then run your app using
 ```shell
 $ npm run watch:<platform>
 ```
-*platform above would be `ios` or `android`.
+> where platform is `ios` or `android`.
 
-For more details you can check the [project](https://github.com/nativescript-vue/vue-cli-template) on github
+For more details check out [nativescript-vue/vue-cli-template on GitHub](https://github.com/nativescript-vue/vue-cli-template).
 
 To learn more about the available templates head over to the [templates documentation](/en/docs/getting-started/templates).
