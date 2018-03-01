@@ -20,21 +20,11 @@ $ cd <project-name>
 ```sh
 $ npm install
 ```
-## Run you app using either of the following
-### Build, watch for changes and debug the application
-Platform below would be `ios` or `android`
-```sh
-$ npm run debug:<platform>
-```
-
-## Or
 
 ### Build, watch for changes and run the application
+Platform below would be `ios` or `android`
 ```sh
 $ npm run watch:<platform>
 ```
-
-
-**Please Note:  When invoking the build scripts, omitting the platform will attempt to launch \`tns\` for both platforms, which will only work in a properly configured OSX environment. Because you can only develop for ios on Mac OSX**.
 
 To learn more about the available templates head over to the [templates documentation](/en/docs/getting-started/templates).
