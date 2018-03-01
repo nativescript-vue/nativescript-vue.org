@@ -10,7 +10,7 @@ If you are ready to move on and work locally on your machine, and [you
 have your system ready for native development](/en/docs/getting-started/installation), you can start by using a template:
 
 ```shell
-$ npm install -g vue-cli
+$ $ npm install -g @vue/cli @vue/cli-init
 $ vue init nativescript-vue/vue-cli-template <project-name>
 $ cd <project-name>
 $ npm install
