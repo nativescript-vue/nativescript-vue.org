@@ -9,19 +9,32 @@ it in the [NativeScript Playground](https://play.nativescript.org?template=play-
 If you are ready to move on and work locally on your machine, and [you
 have your system ready for native development](/en/docs/getting-started/installation), you can start by using a template:
 
-```shell
-$ tns create my-app --template nativescript-vue-template
-$ cd my-app
+###  Scaffold project
+```sh
+$ npm install -g vue-cli
+$ vue init nativescript-vue/vue-cli-template <project-name>
+$ cd <project-name>
 ```
 
-and then run your app using:
-
-```shell
-$ tns run android # for android
+### Install dependencies
+```sh
+$ npm install
+```
+## Run you app using either of the following
+### Build, watch for changes and debug the application
+Plarform below would be `ios` or `android`
+```sh
+$ npm run debug:<platform>
 ```
 
-```shell
-$ tns run ios # for ios
+## Or
+
+### Build, watch for changes and run the application
+```sh
+$ npm run watch:<platform>
 ```
+
+
+**Please Note:  When invoking the build scripts, omitting the platform will attempt to launch \`tns\` for both platforms, which will only work in a properly configured OSX environment. Because you can only develop for ios on Mac OSX**.
 
 To learn more about the available templates head over to the [templates documentation](/en/docs/getting-started/templates).
