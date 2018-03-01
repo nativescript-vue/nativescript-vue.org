@@ -22,7 +22,7 @@ It supports:
 - uses `~` to refer to the `src/assets` folder e.g. <Image src="~/images/NativeScript-Vue.png"/>
 - support for plugins
 #### Installation
-
+*platform is either `ios` or `android`
 ``` sh
 $ npm install -g vue-cli
 $ vue init nativescript-vue/vue-cli-template <project-name>
