@@ -20,7 +20,8 @@ Now lets run it
 ```shell
 $ npm run watch:<platform>
 ```
-*platform below would be `ios` or `android`
+*platform above would be `ios` or `android`.
+
 For more details you can check the [project](https://github.com/nativescript-vue/vue-cli-template) on github
 
 To learn more about the available templates head over to the [templates documentation](/en/docs/getting-started/templates).
