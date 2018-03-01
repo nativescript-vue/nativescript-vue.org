@@ -1,6 +1,6 @@
 ---
 title: Quick Start
-contributors: [rigor789, eddyverbruggen]
+contributors: [rigor789, eddyverbruggen, damain]
 ---
 
 If you want to easily try NativeScript-Vue, we strongly recommend trying
