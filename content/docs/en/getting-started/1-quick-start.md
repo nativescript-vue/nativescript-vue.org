@@ -9,22 +9,18 @@ it in the [NativeScript Playground](https://play.nativescript.org?template=play-
 If you are ready to move on and work locally on your machine, and [you
 have your system ready for native development](/en/docs/getting-started/installation), you can start by using a template:
 
-###  Scaffold project
-```sh
+```shell
 $ npm install -g vue-cli
 $ vue init nativescript-vue/vue-cli-template <project-name>
 $ cd <project-name>
-```
-
-### Install dependencies
-```sh
 $ npm install
 ```
 
-### Build, watch for changes and run the application
-Platform below would be `ios` or `android`
-```sh
+Now lets run it 
+```shell
 $ npm run watch:<platform>
 ```
+*platform below would be `ios` or `android`
+For more details you can check the [project](https://github.com/nativescript-vue/vue-cli-template) on github
 
 To learn more about the available templates head over to the [templates documentation](/en/docs/getting-started/templates).
