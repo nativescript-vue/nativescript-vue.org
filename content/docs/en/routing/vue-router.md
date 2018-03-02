@@ -9,7 +9,7 @@ then you'll be happy to learn [the Vue router](https://router.vuejs.org/en/) is 
 ## Installation
 From a command prompt, run:
 ```bash
-npm i vue-router --save
+$ npm i vue-router --save
 ```
 
 ## Usage
