@@ -7,13 +7,13 @@ If you don't want the hassle of installing and configuring your system before yo
 
 It's a place in the cloud where you can just play around with NativeScript and Vue.js from your browser until you figure out the basics. Fire the link and start dragging and dropping component code around the place.
 
-![](../../../../static/screenshots/ns-playground/playground-home.png)
-
 ## Getting around the Playground
 
 Firing [this link](https://play.nativescript.org/?template=play-vue) gets you to a simple code editor in the cloud where a very basic NativeScript + Vue.js template is pre-loaded for you.
 
 ### Before you start
+
+![](../../../../static/screenshots/ns-playground/playground-home.png)
 
 If this is your first time here, the Playground prompts you to install a couple of mobile apps&mdash;the NativeScript Playground and the NativeScript Preview. Together tey let you see your code changes applied in real time on device. No code building and bundling required.
 
@@ -59,7 +59,7 @@ In some cases, when you interact with the app, it will close unexpectedly. Just 
 
 So, the component runs and shows on your screen. You're excited but you want to make it your own. Hack away at the default code suggested by the Playground. Fix sizes and labels, remove or add elements.
 
-Go to `app.css` and switch up the styling a bit. experiment with colors and font sizes. 
+Go to `app.css` and switch up the styling a bit. Experiment with colors and font sizes. 
 
 ## Next steps
 
