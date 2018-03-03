@@ -3,16 +3,16 @@ title: Sample Tasks for the Playground
 contributors: [ikoevska]
 ---
 
-If you don't know where to start, why not create a simple to-do app. The first tab of the app lets you add new tasks and shows a list of active tasks. The second tab lists completed tasks.
+If you don't know where to start in the [NativeScript Playground](https://play.nativescript.org?template=play-vue), why don't you start by creating a simple to-do app. The first tab of the app lets you add new tasks and shows a list of active tasks. The second tab lists completed tasks.
 
-### A two-tab app
+## A two-tab app
 
 Use the `<TabView>` component to create a two-tab app. 
 
-1. Remove the default `<ScrollView>` block that comes with the template.
-1. Drag and drop the `<TabView>` component in its place.<br/>
-1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).
-1. Change the titles of the `<TabViewItem>` elements and their contents.
+1. Remove the default `<ScrollView>` block and all its contents that come with the template.
+1. Drag and drop the `<TabView>` component in its place.
+1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).<br/>On an iOS device the default height setting causes the tap to show somewhere around the middle of the screen.
+1. Change the titles of the `<TabViewItem>` elements and their contents to reflect their purpose.
 
 ```JavaScript
 new Vue({
@@ -36,7 +36,9 @@ new Vue({
 }).$start();
 ```
 
-### Adding new tasks
+## Adding new tasks
+
+NativeScript layouts are how you control the positioning of elements on your page. 
 
 Use a `<GridLayout>`, a `<TextField>`, and a `<Button>`.
 

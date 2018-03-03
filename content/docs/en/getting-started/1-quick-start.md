@@ -1,11 +1,13 @@
 ---
-title: The Quicker Start
+title: Quick Start
 contributors: [rigor789, eddyverbruggen, ikoevska]
 ---
 
 If you don't want the hassle of installing and configuring your system before you can have a taste of NativeScript + Vue.js development, the [NativeScript Playground](https://play.nativescript.org?template=play-vue) has you covered.
 
 It's a place in the cloud where you can just play around with NativeScript and Vue.js from your browser until you figure out the basics. Fire the link and start dragging and dropping component code around the place.
+
+![](../../../../static/screenshots/ns-playground/playground-home.png)
 
 ## Getting around the Playground
 
@@ -21,6 +23,8 @@ Keep the apps running while you're experimenting with the code.
 
 ### The lay of the land
 
+![](../../../../static/screenshots/ns-playground/playground-layout.png)
+
 The left sidebar offers a file explorer and a **Components** panel. Most of your effort on your app will happen in `app.js` and `app.css`, containing the app functionality and taking care of the app styles, respectively. No need to deep dive in any other files for now.
 
 The **Components** panel provides quick access to already pre-configured code for all available NativeScript UI components.
@@ -31,13 +35,21 @@ The bottom of the page is your best friend providing real-time error reports and
 
 ### Drag and drop to code
 
+![](../../../../static/screenshots/ns-playground/playground-drag-and-drop.gif)
+
 Just click a component from the **Components** panel and drag it to the code editor, somewhere inside the `template` block. Releasing the mouse button inserts some pre-written sample code for the respective component. Any methods that go with it (such as what happens on button or item tap) are automatically added at the top of the page before the `template` block. 
+
+> **TIP:** Use the search of the **Components** panel to quickly find the element that you want to use. The search works only with the title of the component and not the actual name used in the code. For example: the search finds *text field* but does not find *textfield*.
+>
+> ![](../../../../static/screenshots/ns-playground/playground-component-search.gif)
 
 For most UI components to work, you need to drop them inside the `<Page>` block, preferably inside a layout component. Layouts tell your app how to position the UI components on the screen.
 
 > **NOTE:** Right now, there's nothing stopping you from dropping the code at a place that will cause your app to crash or simply not load. In those cases, check the **Errors** and **Device Logs** tabs for more information.
 
 ### Check it out real-time
+
+![](../../../../static/screenshots/ns-playground/playground-preview.gif)
 
 After you place the code in a valid spot, hit **Preview** (or `Ctrl+S` or `Cmd+S`) and see your app refresh on your device screen in an instant. 
 
@@ -49,10 +61,6 @@ So, the component runs and shows on your screen. You're excited but you want to 
 
 Go to `app.css` and switch up the styling a bit. experiment with colors and font sizes. 
 
-## Some sample tasks to get around the playground
-
-Head to [Sample Tasks for the Playground](2-playground-tutorial) for ideas about what to do to get started in the Playground.
-
 ## Next steps
 
-You can work in the Playground for as long as you like. You can use it to just get a taste of NativeScript development or to develop your entire project inside. However, when you get to the point where you are ready to put your app out there, you need to jump on the more advanced wagon and install some NativeScript tools locally.
+You can work in the Playground for as long as you like. You can use it to just get a taste of NativeScript development or to develop your entire project inside. However, when you get to the point where you are ready to put your app out there, you need to jump on the more advanced wagon and [install some NativeScript tools locally](2-installation).
