@@ -6,6 +6,27 @@ outdated: true
 
 You can use NativeScript's [template system](https://docs.nativescript.org/tooling/app-templates) to bootstrap your `nativescript-vue` app. All these templates generate a NativeScript app that uses the `nativescript-vue` plugin. Some templates are equipped with more features such as support for Vue.js Single File Components (`.vue`) and livereload.
 
+## vue-cli-template
+
+#### Project link
+
+[https://github.com/nativescript-vue/vue-cli-template](https://github.com/nativescript-vue/vue-cli-template)
+
+#### Description
+
+This template is meant to be installed with [vue-cli (2.x)](https://github.com/vuejs/vue-cli) and is a great starting point for quick prototyping.
+
+#### Installation
+
+First, [install vue-cli 2.x](https://vuejs.org/v2/guide/installation.html#CLI), then run:
+
+```shell
+$ vue init nativescript-vue/vue-cli-template <project-name>
+$ cd <project-name>
+$ npm install # or yarn
+```
+*Follow the [project link](https://github.com/nativescript-vue/vue-cli-template) for further instructions.*
+
 ## nativescript-vue-template
 
 #### Project link
