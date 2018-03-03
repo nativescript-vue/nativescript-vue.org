@@ -10,7 +10,7 @@ outdated: true
 
 #### 프로젝트 링크
 
-[](https://github.com/tralves/nativescript-vue-template)
+[https://github.com/tralves/nativescript-vue-template](https://github.com/tralves/nativescript-vue-template)
 
 #### 설명
 
@@ -28,7 +28,7 @@ $ tns create sample-app --template nativescript-vue-template
 
 #### 프로젝트 링크
 
-[](https://github.com/tralves/nativescript-vue-rollup-template)
+[https://github.com/tralves/nativescript-vue-rollup-template](https://github.com/tralves/nativescript-vue-rollup-template)
 
 #### 설명
 원래의 [rigor789's](https://github.com/rigor789/nativescript-vue-rollup-template)에서 포크된 이 프로젝트는 현재 가장 안정되고 기능적으로 완벽합니다. [🍏 🍍 🍓 Groceries Vue](https://github.com/tralves/groceries-ns-vue) 에서 어떻게 사용되는지 볼 수 있습니다.
@@ -53,7 +53,7 @@ $ tns create sample-app --template nativescript-vue-rollup-template
 
 #### 프로젝트 링크
 
-[](https://github.com/tralves/nativescript-vue-webpack-template)
+[https://github.com/tralves/nativescript-vue-webpack-template](https://github.com/tralves/nativescript-vue-webpack-template)
 
 #### 설명
 
