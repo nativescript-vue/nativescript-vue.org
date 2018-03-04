@@ -8,7 +8,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 
 ---
 
-```xml
+```html
 <TabView :selectedIndex="selectedIndex">
   <TabViewItem title="Tab 1">
     <Label text="Content for Tab 1" />
