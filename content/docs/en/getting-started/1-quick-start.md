@@ -11,6 +11,8 @@ It's a place in the cloud where you can just play around with NativeScript and V
 
 Firing [this link](https://play.nativescript.org/?template=play-vue) gets you to a simple code editor in the cloud where a very basic NativeScript + Vue.js template is pre-loaded for you.
 
+> **TIP:** Head to [Sample Tasks for the Playground](/en/docs/getting-started/playground-tutorial) for ideas about what to do to get started in the Playground.
+
 ### Before you start
 
 ![](/screenshots/ns-playground/playground-home.png)
