@@ -11,7 +11,7 @@ It's a place in the cloud where you can just play around with NativeScript and V
 
 Firing [this link](https://play.nativescript.org/?template=play-vue) gets you to a simple code editor in the cloud where a very basic NativeScript + Vue.js template is pre-loaded for you.
 
-> **TIP:** Head to [Sample Tasks for the Playground](/en/docs/getting-started/playground-tutorial) for ideas about what to do to get started in the Playground.
+> **TIP:** Head to [Sample Tasks for the Playground](/en/docs/getting-started/playground-tutorial) for ideas about how to get started in the Playground.
 
 ### Before you start
 
@@ -48,6 +48,8 @@ Just click a component from the **Components** panel and drag it to the code edi
 For most UI components to work, you need to drop them inside the `<Page>` block, preferably inside a layout component. Layouts tell your app how to position the UI components on the screen.
 
 > **NOTE:** Right now, there's nothing stopping you from dropping the code at a place that will cause your app to crash or simply not load. In those cases, check the **Errors** and **Device Logs** tabs for more information.
+>
+> If the **Device Logs** tab shows `"NativeScript-Vue has "Vue.config.silent" set to true, to see output logs set it to false."`, go to `nativescript-vue` > `index.js`, hit `Ctrl+F` or `Cmd+F` and look for `Vue.config.silent = false;`. Set it to `true` to enable device logs.
 
 ### Check it out real-time
 
