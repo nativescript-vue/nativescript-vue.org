@@ -3,7 +3,7 @@ title: Vue Router
 contributors: [qgp9]
 ---
 
-[수동 라우팅](/ko/docs/routing/manual-routing) 이 당신의 유스-케이스와 잘 맞지 않는다면, 완전히 지원되는 [Vue Router](https://router.vuejs.org/ko) 를 배워보세요.
+[수동 라우팅](/ko/docs/routing/manual-routing) 이 당신의 유스-케이스와 잘 맞지 않는다면, 완전히 지원되는 [Vue Router](https://router.vuejs.org/kr) 를 배워보세요.
 
 ## 설치
 명령줄에서 다음을 실행합니다:
@@ -13,7 +13,7 @@ npm i vue-router --save
 
 ## 사용법
 전체 예제를 설명과 함께 잘라서 봅시다.
-Vue Router에는 더 다양한 트릭들이 있기 때문에 [공식문서](https://router.vuejs.org/ko/)를 꼭 방문해 보세요.
+Vue Router에는 더 다양한 트릭들이 있기 때문에 [공식문서](https://router.vuejs.org/kr)를 꼭 방문해 보세요.
 
 ---
 Vue, VueRouter 를 require 하고, 서로 악수하게 합니다 🤝

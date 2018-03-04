@@ -32,7 +32,7 @@ function plugin(opts) {
     const otherLocales = locales.filter(l => l !== defaultLocale);
 
     // builds out the file structure for all the other locales
-    otherLocales.forEach((locale) => {
+    process.env.CREATE_MISSING && otherLocales.forEach((locale) => {
       requiredFiles.forEach((file) => {
         const original_file = file.replace('{LOCALE}', defaultLocale);
         const original_file_path = path.resolve(sourcePath, original_file);

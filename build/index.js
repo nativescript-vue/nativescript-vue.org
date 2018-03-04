@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 
 const Metalsmith = require('metalsmith');
 const multimatch = require('multimatch');
@@ -205,5 +206,9 @@ Metalsmith(cwd)
   .build((err) => {
     if (err) {
       throw err;
+    }
+    const fpath = path.join(cwd, 'content/links_failed.json')
+    if (fs.existsSync(fpath)) {
+      console.log(fs.readFileSync(fpath).toString())
     }
   });

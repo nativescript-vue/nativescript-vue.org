@@ -8,18 +8,18 @@ NativeScript-Vue를 쉽게 사용해보고 싶다면, [NativeScript Playground](
 이미 여러분의 로컬 머신에서 작업할 준비가 되었고, [네이티브 개발을 위한 시스템](/ko/docs/getting-started/installation)이 준비되었다면 템플릿을 사용하여 시작할 수 있습니다.
 
 ```shell
-$ tns create my-app --template nativescript-vue-template
-$ cd my-app
+$ $ npm install -g @vue/cli @vue/cli-init
+$ vue init nativescript-vue/vue-cli-template <project-name>
+$ cd <project-name>
+$ npm install
 ```
 
 그리고나면 당신의 앱을 다음처럼 열 수 있습니다.
 
 ```shell
-$ tns run android # 안드로이드의 경우
+$ npm run watch:<platform>
 ```
 
-```shell
-$ tns run ios # iOS의 경우
-```
+`<platform>`: `ios` | `android`.
 
 사용가능한 템플릿의 더 자세한 정보는 [템플릿 문서](/ko/docs/getting-started/templates)를 참고하세요.
