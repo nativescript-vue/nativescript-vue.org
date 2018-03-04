@@ -57,6 +57,8 @@ After you place the code in a valid spot, hit **Preview** (or `Ctrl+S` or `Cmd+S
 
 In some cases, when you interact with the app, it will close unexpectedly. Just fire it up again and inspect the crash report. 
 
+If at any point you stop seeing your changes applied on the device, click **QR code** and re-scan the QR code with the *Playground* app.
+
 ### Configure your code
 
 So, the component runs and shows on your screen. You're excited but you want to make it your own. Hack away at the default code suggested by the Playground. Fix sizes and labels, remove or add elements.
