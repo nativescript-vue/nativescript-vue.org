@@ -1,20 +1,20 @@
 ---
 title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 ---
 
-The TabView component allows you to display content grouped into tabs.
+`<TabView>` is a navigation component that shows content grouped into tabs and lets users switch between tabs.
 
 ---
 
 ```html
 <TabView :selectedIndex="selectedIndex">
   <TabViewItem title="Tab 1">
-    <label text="Content for Tab 1"></label>
+    <Label text="Content for Tab 1" />
   </TabViewItem>
   <TabViewItem title="Tab 2">
-    <label text="Content for Tab 2"></label>
+    <Label text="Content for Tab 2" />
   </TabViewItem>
 </TabView>
 ```
@@ -23,17 +23,21 @@ The TabView component allows you to display content grouped into tabs.
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `selectedIndex` | `Number` | The currently selected tab. Default is `0`
+| `selectedIndex` | `Number` | Gets or sets the currently selected tab. Default is `0`.
+| `tabTextColor` | `Color` | (Style property) Gets or sets the text color of the tabs titles.
+| `tabBackgroundColor` | `Color` | (Style property) Gets or sets the background color of the tabs.
+| `selectedTabTextColor` | `Color` | (Style property) Gets or sets the text color of the selected tab title.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
-| `selectedIndexChanged`| Emitted when one of the tab-view-item components are tapped
+| `selectedIndexChanged` | Emitted when one of the `<TabViewItem>` components is tapped.
 
-## Native Component
+## Native component
+
 | Android | iOS |
 |---------|-----|
-| android.support.v4.view.ViewPager | UITabBarController
+| [`android.support.v4.view.ViewPager`](https://developer.android.com/reference/android/support/v4/view/ViewPager.html) | [`UITabBarController`](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
