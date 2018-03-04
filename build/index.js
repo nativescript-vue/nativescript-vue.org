@@ -48,7 +48,7 @@ Metalsmith(cwd)
     lang(current, locale, slug) {
       locale = locale || current.locale || this.defaultLocale;
       slug = slug || current.slug;
-      const found = this.links.find(l => l.endsWith(`${slug}/index.html`) && l.includes(locale));
+      const found = this.links.find(l => l.endsWith(`${slug}/index.html`) && l.includes(`/${locale}/`));
 
       if (found) {
         return found;
