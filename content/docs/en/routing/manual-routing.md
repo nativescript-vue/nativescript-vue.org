@@ -37,6 +37,9 @@ const Detail = {
   template: `
     <Page>
       <ActionBar title="Detail"/>
+      <StackLayout>
+        <Label text="Details.." />
+      </StackLayout>
     </Page>
   `
 };
@@ -71,6 +74,9 @@ const Detail = {
   template: `
     <Page>
       <ActionBar title="Detail"/>
+      <StackLayout>
+        <Label text="Details.." />
+      </StackLayout>
     </Page>
   `
 };
