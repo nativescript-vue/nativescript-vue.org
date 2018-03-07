@@ -74,7 +74,7 @@ You can work in the Playground for as long as you like. You can use it to just g
 If [you already have your system ready for native development](/en/docs/getting-started/installation), you can start by using a template:
 
 ```shell
-$ $ npm install -g @vue/cli @vue/cli-init
+$ npm install -g @vue/cli @vue/cli-init
 $ vue init nativescript-vue/vue-cli-template <project-name>
 $ cd <project-name>
 $ npm install
