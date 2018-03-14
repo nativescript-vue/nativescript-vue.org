@@ -4,52 +4,60 @@ contributors: [rigor789, tralves, jlooper, lewebsimple]
 outdated: false
 ---
 
-You can use the [Vue CLI](https://github.com/vuejs/vue-cli) with a custom template to bootstrap your `nativescript-vue` app. Out of the box, this template provides support for Vuex, the Vue Router, and NativeScript themes. Originally built by [Pascal Martineau](https://github.com/lewebsimple/), this template is now officially supported for NativeScript-Vue development.
+This page serves as an overview of the currently supported templates that you can use to get started with NativeScript-Vue.
+It is also assumed that you have [set up your system for NativeScript development](/en/docs/getting-started/installation).
 
-## Scaffold your app with a Vue CLI template
+> This list will be updated as new templates come up, or old templates get deprecated.
 
-#### Project link
+**Currently supported templates:**
 
-[](https://github.com/nativescript-vue/vue-cli-template)
+* [nativescript-vue/vue-cli-template](#nativescript-vuevue-cli-template) 
+* [nativescript-vue/nativescript-vue-template](#nativescript-vuenativescript-vue-template) 
 
-#### Description
+**Deprecated templates:**
 
-Use this template to scaffold a basic NativeScript-Vue app. Depending on your choices during the pre-installation prompts, your app will include a [Vuex](https://vuex.vuejs.org/en/) integration, use the [router](https://github.com/vuejs/vue-router), and include single-file components. You can also add a NativeScript [theme](https://docs.nativescript.org/ui/theme).
+* [tralves/nativescript-vue-webpack-template](https://github.com/tralves/nativescript-vue-webpack-template/)
 
-#### Installation
+## nativescript-vue/vue-cli-template
 
-You will need to have the [Vue CLI](https://github.com/vuejs/vue-cli) installed, as well as [NativeScript](https://docs.nativescript.org/). Follow NativeScript's [installation guide](https://docs.nativescript.org/start/quick-setup) which delineates the steps you need to take to build NativeScript apps.
+Project link: [https://github.com/nativescript-vue/vue-cli-template](https://github.com/nativescript-vue/vue-cli-template)
 
-#### Installation
+**Features:**
+* `.vue` single file components
+* Vuex &mdash; state management (opt-in)
+* VueRouter &mdash; routing (opt-in) &mdash; **experimental!**
+* NativeScript themes
+
+You can use [Vue CLI](https://github.com/vuejs/vue-cli) to bootstrap your NativeScript-Vue app. Out of the box, this template provides support for [Vuex](https://vuex.vuejs.org/en/), the [Vue Router](https://github.com/vuejs/vue-router), and [NativeScript themes](https://docs.nativescript.org/ui/theme). Originally built by [Pascal Martineau](https://github.com/lewebsimple/), this template is now officially supported for NativeScript-Vue development.
+
+**Usage:**
 
 ```shell
+$ npm install -g @vue/cli @vue/cli-init
 $ vue init nativescript-vue/vue-cli-template <project-name>
+$ cd <project-name>
+$ npm install
+$ npm run watch:android
+$ # or
+$ npm run watch:ios
 ```
 
-*Follow the [project link](https://github.com/nativescript-vue/vue-cli-template) for further instructions.*
+## nativescript-vue/nativescript-vue-template
 
-## Build an app with web/mobile code sharing potential
+Project link: [https://github.com/nativescript-vue/nativescript-vue-template](https://github.com/nativescript-vue/nativescript-vue-template)
 
-#### Project link
+**Features:**
+* Pure JS &mdash; no `.vue` files
+* NativeScript themes
 
-[](https://github.com/nativescript-vue/nativescript-vue-webpack-template)
+This template is the simplest way you can develop your app with NativeScript-Vue. It does not require an extra build step, because the components / application is written in pure `.js` files. 
 
-#### Description
-
-The webpack template leverages webpack to provide the same functionality as the rollup counterpart. It is evolving to support code sharing, i.e., create projects that share as much of the logic as possible between a web build and the native (android/iOS) builds.
-
- Features:
-
-- livereload;
-- .vue Single-File Components;
-- scss imports and scss inside `<style>` tags in .vue files;
-- babel with `es2015` and `stage-2` presets;
-- (soon) native/web code sharing;
-
-#### Installation
+**Usage:**
 
 ```shell
-$ tns create sample-app --template https://github.com/tralves/nativescript-vue-webpack-template
+$ tns create <project-name> --template nativescript-vue-template
+$ cd <project-name>
+$ tns run android
+$ # or
+$ tns run ios
 ```
-
-*Follow the [project link](https://github.com/tralves/nativescript-vue-webpack-template) for further instructions.*
