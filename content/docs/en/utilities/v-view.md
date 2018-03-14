@@ -47,8 +47,8 @@ Without this directive you would have to do something like:
 ```javascript
 {
   mounted() {
-    this.$refs.drawer.drawerContent = this.$refs.drawerContent.nativeView
-    this.$refs.drawer.mainContent = this.$refs.mainContent.nativeView
+    this.$refs.drawer.nativeView.drawerContent = this.$refs.drawerContent.nativeView
+    this.$refs.drawer.nativeView.mainContent = this.$refs.mainContent.nativeView
   }
 }
 ```
