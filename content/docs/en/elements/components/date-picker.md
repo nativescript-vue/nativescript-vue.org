@@ -1,10 +1,10 @@
 ---
 title: DatePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-The DatePicker component allows the user to pick a date.
+`<DatePicker>` is a UI component that lets users select a date from a pre-configured range.
 
 ---
 
@@ -12,7 +12,7 @@ The DatePicker component allows the user to pick a date.
 <DatePicker @loaded="onDatePickerLoaded" @dateChanged="onDateChanged" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+`<DatePicker>` provides two-way data binding using `v-model`.
 
 ```html
 <DatePicker v-model="selectedDate" />
@@ -22,23 +22,23 @@ The DatePicker component allows the user to pick a date.
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `date` | `Date` | The currently displayed date.
-| `minDate` | `Date` | The minimum selectable date.
-| `maxDate` | `Date` | The maximum selectable date.
-| `day` | `Number` | The currently set day.
-| `month` | `Number` | The currently set month.
-| `year` | `Number` | The currently set year.
+| `date` | `Date` | Gets or sets the complete date.
+| `minDate` | `Date` | Gets or sets the earliest possible date to select.
+| `maxDate` | `Date` | Gets or sets the latest possible date to select.
+| `day` | `Number` | Gets or sets the day.
+| `month` | `Number` | Gets or sets the month.
+| `year` | `Number` | Gets or sets the year.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
 | `dateChanged` | Emitted when the selected date changes.
 
-## Native Component
+## Native component
 
 | Android |	iOS |
 |---------|-----|
-| android.widget.DatePicker | UIDatePicker
+| [`android.widget.DatePicker`](https://developer.android.com/reference/android/widget/DatePicker.html) | [`UIDatePicker`](https://developer.apple.com/documentation/uikit/uidatepicker)
