@@ -1,10 +1,10 @@
 ---
 title: ListPicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_picker_.listpicker
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-The ListPicker component allows the user to pick a value from a list.
+`<ListPicker>` is a UI component that lets the user select a value from a pre-configured list.
 
 ---
 
@@ -13,7 +13,7 @@ The ListPicker component allows the user to pick a value from a list.
     @selectedIndexChange="selectedIndexChanged" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+`<ListPicker>` provides two-way data binding using `v-model`.
 
 ```html
 <ListPicker :items="listOfItems" v-model="selectedItem" />
@@ -23,19 +23,19 @@ The ListPicker component allows the user to pick a value from a list.
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `items` | `Array<String>` | An Array of strings that will be displayed as options in the list picker.
-| `selectedIndex` | `Number` | The index of the currently selected item.
+| `items` | `Array<String>` | Gets or sets the items displayed as options in the list picker.
+| `selectedIndex` | `Number` | Gets or sets the index of the currently selected item.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
-| `selectedIndexChange`| Emitted when the selected option (index) of the ListPicker changes.
+| `selectedIndexChange`| Emitted when the currently selected option (index) changes.
 
-## Native Component
+## Native component
 
 | Android | iOS |
 |---------|-----|
-| android.widget.NumberPicker | UIPickerView
+| [`android.widget.NumberPicker`](https://developer.android.com/reference/android/widget/NumberPicker.html) | [`UIPickerView`](https://developer.apple.com/documentation/uikit/uipickerview)
