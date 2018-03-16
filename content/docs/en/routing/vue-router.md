@@ -1,6 +1,6 @@
 ---
 title: Vue Router
-contributors: [eddyverbruggen]
+contributors: [eddyverbruggen, rigor789]
 ---
 
 If [Manual Routing](/en/docs/routing/manual-routing) doesn't cut it for your use-case,
