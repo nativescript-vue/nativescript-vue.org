@@ -10,7 +10,7 @@ UI plugins work almost identically to how you'd use a NativeScript UI plugin in 
 Install the plugin using the NativeScript CLI:
 
 ```shell
-$ tns plugin add nativescript-gradient
+$ npm install --save nativescript-gradient
 ```
 
 Open your app entry file and add the following to the top:
