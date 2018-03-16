@@ -1,35 +1,36 @@
 ---
 title: Button
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 ---
 
-The Button component is used to display a button that can react to a tap event.
+`<Button>` is a UI component that displays a button which reacts to a user gesture.
 
-The interaction is not limited to the tap event only, [read more about all the available gestures in NativeScript in the official documentation](https://docs.nativescript.org/ui/gestures).
+For more information about the available gestures, see [Gestures in the official NativeScript documentation](https://docs.nativescript.org/ui/gestures).
 
 ---
 
 ```html
-<Button text="Button" />
+<Button text="Button" @tap="onButtonTap" />
 ```
 
 [> screenshots for=Button <]
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `text` | `String` | The text to be shown on the button.
-| `textWrap` | `boolean` | Determines whether or not the Button wraps text. Default `false`.
+| `text` | `String` | Sets the label of the button.
+| `textWrap` | `Boolean` | Gets or sets whether the widget wraps the text of the label. Useful for longer labels. Default value is `false`.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
-| `tap` | Emitted when the button is pressed.
+| `tap` | Emitted when the button is tapped.
 
-## Native Component
+## Native component
+
 | Android | iOS |
 |---------|-----|
-| android.widget.Button | UIButton
+| [`android.widget.Button`](https://developer.android.com/reference/android/widget/Button.html) | [`UIButton`](https://developer.apple.com/documentation/uikit/uibutton)
