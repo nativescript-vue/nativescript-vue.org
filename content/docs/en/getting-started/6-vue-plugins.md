@@ -16,7 +16,7 @@ Vuex is Vue.js's state management pattern and library. It serves as a store for 
 Install Vuex as you would normally in your Vue.js app. With npm, for example:
 
 ```shell
-$ npm install vuex --save
+$ npm install --save vuex
 ```
 
 The most recent version of Vuex will be added to your package.json file.
