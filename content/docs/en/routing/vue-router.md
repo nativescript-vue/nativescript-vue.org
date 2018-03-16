@@ -15,7 +15,7 @@ This document documents page routing in more detail, but please note that this f
 ## Installation
 From a command prompt, run:
 ```shell
-$ npm i vue-router --save
+$ npm install --save vue-router
 ```
 
 ## Usage
