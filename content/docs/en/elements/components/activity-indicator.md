@@ -18,7 +18,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 | Name | Type | Description |
 |------|------|-------------|
-| `busy` | `Boolean` | When `true`, the indicator is active.
+| `busy` | `Boolean` | Gets or sets whether the indicator is active. When `true`, the indicator is active.
 
 ## Events
 
