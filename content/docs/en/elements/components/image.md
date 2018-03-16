@@ -1,10 +1,10 @@
 ---
 title: Image
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_image_.image
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-The Image component displays an Image from an [ImageSource](https://docs.nativescript.org/api-reference/modules/_image_source_), or from a URL.
+`<Image>` is a UI component that shows an image from an [ImageSource](https://docs.nativescript.org/api-reference/modules/_image_source_) or from a URL.
 
 ---
 
@@ -26,7 +26,7 @@ The Image component displays an Image from an [ImageSource](https://docs.natives
 <Image src="res://icon" stretch="none" />
 ```
 
-#### Displaying a `base64` encoded image
+#### Displaying a `base64`-encoded image
 
 ```html
 <Image src="data:Image/png;base64,iVBORw..." stretch="none" />
@@ -36,12 +36,16 @@ The Image component displays an Image from an [ImageSource](https://docs.natives
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `src` | `String`, [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_) | Source of the image.
+| `src` | `String` or [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_) | Gets or sets the source of the image as a URL or an image source.
+|`imageSource` | [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_) | Gets or sets the image source of the image.
+| `tintColor` | `Color` | (Style property) Sets a color to tint template images.
+| `stretch` | `Stretch` | (Style property) Gets or sets the way the image is resized to fill its allocated space.<br/>Valid values: `none`, `aspectFill`, `aspectFit`, or `fill`.<br/>For more information, see [Stretch](https://docs.nativescript.org/api-reference/modules/_ui_enums_.stretch). 
+| `loadMode` | | Gets or sets the loading strategy for the images on the local file system.<br/>Valid values: `sync` or `async`.<br/>Default value: `async`.<br/>For more information, see [loadMode](https://docs.nativescript.org/api-reference/classes/_ui_image_.image#loadmode).
 
-## Native Component
+## Native component
 
 | Android | iOS |
 |---------|-----|
-| android.widget.ImageView | UIImageView
+| [`android.widget.ImageView`](https://developer.android.com/reference/android/widget/ImageView.html) | [`UIImageView`](https://developer.apple.com/documentation/uikit/uiimageview)
