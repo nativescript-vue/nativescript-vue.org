@@ -1,12 +1,12 @@
 ---
 title: Label
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_label_.label
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 ---
 
-The Label component is used to display read-only text.
+`<Label>` is a UI component that displays read-only text.
 
-**Note**: This `<Label>` is **not** the same as the HTML `<Label>`.
+**IMPORTANT**: This `<Label>` is **not** the same as the HTML `<Label>`.
 
 ---
 
@@ -16,11 +16,10 @@ The Label component is used to display read-only text.
 
 [> screenshots for=Label <]
 
-### FormattedString
+### Styling the label
 
-If you need to style certain parts of the text differently, you can use a combination of a `FormattedString` and `Span` elements.
+If you need to style parts of the text, you can use a combination of a `FormattedString` and `Span` elements.
 
-Example:
 ```html
 <Label textWrap="true">
   <FormattedString>
@@ -35,13 +34,13 @@ Example:
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `text` | `String` | The text of the label.
-| `textWrap` | `boolean` | Determines whether or not the Label wraps text. Default `false`.
+| `text` | `String` | Gets or sets the text of the label.
+| `textWrap` | `Boolean` | Gets or sets whether the label wraps text.<br/>Default value: `false`.
 
-## Native Component
+## Native component
 
 | Android | iOS |
 |---------|-----|
-| android.widget.TextView | UILabel
+| [`android.widget.TextView`](https://developer.android.com/reference/android/widget/TextView.html) | [`UILabel`](https://developer.apple.com/documentation/uikit/uilabel)
