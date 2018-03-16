@@ -1,10 +1,10 @@
 ---
 title: ActivityIndicator
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicator_.activityindicator
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-The ActivityIndicator component adds a progress indicator that indicates that something is running in the background, prompting the user to pause.
+`<ActivityIndicator>` is a UI component that shows a progress indicator signaling to the user of an operation running in the background.
 
 ---
 
@@ -16,18 +16,18 @@ The ActivityIndicator component adds a progress indicator that indicates that so
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
 | `busy` | `Boolean` | When `true`, the indicator is active.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
 | `busyChange`| Emitted when the `busy` property is changed.
 
-## Native Component
+## Native component
 
 | Android | iOS |
 |---------|-----|
-| android.widget.ProgressBar (indeterminate = true)	| UIActivityIndicatorView
+| [`android.widget.ProgressBar` (indeterminate = true)](https://developer.android.com/reference/android/widget/ProgressBar.html)	| [`UIActivityIndicatorView`](https://developer.apple.com/documentation/uikit/uiactivityindicatorview)
