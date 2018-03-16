@@ -4,7 +4,13 @@ contributors: [eddyverbruggen]
 ---
 
 If [Manual Routing](/en/docs/routing/manual-routing) doesn't cut it for your use-case,
-then you'll be happy to learn [the Vue router](https://router.vuejs.org/en/) is fully supported.
+then you'll be happy to learn [the Vue router](https://router.vuejs.org/en/) is supported.
+
+With the router, there are two types of routing that you can use. Component based routing, and page based routing.
+
+Component based routing is where you specify the `<router-view />` component in your template, and the different routes will get placed into the view, and then when navigating the views will be swapped. This is useful sometimes, but in many cases what you want is to navigate to different pages.
+
+This document documents page routing in more detail, but please note that this feature is unstable at this point, and it is recommended that you stick to manual routing if you require different pages in your application. We are hoping to change this in the near future, and it is a priority on our todo list.
 
 ## Installation
 From a command prompt, run:
