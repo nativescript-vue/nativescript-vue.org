@@ -150,3 +150,77 @@ new Vue({
 
 }).$start();
 ```
+
+## Basic functionality: Add tasks
+
+### Section progress
+
+Here's how your app will look at the start and at the end of this section.
+
+| Initial screen | Tab 1 |
+|-------|-----|
+| ![First tab before changes](/screenshots/ns-playground/two-tabs-tab-1.jpg) | ![First tab after changes](/screenshots/ns-playground/create-input-field.jpg)
+
+### Some NativeScript basics
+
+The layout components let you arrange the various UI widgets of your app. Whenever you need to place more than one UI widget on your app screen, you are likely to use one of the available layout options. The `<StackLayout>` and the `<GridLayout>` are basic but versatile options, letting you position elements vertically or in a table-like layout, respectively. While the 
+`<StackLayout>` handles elements in their natural sequence, the `<GridLayout>` lets you choose the exact positions of your elements in the grid.
+
+### Requirement implementation
+
+#### Creating the input field
+
+Use a `<GridLayout>` to arrange a `<TextField>` and a `<Button>` on the page. The latter two form the input functionality of the app.
+
+1. Drag and drop a `<GridLayout>` component within the `<TabViewItem>` block for the first tab.<br/>The default code creates a colorful table that showcases how to position elements and merge grid cells.
+1. Configure the `<GridLayout>`.
+  * Set the grid to consist of two columns and two rows.
+  * Set the width of the grid to 100% so that it takes the entire width of the screen.
+  * Remove any additional settings for the grid.
+  * Remove all `<Label>` elements within the `<GridLayout>` block.
+1. Drag and drop a `<TextField>` and a `<Button>` component within the `<GridLayout>` block. Move the `<Label>` component for the `<TabViewItem>` within the grid.<br/>The Playground adds JavaScript code to your code for the first time. Note the `data()` and `methods` blocks added above the `template` block. In next implementation steps, you will need to add code to these sections to create some of the app functionality.
+1. Configure the positioning of the elements within the grid.
+  * Set the `<TextField>` to inhabit the first column and the first row.
+  * Set the `<Button>` to inhabit the second column and the first row.
+  * Set the `<Label>` to span across both columns on the second row.
+1. Log newly added tasks in the console and clear the text field after input.
+
+```JavaScript
+new Vue({
+  data() {
+    return {
+      textFieldValue: "",
+    }
+  },
+  methods: {
+    onButtonTap() {
+      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console.
+      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+    },
+  },
+
+
+  template: `
+    <Page class="page">
+      <ActionBar title="My Tasks" class="action-bar" />
+      
+      <TabView height="100%">
+        <TabViewItem title="To Do">
+          <!-- Positions an input field, a button, and some text in a grid. -->
+          <GridLayout columns="2*,*" rows="*,*" width="100%">
+            <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" />
+            <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
+            <Label row="1" colspan="2" text="This tab will list active tasks and will let users add new tasks." textWrap="true" />
+          </GridLayout>
+    
+        </TabViewItem>
+        <TabViewItem title="Completed">
+          <Label text="This tab will list completed tasks for tracking." textWrap="true" />
+        </TabViewItem>
+      </TabView>
+
+    </Page>
+  `,
+
+}).$start();
+```
