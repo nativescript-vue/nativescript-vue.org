@@ -14,7 +14,7 @@ You can set a fixed size for column width and row height or you can create them 
 
 ### Examples
 
-#### A simple grid layout
+#### Grid layout with fixed sizing
 
 The following example creates a simple 2-by-2 grid with fixed column widths and row heights.
 
