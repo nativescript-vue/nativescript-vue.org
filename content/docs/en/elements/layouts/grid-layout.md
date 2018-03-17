@@ -27,7 +27,7 @@ The following example creates a simple 2-by-2 grid with fixed column widths and 
 </GridLayout>
 ```
 
-![Simple GridLayout](/screenshots/simple-grid-layout.jpg)
+![Simple GridLayout](/screenshots/simple-grid-layot.jpg)
 
 #### Grid layout with star sizing
 
