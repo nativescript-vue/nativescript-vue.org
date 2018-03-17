@@ -1,11 +1,11 @@
 ---
 title: TextField
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_text_field_
-contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen]
+contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen, ikoevska]
 
 ---
 
-The TextField component creates an editable single-line box.
+`<TextField>` is an input component that creates an editable single-line box.
 
 ---
 
@@ -13,7 +13,7 @@ The TextField component creates an editable single-line box.
 <TextField :text="textFieldValue" hint="Enter text..." />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+`<TextField>` provdes two-way data binding using `v-model`.
 
 ```html
 <TextField v-model="textFieldValue" />
@@ -23,26 +23,28 @@ The TextField component creates an editable single-line box.
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `text` | `String` | The value of the TextField.
-| `hint` | `String` | The placeholder text.
-| `editable` | `Boolean` | When `true`, the user can edit the value of the TextField.
-| `maxLength` | `Number` | Limits input to a certain number of characters.
-| `secure` | `Boolean` | Hides the entered text when `true`. Default `false`.
-| `keyboardType` | `KeyboardType` | Shows a custom keyboard for easier text input. Can be one of `datetime`, `phone`, `number`, `url`, or `email`.
-| `returnKeyType` | `ReturnKeyType` | The label of the return key. Can be one of `done`, `next`, `go`, `search`, or `send`.
+| `text` | `String` | Gets or sets the value of the field.
+| `hint` | `String` | Gets or sets the placeholder text.
+| `editable` | `Boolean` | When `true`, indicates that the user can edit the value of the field.
+| `maxLength` | `Number` | Limits input to the spcified number of characters.
+| `secure` | `Boolean` | Hides the entered text when `true`. Use this property to create password input fields.<br/>Default value: `false`.
+| `keyboardType` | `KeyboardType` | Shows a custom keyboard for easier text input.<br/>Valid values: `datetime`, `phone`, `number`, `url`, or `email`.
+| `returnKeyType` | `ReturnKeyType` | Gets or sets the label of the return key.<br/>Valid values: `done`, `next`, `go`, `search`, or `send`.
+| `autocorrect` | `Boolean` | Enables or disables autocorrect.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
-| `textChange`| Emitted when the text changes.
-| `returnPress`| Emitted when the return key is pressed.
-| `focus`| Emitted when the textfield is in focus.
-| `blur`| Emitted when the textfield loses focus.
+| `textChange` | Emitted when the text changes.
+| `returnPress` | Emitted when the return key is pressed.
+| `focus` | Emitted when the field is in focus.
+| `blur` | Emitted when the field loses focus.
 
-## Native Component
+## Native component
+
 | Android | iOS |
 |---------|-----|
-| android.widget.EditText | UITextField
+| [`android.widget.EditText`](https://developer.android.com/reference/android/widget/EditText.html) | [`UITextField`](https://developer.apple.com/documentation/uikit/uitextfield)
