@@ -1,10 +1,10 @@
 ---
 title: HtmlView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_html_view_.htmlview
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-The HtmlView component allows you to show static html content without the need of a WebView.
+`<HtmlView>` is a UI component that lets you show static HTML content.
 
 ---
 
@@ -16,12 +16,12 @@ The HtmlView component allows you to show static html content without the need o
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `html` | `String` | The html content to be shown.
+| `html` | `String` | The HTML content to be shown.
 
-## Native Component
+## Native cmponent
 
 | Android | iOS |
 |---------|-----|
-| android.widget.TextView | UILabel
+| [`android.widget.TextView`](https://developer.android.com/reference/android/widget/TextView.html) | [`UITextView`](https://developer.apple.com/documentation/uikit/uitextview)
