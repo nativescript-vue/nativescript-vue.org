@@ -75,7 +75,7 @@ The following example creates a complex grid with responsive design, mixed width
   <Label text="2,2" row="2" col="2" backgroundColor="#43b883"/>
 </GridLayout>
 ```
-<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_complex.svg" />
 
 ## Props
 
