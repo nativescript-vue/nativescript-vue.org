@@ -10,7 +10,13 @@ The grid consists of rows, columns, and cells. A cell can span one or more rows 
 
 By default, the `<GridLayout>` has one column and one row. You can add columns and rows by configuring the `columns` and the `rows` property. In these properties, you need to set the number of columns and rows and their width and height. You set the number of columns by listing their widths, separated by a comma. You set the number of rows by listing their heights, separated by a comma.
 
-You can set a fixed size for column width and row height or you can create them in a responsive manner. See [Props](#props) for more information.
+You can set a fixed size for column width and row height or you can create them in a responsive manner. 
+
+* **An absolute number:** Indicates a fixed size.
+* **auto:** Makes the column as wide as its widest child or makes the row as tall as its tallest child.
+* **\*:** Takes as much space as available after filling all auto and fixed size columns or rows.
+
+See [Props](#props) for more information.
 
 ### Examples
 
@@ -26,8 +32,7 @@ The following example creates a simple 2-by-2 grid with fixed column widths and 
   <Label text="1,1" row="1" col="1" backgroundColor="#43b883"/>
 </GridLayout>
 ```
-
-![Simple GridLayout](/screenshots/simple-grid-layot.jpg)
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout.svg" />
 
 #### Grid layout with star sizing
 
@@ -53,9 +58,9 @@ The following example creates a grid with responsive design, where space is alot
   <Label text="1,1" row="1" col="1" backgroundColor="#43b883"/>
 </GridLayout>
 ```
-<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_fixed_auto.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_complex.svg" />
 
-#### Grid layout with complex sizing and merged cells
+#### Grid layout with mixed sizing and merged cells
 
 The following example creates a complex grid with responsive design, mixed width and height settings, and some merged cells.
 
@@ -76,14 +81,8 @@ The following example creates a complex grid with responsive design, mixed width
 
 | Name | Type | Description |
 |------|------|-------------|
-`columns` | `String` | A string value representing column widths delimited with commas.<br/>Valid values: an absolute number, `auto`, or `*`.
-`rows` | `String` | A string value representing row heights delimited with commas.<br/>Valid values: an absolute number, `auto`, or `*`.
-
-| Value | Description |
-|-------|-------------|
-| An absolute number | Sets a fixed size in pixels.
-| `auto` | Takes as much space as needed by its child elements.
-| `*` | Takes as much space as available after filling all auto and fixed size columns or rows. The space is proportionally divided over all star-sized columns or rows. You can set values such as `3*` and `5*` to indicate a ratio of 3:5 in sizes.
+`columns` | `String` | A string value representing column widths delimited with commas.<br/>Valid values: an absolute number, `auto`, or `*`.<br/>A number indicates an absolute column width. `auto` makes the column as wide as its widest child. `*` makes the column occupy all available horizontal space. The space is proportionally divided over all star-sized columns. You can set values such as `3*` and `5*` to indicate a ratio of 3:5 in sizes.
+`rows` | `String` | A string value representing row heights delimited with commas.<br/>Valid values: an absolute number, `auto`, or `*`.<br/>A number indicates an absolute row height. `auto` makes the row as tall as its tallest child. `*` makes the row occupy all available vertical space. The space is proportionally divided over all star-sized rows. You can set values such as `3*` and `5*` to indicate a ratio of 3:5 in sizes.
 
 ## Additional children props
 
