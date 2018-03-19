@@ -25,7 +25,7 @@ See [Props](#props) for more information.
 The following example creates a simple 2-by-2 grid with fixed column widths and row heights.
 
 ```html
-<GridLayout columns="150, 150" rows="115, 115">
+<GridLayout columns="115, 115" rows="115, 115">
   <Label text="0,0" row="0" col="0" backgroundColor="#43b883"/>
   <Label text="0,1" row="0" col="1" backgroundColor="#1c6b48"/>
   <Label text="1,0" row="1" col="0" backgroundColor="#289062"/>
