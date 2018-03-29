@@ -241,3 +241,76 @@ new Vue({
 
 }).$start();
 ```
+
+## Basic functionality: View tasks
+
+### Section progress
+
+Here's how your app will look at the start and at the end of this section.
+
+| Initial screen | Tab 1 - No tasks | Tab1 - Added tasks |
+|-------|-----|-------------|
+| ![First tab before changes](/screenshots/ns-playground/two-tabs-tab-1.jpg) | ![First tab without any tasks](/screenshots/ns-playground/input-field.jpg) | ![First tab with added tasks](/screenshots/ns-playground/added-tasks.jpg)
+
+### Some NativeScript basics
+
+### Requirement implementation
+
+```JavaScript
+const Vue = require("nativescript-vue");
+
+new Vue({
+  data() {
+    return {
+      todos: [],
+      dones: [],
+      textFieldValue: "",
+    }
+  },
+  methods: {
+    onItemTap: function (args) {
+      this.dones.push(this.todos[args.index]);
+      this.todos.splice(args.index, 1);
+    },
+    onButtonTap() {
+      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
+      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
+      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+    },
+  },
+
+
+  template: `
+    <Page class="page">
+      <ActionBar title="My Tasks" class="action-bar" />
+      
+      <TabView height="100%">
+        <TabViewItem title="To Do">
+          <!-- Positions an input field, a button, and the list of tasks in a grid. -->
+          <StackLayout orientation="vertical" width="100%" height="100%">
+            <GridLayout columns="3*,*" rows="auto" width="100%">
+              <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+              <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
+            </GridLayout>
+            <ListView for="todo in todos" @itemTap="onItemTap">
+              <v-template>
+                <Label :text="todo.name" />
+              </v-template>
+            </ListView>
+          </StackLayout> 
+        </TabViewItem>
+
+        <TabViewItem title="Completed">
+          <ListView for="done in dones" @tap="onDoneTap">
+              <v-template>
+                <Label :text="done.name" />
+              </v-template>
+            </ListView>
+        </TabViewItem>
+      </TabView>
+
+    </Page>
+  `,
+
+}).$start();
+```
