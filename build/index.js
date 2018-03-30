@@ -40,6 +40,7 @@ Metalsmith(cwd)
     localeMap: {
       'en': 'English',
       'ko': '한국어',
+      'pt-BR': 'Português do Brasil',
     },
     home(current) {
       const locale = current.locale || this.defaultLocale;
@@ -112,7 +113,7 @@ Metalsmith(cwd)
   })
   .use(locales({
     defaultLocale: 'en',
-    locales: ['en', 'ko']
+    locales: ['en', 'ko', 'pt-BR']
   }))
   .use(order())
   .use(categories())
