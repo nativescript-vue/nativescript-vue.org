@@ -13,6 +13,10 @@ Install the plugin using the NativeScript CLI:
 $ npm install --save nativescript-gradient
 ```
 
+```shell
+$ npm run clean
+```
+
 Open your app entry file and add the following to the top:
 
 ```js
