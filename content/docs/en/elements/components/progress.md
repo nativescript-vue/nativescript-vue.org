@@ -6,7 +6,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 
 `<Progress>` is a UI component that shows a bar to indicate the progress of a task. 
 
-See also: [ActivityIndicator](activity-indicator).
+See also: [ActivityIndicator](/en/docs/elements/components/activity-indicator).
 
 ---
 
