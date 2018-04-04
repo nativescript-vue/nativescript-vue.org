@@ -218,7 +218,7 @@ new Vue({
             <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
             <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             
-            <ListView row="1" col="0" colspan="2" for="todo in todos" @todoTap="onToDoTap">
+            <ListView row="1" col="0" colspan="2" for="todo in todos" @itemTap="onToDoTap">
               <v-template>
                 <GridLayout columns="3*,*" rows="auto" width="100%">                  
                   <Label row="0" col="0" :text="todo.name" />
