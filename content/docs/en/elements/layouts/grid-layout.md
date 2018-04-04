@@ -90,7 +90,7 @@ When an element is a direct child of the GridLayout, you can work with the follo
 
 | Name | Type | Description |
 |------|------|-------------|
-`row` | `Number` | Specifies the row for this element. Combined with a `column` property, specifies the cell coordinates of the element.<br/>The first row is indicated by `0`.
-`column` | `Number` | Specifies the column for the element. Combined with a `row` property, specifies the cell coordinates of the element.<br/>The first column is indicated by `0`.
+`row` | `Number` | Specifies the row for this element. Combined with a `col` property, specifies the cell coordinates of the element.<br/>The first row is indicated by `0`.
+`col` | `Number` | Specifies the column for the element. Combined with a `row` property, specifies the cell coordinates of the element.<br/>The first column is indicated by `0`.
 `rowSpan` | `Number` | Specifies the number of rows which this element spans across.
 `colSpan` | `Number` | Specifies the number of columns which this element spans across.
