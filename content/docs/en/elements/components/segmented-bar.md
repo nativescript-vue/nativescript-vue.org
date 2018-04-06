@@ -9,11 +9,10 @@ The SegementedBar component gives you a simple way to display a collection of ta
 ---
 ```html
 <SegmentedBar>
-  <SegmentedBarItem title="Item 1"></SegmentedBarItem>
-  <SegmentedBarItem title="Item 2"></SegmentedBarItem>
-  <SegmentedBarItem title="Item 3"></SegmentedBarItem>
-</SegmentedBar>    
-    
+  <SegmentedBarItem title="First" />
+  <SegmentedBarItem title="Second" />
+  <SegmentedBarItem title="Third" />
+</SegmentedBar>
 ```
 
 ```html
