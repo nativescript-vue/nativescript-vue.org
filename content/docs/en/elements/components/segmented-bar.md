@@ -7,6 +7,13 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
 The SegementedBar component gives you a simple way to display a collection of tabbed views for discrete selection.
 
 ---
+```html
+<SegmentedBar>
+  <SegmentedBarItem title="First" />
+  <SegmentedBarItem title="Second" />
+  <SegmentedBarItem title="Third" />
+</SegmentedBar>
+```
 
 ```html
 <SegmentedBar :items="listOfItems" selectedIndex="0"
