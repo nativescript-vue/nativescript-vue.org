@@ -12,10 +12,16 @@ Keep in mind, the routing strategy on mobile is not exactly same as URL and Hist
 
 Router links, as you are familiar in Vue like the following **will not work** in Nativescript
 ```html
+<!-- does not work -->
 <router-link to="/foo">Go to Foo</router-link>
 ```
 
-Read docs for [Vue Router](https://nativescript-vue.org/en/docs/routing/vue-router/) for details
+Instead we have to push to router on click or tap using v-on bind statements like the following
+```html
+<Button class="btn btn-primary" @tap="$router.push('/counter')">Counter</Button>
+```
+
+Read docs for [Vue Router](../../routing/vue-router/) for details
 
 ## Vuex
 
