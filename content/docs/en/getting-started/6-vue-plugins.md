@@ -5,7 +5,17 @@ contributors: [jlooper]
 
 ## vue-router
 
-Coming soon...
+Vue router is a Vue plugin to handle URL based routing.
+An experimental vue-router has been added to Nativescript Vue.
+
+Keep in mind, the routing strategy on mobile is not exactly same as URL and History API used in a browser
+
+Router links, as you are familiar in Vue like the following **will not work** in Nativescript
+```html
+<router-link to="/foo">Go to Foo</router-link>
+```
+
+Read docs for [Vue Router](https://nativescript-vue.org/en/docs/routing/vue-router/) for details
 
 ## Vuex
 
