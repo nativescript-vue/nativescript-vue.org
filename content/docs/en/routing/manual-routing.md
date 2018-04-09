@@ -1,6 +1,6 @@
 ---
 title: Manual Routing
-contributors: [eddyverbruggen]
+contributors: [eddyverbruggen, fartek]
 ---
 
 The easiest way to do routing in NativeScript-Vue is using the convenience functions
@@ -132,3 +132,6 @@ const Detail = {
     </Page>
   `
 };
+```
+
+You can pass properties to the modal by including a second `context` parameter. For example, to pass the variable `id = 14` to the Detail component, create the modal like `this.$showModal(Detail, { context: { id: 14 } });` and inside the modal access it with `this.$options.id`.
