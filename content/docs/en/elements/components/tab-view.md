@@ -18,6 +18,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
   </TabViewItem>
 </TabView>
 ```
+**Note:** TabViewItem only expects one child, try using it with a layout such as StackLayout
 
 [> screenshots for=TabView <]
 
