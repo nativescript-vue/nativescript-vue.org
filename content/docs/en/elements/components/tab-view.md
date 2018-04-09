@@ -1,7 +1,7 @@
 ---
 title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 ---
 
 `<TabView>` is a navigation component that shows content grouped into tabs and lets users switch between tabs.
