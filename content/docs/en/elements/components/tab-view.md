@@ -21,6 +21,20 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 
 [> screenshots for=TabView <]
 
+Add icons to tabs:
+
+```html
+<TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
+  <TabViewItem title="Tab 1" iconSource="~/images/icon.png">
+    <Label text="Content for Tab 1" />
+  </TabViewItem>
+  <TabViewItem title="Tab 2" iconSource="~/images/icon.png">
+    <Label text="Content for Tab 2" />
+  </TabViewItem>
+</TabView>
+```
+**Note:** You can only use images for icons
+
 ## Props
 
 | Name | Type | Description |
