@@ -134,4 +134,40 @@ const Detail = {
 };
 ```
 
-You can pass properties to the modal by including a second `context` parameter. For example, to pass the variable `id = 14` to the Detail component, create the modal like `this.$showModal(Detail, { context: { id: 14 } });` and inside the modal access it with `this.$options.id`.
+#### Passing props to the modal
+Properties can be passed to the modal by including `propsData` inside a second (`context`) parameter when calling `$showModal`.
+
+If we were to pass the the variable `id = 14` to the Detail component from the previous Master/Detail example, we would create the modal like `this.$showModal(Detail, { context: { propsData: { id: 14 }}});`.
+
+The Detail component also has to be updated to be able to accept the given props. This is done by setting the `props` like so:
+```
+const Detail = {
+  template: `
+    <Page>
+      <ActionBar title="Detail"/>
+      <StackLayout>
+        <Button @tap="$modal.close" text="Close" />                    
+      </StackLayout>
+    </Page>
+  `,
+  props: ['id'],
+};
+```
+
+We can now access the props inside the modal just like with any Vue component. In our example with `this.id`.
+
+#### Returning data from the modal
+When calling `$showModal`, a promise is returned which will call the `then` callback when it resolves.
+The actual data is returned by calling `$modal.close` with the return data as the argument.
+
+The Master/Detail example from before now looks like:
+```
+// ... inside Master
+this.$showModal(Detail).then(data => console.log(data)); // Will output 'Foo'
+```
+```
+// ... inside Detail
+<Button @tap="$modal.close('Foo')" text="Close" />    
+```
+
+
