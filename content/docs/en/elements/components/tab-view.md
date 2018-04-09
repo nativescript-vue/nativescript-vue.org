@@ -1,7 +1,7 @@
 ---
 title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 ---
 
 `<TabView>` is a navigation component that shows content grouped into tabs and lets users switch between tabs.
@@ -20,6 +20,20 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 ```
 
 [> screenshots for=TabView <]
+
+#### Adding icons to tabs
+
+```html
+<TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
+  <TabViewItem title="Tab 1" iconSource="~/images/icon.png">
+    <Label text="Content for Tab 1" />
+  </TabViewItem>
+  <TabViewItem title="Tab 2" iconSource="~/images/icon.png">
+    <Label text="Content for Tab 2" />
+  </TabViewItem>
+</TabView>
+```
+**Note:** icon fonts may work in some cases, but generally it is recommended to use images as tab icons.
 
 ## Props
 
