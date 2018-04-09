@@ -21,7 +21,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 
 [> screenshots for=TabView <]
 
-Add icons to tabs:
+#### Adding icons to tabs
 
 ```html
 <TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
@@ -33,7 +33,7 @@ Add icons to tabs:
   </TabViewItem>
 </TabView>
 ```
-**Note:** You can only use images for icons
+**Note:** icon fonts may work in some cases, but generally it is recommended to use images as tab icons.
 
 ## Props
 
