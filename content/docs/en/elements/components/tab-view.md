@@ -47,9 +47,20 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| `selectedIndexChanged` | Emitted when one of the `<TabViewItem>` components is tapped.
+| Name | Attr      | Description |
+|------|-----------|-------------|
+| `tabChange` | @tabChange="onTabViewChange" | Emitted when one of the `<TabViewItem>` components is tapped. 
+
+**Note:** Current event is not identical to the ns library, this is a wrapper event for vue specifically.
+
+```js
+methods:{
+   onTabViewChange(index)
+   {
+      console.log('onTabViewChange', index);
+   }
+}
+```
 
 ## Native component
 
