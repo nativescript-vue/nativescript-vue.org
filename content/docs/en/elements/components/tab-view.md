@@ -47,9 +47,9 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 
 ## Events
 
-| Name | Attr      | Description |
+| Name | example      | Description |
 |------|-----------|-------------|
-| `tabChange` | @tabChange="onTabViewChange" | Emitted when one of the `<TabViewItem>` components is tapped. 
+| `tabChange` | `@tabChange="onTabViewChange"` | Emitted when one of the `<TabViewItem>` components is tapped. 
 
 **Note:** Current event is not identical to the ns library, this is a wrapper event for vue specifically.
 
