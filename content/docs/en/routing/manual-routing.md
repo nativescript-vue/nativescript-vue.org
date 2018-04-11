@@ -169,7 +169,7 @@ this.$showModal(Detail, { context: { propsData: { id: 14 }}});
 
 The Detail component also has to be updated to be able to accept the `id` prop. This is done by defining a `props` option inside the component:
 
-```js
+```vue
 const Detail = {
   props: ['id'],
   template: `
@@ -199,7 +199,7 @@ For example:
 this.$showModal(Detail).then(data => console.log(data)); // Will output 'Foo'
 ```
 
-```js
+```html
 // ... inside Detail
 <Button @tap="$modal.close('Foo')" text="Close" />    
 ```
