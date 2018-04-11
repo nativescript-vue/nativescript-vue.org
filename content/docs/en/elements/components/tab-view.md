@@ -18,7 +18,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
   </TabViewItem>
 </TabView>
 ```
-**Note:** TabViewItem only expects one child, try using it with a layout such as StackLayout
+**Note:** `TabViewItem` currently expects a single child element, in most cases you will want to wrap your content in a layout.
 
 [> screenshots for=TabView <]
 
