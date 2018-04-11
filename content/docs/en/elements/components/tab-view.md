@@ -18,6 +18,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
   </TabViewItem>
 </TabView>
 ```
+**Note:** `TabViewItem` currently expects a single child element, in most cases you will want to wrap your content in a layout.
 
 [> screenshots for=TabView <]
 
