@@ -79,9 +79,7 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
   * Second tab lists completed tasks
 * (In progress) Basic functionality
   * Add tasks: Users can add tasks as text
-  * View tasks
-      * Newly added tasks are listed as active and can be tapped
-      * Completed tasks are listed on a separate tab
+  * View tasks: Newly added tasks are listed as active and can be tapped
   * Complete tasks: Tapping an active task completes it and moves it to the other tab
   * (Coming soon) Delete tasks: Tapping an "X" button removes active or completed tasks
 * (Coming soon) Advanced functionality
@@ -126,6 +124,8 @@ Use the `<TabView>` component to create a two-tab app.
 1. Drag and drop the `<TabView>` component in its place.<br/>The Playground doesn't apply code formatting and doesn't take care of indentation when inserting new components.
 1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).<br/>On an iOS device the default height setting causes the tabs to show somewhere around the middle of the screen.
 1. Change the titles of the `<TabViewItem>` elements and their contents to reflect their purpose.<br/>At this point, text content for the tabs is shown in `<Label>` components with no styling and formatting. Apply the `textWrap="true"` property to the respective `<Label>` components to improve the visualization of the text.
+
+At the end of this stage, your code should resemble this sample:
 
 ```JavaScript
 new Vue({
@@ -191,6 +191,8 @@ Use a `<ListView>` to show tasks below the input field.
 1. Clear the text field after input.
 1. List task name on the screen.
 
+At the end of this stage, your code should resemble this sample:
+
 ```JavaScript
 new Vue({
   data() {
@@ -242,19 +244,42 @@ new Vue({
 }).$start();
 ```
 
-## Basic functionality: View tasks
+## Basic functionality: View and complete tasks
 
 ### Section progress
 
 Here's how your app will look at the start and at the end of this section.
 
-| Initial screen | Tab 1 - No tasks | Tab1 - Added tasks |
-|-------|-----|-------------|
-| ![First tab before changes](/screenshots/ns-playground/two-tabs-tab-1.jpg) | ![First tab without any tasks](/screenshots/ns-playground/input-field.jpg) | ![First tab with added tasks](/screenshots/ns-playground/added-tasks.jpg)
+| Tab 1 - Added tasks | Tab 2 - Completed tasks
+|-----|-------------|
+![First tab with added tasks](/screenshots/ns-playground/added-tasks.jpg) | ![Second tab with completed tasks](/screenshots/ns-playground/completed-tasks.jpg)
 
 ### Some NativeScript basics
 
+This part of the implementation requires only JavaScript and Vue.js knowledge.
+
 ### Requirement implementation
+
+1. In the second `<TabViewItem>` block, drag and drop a `<ListView>` element and clean up its contents.
+1. In the newly added `<ListView>` element show items from an array of completed tasks (`dones`).
+
+  ```HTML
+  <ListView for="done in dones" @tap="onDoneTap">
+    <v-template>
+      <Label :text="done.name" />
+    </v-template>
+  </ListView>
+  ```
+1. Modify the `onItemTap` method to move elements from the `todos` array to the `dones` array. Use `splice` to avoid leaving holes in the array and `unshift` to make sure that recently completed tasks are shown on top.
+
+  ```JavaScript
+  onItemTap: function (args) {
+      this.dones.unshift(this.todos[args.index]);
+      this.todos.splice(args.index, 1);
+    },
+  ```
+
+At the end of this stage, your code should resemble this sample:
 
 ```JavaScript
 const Vue = require("nativescript-vue");
@@ -269,7 +294,7 @@ new Vue({
   },
   methods: {
     onItemTap: function (args) {
-      this.dones.push(this.todos[args.index]);
+      this.dones.unshift(this.todos[args.index]);
       this.todos.splice(args.index, 1);
     },
     onButtonTap() {
