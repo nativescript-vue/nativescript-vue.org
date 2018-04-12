@@ -81,7 +81,7 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
   * Add tasks: Users can add tasks as text
   * View tasks: Newly added tasks are listed as active and can be tapped
   * Complete tasks: Tapping an active task completes it and moves it to the other tab
-  * (Coming soon) Delete tasks: Tapping an "X" button removes active or completed tasks
+  * (Coming soon) Delete tasks: Swiping left removes active or completed tasks
 * (Coming soon) Advanced functionality
   * (Coming soon) Schedule tasks: Users can set deadlines for tasks by picking a date from a calendar widget
   * (Coming soon) Manage tasks in bulk
@@ -294,8 +294,8 @@ new Vue({
   },
   methods: {
     onItemTap: function (args) {
-      this.dones.unshift(this.todos[args.index]);
-      this.todos.splice(args.index, 1);
+      this.dones.unshift(this.todos[args.index]); // Places the tapped active task at the top of the completed tasks.
+      this.todos.splice(args.index, 1); // Removes the tapped active task.
     },
     onButtonTap() {
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
@@ -303,7 +303,6 @@ new Vue({
       this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
     },
   },
-
 
   template: `
     <Page class="page">
