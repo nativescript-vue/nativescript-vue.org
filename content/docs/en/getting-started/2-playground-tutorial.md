@@ -176,15 +176,15 @@ Use a `<ListView>` to show tasks below the input field.
     * Remove background color.
     * Set width and height.
 1. Configure the `<GridLayout>`.
-  * Set the grid to consist of two columns and one row.
-  * Set the width of the grid to 100% so that it takes the entire width of the screen.
-  * Remove any additional settings for the grid.
-  * Remove all `<Label>` elements within the `<GridLayout>` block.
+    * Set the grid to consist of two columns and one row.
+    * Set the width of the grid to 100% so that it takes the entire width of the screen.
+    * Remove any additional settings for the grid.
+    * Remove all `<Label>` elements within the `<GridLayout>` block.
 1. Remove the `<Label>` component for the `<TabViewItem>`. Drag and drop a `<TextField>` and a `<Button>` within the `<GridLayout>` block.<br/>The Playground adds JavaScript code to your code for the first time. Note the `data()` and `methods` blocks added above the `template` block. In next implementation steps, you will need to add code to these sections to create some of the app functionality.
 1. Drag and drop a `<ListView>` below the grid.
 1. Configure the positioning of the elements within the grid.
-  * Set the `<TextField>` to inhabit the first column and the first row.
-  * Set the `<Button>` to inhabit the second column and the first row.
+    * Set the `<TextField>` to inhabit the first column and the first row.
+    * Set the `<Button>` to inhabit the second column and the first row.
 1. Clean up sample code from the `<TextField>` and the `<ListView>`.
 1. Log newly added tasks in the console.
 1. Add newly added tasks into the array of tasks. Use `unshift` to place new items at the top of the page.
