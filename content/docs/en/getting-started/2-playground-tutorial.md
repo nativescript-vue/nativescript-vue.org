@@ -173,10 +173,8 @@ Use a `<ListView>` to show tasks below the input field.
 1. Drag and drop a `<StackLayout>` component within the `<TabViewItem>` block for the first tab.
 1. Drag and drop a `<GridLayout>` component within the `<StackLayout>` block for the first tab.<br/>The default code creates a colorful table that showcases how to position elements and merge grid cells.
 1. Configure the `<StackLayout>`.
-
-  * Remove background color.
-  * Set width and height.
-  
+    * Remove background color.
+    * Set width and height.
 1. Configure the `<GridLayout>`.
   * Set the grid to consist of two columns and one row.
   * Set the width of the grid to 100% so that it takes the entire width of the screen.
