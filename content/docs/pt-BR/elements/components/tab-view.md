@@ -18,6 +18,7 @@ contributors: [alexhiroshi]
   </TabViewItem>
 </TabView>
 ```
+**Nota:** `TabViewItem` atualmente espera um úncio elemento filho, na maioria dos casos você vai querer envolver o seu conteúdo em um layout.
 
 [> screenshots for=TabView <]
 
