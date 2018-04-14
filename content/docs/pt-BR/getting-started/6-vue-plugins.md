@@ -5,7 +5,25 @@ contributors: [alexhiroshi]
 
 ## vue-router
 
-Em breve...
+VueRouter é um plugin Vue para lidar com roteamento baseando em URL.
+Uma integração experimental com vue-router foi adicionada para o Nativescript-Vue.
+
+Lembre-se, a estratégia de roteamento no mobile não é exatamente igual a URL e a API de histórico usadas no navegador.
+
+Links de roteamento, usados no Vue, como o código abaixo, **não funcionam** no NativeScript
+
+```html
+<!-- não funciona -->
+<router-link to="/foo">Go to Foo</router-link>
+```
+
+Em vez disso, temos que trocar para uma nova rota usando o método `route.push`. Por exemplo, quando usamos um botão, podemos usar o evento `tap` para alterar a rota:
+
+```html
+<Button class="btn btn-primary" @tap="$router.push('/counter')">Counter</Button>
+```
+
+Para uma documentação mais aprofundada sobre roteamento, [acesse a página do VueRouter](/pt-BR/docs/routing/vue-router/).
 
 ## Vuex
 
