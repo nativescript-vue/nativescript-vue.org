@@ -13,6 +13,12 @@ Instale o plugin usando o CLI do NativeScript:
 $ npm install --save nativescript-gradient
 ```
 
+**Nota:** Se você estiver usando o [vue-cli-template](/pt-BR/docs/getting-started/templates/#nativescript-vuevue-cli-template), você pode ter que executar o seguinte:
+
+```shell
+$ npm run clean
+```
+
 Abra o arquivo de entrada do seu app e adicione o seguinte no topo:
 
 ```js
