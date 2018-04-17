@@ -27,7 +27,7 @@ Você pode ignorar essa parte, mas sem ela você perderá a maior parte da diver
 
 Mantenha os aplicativos rodando enquanto você experimenta o código.
 
-### The lay of the land
+### Conhecendo o ambiente
 
 ![](/screenshots/ns-playground/playground-layout.png)
 
@@ -90,7 +90,7 @@ Se você quer explorar o [Playground do NativeScript](https://play.nativescript.
 
 > **DICA:** Todas as seções desse tutorial contêm *alguns conceitos básicos do NativeScript* e subseções de *requisitos de implementação*. Você pode pular a subseção básica e ir direto para a implementação para uma abordagem mais prática.
 
-## The bare Vue.js template
+## Template limpo do Vue.js
 
 ![](/screenshots/ns-playground/playground-home.png)
 
@@ -159,7 +159,7 @@ Veja como o seu aplicativo ficará no início e no final dessa seção.
 |-------|-----|-------------|
 | ![First tab before changes](/screenshots/ns-playground/two-tabs-tab-1.jpg) | ![First tab without any tasks](/screenshots/ns-playground/input-field.jpg) | ![First tab with added tasks](/screenshots/ns-playground/added-tasks.jpg)
 
-### Some NativeScript basics
+### Alguns princípios básicos do NativeScript
 
 Os componentes de layout deixam você organizar vários widgets de UI para o seu aplicativo. Sempre que precisar adicionar mais de um widget na tela do aplicativo, provavelmente você use as opções disponíveis de layout. O `<StackLayout>` e `<GridLayout>` são básicos, mas opções versáteis, deixando você posicionar os elementos na vertical ou em um layout semelhante a uma tabela, repectivamente. Enquanto o `<StackLayout>` lida com elementos em sua sequência natural, o `<GridLayout>` deixa você escolher o posicionamento exato dos seus elementos no grid.
 
@@ -177,9 +177,9 @@ Use o `<ListView>` para exibir as tarefas abaixo do campo.
   * Remova todos elementos `<Label>` de dentro do bloco `<GridLayout>`.
 1. Remova o componente `<Label>` do `<TabViewItem>`. Arraste e solte um componente `<TextField>`, um `<Button>` e um `<ListView>` dentro do bloco `<GridLayout>`.<br/>O Playground adicionar código JavaScript no seu código pela primeira vez. Note o bloco `data()` e `methods` adicionado em cima do bloco `template`. Nas próximas etapas de implementação, você precisará adicionar código a essas seções para criar alguma funcionalidade do aplicativo.
 1. Configurar o posicionamento dos elementos dentro do grid.
-  * Set the `<TextField>` to inhabit the first column and the first row.
-  * Set the `<Button>` to inhabit the second column and the first row.
-  * Set the `<ListView>` to span across both columns on the second row.
+  * Defina o `<TextField>` para habilitar a primeira coluna e a primeira linha.
+  * Defina o `<Button>` para habilitar a segunda coluna e a primeira linha.
+  * Defina o `<ListView>` para ocupar ambas as colunas na segunda linha.
 1. Limpe o código de exemplo do `<TextField>` e do `<ListView>`.
 1. Registre as tarefas recentes no console.
 1. Adicione as tarefas recentes no array de tarefas.
@@ -217,7 +217,7 @@ new Vue({
             <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
             <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
 
-            <ListView row="1" col="0" colspan="2" for="todo in todos" @todoTap="onToDoTap">
+            <ListView row="1" col="0" colspan="2" for="todo in todos" @itemTap="onToDoTap">
               <v-template>
                 <GridLayout columns="3*,*" rows="auto" width="100%">
                   <Label row="0" col="0" :text="todo.name" />
