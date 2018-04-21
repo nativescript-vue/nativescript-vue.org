@@ -44,7 +44,9 @@ When you create conditions for `<v-template>`, you can use any valid JavaScript 
 
 ## Using `<ListView>` with `v-for`
 
-When you use `<ListView>` with [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for), you need to use the default `itemTap` event instead of attaching other event listeners. The `itemTap` event contains the index of the tapped item and the actual item from the list.
+`<ListView>` does not loop through list items as you would expect when using a [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) loop. Instead `<ListView>` only creates the necessary views to display the currently visible items on the screen, and reuses the views that are already off-screen when scrolled. This concept is called _view recycling_ and is commonly used in mobile apps to improve performance. 
+
+This is important because **you can't rely on event listeners attached inside the `v-template`**. Instead, you need to use the `itemTap` event which contains the index of the tapped item and the actual item from the list.
 
 ```javascript
 onItemTap(event) {
@@ -71,7 +73,7 @@ onItemTap(event) {
 
 | Name | Description |
 |------|-------------|
-| `refresh()` | Forces the `<ListView>` to reload all its items.
+| `refresh()` | (Coming soon) Forces the `<ListView>` to reload all its items.
 
 ## Native component
 
