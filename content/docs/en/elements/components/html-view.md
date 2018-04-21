@@ -20,7 +20,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 |------|------|-------------|
 | `html` | `String` | The HTML content to be shown.
 
-## Native cmponent
+## Native component
 
 | Android | iOS |
 |---------|-----|
