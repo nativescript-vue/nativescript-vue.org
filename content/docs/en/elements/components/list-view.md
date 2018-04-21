@@ -6,7 +6,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
 
 `<ListView>` is a UI component that shows items in a vertically scrolling list. To set how the list shows its items, you can use the `<v-template>` component.
 
-```
+```html
 <ListView for="item in listOfItems" @itemTap="onItemTap"> // Iterates on every list item and attaches an itemTap event to it.
   <v-template>
     <Label :text="item.text" /> // Shows the list item label in the default color and stye.
