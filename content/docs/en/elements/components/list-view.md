@@ -1,7 +1,7 @@
 ---
 title: ListView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_view_.listview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 ---
 
 `<ListView>` is a UI component that shows items in a vertically scrolling list. To set how the list shows its items, you can use the `<v-template>` component.
