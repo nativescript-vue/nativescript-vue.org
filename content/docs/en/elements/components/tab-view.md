@@ -49,7 +49,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 
 | Name | Description |
 |------|-------------|
-| `selectedIndexChanged` | Emitted when one of the `<TabViewItem>` components is tapped.
+| `tabChange` | Emitted when one of the `<TabViewItem>` components is tapped.
 
 ## Native component
 
