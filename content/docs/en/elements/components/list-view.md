@@ -1,56 +1,86 @@
 ---
 title: ListView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_view_.listview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 ---
 
-The ListView component shows items in a vertically scrolling list. You can set different `v-template`'s to specify how each item in the list should be displayed.
-
----
+`<ListView>` is a UI component that shows items in a vertically scrolling list. To set how the list shows individual items, you can use the `<v-template>` component.
 
 ```html
 <ListView for="item in listOfItems" @itemTap="onItemTap">
   <v-template>
+    <!-- Shows the list item label in the default color and stye. -->
     <Label :text="item.text" />
+  </v-template>
+</ListView>
+```
+
+---
+
+[> screenshots for=ListView <]
+
+## Using `<ListView>` with multiple `<v-template>` blocks
+
+The [`v-template` component](/en/docs/utilities/v-template) is used to define how each list item is shown on the screen. 
+
+If you need to visualize one or more list items differently than the rest, you can enclose them in additional `<v-template>` blocks and use conditions. You can have as many `<v-template>` blocks as needed within one `<ListView>`.
+
+```html
+<ListView for="item in listOfItems" @itemTap="onItemTap"> 
+  <v-template>
+    <Label :text="item.text" /> 
   </v-template>
 
   <v-template if="$odd">
+    <!-- For items with an odd index, shows the label in red. -->
     <Label :text="item.text" color="red" />
   </v-template>
 </ListView>
 ```
 
-In the above example the second template will be used if the item's index is odd.
-For convenience you can use `$index`, `$even` and `$odd` helpers, but as needed you can use any valid javascript expression for a `v-template`'s `if` condition.
+When you create conditions for `<v-template>`, you can use any valid JavaScript expression or any of the following helpers:
 
-To learn more about the `v-template` component, head over to the [`v-template` documentation](/en/docs/utilities/v-template).
+* `$index`&mdash; the index of the current item
+* `$even`&mdash;`true` if the index of the current item is even
+* `$odd`&mdash;`true` if the index of the current item is odd
 
-The ListView does not loop through the items as you would expect when using a [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) loop. Instead it only creates the necessary views to display the currently visible items on the screen, and when scrolling it reuses the views that are already off-screen. This concept is called view recycling, and is commonly used in mobile applications to improve performance. This is important because you can't rely on event listeners attached inside the `v-template`, instead you should use the `itemTap` event which contains the index of the tapped item, as well as the actual item from the list.
+## An important note about `v-for`
 
-```js
+`<ListView>` does not loop through list items as you would expect when using a [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) loop. Instead `<ListView>` only creates the necessary views to display the currently visible items on the screen, and reuses the views that are already off-screen when scrolled. This concept is called _view recycling_ and is commonly used in mobile apps to improve performance. 
+
+This is important because **you can't rely on event listeners attached inside the `v-template`**. Instead, you need to use the `itemTap` event which contains the index of the tapped item and the actual item from the list.
+
+```javascript
 onItemTap(event) {
   console.log(event.index)
   console.log(event.item)
 }
 ```
 
-[> screenshots for=ListView <]
+**Note:** if a `v-for` is used on a `<ListView>` a warning will be printed to the console, and it will be converted to the `for` property.
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `for` | `String` | The expression for iterating through the items, examples:<br>- `item in listOfItems`<br>- `(item, index) in listOfItems`<br>- `item in [1, 2, 3, 4, 5]`
-| `items` | `Array<any>` | An array of items to be displayed in the ListView. **Note**: This property is only for advanced use, we recommend using the `for` property in most cases.
-| `separatorColor` | `Color` | Set the separator line color. Set to `transparent` to remove it.
+| `for` | `String` | Provides the expression for iterating through the items.<br/>For example: <ul><li><code>item in listOfItems</code></li><li><code>(item, index) in listOfItems</code></li><li><code>item in [1, 2, 3, 4, 5]</code></li></ul>
+| `items` | `Array<any>` | An array of items to be shown in the `<ListView>`.<br/>**This property is only for advanced use. Use the `for` property instead.**
+| `separatorColor` | `Color` | Sets the separator line color. Set to `transparent` to remove it.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
-| `itemTap`| Emitted when an item in the ListView has been tapped. To access the tapped item use `event.item`.
+| `itemTap`| Emitted when an item in the `<ListView>` is tapped. To access the tapped item, use `event.item`.
 
-## Native Component
+## Methods
+
+| Name | Description |
+|------|-------------|
+| `refresh()` | (Coming soon) Forces the `<ListView>` to reload all its items.
+
+## Native component
+
 | Android | iOS |
 |---------|-----|
-| android.widget.ListView | UITableView
+| [`android.widget.ListView`](https://developer.android.com/reference/android/widget/ListView.html) | [`UITableView`](https://developer.apple.com/documentation/uikit/uitableview)
