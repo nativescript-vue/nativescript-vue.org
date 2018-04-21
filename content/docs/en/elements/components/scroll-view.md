@@ -1,10 +1,10 @@
 ---
 title: ScrollView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_scroll_view_.scrollview
-contributors: [eddyverbruggen]
+contributors: [eddyverbruggen,ikoevska]
 ---
 
-The ScrollView component allows you to show scrollable content.
+`<ScrollView>` is a UI component that shows a scrollable content area. Content can be scrolled vertically or horizontally.
 
 ---
 
@@ -26,10 +26,17 @@ The ScrollView component allows you to show scrollable content.
 
 | name | type | description |
 |------|------|-------------|
-| `orientation` | `String` | Either `horizontal` or `vertical`. Default `vertical`.
+| `orientation` | `String` | Gets or sets the direction in which the content can be scrolled: `horizontal` or `vertical`.<br/>Default value: `vertical`.
+| `scrollBarIndicatorVisible` | `Boolean` | Specifies if the scrollbar is visible.<br/>Default value: `true`.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
-| `scroll`| Emitted when a scroll event occurs
+| `scroll` | Emitted when a scroll event occurs.
+
+## Native component
+
+| Android | iOS |
+|---------|-----|
+| [`android.view`](https://developer.android.com/reference/android/view/View.html) | [`UIScrollView`](https://developer.apple.com/documentation/uikit/uiscrollview)
