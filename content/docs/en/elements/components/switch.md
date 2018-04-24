@@ -1,11 +1,12 @@
 ---
 title: Switch
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_switch_.switch
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-The Switch component allows the user to toggle between two states. 
-The default state is `false` or "off".
+`<Switch>` is a UI component that lets users toggle between two states.
+
+The default state is `false` or OFF.
 
 ---
 
@@ -13,7 +14,7 @@ The default state is `false` or "off".
 <Switch checked="true" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+`<Switch>`provides two-way data binding using `v-model`:
 
 ```html
 <Switch v-model="itemEnabled" />
@@ -23,17 +24,18 @@ The default state is `false` or "off".
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `checked` | `Boolean` | A boolean value representing the state of the switch.
+| `checked` | `Boolean` | Gets or sets the value of the switch selection.<br/>Default value: `false`.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
-| `checkedChange`| Emitted when switch checked value changes.
+| `checkedChange`| Emitted when the switch selection changes.
 
-## Native Component
+## Native component
+
 | Android | iOS |
 |---------|-----|
-| android.widget.Switch | UISwitch
+| [`android.widget.Switch`](https://developer.android.com/reference/android/widget/Switch.html) | [`UISwitch`](https://developer.apple.com/documentation/uikit/uiswitch)
