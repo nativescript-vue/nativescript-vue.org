@@ -7,6 +7,8 @@ contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen, ikoevs
 
 `<TextField>` is an input component that creates an editable single-line box.
 
+`<TextField>` extends [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) and [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase) which provide properties and events.
+
 ---
 
 ```html
