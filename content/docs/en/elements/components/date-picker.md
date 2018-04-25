@@ -6,6 +6,8 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 `<DatePicker>` is a UI component that lets users select a date from a pre-configured range.
 
+See also: [TimePicker](/en/docs/elements/components/time-picker).
+
 ---
 
 ```html
