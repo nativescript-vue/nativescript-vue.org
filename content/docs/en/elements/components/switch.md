@@ -14,7 +14,7 @@ The default state is `false` or OFF.
 <Switch checked="true" />
 ```
 
-`<Switch>`provides two-way data binding using `v-model`:
+`<Switch>`provides two-way data binding using `v-model`.
 
 ```html
 <Switch v-model="itemEnabled" />
