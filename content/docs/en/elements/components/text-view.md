@@ -1,11 +1,12 @@
 ---
 title: TextView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_text_view_.textview
-contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen]
+contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen, ikoevska]
 ---
 
-The TextView component represents an editable multi-line box.
-The component can also be used to show any content readonly by setting the `editable` property to `false`.
+`<TextView>` is a UI component that shows an editable or a read-only multi-line text container. You can use it to let users type large text in your app or to show longer, multi-line text on the screen.
+
+`<TextView>` extends [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) and [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase) which provide properties and events.
 
 ---
 
@@ -13,13 +14,15 @@ The component can also be used to show any content readonly by setting the `edit
 <TextView text="Multi\nLine\nText" />
 ```
 
-**Note**: This component supports two-way data binding using `v-model`:
+`<TextView>` provides two-way data binding using `v-model`.
 
 ```html
 <TextView v-model="textViewValue" />
 ```
 
 ### Displaying multi-line text with different styling
+
+To apply multiple styles to the text in your `<TextView>`, you can use `<FormattedString>`
 
 ```html
 <TextView editable="false">
@@ -37,25 +40,27 @@ The component can also be used to show any content readonly by setting the `edit
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `text` | `String` | The value of the TextView.
-| `hint` | `String` | The placeholder text.
-| `editable` | `Boolean` | When `true`, the user can edit the value of the TextView.
-| `maxLength` | `Number` | Limits input to a certain number of characters.
-| `keyboardType` | `KeyboardType` | Shows a custom keyboard for easier text input. Can be one of `datetime`, `phone`, `number`, `url`, or `email`.
-| `returnKeyType` | `ReturnKeyType` | The label of the return key. Can be one of `done`, `next`, `go`, `search`, or `send`.
+| `text` | `String` | Gets or sets the value of the component.
+| `hint` | `String` | Gets or sets the placeholder text when the component is editable.
+| `editable` | `Boolean` | When `true`, indicates that the user can edit the contents of the container.
+| `maxLength` | `Number` | Sets the maximum number of characters that can be entered in the container.
+| `keyboardType` | `KeyboardType` | Shows a custom keyboard for easier text input.<br/>Valid values: `datetime`, `phone`, `number`, `url`, or `email`.
+| `returnKeyType` | Gets or sets the label of the return key.<br/>Valid values: `done`, `next`, `go`, `search`, or `send`.
+| `autocorrect` | `Boolean` | Enables or disables autocorrect.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
 | `textChange`| Emitted when the text changes.
 | `returnPress`| Emitted when the return key is pressed.
-| `focus`| Emitted when the textview is in focus.
-| `blur`| Emitted when the textview leaves focus.
+| `focus`| Emitted when the container is in focus.
+| `blur`| Emitted when the container loses focus.
 
-## Native Component
+## Native component
+
 | Android | iOS |
 |---------|-----|
-| android.widget.EditText | UITextView
+| [`android.widget.EditText`](https://developer.android.com/reference/android/widget/EditText.html) | [`UITextView`](https://developer.apple.com/documentation/uikit/uitextview)
