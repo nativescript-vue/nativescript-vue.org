@@ -24,7 +24,7 @@ See also: [HtmlView](/en/docs/elements/components/html-view).
 
 | Name | Type | Description |
 |------|------|-------------|
-| `src` | `String` | Gets or sets the the displayed web content.<br/>Valid values: an absolute URL, the path to a local HTML file, or static HTML.
+| `src` | `String` | Gets or sets the displayed web content.<br/>Valid values: an absolute URL, the path to a local HTML file, or static HTML.
 
 ## Events
 
