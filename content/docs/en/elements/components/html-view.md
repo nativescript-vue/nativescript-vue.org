@@ -6,6 +6,8 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 `<HtmlView>` is a UI component that lets you show static HTML content.
 
+See also: [WebView](/en/docs/elements/components/web-view).
+
 ---
 
 ```html
