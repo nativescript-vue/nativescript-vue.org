@@ -4,8 +4,9 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_switch_.switch
 contributors: [alexhiroshi]
 ---
 
-O componente Switch permite o usuário escolher entre dois estados.
-O estado padrão é `false` ou "off".
+`<Switch>` é um componente de UI que permite o usuário escolher entre dois estados.
+
+O estado padrão é `false` ou OFF.
 
 ---
 
@@ -13,7 +14,7 @@ O estado padrão é `false` ou "off".
 <Switch checked="true" />
 ```
 
-**Nota**: Esse componente suporta two-way data binding usando `v-model`:
+`<Switch>` suporta two-way data binding usando `v-model`:
 
 ```html
 <Switch v-model="itemEnabled" />
@@ -25,7 +26,7 @@ O estado padrão é `false` ou "off".
 
 | nome | tipo | descrição |
 |------|------|-------------|
-| `checked` | `Boolean` | Valor boleano representando o estado do switch.
+| `checked` | `Boolean` | Obtém ou define o valor do estado do switch.<br/>Valor padrão: `false`.
 
 ## Eventos
 
@@ -36,4 +37,4 @@ O estado padrão é `false` ou "off".
 ## Componente Nativo
 | Android | iOS |
 |---------|-----|
-| android.widget.Switch | UISwitch
+[`android.widget.Switch`](https://developer.android.com/reference/android/widget/Switch.html) | [`UISwitch`](https://developer.apple.com/documentation/uikit/uiswitch)
