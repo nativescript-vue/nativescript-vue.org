@@ -1,6 +1,6 @@
 ---
 title: Playground Tutorial
-contributors: [ikoevska, rigor789]
+contributors: [ikoevska, rigor789, hines-sharrod]
 ---
 
 The [NativeScript Playground](https://play.nativescript.org?template=play-vue) is a place in the cloud where you can just play around with NativeScript and Vue.js from your browser until you figure out the basics. Fire the link and start dragging and dropping component code around the place.
