@@ -21,28 +21,15 @@ alert('Your message')
 })
 ```
 
-## Example: Button shows alert
+## Configure dialog options
 
 ```JavaScript
-onst Vue = require("nativescript-vue");
-
-new Vue({
-  methods: {
-    onButtonTap() {
-      alert('Your message')
-        .then(() => {
-          console.log("Aler dialog closed.")
-        })
-    },
-  },
-
-
-  template: `
-    <Page class="page">
-      <Button text="Show Alert Dialog" @tap="onButtonTap" />
-    </Page>
-  `,
-
-}).$start();
+alert({
+    title: "Your title",
+    message: "Your message",
+    okButtonText: "Your OK button text"
+}).then(function () {
+    console.log("Alert dialog closed");
+});
 ```
 [> screenshots for=AlertDialog <]
