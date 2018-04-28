@@ -4,23 +4,19 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-`dialogs.action()` is a dialog component that lets you show a list of selectable options and a cancellation button.
+`dialogs.action()` shows a list of selectable options and a cancellation button. Use it to let the user choose between options or dismiss the selection.
 
 ---
 
 ## Basic use
 
-```JavaScript
-const dialogs = require('tns-core-modules/ui/dialogs')
+The `alert()` method is available globally. You can call it anywhere in your app.
 
-module.exports = {
-  mounted() {
-    dialogs.action("Your message", "Cancel button text", ["Option1", "Option2"]))
-    .then(result => {
-      console.log(result);
-    })
-  }
-}
+```JavaScript
+action("Your message", "Cancel button text", ["Option1", "Option2"]))
+.then(result => {
+  console.log(result);
+  })
 ```
 
 ## Example: Button shows dialog
@@ -28,12 +24,10 @@ module.exports = {
 ```JavaScript
 const Vue = require("nativescript-vue");
 
-const dialogs = require('tns-core-modules/ui/dialogs') //Enables the dialogs module
-
 new Vue({
   methods: {
     onButtonTap() {
-      dialogs.action('Choose one!', 'No, thanks!', ['Cheese', 'Wine', 'Chocolate'])
+      action('Your message', 'Cancel Button', ['Option 1', 'Option 2', 'Option 3'])
         .then(result => {
           console.log(result);
         })
@@ -43,7 +37,7 @@ new Vue({
 
   template: `
     <Page class="page">
-      <Button text="Click Me!" @tap="onButtonTap" />
+      <Button text="Show Action Dialog" @tap="onButtonTap" />
     </Page>
   `,
 
