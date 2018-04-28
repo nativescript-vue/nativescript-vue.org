@@ -10,7 +10,7 @@ The method is part of the [`dialogs`](https://docs.nativescript.org/api-referenc
 
 ---
 
-## Base use
+## Basic use
 
 The `confirm()` method is available globally. You can call it anywhere in your app.
 
