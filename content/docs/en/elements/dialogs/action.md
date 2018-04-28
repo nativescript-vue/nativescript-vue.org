@@ -4,23 +4,36 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-`<ActionDialog>` is a dialog component that lets you show a list of selectable options and a cancel button.
+`<ActionDialog>` is a dialog component that lets you show a list of selectable options and a cancellation button.
 
 ---
 
-## 
+## Basic use
 
-## Example: 
+```JavaScript
+const dialogs = require('tns-core-modules/ui/dialogs')
 
-```javascript
+module.exports = {
+  mounted() {
+    dialogs.action("Your message", "Cancel button text", ["Option1", "Option2"]))
+    .then(result => {
+      console.log(result);
+    })
+  }
+}
+```
+
+## Example: Button shows dialog
+
+```JavaScript
 const Vue = require("nativescript-vue");
 
-const dialogs = require('tns-core-modules/ui/dialogs') //Enables your app to use the dialogs module
+const dialogs = require('tns-core-modules/ui/dialogs') //Enables the dialogs module
 
 new Vue({
   methods: {
     onButtonTap() {
-      dialogs.action('Choose one!', 'No, thanks!', ['cheese', 'wine', 'chocolate'])
+      dialogs.action('Choose one!', 'No, thanks!', ['Cheese', 'Wine', 'Chocolate'])
         .then(result => {
           console.log(result);
         })
@@ -38,11 +51,3 @@ new Vue({
 ```
 
 [> screenshots for=ActionDialog <]
-
-## Parameters
-
-| Parameter | Type | Description |
-|------|------|-------------|
-| message | `String` | Sets the call-to-action text to display in the dialog. |
-| cancelButtonText | `String` | Sets the text of the cancel button. |
-| actions | `Array(String)` | Sets the available options to select.
