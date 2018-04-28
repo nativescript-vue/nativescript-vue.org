@@ -225,7 +225,7 @@ new Vue({
               <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height=""> <!-- Make sure to set a height or your list will not show on iOS. -->
+            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
               <v-template>
                 <Label :text="todo.name" />
               </v-template>
@@ -316,7 +316,7 @@ new Vue({
               <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height=""> <!-- Make sure to set a height or your list will not show on iOS. -->
+            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
               <v-template>
                 <Label :text="todo.name" />
               </v-template>
@@ -325,7 +325,7 @@ new Vue({
         </TabViewItem>
 
         <TabViewItem title="Completed">
-          <ListView for="done in dones" @tap="onDoneTap" height=""> <!-- Make sure to set a height or your list will not show on iOS. -->
+          <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
               <v-template>
                 <Label :text="done.name" />
               </v-template>
