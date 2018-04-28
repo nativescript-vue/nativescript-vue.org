@@ -185,7 +185,7 @@ Use a `<ListView>` to show tasks below the input field.
 1. Configure the positioning of the elements within the grid.
     * Set the `<TextField>` to inhabit the first column and the first row.
     * Set the `<Button>` to inhabit the second column and the first row.
-1. Clean up sample code from the `<TextField>` and the `<ListView>` but make sure to set a height for the `<ListView>`.
+1. Clean up sample code from the `<TextField>` and the `<ListView>`. Set a height for the `<ListView>`.
 1. Log newly added tasks in the console.
 1. Add newly added tasks into the array of tasks. Use `unshift` to place new items at the top of the page.
 1. Clear the text field after input.
@@ -225,7 +225,7 @@ new Vue({
               <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height=""> <!-- Make sure to set a height or your list will not show -->
+            <ListView for="todo in todos" @itemTap="onItemTap" height=""> <!-- Make sure to set a height or your list will not show on iOS. -->
               <v-template>
                 <Label :text="todo.name" />
               </v-template>
@@ -260,11 +260,11 @@ This part of the implementation requires only JavaScript and Vue.js knowledge.
 
 ### Requirement implementation
 
-1. In the second `<TabViewItem>` block, drag and drop a `<ListView>` element and clean up its contents.
+1. In the second `<TabViewItem>` block, drag and drop a `<ListView>` element, clean up its contents and set a height for it.
 1. In the newly added `<ListView>` element show items from an array of completed tasks (`dones`).
 
   ```HTML
-  <ListView for="done in dones" @tap="onDoneTap">
+  <ListView for="done in dones" @tap="onDoneTap" height=""> <!-- Make sure to set a height or your list will not show on iOS. -->
     <v-template>
       <Label :text="done.name" />
     </v-template>
@@ -316,7 +316,7 @@ new Vue({
               <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap">
+            <ListView for="todo in todos" @itemTap="onItemTap" height=""> <!-- Make sure to set a height or your list will not show on iOS. -->
               <v-template>
                 <Label :text="todo.name" />
               </v-template>
@@ -325,7 +325,7 @@ new Vue({
         </TabViewItem>
 
         <TabViewItem title="Completed">
-          <ListView for="done in dones" @tap="onDoneTap">
+          <ListView for="done in dones" @tap="onDoneTap" height=""> <!-- Make sure to set a height or your list will not show on iOS. -->
               <v-template>
                 <Label :text="done.name" />
               </v-template>
