@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-`<ActionDialog>` is a dialog component that lets you show a list of selectable options and a cancellation button.
+`dialogs.action()` is a dialog component that lets you show a list of selectable options and a cancellation button.
 
 ---
 
