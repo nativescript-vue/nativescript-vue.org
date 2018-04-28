@@ -20,29 +20,4 @@ action("Your message", "Cancel button text", ["Option1", "Option2"]))
   })
 ```
 
-## Example: Button shows dialog
-
-```JavaScript
-const Vue = require("nativescript-vue");
-
-new Vue({
-  methods: {
-    onButtonTap() {
-      action('Your message', 'Cancel Button', ['Option 1', 'Option 2', 'Option 3'])
-        .then(result => {
-          console.log(result);
-        })
-    },
-  },
-
-
-  template: `
-    <Page class="page">
-      <Button text="Show Action Dialog" @tap="onButtonTap" />
-    </Page>
-  `,
-
-}).$start();
-```
-
 [> screenshots for=ActionDialog <]
