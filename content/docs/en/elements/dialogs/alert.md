@@ -4,32 +4,21 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#alert
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-`dialogs.alert()` shows a message and an OK button. Use it to show information and notifications that do not require an action from the user.
+The `alert()` method shows a message and an OK button. Use it to show information and notifications that do not require an action from the user.
+
+The method is part of the [`dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_) module. See also: [Dialogs](https://docs.nativescript.org/ui/dialogs).
 
 ---
 
-**TIP:** The `alert()` method is available globally. You can call it anywhere in your app without importing it from the `dialogs` module first.
+## Basic use
+
+The `alert()` method is available globally. You can call it anywhere in your app.
 
 ```javascript
-alert('Hello!')
+alert('Your message')
 .then(() => {
-  console.log("Dialog closed")
+  console.log("Alert dialog closed.")
 })
-```
-
-## Basic usage
-
-```JavaScript
-const dialogs = require('tns-core-modules/ui/dialogs')
-
-module.exports = {
-  mounted() {
-    dialogs.alert('Your message')
-    .then(() => {
-      console.log("Dialog closed")
-    })
-  }
-}
 ```
 
 ## Example: Button shows alert
@@ -40,9 +29,9 @@ onst Vue = require("nativescript-vue");
 new Vue({
   methods: {
     onButtonTap() {
-      alert('Hello!')
+      alert('Your message')
         .then(() => {
-          console.log("Dialog closed.")
+          console.log("Aler dialog closed.")
         })
     },
   },
@@ -50,7 +39,7 @@ new Vue({
 
   template: `
     <Page class="page">
-      <Button text="Show Alert" @tap="onButtonTap" />
+      <Button text="Show Alert Dialog" @tap="onButtonTap" />
     </Page>
   `,
 
