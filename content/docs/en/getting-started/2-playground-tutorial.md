@@ -233,8 +233,8 @@ new Vue({
         <TabViewItem title="To Do">
           <!-- Positions an input field, a button, and the list of tasks in a grid. -->
           <StackLayout orientation="vertical" width="100%" height="100%">
-            <GridLayout columns="3*,*" rows="auto" width="100%">
-              <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <GridLayout columns="2*,*" rows="auto" width="100%">
+              <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
             <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
@@ -355,8 +355,8 @@ new Vue({
         <TabViewItem title="To Do">
           <!-- Positions an input field, a button, and the list of tasks in a grid. -->
           <StackLayout orientation="vertical" width="100%" height="100%">
-            <GridLayout columns="3*,*" rows="auto" width="100%">
-              <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <GridLayout columns="2*,*" rows="auto" width="100%">
+              <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
             <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
@@ -487,8 +487,8 @@ new Vue({
         <TabViewItem title="To Do">
           <!-- Positions an input field, a button, and the list of tasks in a grid. -->
           <StackLayout orientation="vertical" width="100%" height="100%">
-            <GridLayout columns="3*,*" rows="auto" width="100%">
-              <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <GridLayout columns="2*,*" rows="auto" width="100%">
+              <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
             <ListView for="todo in todos" @itemTap="onItemTap" height="100%" > <!-- Make sure to set a height or your list will not show on iOS. -->
@@ -534,3 +534,23 @@ See also: [Styling](https://docs.nativescript.org/ui/styling).
 
 ### Requirement implementation
 
+```CSS
+button{
+    font-size: 20;
+    color: white;
+    background-color: #53ba82;
+    margin-top: 5;
+    margin-bottom: 5;
+    margin-right: 5;
+    margin-left: 5;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+TextField{
+    font-size: 20;
+    color: #53ba82;
+}
+
+
+```
