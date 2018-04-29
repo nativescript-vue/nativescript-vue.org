@@ -521,7 +521,7 @@ new Vue({
 Here's how your app will look at the start and at the end of this section.
 
 | Tab 1 - No style | Tab 1 - Styled | Tab 1 - Styled |
-|-----|-------------|
+|-----|-------------|----|
 | ![Unstyled input](/screenshots/ns-playground/input-field.jpg) | ![Styled button](/screenshots/ns-playground/styled-button.jpg) | ![Styled input](/screenshots/ns-playground/styled-input.jpg) |
 
 ### Some NativeScript basics
