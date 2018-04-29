@@ -520,37 +520,52 @@ new Vue({
 
 Here's how your app will look at the start and at the end of this section.
 
-| Tab 1 - No style | Tab 1 - Styled | 
+| Tab 1 - No style | Tab 1 - Styled | Tab 1 - Styled |
 |-----|-------------|
-| ![Unstyled input](/screenshots/ns-playground/?????????.jpg) | ![Styled input](/screenshots/ns-playground/???????.jpg) |
+| ![Unstyled input](/screenshots/ns-playground/input-field.jpg) | ![Styled button](/screenshots/ns-playground/styled-button.jpg) | ![Styled input](/screenshots/ns-playground/styled-input.jpg) |
 
 ### Some NativeScript basics
 
-Styling in NativeScript is usually done through CSS. When you work with NativeScript and Vue.js, you can use application-wide CSS or inline CSS to style your app. Application-wide CSS is handled in `app.css` in the root of your project.
+When you work with NativeScript and Vue.js, you can use application-wide CSS or inline CSS to style your app. Application-wide CSS is applied first and is handled in `app.css` in the root of your project. See also: [Styling](https://docs.nativescript.org/ui/styling).
 
-Application-wide CSS is applied first.
-
-See also: [Styling](https://docs.nativescript.org/ui/styling).
+With type selectors, you can select a UI component and apply styling to it. To select a type, use the component name as provided in the code. For example, to select the tab view, use `TabView`.
 
 ### Requirement implementation
 
-```CSS
-button{
-    font-size: 20;
-    color: white;
-    background-color: #53ba82;
-    margin-top: 5;
-    margin-bottom: 5;
-    margin-right: 5;
-    margin-left: 5;
-    font-weight: bold;
-    border-radius: 25px;
-}
+#### Input field
 
+In `app.css`, change the font size and the color and the margins around the `<TextField>`.
+
+```CSS
 TextField{
     font-size: 20;
     color: #53ba82;
+    margin-top: 10;
+    margin-bottom: 10;
+    margin-right: 5;
+    margin-left: 10;
 }
-
-
 ```
+
+#### Button
+
+1. In `app.js` on line 63, add an `id` for the button.
+
+  ```HTML
+  <Button id="add-task-button" row="0" col="1" text="Add task" @tap="onButtonTap" />
+  ```
+1. In `app.css`, create a style for the button. Modify the style to create a colorful button with rounded corners.
+
+  ```CSS
+  #add-task-button{
+    font-size: 20;
+    font-weight: bold;
+    color: white;
+    background-color: #53ba82;
+    margin-top: 10;
+    margin-bottom: 10;
+    margin-right: 10;
+    margin-left: 5;
+    border-radius: 20px;
+  }
+  ```
