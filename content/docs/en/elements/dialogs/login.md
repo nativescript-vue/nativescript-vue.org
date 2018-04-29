@@ -6,7 +6,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 The `login()` method shows a dialog where the user can provide login credentials.
 
-The method is part of the [`dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_) module. See also: [Dialogs](https://docs.nativescript.org/ui/dialogs).
+The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 
@@ -15,8 +15,8 @@ The method is part of the [`dialogs`](https://docs.nativescript.org/api-referenc
 The `login()` method is available globally. You can call it anywhere in your app.
 
 ```javascript
-login("Your message", "Username field value", "Password field value").then(function (r) {
-    console.log("Dialog result: " + r.result + ", user: " + r.userName + ", pwd: " + r.password);
+login("Your message", "Username field value", "Password field value").then(result => {
+  console.log(`Dialog result: ${result.result}, user: ${result.userName}, pwd: ${result.password}`);
 });
 ```
 
@@ -24,14 +24,14 @@ login("Your message", "Username field value", "Password field value").then(funct
 
 ```JavaScript
 login({
-    title: "Your login title",
-    message: "Your login message",
-    okButtonText: "Your OK button text",
-    cancelButtonText: "Your Cancel button text",
-    userName: "Username field value",
-    password: "Password field value"
-}).then(function (r) {
-    console.log("Dialog result: " + r.result + ", user: " + r.userName + ", pwd: " + r.password);
+  title: "Your login title",
+  message: "Your login message",
+  okButtonText: "Your OK button text",
+  cancelButtonText: "Your Cancel button text",
+  userName: "Username field value",
+  password: "Password field value"
+}).then(result => {
+  console.log(`Dialog result: ${result.result}, user: ${result.userName}, pwd: ${result.password}`);
 });
 ```
 
