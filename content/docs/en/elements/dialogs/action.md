@@ -18,7 +18,7 @@ The `action()` method is available globally. You can call it anywhere in your ap
 action("Your message", "Cancel button text", ["Option1", "Option2"]))
   .then(result => {
     console.log(result);
-  })
+  });
 ```
 
 [> screenshots for=ActionDialog <]
