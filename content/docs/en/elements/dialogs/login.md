@@ -1,24 +1,38 @@
 ---
 title: LoginDialog
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#login
-contributors: [MisterBrownRSA, rigor789]
+contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-The LoginDialog has two inputs that are used for prompting the user for credentials.
+The `login()` method shows a dialog where the user can provide login credentials.
+
+The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
+
+## Basic use
+
+The `login()` method is available globally. You can call it anywhere in your app.
 
 ```javascript
-const dialogs = require('tns-core-modules/ui/dialogs')
+login("Your message", "Username field value", "Password field value").then(result => {
+  console.log(`Dialog result: ${result.result}, user: ${result.userName}, pwd: ${result.password}`);
+});
+```
 
-module.exports = {
-  mounted() {
-    dialogs.login('Please log in', 'Username', 'Password')
-    .then(result => {
-      console.log(result)
-    })
-  }
-}
+## Configure dialog options
+
+```JavaScript
+login({
+  title: "Your login title",
+  message: "Your login message",
+  okButtonText: "Your OK button text",
+  cancelButtonText: "Your Cancel button text",
+  userName: "Username field value",
+  password: "Password field value"
+}).then(result => {
+  console.log(`Dialog result: ${result.result}, user: ${result.userName}, pwd: ${result.password}`);
+});
 ```
 
 [> screenshots for=LoginDialog <]
