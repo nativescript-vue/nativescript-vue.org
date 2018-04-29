@@ -82,8 +82,8 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
   * View tasks: Newly added tasks are listed as active and can be tapped
   * Complete tasks: Tapping an active task shows an action dialog with options
   * Delete tasks: Tapping an active or completed task shows an action dialog with options
-* (In progress) Basic design
-  * (Coming soon) Input and button for adding tasks are styled
+* (In progress) Advanced design
+  * Input and button for adding tasks are styled
   * (Coming soon) Active tasks are styled
   * (Coming soon) Completed tasks are styled
 * (Coming soon) Advanced functionality
@@ -263,7 +263,7 @@ new Vue({
 Here's how your app will look at the start and at the end of this section.
 
 | Tab 1 - Added tasks | Tab 1 - Item tapped | Tab 2 - Completed tasks
-|-----|-------------|
+|-----|-------------|-------|
 | ![First tab with added tasks](/screenshots/ns-playground/added-tasks.jpg) | ![Action dialog toggled](/screenshots/ns-playground/active-task-dialog.jpg) | ![Second tab with completed tasks](/screenshots/ns-playground/completed-tasks.jpg) |
 
 ### Some NativeScript basics
@@ -389,7 +389,7 @@ new Vue({
 Here's how your app will look at the start and at the end of this section.
 
 | Tab 2 - Completed tasks | Tab 2 - Item tapped | Tab 1 - Active tasks
-|-----|-------------|
+|-----|-------------|-----|
 | ![Second tab with completed tasks](/screenshots/ns-playground/completed-tasks-2.jpg) | ![Action dialog toggled](/screenshots/ns-playground/completed-tasks-dialog.jpg) | ![First tab with active tasks](/screenshots/ns-playground/completed-tasks-moved-to-active.jpg)
 
 ### Some NativeScript basics
@@ -513,3 +513,24 @@ new Vue({
 
 }).$start()
 ```
+
+## Advanced design: Styled input field and button
+
+### Section progress
+
+Here's how your app will look at the start and at the end of this section.
+
+| Tab 1 - No style | Tab 1 - Styled | 
+|-----|-------------|
+| ![Unstyled input](/screenshots/ns-playground/?????????.jpg) | ![Styled input](/screenshots/ns-playground/???????.jpg) |
+
+### Some NativeScript basics
+
+Styling in NativeScript is usually done through CSS. When you work with NativeScript and Vue.js, you can use application-wide CSS or inline CSS to style your app. Application-wide CSS is handled in `app.css` in the root of your project.
+
+Application-wide CSS is applied first.
+
+See also: [Styling](https://docs.nativescript.org/ui/styling).
+
+### Requirement implementation
+
