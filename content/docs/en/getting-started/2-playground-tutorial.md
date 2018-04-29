@@ -256,7 +256,7 @@ new Vue({
 }).$start();
 ```
 
-## Basic functionality: View and complete tasks
+## Basic functionality: View, complete, and delete tasks from the To Do tab
 
 ### Section progress
 
@@ -264,7 +264,7 @@ Here's how your app will look at the start and at the end of this section.
 
 | Tab 1 - Added tasks | Tab 1 - Item tapped | Tab 2 - Completed tasks
 |-----|-------------|
-![First tab with added tasks](/screenshots/ns-playground/added-tasks.jpg) | ![Action dialog toggled](/screenshots/ns-playground/active-task-dialog.jpg) | ![Second tab with completed tasks](/screenshots/ns-playground/completed-tasks.jpg)
+| ![First tab with added tasks](/screenshots/ns-playground/added-tasks.jpg) | ![Action dialog toggled](/screenshots/ns-playground/active-task-dialog.jpg) | ![Second tab with completed tasks](/screenshots/ns-playground/completed-tasks.jpg) |
 
 ### Some NativeScript basics
 
@@ -274,7 +274,7 @@ Out-of-the-box, the `<ListView>` component detects a tap gesture for every item 
 
 ### Requirement implementation
 
-1. In the second `<TabViewItem>` block, drag and drop a `<ListView>` element, clean up its contents and set a height for it. Don't forget to set a height for the `<ListView>`.
+1. In the second `<TabViewItem>` block, drag and drop a `<ListView>` element, clean up its contents and set a height for it.
 1. In the newly added `<ListView>` element show items from an array of completed tasks (`dones`).
 
   ```HTML
@@ -380,4 +380,136 @@ new Vue({
   `,
 
 }).$start();
+```
+
+## Basic functionality: View, return to active tasks, and delete tasks from the Completed tab
+
+### Section progress
+
+Here's how your app will look at the start and at the end of this section.
+
+| Tab 2 - Completed tasks | Tab 2 - Item tapped | Tab 1 - Active tasks
+|-----|-------------|
+| ![Second tab with completed tasks](/screenshots/ns-playground/completed-tasks-2.jpg) | ![Action dialog toggled](/screenshots/ns-playground/completed-tasks-dialog.jpg) | ![First tab with active tasks](/screenshots/ns-playground/completed-tasks-moved-to-active.jpg)
+
+### Some NativeScript basics
+
+This implementation step does not require any additional knowledge.
+
+### Requirement implementation
+
+For the second tab, modify the `onDoneTap` method:
+
+* Method shows an `action()` dialog.
+* Method logs user selection in the console for debugging.
+* Based on user selection, the method moves elements from the `dones` array to the `todos` array, deletes elements from the `dones` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
+
+  ```JavaScript
+  onDoneTap: function (args) {
+    action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
+    .then(result => {
+      console.log(result); // Logs the selected option for debugging.
+      switch (result) {
+        case 'Mark to do':
+          this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks.
+          this.dones.splice(args.index, 1); // Removes the tapped completed task.
+          break;
+        case 'Delete forever':
+          this.dones.splice(args.index, 1);
+          break;
+        case 'Cancel'||undefined:
+          break;
+      }
+    })
+  },
+  ```
+
+At the end of this stage, your code should resemble this sample:
+
+```JavaScript
+const Vue = require("nativescript-vue");
+
+new Vue({
+  data() {
+    return {
+      todos: [],
+      dones: [],
+      textFieldValue: "",
+    }
+  },
+  methods: {
+    onItemTap: function (args) {
+      action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
+        .then(result => {
+          console.log(result); // Logs the selected option for debugging.
+          switch (result) {
+            case 'Mark completed':
+              this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
+              this.todos.splice(args.index, 1); // Removes the tapped active task.
+              break;
+            case 'Delete forever':
+              this.todos.splice(args.index, 1);
+              break;
+            case 'Cancel' || undefined:
+              break;
+          }
+      }) 
+    },
+    onDoneTap: function (args) {
+      action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
+        .then(result => {
+          console.log(result); // Logs the selected option for debugging.
+          switch (result) {
+            case 'Mark to do':
+              this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks.
+              this.dones.splice(args.index, 1); // Removes the tapped completed task.
+              break;
+            case 'Delete forever':
+              this.dones.splice(args.index, 1); // Removes the tapped completed task.
+              break;
+            case 'Cancel'||undefined:
+              break;
+          }
+        })
+    },
+    onButtonTap() {
+      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
+      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
+      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+    }
+  },
+
+  template: `
+    <Page class="page">
+      <ActionBar title="My Tasks" class="action-bar" />
+      
+      <TabView height="100%">
+        <TabViewItem title="To Do">
+          <!-- Positions an input field, a button, and the list of tasks in a grid. -->
+          <StackLayout orientation="vertical" width="100%" height="100%">
+            <GridLayout columns="3*,*" rows="auto" width="100%">
+              <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+              <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
+            </GridLayout>
+            <ListView for="todo in todos" @itemTap="onItemTap" height="100%" > <!-- Make sure to set a height or your list will not show on iOS. -->
+              <v-template>
+                <Label :text="todo.name" />
+              </v-template>
+            </ListView>
+          </StackLayout> 
+        </TabViewItem>
+
+        <TabViewItem title="Completed">
+          <ListView for="done in dones" @itemTap="onDoneTap" height="100%" > <!-- Make sure to set a height or your list will not show on iOS. -->
+              <v-template>
+                <Label :text="done.name" />
+              </v-template>
+            </ListView>
+        </TabViewItem>
+      </TabView>
+
+    </Page>
+  `,
+
+}).$start()
 ```
