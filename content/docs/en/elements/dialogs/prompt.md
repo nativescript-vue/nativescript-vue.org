@@ -25,13 +25,13 @@ prompt('Your message to the user', 'Suggested user input')
 
 ```JavaScript
 prompt({
-    title: "Your dialog title",
-    message: "Your message",
-    okButtonText: "Your OK button text",
-    cancelButtonText: "Your Cancel button text",
-    defaultText: "Suggested user input",
-}).then(function (r) {
-    console.log("Dialog result: " + r.result + ", text: " + r.text);
+  title: "Your dialog title",
+  message: "Your message",
+  okButtonText: "Your OK button text",
+  cancelButtonText: "Your Cancel button text",
+  defaultText: "Suggested user input",
+}).then(result => {
+  console.log(`Dialog result: ${result.result}, text: ${result.text}`)
 });
 ```
 
@@ -45,7 +45,7 @@ inputType: dialogs.inputType.email
 inputType: dialogs.inputType.password
 ```
 
-**NOTE:** This option is not globally available and you need to register the `dialogs` module in your app before using `inputType`.
+**NOTE:** This option is not globally available and you need to require the `dialogs` module in your app before using `inputType`.
 
 ```JavaScript
 const dialogs = require('tns-core-modules/ui/dialogs')
@@ -57,14 +57,14 @@ const dialogs = require('tns-core-modules/ui/dialogs')
 const dialogs = require('tns-core-modules/ui/dialogs')
 
 prompt({
-    title: "Email Prompt",
-    message: "Provide your email address:",
-    okButtonText: "OK",
-    cancelButtonText: "Cancel",
-    defaultText: "name@domain.com",
-    inputType: dialogs.inputType.email
-  }).then(function (r) {
-    console.log("Dialog result: " + r.result + ", text: " + r.text);
+  title: "Email Prompt",
+  message: "Provide your email address:",
+  okButtonText: "OK",
+  cancelButtonText: "Cancel",
+  defaultText: "name@domain.com",
+  inputType: dialogs.inputType.email
+}).then(result => {
+  console.log(`Dialog result: ${result.result}, text: ${result.text}`)
 });
 ```
 
