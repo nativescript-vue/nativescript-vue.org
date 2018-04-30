@@ -35,7 +35,7 @@ prompt({
 });
 ```
 
-### Configure input type
+## Configure input type
 
 You can also configure the input type using `inputType`. You can choose between plain text (`text`), email-enabled input (`email`), and password-like hidden input (`password`).
 
@@ -51,7 +51,7 @@ inputType: dialogs.inputType.password
 const dialogs = require('tns-core-modules/ui/dialogs')
 ```
 
-#### Example
+### Example
 
 ```JavaScript
 const dialogs = require('tns-core-modules/ui/dialogs')
