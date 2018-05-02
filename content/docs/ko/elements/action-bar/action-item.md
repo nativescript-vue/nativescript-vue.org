@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.acti
 contributors: [rigor789]
 ---
 
-ActionItem 컴포넌트는 액션바에 추가적인 액션 버턴을 추가하는데 쓰임
+ActionItem 컴포넌트는 액션바에 추가적인 액션 버튼을 추가하는데 쓰임
 
 ---
 
