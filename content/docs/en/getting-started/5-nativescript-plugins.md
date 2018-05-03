@@ -33,3 +33,5 @@ Then in your template, you can use the newly registered element:
          style="color: white; padding: 20" />
 </Gradient>
 ```
+
+**Note:** If you are working on the windows platform, follow this issue to fix your integration problem: https://github.com/nativescript-vue/nativescript-vue-externals/issues/1
