@@ -15,7 +15,7 @@ The method is part of the [`dialogs` module](https://docs.nativescript.org/api-r
 The `action()` method is available globally. You can call it anywhere in your app.
 
 ```JavaScript
-action("Your message", "Cancel button text", ["Option1", "Option2"]))
+action("Your message", "Cancel button text", ["Option1", "Option2"])
   .then(result => {
     console.log(result);
   });
