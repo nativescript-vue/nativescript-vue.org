@@ -14,10 +14,15 @@ function plugin(opts) {
     const defaultLocale = meta.defaultLocale = opts.defaultLocale;
     const locales = meta.locales = opts.locales;
 
+    const isWin = process.platform === "win32";
+
     // creates a pattern for the given locales
     const pattern = (locales) => {
       if (!Array.isArray(locales)) {
         locales = [locales]
+      }
+      if (isWin) {
+        return new RegExp(`.*\\\\(${locales.join('|')})\\\\(.+)(\\..+)`)
       }
       return new RegExp(`.*\\/(${locales.join('|')})\\/(.+)(\\..+)`)
     };
