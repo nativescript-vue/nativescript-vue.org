@@ -1,11 +1,10 @@
 ---
-title: Quick Start
-contributors: [rigor789, eddyverbruggen, damain, ikoevska]
+title: Быстрый старт
+contributors: [rigor789, eddyverbruggen, damain, ikoevska, sn0wil]
 ---
+Если вы хотите просто попробовать NativeScript-Vue, мы рекомендуем сделать это на [NativeScript Playground](https://play.nativescript.org?template=play-vue). Это самый простой способ для знакомства с NativeScript-Vue.
 
-If you don't want the hassle of installing and configuring your system before you can have a taste of NativeScript + Vue.js development, the [NativeScript Playground](/en/docs/getting-started/playground-tutorial) has you covered.
-
-But if [you already have your system ready for native development](/en/docs/getting-started/installation), you can start by using a template:
+Если вы [уже подготовили вашу систему для нативной разработки](/ru/docs/getting-started/installation), то можете начать с использования шаблона:
 
 ```shell
 $ npm install -g @vue/cli @vue/cli-init
@@ -14,12 +13,12 @@ $ cd <project-name>
 $ npm install
 ```
 
-and then run your app using:
+и после этого запустите ваше приложение:
 
 ```shell
 $ npm run watch:<platform>
 ```
 
-where platform is `ios` or `android`.
+где `platform` - это `ios` или `android`.
 
-For more information about the available templates head over to the [templates documentation](/en/docs/getting-started/templates).
+Чтобы узнать больше о доступных шаблонах, перейдите к [документации по шаблонам](/ru/docs/getting-started/templates).
