@@ -1,31 +1,30 @@
 ---
-title: Using NativeScript Plugins
-contributors: [EddyVerbruggen, naderio, rigor789]
+title: Использование плагинов NativeScript
+contributors: [EddyVerbruggen, naderio, rigor789, sn0wil]
 ---
 
-Plugins work as in any other NativeScript app, but you may wonder how *UI* plugins would work with Vue.
+Плагины работают так же, как и в любом другом приложении NativeScript, но вы можете задаться вопросом, как модули *UI* будут работать с Vue.
 
-UI plugins work almost identically to how you'd use a NativeScript UI plugin in an Angular app. For instance consider this example usage of [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient) which is used in the [listview sample](https://github.com/rigor789/nativescript-vue/tree/master/samples/app/app-with-list-view.js):
-
-Install the plugin using the NativeScript CLI:
+Использование UI плагинов очень похоже на использование NativeScript UI плагинов в Angular приложении. Рассмотрим пример использования [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient), который используется в примере [listview sample](https://github.com/rigor789/nativescript-vue/tree/master/samples/app/app-with-list-view.js):
+ 
+Установите плагин, используя NativeScript CLI:
 
 ```shell
 $ npm install --save nativescript-gradient
 ```
 
-**Note:** If you are using the [vue-cli-template](/en/docs/getting-started/templates/#nativescript-vuevue-cli-template) you may have to run the following:
+**Важно:** Если вы используете [vue-cli-template](/en/docs/getting-started/templates/#nativescript-vuevue-cli-template) вам может потребоваться запустить:
 
 ```shell
 $ npm run clean
 ```
-
-Open your app entry file and add the following to the top:
+Откройте входной файл вашего приложения и добавьте в начале:
 
 ```js
 Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient)
 ```
 
-Then in your template, you can use the newly registered element:
+Затем в вашем шаблоне вы можете использовать новый элемент:
 
 ```html
 <Gradient direction="to right" colors="#FF0077, red, #FF00FF">
