@@ -41,6 +41,7 @@ Metalsmith(cwd)
       'en': 'English',
       'ko': '한국어',
       'pt-BR': 'Português do Brasil',
+      'ru': 'Русский'
     },
     home(current) {
       const locale = current.locale || this.defaultLocale;
@@ -113,7 +114,7 @@ Metalsmith(cwd)
   })
   .use(locales({
     defaultLocale: 'en',
-    locales: ['en', 'ko', 'pt-BR']
+    locales: ['en', 'ko', 'pt-BR', 'ru']
   }))
   .use(order())
   .use(categories())
