@@ -1,73 +1,73 @@
 ---
-title: Playground Tutorial
-contributors: [ikoevska, rigor789, hines-sharrod]
+title:  Руководство по Playground
+contributors: [ikoevska, rigor789, hines-sharrod, sn0wil]
 ---
 
-The [NativeScript Playground](https://play.nativescript.org?template=play-vue) is a place in the cloud where you can just play around with NativeScript and Vue.js from your browser until you figure out the basics. Fire the link and start dragging and dropping component code around the place.
+[NativeScript Playground](https://play.nativescript.org?template=play-vue) - это площадка, на которой вы можете попробовать NativeScript с Vue.js прямо в вашем браузере, пока не освоите основы. Перейдите по ссылке и начните с перетаскивания компонента в ваш код. 
 
-You can work in the Playground for as long as you like. You can use it to just get a taste of NativeScript development or to develop your entire project inside. However, when you get to the point where you are ready to put your app out there, you need to jump on the more advanced wagon and [install NativeScript tools locally](/en/docs/getting-started/installation) and then [pick a template to start with](/en/docs/getting-started/templates).
+Вы можете работать в Playground настолько долго, насколько хотите. Вы можете использовать его, чтобы получить представление о разработке с NativeScript или даже разработать свой собственный проект. Однако, когда вы поймете, что готовы разместить свое прилодение, вам необходимо перейти на более продвинутый уровень и [установить средства NativeScript локально](/ru/docs/getting-started/installation) и после [выбрать шаблон для начала работы](/ru/docs/getting-started/templates).
 
-**This page consists of two parts:**
-* [Part 1: Getting familiar with the Playground](#part-1-getting-familiar-with-the-playground)
-* [Part 2: Building an app](#part-2-building-an-app)
+**Эта стртаница состоит из двух частей:**
+* [Часть 1: Знакомство с площадкой Playground](#part-1-getting-familiar-with-the-playground)
+* [Часть 2: Сборка приложения](#part-2-building-an-app)
 
-# Part 1: Getting familiar with the Playground
+# Часть 1: Знакомство с площадкой Playground
 
-Firing [this link](https://play.nativescript.org/?template=play-vue) gets you to a simple code editor in the cloud where a very basic NativeScript + Vue.js template is pre-loaded for you.
+Перейдя по [этой ссылке](https://play.nativescript.org/?template=play-vue), вы увидите перед собой простой редактор кода в облаке с простейшим шаблоном NativeScript + Vue.js.
 
-> **TIP:** Head to [Sample Tasks for the Playground](/en/docs/getting-started/playground-tutorial) for ideas about how to get started in the Playground.
+> **Совет:** Руководствуйтесь [примерами задач для Playground](/ru/docs/getting-started/playground-tutorial) для идей того, с чего можно начать в Playground.
 
-### Before you start
+### До того, как вы начнете
 
 ![playground welcome screen](/screenshots/ns-playground/playground-home.png)
 
-If this is your first time here, the Playground prompts you to install a couple of mobile apps&mdash;the NativeScript Playground and the NativeScript Preview. Together they let you see your code changes applied in real time on device. No code building and bundling required.
+Если вы впервые здесь, Playground предложит установить несколько мобильных приложений&mdash; NativeScript Playground и NativeScript Preview. Они позволят вам увидеть изменения вашего кода в реальном времени на вашем устройстве. Сборка проекта и построение приложения в данном случае не требуется.
 
-You can ignore this step but without it, you'll miss most of the fun and excitement of playing around with Vue.js and NativeScript.
+Вы можете пропустить этот шаг, но без этого вы упустите большую часть удовольствия и впечатлений от игры с Vue.js и NativeScript.
 
-Keep the apps running while you're experimenting with the code.
+Оставляйте приложения запущенными во время экспериментирования с кодом.
 
-### The lay of the land
+### Расположение основных частей интерфейса
 
 ![](/screenshots/ns-playground/playground-layout.png)
 
-The left sidebar offers a file explorer and a **Components** panel. Most of your effort on your app will happen in `app.js` and `app.css`, containing the app functionality and taking care of the app styles, respectively. No need to deep dive in any other files for now.
+Левое меню представляет собой файловый менеджер и панель **Components** (компоненты). Большинство вашей работы в приложении будет происходить в  `app.js` и `app.css`, содержащих функциональность приложения и стили. На данный момент нет необходимости погружаться в другие файлы.
 
-The **Components** panel provides quick access to already pre-configured code for all available NativeScript UI components.
+Панель **Components** обеспечивает быстрый доступ к заранее подготовленному коду всех доступных компонентов NativeScript UI.
 
-From the top of the page, you can push changes to the preview apps on your device, save, and download your code.
+В верхней части страницы вы можете отправить изменения для предпросмотра приложения на вашем устройстве, сохранить изменения и скачать файлы с кодом.
 
-The bottom of the page is your best friend providing real-time error reports and device logs.
+В нижней части страницы отображаются ошибки времени выполнения и логи устройства.
 
-### Drag and drop to code
+### Перетащите в код
 
 ![](/screenshots/ns-playground/playground-drag-and-drop.gif)
 
-Just click a component from the **Components** panel and drag it to the code editor, somewhere inside the `template` block. Releasing the mouse button inserts some pre-written sample code for the respective component. Any methods that go with it (such as what happens on button or item tap) are automatically added at the top of the page before the `template` block. 
+Просто кликните на компонент в панели **Components** (компоненты) и перетищите его в редактор кода в любое место внутри блока `template`. При отпускании кнопки мыши вставится заранее написанный код соответствующего компонента. Любые методы, которые соответствуют компоненту (например, что происходит для нажатии кнопки или элемента), автоматически добавятся вверху страницы перед блоком `template`.
 
-> **TIP:** Use the search of the **Components** panel to quickly find the element that you want to use. The search works only with the title of the component and not the actual name used in the code. For example: the search finds *text field* but does not find *textfield*.
+> **Совет:** Используйте посик в панели **Components** для быстрого поиска нужного элемента. Поиск работает только с названиями компонентов, а не соответствующими именами, используемыми в коде. Например, поиск найдет *text field* (текстовое поле), но не найдет *textfield* (название в коде).
 >
 > ![](/screenshots/ns-playground/playground-component-search.gif)
 
-For most UI components to work, you need to drop them inside the `<Page>` block, preferably inside a layout component. Layouts tell your app how to position the UI components on the screen.
+Для работы большинства компонентов необходимо размещать их внутри блока `<Page>`, предпочтительно в слое (layout) компонента. Слои говорят приложению, как размещать компоненты на экране.
 
-> **NOTE:** Right now, there's nothing stopping you from dropping the code at a place that will cause your app to crash or simply not load. In those cases, check the **Errors** and **Device Logs** tabs for more information.
+> **Заметка:** Прямо сейчас ничего не мешает вам отказаться от верного расопложения компонентов в коде. Это приведет к сбою приложения или он просто не запустится. В таких случаях проверяйте вкладки **Errors** и **Device Logs** для более детальной информации.
 
-### Check it out real-time
+### Проверяйте в режиме реального времени
 
 ![](/screenshots/ns-playground/playground-preview.gif)
 
-After you place the code in a valid spot, hit **Preview** (or `Ctrl+S` or `Cmd+S`) and see your app refresh on your device screen in an instant. 
+После размещения кода в допустимом месте, нажмите **Preview** (или `Ctrl+S` / `Cmd+S`) и смотрите, как приложение мгновенно обновится на экране вашего устройства.
 
-In some cases, when you interact with the app, it will close unexpectedly. Just fire it up again and inspect the crash report. 
+В некоторых случаях, когда вы взаимодействуете с приложением, оно может неожиданно закрыться. Просто запрустите его снова и проверьте отчет о сбое.
 
-If at any point you stop seeing your changes applied on the device, click **QR code** and re-scan the QR code with the *Playground* app.
+Если в какой-то момент вы перстанете видеть применяемые изменения, нажмите **QR code** и пересканируйте QR код в приложении *Playground*.
 
-### Configure your code
+### Измените код
 
-So, the component runs and shows on your screen. You're excited but you want to make it your own. Hack away at the default code suggested by the Playground. Fix sizes and labels, remove or add elements.
+Таким образом, компонент запускается и отображается на экране вашего устройства. Попробуйте изменить код, предложенный Playground по умолчанию. Измените размеры, тексты, удалите или добавьте элементы.
 
-Go to `app.css` and switch up the styling a bit. Experiment with colors and font sizes. 
+Перейдите в `app.css` и измените стили. Поэкспериментируйте с цветами, шрифтами и другими стилями.
 
 # Part 2: Building an app
 
