@@ -69,69 +69,69 @@ contributors: [ikoevska, rigor789, hines-sharrod, sn0wil]
 
 Перейдите в `app.css` и измените стили. Поэкспериментируйте с цветами, шрифтами и другими стилями.
 
-# Part 2: Building an app
+# Часть 2: Сборка приложения
 
-If you want to explore the [NativeScript Playground](https://play.nativescript.org?template=play-vue), you can start by creating a simple to-do app with the following requirements:
+Если вы хотите изучить [NativeScript Playground](https://play.nativescript.org?template=play-vue), то вы можете начать с  сосздания простого to-do приложения со следующими требованиями:
 
-* Basic design
-  * Two-tab layout
-  * One tab shows active tasks and lets you add new tasks
-  * Second tab lists completed tasks
-* Basic functionality
-  * Add tasks: Users can add tasks as text
-  * View tasks: Newly added tasks are listed as active and can be tapped
-  * Complete tasks: Tapping an active task shows an action dialog with options
-  * Delete tasks: Tapping an active or completed task shows an action dialog with options
-* (In progress) Advanced design
-  * Input and button for adding tasks are styled
-  * (Coming soon) Active tasks are styled
-  * (Coming soon) Completed tasks are styled
-* (Coming soon) Advanced functionality
-  * (Coming soon) Store timestamp data for each task
-  * (Coming soon) View task history
-  * (Coming soon) Manage tasks in bulk
-  * (Coming soon) Schedule tasks: Users can set deadlines for tasks by picking a date from a calendar widget
+* Базовый дизайн
+  * Экран с двумя вкладками
+  * Первая вкладка показывает активные задачи и дает возмождность добавить новую задачу
+  * Вторая вкладка показывает список завершенных задач
+* Базовый функциональность
+  * Добавление задачи: Пользователь может добавить задачи как текст
+  * Просмотр задач: Новые задачи, добавленные недавно, показаны, как активные и могут быть нажаты
+  * Завершение задач: Нажатие на активную задачу показывает диалог с вариантами действий
+  * Удаление задач: Нажатие на активный или завершенный таск показывает диалог с вариантами действий
+* (В прогрессе) Расширенный дизайн
+  * Input и button для добавления задачи имеют стили
+  * (Скоро) Активные задачи стилизованы
+  * (Скоро) Завершенные задачи стилизованы
+* (Скоро) Расширенная функциональность
+  * (Скоро) Хранилище времени для каждой задачи
+  * (Скоро) Просмотр истории задач
+  * (Скоро) Управление задачами в куче
+  * (Скоро) Планирование задач: Пользователь может установить конечное время (deadline) для задач, выбрав дату из виджета календаря
 
-> **TIP:** All sections of this tutorial contain a *Some NativeScript basics* and *Requirement implementation* sub-sections. You can skip the basics sub-section and jump straight to the implementation for a more hands-on approach.
+> **Совет:** Все секции этого руководства содержат *Некоторые основы NativeScript* и *Выполнение требований* подсекций. Вы можете пропустить базовые вещи и перейти непосредственно к реализации для большей практичности.
 
-## The bare Vue.js template
+## Голый шаблон Vue.js
 
 ![](/screenshots/ns-playground/playground-home.png)
 
-All development effort for this tutorial happens in `app.js` and `app.css`, containing the app functionality and taking care of the app styles, respectively.
+Все дейтвия этого руководства будут проводиться в `app.js` и `app.css`, которые содержат функционал приложения и его стили.
 
-The `app.js` for your newly created Vue.js project consists of a simple `template` declaration without any functionality. As you drag and drop user interface components to the app, the Playground also adds a `methods` block and populates it with code containing actual app functionality.
+`app.js` для вашего нового приложения состоит из простого объявления `template` (шаблон) без какой-либо функциональности. Как только вы перетащите компонент из **Components** в редактор кода, платформа Playground добавить блок `methods` и наполнит кодом, необходими для него.
 
-In `app.js`, you'll be working in the `template` block to design the user interface or in the `methods` block to build the app functionality. The `template` block requires NativeScript-compatible XML. The `methods` block accepts both Vue.js and NativeScript JavaScript code.
+В `app.js` вы будете работать в блоке `template` для планирования интерфейса или в блоке `methods` для задания функциональности. Блок `template` требует NativeScript-совместимый XML. Блок `methods` может включать в себя как  Vue.js, так и NativeScript JavaScript код.
 
-## Basic design
+## Базовый дизайн
 
-### Section progress
+### Прогресс
 
-Here's how your app will look at the start and at the end of this section.
+Вот как будет выглядеть ваше приложение в начале и в конце данного раздела.
 
-| Initial screen | Tab 1 | Tab 2 |
+| Стартовый экран | Вкладка 1 | Вкладка 2 |
 |-------|-----|-----|
 | ![Bare Vue.js template](/screenshots/ns-playground/two-tabs-start.jpg) | ![First tab](/screenshots/ns-playground/two-tabs-tab-1.jpg) | ![Second tab](/screenshots/ns-playground/two-tabs-tab-2.jpg) |
 
-### Some NativeScript basics
+### Некоторые основы NativeScript
 
-The `<Page>` element is the top-level user interface element of every NativeScript+Vue.js app. All other user interface elements are nested within.
+Элемент `<Page>` - главный родительский элемент NativeScript+Vue.js приложения. Все остальные элементы интерфейсы вложены в него.
 
-The `<ActionBar>` element shows an action bar for the `<Page>`. A `<Page>` cannot contain more than one `<ActionBar>`.
+Элемент `<ActionBar>` показывает показывает панель действий для `<Page>`. `<Page>` не может содержать более одного `<ActionBar>`.
 
-Typically, after the `<ActionBar>`, you will have navigation components (such as a drawer or a tab view) or layout components. These elements control the layout of your app and let you determine how to place other user interface elements inside.
+Обычно после `<ActionBar>` вы будете располагать компоненты для навигации (вкладки и др.) или другие компоненты. Эти элементы контролируют экраны вашего приложения и дают возможность определять как будут располагаться компоненты относительно друг друга. 
 
-### Requirement implementation
+### Требуемая реализация
 
-Use the `<TabView>` component to create a two-tab app. 
+Используйте компонент `<TabView>` для создания приложения с вкладками.
 
-1. Remove the default `<ScrollView>` block and all its contents that come with the template.<br/>`<ScrollView>` components are top-level layout containers for scrollable content.
-1. Drag and drop the `<TabView>` component in its place.<br/>The Playground doesn't apply code formatting and doesn't take care of indentation when inserting new components.
-1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).<br/>On an iOS device the default height setting causes the tabs to show somewhere around the middle of the screen.
-1. Change the titles of the `<TabViewItem>` elements and their contents to reflect their purpose.<br/>At this point, text content for the tabs is shown in `<Label>` components with no styling and formatting. Apply the `textWrap="true"` property to the respective `<Label>` components to improve the visualization of the text.
+1. Удалите блок `<ScrollView>` и весь его контент, который был размещен по умолчанию.<br/>Компонент `<ScrollView>` - контейнер для контента, который можно прокручивать (скролить).
+1. Перетащите в редактор кода компонент `<TabView>` на его место.<br/>Площадка Playground не применяет форматирование кода и не беспокоится об отступах при вставке новых компонентов.
+1. Настройте `<TabView>` для заполнения на весь экран (установите значение 100%).<br/>На устройстве iOS значение высоты по умолчанию приводит к тому, что вкладки отображаются где-то посередине экрана.
+1. Измените заголовки элементов `<TabViewItem>` и их содержание.<br/>На этом этапе текстовое содержимое для вкладок отображается в компонентах `<Label>` без стилизации и форматирования. Примените свойство `textWrap =" true "` к соответствующим компонентам `<Label>`, чтобы улучшить визуализацию текста.
 
-At the end of this stage, your code should resemble this sample:
+В конце этого этапа ваш код должен напоминать этот образец:
 
 ```JavaScript
 const Vue = require("nativescript-vue");
@@ -157,51 +157,50 @@ new Vue({
 }).$start();
 ```
 
-## Basic functionality: Add tasks
+## Базовая функциональность: Добавление задач
 
-### Section progress
+### Прогресс
 
-Here's how your app will look at the start and at the end of this section.
+Вот как будет выглядеть ваше приложение в начале и в конце данного раздела.
 
-| Initial screen | Tab 1 - No tasks | Tab 1 - Added tasks |
+| Стартовый экран | Вкладка 1 - Нет задач | Вкладка 1 - Добавленные задачи |
 |-------|-----|-------------|
 | ![First tab before changes](/screenshots/ns-playground/two-tabs-tab-1.jpg) | ![First tab without any tasks](/screenshots/ns-playground/input-field.jpg) | ![First tab with added tasks](/screenshots/ns-playground/added-tasks.jpg)
 
-### Some NativeScript basics
+### Некоторые основы NativeScript
 
-The layout components let you arrange the various UI widgets of your app. Whenever you need to place more than one UI widget on your app screen, you are likely to use one of the available layout options. The `<StackLayout>` and the `<GridLayout>` are basic but versatile options, letting you position elements vertically or in a table-like layout, respectively. While the 
-`<StackLayout>` displays elements in their natural sequence, the `<GridLayout>` lets you choose the exact positions of your elements in the grid.
+Компоненты слоев позволяют вам располагать различные UI (визуальные) элементы в своем приложении. Всякий раз, когда вам нужно разместить более одного виджета пользовательского интерфейса на экране приложения, вы, вероятно, будете использовать один из доступных вариантов макета.`<StackLayout>` и `<GridLayout>` являются базовыми, но универсальными, позволяющими позиционировать элементы вертикально или в виде таблицы, соответственно. В то время как`<StackLayout>` отображает элементы в их естественной последовательности, `<GridLayout>` позволяет вам выбирать точные позиции ваших элементов в сетке.
 
-### Requirement implementation
+### Требуемая реализация
 
-Use a `<GridLayout>` to arrange a `<TextField>` and a `<Button>` on the page. The latter two form the input functionality of the app.
+Используйте `<GridLayout>` для размещения `<TextField>` и `<Button>` на странице. Последние два образуют основную функциональность приложеняи для ввода данных.
 
-Use a `<ListView>` to show tasks below the input field.
+Используйте `<ListView>` для отображения задач под полем ввода.
 
-1. Delete the `<Label>` component from the first `<TabViewItem>` block for the first tab.
-1. Drag and drop a `<StackLayout>` component within the `<TabViewItem>` block for the first tab.<br/>The default code creates a colorful vertical stack.
-1. Delete all `<Label>` components from the `<StackLayout>` block.
-1. Drag and drop a `<GridLayout>` component within the `<StackLayout>` block for the first tab.<br/>The default code creates a colorful table that shows how to position elements and merge grid cells.
-1. Delete all `<Label>` components from the `<GridLayout>` block.
-1. Configure the `<StackLayout>`.
-    * Remove background color.
-    * Set width and height.
-1. Configure the `<GridLayout>`.
-    * Set the grid to consist of two columns and one row.
-    * Set the width of the grid to 100% so that it takes the entire width of the screen.
-    * Remove any additional settings for the grid.
-1. Drag and drop a `<TextField>` and a `<Button>` within the `<GridLayout>` block.<br/>The Playground adds JavaScript code to your code for the first time. Note the `data()` and `methods` blocks added above the `template` block. In next implementation steps, you will need to add code to these sections to create some of the app functionality.
-1. Drag and drop a `<ListView>` below the grid.<br/>The default code creates a list of countries and country flag icons.
-1. Configure the positioning of the elements within the grid.
-    * Set the `<TextField>` to inhabit the first column and the first row.
-    * Set the `<Button>` to inhabit the second column and the first row.
-1. Clean up sample code from the `<TextField>` and the `<ListView>`. Set a height for the `<ListView>`.
-1. Log newly added tasks in the console.
-1. Add newly added tasks into the array of tasks. Use `unshift` to place new items at the top of the page.
-1. Clear the text field after input.
-1. List task name on the screen.
+1. Удалите компонент `<Label>` из первого блока <TabViewItem> `для первой вкладки.
+1. Перетащите элемент `<StackLayout>` в блок `<TabViewItem>` для первой вкладки. <br/> Код по умолчанию создает красочный вертикальный стек.
+1. Удалите все компоненты <Label> `из блока` <StackLayout>.
+1. Перетащите элемент `<GridLayout>` в блок `<StackLayout>` для первой вкладки. <br/> Код по умолчанию создает красочную таблицу, которая показывает, как размещать элементы и объединять ячейки сетки.
+1. Удалите все компоненты <Label> `из блока` <GridLayout>.
+1. Настройте `<StackLayout>`.
+    * Удалить цвет фона.
+    * Установите ширину и высоту.
+1. Настройте `<GridLayout>`.
+    * Установите сетку в виде двух столбцов и одной строки.
+    * Установите ширину сетки на 100%, чтобы она занимала всю ширину экрана.
+    * Удалите все дополнительные настройки для сетки.
+1. Перетащите `<TextField>` и `<Button>` в блок `<GridLayout>`. <br/> Площадка Playground добавит код JavaScript в первый раз. Обратите внимание на блоки `data ()` и `methods`, добавленные над блоком `template`. На следующих этапах реализации вам нужно будет добавить код в эти разделы, чтобы создать некоторые функциональные возможности приложения.
+1. Перетащите `<ListView>` под сеткой. <br/> Код по умолчанию создает список стран и значков флагов стран.
+1. Настройте расположение элементов в сетке.
+    * Установите `<TextField>`, чтобы засечь первый столбец и первую строку.
+    * Установите `<Button>`, чтобы расположить во втором столбце и в первой строке.
+1. Очистите код образца из `<TextField>` и `<ListView>`. Задайте высоту для `<ListView>`.
+1. Залогируте в консоль новые задачи.
+1. Добавить новые задачи в набор задач. Используйте `unshift` для размещения новых элементов в верхней части страницы.
+1. Очистите текстовое поле после ввода.
+1. Введите имя задачи на экране.
 
-At the end of this stage, your code should resemble this sample:
+В конце этого этапа ваш код должен напоминать этот образец:
 
 ```JavaScript
 const Vue = require("nativescript-vue");
@@ -215,12 +214,12 @@ new Vue({
   },
   methods: {
     onItemTap: function (args) {
-      console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
+      console.log('Task with index: ' + args.index + ' tapped'); // Логирование нажатых задач в консоли для дебага
     },
     onButtonTap() {
-      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
-      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+      console.log("New task added: " + this.textFieldValue + "."); // Логирование новый добавленной задачи
+      this.todos.unshift({ name: this.textFieldValue }); // Добавление задач в ToDo массив. Вновь добавленные задачи немедленно покажутся на экране 
+      this.textFieldValue = ""; // Очистка текстового поля, чтобы пользователь мог снова добавить задачу
     },
   },
 
@@ -256,60 +255,60 @@ new Vue({
 }).$start();
 ```
 
-## Basic functionality: View, complete, and delete tasks from the To Do tab
+## Базовая функциональность: Просмотр, завершение и удаление задач из вкладки To Do
 
-### Section progress
+### Прогресс
 
-Here's how your app will look at the start and at the end of this section.
+Вот как будет выглядеть ваше приложение в начале и в конце данного раздела.
 
-| Tab 1 - Added tasks | Tab 1 - Item tapped | Tab 2 - Completed tasks
+| Вкладка 1 - Добавленные задачи | Вкладка 1 - Элемент нажат | Вкладка 2 - Завершенные задачи
 |-----|-------------|-------|
 | ![First tab with added tasks](/screenshots/ns-playground/added-tasks.jpg) | ![Action dialog toggled](/screenshots/ns-playground/active-task-dialog.jpg) | ![Second tab with completed tasks](/screenshots/ns-playground/completed-tasks.jpg) |
 
-### Some NativeScript basics
+### Некоторые основы NativeScript
 
-Out-of-the-box, the `<ListView>` component detects a tap gesture for every item and emits an event for it. The event carries information about the index of the tapped array item and the array item itself. To let the user choose the outcome of a tap gesture and expand the functionality of your add, you can tie a dialog to the event.
+Из коробки, компонент `<ListView>` обнаруживает действие нажатия на каждый элемент и вызывает событие для этого. Событие хранит в себе информация о индексе элемента массива, который нажали и сам массив элементов. Чтобы пользователь мог выбрать результат нажатия и расширить функциональность вашего добавления, вы можете связать диалог с событием.
 
-[`dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_) is a globablly available module that provides several configurable dialog types for apps: alert, action, prompt, login, confirmation. This implementation relies on [`action()`](/en/docs/elements/dialogs/action) to let the user choose if they want to mark a task as completed or delete it from the list of active tasks.
+[`dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_) - это глабаольно доступный модуль, который дает доступ к нескольким настриваемым типам диалогов: предупреждение, действие, ввод ответа, логин и подтверждение. Нам подходит диалог-действие - [`action()`](/en/docs/elements/dialogs/action) , который дает пользователю пометить таск как выполненный или удалить его.
 
-### Requirement implementation
+### Требуемая реализация
 
-1. In the second `<TabViewItem>` block, drag and drop a `<ListView>` element, clean up its contents and set a height for it.
-1. In the newly added `<ListView>` element show items from an array of completed tasks (`dones`).
+1. В блок второй вкладки `<TabViewItem>, перетащите элемент `<ListView>`, удалите его контент и установите высоту. 
+1. Добавленный элемент `<ListView>` будет показывать завершенные задачи.
 
   ```HTML
-  <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
+  <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Убедимся, что высота в порядке, иначе спиок не будет показываться на iOS. -->
     <v-template>
       <Label :text="done.name" />
     </v-template>
   </ListView>
   ```
-1. Modify the `onItemTap` method.
-  * Method shows an `action()` dialog.
-  * Method logs user selection in the console for debugging.
-  * Based on user selection, the method moves elements from the `todos` array to the `dones` array, deletes elements from the `todos` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
+1. Измените метод `onItemTap`.
+  * Метод показывает диалог `action()`.
+  * Метод логирует выбор пользователя в консоль.
+  * ОСновываясь на выборе пользователя мтод перемещает элементы из массива `todos` в массив dones`, удаляя элементы из массива `todos` или действие отменяется. Используйте `splice()` , чтобы избежать пустых элементов и `unshift()`, чтобы быть уверенными, что недавно выполненные задачи будут показаны сверху.
 
   ```JavaScript
   onItemTap: function (args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
         .then(result => {
-          console.log(result); // Logs the selected option for debugging.
+          console.log(result); // Лог в консоли выбранного ответа диалога
           switch (result) {
             case 'Mark completed':
-              this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
+              this.dones.unshift(args.item); // Размещение нажатой активной задачи в топ выполненных задач
+              this.todos.splice(args.index, 1); // Удаление нажатой задачи из активных
               break;
             case 'Delete forever':
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
+              this.todos.splice(args.index, 1); // Удаление нажатой задачи из активных
               break;
-            case 'Cancel' || undefined: // Dismisses the dialog.
+            case 'Cancel' || undefined: // Отмена действия
               break;
           }
       }) 
     },
   ```
 
-At the end of this stage, your code should resemble this sample:
+В конце этого этапа ваш код должен напоминать этот образец:
 
 ```JavaScript
 const Vue = require("nativescript-vue");
@@ -326,24 +325,24 @@ new Vue({
     onItemTap: function (args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
         .then(result => {
-          console.log(result); // Logs the selected option for debugging.
+          console.log(result); //  Лог в консоли выбранного ответа диалога
           switch (result) {
             case 'Mark completed':
-              this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
+              this.dones.unshift(args.item); // Размещение нажатой активной задачи в топ выполненных задач
+              this.todos.splice(args.index, 1); // Удаление нажатой задачи из активных
               break;
             case 'Delete forever':
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
+              this.todos.splice(args.index, 1); // Удаление нажатой задачи из активных
               break;
-            case 'Cancel' || undefined: // Dismisses the dialog.
+            case 'Cancel' || undefined: // Отмена действия
               break;
           }
       }) 
     },
     onButtonTap() {
-      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
-      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+      console.log("New task added: " + this.textFieldValue + "."); // Логирование новый добавленной задачи
+      this.todos.unshift({ name: this.textFieldValue }); // Добавление задач в ToDo массив. Вновь добавленные задачи немедленно покажутся на экране 
+      this.textFieldValue = ""; // Очистка текстового поля, чтобы пользователь мог снова добавить задачу
     },
   },
 
@@ -382,37 +381,38 @@ new Vue({
 }).$start();
 ```
 
-## Basic functionality: View, return to active tasks, and delete tasks from the Completed tab
+## Базовая функциональность: Просмотр, возвращение в активные задачи, удаление задач из завершенных
 
-### Section progress
+### Прогресс
 
-Here's how your app will look at the start and at the end of this section.
+Вот как будет выглядеть ваше приложение в начале и в конце данного раздела.
 
-| Tab 2 - Completed tasks | Tab 2 - Item tapped | Tab 1 - Active tasks
+| Вкладка 2 - Завершенные задачи | Вкладка 2 - Элемент нажат | Вкладка 1 - Активные задачи
 |-----|-------------|-----|
 | ![Second tab with completed tasks](/screenshots/ns-playground/completed-tasks-2.jpg) | ![Action dialog toggled](/screenshots/ns-playground/completed-tasks-dialog.jpg) | ![First tab with active tasks](/screenshots/ns-playground/completed-tasks-moved-to-active.jpg)
 
-### Some NativeScript basics
+### Некоторые основы NativeScript
 
-This implementation step does not require any additional knowledge.
+Эта реализация не тербудет дополнительных навыков.
 
-### Requirement implementation
+### Требуемая реализация
 
-For the second tab, modify the `onDoneTap` method:
+Во второй вкладке измените метод `onDoneTap`:
 
-* Method shows an `action()` dialog.
-* Method logs user selection in the console for debugging.
-* Based on user selection, the method moves elements from the `dones` array to the `todos` array, deletes elements from the `dones` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
+* Метод показывает диалог `action()`.
+* Метод логирует в консоль выбор пользователя.
+* Основываясь на выборе пользователя, метод перемещает элементы из `dones` в `todos`, удалеяет элементы из `dones` или отменяет действие. Используйте `splice()` для 
+Based on user selection, the method moves elements from the `dones` array to the `todos` array, deletes elements from the `dones` array, or dismisses the dialog. Используйте `splice()` , чтобы избежать пустых элементов и `unshift()`, чтобы быть уверенными, что недавно выполненные задачи будут показаны сверху.
 
   ```JavaScript
   onDoneTap: function (args) {
     action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
     .then(result => {
-      console.log(result); // Logs the selected option for debugging.
+      console.log(result); // Лог в консоли выбранного ответа диалога
       switch (result) {
         case 'Mark to do':
-          this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks.
-          this.dones.splice(args.index, 1); // Removes the tapped completed task.
+          this.todos.unshift(args.item); // Размещение нажатой активной задачи в топ выполняющихся
+          this.dones.splice(args.index, 1); // Удаление нажатой задачи из завершенных
           break;
         case 'Delete forever':
           this.dones.splice(args.index, 1);
@@ -424,7 +424,7 @@ For the second tab, modify the `onDoneTap` method:
   },
   ```
 
-At the end of this stage, your code should resemble this sample:
+В конце этого этапа ваш код должен напоминать этот образец:
 
 ```JavaScript
 const Vue = require("nativescript-vue");
@@ -441,11 +441,11 @@ new Vue({
     onItemTap: function (args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
         .then(result => {
-          console.log(result); // Logs the selected option for debugging.
+          console.log(result); // Лог в консоли выбранного ответа диалога
           switch (result) {
             case 'Mark completed':
-              this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
+              this.dones.unshift(args.item); // Размещение нажатой активной задачи в топ выполненных задач
+              this.todos.splice(args.index, 1); //Удаление нажатой задачи из завершенных
               break;
             case 'Delete forever':
               this.todos.splice(args.index, 1);
@@ -461,11 +461,11 @@ new Vue({
           console.log(result); // Logs the selected option for debugging.
           switch (result) {
             case 'Mark to do':
-              this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks.
-              this.dones.splice(args.index, 1); // Removes the tapped completed task.
+              this.todos.unshift(args.item); // Размещение нажатой активной задачи в топ ToDo
+              this.dones.splice(args.index, 1); // Удаление нажатой задачи из завершенных
               break;
             case 'Delete forever':
-              this.dones.splice(args.index, 1); // Removes the tapped completed task.
+              this.dones.splice(args.index, 1); //Удаление нажатой задачи из завершенных
               break;
             case 'Cancel'||undefined:
               break;
@@ -473,9 +473,9 @@ new Vue({
         })
     },
     onButtonTap() {
-      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
-      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+      console.log("New task added: " + this.textFieldValue + "."); // Логирование новый добавленной задачи
+      this.todos.unshift({ name: this.textFieldValue }); // Добавление задач в ToDo массив. Вновь добавленные задачи немедленно покажутся на экране 
+      this.textFieldValue = ""; // Очистка текстового поля, чтобы пользователь мог снова добавить задачу
     }
   },
 
@@ -514,27 +514,27 @@ new Vue({
 }).$start()
 ```
 
-## Advanced design: Styled input field and button
+## Расширенный дизайн: стилизованное поле ввода и кнопка
 
-### Section progress
+### Прогресс
 
-Here's how your app will look at the start and at the end of this section.
+Вот как будет выглядеть ваше приложение в начале и в конце данного раздела.
 
 | Tab 1 - No style | Tab 1 - Styled | Tab 1 - Styled |
 |-----|-------------|----|
 | ![Unstyled input](/screenshots/ns-playground/input-field.jpg) | ![Styled button](/screenshots/ns-playground/styled-button.jpg) | ![Styled input](/screenshots/ns-playground/styled-input.jpg) |
 
-### Some NativeScript basics
+### Некоторые основы NativeScript
 
-When you work with NativeScript and Vue.js, you can use application-wide CSS or inline CSS to style your app. Application-wide CSS is applied first and is handled in `app.css` in the root of your project. See also: [Styling](https://docs.nativescript.org/ui/styling).
+Когда вы работаете с NativeScript и Vue.js, вы можете использовать общий CSS для всего приложения или inline CSS. Сначала применяется общий CSS, который обрабатывается в `app.css` в корне вашего проекта. Смотрите также: [Styling](https://docs.nativescript.org/ui/styling).
 
-With type selectors, you can select a UI component and apply styling to it. To select a type, use the component name as provided in the code. For example, to select the tab view, use `TabView`.
+С помощью селекторов типов вы можете выбрать компонент пользовательского интерфейса и применить к нему стиль. Чтобы выбрать тип, используйте имя компонента, как указано в коде. Например, чтобы выбрать представление табуляции, используйте `TabView`.
 
-### Requirement implementation
+### Требуемая реализация
 
-#### Input field
+#### Поле ввода
 
-In `app.css`, change the font size and the color and the margins around the `<TextField>`.
+В `app.css` измениет размер шрифта, цвет и отступы для `<TextField>`.
 
 ```CSS
 TextField{
@@ -547,14 +547,14 @@ TextField{
 }
 ```
 
-#### Button
+#### Копка
 
-1. In `app.js` on line 63, add an `id` for the button.
+1. В `app.js` на строке 63, добавьте `id` для кнопки.
 
   ```HTML
   <Button id="add-task-button" row="0" col="1" text="Add task" @tap="onButtonTap" />
   ```
-1. In `app.css`, create a style for the button. Modify the style to create a colorful button with rounded corners.
+1. В `app.css`, создайте стиль для кнопки. Измените стили для создания цветной кнопки с загругленными краями.
 
   ```CSS
   #add-task-button{
