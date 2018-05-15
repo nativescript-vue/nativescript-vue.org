@@ -1,32 +1,32 @@
 ---
-title: v-view directive
-contributors: [rigor789, eddyverbruggen]
+title: Директива v-view
+contributors: [sn0wil]
 ---
 
-The `v-view` directive is used to set the current elements `View` as a parent property.
+Директива `v-view` используется для задания текущих элементов `View` в качестве родительского свойства.
 
-### Usage
+### Использование
 
 ```html
 <Child v-view:parentPropertyName />
-<!-- same as: -->
+<!-- равнозначно: -->
 <Child ~parentPropertyName />
 ```
 
 ```html
 <Child v-view:parentArrayPropertyName.array />
-<!-- same as: -->
+<!-- равнозначно: -->
 <Child ~parentArrayPropertyName.array />
 ```
 
 ---
 
-There are many `NativeScript` components that require setting a property to a valid `View` instance, which is not possible using a template. Using this directive saves time by not having to register new directives / references to parent elements, and setting the parent properties manually.
+Существует много компонентов `NativeScript`, которые требуют установки свойства в действительный экземпляр `View`, что невозможно с использованием шаблона. Использование этой директивы экономит время, не регистрируя новые директивы / ссылки на родительские элементы и не устанавливая родительские свойства вручную.
 
-To better illustrate what this directive does, let's take a look at the `RadSideDrawer` component from the [Progress NativeScript UI](http://docs.telerik.com/devtools/nativescript-ui/Controls/Angular/SideDrawer/getting-started) package:
+Чтобы лучше проиллюстрировать, что делает эта директива, давайте посмотрим на компонент `RadSideDrawer` из [Progress NativeScript UI](http://docs.telerik.com/devtools/nativescript-ui/Controls/Angular/SideDrawer/getting-started):
 
-The `RadSideDrawer` component expects the `drawerContent` and `mainContent` properties to be set to `View` instances,
-using the `v-view` directive it would look like this:
+Компонент `RadSideDrawer` ожидает, что свойства `drawerContent` и` mainContent` будут установлены в экземпляры `View`,
+используя директиву `v-view`, и он будет выглядеть так:
 
 ```html
 <RadSideDrawer>
@@ -35,7 +35,7 @@ using the `v-view` directive it would look like this:
 </RadSideDrawer>
 ```
 
-Without this directive you would have to do something like:
+Без этой директивы у вас бы было что-то вроде:
 
 ```html
 <RadSideDrawer ref="drawer">
@@ -53,4 +53,4 @@ Without this directive you would have to do something like:
 }
 ```
 
-Which can get tedious and is very error prone.
+Что может стать утомительным и очень подвержено ошибкам.
