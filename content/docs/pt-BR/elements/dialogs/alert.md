@@ -4,33 +4,33 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#alert
 contributors: [alexhiroshi]
 ---
 
-O AlertDialog irá funcionar como um simples modal de notificação que requer confirmação.
+O método `alert()` exibe uma mensagem e um botão de OK. Use-o para mostrar informações e notificações que não precisam de uma ação do usuário.
+
+O método faz parte do [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 
-```javascript
-const dialogs = require('tns-core-modules/ui/dialogs')
+## Uso básico
 
-module.exports = {
-  mounted() {
-    dialogs.alert('Hello!')
-    .then(() => {
-      console.log("Dialog closed")
-    })
-  }
-}
-```
-
-O AlertDialog está disponível globalmente, ao invés de importa do módulo de dialogs, você pode simplesmente chamar
+O método `alert()` está disponível globalmente. Você pode chamar de qualquer lugar do seu aplicativo.
 
 ```javascript
-alert('Hello!')
-.then(() => {
-  console.log("Dialog closed")
-})
+alert('Your message')
+  .then(() => {
+    console.log("Alert dialog closed.");
+  });
 ```
 
-em qualquer lugar do seu código.
+## Configurar opções
 
+```JavaScript
+alert({
+  title: "Your title",
+  message: "Your message",
+  okButtonText: "Your OK button text"
+}).then(() => {
+  console.log("Alert dialog closed");
+});
+```
 
 [> screenshots for=AlertDialog <]
