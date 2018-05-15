@@ -1,6 +1,6 @@
 ---
 title: Введение
-contributors: [rigor789, tjvantol, sn0wil]
+contributors: [sn0wil]
 ---
 
 ## Что такое [NativeScript](https://www.nativescript.org/)?

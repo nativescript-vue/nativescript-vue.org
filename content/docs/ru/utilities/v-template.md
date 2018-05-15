@@ -1,5 +1,5 @@
 ---
-title: Компоненте v-template
+title: Компонент v-template
 contributors: [sn0wil]
 ---
 
