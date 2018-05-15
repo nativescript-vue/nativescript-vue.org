@@ -4,32 +4,34 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#confirm
 contributors: [alexhiroshi]
 ---
 
-O ConfirmDialog funciona como um diálogo boleano (Sim/Não).
+O método `confirm()` exibe uma mensagem de confirmação com botões de Cancel e OK.
+
+O método faz parte do [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 
-```javascript
-const dialogs = require('tns-core-modules/ui/dialogs')
+## Uso básico
 
-module.exports = {
-  mounted() {
-    dialogs.confirm('Are you ready?')
-    .then(result => {
-      console.log(result)
-    })
-  }
-}
-```
-
-O ConfirmDialog está disponível globalmente, ao invés de importa do módulo de dialogs, você pode simplesmente chamar
+O método `confirm()` está disponível globalmente. Você pode chamar de qualquer lugar do seu aplicativo.
 
 ```javascript
-confirm('Are you ready?')
-.then(result => {
-  console.log(result)
-})
+confirm('Your message')
+  .then(result => {
+    console.log(result);
+  });
 ```
 
-em qualquer lugar do seu código.
+## Configurar opções
+
+```javascript
+confirm({
+  title: "Your title",
+  message: "Your message",
+  okButtonText: "Your OK button text",
+  cancelButtonText: "Your Cancel text"
+}).then(result => {
+  console.log(result);
+});
+```
 
 [> screenshots for=ConfirmDialog <]
