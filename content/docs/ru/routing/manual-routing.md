@@ -1,17 +1,17 @@
 ---
-title: Manual Routing
-contributors: [eddyverbruggen, fartek, rigor789]
+title: Ручной роутинг
+contributors: [sn0wil]
 ---
 
-The easiest way to do routing in NativeScript-Vue is using the convenience functions
-`$navigateTo`, `$navigateBack`, and `$showModal`.
+Самый простой способ сделать роутинг в NativeScript-Vue - это использовать удобные функции
+`$navigateTo`, `$navigateBack`, и `$showModal`.
 
 ### `$navigateTo`
 
-Suppose you have components `Master` and `Detail` and want to navigate from `Master` to `Detail`,
-then you have two ways to call `$navigateTo`: in the view, or in a method:
+Предположим, что у вас есть компоненты `Master` и` Detail`, и вы хотите перейти от `Master` к `Detail`.
+В этом случае у вас есть два способа вызова `$navigateTo`: в представлении или в методе:
 
-The `$navigateTo` accepts a second `options` parameter, which allows you to specify the transition as well as pass in a `context` object which will be used when instantiating the target component. This is useful when you want to pass props to the target component. For example: 
+`$navigateTo` принимает второй параметр `options`, который позволяет вам указать переход, а также передать объект `context`, который будет использоваться при создании экземпляра целевого компонента. Это полезно, если вы хотите передать свойства целевому компоненту. Например:
 
 ```js
 this.$navigateTo(Detail, {
@@ -27,11 +27,11 @@ this.$navigateTo(Detail, {
 });
 ```
 
-To read more about the options you can pass [head over to the documentation for NavigationEntry](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
+Для получения более подробной информации вы можете перейти к [документации по NavigationEntry](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
 
-#### In the view
+#### В представлении
 
-Expose the `Detail` component through a `data` property in the `Master` component and invoke `$navigateTo(<propertyName>)` in the view directly. 
+Выделите компонент `Detail` через свойство `data` в компоненте `Master` и вызовите `$navigateTo (<propertyName>)` в представлении напрямую.
 
 ```vue
 const Vue = require('nativescript-vue');
@@ -69,9 +69,9 @@ new Vue({
 }).$start()
 ```
 
-#### In a method
+#### В методе
 
-Bind a button to a method and use `this.$navigateTo(Detail)` to navigate to the `Detail` component in that method,
+Cвяжите кнопку с методом и используйте `this.$navigateTo(Detail)`, чтобы перейти к компоненту `Detail` в этом методе,
 
 ```vue
 const Master = {
@@ -105,7 +105,7 @@ const Detail = {
 
 ### `$navigateBack`
 
-Add a button to the `Detail` component, which simply triggers the globally exposed `$navigateBack` function.
+Добавьте кнопку в компонент `Detail`, который просто запускает глобально открытую функцию` $navigateBack`.
 
 ```vue
 const Detail = {
@@ -122,10 +122,10 @@ const Detail = {
 
 ### `$showModal`
 
-If you want to show the `Detail` page modally, simply replace `$navigateTo` by `$showModal`.
-As before, you can call this method either from the view or a function.
+Если вы хотите показать страницу `Detail` модально, просто замените `$navigateTo` на` $showModal`.
+Как и раньше, этот метод можно вызвать либо из представления, либо из функции.
 
-To close the modal, call `$modal.close`.
+Чтобы закрыть модальное предствление, вызовите `$modal.close`.
 
 ```vue
 const Master = {
@@ -157,17 +157,17 @@ const Detail = {
 };
 ```
 
-#### Passing props to the modal
+#### Передача параметров в модальное представление
 
-Properties can be passed to the modal by including `propsData` inside a `context` object passed as an option when calling `$showModal`.
+Свойства могут быть переданы в модальное представление с помощью `propsData` внутри объекта `context`, переданного как опция при вызове `$showModal`.
 
-If we were to pass an `id` prop to the Detail component from the previous Master/Detail example, we would show the modal using:
+Если нам необходимо передать свйоство `id` в компонент `Detail` из предыдущего прмиера с `Master/Detail`, мы могли бы показать модальное представление, используя:
 
 ```js
 this.$showModal(Detail, { context: { propsData: { id: 14 }}});
 ```
 
-The Detail component also has to be updated to be able to accept the `id` prop. This is done by defining a `props` option inside the component:
+Компонент `Detail` также должен быть обновлен, чтобы иметь воможность использовать свойство `id`. Это делается путем определения параметра `props` внутри компонента:
 
 ```vue
 const Detail = {
@@ -184,22 +184,22 @@ const Detail = {
 };
 ```
 
-[Read more about props in the official Vue documentation](https://vuejs.org/v2/guide/components-props.html)
+[Подробнее о параметрах читайте в официальной документации Vue](https://ru.vuejs.org/v2/guide/components-props.html)
 
-The prop is now accessible throughout the component with `this.id`.
+Теперь свйоство доступно всему компоненту с помощью `this.id`.
 
-#### Returning data from the modal
+#### Возвращение данныхз из модального представления
 
-When calling `$showModal`, a promise is returned which resolves with any data passed to the `$modal.close` function.
+При вызове `$showModal` возвращается promise, который разрешается(resolve) с любыми данными, переданными функции `$modal.close`.
 
-For example:
+Например:
 
 ```js
-// ... inside Master
-this.$showModal(Detail).then(data => console.log(data)); // Will output 'Foo'
+// ... внутри Master
+this.$showModal(Detail).then(data => console.log(data)); // Будет выведено 'Foo'
 ```
 
 ```html
-// ... inside Detail
+// ... внутри Detail
 <Button @tap="$modal.close('Foo')" text="Close" />    
 ```
