@@ -1,6 +1,6 @@
 ---
 title: Использование Vue плагинов
-contributors: [jlooper, sn0wil]
+contributors: [sn0wil]
 ---
 
 ## vue-router

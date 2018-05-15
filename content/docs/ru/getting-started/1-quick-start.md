@@ -1,6 +1,6 @@
 ---
 title: Быстрый старт
-contributors: [rigor789, eddyverbruggen, damain, ikoevska, sn0wil]
+contributors: [sn0wil]
 ---
 Если вы хотите просто попробовать NativeScript-Vue, мы рекомендуем сделать это на [NativeScript Playground](https://play.nativescript.org?template=play-vue). Это самый простой способ для знакомства с NativeScript-Vue.
 

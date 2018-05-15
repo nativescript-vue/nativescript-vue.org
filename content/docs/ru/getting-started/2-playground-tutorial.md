@@ -1,6 +1,6 @@
 ---
 title:  Руководство по Playground
-contributors: [ikoevska, rigor789, hines-sharrod, sn0wil]
+contributors: [sn0wil]
 ---
 
 [NativeScript Playground](https://play.nativescript.org?template=play-vue) - это площадка, на которой вы можете попробовать NativeScript с Vue.js прямо в вашем браузере, пока не освоите основы. Перейдите по ссылке и начните с перетаскивания компонента в ваш код. 

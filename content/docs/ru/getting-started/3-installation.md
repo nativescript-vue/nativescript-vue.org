@@ -1,6 +1,6 @@
 ---
 title: Установка
-contributors: [rigor789 , TheOriginalJosh, eddyverbruggen, sn0wil]
+contributors: [sn0wil]
 ---
 Для использования NativeScript-Vue, ваша система должна быть настроена правильно, чтобы ваши приложения могли компилироваться.
 
