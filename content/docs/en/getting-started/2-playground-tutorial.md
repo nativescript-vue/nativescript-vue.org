@@ -9,7 +9,19 @@ You can work in the Playground for as long as you like. You can use it to just g
 
 **This page consists of two parts:**
 * [Part 1: Getting familiar with the Playground](#part-1-getting-familiar-with-the-playground)
+    * [Before you start](#before-you-start)
+    * [The lay of the land](#the-lay-of-the-land)
+    * [Drag and drop to code](#drag-and-drop-to-code)
+    * [Check it out real-time](#check-it-out-real-time)
+    * [Configure your code](#configure-your-code)
 * [Part 2: Building an app](#part-2-building-an-app)
+    * [The bare Vue.js template](#the-bare-vuejs-template)
+    * [Basic design](#basic-design)
+    * [Basic functionality: Add tasks](#basic-functionality-add-tasks)
+    * [Basic functionality: View, complete, and delete tasks from the To Do tab](#basic-functionality-view-complete-and-delete-tasks-from-the-to-do-tab)
+    * [Basic functionality: View, return to active tasks, and delete tasks from the Completed tab](#basic-functionality-view-return-to-active-tasks-and-delete-tasks-from-the-completed-tab)
+    * [Advanced design: Styled input field and button](#advanced-design-styled-input-field-and-button)
+
 
 # Part 1: Getting familiar with the Playground
 
