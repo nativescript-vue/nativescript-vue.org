@@ -13,7 +13,7 @@ contributors: [EddyVerbruggen, naderio, rigor789, sn0wil]
 $ npm install --save nativescript-gradient
 ```
 
-**Важно:** Если вы используете [vue-cli-template](/en/docs/getting-started/templates/#nativescript-vuevue-cli-template) вам может потребоваться запустить:
+**Важно:** Если вы используете [vue-cli-template](/ru/docs/getting-started/templates/#nativescript-vuevue-cli-template), вам может потребоваться запустить:
 
 ```shell
 $ npm run clean
