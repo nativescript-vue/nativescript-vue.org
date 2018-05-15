@@ -4,21 +4,21 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action
 contributors: [alexhiroshi]
 ---
 
-O ActionDialog permite você criar um diálogo com uma lista de opções selecionáveis.
+O método `action()` exibe uma lista de opções selecionáveis e um botão para cancelar. Use-o para que o usuário escolha entre opções ou descarte a seleção.
+
+O método faz parte do [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 
-```javascript
-const dialogs = require('tns-core-modules/ui/dialogs')
+## Uso básico
 
-module.exports = {
-  mounted() {
-    dialogs.action('Choose one!', 'Or cancel...', ['cheese', 'wine'])
-    .then(result => {
-      console.log(result);
-    })
-  }
-}
+O método `action()` está disponível globalmente. Você pode chamar de qualquer lugar do seu aplicativo.
+
+```JavaScript
+action("Your message", "Cancel button text", ["Option1", "Option2"])
+  .then(result => {
+    console.log(result);
+  });
 ```
 
 [> screenshots for=ActionDialog <]
