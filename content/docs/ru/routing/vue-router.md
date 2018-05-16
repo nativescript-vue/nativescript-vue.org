@@ -1,30 +1,30 @@
 ---
 title: Vue Router
-contributors: [eddyverbruggen, rigor789]
+contributors: [sn0wil]
 ---
 
-If [Manual Routing](/en/docs/routing/manual-routing) doesn't cut it for your use-case,
-then you'll be happy to learn [the Vue router](https://router.vuejs.org/en/) is supported.
+Если [Ручная маршрутизация](/ru/docs/routing/manual-routing) не подходит для вашего случая, то
+тогда вы будете счастливы изучить [the Vue router](https://router.vuejs.org/ru/), который поддерживается в настоящий момент is supported
 
-With the router, there are two types of routing that you can use. Component based routing, and page based routing.
+C Vue-router существует два типа маршрутизации, которые вы можете использовать. Маршрутизация на основе компонентов и маршрутизация на основе страниц.
 
-Component based routing is where you specify the `<router-view />` component in your template, and the different routes will get placed into the view, and then when navigating the views will be swapped. This is useful sometimes, but in many cases what you want is to navigate to different pages.
+При компонентной маршрутизации вы указываете компонент `<router-view />` в своем шаблоне и различные маршруты будут отображены в том же представлении, заменяя предыдущий марщрут. Иногда это полезно, но во многих случаях вам нужно перейти на разные страницы.
 
-This document documents page routing in more detail, but please note that this feature is unstable at this point, and it is recommended that you stick to manual routing if you require different pages in your application. We are hoping to change this in the near future, and it is a priority on our todo list.
+Этот мануал документирует маршрутизацию страницы более подробно, но обратите внимание, что эта функция в данный момент нестабильна, и рекомендуется придерживаться ручной маршрутизации, если вам требуются разные страницы в приложении. Мы исправить это в ближайшем будущем, и это приоритетная задача в нашем списке.
 
-## Installation
-From a command prompt, run:
+## Установка
+В командной строке выполните:
 ```shell
 $ npm install --save vue-router
 ```
 
-## Usage
-Let's show a full example, broken down in a few pieces so we can provide some comments.
-Note that the Vue Router has more tricks up its sleeve, so be sure to visit
-[the official documentation](https://router.vuejs.org/en/).
+## Использование
+Давайте покажем полный пример, разбитый на несколько частей, чтобы мы могли оставить некоторые комментарии.
+Обратите внимание, что Vue Router имеет больше возможностей и хитрых подходов, поэтому обязательно посетите
+[официальную документацию](https://router.vuejs.org/ru/).
 
 ---
-Require Vue, VueRouter, and let them shake hands 🤝
+Требуется Vue, VueRouter, и дать им пожать руки 🤝
 ```js
 const Vue = require('nativescript-vue');
 const VueRouter = require('vue-router');
@@ -33,10 +33,10 @@ Vue.use(VueRouter);
 ```
 
 ---
-Define a `Master` page with the current router as its title (`$route.path`)
-and a button with a `@tap="$router.push('/detail')"` so a new page is pushed on the stack and navigated to.
+Определим страницу `Master` с текущим маршрутом в качестве названия (`$route.path`)
+и кнопку с кодом `@tap="$router.push('/detail')"`, который добавит новую страницу в очередь и перейдет на нее.
 
-Also, a button to the same page with a query param `user`.
+Также добавим кнопку на этой же странцие с параметром `user`.
 ```html
 const Master = {
   template: `
@@ -52,14 +52,15 @@ const Master = {
 ```
 
 ---
-Define a `Detail` page with a `NavigationButton`. On iOS this will automatically bring you back to the
-previous page in the stack, but for Android `tap` handler is required (which is ignored on iOS).
-So add `@tap="$router.back()"`.
 
-Remember that `user` query param we passed from the second button of the `Master` page? You can use it in the `Details`
-page like this: `<Label :text="$route.query.user">`
+Определим страницу `Detail` с `NavigationButton`. На iOS это автоматически вернет вас на
+предыдущую страницу в очереди, но для Android нужен `tap` обработчик (который игнорируется iOS).
+Поэтому добавим `@tap="$router.back()"`.
 
-Lastly, you can navigate back (and forth) with `$router.go(<number-of-pages>)` as demonstrated below.
+Помните, что параметр `user`, который мы передаем из второй кнопки в страницу `Master`? Вы можете использовать это 
+на странице `Details`: `<Label :text="$route.query.user">`
+
+Наконец, вы можете перемещаться назад (и вперед) с помощью `$router.go(<number-of-pages>)`, как показано ниже.
 
 ```html
 const Detail = {
@@ -78,7 +79,7 @@ const Detail = {
 ```
 
 ---
-Define all the pages of your application as follows:
+Определим все страницы вашего приложения:
 ```js
 const router = new VueRouter({
   pageRouting: true,
@@ -91,13 +92,13 @@ const router = new VueRouter({
 ```
 
 ---
-And load one of those routes when the app starts:
+И перейдем на один из маршрутов, когда приложение запустится:
 ```js
 router.replace('/master');
 ```
 
 ---
-Oh, and don't forget to tell `Vue` about your routes:
+Оу, и не забудем сказать `Vue`  вашим маршрутах:
 ```js
 new Vue({
   router

@@ -1,6 +1,6 @@
 ---
 title: Использование плагинов NativeScript
-contributors: [EddyVerbruggen, naderio, rigor789, sn0wil]
+contributors: [sn0wil]
 ---
 
 Плагины работают так же, как и в любом другом приложении NativeScript, но вы можете задаться вопросом, как модули *UI* будут работать с Vue.

@@ -1,6 +1,6 @@
 ---
 title: Шаблоны
-contributors: [rigor789, tralves, jlooper, lewebsimple, sn0wil]
+contributors: [sn0wil]
 outdated: false
 ---
 
