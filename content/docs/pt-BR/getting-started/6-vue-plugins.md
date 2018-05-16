@@ -100,4 +100,4 @@ new Vue({
 }).$start()
 ```
 
-Mais informações sobre Vuex e como gerenciar estados, pode ser encontrado na [documentação do Vuex](https://vuex.vuejs.org/en/core-concepts.html). Uma arquitetura boa para gerenciar vários elementos do Vuex, pode ser encontrado no aplicativo Groceries na [pasta `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/app/store).
+Mais informações sobre Vuex e como gerenciar estados, pode ser encontrado na [documentação do Vuex](https://vuex.vuejs.org/en/core-concepts.html). Uma arquitetura boa para gerenciar vários elementos do Vuex, pode ser encontrado no aplicativo Groceries na [pasta `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store).

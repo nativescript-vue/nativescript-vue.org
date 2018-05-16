@@ -102,4 +102,4 @@ new Vue({
 }).$start()
 ```
 
-Больше информации о Vuex и о том, как управлять состоянием вы можете найти в [Vuex документации](https://vuex.vuejs.org/ru/). Хорошую архитектуру для управления различными элементами вы можете найти в приложении Groceries в [папке `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/app/store).
+Больше информации о Vuex и о том, как управлять состоянием вы можете найти в [Vuex документации](https://vuex.vuejs.org/ru/). Хорошую архитектуру для управления различными элементами вы можете найти в приложении Groceries в [папке `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store).

@@ -100,4 +100,4 @@ new Vue({
 }).$start()
 ```
 
-More information about Vuex and how to manage state can be found in [the Vuex documentation](https://vuex.vuejs.org/en/core-concepts.html). A good architecture to manage the various elements of Vuex can be found in the Groceries app in the [`/store` folder](https://github.com/tralves/groceries-ns-vue/tree/master/app/store).
+More information about Vuex and how to manage state can be found in [the Vuex documentation](https://vuex.vuejs.org/en/core-concepts.html). A good architecture to manage the various elements of Vuex can be found in the Groceries app in the [`/store` folder](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/).
