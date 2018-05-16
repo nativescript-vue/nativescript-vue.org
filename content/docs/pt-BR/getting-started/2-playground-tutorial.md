@@ -3,7 +3,7 @@ title: Tutorial do Playground
 contributors: [alexhiroshi]
 ---
 
-O [Playground do NativeScript](https://play.nativescript.org?template=play-vue) é um lugar na nuvem onde você pode apenas brincar com NativeScript e Vue.js no seu navegador até descobrir o báscio. Acesse o link e comece arrastando e soltando os componentes na parte de códigos.
+O [Playground do NativeScript](https://play.nativescript.org?template=play-vue) é um lugar na nuvem onde você pode apenas brincar com NativeScript e Vue.js no seu navegador até descobrir o básico. Acesse o link e comece arrastando e soltando os componentes na parte de códigos.
 
 Você pode trabalhar no Playground por quanto tempo quiser. Pode usar para ter um gostinho do desenvolvimento com NativeScript ou desenvolver todo o seu projeto. Contudo, quando você estiver pronto para publicar o seu aplicativo, precisará ir para a parte mais avançada e [instalar as ferramentas do NativeScript localmente](/pt-BR/docs/getting-started/installation) e então [escolher um template para começar](/pt-BR/docs/getting-started/templates).
 
@@ -112,7 +112,7 @@ Veja como o seu aplicativo ficará no início e no final dessa seção.
 
 ### Conceitos básicos do NativeScript
 
-O elemento `<Page>` é o elemnto de nível superior da interface de todos os aplicativos NativeScript+Vue.js. Todos os outros elementos são aninhados dentro.
+O elemento `<Page>` é o elemento de nível superior da interface de todos os aplicativos NativeScript+Vue.js. Todos os outros elementos são aninhados dentro.
 
 O elemento `<ActionBar>` exibe uma barra de ação para o `<Page>`. Um `<Page>` não pode conter mais que um `<ActionBar>`.
 
@@ -161,7 +161,7 @@ Veja como o seu aplicativo ficará no início e no final dessa seção.
 
 ### Alguns princípios básicos do NativeScript
 
-Os componentes de layout deixam você organizar vários widgets de UI para o seu aplicativo. Sempre que precisar adicionar mais de um widget na tela do aplicativo, provavelmente você use as opções disponíveis de layout. O `<StackLayout>` e `<GridLayout>` são básicos, mas opções versáteis, deixando você posicionar os elementos na vertical ou em um layout semelhante a uma tabela, repectivamente. Enquanto o `<StackLayout>` lida com elementos em sua sequência natural, o `<GridLayout>` deixa você escolher o posicionamento exato dos seus elementos no grid.
+Os componentes de layout deixam você organizar vários widgets de UI para o seu aplicativo. Sempre que precisar adicionar mais de um widget na tela do aplicativo, provavelmente usará as opções de layout disponíveis. O `<StackLayout>` e `<GridLayout>` são básicos, mas opções versáteis, deixando você posicionar os elementos na vertical ou em um layout semelhante a uma tabela, repectivamente. Enquanto o `<StackLayout>` lida com elementos em sua sequência natural, o `<GridLayout>` deixa você escolher o posicionamento exato dos seus elementos no grid.
 
 ### Implementação de requisitos
 
@@ -175,7 +175,7 @@ Use o `<ListView>` para exibir as tarefas abaixo do campo.
   * Defina a largura do grid para 100% de modo que ocupe toda a largura da tela.
   * Remova quaisquer configurações adicionais para o grid.
   * Remova todos elementos `<Label>` de dentro do bloco `<GridLayout>`.
-1. Remova o componente `<Label>` do `<TabViewItem>`. Arraste e solte um componente `<TextField>`, um `<Button>` e um `<ListView>` dentro do bloco `<GridLayout>`.<br/>O Playground adicionar código JavaScript no seu código pela primeira vez. Note o bloco `data()` e `methods` adicionado em cima do bloco `template`. Nas próximas etapas de implementação, você precisará adicionar código a essas seções para criar alguma funcionalidade do aplicativo.
+1. Remova o componente `<Label>` do `<TabViewItem>`. Arraste e solte um componente `<TextField>`, um `<Button>` e um `<ListView>` dentro do bloco `<GridLayout>`.<br/>O Playground vai adicionar código JavaScript no seu código pela primeira vez. Note o bloco `data()` e `methods` adicionado em cima do bloco `template`. Nas próximas etapas de implementação, você precisará adicionar código a essas seções, para criar alguma funcionalidade do aplicativo.
 1. Configurar o posicionamento dos elementos dentro do grid.
   * Defina o `<TextField>` para habilitar a primeira coluna e a primeira linha.
   * Defina o `<Button>` para habilitar a segunda coluna e a primeira linha.
@@ -183,8 +183,8 @@ Use o `<ListView>` para exibir as tarefas abaixo do campo.
 1. Limpe o código de exemplo do `<TextField>` e do `<ListView>`.
 1. Registre as tarefas recentes no console.
 1. Adicione as tarefas recentes no array de tarefas.
-1. Limpe o campo texto depois da entreda.
-1. Lista o nome e o status das tarefas na tela.
+1. Limpe o campo texto depois da entrada.
+1. Liste os nomes das tarefas na tela.
 
 ```JavaScript
 new Vue({
@@ -196,12 +196,12 @@ new Vue({
   },
   methods: {
     onToDoTap: function (args) {
-      console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
+      console.log('Task with index: ' + args.index + ' tapped'); // Registra log das tarefas tocadas no console para debug.
     },
     onButtonTap() {
-      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.push({ name: this.textFieldValue, status: "NEW" }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
-      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+      console.log("New task added: " + this.textFieldValue + "."); // Registra log da nova tarefa no console para debug.
+      this.todos.push({ name: this.textFieldValue, status: "NEW" }); // Adiciona a nova tarefa no array `todos[]`. Novas tarefas são imediatamente exibidas na tela.
+      this.textFieldValue = ""; // Limpa o input de texto, desta forma o usuário está apto a adicionar novas tarefas imediatamente.
     },
   },
 
@@ -214,7 +214,7 @@ new Vue({
         <TabViewItem title="To Do">
           <!-- Positions an input field, a button, and the list of tasks in a grid. -->
           <GridLayout columns="3*,*" rows="auto,auto" width="100%">
-            <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <TextField row="0" col="0" v-model="textFieldValue" hint="Enter text..." editable="true" @returnPress="onButtonTap" /> <!-- Configura o input de texto e garante que pressionar o Return no teclado produz o mesmo resultado que tocar no botão. -->
             <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
 
             <ListView row="1" col="0" colspan="2" for="todo in todos" @itemTap="onToDoTap">
