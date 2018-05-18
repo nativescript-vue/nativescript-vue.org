@@ -82,4 +82,4 @@ new Vue({
 }).$start()
 ```
 
-Vuex에 대한 더 자세한 정보와 상태 관리 방법은 [Vuex 문서](https://vuex.vuejs.org/en/core-concepts.html)를 참조하세요. Vuex 다양한 요소를 관리하는 좋은 아키텍쳐는 Groceries 앱의 [`/store` 폴더](https://github.com/tralves/groceries-ns-vue/tree/master/app/store)의 에서 볼 수 있습니다.
+Vuex에 대한 더 자세한 정보와 상태 관리 방법은 [Vuex 문서](https://vuex.vuejs.org/en/core-concepts.html)를 참조하세요. Vuex 다양한 요소를 관리하는 좋은 아키텍쳐는 Groceries 앱의 [`/store` 폴더](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/)의 에서 볼 수 있습니다.

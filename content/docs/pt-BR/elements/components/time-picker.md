@@ -14,7 +14,7 @@ Veja também: [DatePicker](/pt-BR/docs/elements/components/date-picker).
 <TimePicker :hour="selectedHour" :minute="selectedMinute" />
 ```
 
-`<TimePicker>` suporta two-way data binding usando `v-model`:
+`<TimePicker>` suporta two-way data binding usando `v-model`.
 
 ```html
 <TimePicker v-model="selectedTime" />

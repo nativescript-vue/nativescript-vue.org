@@ -2,7 +2,7 @@
 <html lang="<%= current.locale || 'en' %>">
 <head>
     <%- include('_partials/meta') %>
-    <title><%= meta.sitename %></title>
+    <title><%= current.title %> - <%= meta.sitename %></title>
 </head>
 <body>
 
@@ -39,13 +39,13 @@
                     <div class="bg-grey-lighter border-l-8 border-blue-dark
                          text-blue-dark p-4 my-8">
                         <p>
-                            This is an overview of the most common usage of the <%= current.title %>,
-                            to learn about all the available properties, methods and events head over
+                            This is an overview of the most common usage of <%= current.title %>.
+                            For more information about the available properties, methods, and events, head over
                             to <a href="<%= current.apiRef %>"
                                   target="_blank"
                                   rel="noopener"
                                   class="no-underline text-green hover:text-blue-dark">
-                                the full API docs for the <%= current.title %>.
+                                the complete API documentation for <%= current.title %>.
                             </a>
                         </p>
                     </div>
