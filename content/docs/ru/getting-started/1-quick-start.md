@@ -1,6 +1,6 @@
 ---
 title: Быстрый старт
-contributors: [sn0wil]
+contributors: [sn0wil, lex111]
 ---
 Если вы хотите просто попробовать NativeScript-Vue, мы рекомендуем сделать это на [NativeScript Playground](https://play.nativescript.org?template=play-vue). Это самый простой способ для знакомства с NativeScript-Vue.
 
@@ -13,7 +13,7 @@ $ cd <project-name>
 $ npm install
 ```
 
-и после этого запустите ваше приложение:
+и после этого запустите ваше приложение, используя:
 
 ```shell
 $ npm run watch:<platform>
@@ -21,4 +21,4 @@ $ npm run watch:<platform>
 
 где `platform` - это `ios` или `android`.
 
-Чтобы узнать больше о доступных шаблонах, перейдите к [документации по шаблонам](/ru/docs/getting-started/templates).
+Для получения дополнительной информации о доступных шаблонах перейдите к [документации по шаблонам](/ru/docs/getting-started/templates).
