@@ -1,6 +1,6 @@
 ---
 title: Установка
-contributors: [sn0wil]
+contributors: [sn0wil, lex111]
 ---
 Для использования NativeScript-Vue, ваша система должна быть правильно настроена, чтобы ваши приложения могли компилироваться.
 
@@ -13,6 +13,7 @@ contributors: [sn0wil]
 - [Linux](#linux) (для разработки Android-приложений на Linux)
 
 ### Node.js
+
 Загрузите и установите последнюю LTS-версию Node.js на [https://nodejs.org/](https://nodejs.org/). Перезапустите терминал и убедитесь, что установка прошла успешно с помощью команды `node --version`.
 
 ### NativeScript CLI
