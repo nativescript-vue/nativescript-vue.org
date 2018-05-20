@@ -20,7 +20,9 @@ contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen, ikoevs
 <TextView v-model="textViewValue" />
 ```
 
-### Displaying multi-line text with different styling
+[> screenshots for=TextView <]
+
+### Displaying multi-style text
 
 To apply multiple styles to the text in your `<TextView>`, you can use `<FormattedString>`
 
@@ -35,8 +37,6 @@ To apply multiple styles to the text in your `<TextView>`, you can use `<Formatt
   </FormattedString>
 </TextView>
 ```
-
-[> screenshots for=TextView <]
 
 ## Props
 
