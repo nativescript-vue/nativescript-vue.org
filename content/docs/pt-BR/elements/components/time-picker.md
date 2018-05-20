@@ -5,15 +5,16 @@ contributors: [alexhiroshi]
 
 ---
 
-O componente TimePicker permite o usuário selecionar a hora formatada.
+`<TimePicker>` é um componente de UI que permite o usuário selecionar a hora.
 
+Veja também: [DatePicker](/pt-BR/docs/elements/components/date-picker).
 ---
 
 ```html
 <TimePicker :hour="selectedHour" :minute="selectedMinute" />
 ```
 
-**Nota**: Esse componente suporta two-way data binding usando `v-model`:
+`<TimePicker>` suporta two-way data binding usando `v-model`.
 
 ```html
 <TimePicker v-model="selectedTime" />
@@ -32,7 +33,7 @@ O componente TimePicker permite o usuário selecionar a hora formatada.
 | `maxHour` | `Number` | A hora máxima selecionável.
 | `minMinute` | `Number` | O minuto mínimo selecionável.
 | `maxMinute` | `Number` | O minuto máximo selecionável.
-| `minuteInterval` | `Number` | O intervalo entre os minutos selecionáveis.
+| `minuteInterval` | `Number` | O intervalo entre os minutos selecionáveis. Por exemplo: 5 ou 15 minutos.<br>Valor padrão: `1`.
 
 ## Eventos
 
@@ -43,4 +44,4 @@ O componente TimePicker permite o usuário selecionar a hora formatada.
 ## Componente Nativo
 | Android | iOS |
 |---------|-----|
-| android.widget.TimePicker | UIDatePicker
+| [`android.widget.TimePicker`](https://developer.android.com/reference/android/widget/TimePicker) | [`UIDatePicker`](https://developer.apple.com/documentation/uikit/uidatepicker)
