@@ -229,7 +229,7 @@ new Vue({
     }
   },
   methods: {
-    onItemTap: function (args) {
+    onItemTap(args) {
       console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
     },
     onButtonTap() {
@@ -305,7 +305,7 @@ Out-of-the-box, the `<ListView>` component detects a tap gesture for every item 
   * Based on user selection, the method moves elements from the `todos` array to the `dones` array, deletes elements from the `todos` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
 
   ```JavaScript
-  onItemTap: function (args) {
+  onItemTap(args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
         .then(result => {
           console.log(result); // Logs the selected option for debugging.
@@ -338,7 +338,7 @@ new Vue({
     }
   },
   methods: {
-    onItemTap: function (args) {
+    onItemTap(args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
         .then(result => {
           console.log(result); // Logs the selected option for debugging.
@@ -420,7 +420,7 @@ For the second tab, modify the `onDoneTap` method:
 * Based on user selection, the method moves elements from the `dones` array to the `todos` array, deletes elements from the `dones` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
 
   ```JavaScript
-  onDoneTap: function (args) {
+  onDoneTap(args) {
     action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
     .then(result => {
       console.log(result); // Logs the selected option for debugging.
@@ -453,7 +453,7 @@ new Vue({
     }
   },
   methods: {
-    onItemTap: function (args) {
+    onItemTap(args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
         .then(result => {
           console.log(result); // Logs the selected option for debugging.
@@ -470,7 +470,7 @@ new Vue({
           }
       }) 
     },
-    onDoneTap: function (args) {
+    onDoneTap(args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
         .then(result => {
           console.log(result); // Logs the selected option for debugging.
@@ -552,7 +552,7 @@ With type selectors, you can select a UI component and apply styling to it. To s
 In `app.css`, change the font size, the color, and the margins around the `<TextField>`.
 
 ```CSS
-TextField{
+TextField {
     font-size: 20;
     color: #53ba82;
     margin-top: 10;
@@ -572,7 +572,7 @@ TextField{
 1. In `app.css`, create a style for the button. Modify the style to create a colorful button with rounded corners.
 
   ```CSS
-  #add-task-button{
+  #add-task-button {
     font-size: 20;
     font-weight: bold;
     color: white;
@@ -652,7 +652,7 @@ To implement a style particularly for the text of active tasks, you can set an `
 1. In `app.css`, create the style for active tasks. Set font size, color, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
 
   ```CSS
-  #active-task{
+  #active-task {
     font-size: 20;
     font-weight: bold;
     color: #53ba82;
