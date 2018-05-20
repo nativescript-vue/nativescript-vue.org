@@ -21,6 +21,8 @@ You can work in the Playground for as long as you like. You can use it to just g
     * [Basic functionality: View, complete, and delete tasks from the To Do tab](#basic-functionality-view-complete-and-delete-tasks-from-the-to-do-tab)
     * [Basic functionality: View, return to active tasks, and delete tasks from the Completed tab](#basic-functionality-view-return-to-active-tasks-and-delete-tasks-from-the-completed-tab)
     * [Advanced design: Styled input field and button](#advanced-design-styled-input-field-and-button)
+    * [Advanced design: Styled tab navigation](#advanced-design-styled-tab-navigation)
+    * [Advanced design: Styled active tasks](#advanced-design-styled-active-tasks)
 
 
 # Part 1: Getting familiar with the Playground
@@ -96,7 +98,8 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
   * Delete tasks: Tapping an active or completed task shows an action dialog with options
 * (In progress) Advanced design
   * Input and button for adding tasks are styled
-  * (Coming soon) Active tasks are styled
+  * Tabs are styled
+  * Active tasks are styled
   * (Coming soon) Completed tasks are styled
 * (Coming soon) Advanced functionality
   * (Coming soon) Store timestamp data for each task
@@ -226,7 +229,7 @@ new Vue({
     }
   },
   methods: {
-    onItemTap: function (args) {
+    onItemTap(args) {
       console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
     },
     onButtonTap() {
@@ -302,7 +305,7 @@ Out-of-the-box, the `<ListView>` component detects a tap gesture for every item 
   * Based on user selection, the method moves elements from the `todos` array to the `dones` array, deletes elements from the `todos` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
 
   ```JavaScript
-  onItemTap: function (args) {
+  onItemTap(args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
         .then(result => {
           console.log(result); // Logs the selected option for debugging.
@@ -335,7 +338,7 @@ new Vue({
     }
   },
   methods: {
-    onItemTap: function (args) {
+    onItemTap(args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
         .then(result => {
           console.log(result); // Logs the selected option for debugging.
@@ -417,7 +420,7 @@ For the second tab, modify the `onDoneTap` method:
 * Based on user selection, the method moves elements from the `dones` array to the `todos` array, deletes elements from the `dones` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
 
   ```JavaScript
-  onDoneTap: function (args) {
+  onDoneTap(args) {
     action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
     .then(result => {
       console.log(result); // Logs the selected option for debugging.
@@ -450,7 +453,7 @@ new Vue({
     }
   },
   methods: {
-    onItemTap: function (args) {
+    onItemTap(args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
         .then(result => {
           console.log(result); // Logs the selected option for debugging.
@@ -467,7 +470,7 @@ new Vue({
           }
       }) 
     },
-    onDoneTap: function (args) {
+    onDoneTap(args) {
       action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
         .then(result => {
           console.log(result); // Logs the selected option for debugging.
@@ -544,9 +547,9 @@ With type selectors, you can select a UI component and apply styling to it. To s
 
 ### Requirement implementation
 
-#### Input field
+#### Style the input field
 
-In `app.css`, change the font size and the color and the margins around the `<TextField>`.
+In `app.css`, change the font size, the color, and the margins around the `<TextField>`.
 
 ```CSS
 TextField {
@@ -555,11 +558,11 @@ TextField {
     margin-top: 10;
     margin-bottom: 10;
     margin-right: 5;
-    margin-left: 10;
+    margin-left: 20;
 }
 ```
 
-#### Button
+#### Style the button
 
 1. In `app.js` on line 63, add an `id` for the button.
 
@@ -574,10 +577,87 @@ TextField {
     font-weight: bold;
     color: white;
     background-color: #53ba82;
-    margin-top: 10;
+    margin-top: 20;
     margin-bottom: 10;
-    margin-right: 10;
+    margin-right: 20;
     margin-left: 5;
     border-radius: 20px;
+  }
+  ```
+  
+## Advanced design: Styled tab navigation
+
+### Section progress
+
+Here's how your app will look at the start and at the end of this section.
+
+| Tabs - No style | Tabs Styled 
+|-----|-------------|
+| ![Unstyled tabs](/screenshots/ns-playground/styled-button.jpg) | ![Styled tabs](/screenshots/ns-playground/styled-tabs.jpg) |
+
+### Some NativeScript basics
+
+`<TabView>` provides some styling properties out of the box. You can apply a text transform to each tab titles (`textTransform`) and change the font size and color globally (`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`). You can also change the background color of your tabs (`tabBackgroundColor`).
+
+> **NOTE:** Currently, `tabTextFontSize` does not work on iOS and you cannot change the font size of tab titles on iOS.
+
+### Requirement implementation
+
+#### Change color and font size of selected tab title
+
+In `app.js`, on line 57, add the `selectedTabTextColor` and `tabTextFontSize` property. If you're testing this on iOS, the font size will not change but should work fine on Android.
+
+```HTML
+<TabView height="100%" selectedTabTextColor="#53ba82" tabTextFontSize="20" >
+```
+
+#### Transform text
+
+In `app.js`, on lines 58 and 73, apply the `textTransform` property. You can use this property only on the `<TabViewItem>` level.
+
+```HTML
+<TabViewItem title="To Do" textTransform="uppercase" >
+```
+
+```HTML
+<TabViewItem title="Completed" textTransform="uppercase">
+```
+
+## Advanced design: Styled active tasks
+
+Here's how your app will look at the start and at the end of this section.
+
+| Active tasks - No style | Active tasks - no separator | Active tasks - styled active tasks |
+|-----|-------------|---|
+| ![Unstyled active tasks](/screenshots/ns-playground/styled-tabs.jpg) | ![No separator](/screenshots/ns-playground/styled-list-view-no-separator.jpg) | ![Styled list](/screenshots/ns-playground/styled-list-view-added-tasks.jpg) |
+
+### Some NativeScript basics
+
+`<ListView>` and `<Label>` have out of the box style properties that you can use to control elements such as the list separator or the text wrap from `app.js`. To change the font style, color, and positioning of text, you need to use CSS in `app.css`.
+
+To implement a style particularly for the text of active tasks, you can set an `id` for the `<Label>` element.
+
+### Requirement implementation
+
+1. In `app.js`, on line 67, set an `id` for the `<Label>` that represents active tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
+
+  ```HTML
+  <Label id="active-task" :text="todo.name" textWrap="true" >
+  ```
+1. On line 65, add the `separatorColor` property and set it to `transparent`. This way, the separator will no longer appear in your list.
+
+  ```HTML
+  <ListView for="todo in todos" @itemTap="onItemTap" height="100%" separatorColor="transparent">
+  ```
+1. In `app.css`, create the style for active tasks. Set font size, color, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
+
+  ```CSS
+  #active-task {
+    font-size: 20;
+    font-weight: bold;
+    color: #53ba82;
+    margin-left: 20;
+    padding-top: 5;
+    padding-bottom: 10;
   }
   ```
