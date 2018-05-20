@@ -96,6 +96,7 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
   * Delete tasks: Tapping an active or completed task shows an action dialog with options
 * (In progress) Advanced design
   * Input and button for adding tasks are styled
+  * Tabs are styled
   * (Coming soon) Active tasks are styled
   * (Coming soon) Completed tasks are styled
 * (Coming soon) Advanced functionality
@@ -580,4 +581,42 @@ TextField{
     margin-left: 5;
     border-radius: 20px;
   }
+  ```
+
+## Advanced design: Styled tab navigation
+
+### Section progress
+
+Here's how your app will look at the start and at the end of this section.
+
+| Tabs - No style | Tabs Styled 
+|-----|-------------|
+| ![Unstyled tabs](/screenshots/ns-playground/styled-button.jpg) | ![Styled tabs](/screenshots/ns-playground/styled-tabs.jpg) |
+
+### Some NativeScript basics
+
+`<TabView>` provides some styling properties out of the box. You can apply a text transform to each tab titles (`textTransform`) and change the font size and color globally (`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`). You can also change the background color of your tabs (`tabBackgroundColor`).
+
+> **NOTE:** Currently, `tabTextFontSize` does not work on iOS and you cannot change the font size of tab titles on iOS.
+
+### Requirement implementation
+
+#### Change color of selected tab title
+
+* In `app.js`, on line 57, add the `selectedTabTextColor` property.
+
+  ```HTML
+  <TabView height="100%" selectedTabTextColor="#53ba82" >
+  ```
+
+#### Transform text
+
+* In `app.js`, on lines 58 and 73, apply the `textTransform` property. You can use this property only the `<TabViewItem>` level.
+
+  ```HTML
+  <TabViewItem title="To Do" textTransform="uppercase" >
+  ```
+
+  ```HTML
+  <TabViewItem title="Completed" textTransform="uppercase">
   ```
