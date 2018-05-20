@@ -584,7 +584,7 @@ TextField {
     border-radius: 20px;
   }
   ```
-
+  
 ## Advanced design: Styled tab navigation
 
 ### Section progress
