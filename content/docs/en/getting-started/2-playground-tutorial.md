@@ -549,7 +549,7 @@ With type selectors, you can select a UI component and apply styling to it. To s
 In `app.css`, change the font size and the color and the margins around the `<TextField>`.
 
 ```CSS
-TextField{
+TextField {
     font-size: 20;
     color: #53ba82;
     margin-top: 10;
@@ -569,7 +569,7 @@ TextField{
 1. In `app.css`, create a style for the button. Modify the style to create a colorful button with rounded corners.
 
   ```CSS
-  #add-task-button{
+  #add-task-button {
     font-size: 20;
     font-weight: bold;
     color: white;
