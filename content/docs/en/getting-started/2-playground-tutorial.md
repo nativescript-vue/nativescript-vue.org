@@ -601,17 +601,17 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Requirement implementation
 
-#### Change color of selected tab title
+#### Change color and font size of selected tab title
 
-* In `app.js`, on line 57, add the `selectedTabTextColor` property.
+* In `app.js`, on line 57, add the `selectedTabTextColor` and `tabTextFontSize` property. If you're testing this on iOS, the font size will not change but should work fine on Android.
 
   ```HTML
-  <TabView height="100%" selectedTabTextColor="#53ba82" >
+  <TabView height="100%" selectedTabTextColor="#53ba82" tabTextFontSize="20" >
   ```
 
 #### Transform text
 
-* In `app.js`, on lines 58 and 73, apply the `textTransform` property. You can use this property only the `<TabViewItem>` level.
+* In `app.js`, on lines 58 and 73, apply the `textTransform` property. You can use this property only on the `<TabViewItem>` level.
 
   ```HTML
   <TabViewItem title="To Do" textTransform="uppercase" >
