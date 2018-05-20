@@ -629,7 +629,7 @@ Here's how your app will look at the start and at the end of this section.
 
 | Active tasks - No style | Active tasks - no separator | Active tasks - styled active tasks |
 |-----|-------------|---|
-| ![Unstyled active tasks](/screenshots/ns-playground/styled-list-view-no-separator.jpg) | ![No separator](/screenshots/ns-playground/styled-tabs.jpg) | ![Styled list](/screenshots/ns-playground/styled-list-view-added-tasks.jpg) |
+| ![Unstyled active tasks](/screenshots/ns-playground/styled-tabs.jpg) | ![No separator](/screenshots/ns-playground/styled-list-view-no-separator.jpg) | ![Styled list](/screenshots/ns-playground/styled-list-view-added-tasks.jpg) |
 
 ### Some NativeScript basics
 
