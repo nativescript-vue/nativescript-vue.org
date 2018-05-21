@@ -1,10 +1,11 @@
 ---
 title: ActionItem
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionitem
-contributors: [rigor789]
+contributors: [sn0wil]
 ---
 
 The ActionItem component is used to add additional action buttons to the ActionBar.
+ActionItem - компонент, используемый для добавления дополнительных кнопок действия на ActionBar.
 
 ---
 
@@ -19,9 +20,9 @@ The ActionItem component is used to add additional action buttons to the ActionB
 </ActionBar>
 ```
 
-#### Conditionally showing action items
+#### Условный показ элементов ActionItem
 
-ActionItems can be displayed based on a condition using the `v-show` directive.
+Элементы ActionItem могут быть показаны на основе условия, использующего директиву `v-show`.
 
 ```html
 <ActionBar title="My App">
@@ -40,17 +41,17 @@ ActionItems can be displayed based on a condition using the `v-show` directive.
 </ActionBar>
 ```
 
-## Props
+## Свойства
 
-| name | type | description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `ios.systemIcon` | `String` | Sets the icon for iOS.
-| `android.systemIcon` | `String` | Sets the icon for Android.
-| `ios.position` | `String` | Sets the position for iOS.<br>Possible values:<br>- `left` (default): Puts the item on the left side of the ActionBar.<br>- `right`: Puts the item on the right side of the ActionBar.
-| `android.position` | `String` | Sets the position for Android.<br>Possible values:<br>- `actionBar` (default): Puts the item in the ActionBar.<br>- `popup`: Puts the item in the options menu. Items will be rendered as text.<br>- `actionBarIfRoom`: Puts the item in the ActionBar if there is room for it. Otherwise, puts it in the options menu.
+| `ios.systemIcon` | `String` | Устанавливет иконку для iOS.
+| `android.systemIcon` | `String` | Устанавливает иконку для Android.
+| `ios.position` | `String` | Устанавливает расположение для iOS.<br>Допустимые значения:<br>- `left` (по-уолчанию): Устанавливает элемент с левого края в ActionBar.<br>- `right`: Устанавливает элемент с правого края в ActionBar.
+| `android.position` | `String` | Устанавливает расположение Android.<br>Допустимые значения:<br>- `actionBar` (по-уолчанию): Устанавливает элемент внутри ActionBar.<br>- `popup`: Устанавливает элемент в меню опций. Элемент будет отрисован как текст.<br>- `actionBarIfRoom`: Устанавливает элемент в ActionBar, если для него есть достаточно места. Иначе располагает элемент в меню опций..
 
-## Events
+## События
 
-| name | description |
+| Имя | Описание |
 |------|-------------|
-| `tap`| Emitted when the ActionItem has been tapped.
+| `tap`| Вызывается при нажатии на ActionItem.

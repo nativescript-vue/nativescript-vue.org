@@ -1,12 +1,12 @@
 ---
-title: Label
+title: Label/Текст
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_label_.label
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [sn0wil]
 ---
 
-`<Label>` is a UI component that displays read-only text.
+`<Label>`- это визуальный компонент, показывающий текст, доступный только в режиме для чтения.
 
-**IMPORTANT**: This `<Label>` is **not** the same as the HTML `<Label>`.
+**ВАЖНО**: Этот `<Label>` **не** то же самое, что HTML `<Label>`.
 
 ---
 
@@ -16,9 +16,9 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 
 [> screenshots for=Label <]
 
-### Styling the label
+### Стилизация элемента label
 
-If you need to style parts of the text, you can use a combination of a [`FormattedString`](https://docs.nativescript.org/cookbook/formatted-string-ng) and [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span) elements.
+Если вам необходимо применить стили, то вы можете использовать комбинацию [`FormattedString`](https://docs.nativescript.org/cookbook/formatted-string-ng) и [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span) элементов.
 
 ```html
 <Label textWrap="true">
@@ -32,14 +32,14 @@ If you need to style parts of the text, you can use a combination of a [`Formatt
 </Label>
 ```
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `text` | `String` | Gets or sets the text of the label.
-| `textWrap` | `Boolean` | Gets or sets whether the label wraps text.<br/>Default value: `false`.
+| `text` | `String` | Задает или получает текст для отображения.
+| `textWrap` | `Boolean` | Задает или получает значение, оборачивет текст элемент label.<br/>Значение по-умолчанию: `false`.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

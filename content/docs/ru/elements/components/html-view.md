@@ -1,12 +1,12 @@
 ---
 title: HtmlView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_html_view_.htmlview
-contributors: [MisterBrownRSA, rigor789, ikoevska]
+contributors: [sn0wil]
 ---
 
-`<HtmlView>` is a UI component that lets you show static HTML content.
+`<HtmlView>` -визуальный компонент, позволяющий показывать статический HTML контент.
 
-See also: [WebView](/en/docs/elements/components/web-view).
+Также смотрите: [WebView](/ru/docs/elements/components/web-view).
 
 ---
 
@@ -16,13 +16,13 @@ See also: [WebView](/en/docs/elements/components/web-view).
 
 [> screenshots for=HtmlView <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `html` | `String` | The HTML content to be shown.
+| `html` | `String` | HTML контент, который будет показан.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

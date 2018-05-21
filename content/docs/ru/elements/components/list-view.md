@@ -1,15 +1,15 @@
 ---
-title: ListView
+title: ListView/Список
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_view_.listview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [sn0wil]
 ---
 
-`<ListView>` is a UI component that shows items in a vertically scrolling list. To set how the list shows individual items, you can use the `<v-template>` component.
+`<ListView>` - визуальный комопонент, показывающий список элементов, который монжно вертикально прокручивать (скроллить). Для задания того, как будет отображаться каждый компонент, вы можете использовать `<v-template>`.
 
 ```html
 <ListView for="item in listOfItems" @itemTap="onItemTap">
   <v-template>
-    <!-- Shows the list item label in the default color and stye. -->
+    <!-- Показывает список с item label с заданными по умолчанию стилями. -->
     <Label :text="item.text" />
   </v-template>
 </ListView>
