@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_flexbox_
 contributors: [lex111]
 ---
 
-Контейнер FlexboxLayout&nbsp;&mdash; это неточная реализация [Css Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+Контейнер FlexboxLayout — это неточная реализация [Css Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 
 ### Примеры
 
@@ -89,7 +89,7 @@ contributors: [lex111]
 
 ## Дополнительные свойства дочерних элементов
 
-Когда этот элемент - прямой дочерний элемент FlexboxLayout, следующие свойства:
+Когда этот элемент — прямой дочерний элемент FlexboxLayout, доступны следующие свойства:
 
 | Имя | Тип | Описание |
 |------|------|-------------|
