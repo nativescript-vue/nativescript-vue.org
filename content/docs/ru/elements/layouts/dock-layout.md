@@ -52,8 +52,8 @@ DockLayout - это слой, обеспечивающий механизм ст
 
 ## Дополнительные свойства дочерних элементов
 
-When an element is a direct child of the DockLayout, the following
-props get a meaning:
+Когда элемент прямой дочерний элемент DockLayout, доступны следующие
+свойства:
 
 | название | тип | описание |
 |------|------|-------------|
