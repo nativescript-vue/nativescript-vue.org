@@ -1,37 +1,37 @@
 ---
 title: LoginDialog
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#login
-contributors: [MisterBrownRSA, rigor789, ikoevska]
+contributors: [lex111]
 ---
 
-The `login()` method shows a dialog where the user can provide login credentials.
+Метод `login()` показывает диалоговое окно, в котором пользователь может ввести учетные данные для входа.
 
-The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+Этот метод является частью [модуля `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 
-## Basic use
+## Основное использование
 
-The `login()` method is available globally. You can call it anywhere in your app.
+Метод `login()` доступен глобально. Вы можете вызывать его в любом месте вашего приложения.
 
 ```javascript
-login("Your message", "Username field value", "Password field value").then(result => {
-  console.log(`Dialog result: ${result.result}, user: ${result.userName}, pwd: ${result.password}`);
+login("Ваше сообщение", "Значение поля пользователя", "Значение поля пароля").then(result => {
+  console.log(`Результат диалога: ${result.result}, пользователь: ${result.userName}, пароль: ${result.password}`);
 });
 ```
 
-## Configure dialog options
+## Настройка параметров диалога
 
 ```JavaScript
 login({
-  title: "Your login title",
-  message: "Your login message",
-  okButtonText: "Your OK button text",
-  cancelButtonText: "Your Cancel button text",
-  userName: "Username field value",
-  password: "Password field value"
+  title: "Ваш заголовок для входа",
+  message: "Ваше сообщение для входа",
+  okButtonText: "Ваш текст для кнопки OK",
+  cancelButtonText: "Ваш текст для кнопки Cancel",
+  userName: "Значение поля пользователя",
+  password: "Значение поля пароля"
 }).then(result => {
-  console.log(`Dialog result: ${result.result}, user: ${result.userName}, pwd: ${result.password}`);
+  console.log(`Результат диалога: ${result.result}, пользователь: ${result.userName}, пароль: ${result.password}`);
 });
 ```
 
