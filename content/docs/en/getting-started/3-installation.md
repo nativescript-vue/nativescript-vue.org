@@ -1,10 +1,9 @@
 ---
 title: Installation
-contributors: [rigor789 , TheOriginalJosh, eddyverbruggen]
+contributors: [rigor789, TheOriginalJosh, eddyverbruggen, ikoevska]
 ---
 
-In order to use NativeScript-Vue, your system will need to be set up properly
-so that your applications can compile.
+To use NativeScript-Vue, you need to set up your system to compile your apps.
 
 ## Prerequisites
 
@@ -16,11 +15,11 @@ so that your applications can compile.
 
 ### Node.js
 
-Download and install the latest "LTS" version of Node.js from [https://nodejs.org/](https://nodejs.org/). Restart your terminal and verify the installation was successful with the command `node --version`.
+Download and install the latest _LTS_ version of Node.js from [https://nodejs.org/](https://nodejs.org/). Restart your terminal and verify the installation was successful with the command `node --version`.
 
 ### NativeScript CLI
 
-To install the NativeScript CLI open your terminal and run the command
+To install the NativeScript CLI, open your terminal and run:
 
 ```shell
 $ npm install -g nativescript
@@ -31,18 +30,18 @@ You can verify the installation was successful by running `tns` in your terminal
 
 ### Windows
 
-System Requirements and setup instructions for the Android SDK on Windows:
+System requirements and setup instructions for the Android SDK on Windows:
 
 [Advanced setup: Windows](https://docs.nativescript.org/start/ns-setup-win)
 
 ### macOS
 
-System Requirements and setup instructions to setup Xcode and the Android SDK development environments for your Mac:
+System requirements and setup instructions for Xcode and the Android SDK for your Mac:
 
 [Advanced setup: macOS](https://docs.nativescript.org/start/ns-setup-os-x)
 
 ### Linux
 
-System Requirements and setup instructions for the Android SDK on Linux:
+System requirements and setup instructions for the Android SDK on Linux:
 
 [Advanced setup: Linux](https://docs.nativescript.org/start/ns-setup-linux)
