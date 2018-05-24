@@ -57,7 +57,7 @@ onItemTap(event) {
 }
 ```
 
-**Note:** if a `v-for` is used on a `<ListView>` a warning will be printed to the console, and it will be converted to the `for` property.
+**NOTE:** If a `v-for` is used on a `<ListView>`, a warning will be printed to the console, and it will be converted to the `for` property.
 
 ## Props
 
