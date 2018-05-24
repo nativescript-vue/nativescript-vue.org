@@ -102,11 +102,6 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
   * Tabs are styled
   * Active tasks are styled
   * Completed tasks are styled
-* (Coming soon) Advanced functionality
-  * (Coming soon) Store timestamp data for each task
-  * (Coming soon) View task history
-  * (Coming soon) Manage tasks in bulk
-  * (Coming soon) Schedule tasks: Users can set deadlines for tasks by picking a date from a calendar widget
 
 > **TIP:** All sections of this tutorial contain a *Some NativeScript basics* and *Requirement implementation* sub-sections. You can skip the basics sub-section and jump straight to the implementation for a more hands-on approach.
 
