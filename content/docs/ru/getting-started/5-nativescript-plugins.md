@@ -1,11 +1,11 @@
 ---
 title: Использование плагинов NativeScript
-contributors: [sn0wil]
+contributors: [sn0wil, lex111]
 ---
 
 Плагины работают так же, как и в любом другом приложении NativeScript, но вы можете задаться вопросом, как модули *UI* будут работать с Vue.
 
-Использование UI плагинов очень похоже на использование NativeScript UI плагинов в Angular приложении. Рассмотрим пример использования [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient), который используется в примере [listview sample](https://github.com/rigor789/nativescript-vue/tree/master/samples/app/app-with-list-view.js):
+Использование UI-плагинов очень похоже на использование NativeScript UI-плагинов в приложении на Angular. Рассмотрим пример использования [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient), который используется в примере [listview sample](https://github.com/rigor789/nativescript-vue/tree/master/samples/app/app-with-list-view.js):
  
 Установите плагин, используя NativeScript CLI:
 
