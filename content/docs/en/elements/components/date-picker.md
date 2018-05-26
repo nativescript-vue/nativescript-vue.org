@@ -11,7 +11,7 @@ See also: [TimePicker](/en/docs/elements/components/time-picker).
 ---
 
 ```html
-<DatePicker @loaded="onDatePickerLoaded" @dateChanged="onDateChanged" />
+<DatePicker @loaded="onDatePickerLoaded" @dateChange="onDateChanged" />
 ```
 
 `<DatePicker>` provides two-way data binding using `v-model`.
@@ -37,7 +37,7 @@ See also: [TimePicker](/en/docs/elements/components/time-picker).
 
 | Name | Description |
 |------|-------------|
-| `dateChanged` | Emitted when the selected date changes.
+| `dateChange` | Emitted when the selected date changes.
 
 ## Native component
 
