@@ -14,7 +14,7 @@ $ cd <project-name>
 $ npm install
 ```
 
-and then run your app using:
+Next, run your app using:
 
 ```shell
 $ npm run watch:<platform>
@@ -22,4 +22,4 @@ $ npm run watch:<platform>
 
 where platform is `ios` or `android`.
 
-For more information about the available templates head over to the [templates documentation](/en/docs/getting-started/templates).
+For more information about the available templates, see the [templates documentation](/en/docs/getting-started/templates).

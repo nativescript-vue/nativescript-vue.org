@@ -35,7 +35,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
   </TabViewItem>
 </TabView>
 ```
-**Note:** icon fonts may work in some cases, but generally it is recommended to use images as tab icons.
+**NOTE:** Use images for tab icons instead of icon fonts.
 
 ## Props
 

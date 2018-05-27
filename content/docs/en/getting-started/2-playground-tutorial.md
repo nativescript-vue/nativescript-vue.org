@@ -23,6 +23,7 @@ You can work in the Playground for as long as you like. You can use it to just g
     * [Advanced design: Styled input field and button](#advanced-design-styled-input-field-and-button)
     * [Advanced design: Styled tab navigation](#advanced-design-styled-tab-navigation)
     * [Advanced design: Styled active tasks](#advanced-design-styled-active-tasks)
+    * [Advanced design: Styled completed tasks](#advanced-design-styled-completed-tasks)
 
 
 # Part 1: Getting familiar with the Playground
@@ -96,16 +97,11 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
   * View tasks: Newly added tasks are listed as active and can be tapped
   * Complete tasks: Tapping an active task shows an action dialog with options
   * Delete tasks: Tapping an active or completed task shows an action dialog with options
-* (In progress) Advanced design
+* Advanced design
   * Input and button for adding tasks are styled
   * Tabs are styled
   * Active tasks are styled
-  * (Coming soon) Completed tasks are styled
-* (Coming soon) Advanced functionality
-  * (Coming soon) Store timestamp data for each task
-  * (Coming soon) View task history
-  * (Coming soon) Manage tasks in bulk
-  * (Coming soon) Schedule tasks: Users can set deadlines for tasks by picking a date from a calendar widget
+  * Completed tasks are styled
 
 > **TIP:** All sections of this tutorial contain a *Some NativeScript basics* and *Requirement implementation* sub-sections. You can skip the basics sub-section and jump straight to the implementation for a more hands-on approach.
 
@@ -659,5 +655,50 @@ To implement a style particularly for the text of active tasks, you can set an `
     margin-left: 20;
     padding-top: 5;
     padding-bottom: 10;
+  }
+  ```
+
+## Advanced design: Styled completed tasks
+
+Here's how your app will look at the start and at the end of this section.
+
+| Completed tasks - No style | Completed tasks - Styled | 
+|-----|-------------|
+| ![Unstyled completed tasks](/screenshots/ns-playground/completed-tasks-unstyled.jpg) | ![Styled completed tasks](/screenshots/ns-playground/completed-tasks-styled.jpg) |
+
+### Some NativeScript basics
+
+This section applies the basic NativeScript knowledge from [Advanced design: Styled active tasks](#advanced-design-styled-active-tasks).
+
+### Requirement implementation
+
+1. In `app.js`, on line 76, set an `id` for the `<Label>` that represents completed tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
+
+  ```HTML
+  <Label id="completed-task" :text="done.name" textWrap="true" />
+  ```
+1. On line 74, set an `id`, add the `separatorColor` property, and set it to `transparent`. This way, the separator will no longer appear in your list. You can use the `id` to style the margins for the `<ListView>`.
+
+  ```HTML
+  <ListView id="completed-list" for="done in dones" @itemTap="onDoneTap" height="100%" separatorColor="transparent" >
+  ```
+1. In `app.css`, create the style for completed tasks. Set font size, color, text decoration, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
+
+  ```CSS
+  #completed-task {
+    font-size: 20;
+    color: #d3d3d3;
+    margin-left: 20;
+    padding-top: 5;
+    padding-bottom: 10;
+    text-decoration: line-through;
+  }
+  ```
+
+1. Create a style for the entire `<ListView>` and set a top margin for it. This way, text will not show directly below the action bar. Play with the top margin until you get a result that works for you.
+
+  ```CSS
+  #completed-list {
+    margin-top: 20;    
   }
   ```
