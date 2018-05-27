@@ -9,7 +9,7 @@ function plugin() {
       }
 
 
-      const res = path.basename(file).match(/^(\d+)-(\d+)-(\d+)/);
+      const res = path.basename(file).match(/^(\d{4}-\d{2}-\d{2})/);
       if (res) {
         const data = files[file];
         data.order = res[1];
