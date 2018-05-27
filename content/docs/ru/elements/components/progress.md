@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_progress_.progre
 contributors: [sn0wil]
 ---
 
-`<Progress>` - визуальный компонент, отображающий полосу прогресса.
+`<Progress>` - визуальный компонент, отображающий полосу для индикации прогресса задачи.
 
 See also: [ActivityIndicator](/en/docs/elements/components/activity-indicator).
 
@@ -21,7 +21,7 @@ See also: [ActivityIndicator](/en/docs/elements/components/activity-indicator).
 | Имя | Тип | Описание |
 |------|------|-------------|
 | `value` | `Number` | Получает или задает текущее значение полосы прогресса. Должно быть в диапазоне от 0 до `maxValue`.
-| `maxValue` | `Number` | Получает или задает максимальное значение полосы прогресса.<br/>Значение по-умолчанию: `100`.
+| `maxValue` | `Number` | Получает или задает максимальное значение полосы прогресса.<br/>Значение по умолчанию: `100`.
 
 ## События
 

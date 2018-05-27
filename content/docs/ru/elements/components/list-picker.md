@@ -13,7 +13,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
     @selectedIndexChange="selectedIndexChanged" />
 ```
 
-`<ListPicker>`  - обеспечивает двунаправляенние связывание, используя `v-model`.
+`<ListPicker>`  - обеспечивает двустороннюю привязку данных, используя `v-model`.
 
 ```html
 <ListPicker :items="listOfItems" v-model="selectedItem" />
@@ -25,7 +25,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 | Имя | Тип | Описание |
 |------|------|-------------|
-| `items` | `Array<String>` | Задает или получает элементы, которые будут отобрадатсья в списке.
+| `items` | `Array<String>` | Задает или получает элементы, которые будут отображаться в списке.
 | `selectedIndex` | `Number` | Задает или получает индекс выбранного элемента.
 
 ## События

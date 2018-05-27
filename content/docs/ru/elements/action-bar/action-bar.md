@@ -31,10 +31,10 @@ contributors: [sn0wil]
 <ActionBar title="My App" android.icon="res://icon" android.iconVisibility="always" />
 ```
 
-#### Удаление границ
+#### Удаление рамок
   На iOS и Android внизу ActionBar рисуется маленькая рамка.
   Кроме того, цвет фона ActionBar на iOS немного отличается от того, что вы указываете,
-  потому что iOS применяет фильтр. Чтобы удалить этот фильтр и границу, установите свойство `flat` в значение `true`.
+  потому что iOS применяет фильтр. Чтобы удалить этот фильтр и рамку, установите свойство `flat` в значение `true`.
 ```html
 <ActionBar title="My App" flat="true" />
 ```
@@ -43,7 +43,7 @@ contributors: [sn0wil]
 
 | Название | Тип | Описание |
 |------|------|-------------|
-| `title` | `String` | Заголовок, показываемы в ActionBar.
-| `android.icon` | `String` | Иконка, показываемая на Android.
-| `android.iconVisibility` | `String` | Устанавливается, когда иконка вилима.
-| `flat` | `boolean` | Удаляет границу и цвета фильтра на iOS. Значение по умолчанию - `false`.
+| `title` | `String` | Заголовок, отображаемый в ActionBar.
+| `android.icon` | `String` | Иконка, отображаемая на Android.
+| `android.iconVisibility` | `String` | Устанавливается, когда иконка видима.
+| `flat` | `boolean` | Удаляет рамку и цвет фильтра на iOS. Значение по умолчанию - `false`.

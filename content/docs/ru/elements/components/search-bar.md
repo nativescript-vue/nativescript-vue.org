@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_search_bar_.sear
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-`<SearchBar>` - визуальный компонент, который позволяет пользовательский интерфейс для ввода поисковых запросов и отправки запросы поисковому провайдеру.
+`<SearchBar>` - визуальный компонент, который предоставляет пользовательский интерфейс для ввода поисковых запросов и отправки запросов поисковому провайдеру.
 
 ---
 
@@ -12,7 +12,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 <SearchBar hint="Search hint" :text="searchPhrase" @textChange="onTextChanged" @submit="onSubmit" />
 ```
 
-`<SearchBar>` обеспечивает двустороннее связывание, используя `v-model`.
+`<SearchBar>` обеспечивает двустороннюю привязку данных, используя `v-model`.
 
 ```html
 <SearchBar v-model="searchQuery" />
@@ -35,7 +35,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 |------|-------------|
 | `textChange` | Срабатывает для изменении текста.
 | `submit` | Срабатывает при подтверждении (submit) в поле ввода.
-| `clear` | Срабатывает, когда текущее значение поля ввода очищено с помощью кнопки **X**, расположенно в поле ввода .
+| `clear` | Срабатывает, когда текущее значение поля ввода очищено с помощью кнопки **X**, расположенного в поле ввода.
 
 ## Нативный компонент
 

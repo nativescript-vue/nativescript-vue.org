@@ -6,7 +6,7 @@ contributors: [sn0wil]
 
 `<DatePicker>` - визуальный компонент, позволяющий пользователю выбрать дату из заранее заданного диапазона.
 
-Также смотриье: [TimePicker](/ru/docs/elements/components/time-picker).
+Также смотрите: [TimePicker](/ru/docs/elements/components/time-picker).
 
 ---
 
@@ -14,7 +14,7 @@ contributors: [sn0wil]
 <DatePicker @loaded="onDatePickerLoaded" @dateChanged="onDateChanged" />
 ```
 
-`<DatePicker>` обеспечивает двустороннее связывание, используя `v-model`.
+`<DatePicker>` обеспечивает двустороннюю привязку данных, используя `v-model`.
 
 ```html
 <DatePicker v-model="selectedDate" />
@@ -26,7 +26,7 @@ contributors: [sn0wil]
 
 | Имя | Тип | Описание |
 |------|------|-------------|
-| `date` | `Date` | Получает или задает дату заверешения.
+| `date` | `Date` | Получает или задает дату завершения.
 | `minDate` | `Date` | Получает или задает самую раннюю возможную дату, доступную для выбора.
 | `maxDate` | `Date` | Получает или задает самую позднюю дату, доступную для выбора.
 | `day` | `Number` | Получает или задает день.
