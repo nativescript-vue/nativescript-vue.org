@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#prompt
 contributors: [lex111]
 ---
 
-Метод `prompt()` показывает диалоговое окно с однострочным полем для ввода пользователем.
+Метод `prompt()` показывает диалоговое окно с однострочным полем для ввода.
 
 Этот метод является частью [модуля `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
