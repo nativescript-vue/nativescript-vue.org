@@ -1,5 +1,5 @@
 ---
-title: HtmlView/Предстваление HTML
+title: HtmlView/Представление HTML
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_html_view_.htmlview
 contributors: [sn0wil]
 ---

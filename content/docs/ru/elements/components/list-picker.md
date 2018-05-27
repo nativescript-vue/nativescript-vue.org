@@ -13,7 +13,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
     @selectedIndexChange="selectedIndexChanged" />
 ```
 
-`<ListPicker>`  - обеспечивает двустороннюю привязку данных, используя `v-model`.
+`<ListPicker>` обеспечивает двустороннюю привязку данных, используя `v-model`.
 
 ```html
 <ListPicker :items="listOfItems" v-model="selectedItem" />

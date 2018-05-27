@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabvie
 contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 ---
 
-`<TabView>` - навигационный компонент, отображающий контент, сгруппированный во вкладки и дающий пользователю аозможность переключения между ними.
+`<TabView>` - навигационный компонент, отображающий контент, сгруппированный по вкладкам и позволяющий пользователю переключиться между ними.
 
 ---
 

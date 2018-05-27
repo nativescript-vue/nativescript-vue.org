@@ -8,25 +8,25 @@ contributors: [sn0wil]
 
 ---
 
-#### Отображение изображения из папки `app`
+#### Показ изображения из папки `app`
 
 ```html
 <Image src="~/logo.png" stretch="none" />
 ```
 
-#### Отображение изображения из URL
+#### Показ изображения из URL
 
 ```html
 <Image src="https://art.nativescript-vue.org/NativeScript-Vue-White-Green.png" stretch="none" />
 ```
 
-#### Отображение изображения из `App_Resources`
+#### Показ изображения из `App_Resources`
 
 ```html
 <Image src="res://icon" stretch="none" />
 ```
 
-#### Отображение `base64`-кодированного изображения
+#### Показ `base64`-кодированного изображения
 
 ```html
 <Image src="data:Image/png;base64,iVBORw..." stretch="none" />

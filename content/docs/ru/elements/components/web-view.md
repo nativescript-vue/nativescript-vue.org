@@ -1,5 +1,5 @@
 ---
-title: WebView/Web представление
+title: WebView/Web-представление
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_web_view_.webview
 contributors: [sn0wil]
 ---

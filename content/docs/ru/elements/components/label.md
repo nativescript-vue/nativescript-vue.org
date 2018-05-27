@@ -18,7 +18,7 @@ contributors: [sn0wil]
 
 ### Стилизация элемента label
 
-Если вам необходимо применить стили, то вы можете использовать комбинацию [`FormattedString`](https://docs.nativescript.org/cookbook/formatted-string-ng) и [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span) элементов.
+Если вам необходимо применить стили, то вы можете использовать комбинацию элементов [`FormattedString`](https://docs.nativescript.org/cookbook/formatted-string-ng) и [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span).
 
 ```html
 <Label textWrap="true">
