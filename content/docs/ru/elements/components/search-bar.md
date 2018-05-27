@@ -24,10 +24,10 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 | Имя | Тип | Описание |
 |------|------|-------------|
-| `hint` | `String` | Получает или задает текст placeholder'a для поля ввода.
+| `hint` | `String` | Получает или задает текст для подсказки текстового поля.
 | `text` | `String` | Получает или задает значение поискового запроса.
 | `textFieldBackgroundColor` | `Color` | Получает или задает цвет фона для поля ввода.
-| `textFieldHintColor` | `Color` | Получает или задает цвет текста для placeholder.
+| `textFieldHintColor` | `Color` | Получает или задает цвет текста для подсказки текстового поля.
 
 ## События
 
