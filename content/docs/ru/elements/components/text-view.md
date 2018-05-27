@@ -6,7 +6,7 @@ contributors: [sn0wil]
 
 `<TextView>` - визуальный компонент, отображающий доступный для редактирования или только для чтения многострочный контейнер для текста. Вы можете использовать его для того, чтобы дать пользователю вводить объемный текст в приложении или для отображения длинного многострочного текста на экране.
 
-`<TextView>` наследуется от [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) и [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase) которые включают в себя дополнительные свойства и события.
+`<TextView>` наследуется от [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) и [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase), которые включают в себя дополнительные свойства и события.
 
 ---
 
