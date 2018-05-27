@@ -122,7 +122,7 @@ Metalsmith(cwd)
   .use(collections({
     blog: {
       pattern: 'blog/*.md',
-      sortBy: 'date',
+      sortBy: 'order',
       reverse: true,
       refer: false
     },
