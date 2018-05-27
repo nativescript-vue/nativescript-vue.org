@@ -1,5 +1,5 @@
 ---
-title: Image/Изображение
+title: Image
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_image_.image
 contributors: [sn0wil]
 ---

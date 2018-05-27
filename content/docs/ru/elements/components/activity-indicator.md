@@ -1,5 +1,5 @@
 ---
-title: ActivityIndicator/Фоновая загрузка
+title: ActivityIndicator
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicator_.activityindicator
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---

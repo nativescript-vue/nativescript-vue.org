@@ -1,5 +1,5 @@
 ---
-title: TextField/Текстовое поле
+title: TextField
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_text_field_
 contributors: [sn0wil]
 

@@ -1,5 +1,5 @@
 ---
-title: TextView/ Текстовое представление
+title: TextViews
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_text_view_.textview
 contributors: [sn0wil]
 ---

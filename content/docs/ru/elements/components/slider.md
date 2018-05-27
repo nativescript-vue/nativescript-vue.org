@@ -1,5 +1,5 @@
 ---
-title: Slider/Слайдер
+title: Slider
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_slider_.slider
 contributors: [sn0wil]
 

@@ -1,5 +1,5 @@
 ---
-title: Label/Текст
+title: Label
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_label_.label
 contributors: [sn0wil]
 ---

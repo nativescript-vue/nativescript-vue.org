@@ -1,5 +1,5 @@
 ---
-title: Button/Кнопка
+title: Button
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
 contributors: [sn0wil]
 ---

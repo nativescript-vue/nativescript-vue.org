@@ -1,5 +1,5 @@
 ---
-title: ListView/Список
+title: ListView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_view_.listview
 contributors: [sn0wil]
 ---
@@ -56,11 +56,7 @@ onItemTap(event) {
 }
 ```
 
-<<<<<<< HEAD
 **Примечание:** если `v-for` используется на `<ListView>`, то в консоли будет выведено предупреждение и он будет преобразован в свойство `for`.
-=======
-**NOTE:** If a `v-for` is used on a `<ListView>`, a warning will be printed to the console, and it will be converted to the `for` property.
->>>>>>> 2065838ec35e93d89ec64b0c5a4b8f910d3670e6
 
 ## Свойства
 

@@ -1,5 +1,5 @@
 ---
-title: Switch/Переключатель
+title: Switch
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_switch_.switch
 contributors: [sn0wil]
 ---

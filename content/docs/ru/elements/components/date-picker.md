@@ -1,5 +1,5 @@
 ---
-title: DatePicker/Выбор даты
+title: DatePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker
 contributors: [sn0wil]
 ---

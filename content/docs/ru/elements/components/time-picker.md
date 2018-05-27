@@ -1,5 +1,5 @@
 ---
-title: TimePicker/Выбор Времени
+title: TimePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_time_picker_.timepicker
 contributors: [sn0wil]
 

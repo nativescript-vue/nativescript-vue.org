@@ -1,5 +1,5 @@
 ---
-title: TabView/Представление вкладками
+title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
 contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 ---
@@ -35,11 +35,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
   </TabViewItem>
 </TabView>
 ```
-<<<<<<< HEAD
 **Примечание:** шрифты иконок могут работать в некоторых случаях, но в основном рекомендуется использовать изображения в качестве иконок для вкладок.
-=======
-**NOTE:** Use images for tab icons instead of icon fonts.
->>>>>>> 2065838ec35e93d89ec64b0c5a4b8f910d3670e6
 
 ## Свойства
 

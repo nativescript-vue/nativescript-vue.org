@@ -1,5 +1,5 @@
 ---
-title: Progress/Прогресс
+title: Progress
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_progress_.progress
 contributors: [sn0wil]
 ---

@@ -1,5 +1,5 @@
 ---
-title: SearchBar/Строка поиска
+title: SearchBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_search_bar_.searchbar
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---

@@ -1,5 +1,5 @@
 ---
-title: ListPicker/Выбор из списка
+title: ListPicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_picker_.listpicker
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---

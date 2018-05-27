@@ -1,5 +1,5 @@
 ---
-title: ScrollView/Прокручиваемое представление
+title: ScrollView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_scroll_view_.scrollview
 contributors: [sn0wil]
 ---

@@ -1,5 +1,5 @@
 ---
-title: SegmentedBar/Разделенная область
+title: SegmentedBar
 apiRef: http://docs.nativescript.org/api-reference/modules/_ui_segmented_bar_.html
 contributors: [sn0wil]
 ---
