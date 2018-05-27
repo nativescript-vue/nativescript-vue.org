@@ -1,11 +1,11 @@
 ---
-title: Slider
+title: Slider/Слайдер
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_slider_.slider
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [sn0wil]
 
 ---
 
-`<Slider>` is a UI component that provides a slider control for picking values within a specified numeric range.
+`<Slider>` - визуальный компонент, обеспечивающий управление ползунком для выбора значений в пределах определенного чилового диапазона.
 
 ---
 
@@ -13,7 +13,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 <Slider value="80" @valueChange="onValueChanged" />
 ```
 
-`<Slider>` provides two-way data binding using `v-model`:
+`<Slider>` обеспечивает двустороннее связывание, используя `v-model`.
 
 ```html
 <Slider v-model="value" />
@@ -21,19 +21,19 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 
 [> screenshots for=Slider <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `value` | `Number` | Gets or sets the currently selected value of the slider.<br/>Default value: `0`.
-| `minValue` | `Number` | Gets or sets the minimum value of the slider.<br/>Default value: `0`.
-| `maxValue` | `Number` | Gets or sets the maximum value of the slider.<br/>Default value: `100`.
+| `value` | `Number` | Получает или задает выбранное значение слайдера.<br/>Значение по-умолчанию: `0`.
+| `minValue` | `Number` | Получает или задает минимальное значение слайдера.<br/>Значение по-умолчанию: `0`.
+| `maxValue` | `Number` | Получает или задает максимальное значение слайдера.<br/>Значение по-умолчанию: `100`.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `valueChange`| Emitted when the value of the slider changes.
+| `valueChange`| Срабатывает при изменении значения слайдера.Emitted when the value of the slider changes.
 
 ## Native component
 

@@ -1,10 +1,10 @@
 ---
-title: TabView
+title: TabView/Представление вкладками
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
 contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 ---
 
-`<TabView>` is a navigation component that shows content grouped into tabs and lets users switch between tabs.
+`<TabView>` - навигационный компонент, показывающий контент, сгруппированный во вкладки и дающий пользователю аозможность переключения между ними.
 
 ---
 
@@ -19,11 +19,11 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 </TabView>
 ```
 
-**NOTE:** Currently, `TabViewItem` expects a single child element. In most cases, you might want to wrap your content in a layout.
+**Заметка:** В данный момент `TabViewItem` ожидает один дочерний элемент. В большинстве случаев вы можете обернуть ваш контент в макет.
 
 [> screenshots for=TabView <]
 
-#### Adding icons to tabs
+#### Добавление иконок во вкладки
 
 ```html
 <TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
@@ -35,24 +35,24 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
   </TabViewItem>
 </TabView>
 ```
-**Note:** icon fonts may work in some cases, but generally it is recommended to use images as tab icons.
+**Заметка:** шрифты иконок могут работать в некоторых случаях, но в основном рекомендуется использовать изображения в качестве иконок для вкладок.
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `selectedIndex` | `Number` | Gets or sets the currently selected tab. Default is `0`.
-| `tabTextColor` | `Color` | (Style property) Gets or sets the text color of the tabs titles.
-| `tabBackgroundColor` | `Color` | (Style property) Gets or sets the background color of the tabs.
-| `selectedTabTextColor` | `Color` | (Style property) Gets or sets the text color of the selected tab title.
+| `selectedIndex` | `Number` | Получает или задает выбранную вкладку. Значение по-умолчанию `0`.
+| `tabTextColor` | `Color` | (Свойство стиля)Получает или задает значение цвета текста заголовков вкладок.
+| `tabBackgroundColor` | `Color` | (Свойство стиля)Получает или задает значение цвета фона для вкладок.
+| `selectedTabTextColor` | `Color` | (Свойство стиля)Получает или задает значение цвета текста закголовка выбранной вкладки.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `tabChange` | Emitted when one of the `<TabViewItem>` components is tapped.
+| `tabChange` | Срабатывает при нажатии на один из компонентов `<TabViewItem>`.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|
