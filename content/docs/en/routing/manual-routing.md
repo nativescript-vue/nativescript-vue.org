@@ -17,9 +17,9 @@ You have two ways to call `$navigateTo`: in the view or in a method.
 
 #### In the view
 
-Expose the `Detail` component through a `data` property in the `Master` component and invoke `$navigateTo(<propertyName>)` in the view directly. 
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly. 
 
-```vue
+```Vue
 const Vue = require('nativescript-vue');
 
 const Master = {
@@ -57,9 +57,9 @@ new Vue({
 
 #### In a method
 
-Bind a button to a method and use `this.$navigateTo(Detail)` to navigate to the `Detail` component in that method,
+Bind a button to a method and use `this.$navigateTo(Detail)` to navigate to the `Detail` component.
 
-```vue
+```Vue
 const Master = {
   template: `
     <Page>
@@ -98,7 +98,7 @@ const Detail = {
 
 You can use the `options` parameter to pass props to the target component. For example: 
 
-```js
+```JavaScript
 this.$navigateTo(Detail, {
   transition: {},
   transitionIOS: {},
@@ -116,9 +116,9 @@ For more information about the options that you can pass, see [the documentation
 
 ### `$navigateBack`
 
-Add a button to the `Detail` component, which simply triggers the globally exposed `$navigateBack` function.
+In the `Detail` component, add a button that triggers the globally exposed `$navigateBack` function.
 
-```vue
+```Vue
 const Detail = {
   template: `
     <Page>
@@ -133,12 +133,57 @@ const Detail = {
 
 ### `$showModal`
 
-If you want to show the `Detail` page modally, simply replace `$navigateTo` by `$showModal`.
-As before, you can call this method either from the view or a function.
+If you want to show the `Detail` page modally, use `$showModal` instead of `$navigateTo`.
+
+Similarly to `$navigateTo`, you can call this method in the view or in a function.
 
 To close the modal, call `$modal.close`.
 
-```vue
+#### In the view
+
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$showModal(<propertyName>)` in the view directly. 
+
+```Vue
+const Vue = require('nativescript-vue');
+
+const Master = {
+  template: `
+    <Page>
+      <ActionBar title="Master" />
+      <StackLayout>
+        <Button text="To Details directly" @tap="$showModal(detailPage)" />
+      </StackLayout>
+    </Page>
+  `,
+
+  data() {
+    return {
+      detailPage: Detail
+    }
+  }
+};
+
+const Detail = {
+  template: `
+    <Page>
+      <ActionBar title="Detail"/>
+      <StackLayout>
+        <Button @tap="$modal.close" text="Close" />                    
+      </StackLayout>
+    </Page>
+  `
+};
+
+new Vue({
+  render: h => h(Master)
+}).$start()
+```
+
+#### In a method
+
+Bind a button to a method and use `this.$showModal(Detail)` to navigate to the `Detail` component.
+
+```Vue
 const Master = {
   template: `
     <Page>
@@ -170,15 +215,13 @@ const Detail = {
 
 #### Passing props to the modal
 
-Properties can be passed to the modal by including `propsData` inside a `context` object passed as an option when calling `$showModal`.
+`$showModal` accepts a second parameter. You can use the parameter to pass in a `context` object containing `propsData` to the target component. For example:
 
-If we were to pass an `id` prop to the Detail component from the previous Master/Detail example, we would show the modal using:
-
-```js
+```JavaScript
 this.$showModal(Detail, { context: { propsData: { id: 14 }}});
 ```
 
-The Detail component also has to be updated to be able to accept the `id` prop. This is done by defining a `props` option inside the component:
+You also need to update the `Detail` component to be able to accept the `id` prop. You can do this by defining a `props` option inside the component:
 
 ```vue
 const Detail = {
@@ -195,9 +238,9 @@ const Detail = {
 };
 ```
 
-[Read more about props in the official Vue documentation](https://vuejs.org/v2/guide/components-props.html)
-
 The prop is now accessible throughout the component with `this.id`.
+
+For more information about props, see the [official Vue documentation](https://vuejs.org/v2/guide/components-props.html)
 
 #### Returning data from the modal
 
