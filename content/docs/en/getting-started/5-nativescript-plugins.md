@@ -7,7 +7,7 @@ Plugins work as in [any other NativeScript app](https://docs.nativescript.org/pl
 
 UI plugins work almost identically to how you'd [use a NativeScript UI plugin in an Angular app](https://docs.nativescript.org/angular/plugins/plugins). 
 
-## Sample use: `nativescript-gradient`
+## Sample use: nativescript-gradient
 
 Let's review how you can use [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient). You can also check its use in the [listview sample](https://github.com/rigor789/nativescript-vue/tree/master/samples/app/app-with-list-view.js).
 
