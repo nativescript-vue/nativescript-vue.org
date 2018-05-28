@@ -1,13 +1,12 @@
 ---
 title: Templates
-contributors: [rigor789, tralves, jlooper, lewebsimple]
+contributors: [rigor789, tralves, jlooper, lewebsimple, ikoevska]
 outdated: false
 ---
 
-This page serves as an overview of the currently supported templates that you can use to get started with NativeScript-Vue.
-It is also assumed that you have [set up your system for NativeScript development](/en/docs/getting-started/installation).
+This page provides an overview of the templates that you can use to develop apps with NativeScript-Vue. The list is updated as new templates come up or old templates become deprecated.
 
-> This list will be updated as new templates come up, or old templates get deprecated.
+> **NOTE:** To use any of the listed templates, you need to have [set up your system for NativeScript development](/en/docs/getting-started/installation).
 
 **Currently supported templates:**
 
@@ -20,17 +19,18 @@ It is also assumed that you have [set up your system for NativeScript developmen
 
 ## nativescript-vue/vue-cli-template
 
-Project link: [https://github.com/nativescript-vue/vue-cli-template](https://github.com/nativescript-vue/vue-cli-template)
+**Project link:** [https://github.com/nativescript-vue/vue-cli-template](https://github.com/nativescript-vue/vue-cli-template)
 
-**Features:**
+### Features
+
 * `.vue` single file components
-* Vuex &mdash; state management (opt-in)
-* VueRouter &mdash; routing (opt-in) &mdash; **experimental!**
+* Vuex&mdash;state management (opt-in)
+* VueRouter&mdash;routing (opt-in)&mdash;**experimental!**
 * NativeScript themes
 
-You can use [Vue CLI](https://github.com/vuejs/vue-cli) to bootstrap your NativeScript-Vue app. Out of the box, this template provides support for [Vuex](https://vuex.vuejs.org/en/), the [Vue Router](https://github.com/vuejs/vue-router), and [NativeScript themes](https://docs.nativescript.org/ui/theme). Originally built by [Pascal Martineau](https://github.com/lewebsimple/), this template is now officially supported for NativeScript-Vue development.
+You can use [Vue CLI](https://github.com/vuejs/vue-cli) to bootstrap your NativeScript-Vue app. Out of the box, this template provides support for [Vuex](https://vuex.vuejs.org/en/), the [Vue Router](https://github.com/vuejs/vue-router), and [NativeScript themes](https://docs.nativescript.org/ui/theme). Originally built by [Pascal Martineau](https://github.com/lewebsimple/), this template is now officially supported for NativeScript-Vue.
 
-**Usage:**
+### Usage
 
 ```shell
 $ npm install -g @vue/cli @vue/cli-init
@@ -44,15 +44,16 @@ $ npm run watch:ios
 
 ## nativescript-vue/nativescript-vue-template
 
-Project link: [https://github.com/nativescript-vue/nativescript-vue-template](https://github.com/nativescript-vue/nativescript-vue-template)
+**Project link:** [https://github.com/nativescript-vue/nativescript-vue-template](https://github.com/nativescript-vue/nativescript-vue-template)
 
-**Features:**
-* Pure JS &mdash; no `.vue` files
+### Features
+
+* Pure JavaScript&mdash;no `.vue` files
 * NativeScript themes
 
-This template is the simplest way you can develop your app with NativeScript-Vue. It does not require an extra build step, because the components / application is written in pure `.js` files. 
+This template is the simplest way you can develop your app with NativeScript-Vue. It does not require an extra build step, because everything is written in pure `.js` files. 
 
-**Usage:**
+### Usage
 
 ```shell
 $ tns create <project-name> --template nativescript-vue-template
