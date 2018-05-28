@@ -3,22 +3,30 @@ title: Using Vue Plugins
 contributors: [jlooper, ikoevska]
 ---
 
-* [vue-router](#vue-router)
+This page provides an overview of the currently supported Vue plugins that work with NativeScript-Vue.
+
+* [Vue Router](#vue-router)
 * [Vuex](#vuex)
 
-## vue-router
+## Vue Router
 
-> Currently, this integration is **experimental**.
+> Currently, integration with Vue Router is **experimental**. For more information, see [the Vue Router page](/en/docs/routing/vue-router/).
 
-vue-router lets you handle URL-based routing on mobile. However, the routing strategy on mobile is different than the routing strategy in the browser and the familiar Vue format of router links does not work with NativeScript-Vue.
+### Install and require the plugin
+
+For detailed information about how to install the plugin and make it available in your NativeScript-Vue app, see [the Vue Router page](/en/docs/routing/vue-router/).
+
+### Usage notes
+
+The routing strategy on mobile is different than the routing strategy in the browser and the familiar Vue format of router links does not work with NativeScript-Vue.
 
 Instead, you need to **change to a new route using the `route.push` method**. The following example shows how to use the `tap` event to change the route.
 
 ```HTML
 <Button class="btn btn-primary" @tap="$router.push('/counter')">Counter</Button>
-```
+``` 
 
-For more information about the router, see [the Vue Router page](/en/docs/routing/vue-router/).
+For detailed information about how to use the plugin in your NativeScript-Vue app, see [the Vue Router page](/en/docs/routing/vue-router/).
 
 ## Vuex
 
@@ -45,7 +53,7 @@ Vue.use(Vuex)
 
 Now you can use Vuex to manage the state of your mobile app, similar to how you would use it in a standard Vue web app.
 
-### Create a store
+### Usage: Create a store
 
 You need to create a new constant to store your state and invoke Vuex API calls. You can do that in the app entry file after the creation of the Vue instance or in a separate folder (for example, `/store`).
 
@@ -63,7 +71,7 @@ const store = new Vuex.Store({
 })
 ```
 
-### Use the store
+### Usage: Use the store
 
 Now you can manage state by calling the store you just created. In the following example, the app tracks the count value as you press a '+' or '-' button. Note that you don't manipulate the state itself, but call mutations to increment and decrement its value.
 
