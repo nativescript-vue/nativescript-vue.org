@@ -27,7 +27,7 @@ $ npm run clean
 
 ### Register the plugin in your app
 
-Open your app entry file (llikely `app.js`) and add the following line at the top:
+Open your app entry file (llikely `app.js` or `main.js`) and add the following line at the top:
 
 ```JavaScript
 Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient)
