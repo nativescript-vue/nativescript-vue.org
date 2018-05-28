@@ -1,33 +1,19 @@
 ---
 title: Manual Routing
-contributors: [eddyverbruggen, fartek, rigor789]
+contributors: [eddyverbruggen, fartek, rigor789, ikoevska]
 ---
 
-The easiest way to do routing in NativeScript-Vue is using the convenience functions
-`$navigateTo`, `$navigateBack`, and `$showModal`.
+The easiest way to do routing in NativeScript-Vue is by using any of the following convenience functions:
+
+* [`$navigateTo`](#navigateto)
+* [`$navigateBack`](#navigateback)
+* [`$showModal`](#showmodal)
+
+> All examples on this page discuss how to handle routing between the `Master` and `Detail` components of a mobile app.
 
 ### `$navigateTo`
 
-Suppose you have components `Master` and `Detail` and want to navigate from `Master` to `Detail`,
-then you have two ways to call `$navigateTo`: in the view, or in a method:
-
-The `$navigateTo` accepts a second `options` parameter, which allows you to specify the transition as well as pass in a `context` object which will be used when instantiating the target component. This is useful when you want to pass props to the target component. For example: 
-
-```js
-this.$navigateTo(Detail, {
-  transition: {},
-  transitionIOS: {},
-  transitionAndroid: {},
-  
-  context: {
-    propsData: {
-      foo: 'bar',
-    }
-  }
-});
-```
-
-To read more about the options you can pass [head over to the documentation for NavigationEntry](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
+You have two ways to call `$navigateTo`: in the view or in a method.
 
 #### In the view
 
@@ -102,6 +88,31 @@ const Detail = {
   `
 };
 ```
+
+#### Passing props to the target component
+
+`$navigateTo` accepts a second `options` parameter. You can use the parameter to:
+
+* set the transition 
+* pass in a `context` object to be used when instantiating the target component 
+
+You can use the `options` parameter to pass props to the target component. For example: 
+
+```js
+this.$navigateTo(Detail, {
+  transition: {},
+  transitionIOS: {},
+  transitionAndroid: {},
+  
+  context: {
+    propsData: {
+      foo: 'bar',
+    }
+  }
+});
+```
+
+For more information about the options that you can pass, see [the documentation for `NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
 
 ### `$navigateBack`
 
