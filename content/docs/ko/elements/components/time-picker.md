@@ -38,7 +38,7 @@ contributors: [qgp9]
 
 | name | description |
 |------|-------------|
-| `timeChanged` | 선택된 시간이 바뀌면 발생
+| `timeChange` | 선택된 시간이 바뀌면 발생
 
 ## Native Component
 | Android | iOS |

@@ -39,7 +39,7 @@ Veja também: [DatePicker](/pt-BR/docs/elements/components/date-picker).
 
 | nome | descrição |
 |------|-------------|
-| `timeChanged` | Emitido quando o tempo selecionado é alterado.
+| `timeChange` | Emitido quando o tempo selecionado é alterado.
 
 ## Componente Nativo
 | Android | iOS |
