@@ -5,11 +5,7 @@ contributors: [eddyverbruggen, rigor789, ikoevska]
 
 > Currently, integration with Vue Router is **experimental**. If you want to use a non-experimental approach, you can try [manual routing](/en/docs/routing/manual-routing).  
 
-With the router, you can choose between component-based routing and page-based routing.
-
-With page-based routing, you can 
-
-With component-based routing, you can specify the `<router-view />` component in your template. With it, the different routes are placed in the view and when navigation, the views are swapped.
+With the router, you can choose between [component-based routing](https://router.vuejs.org/guide/essentials/named-views.html) and page-based routing. In a mobile app, you are more likely to implement page-based routing.
 
 ## Install and require the plugin
 
@@ -110,3 +106,10 @@ new Vue({
 ## See also
 
 Vue Router has more tricks up its sleeve, so be sure to visit [the official documentation](https://router.vuejs.org/en/).
+
+Check out the following [NativeScript-Vue samples](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples):
+
+* [app-with-page-routing](nativescript-vue/samples/app/app-with-page-routing.js)
+* [app-with-router](nativescript-vue/samples/app/app-with-router.js)
+* [app-with-router-pages](nativescript-vue/samples/app/app-with-router-pages.js)
+* [app-with-router-v2](nativescript-vue/samples/app/app-with-router-v2.js)
