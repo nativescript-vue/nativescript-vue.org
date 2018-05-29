@@ -13,7 +13,7 @@ The easiest way to do routing in NativeScript-Vue is by using any of the followi
 
 ### `$navigateTo`
 
-You have two ways to call `$navigateTo`: in the view or in a method.
+You can call `$navigateTo` in the view or in a method.
 
 #### In the view
 
@@ -94,9 +94,9 @@ const Detail = {
 `$navigateTo` accepts a second `options` parameter. You can use the parameter to:
 
 * set the transition 
-* pass in a `context` object to be used when instantiating the target component 
+* pass a `context` object with props to be used when instantiating the target component 
 
-You can use the `options` parameter to pass props to the target component. For example: 
+For example: 
 
 ```JavaScript
 this.$navigateTo(Detail, {
@@ -112,7 +112,7 @@ this.$navigateTo(Detail, {
 });
 ```
 
-For more information about the options that you can pass, see [the documentation for `NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
+For more information about the options that you can pass, see [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
 
 ### `$navigateBack`
 
@@ -133,11 +133,9 @@ const Detail = {
 
 ### `$showModal`
 
-If you want to show the `Detail` page modally, use `$showModal` instead of `$navigateTo`.
+Use `$showModal` to show the `Detail` page modally. This function behaves similarly to `$navigateTo`.
 
-Similarly to `$navigateTo`, you can call this method in the view or in a function.
-
-To close the modal, call `$modal.close`.
+You can call `$showModal` in the view or in a method. To close the modal, call `$modal.close`.
 
 #### In the view
 
@@ -246,14 +244,14 @@ For more information about props, see the [official Vue documentation](https://v
 
 When calling `$showModal`, a promise is returned which resolves with any data passed to the `$modal.close` function.
 
-For example:
+In the following example, closing the modal outputs 'Foo' in the console.
 
-```js
+```JavaScript
 // ... inside Master
-this.$showModal(Detail).then(data => console.log(data)); // Will output 'Foo'
+this.$showModal(Detail).then(data => console.log(data));
 ```
 
-```html
-// ... inside Detail
+```HTML
+<!-- inside Detail -->
 <Button @tap="$modal.close('Foo')" text="Close" />    
 ```
