@@ -7,6 +7,10 @@ contributors: [eddyverbruggen, rigor789, ikoevska]
 
 With the router, you can choose between component-based routing and page-based routing.
 
+With page-based routing, you can 
+
+With component-based routing, you can specify the `<router-view />` component in your template. With it, the different routes are placed in the view and when navigation, the views are swapped.
+
 ## Install and require the plugin
 
 In the command prompt, run:
@@ -26,14 +30,14 @@ Vue.use(VueRouter);
 
 ## Usage
 
-This section walks you through a complete example, breaking it down into key pieces and providing comments along the way.
+This section walks you through a complete example of page-based routing, breaking it down into key pieces and providing comments along the way.
 
 ---
 Define a `Master` page with the current router as its title (`$route.path`). 
 
-Create a button with a `@tap="$router.push('/detail')"` so a new `Detail` page is pushed on the stack and navigated to.
+Create a button with a `@tap="$router.push('/detail')"`. When tapped, a new `Detail` page is pushed on the stack and navigated to.
 
-Add a second button to the `Master` page with a query param `user`.
+Create a second button with a query param `user`. When tapped, it passes additional information to the `Detail` page.
 
 ```HTML
 const Master = {
@@ -55,7 +59,7 @@ previous page in the stack. On Android, you need to add a `tap` handler (ignored
 
 Use the `user` query param, defined in the `Master` page. For example, display its value as text on the `Detail` page: `<Label :text="$route.query.user">`.
 
-Use `$router.go(<number-of-pages>)` to navigate back and forth.
+Create a button with `$router.go(<number-of-pages>)`. When tapped, it navigates one page back in the stack.
 
 ```HTML
 const Detail = {
@@ -74,7 +78,7 @@ const Detail = {
 ```
 
 ---
-Create a router instance, enable page routing and define all the pages of your app.
+Create a router instance, enable page routing, and define all the pages of your app.
 
 ```JavaScript
 const router = new VueRouter({
