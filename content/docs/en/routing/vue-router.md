@@ -26,7 +26,7 @@ Vue.use(VueRouter);
 
 ## Usage
 
-> This section examines a complete example, breaking it down into key pieces and providing comments along the way.
+This section walks you through a complete example, breaking it down into key pieces and providing comments along the way.
 
 ---
 Define a `Master` page with the current router as its title (`$route.path`). 
