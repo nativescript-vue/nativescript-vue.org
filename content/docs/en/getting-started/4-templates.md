@@ -25,10 +25,14 @@ This page provides an overview of the templates that you can use to develop apps
 
 * `.vue` single file components
 * Vuex&mdash;state management (opt-in)
-* VueRouter&mdash;routing (opt-in)&mdash;**experimental!**
+* Vue Router&mdash;routing (opt-in)&mdash;**experimental**
 * NativeScript themes
 
-You can use [Vue CLI](https://github.com/vuejs/vue-cli) to bootstrap your NativeScript-Vue app. Out of the box, this template provides support for [Vuex](https://vuex.vuejs.org/en/), the [Vue Router](https://github.com/vuejs/vue-router), and [NativeScript themes](https://docs.nativescript.org/ui/theme). Originally built by [Pascal Martineau](https://github.com/lewebsimple/), this template is now officially supported for NativeScript-Vue.
+Use this template to develop your app from the [Vue CLI](https://github.com/vuejs/vue-cli) and design it around `.vue` file components. Out-of-the-box, the template also provides advanced Vue functionality ([Vuex](https://vuex.vuejs.org/en/) and [Vue Router](https://github.com/vuejs/vue-router)) and support for [NativeScript themes](https://docs.nativescript.org/ui/theme).
+
+Functionality-wise, the template is a spin-off of the basic template for NativeScript development and implements a simple button-controlled counter.
+
+Originally built by [Pascal Martineau](https://github.com/lewebsimple/), this template is now officially supported for NativeScript-Vue.
 
 ### Usage
 
@@ -51,7 +55,9 @@ $ npm run watch:ios
 * Pure JavaScript&mdash;no `.vue` files
 * NativeScript themes
 
-This template is the simplest way you can develop your app with NativeScript-Vue. It does not require an extra build step, because everything is written in pure `.js` files. 
+Use this template to develop your app from the [NativeScript CLI](https://github.com/NativeScript/nativescript-cli), using only JavaScript.
+
+Functionality-wise, the template is a spin-off of the basic template for NativeScript development and implements a simple button-controlled counter.
 
 ### Usage
 
