@@ -7,7 +7,7 @@ The `<v-template>` component lets you define markup that you can reuse as a temp
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
 | `if` | `String` | The condition for using this template.
 | `name` | `String` | The name of the template, auto-generated if omitted.
