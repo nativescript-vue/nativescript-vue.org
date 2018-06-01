@@ -39,7 +39,7 @@ See also: [DatePicker](/en/docs/elements/components/date-picker).
 
 | Name | Description |
 |------|-------------|
-| `timeChanged` | Emitted when the selected time changes.
+| `timeChange` | Emitted when the selected time changes.
 
 ## Native component
 
