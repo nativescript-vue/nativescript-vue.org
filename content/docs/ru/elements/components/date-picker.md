@@ -11,7 +11,7 @@ contributors: [sn0wil]
 ---
 
 ```html
-<DatePicker @loaded="onDatePickerLoaded" @dateChanged="onDateChanged" />
+<DatePicker @loaded="onDatePickerLoaded" @dateChange="onDateChanged" />
 ```
 
 `<DatePicker>` обеспечивает двустороннюю привязку данных, используя `v-model`.
@@ -37,7 +37,7 @@ contributors: [sn0wil]
 
 | Имя | Описание |
 |------|-------------|
-| `dateChanged` | Срабатывает при измененнии выбранной даты.
+| `dateChange` | Срабатывает при измененнии выбранной даты.
 
 ## Нативный компонент
 

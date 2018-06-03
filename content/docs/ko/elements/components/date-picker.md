@@ -9,7 +9,7 @@ DatePicker 컴포넌트는 사용자가 날짜를 선택할 수 있도록 합니
 ---
 
 ```html
-<DatePicker @loaded="onDatePickerLoaded" @dateChanged="onDateChanged" />
+<DatePicker @loaded="onDatePickerLoaded" @dateChange="onDateChanged" />
 ```
 
 **노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
@@ -35,7 +35,7 @@ DatePicker 컴포넌트는 사용자가 날짜를 선택할 수 있도록 합니
 
 | 이름 | 설명 |
 |------|-------------|
-| `dateChanged` | 선택된 날짜가 바뀔때 발생(Emit)
+| `dateChange` | 선택된 날짜가 바뀔때 발생(Emit)
 
 ## 네이티브 컴포넌트
 
