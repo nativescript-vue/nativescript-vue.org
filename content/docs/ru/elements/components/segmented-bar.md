@@ -1,15 +1,15 @@
 ---
 title: SegmentedBar
 apiRef: http://docs.nativescript.org/api-reference/modules/_ui_segmented_bar_.html
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [sn0wil]
 ---
 
-`<SegmentedBar>` is a UI bar component that displays a set of buttons for discrete selection. Can show text or images.
+`<SegmentedBar>` - это визуальный компонент, отображающий набор кнопок для разделенных областей. Также может отображать текст или изображения.
 
-As opposed to `<TabView>`:
-* The position of `<SegmentedBar>` is not fixed. 
-* You can place and style it as needed on the page or inside additional app elements such as hamburger menus.
-* You need to handle the content shown after selection separately.
+В отличие от `<TabView>`:
+* Положение `<SegmentedBar>` не фиксировано.
+* Вы можете располагать и изменять стили так, как необходимо на странице или внутри дополнительных элементов (например, гамбургер-меню).
+* Вам нужно отдельно обрабатывать содержимое, отображаемое после выбора, отдельно.
 
 ---
 ```html
@@ -25,7 +25,7 @@ As opposed to `<TabView>`:
     @selectedIndexChange="onSelectedIndexChange" />
 ```
 
-`<SegmentedBar>` provides two-way data binding using `v-model`.
+`<SegmentedBar>` обеспечивает двустороннюю привязку данных, используя `v-model`.
 
 ```html
 <SegmentedBar :items="listOfItems" v-model="selectedItem" />
@@ -33,21 +33,21 @@ As opposed to `<TabView>`:
 
 [> screenshots for=SegmentedBar <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `items` | `Array<SegmentedBarItem>` | An array of items to be displayed in the segmented bar. Represents the button labels or icons of the segmented bar.<br/>The array must be created in advance. 
-| `selectedIndex` | `Number` | Gets or sets the index of the selected item.
-| `selectedBackgroundColor` | `Color` | (Style property) Gets or sets the background color of the selected item. To set the background color of the entire bar, use `backgroundColor`.
+| `items` | `Array<SegmentedBarItem>` | Массив элементов, которые отображаются в segmented bar. Представляют собой заголовки кнопок или иконки.<br/>Массив должен быть создан заранее. 
+| `selectedIndex` | `Number` | Получает или задает индекс выбранного элемента.
+| `selectedBackgroundColor` | `Color` | (Стилевое свойство) Получает или задает цвет фона выбранного элемент. Для задания цвета фона всего компонента используйте `backgroundColor`.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `selectedIndexChange`| Emitted when the an item on the segmented bar is tapped.
+| `selectedIndexChange`| Срабатывает при нажатии на элемент в области.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

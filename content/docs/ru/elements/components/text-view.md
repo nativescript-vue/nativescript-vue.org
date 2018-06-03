@@ -1,12 +1,12 @@
 ---
-title: TextView
+title: TextViews
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_text_view_.textview
-contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen, ikoevska]
+contributors: [sn0wil]
 ---
 
-`<TextView>` is a UI component that shows an editable or a read-only multi-line text container. You can use it to let users type large text in your app or to show longer, multi-line text on the screen.
+`<TextView>` - визуальный компонент, отображающий доступный для редактирования или только для чтения многострочный контейнер для текста. Вы можете использовать его для того, чтобы дать пользователю вводить объемный текст в приложении или для отображения длинного многострочного текста на экране.
 
-`<TextView>` extends [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) and [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase) which provide additional properties and events.
+`<TextView>` наследуется от [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) и [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase), которые включают в себя дополнительные свойства и события.
 
 ---
 
@@ -14,15 +14,15 @@ contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen, ikoevs
 <TextView text="Multi\nLine\nText" />
 ```
 
-`<TextView>` provides two-way data binding using `v-model`.
+`<TextView>` обеспечивает двустороннюю привязку данных, используя `v-model`.
 
 ```html
 <TextView v-model="textViewValue" />
 ```
 
-### Displaying multi-line text with different styling
+### Отображение многострочного текста с различными стилями
 
-To apply multiple styles to the text in your `<TextView>`, you can use `<FormattedString>`
+Для применения стилей к строкам в `<TextView>` вы можете использовать `<FormattedString>`
 
 ```html
 <TextView editable="false">
@@ -38,28 +38,28 @@ To apply multiple styles to the text in your `<TextView>`, you can use `<Formatt
 
 [> screenshots for=TextView <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `text` | `String` | Gets or sets the value of the component.
-| `hint` | `String` | Gets or sets the placeholder text when the component is editable.
-| `editable` | `Boolean` | When `true`, indicates that the user can edit the contents of the container.
-| `maxLength` | `Number` | Sets the maximum number of characters that can be entered in the container.
-| `keyboardType` | `KeyboardType` | Shows a custom keyboard for easier text input.<br/>Valid values: `datetime`, `phone`, `number`, `url`, or `email`.
-| `returnKeyType` | Gets or sets the label of the return key.<br/>Valid values: `done`, `next`, `go`, `search`, or `send`.
-| `autocorrect` | `Boolean` | Enables or disables autocorrect.
+| `text` | `String` | Получает или задает значение текста.
+| `hint` | `String` | Получает или задает текста для подсказки текстового поля, когда компонент доступен для редактирования.
+| `editable` | `Boolean` | Когда `true`, указывает, что пользователь может редактировать текст.
+| `maxLength` | `Number` | Получает или задает максимальную длинну символов, которая может быть введена.
+| `keyboardType` | `KeyboardType` | Отображает пользовательскую клавиатуру для более простого ввода текста.<br/>Допустимые значения: `datetime`, `phone`, `number`, `url` или `email`.
+| `returnKeyType` | Получает или задает текст для клавиши ввод (return).<br/>Допустимые значения: `done`, `next`, `go`, `search` или `send`.
+| `autocorrect` | `Boolean` | Разрешает или запрещает автокоррекцию.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `textChange`| Emitted when the text changes.
-| `returnPress`| Emitted when the return key is pressed.
-| `focus`| Emitted when the container is in focus.
-| `blur`| Emitted when the container loses focus.
+| `textChange`| Срабатывает при изменени текста.
+| `returnPress`| Срабатывает при нажатии клавиши ввод (return).
+| `focus`| Срабатывает, когда контейнер получает фокус.
+| `blur`| Срабатывает, когда контейнер теряет фокус.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

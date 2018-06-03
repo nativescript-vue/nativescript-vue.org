@@ -1,12 +1,12 @@
 ---
 title: Switch
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_switch_.switch
-contributors: [MisterBrownRSA, rigor789, ikoevska]
+contributors: [sn0wil]
 ---
 
-`<Switch>` is a UI component that lets users toggle between two states.
+`<Switch>` - визуальный компонент, дающий пользователю возможность переключения между двумя состояниями.
 
-The default state is `false` or OFF.
+Значение по умолчанию `false` или OFF.
 
 ---
 
@@ -14,7 +14,7 @@ The default state is `false` or OFF.
 <Switch checked="true" />
 ```
 
-`<Switch>`provides two-way data binding using `v-model`.
+`<Switch>` обеспечивает двустороннюю привязку данных, используя `v-model`.
 
 ```html
 <Switch v-model="itemEnabled" />
@@ -22,19 +22,19 @@ The default state is `false` or OFF.
 
 [> screenshots for=Switch <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `checked` | `Boolean` | Gets or sets the value of the switch selection.<br/>Default value: `false`.
+| `checked` | `Boolean` | Получает или задает значение переключателя.<br/>Значение по умолчанию: `false`.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `checkedChange`| Emitted when the switch selection changes.
+| `checkedChange`| Срабатывает при переключении.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

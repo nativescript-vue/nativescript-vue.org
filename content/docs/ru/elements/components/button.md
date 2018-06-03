@@ -1,12 +1,12 @@
 ---
 title: Button
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [sn0wil]
 ---
 
-`<Button>` is a UI component that displays a button which reacts to a user gesture.
+`<Button>`  - визуальный компонент, отображающий кнопку, реагирующую на жесты пользователя.
 
-For more information about the available gestures, see [Gestures in the official NativeScript documentation](https://docs.nativescript.org/ui/gestures).
+Для более детальной информации о доступных действиях, ознакомьтесь с [Жестами в официальной документации NativeScript](https://docs.nativescript.org/ui/gestures).
 
 ---
 
@@ -16,20 +16,20 @@ For more information about the available gestures, see [Gestures in the official
 
 [> screenshots for=Button <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | тип | Описание |
 |------|------|-------------|
-| `text` | `String` | Sets the label of the button.
-| `textWrap` | `Boolean` | Gets or sets whether the widget wraps the text of the label. Useful for longer labels. Default value is `false`.
+| `text` | `String` | Задает текст кнопки.
+| `textWrap` | `Boolean` | Получает или устанавливает влезает ли текст в кнопку. Применительно для длинных заголовков. Значение по умолчанию - `false`.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `tap` | Emitted when the button is tapped.
+| `tap` | Срабатывает при нажатии на кнопку.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

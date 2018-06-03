@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_search_bar_.sear
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-`<SearchBar>` is a UI component that provides a user interface for entering search queries and submitting requests to the search provider.
+`<SearchBar>` - визуальный компонент, который предоставляет пользовательский интерфейс для ввода поисковых запросов и отправки запросов поисковому провайдеру.
 
 ---
 
@@ -12,7 +12,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 <SearchBar hint="Search hint" :text="searchPhrase" @textChange="onTextChanged" @submit="onSubmit" />
 ```
 
-`<SearchBar>` provides two-way data binding using `v-model`.
+`<SearchBar>` обеспечивает двустороннюю привязку данных, используя `v-model`.
 
 ```html
 <SearchBar v-model="searchQuery" />
@@ -20,24 +20,24 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 [> screenshots for=SearchBar <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `hint` | `String` | Gets or sets placeholder text for the input area.
-| `text` | `String` | Gets or sets the value of the search query.
-| `textFieldBackgroundColor` | `Color` | Gets or sets the background color of the input area.
-| `textFieldHintColor` | `Color` | Gets or sets the color of the placeholder text.
+| `hint` | `String` | Получает или задает текст для подсказки текстового поля.
+| `text` | `String` | Получает или задает значение поискового запроса.
+| `textFieldBackgroundColor` | `Color` | Получает или задает цвет фона для поля ввода.
+| `textFieldHintColor` | `Color` | Получает или задает цвет текста для подсказки текстового поля.
 
-## Events
+## События
 
-| name | description |
+| Имя | Описание |
 |------|-------------|
-| `textChange` | Emitted when the text is changed.
-| `submit` | Emitted when the search input is submitted.
-| `clear` | Emitted when the current search input is cleared through the **X** button in the input area.
+| `textChange` | Срабатывает для изменении текста.
+| `submit` | Срабатывает при подтверждении (submit) в поле ввода.
+| `clear` | Срабатывает, когда текущее значение поля ввода очищено с помощью кнопки **X**, расположенного в поле ввода.
 
-## Native Component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

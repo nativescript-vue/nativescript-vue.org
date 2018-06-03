@@ -1,15 +1,15 @@
 ---
 title: ListView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_view_.listview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [sn0wil]
 ---
 
-`<ListView>` is a UI component that shows items in a vertically scrolling list. To set how the list shows individual items, you can use the `<v-template>` component.
+`<ListView>` - визуальный комопонент, отображающий список элементов, который монжно вертикально прокручивать (скроллить). Для установки того, как будет отображаться каждый компонент, вы можете использовать `<v-template>`.
 
 ```html
 <ListView for="item in listOfItems" @itemTap="onItemTap">
   <v-template>
-    <!-- Shows the list item label in the default color and stye. -->
+    <!-- Отображает список с item label с заданными по умолчанию стилями. -->
     <Label :text="item.text" />
   </v-template>
 </ListView>
@@ -19,11 +19,11 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 
 [> screenshots for=ListView <]
 
-## Using `<ListView>` with multiple `<v-template>` blocks
+## Использование `<ListView>` с множеством блоков `<v-template>`
 
-The [`v-template` component](/en/docs/utilities/v-template) is used to define how each list item is shown on the screen. 
+[Компонент `v-template`](/ru/docs/utilities/v-template) используется для определения того, как часто каждый элемент списка отображается на экране. 
 
-If you need to visualize one or more list items differently than the rest, you can enclose them in additional `<v-template>` blocks and use conditions. You can have as many `<v-template>` blocks as needed within one `<ListView>`.
+Если вам необходимо отобразить один или несколько элементов списка иначе, чем остальные, то вы можете вложить их в дополнительные блоки `<v-template>` и использовать условия. Вы можете располагать сколько угодно много блоков `<v-template>` в `<ListView>`.
 
 ```html
 <ListView for="item in listOfItems" @itemTap="onItemTap"> 
@@ -32,23 +32,22 @@ If you need to visualize one or more list items differently than the rest, you c
   </v-template>
 
   <v-template if="$odd">
-    <!-- For items with an odd index, shows the label in red. -->
+    <!-- Для элементов с нечетным индексом отображаем красный текст. -->
     <Label :text="item.text" color="red" />
   </v-template>
 </ListView>
 ```
+Когда вы создаете условные конструкции для `<v-template>`, вы можете использовать любое корректное JavaScript-выражение или любую из следующих вспомогательных функций (helpers):
 
-When you create conditions for `<v-template>`, you can use any valid JavaScript expression or any of the following helpers:
+* `$index`&mdash; индекс (index) текущего элемента
+* `$even`&mdash;`true`, если индекс текущего элементы четный
+* `$odd`&mdash;`true`, если индекс текущего элементы четный
 
-* `$index`&mdash; the index of the current item
-* `$even`&mdash;`true` if the index of the current item is even
-* `$odd`&mdash;`true` if the index of the current item is odd
+## Важное примечание о `v-for`
 
-## An important note about `v-for`
+`<ListView>` не перебирает элементы списка, как вы ожидаете, если используете [`v-for`](https://ru.vuejs.org/v2/guide/list.html#%D0%9E%D1%82%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%B0-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-v-for). Вместо этого `<ListView>` только создает необходимые представления для отображения текущих видимых элементов на экране и переиспользует представления, которые уже скрыты с экрана во время прокрутки. Этот концепт называется _view recycling_ и в основном используется в мобильных приложениях для улучшения производительности.
 
-`<ListView>` does not loop through list items as you would expect when using a [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) loop. Instead `<ListView>` only creates the necessary views to display the currently visible items on the screen, and reuses the views that are already off-screen when scrolled. This concept is called _view recycling_ and is commonly used in mobile apps to improve performance. 
-
-This is important because **you can't rely on event listeners attached inside the `v-template`**. Instead, you need to use the `itemTap` event which contains the index of the tapped item and the actual item from the list.
+Это важно, потмоу как **вы не можете полагаться на обработчиков событий внутри `v-template`**. Вместо этого вам необходимо использовать событие `itemTap`, которые содержит в себе индекс нажатого элемента и сам элемент списка.
 
 ```javascript
 onItemTap(event) {
@@ -57,29 +56,29 @@ onItemTap(event) {
 }
 ```
 
-**NOTE:** If a `v-for` is used on a `<ListView>`, a warning will be printed to the console, and it will be converted to the `for` property.
+**Примечание:** если `v-for` используется на `<ListView>`, то в консоли будет выведено предупреждение и он будет преобразован в свойство `for`.
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `for` | `String` | Provides the expression for iterating through the items.<br/>For example: <ul><li><code>item in listOfItems</code></li><li><code>(item, index) in listOfItems</code></li><li><code>item in [1, 2, 3, 4, 5]</code></li></ul>
-| `items` | `Array<any>` | An array of items to be shown in the `<ListView>`.<br/>**This property is only for advanced use. Use the `for` property instead.**
-| `separatorColor` | `Color` | Sets the separator line color. Set to `transparent` to remove it.
+| `for` | `String` | Предоставляет выражение для итерирования по элементам.<br/>Например: <ul><li><code>item in listOfItems</code></li><li><code>(item, index) in listOfItems</code></li><li><code>item in [1, 2, 3, 4, 5]</code></li></ul>
+| `items` | `Array<any>` | Массив элементов, которые отображены в `<ListView>`.<br/>**Это свойство только для продвинутого использования. Используйте вместо него свойство `for`.**
+| `separatorColor` | `Color` | Задает цвет линии разделителя. Установите его в значение `transparent` для удаления.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `itemTap`| Emitted when an item in the `<ListView>` is tapped. To access the tapped item, use `event.item`.
+| `itemTap`| Срабатывает тогда, когда нажат элемент в `<ListView>`. Для получения доступа к нажатому элементу используйте `event.item`.
 
-## Methods
+## Методы
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `refresh()` | (Coming soon) Forces the `<ListView>` to reload all its items.
+| `refresh()` | (Скоро) Заставляет `<ListView>` перезагрузить все его элементы.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

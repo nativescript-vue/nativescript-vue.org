@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_picker_.lis
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-`<ListPicker>` is a UI component that lets the user select a value from a pre-configured list.
+`<ListPicker>` - визуальный компонент, позволяющий пользователю выбирать значение из заранее заданного списка.
 
 ---
 
@@ -13,7 +13,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
     @selectedIndexChange="selectedIndexChanged" />
 ```
 
-`<ListPicker>` provides two-way data binding using `v-model`.
+`<ListPicker>` обеспечивает двустороннюю привязку данных, используя `v-model`.
 
 ```html
 <ListPicker :items="listOfItems" v-model="selectedItem" />
@@ -21,20 +21,20 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 [> screenshots for=ListPicker <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `items` | `Array<String>` | Gets or sets the items displayed as options in the list picker.
-| `selectedIndex` | `Number` | Gets or sets the index of the currently selected item.
+| `items` | `Array<String>` | Задает или получает элементы, которые будут отображаться в списке.
+| `selectedIndex` | `Number` | Задает или получает индекс выбранного элемента.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `selectedIndexChange`| Emitted when the currently selected option (index) changes.
+| `selectedIndexChange`| Срабатывает, когда выбранное значение (индекс) изменяется.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

@@ -1,10 +1,10 @@
 ---
 title: NavigationButton
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.navigationbutton
-contributors: [rigor789]
+contributors: [sn0wil]
 ---
 
-The NavigationButton component is a NativeScript abstraction for the Android navigation button, and the iOS back button.
+Компонент NavigationButton - абстракция NativeScript для кнопки навигации Android и кнопки назад для iOS.
 
 ---
 
@@ -16,15 +16,15 @@ The NavigationButton component is a NativeScript abstraction for the Android nav
 
 ## Props
 
-| name | type | description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `text` | `String` | Sets the text to be shown on iOS.
-| `android.systemIcon` | `String` | The icon to be shown on Android.
+| `text` | `String` | Задает текст, который будет отображен в iOS.
+| `android.systemIcon` | `String` | Иконка, которая будет отображена в Android.
 
-*The icon list for Android can be found at <https://developer.android.com/reference/android/R.drawable.html>, and the icons are the ones that start with `ic_` prefix.*
+*Список иконок для Android можно найти по ссылке: <https://developer.android.com/reference/android/R.drawable.html>, где иконки - это те, которые начинаются с префикса `ic_`.*
 
-## Events
+## События
 
-| name | description |
+| Имя | Описание |
 |------|-------------|
-| `tap`| Emitted when the NavigationButton has been tapped.
+| `tap`| Вызывается при нажатии на NavigationButton.

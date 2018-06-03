@@ -1,10 +1,10 @@
 ---
 title: Progress
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_progress_.progress
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [sn0wil]
 ---
 
-`<Progress>` is a UI component that shows a bar to indicate the progress of a task. 
+`<Progress>` - визуальный компонент, отображающий полосу для индикации прогресса задачи.
 
 See also: [ActivityIndicator](/en/docs/elements/components/activity-indicator).
 
@@ -16,20 +16,20 @@ See also: [ActivityIndicator](/en/docs/elements/components/activity-indicator).
 
 [> screenshots for=Progress <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `value` | `Number` | Gets or sets the current value of the progress bar. Must be within the range of 0 to `maxValue`.
-| `maxValue` | `Number` | Gets or sets the maximum value of the progress bar.<br/>Default value: `100`.
+| `value` | `Number` | Получает или задает текущее значение полосы прогресса. Должно быть в диапазоне от 0 до `maxValue`.
+| `maxValue` | `Number` | Получает или задает максимальное значение полосы прогресса.<br/>Значение по умолчанию: `100`.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `valueChange` | Emitted when the `value` property changes.
+| `valueChange` | Срабатывает при изменении свойства `value`.
 
-## Native Component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|

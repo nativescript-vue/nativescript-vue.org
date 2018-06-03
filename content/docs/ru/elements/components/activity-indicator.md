@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicat
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-`<ActivityIndicator>` is a UI component that shows a progress indicator signaling to the user of an operation running in the background.
+`<ActivityIndicator>` - визуальный компонент, отображающий прогресс, сигнализирующий пользователя о том, что операция выполняется в фоновом режиме.
 
 ---
 
@@ -14,19 +14,19 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 [> screenshots for=ActivityIndicator <]
 
-## Props
+## Свойства
 
-| Name | Type | Description |
+| Имя | Тип | Описание |
 |------|------|-------------|
-| `busy` | `Boolean` | Gets or sets whether the indicator is active. When `true`, the indicator is active.
+| `busy` | `Boolean` | Получает или устанавливает состояние активности индикатора. `true` означает, что индикатор активен.
 
-## Events
+## События
 
-| Name | Description |
+| Имя | Описание |
 |------|-------------|
-| `busyChange`| Emitted when the `busy` property is changed.
+| `busyChange`| Срабатывает при изменении свойства `busy`.
 
-## Native component
+## Нативный компонент
 
 | Android | iOS |
 |---------|-----|
