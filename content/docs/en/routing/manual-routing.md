@@ -1,6 +1,6 @@
 ---
-title: Manual Routing
-contributors: [eddyverbruggen, fartek, rigor789]
+title: Frame Routing
+contributors: [eddyverbruggen, fartek, rigor789, misterbrownza]
 ---
 
 The easiest way to do routing in NativeScript-Vue is using the convenience functions
