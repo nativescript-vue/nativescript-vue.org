@@ -1,21 +1,21 @@
 ---
 title: ActionDialog
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action 
-contributors: [MisterBrownRSA, rigor789, ikoevska]
+contributors: [lex111]
 ---
 
-The `action()` method shows a list of selectable options and a cancellation button. Use it to let the user choose between options or dismiss the selection.
+Метод `action()` показывает список доступных для выбора опций и кнопку отмены. Используйте его,  чтобы дать возможность пользователю выбрать один из вариантов или отклонить выбор.
 
-The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+Этот метод является частью [модуля `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 
-## Basic use
+## Основное использование
 
-The `action()` method is available globally. You can call it anywhere in your app.
+Метод `action()` доступен глобально. Вы можете вызывать его в любом месте вашего приложения.
 
 ```JavaScript
-action("Your message", "Cancel button text", ["Option1", "Option2"])
+action("Ваше сообщение", "Текст для кнопки отмены", ["Опция 1", "Опция 2"])
   .then(result => {
     console.log(result);
   });
