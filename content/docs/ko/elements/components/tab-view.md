@@ -31,7 +31,7 @@ contributors: [qgp9]
 
 | 이름 | 설명 |
 |------|-------------|
-| `selectedIndexChanged`| tab-view-item 컴포넌트중 하나가 탭되었을때 발생
+| `tabChange`| tab-view-item 컴포넌트중 하나가 탭되었을때 발생
 
 ## Native Component
 | Android | iOS |

@@ -35,7 +35,7 @@ contributors: [alexhiroshi]
 
 | nome | descrição |
 |------|-------------|
-| `selectedIndexChanged` | Emitido quando um componente `<TabViewItem>` é tocado.
+| `tabChange` | Emitido quando um componente `<TabViewItem>` é tocado.
 
 ## Componente Nativo
 
