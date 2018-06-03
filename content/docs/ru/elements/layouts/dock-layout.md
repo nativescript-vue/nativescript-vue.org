@@ -1,14 +1,14 @@
 ---
 title: DockLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_layout_
-contributors: [rigor789]
+contributors: [lex111]
 ---
 
-DockLayout is a layout that provides a docking mechanism for child elements to the `left`, `right`, `top`, `bottom` or center of the layout. To define the docking side of a child element, use its `dock` property. To dock a child element to the center of the DockLayout, it must be the **last child** of the DockLayout and the `stretchLastChild` property of the DockLayout must be set to `true`.
+DockLayout — это макет, обеспечивающий механизм прикрепления дочерних элементов слева (`left`), справа (`right`), сверху (`top`), снизу (`bottom`) или центра макета. Для определения стороны прикрепления дочерного элемента, используйте его свойство `dock`. Для прикрепления элемента к центру DockLayout, он должен быть **последим дочерним элементом** DockLayout, а свойство `stretchLastChild` DockLayout должно быть установлено в `true`.
 
-### Samples
+### Примеры
 
-#### Dock to every side without stretching last child
+#### Стыковка по всем сторонам без прикрепления последнего дочерного элемента
 
 ```html
 <DockLayout stretchLastChild="false" backgroundColor="#3c495e">
@@ -20,7 +20,7 @@ DockLayout is a layout that provides a docking mechanism for child elements to t
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_no_stretch.svg" />
 
-#### Dock to every side with stretching last child
+#### Прикрепление с обоих сторон с растяжением последнего дочернего элемента
 
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
@@ -32,7 +32,7 @@ DockLayout is a layout that provides a docking mechanism for child elements to t
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_stretch.svg" />
 
-#### Multiple children on the same side
+#### Несколько дочерних элементов на одной стороне
 
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
@@ -44,17 +44,17 @@ DockLayout is a layout that provides a docking mechanism for child elements to t
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_multiple_on_same_side.svg" />
 
-## Props
+## Свойства
 
-| name | type | description |
+| Название | Тип | Описание |
 |------|------|-------------|
-`stretchLastChild` | `Boolean` | Enables/Disables stretching the last child to fit the remaining space.
+`stretchLastChild` | `Boolean` | Включает/отключает растяжение последнего дочернего элемента для заполнения оставшегося пространства.
 
-## Additional Children Props
+## Дополнительные свойства дочерних элементов
 
-When an element is a direct child of the DockLayout, the following
-props get a meaning:
+Когда элемент — прямой дочерний элемент DockLayout, доступны следующие
+свойства:
 
-| name | type | description |
+| Название | Тип | Описание |
 |------|------|-------------|
-`dock` | `String` | Specifies which side to dock the element to. Values can be: `top`, `right`, `bottom`, `left`
+`dock` | `String` | Указывает, к какой стороне состыковать элемент. Возможные значения: `top`, `right`, `bottom`, `left`
