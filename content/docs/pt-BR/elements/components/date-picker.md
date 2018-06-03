@@ -9,7 +9,7 @@ contributors: [alexhiroshi]
 ---
 
 ```html
-<DatePicker @loaded="onDatePickerLoaded" @dateChanged="onDateChanged" />
+<DatePicker @loaded="onDatePickerLoaded" @dateChange="onDateChanged" />
 ```
 
 `<DatePicker>` fornece two-way data binding usando `v-model`.
@@ -35,7 +35,7 @@ contributors: [alexhiroshi]
 
 | nome | descrição |
 |------|-------------|
-| `dateChanged` | Emitido quando a data selecionada é alterada.
+| `dateChange` | Emitido quando a data selecionada é alterada.
 
 ## Componente Nativo
 
