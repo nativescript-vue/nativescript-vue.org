@@ -6,7 +6,7 @@ outdated: false
 
 This page provides an overview of the templates that you can use to develop apps with NativeScript-Vue. The list is updated as new templates come up or old templates become deprecated.
 
-> **NOTE:** To use any of the listed templates, you need to have [set up your system for NativeScript development](/en/docs/getting-started/installation).
+> **NOTE:** To use any of the listed templates, you need to [set your system up for NativeScript development](/en/docs/getting-started/installation).
 
 **Currently supported templates:**
 
