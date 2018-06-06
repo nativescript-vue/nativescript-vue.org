@@ -33,6 +33,8 @@ Open your app entry file (llikely `app.js` or `main.js`) and add the following l
 Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient)
 ```
 
+This requires and registers the plugin in your `Vue` instance. The `registerElement` function expects the name of the `<Element>` as the first argument, and a function that returns the plugin as its second argument. Provide the element name exactly as you are supposed to call it in your code. Provide the plugin name exactly as its npm package name.
+
 ### Use the plugin in your app
 
 ```HTML
