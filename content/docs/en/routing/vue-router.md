@@ -5,7 +5,7 @@ contributors: [eddyverbruggen, rigor789, ikoevska]
 
 > Currently, integration with Vue Router is **experimental**. If you want to use a non-experimental approach, you can try [manual routing](/en/docs/routing/manual-routing).  
 
-With the router, you can choose between [component-based routing](https://router.vuejs.org/guide/essentials/named-views.html#nested-named-views) and page-based routing. In a mobile app, you are more likely to implement page-based routing.
+With the router, you can choose between [component-based routing](https://router.vuejs.org/api/#router-view) and page-based routing. In a mobile app, you are more likely to implement page-based routing.
 
 ## Install and require the plugin
 
