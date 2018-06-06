@@ -1,43 +1,41 @@
 ---
 title: Vue Router
-contributors: [eddyverbruggen, rigor789]
+contributors: [eddyverbruggen, rigor789, ikoevska]
 ---
 
-If [Manual Routing](/en/docs/routing/manual-routing) doesn't cut it for your use-case,
-then you'll be happy to learn [the Vue router](https://router.vuejs.org/en/) is supported.
+> Currently, integration with Vue Router is **experimental**. If you want to use a non-experimental approach, you can try [manual routing](/en/docs/routing/manual-routing).  
 
-With the router, there are two types of routing that you can use. Component based routing, and page based routing.
+With the router, you can choose between [component-based routing](https://router.vuejs.org/api/#router-view) and page-based routing. In a mobile app, you are more likely to implement page-based routing.
 
-Component based routing is where you specify the `<router-view />` component in your template, and the different routes will get placed into the view, and then when navigating the views will be swapped. This is useful sometimes, but in many cases what you want is to navigate to different pages.
+## Install and require the plugin
 
-This document documents page routing in more detail, but please note that this feature is unstable at this point, and it is recommended that you stick to manual routing if you require different pages in your application. We are hoping to change this in the near future, and it is a priority on our todo list.
+In the command prompt, run:
 
-## Installation
-From a command prompt, run:
-```shell
+```Shell
 $ npm install --save vue-router
 ```
 
-## Usage
-Let's show a full example, broken down in a few pieces so we can provide some comments.
-Note that the Vue Router has more tricks up its sleeve, so be sure to visit
-[the official documentation](https://router.vuejs.org/en/).
+In the entry file for your app (likely, `app.js` or `main.js`), require Vue and Vue Router and let them shake hands.
 
----
-Require Vue, VueRouter, and let them shake hands 🤝
-```js
+```JavaScript
 const Vue = require('nativescript-vue');
 const VueRouter = require('vue-router');
 
 Vue.use(VueRouter);
 ```
 
----
-Define a `Master` page with the current router as its title (`$route.path`)
-and a button with a `@tap="$router.push('/detail')"` so a new page is pushed on the stack and navigated to.
+## Usage
 
-Also, a button to the same page with a query param `user`.
-```html
+This section walks you through a complete example of page-based routing, breaking it down into key pieces and providing comments along the way.
+
+---
+Define a `Master` page with the current router as its title (`$route.path`). 
+
+Create a button with a `@tap="$router.push('/detail')"`. When tapped, a new `Detail` page is pushed on the stack and navigated to.
+
+Create a second button with a query param `user`. When tapped, it passes additional information to the `Detail` page.
+
+```HTML
 const Master = {
   template: `
     <Page>
@@ -52,16 +50,14 @@ const Master = {
 ```
 
 ---
-Define a `Detail` page with a `NavigationButton`. On iOS this will automatically bring you back to the
-previous page in the stack, but for Android `tap` handler is required (which is ignored on iOS).
-So add `@tap="$router.back()"`.
+Define a `Detail` page with a `NavigationButton`. On iOS, the button automatically brings you back to the
+previous page in the stack. On Android, you need to add a `tap` handler (ignored on iOS) to take you back: `@tap="$router.back()"`.
 
-Remember that `user` query param we passed from the second button of the `Master` page? You can use it in the `Details`
-page like this: `<Label :text="$route.query.user">`
+Use the `user` query param, defined in the `Master` page. For example, display its value as text on the `Detail` page: `<Label :text="$route.query.user">`.
 
-Lastly, you can navigate back (and forth) with `$router.go(<number-of-pages>)` as demonstrated below.
+Create a button with `$router.go(<number-of-pages>)`. When tapped, it navigates one page back in the stack.
 
-```html
+```HTML
 const Detail = {
   template: `
     <Page>
@@ -78,8 +74,9 @@ const Detail = {
 ```
 
 ---
-Define all the pages of your application as follows:
-```js
+Create a router instance, enable page routing, and define all the pages of your app.
+
+```JavaScript
 const router = new VueRouter({
   pageRouting: true,
   routes: [
@@ -91,15 +88,27 @@ const router = new VueRouter({
 ```
 
 ---
-And load one of those routes when the app starts:
-```js
+Load one of the routes when the app starts.
+
+```JavaScript
 router.replace('/master');
 ```
 
 ---
-Oh, and don't forget to tell `Vue` about your routes:
-```js
+Tell `Vue` about your routes.
+
+```JavaScript
 new Vue({
   router
 }).$start();
 ```
+
+## See also
+
+Vue Router has more tricks up its sleeve, so be sure to visit [the official documentation](https://router.vuejs.org/en/).
+
+Check out the following [NativeScript-Vue samples](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples):
+
+* [app-with-page-routing](nativescript-vue/samples/app/app-with-page-routing.js)
+* [app-with-router](nativescript-vue/samples/app/app-with-router.js)
+* [app-with-router-pages](nativescript-vue/samples/app/app-with-router-pages.js)
