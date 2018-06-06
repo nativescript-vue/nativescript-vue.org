@@ -5,7 +5,7 @@ contributors: [eddyverbruggen, rigor789, ikoevska]
 
 > Currently, integration with Vue Router is **experimental**. If you want to use a non-experimental approach, you can try [manual routing](/en/docs/routing/manual-routing).  
 
-With the router, you can choose between [component-based routing](https://router.vuejs.org/guide/essentials/named-views.html) and page-based routing. In a mobile app, you are more likely to implement page-based routing.
+With the router, you can choose between [component-based routing](https://router.vuejs.org/guide/essentials/named-views.html#nested-named-views) and page-based routing. In a mobile app, you are more likely to implement page-based routing.
 
 ## Install and require the plugin
 
@@ -112,4 +112,3 @@ Check out the following [NativeScript-Vue samples](https://github.com/nativescri
 * [app-with-page-routing](nativescript-vue/samples/app/app-with-page-routing.js)
 * [app-with-router](nativescript-vue/samples/app/app-with-router.js)
 * [app-with-router-pages](nativescript-vue/samples/app/app-with-router-pages.js)
-* [app-with-router-v2](nativescript-vue/samples/app/app-with-router-v2.js)
