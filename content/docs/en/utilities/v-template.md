@@ -20,7 +20,9 @@ The `<v-template>` component is used internally by the [ListView component](/en/
 
 You can use `v-template` to implement custom components that require a template or multiple templates.
 
-`v-template` does not render anything when placed in the template. Instead, it adds a `$templates` property registers itself as an available template in the parent element. The parent element is a [`TemplateBag` instance](https://github.com/nativescript-vue/nativescript-vue/blob/master/platform/nativescript/runtime/components/v-template.js#L36).
+`v-template` does not render anything when placed in the template. Instead, it adds a `$templates` property to the parent element. This `$templates` property is a [`TemplateBag` instance](https://github.com/nativescript-vue/nativescript-vue/blob/master/platform/nativescript/runtime/components/v-template.js#L36).
+
+Next, `v-template` registers itself as an available template in the respective `TemplateBag` instance for the parent element. Any existing `TemplateBag` instance on the parent element is reused.
 
 ### The `TemplateBag` class
 
