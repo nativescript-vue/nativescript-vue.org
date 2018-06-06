@@ -21,7 +21,7 @@ This page provides an overview of the templates that you can use to develop apps
 
 **Project link:** [https://github.com/nativescript-vue/vue-cli-template](https://github.com/nativescript-vue/vue-cli-template)
 
-### Features
+**Features**
 
 * `.vue` single file components
 * Vuex&mdash;state management (opt-in)
@@ -34,7 +34,7 @@ Functionality-wise, the template is a spin-off of the basic template for NativeS
 
 Originally built by [Pascal Martineau](https://github.com/lewebsimple/), this template is now officially supported for NativeScript-Vue.
 
-### Usage
+**Usage**
 
 ```shell
 $ npm install -g @vue/cli @vue/cli-init
@@ -50,7 +50,7 @@ $ npm run watch:ios
 
 **Project link:** [https://github.com/nativescript-vue/nativescript-vue-template](https://github.com/nativescript-vue/nativescript-vue-template)
 
-### Features
+**Features**
 
 * Pure JavaScript&mdash;no `.vue` files
 * NativeScript themes
@@ -59,7 +59,7 @@ Use this template to develop your app from the [NativeScript CLI](https://github
 
 Functionality-wise, the template is a spin-off of the basic template for NativeScript development and implements a simple button-controlled counter.
 
-### Usage
+**Usage**
 
 ```shell
 $ tns create <project-name> --template nativescript-vue-template
