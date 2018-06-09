@@ -22,4 +22,10 @@ $ npm run watch:<platform>
 
 where platform is `ios` or `android`.
 
-For more information about the available templates, see the [templates documentation](/en/docs/getting-started/templates).
+This set of commands performs the following operations on your system:
+
+1. Installs the Vue CLI and its init add-on on your system. This lets you use both the NativeScript CLI and the Vue CLI on your system. Skip this command, if you already have Vue CLI installed.
+2. Pulls the selected template (the Vue CLI-compatible NativeScript-Vue template) and creates a project locally. This template relies on `.vue` components and provides routing and Vuex state management out of the box. For more information about the available templates, see [Templates](/en/docs/getting-started/templates).
+3. Switches to the directory containing the newly created project.
+4. Installs any npm dependencies locally.
+5. Builds and runs the project on any connected devices or installed emulators for the selected platform. The `watch` option detects code changes and applies them automatically.
