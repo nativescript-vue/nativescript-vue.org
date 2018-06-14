@@ -8561,6 +8561,7 @@ button,
 
   .md\:bg-docs-gradient {
     background: linear-gradient(90deg, #f1f5f8 50%, #fff 50%);
+    padding-top: 72px;
   }
 }
 

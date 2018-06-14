@@ -8,7 +8,7 @@
 
 <div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
     <!--<QuickStart />-->
-    <%- include('_partials/header') %>
+    <%- include('_partials/header', {css_classes: 'md:fixed md:w-full'}) %>
 
     <div class="md:bg-docs-gradient min-h-screen">
         <div class="container mx-auto flex">
