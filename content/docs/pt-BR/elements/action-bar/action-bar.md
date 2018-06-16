@@ -1,10 +1,10 @@
 ---
 title: ActionBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionbar
-contributors: [alexhiroshi]
+contributors: [alexhiroshi, WesleiRamos]
 ---
 
-O componente ActionBar é uma abstração do NativeScript para o ActionBar, do Android, e o NavigationBar, do iOS.
+O componente ActionBar é uma abstração do NativeScript para o ActionBar do Android e o NavigationBar do iOS.
 
 ---
 
@@ -33,8 +33,8 @@ O componente ActionBar é uma abstração do NativeScript para o ActionBar, do A
 
 #### Removendo a borda
 No iOS e no Android, uma pequena borda é desenhada na parte debaixo da ActionBar.
-Além disso, a cor de fundo da ActionBar, no iOS, é um pouco diferente da que você especifica,
-porque o iOS aplica um filtro. Para remover o filtro e a borda, defina `flat` como `true`.
+Além disso, a cor de fundo da ActionBar no iOS, é um pouco diferente da que você especifica
+porque o iOS aplica um filtro. Para remover o filtro e a borda defina `flat` como `true`.
 
 ```html
 <ActionBar title="My App" flat="true" />

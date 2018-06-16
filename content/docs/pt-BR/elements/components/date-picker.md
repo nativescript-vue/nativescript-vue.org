@@ -1,7 +1,7 @@
 ---
 title: DatePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker
-contributors: [alexhiroshi]
+contributors: [alexhiroshi, WesleiRamos]
 ---
 
 `<DatePicker>` é um componente de UI que permite o usuário selecionar uma data de uma lista pré-configurada.
@@ -25,8 +25,8 @@ contributors: [alexhiroshi]
 | nome | tipo | descrição |
 |------|------|-------------|
 | `date` | `Date` | Obtém ou define a data completa.
-| `minDate` | `Date` | Gets or sets the earliest possible date to select.
-| `maxDate` | `Date` | Gets or sets the latest possible date to select.
+| `minDate` | `Date` | Obtém ou define a data mais antiga possível para selecionar.
+| `maxDate` | `Date` | Obtém ou define a data mais recente possível para selecionar.
 | `day` | `Number` | Obtém ou define o dia.
 | `month` | `Number` | Obtém ou define o mês.
 | `year` | `Number` | Obtém ou define o ano.

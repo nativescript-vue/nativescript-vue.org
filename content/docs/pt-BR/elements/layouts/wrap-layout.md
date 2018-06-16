@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_wrap_lay
 contributors: [alexhiroshi]
 ---
 
-O container WrapLayout posiciona os filhos em linhas ou colunas, baseado na propriedade orientation, até o espaço ser preenchido, e então e ele os coloca em uma nova linha ou coluna.
+O container WrapLayout posiciona os filhos em linhas ou colunas, baseado na propriedade orientation até o espaço ser preenchido, e então e ele os coloca em uma nova linha ou coluna.
 
 ### Exemplos
 

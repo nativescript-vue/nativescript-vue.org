@@ -21,11 +21,11 @@ O componente ListView exibe uma lista de rolagem vertical. Você pode definir di
 ```
 
 No exemplo acima, o segundo template será usado se o index do item for ímpar.
-Por conveniência, você pode usar os helpers `$index`, `$even` e `$odd`, mas, conforme necessário, você pode usar qualquer expressão javascript válido para a condição `if` dos `v-template`.
+Por conveniência, você pode usar os helpers `$index`, `$even` e `$odd`, mas conforme necessário, você pode usar qualquer expressão javascript válido para a condição `if` dos `v-template`.
 
 Para aprender mais sobre o componente `v-template`, veja a [documentação do `v-template`](/pt-BR/docs/utilities/v-template).
 
-O ListView não percorre os itens como é esperado usando um loop [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for). Em vez disso, ele só cria as views necessárias para mostrar os itens visíveis na tela, e é normalmente usado em aplicativos mobile para melhorar a performance. Isso é importante porque você não pode confiar nos eventos dentro do  `v-template`, você deve usar o evento `itemTap` que contém o index do item tocado, assim como o item real da lista.
+O ListView não percorre os itens como é esperado usando um loop [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for). Em vez disso, ele só cria as views necessárias para mostrar os itens visíveis na tela, e é normalmente usado em aplicativos móveis para melhorar a performance. Isso é importante porque você não pode confiar nos eventos dentro do  `v-template`, você deve usar o evento `itemTap` que contém o index do item tocado, assim como o item real da lista.
 
 ```js
 onItemTap(event) {

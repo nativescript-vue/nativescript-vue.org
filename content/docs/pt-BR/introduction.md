@@ -1,15 +1,15 @@
 ---
 title: Introdução
-contributors: [alexhiroshi]
+contributors: [alexhiroshi, WesleiRamos]
 ---
 
 ## O que é [NativeScript](https://www.nativescript.org/)?
 
-NativeScript é um framework open source para construção de aplicativos mobile nativos usando JavaScript.
+NativeScript é um framework open source para construção de aplicativos móveis nativos usando JavaScript.
 
 ## O que é [Vue.js](https://vuejs.org/)?
 
-Vue (pronuncia-se /vjuː/, como view, em inglês) é um framework progressivo para construção de interface do usuário. O core da biblioteca está focada somente na camada de visualização e é muito fácil pegar e integrar com outras bibliotecas ou projetos existentes.
+Vue (pronuncia-se /vjuː/, como view, em inglês) é um framework progressivo para construção de interface do usuário. O core da biblioteca é focado somente na camada de visualização e é muito fácil sua integração com outras bibliotecas ou projetos existentes.
 
 ## O que é NativeScript-Vue?
 
@@ -19,7 +19,7 @@ Se você já usou Vue.js, irá se sentir em casa com NativeScript-Vue.
 
 ## Por que você usaria isso?
 
-Há muitas opções para construir aplicativos mobile. Aqui estão algumas situações onde nós achamos que o NativeScript-Vue se encaixa bem.
+Há muitas opções para construir aplicativos móveis. Aqui estão algumas situações onde nós achamos que o NativeScript-Vue se encaixa bem.
 
 * **Você precisa de um verdadeiro aplicativo nativo iOS e Android**: NativeScript cria seus aplicativos usando componentes nativos da interface do iOS e Android. Os aplicativos que você cria não são baseados na web, portando, não estão sujeitos às limitações inerentes de um aplicativo criado com framework baseado na WebView. Além disso, NativeScript fornece [uma extensa coleção de plugins](http://market.nativescript.org/) para conectar com recursos nativos do dispositivo. Então, se você precisar conectar com uma API iOS ou Android, ou um recurso como parte do seu aplicativo, poderá fazer com NativeScript.
 * **Você gosta de JavaScript**: Com NativeScript você escreve seus aplicativos com JavaScript - não com Objective-C, Swift ou Java. Se você gosta de JavaScript, irá gostar de escrever aplicativos nativos iOS e Android com a mesma linguagem que você usa na Web e/ou aplicativos Node.

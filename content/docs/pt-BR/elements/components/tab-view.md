@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabvie
 contributors: [alexhiroshi]
 ---
 
-`<TabView>` é um componente de navegação que mostra conteúdos agrupados em abas, e deixa o usuário alterar entre elas.
+`<TabView>` é um componente de navegação que mostra conteúdos agrupados em abas e permite o usuário alterar entre elas.
 
 ---
 
