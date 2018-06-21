@@ -229,6 +229,7 @@ new Vue({
       console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
     },
     onButtonTap() {
+      if (this.textFieldValue === "") return // Prevent user input empty string
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
       this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
       this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
@@ -638,7 +639,7 @@ To implement a style particularly for the text of active tasks, you can set an `
 1. In `app.js`, on line 67, set an `id` for the `<Label>` that represents active tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
 
   ```HTML
-  <Label id="active-task" :text="todo.name" textWrap="true" >
+  <Label id="active-task" :text="todo.name" textWrap="true" />
   ```
 1. On line 65, add the `separatorColor` property and set it to `transparent`. This way, the separator will no longer appear in your list.
 
