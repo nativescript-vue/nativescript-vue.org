@@ -212,7 +212,7 @@ Metalsmith(cwd)
     done();
   })
   .use(sitemap({
-    hostname: 'https://nativescript-vue.org',
+    hostname: 'https://v1-3-1.nativescript-vue.org',
     omitIndex: true,
   }))
   // build the site
