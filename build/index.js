@@ -123,8 +123,8 @@ Metalsmith(cwd)
       { name: 'v1.3.1', url: '//v1.3.1.nativescript-vue.org' },
     ],
     currentVersion: {
-      name: 'latest',
-      branch: 'master'
+      name: 'v1.3.1',
+      branch: 'v1.3.1'
     } // different for each branch
   }))
   .use(order())
