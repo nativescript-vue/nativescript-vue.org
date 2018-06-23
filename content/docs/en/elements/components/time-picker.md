@@ -2,12 +2,12 @@
 title: TimePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_time_picker_.timepicker
 contributors: [MisterBrownRSA, rigor789, ikoevska]
-
 ---
 
 `<TimePicker>` is a UI component that lets users select time. 
 
-See also: [DatePicker](/en/docs/elements/components/date-picker).
+> See also: [DatePicker](/en/docs/elements/components/date-picker).
+
 ---
 
 ```html
