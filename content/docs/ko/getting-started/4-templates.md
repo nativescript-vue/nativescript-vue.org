@@ -4,7 +4,7 @@ contributors: [qgp9]
 outdated: true
 ---
 
-여러분의 `nativescript-vue` 앱을 시작하기 위해 네이티브-스크립트의 [템플릿 시스템](https://docs.nativescript.org/tooling/app-templates)을 사용할 수 있습니다. 이 템플릿들은 `nativescript-vue` 플러그인을 사용하는 네이티브-스크립트 앱을 생성합니다. 어떤 템플릿들은 Vue.js 단일 파일 컴포넌트(`.vue`) 와 라이브-리로드(livereload) 지원과 같은 추가 기능이 내장되어 있습니다.
+여러분의 `nativescript-vue` 앱을 시작하기 위해 네이티브-스크립트의 템플릿 시스템 을 사용할 수 있습니다. 이 템플릿들은 `nativescript-vue` 플러그인을 사용하는 네이티브-스크립트 앱을 생성합니다. 어떤 템플릿들은 Vue.js 단일 파일 컴포넌트(`.vue`) 와 라이브-리로드(livereload) 지원과 같은 추가 기능이 내장되어 있습니다.
 
 ## nativescript-vue-template
 

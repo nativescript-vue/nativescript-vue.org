@@ -23,6 +23,7 @@ const permalinks = require('./plugins/permalinks');
 const changeExt = require('./plugins/change-ext');
 const markdown = require('./plugins/remark');
 const locales = require('./plugins/locales');
+const versions  = require('./plugins/versions');
 const layouts = require('./plugins/layouts');
 const order = require('./plugins/order');
 const toc = require('./plugins/toc');
@@ -115,6 +116,16 @@ Metalsmith(cwd)
   .use(locales({
     defaultLocale: 'en',
     locales: ['en', 'ko', 'pt-BR', 'ru']
+  }))
+  .use(versions({
+    versions: [
+      { name: 'latest', url: '//nativescript-vue.org' },
+      { name: 'v1.3.1', url: '//v1.3.1.nativescript-vue.org' },
+    ],
+    currentVersion: {
+      name: 'latest',
+      branch: 'master'
+    } // different for each branch
   }))
   .use(order())
   .use(categories())

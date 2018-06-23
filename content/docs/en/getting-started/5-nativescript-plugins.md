@@ -5,7 +5,7 @@ contributors: [EddyVerbruggen, naderio, rigor789, ikoevska]
 
 Plugins work as in [any other NativeScript app](https://docs.nativescript.org/plugins/plugins), but you may wonder how *UI* plugins work with Vue.
 
-UI plugins work almost identically to how you'd [use a NativeScript UI plugin in an Angular app](https://docs.nativescript.org/angular/plugins/plugins). 
+UI plugins work almost identically to how you'd use a NativeScript UI plugin in an Angular app. 
 
 ## Sample use: nativescript-gradient
 

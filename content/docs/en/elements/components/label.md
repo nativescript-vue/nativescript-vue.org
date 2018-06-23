@@ -18,7 +18,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 
 ### Styling the label
 
-If you need to style parts of the text, you can use a combination of a [`FormattedString`](https://docs.nativescript.org/cookbook/formatted-string-ng) and [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span) elements.
+If you need to style parts of the text, you can use a combination of a [`FormattedString`](https://docs.nativescript.org/angular/ui/ng-ui-widgets/formatted-string) and [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span) elements.
 
 ```html
 <Label textWrap="true">

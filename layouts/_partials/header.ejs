@@ -4,10 +4,10 @@
    class="block bg-blue-light md:bg-green md:border-t-8 border-green p-4 md:p-0 text-center no-underline text-white">
    Jun 12: Building Better Apps with NativeScript 4.0
 </a>-->
-<a href="/blog/nativescript-vue-1.0-and-a-new-site/"
+<!--<a href="/blog/nativescript-vue-1.0-and-a-new-site/"
    class="block md:hidden bg-green p-2 text-center no-underline text-white">
     Announcing 1.0
-</a>
+</a>-->
 <div id="app" class="bg-blue-dark md:border-t-8 border-green">
     <div class="container flex items-center flex-wrap px-4 md:px-0 mx-auto">
         <div class="flex-1 flex items-center">
@@ -22,7 +22,7 @@
                 </div>
             </a>
 
-            <div class="flex items-center">
+            <!--<div class="flex items-center">
                 <span role="presentation" aria-hidden="true"
                       class="hidden lg:block w-1 h-1 bg-blue-light rounded-full ml-2"></span>
                 <span role="presentation" aria-hidden="true"
@@ -35,7 +35,7 @@
                         Announcing 1.0
                     </a>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="w-auto text-center relative">
             <input class="docSearch-input w-full md:w-48 px-4 py-2 text-blue-lightest bg-blue-light rounded-full"
@@ -94,6 +94,22 @@
                         <a href="<%= meta.lang(current, l) %>"
                            class="no-underline text-blue-lightest md:text-blue-dark hover:bg-green hover:text-white px-4 py-2">
                             <%= meta.localeMap[l] %>
+                        </a>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+            <% if(meta.versions.length > 1) { %>
+            <div class="inline text-blue-lightest py-4 relative group ml-4">
+                <span class="-md:hidden bg-blue-light rounded-sm px-2 py-1"><%= meta.currentVersion.name %></span>
+
+                <div class="pl-4 mt-3 md:pl-0 md:hidden group-hover:block hover:block md:absolute md:bg-white md:shadow md:rounded md:pin-r overflow-hidden z-50">
+                    <div class="flex flex-col">
+                        <% meta.versions.forEach(v => { %>
+                        <a href="<%= v.url %>"
+                           class="no-underline text-blue-lightest md:text-blue-dark hover:bg-green hover:text-white px-4 py-2">
+                            <%= v.name %>
                         </a>
                         <% }) %>
                     </div>

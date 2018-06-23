@@ -18,7 +18,7 @@ contributors: [alexhiroshi]
 
 ### Estilizando o label
 
-Se você precisa estilizar partes do texto, use a combinação de elementos [`FormattedString`](https://docs.nativescript.org/cookbook/formatted-string-ng) e [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span).
+Se você precisa estilizar partes do texto, use a combinação de elementos [`FormattedString`](https://docs.nativescript.org/angular/ui/ng-ui-widgets/formatted-string) e [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span).
 
 ```html
 <Label textWrap="true">

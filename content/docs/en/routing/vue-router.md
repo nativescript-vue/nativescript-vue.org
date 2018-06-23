@@ -109,6 +109,6 @@ Vue Router has more tricks up its sleeve, so be sure to visit [the official docu
 
 Check out the following [NativeScript-Vue samples](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples):
 
-* [app-with-page-routing](nativescript-vue/samples/app/app-with-page-routing.js)
-* [app-with-router](nativescript-vue/samples/app/app-with-router.js)
-* [app-with-router-pages](nativescript-vue/samples/app/app-with-router-pages.js)
+* [app-with-page-routing](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples/app/app-with-page-routing.js)
+* [app-with-router](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples/app/app-with-router.js)
+* [app-with-router-pages](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples/app/app-with-router-pages.js)
