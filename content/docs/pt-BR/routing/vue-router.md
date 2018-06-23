@@ -1,6 +1,6 @@
 ---
 title: Vue Router
-contributors: [alexhiroshi]
+contributors: [alexhiroshi, Weslei]
 ---
 
 Se o [Manual Routing](/pt-BR/docs/routing/manual-routing) não for adequado para o seu caso,

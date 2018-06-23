@@ -1,25 +1,24 @@
 ---
 title: Usando Plugins do Vue
-contributors: [alexhiroshi]
+contributors: [alexhiroshi, WesleiRamos]
 ---
 
-## vue-router
+Esta página fornece uma visão geral dos plugins atualmente suportados pelo Vue que funcionam com NativeScript-Vue.
 
-VueRouter é um plugin Vue para lidar com roteamento baseando em URL.
-Uma integração experimental com vue-router foi adicionada para o Nativescript-Vue.
+* [Vue Router](#vue-router)
+* [Vuex](#vuex)
 
-Lembre-se, a estratégia de roteamento no mobile não é exatamente igual a URL e a API de histórico usadas no navegador.
+## Vue Router
 
-Links de roteamento, usados no Vue, como o código abaixo, **não funcionam** no NativeScript
+> Atualmente, a integração com Vue Router é **experimental**. Para mais informações, acesse [acesse a página do VueRouter](/pt-BR/docs/routing/vue-router/).
 
-```html
-<!-- não funciona -->
-<router-link to="/foo">Go to Foo</router-link>
-```
+### Notas de uso
 
-Em vez disso, temos que trocar para uma nova rota usando o método `route.push`. Por exemplo, quando usamos um botão, podemos usar o evento `tap` para alterar a rota:
+A estratégia de roteamento no celular é diferente da estratégia de roteamento no navegador e o formato de roteamento del links familiar do Vue não funciona com NativeScript-Vue.
 
-```html
+Em vez disso, você precisa **mudar para a nova rota usando o método `route.push`**. O seguinte exemplo mostra como usar o evento `tap` para mudar a rota.
+
+```HTML
 <Button class="btn btn-primary" @tap="$router.push('/counter')">Counter</Button>
 ```
 
@@ -37,11 +36,11 @@ Instale o Vuex como você normalmente faria em seu app Vue.js. Com npm, por exem
 $ npm install --save vuex
 ```
 
-A versão mais nova do Vuex será adicionada em seu arquivo package.json.
+A versão mais nova do Vuex será adicionada em seu arquivo `package.json`.
 
 ### Importar
 
-No arquivo `main.js` do seu app, importe no topo o Vuex:
+Abra o arquivo de entrada do seu app (algo como `apps.js` ou `main.js`) e adicione o seguinte no topo:
 
 ```js
 import Vuex from 'vuex'

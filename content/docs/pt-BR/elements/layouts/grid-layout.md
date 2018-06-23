@@ -8,7 +8,7 @@ contributors: [alexhiroshi]
 
 A grid consiste em linhas, colunas e células. Uma célula pode ocupar uma ou mais linhas e colunas. Pode conter múltiplos elementos filhos que podem ocupar múltiplas linhas e colunas, até uma sobrepor a outra.
 
-Por padrão, o `<GridLayout>` tem uma coluna e uma linha. Você pode adicionar colunas e linhas configurando as propriedades `columns` e `rows`. Nessas propriedades, você precisa definir o número de colunas e linha, e a sua largura e altura. Você define o número de colunas e linhas, listando, respectivamente, suas larguras e alturas, separadas por vírgula.
+Por padrão, o `<GridLayout>` tem uma coluna e uma linha. Você pode adicionar colunas e linhas configurando as propriedades `columns` e `rows`. Nessas propriedades, você precisa definir o número de colunas e linha, e a sua largura e altura. Você define o número de colunas e linhas, listando respectivamente suas larguras e alturas, separadas por vírgula.
 
 Você pode definir um tamanho fixo para largura da coluna e a altura da linha, ou pode criá-los de maneira responsiva.
 
@@ -22,7 +22,7 @@ Veja [Propriedades](#propriedades) para mais informações.
 
 #### Layout de Grid com tamanho fixo
 
-O exemplo sguinte cria um simples grid 2 por 2 com larguras de colunas fixas e altura de linhas.
+O exemplo seguinte cria um simples grid 2 por 2 com larguras de colunas fixas e altura de linhas.
 
 ```html
 <GridLayout columns="115, 115" rows="115, 115">
@@ -36,7 +36,7 @@ O exemplo sguinte cria um simples grid 2 por 2 com larguras de colunas fixas e a
 
 #### Layout de Grid com tamanho proporcional
 
-O exemplo sguinte cria um grid com design responsivo, onde o espaço é alocado proporcionalmente aos elementos filhos.
+O exemplo seguinte cria um grid com design responsivo, onde o espaço é alocado proporcionalmente aos elementos filhos.
 
 ```html
 <GridLayout columns="*, 2*" rows="2*, 3*" backgroundColor="#3c495e">
@@ -62,7 +62,7 @@ O exemplo sguinte cria um grid com design responsivo, onde o espaço é alocado 
 
 #### Layout de Grid com mistura de tamanho e células mescladas
 
-O exemplo sguinte cria um grid complexo com design responsivo, configurações de largura e altura diferentes, e algumas células mescladas.
+O exemplo seguinte cria um grid complexo com design responsivo, configurações de largura e altura diferentes, e algumas células mescladas.
 
 ```html
 <GridLayout columns="40, auto, *" rows="40, auto, *" backgroundColor="#3c495e">

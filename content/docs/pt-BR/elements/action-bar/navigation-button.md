@@ -1,10 +1,10 @@
 ---
 title: NavigationButton
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.navigationbutton
-contributors: [alexhiroshi]
+contributors: [alexhiroshi, WesleiRamos]
 ---
 
-O componente NavigationButton é uma abstração do NativeScript para o botão de navegação, do Android, e o botão de voltar, do iOS.
+O componente NavigationButton, é uma abstração do NativeScript para o botão de navegação do Android e o botão de voltar do iOS.
 
 ---
 
