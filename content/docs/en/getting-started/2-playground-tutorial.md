@@ -229,7 +229,7 @@ new Vue({
       console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
     },
     onButtonTap() {
-      if (this.textFieldValue === "") return // Prevent user input empty string
+      if (this.textFieldValue === "") return; // Prevents users from entering an empty string.
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
       this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
       this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
