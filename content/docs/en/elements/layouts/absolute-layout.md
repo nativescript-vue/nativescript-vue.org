@@ -10,7 +10,7 @@ The `<AbsoluteLayout>` container is the simplest layout container in NativeScrip
 
 * Uses a pair of absolute left/top coordinates to position its children.
 * Doesn't enforce any layout constraints on its children.
-* Doesn't resize children at runtime when its size changes.
+* Doesn't resize its children at runtime when its size changes.
 
 ## Samples
 
