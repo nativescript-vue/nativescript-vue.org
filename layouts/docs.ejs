@@ -47,7 +47,15 @@
                          text-blue-dark p-4 my-8">
                         <p>
                             This is an overview of the most common usage of <%= current.title %>.
-                            For more information about the available properties, methods, and events, head over
+                            <% if (current.docRef) { %>
+                            See <a href="<%= current.docRef %>"
+                                   target="_blank"
+                                   rel="noopener"
+                                   class="no-underline text-green hover:text-blue-dark">
+                                the NativeScript docs
+                                </a> for more information about <%= current.title %>.
+                            <% } %>
+                            For information about the available properties, methods, and events, head over
                             to <a href="<%= current.apiRef %>"
                                   target="_blank"
                                   rel="noopener"
