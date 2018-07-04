@@ -1,34 +1,44 @@
 ---
-title: 웹뷰 (WebView)
+title: WebView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_web_view_.webview
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<WebView>` is a UI component that lets you show web content in your app. You can pull and show content from a URL or a local HTML file, or you can render static HTML content.
 
-웹뷰(WebView) 컴포넌트는 어플리케이션 안에 웹 컨텐츠를 표시하기 위해 사용됩니다.
-Url 이나 로컬 HTML 파일을 가리키는 `src` 속성과 함께 컴포넌트를 사용할 수 있습니다.
+See also: [HtmlView](/en/docs/elements/components/html-view).
 
----
+* * *
 
 ```html
 <WebView src="http://nativescript-vue.org/" />
+
+<WebView src="~/html/index.html" />
+
+<WebView src="<div><h1>Some static HTML</h1></div>" />
 ```
 
 [> screenshots for=WebView <]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `src` | `String` | 표시되는 페이지의 소스
+| Name  | Type     | Description                                                                                                             |
+| ----- | -------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `src` | `String` | Gets or sets the displayed web content.  
+Valid values: an absolute URL, the path to a local HTML file, or static HTML. |
 
 ## Events
 
-| name | description |
-|------|-------------|
-| `loadStarted`| 웹뷰에서 페이지가 로딩되기 시작할때 발생
-| `loadFinished`| 웹뷰의 페이지가 다 로딩되었을때 발생
+| Name           | Description                                                          |
+| -------------- | -------------------------------------------------------------------- |
+| `loadStarted`  | Emitted when the page has started loading in the `<WebView>`.  |
+| `loadFinished` | Emitted when the page has finished loading in the `<WebView>`. |
 
-## Native Component
-| Android | iOS |
-|---------|-----|
-| android.webkit.WebView | WKWebView
+## Native component
+
+| Android                                                                                    | iOS                                                                       |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| [`android.webkit.WebView`](https://developer.android.com/reference/android/webkit/WebView) | [`WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview) |
