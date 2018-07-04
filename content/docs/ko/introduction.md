@@ -1,44 +1,47 @@
 ---
-title: 소개
-contributors: [qgp9]
+title: Introduction
+contributors:
+  - rigor789
+  - tjvantoll
 ---
+## What is [NativeScript](https://www.nativescript.org/)?
 
-## [네이티브스크립트](https://www.nativescript.org/)가 무엇인가요?
+NativeScript is an open source framework for building truly native mobile applications using JavaScript.
 
-NativeScript는 자바스크립트로 실제 네이티브 모바일 어플리케이션을 만들기 위한 오픈소스 프레임워크입니다.
+## What is [Vue.js](https://vuejs.org/)?
 
-## [Vue.js](https://vuejs.org/)는 무엇인가요?
+Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects.
 
-Vue(view/뷰 처럼 /vjuː/로 발음합니다) 사용자 인터페이스를 만들기 위한 진보적인 프레임워크입니다. 핵심 라이브러리는 뷰  계층(view layer)에 집중하고 있고 다른 라이브러리나 기존의 프로젝트와의 통합이 매우 쉽습니다.
+## What is NativeScript-Vue?
 
-## NativeScript-Vue는 무엇인가요?
+NativeScript-Vue is a NativeScript plugin which allows you to use Vue.js to craft your mobile application.
 
-NativeScript-Vue는 Vue.js 를 이용해 모바일 어플리케이션을 만들도록 도와주는 네이티브-스크립트 플러그인입니다. 이미 Vue.js를 사용해 보신 분이라면 NativeScript-Vue가 집처럼 편한하게 느끼실 겁니다.
+If you have used Vue.js before you will feel right at home with NativeScript-Vue.
 
-## 왜 NativeScript-Vue를 사용해야 할까요?
+## Why would you use this?
 
-모바일앱을 만들기 위한 다양한 옵션들이 있습니다. 여기에 NativeScript-Vue가 잘 맞을 상황들이 있습니다.
+There are many options to build mobile apps. Here are some situations where we think NativeScript-Vue is a great fit.
 
-* **진짜 네이티브 iOS와 안드로이드 앱이 필요할 경우**: 네이티브-스크립트는 iOS와 안드로이드의 네이티브 사용자 인터페이스 구성요소를 이용하여 앱을 만듭니다. 이렇게 만들어진 앱은 웹베이스가 아니기때문에 웹뷰기반(WebView-based) 프레임워크들이 가지는 한계를 따르지 않습니다. 네이티브-스크립트는 또한 [다양한 플러그인](http://market.nativescript.org/)을 통해 네이티브 장치의 기능들과 연결됩니다. 만약 여러분의 앱이 iOS나 안드로이드의 API나 기능들을 사용해야 한다면, 네이티브-스크립트로 그렇게 할 수 있습니다.
-* **자바스크립트를 좋아한다면**: 네이티브-스크립트와 함께라면 Object-C나 Swift, Java가 아니라 자바스크립트로 여러분의 모바일앱을 작성할 수 있습니다. 만약 자바스크립트를 좋아하신다면, 여러분의 웹이나 노드 앱을 만들때와 같은 언어로 네이티브 iOS와 안드로이드 앱을 작성하는 이 방법을 좋아하실 겁니다.
-* **Vue를 좋아한다면**: Vue 뷰계층에 대한 간단하고 간편한 접근으로 유명합니다. 웹앱을 Vue로 만드는 것을 좋아한다면 같은 데이터 바인딩이나 이벤트 핸들링처럼 공통된 작업을 같은 문법으로 작성할 수 있는 NativeScript-Vue가 집처럼 편안하게 느껴지실 겁니다.
+* **You need a truly native iOS and Android app**: NativeScript builds your apps using native user interface components on iOS and Android. The apps you build are not web-based, and therefore are not subject to the limitations inherent in WebView-based application frameworks. NativeScript also provides [an extensive collection of plugins](http://market.nativescript.org/) to tie into native device features. So if you need to tie into an iOS or Android API or feature as part of your app, you can do that with NativeScript.
+* **You like JavaScript**: With NativeScript you write your mobile applications in JavaScript — not Objective-C, not Swift, and not Java. If you like JavaScript, you’ll love writing native iOS and Android apps with the same language you use in your Web and/or Node apps.
+* **You like Vue**: Vue is known for its simple approach to the view layer. If you like building web apps with Vue, you’ll be right at home with NativeScript-Vue, as you’ll be using the same syntax for handling common tasks like data binding and event handling.
 
-## 무엇을 배워야 하나요?
+## What’s the catch?
 
-Vue에 이미 경험이 있다면 성공적으로 NativeScript-Vue를 배우기 위해 다음 두 가지를 중요하게 고려해야 합니다.
+If you have existing Vue experience, there are two big things you’ll need to learn to be successful with NativeScript-Vue.
 
-* **네이티브-스크립트 CLI로 작업하기**: 네이티브-스크립트는 웹앱이 아닌 iOS와 안드로이드 앱을 만들기 위한 프레임워크입니다. 여러분은 네이티브-스크립트 CLI 의 몇가지 명령어와 iOS 시뮬레이터, 안드로이드 가상장치의 작동방식에 대해서 배울 필요가 있습니다.
-* **네이티브-스크립트 UI 컴포넌트 배우기**: 네이티브-스크립트는 네이티브 사용자 인터페이스 컴포넌트를 사용하기 때문에 `<div>` 나 `<span>` 같은 HTML 태그가 존재하지 않습니다. 대신 여러분의 인터페이스를 렌더링하기 위해 필요한 [새로운 컴포넌트](https://docs.nativescript.org/ui/components)들을 배워야 합니다.
+* **Working with the NativeScript CLI**: NativeScript is a framework for building iOS and Android apps, not web apps. You’ll need to learn how a few commands in the NativeScript CLI, and some basics of how iOS simulators and Android Virtual Devices work.
+* **Learning the NativeScript UI components**: Because NativeScript uses native user interface components, HTML controls like `<div>` and `<span>` don’t exist in NativeScript. Instead you’ll need to learn a [new set of components](https://docs.nativescript.org/ui/components) you can use to render your interfaces.
 
-하지만 걱정하지 마세요. NativeScript-vue를 사용하기 위한 러닝커브가 있는 건 사실이지만, iOS 나 안드로이드 개발을 처음부터 배우는 것 보다는 훨씬 쉽습니다. 어쨌든 여러분은 이미 익숙한 자바스크립트와 Vue로 소스코드를 쓰는 것이니까요.
+Don’t worry though. Although there is a learning curve for working with NativeScript-Vue, you should find things much easier than learning iOS or Android from the ground up. After all, you’ll still be writing your source code in JavaScript and Vue.
 
-## 참여하고 싶으세요?
+## Want to get involved?
 
-NativeScript-Vue는 오픈소스 프레임워크이고 기여(컨트리뷰션)는 매우 권장됩니다. [프로젝트 컨트리뷰션 가이드](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md)를 확인하시고 **[네이티브-스크립트 커뮤니티 슬랙](https://developer.telerik.com/wp-login.php?action=slack-invitation)의 #vue 채널에 참여하세요**
+NativeScript-Vue is an open source project and contributions are very much encouraged. Check out the [project’s contributing guide](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md) and **join us on the #vue channel on the [NativeScript Community Slack](https://developer.telerik.com/wp-login.php?action=slack-invitation)**.
 
-## 이 프로젝트는 얼마나 안정적인가요?
+## How stable is this project?
 
-NativeScript-Vue는 비교적 기능적으로 완벽합니다. 현재 우리는 다음 두가지에 집중하고 있습니다:
+NativeScript-Vue is relatively feature-complete. At this time we’re focusing on two things:
 
-* **문서화**: 이 사이트에 NativeScript-Vue로 할 수 있는 모든 것이 문서화 되지는 않았습니다. 샘플과 유즈케이스들이 적극적으로 추가되고 있습니다. 또한 여러분의 기여도 환영합니다.
-* **예제앱**: 우리는 사람들이 이 플러그인을 사용해 보고 피드백을 주기를 바랍니다. 관심이 있으시면 [네이티브-스크립트 커뮤니티 슬랙](https://developer.telerik.com/wp-login.php?action=slack-invitation) 에 참여하시고 #vue 채널에서 알려주세요.
+* **Documentation**: Not everything you can do in NativeScript-Vue is documented on this site. We’re actively adding samples and use cases to this site, and contributions are welcome.
+* **Sample apps**: We’re looking for people to put this plugin through its paces and send feedback our way. If you’re interested, join the [NativeScript Community Slack](https://developer.telerik.com/wp-login.php?action=slack-invitation) and let us know in the #vue channel.
