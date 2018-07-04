@@ -1,19 +1,24 @@
 ---
-title: 텍스트필드 (TextField)
+title: TextField
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_text_field_
-contributors: [qgp9]
-
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - TheOriginalJosh
+  - eddyverbruggen
+  - ikoevska
 ---
+`<TextField>` is an input component that creates an editable single-line box.
 
-텍스트필드(TextField) 컴포넌트는 편집가능한 한줄짜리 박스를 만듭니다.
+`<TextField>` extends [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) and [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase) which provide additional properties and events.
 
----
+* * *
 
 ```html
 <TextField :text="textFieldValue" hint="Enter text..." />
 ```
 
-**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
+`<TextField>` provdes two-way data binding using `v-model`.
 
 ```html
 <TextField v-model="textFieldValue" />
@@ -23,26 +28,31 @@ contributors: [qgp9]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `text` | `String` | 텍스트필드의 값
-| `hint` | `String` | 플레이스홀더 텍스트
-| `editable` | `Boolean` | `true` 면 사용자가 텍스트필드의 값을 수정할 수 있음
-| `maxLength` | `Number` | 입력 가능한 글자수를 제한
-| `secure` | `Boolean` | `true` 면 입력된 텍스트를 숨깁니다. 기본값은 `false`.
-| `keyboardType` | `KeyboardType` | 쉬운 텍스트 입력을위해 커스텀 키워드를 보여줍니다. 가능한 값: `datetime`, `phone`, `number`, `url`, `email`.
-| `returnKeyType` | `ReturnKeyType` | 리턴키의 레이블. 가능한 값: `done`, `next`, `go`, `search`, `send`.
+| Name            | Type            | Description                                                                                                      |
+| --------------- | --------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `text`          | `String`        | Gets or sets the value of the field.                                                                             |
+| `hint`          | `String`        | Gets or sets the placeholder text.                                                                               |
+| `editable`      | `Boolean`       | When `true`, indicates that the user can edit the value of the field.                                            |
+| `maxLength`     | `Number`        | Limits input to the spcified number of characters.                                                               |
+| `secure`        | `Boolean`       | Hides the entered text when `true`. Use this property to create password input fields.  
+Default value: `false`. |
+| `keyboardType`  | `KeyboardType`  | Shows a custom keyboard for easier text input.  
+Valid values: `datetime`, `phone`, `number`, `url`, or `email`. |
+| `returnKeyType` | `ReturnKeyType` | Gets or sets the label of the return key.  
+Valid values: `done`, `next`, `go`, `search`, or `send`.             |
+| `autocorrect`   | `Boolean`       | Enables or disables autocorrect.                                                                                 |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `textChange`| 텍스트가 바뀌면 발생
-| `returnPress`| 리턴키가 눌리면 발생
-| `focus`| 텍스트필드가 포커스되면 발생
-| `blur`| 텍스트필드가 포커스를 잃으면 발생
+| Name          | Description                             |
+| ------------- | --------------------------------------- |
+| `textChange`  | Emitted when the text changes.          |
+| `returnPress` | Emitted when the return key is pressed. |
+| `focus`       | Emitted when the field is in focus.     |
+| `blur`        | Emitted when the field loses focus.     |
 
-## Native Component
-| Android | iOS |
-|---------|-----|
-| android.widget.EditText | UITextField
+## Native component
+
+| Android                                                                                           | iOS                                                                          |
+| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.EditText`](https://developer.android.com/reference/android/widget/EditText.html) | [`UITextField`](https://developer.apple.com/documentation/uikit/uitextfield) |
