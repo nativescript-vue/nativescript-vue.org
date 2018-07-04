@@ -1,19 +1,22 @@
 ---
-title: 스위치 (Switch)
+title: Switch
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_switch_.switch
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<Switch>` is a UI component that lets users toggle between two states.
 
-스위치(Switch) 컴포넌트는 사용자가 두개의 상태를 토글 할수 있도록 해줍니다.
-기본 상태는 `false` 나 "off" 입니다.
+The default state is `false` or OFF.
 
----
+* * *
 
 ```html
 <Switch checked="true" />
 ```
 
-**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
+`<Switch>`provides two-way data binding using `v-model`.
 
 ```html
 <Switch v-model="itemEnabled" />
@@ -23,17 +26,19 @@ contributors: [qgp9]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `checked` | `Boolean` | 스위치의 상태를 나타네는 부울값
+| Name      | Type      | Description                                                               |
+| --------- | --------- | ------------------------------------------------------------------------- |
+| `checked` | `Boolean` | Gets or sets the value of the switch selection.  
+Default value: `false`. |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `checkedChange`| 스위치의 값이 바뀔때 발생
+| Name            | Description                                |
+| --------------- | ------------------------------------------ |
+| `checkedChange` | Emitted when the switch selection changes. |
 
-## Native Component
-| Android | iOS |
-|---------|-----|
-| android.widget.Switch | UISwitch
+## Native component
+
+| Android                                                                                       | iOS                                                                    |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`android.widget.Switch`](https://developer.android.com/reference/android/widget/Switch.html) | [`UISwitch`](https://developer.apple.com/documentation/uikit/uiswitch) |
