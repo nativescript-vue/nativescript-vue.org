@@ -1,20 +1,22 @@
 ---
 title: DatePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker
-contributors: [sn0wil]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<DatePicker>` is a UI component that lets users select a date from a pre-configured range.
 
-`<DatePicker>` - визуальный компонент, позволяющий пользователю выбрать дату из заранее заданного диапазона.
+> See also: [TimePicker](/en/docs/elements/components/time-picker).
 
-Также смотрите: [TimePicker](/ru/docs/elements/components/time-picker).
-
----
+* * *
 
 ```html
 <DatePicker @loaded="onDatePickerLoaded" @dateChange="onDateChanged" />
 ```
 
-`<DatePicker>` обеспечивает двустороннюю привязку данных, используя `v-model`.
+`<DatePicker>` provides two-way data binding using `v-model`.
 
 ```html
 <DatePicker v-model="selectedDate" />
@@ -22,25 +24,25 @@ contributors: [sn0wil]
 
 [> screenshots for=DatePicker <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `date` | `Date` | Получает или задает дату завершения.
-| `minDate` | `Date` | Получает или задает самую раннюю возможную дату, доступную для выбора.
-| `maxDate` | `Date` | Получает или задает самую позднюю дату, доступную для выбора.
-| `day` | `Number` | Получает или задает день.
-| `month` | `Number` | Получает или задает месяц.
-| `year` | `Number` | Получает или задает год.
+| Name      | Type     | Description                                        |
+| --------- | -------- | -------------------------------------------------- |
+| `date`    | `Date`   | Gets or sets the complete date.                    |
+| `minDate` | `Date`   | Gets or sets the earliest possible date to select. |
+| `maxDate` | `Date`   | Gets or sets the latest possible date to select.   |
+| `day`     | `Number` | Gets or sets the day.                              |
+| `month`   | `Number` | Gets or sets the month.                            |
+| `year`    | `Number` | Gets or sets the year.                             |
 
-## События
+## Events
 
-| Имя | Описание |
-|------|-------------|
-| `dateChange` | Срабатывает при измененнии выбранной даты.
+| Name         | Description                             |
+| ------------ | --------------------------------------- |
+| `dateChange` | Emitted when the selected date changes. |
 
-## Нативный компонент
+## Native component
 
-| Android |	iOS |
-|---------|-----|
-| [`android.widget.DatePicker`](https://developer.android.com/reference/android/widget/DatePicker.html) | [`UIDatePicker`](https://developer.apple.com/documentation/uikit/uidatepicker)
+| Android                                                                                               | iOS                                                                            |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [`android.widget.DatePicker`](https://developer.android.com/reference/android/widget/DatePicker.html) | [`UIDatePicker`](https://developer.apple.com/documentation/uikit/uidatepicker) |
