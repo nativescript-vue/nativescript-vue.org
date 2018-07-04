@@ -1,14 +1,17 @@
 ---
-title: 레이블 (Label)
+title: Label
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_label_.label
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<Label>` is a UI component that displays read-only text.
 
-레이블(Label) 컴포넌트는 읽기전용 텍스트를 표시하는데 사용됩니다.
+**IMPORTANT**: This `<Label>` is **not** the same as the HTML `<Label>`.
 
-**노트**: `<Label>` HTML의 `<Label>` 과 **다릅니다**.
-
----
+* * *
 
 ```html
 <Label text="Label" />
@@ -16,11 +19,10 @@ contributors: [qgp9]
 
 [> screenshots for=Label <]
 
-### FormattedString
+### Styling the label
 
-특정 부분의 텍스트를 다르게 스타일링해야 한다면 `FormattedString` `Span` 요소를 결합하여 사용할 수 있습니다.
+If you need to style parts of the text, you can use a combination of a [`FormattedString`](https://docs.nativescript.org/angular/ui/ng-ui-widgets/formatted-string) and [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span) elements.
 
-예:
 ```html
 <Label textWrap="true">
   <FormattedString>
@@ -35,13 +37,14 @@ contributors: [qgp9]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `text` | `String` | 레이블의 텍트스.
-| `textWrap` | `boolean` | 레이블의 텍스트가 래핑될것 인지 지정. 기본값은 `false`.
+| Name       | Type      | Description                                                          |
+| ---------- | --------- | -------------------------------------------------------------------- |
+| `text`     | `String`  | Gets or sets the text of the label.                                  |
+| `textWrap` | `Boolean` | Gets or sets whether the label wraps text.  
+Default value: `false`. |
 
-## 네이티브 컴포넌트
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| android.widget.TextView | UILabel
+| Android                                                                                           | iOS                                                                  |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [`android.widget.TextView`](https://developer.android.com/reference/android/widget/TextView.html) | [`UILabel`](https://developer.apple.com/documentation/uikit/uilabel) |
