@@ -1,39 +1,64 @@
 ---
-title: 탭뷰 (TabView)
+title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
+  - kharysharpe
 ---
+`<TabView>` is a navigation component that shows content grouped into tabs and lets users switch between tabs.
 
-탭뷰(TabView) 컴포넌트는 탭으로 그룹화된 컨텐츠를  표시할 수 있도록 해줍니다.
-
----
+* * *
 
 ```html
 <TabView :selectedIndex="selectedIndex">
   <TabViewItem title="Tab 1">
-    <label text="Content for Tab 1"></label>
+    <Label text="Content for Tab 1" />
   </TabViewItem>
   <TabViewItem title="Tab 2">
-    <label text="Content for Tab 2"></label>
+    <Label text="Content for Tab 2" />
   </TabViewItem>
 </TabView>
 ```
 
+**NOTE:** Currently, `TabViewItem` expects a single child element. In most cases, you might want to wrap your content in a layout.
+
 [> screenshots for=TabView <]
+
+#### Adding icons to tabs
+
+```html
+<TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
+  <TabViewItem title="Tab 1" iconSource="~/images/icon.png">
+    <Label text="Content for Tab 1" />
+  </TabViewItem>
+  <TabViewItem title="Tab 2" iconSource="~/images/icon.png">
+    <Label text="Content for Tab 2" />
+  </TabViewItem>
+</TabView>
+```
+
+**NOTE:** Use images for tab icons instead of icon fonts.
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `selectedIndex` | `Number` | 현재 선택된 탭. 기본값은 `0`
+| Name                   | Type     | Description                                                             |
+| ---------------------- | -------- | ----------------------------------------------------------------------- |
+| `selectedIndex`        | `Number` | Gets or sets the currently selected tab. Default is `0`.                |
+| `tabTextColor`         | `Color`  | (Style property) Gets or sets the text color of the tabs titles.        |
+| `tabBackgroundColor`   | `Color`  | (Style property) Gets or sets the background color of the tabs.         |
+| `selectedTabTextColor` | `Color`  | (Style property) Gets or sets the text color of the selected tab title. |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `tabChange`| tab-view-item 컴포넌트중 하나가 탭되었을때 발생
+| Name        | Description                                                         |
+| ----------- | ------------------------------------------------------------------- |
+| `tabChange` | Emitted when one of the `<TabViewItem>` components is tapped. |
 
-## Native Component
-| Android | iOS |
-|---------|-----|
-| android.support.v4.view.ViewPager | UITabBarController
+## Native component
+
+| Android                                                                                                               | iOS                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [`android.support.v4.view.ViewPager`](https://developer.android.com/reference/android/support/v4/view/ViewPager.html) | [`UITabBarController`](https://developer.apple.com/documentation/uikit/uitabbarcontroller) |
