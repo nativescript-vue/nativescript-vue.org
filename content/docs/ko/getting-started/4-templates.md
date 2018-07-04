@@ -1,78 +1,74 @@
 ---
-title: 템플릿
-contributors: [qgp9]
-outdated: true
+title: Templates
+contributors:
+  - rigor789
+  - tralves
+  - jlooper
+  - lewebsimple
+  - ikoevska
+outdated: false
 ---
+This page provides an overview of the templates that you can use to develop apps with NativeScript-Vue. The list is updated as new templates come up or old templates become deprecated.
 
-여러분의 `nativescript-vue` 앱을 시작하기 위해 네이티브-스크립트의 템플릿 시스템 을 사용할 수 있습니다. 이 템플릿들은 `nativescript-vue` 플러그인을 사용하는 네이티브-스크립트 앱을 생성합니다. 어떤 템플릿들은 Vue.js 단일 파일 컴포넌트(`.vue`) 와 라이브-리로드(livereload) 지원과 같은 추가 기능이 내장되어 있습니다.
+> **NOTE:** To use any of the listed templates, you need to [set your system up for NativeScript development](/en/docs/getting-started/installation).
 
-## nativescript-vue-template
+**Currently supported templates:**
 
-#### 프로젝트 링크
+* [nativescript-vue/vue-cli-template](#nativescript-vuevue-cli-template) 
+* [nativescript-vue/nativescript-vue-template](#nativescript-vuenativescript-vue-template) 
 
-[](https://github.com/tralves/nativescript-vue-template)
+**Deprecated templates:**
 
-#### 설명
+* [tralves/nativescript-vue-webpack-template](https://github.com/tralves/nativescript-vue-webpack-template/)
 
-이 것은 가장 기본적인 템플릿입니다. 이 템플릿은 여러분의 앱의 시작점으로 사용될 수 있는 몇개의 앱 샘플을 포함하고 있습니다. 그것들을 시도해 보려면, `app-with-list-view.js`, `app-with-router.js`, `app-with-tab-view.js`, 또는 `app-with-vmodel.js` 의 코드들을 복사해서 여러분의 앱의 `app.js` 파일에 붙여 넣으면 됩니다.
+## nativescript-vue/vue-cli-template
 
-#### 설치
+**Project link:** <https://github.com/nativescript-vue/vue-cli-template>
 
-```shell
-$ tns create sample-app --template nativescript-vue-template
-```
+**Features**
 
-*더 자세한 설명은 [프로젝트 링크](https://github.com/tralves/nativescript-vue-template) 를 참조하세요.*
+* `.vue` single file components
+* Vuex&mdash;state management (opt-in)
+* Vue Router&mdash;routing (opt-in)&mdash;**experimental**
+* NativeScript themes
 
-## nativescript-vue-rollup-template
+Use this template to develop your app from the [Vue CLI](https://github.com/vuejs/vue-cli) and design it around `.vue` file components. Out-of-the-box, the template also provides advanced Vue functionality ([Vuex](https://vuex.vuejs.org/en/) and [Vue Router](https://github.com/vuejs/vue-router)) and support for [NativeScript themes](https://docs.nativescript.org/ui/theme).
 
-#### 프로젝트 링크
+Functionality-wise, the template is a spin-off of the basic template for NativeScript development and implements a simple button-controlled counter.
 
-[](https://github.com/tralves/nativescript-vue-rollup-template)
+Originally built by [Pascal Martineau](https://github.com/lewebsimple/), this template is now officially supported for NativeScript-Vue.
 
-#### 설명
-원래의 [rigor789's](https://github.com/rigor789/nativescript-vue-rollup-template)에서 포크된 이 프로젝트는 현재 가장 안정되고 기능적으로 완벽합니다. [🍏 🍍 🍓 Groceries Vue](https://github.com/tralves/groceries-ns-vue) 에서 어떻게 사용되는지 볼 수 있습니다.
-
-이 템플릿은 다음을 지원합니다:
-
-- livereload;
-- .vue 단일파일 컴포넌트;
-- scss 임포트와 .vue 파일의 `<style>` 태그 내에서의 사용;
-- root imports (앱 폴더의 최상단을 의미하는 `/` 으로 시작하는 임포트);
-- 바벨 (`es2015`  `stage-2` presets);
-
-#### 설치
+**Usage**
 
 ```shell
-$ tns create sample-app --template nativescript-vue-rollup-template
+$ npm install -g @vue/cli @vue/cli-init
+$ vue init nativescript-vue/vue-cli-template <project-name>
+$ cd <project-name>
+$ npm install
+$ npm run watch:android
+$ # or
+$ npm run watch:ios
 ```
 
-*더 자세한 정보는 [프로젝트 링크](https://github.com/tralves/nativescript-vue-rollup-template) 를 참조하세요*
+## nativescript-vue/nativescript-vue-template
 
-## nativescript-vue-webpack-template
+**Project link:** <https://github.com/nativescript-vue/nativescript-vue-template>
 
-#### 프로젝트 링크
+**Features**
 
-[](https://github.com/tralves/nativescript-vue-webpack-template)
+* Pure JavaScript&mdash;no `.vue` files
+* NativeScript themes
 
-#### 설명
+Use this template to develop your app from the [NativeScript CLI](https://github.com/NativeScript/nativescript-cli), using only JavaScript.
 
-웹팩 템플릿은 rollup 과 같은 기능을 가진 웹팩(webpack)을 이용합니다.
-이 템플릿은 코드공유 즉, 웹 빌드와 네이티브(안드로이드/iOS) 빌드간에 최대한 많은 로직을 공유하는 프로젝트를 만들수 있는 기능을 지원하기 위해 발전하고 있습니다.
+Functionality-wise, the template is a spin-off of the basic template for NativeScript development and implements a simple button-controlled counter.
 
-
- 기능:
-
-- livereload;
-- .vue 단일파일 컴포넌트;
-- scss 임포트와 .vue 파일의 `<style>` 태그 내에서의 사용;
-- 바벨 (`es2015`  `stage-2` presets);
-- (곧) 네이티브/웹 코드공유;
-
-#### 설치
+**Usage**
 
 ```shell
-$ tns create sample-app --template https://github.com/tralves/nativescript-vue-webpack-template
+$ tns create <project-name> --template nativescript-vue-template
+$ cd <project-name>
+$ tns run android
+$ # or
+$ tns run ios
 ```
-
-*더 자세한 정보는 [프로젝트 링크](https://github.com/tralves/nativescript-vue-webpack-template) 를 참조하세요.*
