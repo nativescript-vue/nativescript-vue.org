@@ -1,14 +1,14 @@
 ---
 title: StackLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_stack_layout_
-contributors: [alexhiroshi]
+contributors:
+  - rigor789
 ---
+The StackLayout container stacks the child elements either vertically (default), or horizontally.
 
-O StackLayout empilha os elementos filhos na vertical (padrão) ou na horizontal.
+### Samples
 
-### Exemplos
-
-#### StackLayout padrão
+#### Default StackLayout
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -17,9 +17,10 @@ O StackLayout empilha os elementos filhos na vertical (padrão) ou na horizontal
   <Label text="third" height="70" backgroundColor="#1c6b48"/>
 </StackLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical.svg" />
 
-#### StackLayout Horizontal
+#### Horizontal StackLayout
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -28,9 +29,10 @@ O StackLayout empilha os elementos filhos na vertical (padrão) ou na horizontal
   <Label text="third" width="70" backgroundColor="#1c6b48"/>
 </StackLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal.svg" />
 
-#### StackLayout com alinhamento dos filhos horizontalmente
+#### StackLayout with horizontally aligned children
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -44,9 +46,10 @@ O StackLayout empilha os elementos filhos na vertical (padrão) ou na horizontal
          height="70" backgroundColor="#43b883"/>
 </StackLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical_align_children.svg" />
 
-#### StackLayout horizontal com filhos alinhados verticalmente
+#### Horizontal StackLayout with vertically aligned children
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -60,15 +63,13 @@ O StackLayout empilha os elementos filhos na vertical (padrão) ou na horizontal
          width="70" backgroundColor="#43b883"/>
 </StackLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal_align_children.svg" />
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-`orientation` | `String` | Especifica a direção do empilhamento. Valores possíveis são `vertical` e `horizontal`. O valor padrão é `vertical`.
+| name | type | description | |\---\---|\---\---|\---\---\---\----| `orientation` | `String` | Specifies the direction of the stacking. Possible values are `vertical` and `horizontal`. The default value is `vertical`.
 
+## Additional Children Props
 
-## Propriedades filhas adicionais
-
-Não existem propriedades adicionais para elementos filhos.
+There are no additional properties for child elements.
