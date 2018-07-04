@@ -1,14 +1,14 @@
 ---
 title: WrapLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_wrap_layout_
-contributors: [lex111]
+contributors:
+  - rigor789
 ---
+The WrapLayout container positions its children in rows or columns, based on the orientation property, until the space is filled and then wraps them onto a new row or column.
 
-Контейнер WrapLayout помещает свои дочерние элементы в строки или столбцы, основываясь на свойство ориентации, пока пространство не будет заполнено, а затем оборачивает их в новую строку или столбец.
+### Samples
 
-### Примеры
-
-#### WrapLayout по умолчанию
+#### Default WrapLayout
 
 ```html
 <WrapLayout backgroundColor="#3c495e">
@@ -18,9 +18,10 @@ contributors: [lex111]
   <Label text="fourth" width="30%" height="30%" backgroundColor="#289062"/>
 </WrapLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_horizontal.svg" />
 
-#### Вертикальный WrapLayout
+#### Vertical WrapLayout
 
 ```html
 <WrapLayout orientation="vertical" backgroundColor="#3c495e">
@@ -30,17 +31,13 @@ contributors: [lex111]
   <Label text="fourth" width="30%" height="30%" backgroundColor="#289062"/>
 </WrapLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_vertical.svg" />
 
-## Свойства
+## Props
 
-| Название | Тип | Описание |
-|------|------|-------------|
-`orientation` | `String` | Значение, указывающее направление потока. Если ориентация горизонтальная (`horizontal`), то элементы располагаются в столбцах. Если ориентация вертикальная `vertical`), элементы располагаются в столбцах. Значение по умолчанию — `horizontal`.
-`itemWidth` | `Number` | Ширина, используемая для измерения и расположения каждого дочернего элемента. Значение по умолчанию — `Number.NaN`, которое не ограничивает дочерние элементы.
-`itemHeight` | `Number` | Высота, используемая для измерения и расположения каждого дочернего элемента. Значение по умолчанию — `Number.NaN`, которое не ограничивает дочерние элементы.
+| name | type | description | |\---\---|\---\---|\---\---\---\----| `orientation` | `String` | A value indicating the flow direction. If orientation is `horizontal`, items are arranged in rows. If orientation is `vertical`, items are arranged in columns. The default value is `horizontal`. `itemWidth` | `Number` | The width used to measure and layout each child. Default value is `Number.NaN`, which does not restrict children. `itemHeight` | `Number` | The height used to measure and layout each child. Default value is `Number.NaN`, which does not restrict children.
 
+## Additional Children Props
 
-## Дополнительные свойства дочерних элементов
-
-Дополнительных свойств для дочерних элементов нет.
+There are no additional properties for child elements.
