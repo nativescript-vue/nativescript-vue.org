@@ -1,20 +1,21 @@
 ---
-title: 액션바 (ActionBar)
+title: ActionBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionbar
-contributors: [rigor789, eddyverbruggen]
+contributors:
+  - rigor789
+  - eddyverbruggen
 ---
+The ActionBar component is a NativeScript abstraction for the Android ActionBar and iOS NavigationBar.
 
-액션바 컴포넌트는 안드로이드 액션바와 iOS NavigationBar의 네이티브-스크립트 추상화 입니다.
+* * *
 
----
-
-#### 제목 사용
+#### Using a title
 
 ```html
 <ActionBar title="MyApp" />
 ```
 
-#### 커스텀 제목 view
+#### Using a custom title view
 
 ```html
 <ActionBar>
@@ -25,16 +26,15 @@ contributors: [rigor789, eddyverbruggen]
 </ActionBar>
 ```
 
-#### 안드로이드에서 앱 아이콘 설정
+#### Setting an App Icon for Android
 
 ```html
 <ActionBar title="My App" android.icon="res://icon" android.iconVisibility="always" />
 ```
 
-#### 가장자리 경계(border) 없애기
-iOS와 안드로이드에서 작은 보더가 액션바 바닥에 그려집니다.
-추가로 iOS에서 액션바의 배경색은 iOS가 적용하는 필터때문에 지정한 값과 약간 달라집니다.
-이 필터와 보더를 제거하려면 `flat` 을 `true` 로 설정하세요
+#### Removing the border
+
+On iOS and Android a little border is drawn at the bottom of the ActionBar. Furthermore, the background color of the ActionBar on iOS is slightly different to what you specify because iOS applies a filter. To remove this filter and the border, set `flat` to `true`.
 
 ```html
 <ActionBar title="My App" flat="true" />
@@ -42,9 +42,9 @@ iOS와 안드로이드에서 작은 보더가 액션바 바닥에 그려집니�
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `title` | `String` | 액션바에 나타나는 제목.
-| `android.icon` | `String` | 안드로이드에서 보여지는 아이콘.
-| `android.iconVisibility` | `String` | 아이콘이 보여질지 지정.
-| `flat` | `boolean` | 보더와 iOS 컬러 필터를 제거. 기본값은 `false`.
+| name                     | type      | description                                               |
+| ------------------------ | --------- | --------------------------------------------------------- |
+| `title`                  | `String`  | The title to be shown in the ActionBar.                   |
+| `android.icon`           | `String`  | The icon to be shown on Android.                          |
+| `android.iconVisibility` | `String`  | Sets when the icon is visible.                            |
+| `flat`                   | `boolean` | Removes the border and iOS color filter. Default `false`. |
