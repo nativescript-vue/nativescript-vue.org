@@ -1,19 +1,21 @@
 ---
-title: 슬라이더 (Slider)
+title: Slider
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_slider_.slider
-contributors: [qgp9]
-
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<Slider>` is a UI component that provides a slider control for picking values within a specified numeric range.
 
-슬라이더(Slider) 컴포넌트는 사용자가 특정 범위의 숫자 값을 입력할 수 있도록 해줍니다.
-
----
+* * *
 
 ```html
 <Slider value="80" @valueChange="onValueChanged" />
 ```
 
-**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
+`<Slider>` provides two-way data binding using `v-model`:
 
 ```html
 <Slider v-model="value" />
@@ -23,20 +25,23 @@ contributors: [qgp9]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `value` | `Number` | 슬라이더의 값
-| `minValue` | `Number` | 슬라이더 최소값. 기본값은 `0`.
-| `maxValue` | `Number` | 슬라이더 최대값. 기본값은 `100`.
+| Name       | Type     | Description                                                                    |
+| ---------- | -------- | ------------------------------------------------------------------------------ |
+| `value`    | `Number` | Gets or sets the currently selected value of the slider.  
+Default value: `0`. |
+| `minValue` | `Number` | Gets or sets the minimum value of the slider.  
+Default value: `0`.            |
+| `maxValue` | `Number` | Gets or sets the maximum value of the slider.  
+Default value: `100`.          |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `valueChange`| 슬라이더 값이 바뀔때 발생.
+| Name          | Description                                   |
+| ------------- | --------------------------------------------- |
+| `valueChange` | Emitted when the value of the slider changes. |
 
-## Native Component
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| android.widget.SeekBar | UISlider
+| Android                                                                                         | iOS                                                                    |
+| ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`android.widget.SeekBar`](https://developer.android.com/reference/android/widget/SeekBar.html) | [`UISlider`](https://developer.apple.com/documentation/uikit/uislider) |
