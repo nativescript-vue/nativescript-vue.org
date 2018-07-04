@@ -1,20 +1,21 @@
 ---
 title: ActionBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionbar
-contributors: [alexhiroshi, WesleiRamos]
+contributors:
+  - rigor789
+  - eddyverbruggen
 ---
+The ActionBar component is a NativeScript abstraction for the Android ActionBar and iOS NavigationBar.
 
-O componente ActionBar é uma abstração do NativeScript para o ActionBar do Android e o NavigationBar do iOS.
+* * *
 
----
-
-#### Usando um título
+#### Using a title
 
 ```html
 <ActionBar title="MyApp" />
 ```
 
-#### Usando um título personalizado
+#### Using a custom title view
 
 ```html
 <ActionBar>
@@ -25,26 +26,25 @@ O componente ActionBar é uma abstração do NativeScript para o ActionBar do An
 </ActionBar>
 ```
 
-#### Configurando um ícone de aplicativo para Android
+#### Setting an App Icon for Android
 
 ```html
 <ActionBar title="My App" android.icon="res://icon" android.iconVisibility="always" />
 ```
 
-#### Removendo a borda
-No iOS e no Android, uma pequena borda é desenhada na parte debaixo da ActionBar.
-Além disso, a cor de fundo da ActionBar no iOS, é um pouco diferente da que você especifica
-porque o iOS aplica um filtro. Para remover o filtro e a borda defina `flat` como `true`.
+#### Removing the border
+
+On iOS and Android a little border is drawn at the bottom of the ActionBar. Furthermore, the background color of the ActionBar on iOS is slightly different to what you specify because iOS applies a filter. To remove this filter and the border, set `flat` to `true`.
 
 ```html
 <ActionBar title="My App" flat="true" />
 ```
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `title` | `String` | O título que será mostrado na ActionBar.
-| `android.icon` | `String` | O ícone que será mostrado no Android.
-| `android.iconVisibility` | `String` | Define quando o ícone é visível.
-| `flat` | `boolean` | Remove a borda e o filtro de cores do iOS. Padrão `false`.
+| name                     | type      | description                                               |
+| ------------------------ | --------- | --------------------------------------------------------- |
+| `title`                  | `String`  | The title to be shown in the ActionBar.                   |
+| `android.icon`           | `String`  | The icon to be shown on Android.                          |
+| `android.iconVisibility` | `String`  | Sets when the icon is visible.                            |
+| `flat`                   | `boolean` | Removes the border and iOS color filter. Default `false`. |
