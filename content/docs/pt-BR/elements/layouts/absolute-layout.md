@@ -1,14 +1,14 @@
 ---
 title: AbsoluteLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_absolute_layout_
-contributors: [alexhiroshi]
+contributors:
+  - rigor789
 ---
+The AbsoluteLayout container is the simplest layout container in NativeScript. It uses absolute top-left coordinates to position its children. The AbsoluteLayout will not enforce any layout constraints on its children and will not resize them at runtime when its size changes.
 
-O container AbsoluteLayout é o container de layout mais simples do NativeScript. Ele usa coordenadas absolutas do topo e da esquerda do container para posicionar os filhos. O AbsoluteLayout não aplicará nenhum restrição de layout nos filhos e também não redimensionará em tempo de execução quando o seu tamanho mudar.
+### Samples
 
-### Exemplos
-
-#### Um layout de grid
+#### A grid-like layout
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -18,9 +18,10 @@ O container AbsoluteLayout é o container de layout mais simples do NativeScript
   <Label text="120,120" left="120" top="120" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_grid.svg" />
 
-#### Elementos sobrepostos
+#### Overlapping elements
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -28,18 +29,18 @@ O container AbsoluteLayout é o container de layout mais simples do NativeScript
   <Label text="30,40" left="30" top="40" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_overlap.svg" />
 
+## Props
 
-## Propriedades
+AbsoluteLayout has no props.
 
-AbsoluteLayout não tem propriedades.
+## Additional Children Props
 
-## Propriedades filhas adicionais
+When an element is a direct child of the AbsoluteLayout, the following props get a meaning:
 
-Quando um elemento é filho direto de um AbsoluteLayout, as seguintes propriedades obtêm um significado:
-
-| nome | tipo | descrição |
-|------|------|-------------|
-| `top` | `Number` | Um valor representando a distância do topo do AbsoluteLayout pai
-| `left` | `Number` | Um valor representando a distância da esquerda do AbsoluteLayout pai
+| name   | type     | description                                                                  |
+| ------ | -------- | ---------------------------------------------------------------------------- |
+| `top`  | `Number` | A value representing the distance from the top of the parent AbsoluteLayout  |
+| `left` | `Number` | A value representing the distance from the left of the parent AbsoluteLayout |
