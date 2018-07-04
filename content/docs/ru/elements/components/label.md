@@ -1,14 +1,17 @@
 ---
 title: Label
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_label_.label
-contributors: [sn0wil]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<Label>` is a UI component that displays read-only text.
 
-`<Label>`- это визуальный компонент, отображающий текст, доступный только в режиме для чтения.
+**IMPORTANT**: This `<Label>` is **not** the same as the HTML `<Label>`.
 
-**ВАЖНО**: Этот `<Label>` **не** то же самое, что HTML `<Label>`.
-
----
+* * *
 
 ```html
 <Label text="Label" />
@@ -16,9 +19,9 @@ contributors: [sn0wil]
 
 [> screenshots for=Label <]
 
-### Стилизация элемента label
+### Styling the label
 
-Если вам необходимо применить стили, то вы можете использовать комбинацию элементов [`FormattedString`](https://docs.nativescript.org/angular/ui/ng-ui-widgets/formatted-string) и [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span).
+If you need to style parts of the text, you can use a combination of a [`FormattedString`](https://docs.nativescript.org/angular/ui/ng-ui-widgets/formatted-string) and [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span) elements.
 
 ```html
 <Label textWrap="true">
@@ -32,15 +35,16 @@ contributors: [sn0wil]
 </Label>
 ```
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `text` | `String` | Задает или получает текст для отображения.
-| `textWrap` | `Boolean` | Задает или получает значение, оборачивет текст элемент label.<br/>Значение по умолчанию: `false`.
+| Name       | Type      | Description                                                          |
+| ---------- | --------- | -------------------------------------------------------------------- |
+| `text`     | `String`  | Gets or sets the text of the label.                                  |
+| `textWrap` | `Boolean` | Gets or sets whether the label wraps text.  
+Default value: `false`. |
 
-## Нативный компонент
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.TextView`](https://developer.android.com/reference/android/widget/TextView.html) | [`UILabel`](https://developer.apple.com/documentation/uikit/uilabel)
+| Android                                                                                           | iOS                                                                  |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [`android.widget.TextView`](https://developer.android.com/reference/android/widget/TextView.html) | [`UILabel`](https://developer.apple.com/documentation/uikit/uilabel) |
