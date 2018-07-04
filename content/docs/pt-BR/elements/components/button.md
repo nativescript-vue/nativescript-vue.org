@@ -1,14 +1,17 @@
 ---
 title: Button
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
-contributors: [alexhiroshi]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<Button>` is a UI component that displays a button which reacts to a user gesture.
 
-`<Button>` é um componente de UI que permite mostrar um botão que responde a um gesto do usuário.
+For more information about the available gestures, see [Gestures in the official NativeScript documentation](https://docs.nativescript.org/ui/gestures).
 
-Para mais informações sobre os gestos disponíveis, veja [Gestos na documentação oficial do NativeScript](https://docs.nativescript.org/ui/gestures).
-
----
+* * *
 
 ```html
 <Button text="Button" @tap="onButtonTap" />
@@ -16,21 +19,21 @@ Para mais informações sobre os gestos disponíveis, veja [Gestos na documenta�
 
 [> screenshots for=Button <]
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `text` | `String` | Define o texto do botão.
-| `textWrap` | `Boolean` | Obtém ou define se o widget quebra o texto do label. Útil para textos longos. Padrão é `false`.
+| Name       | Type      | Description                                                                                                      |
+| ---------- | --------- | ---------------------------------------------------------------------------------------------------------------- |
+| `text`     | `String`  | Sets the label of the button.                                                                                    |
+| `textWrap` | `Boolean` | Gets or sets whether the widget wraps the text of the label. Useful for longer labels. Default value is `false`. |
 
-## Eventos
+## Events
 
-| nome | descrição |
-|------|-------------|
-| `tap` | Emitido quando o botão é tocado.
+| Name  | Description                        |
+| ----- | ---------------------------------- |
+| `tap` | Emitted when the button is tapped. |
 
-## Componente Nativo
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.Button`](https://developer.android.com/reference/android/widget/Button.html) | [`UIButton`](https://developer.apple.com/documentation/uikit/uibutton)
+| Android                                                                                       | iOS                                                                    |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`android.widget.Button`](https://developer.android.com/reference/android/widget/Button.html) | [`UIButton`](https://developer.apple.com/documentation/uikit/uibutton) |
