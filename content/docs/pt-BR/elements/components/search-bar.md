@@ -1,18 +1,20 @@
 ---
 title: SearchBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_search_bar_.searchbar
-contributors: [alexhiroshi]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<SearchBar>` is a UI component that provides a user interface for entering search queries and submitting requests to the search provider.
 
-SearchBar é um componente que fornece um campo de pesquisa e envia solicitações ao provedor de busca.
-
----
+* * *
 
 ```html
 <SearchBar hint="Search hint" :text="searchPhrase" @textChange="onTextChanged" @submit="onSubmit" />
 ```
 
-**Nota**: Esse componente suporta two-way data binding usando `v-model`:
+`<SearchBar>` provides two-way data binding using `v-model`.
 
 ```html
 <SearchBar v-model="searchQuery" />
@@ -20,22 +22,25 @@ SearchBar é um componente que fornece um campo de pesquisa e envia solicitaçõ
 
 [> screenshots for=SearchBar <]
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `hint` | `String` | Texto de placeholder para o campo editável.
-| `text` | `String` | Valor para o campo de busca.
+| Name                       | Type     | Description                                          |
+| -------------------------- | -------- | ---------------------------------------------------- |
+| `hint`                     | `String` | Gets or sets placeholder text for the input area.    |
+| `text`                     | `String` | Gets or sets the value of the search query.          |
+| `textFieldBackgroundColor` | `Color`  | Gets or sets the background color of the input area. |
+| `textFieldHintColor`       | `Color`  | Gets or sets the color of the placeholder text.      |
 
-## Eventos
+## Events
 
-| nome | descrição |
-|------|-------------|
-| `textChange`| Emitido quando o texto é alterado.
-| `submit`| Emitido quando o campo de busca é enviado.
+| name         | description                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------------- |
+| `textChange` | Emitted when the text is changed.                                                            |
+| `submit`     | Emitted when the search input is submitted.                                                  |
+| `clear`      | Emitted when the current search input is cleared through the **X** button in the input area. |
 
-## Componente Nativo
+## Native Component
 
-| Android | iOS |
-|---------|-----|
-| android.widget.SearchView	| UISearchBar
+| Android                                                                                               | iOS                                                                          |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.SearchView`](https://developer.android.com/reference/android/widget/SearchView.html) | [`UISearchBar`](https://developer.apple.com/documentation/uikit/uisearchbar) |
