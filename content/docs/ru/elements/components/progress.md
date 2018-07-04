@@ -1,14 +1,17 @@
 ---
 title: Progress
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_progress_.progress
-contributors: [sn0wil]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
-
-`<Progress>` - визуальный компонент, отображающий полосу для индикации прогресса задачи.
+`<Progress>` is a UI component that shows a bar to indicate the progress of a task.
 
 See also: [ActivityIndicator](/en/docs/elements/components/activity-indicator).
 
----
+* * *
 
 ```html
 <Progress :value="currentProgress" />
@@ -16,21 +19,22 @@ See also: [ActivityIndicator](/en/docs/elements/components/activity-indicator).
 
 [> screenshots for=Progress <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `value` | `Number` | Получает или задает текущее значение полосы прогресса. Должно быть в диапазоне от 0 до `maxValue`.
-| `maxValue` | `Number` | Получает или задает максимальное значение полосы прогресса.<br/>Значение по умолчанию: `100`.
+| Name       | Type     | Description                                                                                      |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------ |
+| `value`    | `Number` | Gets or sets the current value of the progress bar. Must be within the range of 0 to `maxValue`. |
+| `maxValue` | `Number` | Gets or sets the maximum value of the progress bar.  
+Default value: `100`.                      |
 
-## События
+## Events
 
-| Имя | Описание |
-|------|-------------|
-| `valueChange` | Срабатывает при изменении свойства `value`.
+| Name          | Description                                |
+| ------------- | ------------------------------------------ |
+| `valueChange` | Emitted when the `value` property changes. |
 
-## Нативный компонент
+## Native Component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.ProgressBar` (indeterminate = false)](https://developer.android.com/reference/android/widget/ProgressBar.html) | [`UIProgressView`](https://developer.apple.com/documentation/uikit/uiprogressview)
+| Android                                                                                                                         | iOS                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| [`android.widget.ProgressBar` (indeterminate = false)](https://developer.android.com/reference/android/widget/ProgressBar.html) | [`UIProgressView`](https://developer.apple.com/documentation/uikit/uiprogressview) |
