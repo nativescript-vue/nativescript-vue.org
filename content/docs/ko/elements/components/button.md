@@ -1,36 +1,39 @@
 ---
-title: 버튼 (Button)
+title: Button
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<Button>` is a UI component that displays a button which reacts to a user gesture.
 
-버튼(Button) 컴포넌트는 탭(tab) 이벤트에 반응하는 버튼을 표시하는데 사용됩니다.
+For more information about the available gestures, see [Gestures in the official NativeScript documentation](https://docs.nativescript.org/ui/gestures).
 
-상호작용이 탭(tab) 이벤트로만 제한되는 것은 아닙니다.
-[네이티브-스크립트에서 사용가능한 모든 제스쳐에대하여 공식 문서를 읽어보세요](https://docs.nativescript.org/ui/gestures).
-
----
+* * *
 
 ```html
-<Button text="Button" />
+<Button text="Button" @tap="onButtonTap" />
 ```
 
 [> screenshots for=Button <]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `text` | `String` | 버튼에 보이는 텍스트.
-| `textWrap` | `boolean` | 버튼의 텍스트가 래핑될지 결정. 기본값은 `false`.
+| Name       | Type      | Description                                                                                                      |
+| ---------- | --------- | ---------------------------------------------------------------------------------------------------------------- |
+| `text`     | `String`  | Sets the label of the button.                                                                                    |
+| `textWrap` | `Boolean` | Gets or sets whether the widget wraps the text of the label. Useful for longer labels. Default value is `false`. |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `tap` | 버튼이 눌릴때 발생(Emit)
+| Name  | Description                        |
+| ----- | ---------------------------------- |
+| `tap` | Emitted when the button is tapped. |
 
-## 네이티브 컴포넌트
-| Android | iOS |
-|---------|-----|
-| android.widget.Button | UIButton
+## Native component
+
+| Android                                                                                       | iOS                                                                    |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`android.widget.Button`](https://developer.android.com/reference/android/widget/Button.html) | [`UIButton`](https://developer.apple.com/documentation/uikit/uibutton) |
