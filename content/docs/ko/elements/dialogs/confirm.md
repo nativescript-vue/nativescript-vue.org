@@ -1,36 +1,39 @@
 ---
-title: 확인창 (ConfirmDialog)
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#confirm
-contributors: [qgp9]
+title: ConfirmDialog
+apiRef: 'https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#confirm'
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+The `confirm()` method shows a confirmation message and Cancel and OK buttons.
 
-확인창(ConfirmDialog) 는 부울값(예/아니오, Yes/No) 를 입력하는 다이얼로그입니다.
+The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
----
+* * *
+
+## Basic use
+
+The `confirm()` method is available globally. You can call it anywhere in your app.
 
 ```javascript
-const dialogs = require('ui/dialogs')
-
-module.exports = {
-  mounted() {
-    dialogs.confirm('Are you ready?')
-    .then(result => {
-      console.log(result)
-    })
-  }
-}
+confirm('Your message')
+  .then(result => {
+    console.log(result);
+  });
 ```
 
-ConfirmDialog는 전역적으로 사용할 수 있기 때문에, 다이얼로그 모듈에서 임포트하는 대신, 다음과 같이 간단히 호출할 수 있습니다.
-
+## Configure dialog options
 
 ```javascript
-confirm('Are you ready?')
-.then(result => {
-  console.log(result)
-})
+confirm({
+  title: "Your title",
+  message: "Your message",
+  okButtonText: "Your OK button text",
+  cancelButtonText: "Your Cancel text"
+}).then(result => {
+  console.log(result);
+});
 ```
-
-여러분의 코드 어디에서라도 말이죠.
 
 [> screenshots for=ConfirmDialog <]
