@@ -1,14 +1,16 @@
 ---
 title: HtmlView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_html_view_.htmlview
-contributors: [sn0wil]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<HtmlView>` is a UI component that lets you show static HTML content.
 
-`<HtmlView>` -визуальный компонент, позволяющий отобразить статический HTML контент.
+See also: [WebView](/en/docs/elements/components/web-view).
 
-Также смотрите: [WebView](/ru/docs/elements/components/web-view).
-
----
+* * *
 
 ```html
 <HtmlView html="<div><h1>HtmlView</h1></div>" />
@@ -16,14 +18,14 @@ contributors: [sn0wil]
 
 [> screenshots for=HtmlView <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `html` | `String` | HTML контент, который будет отображен.
+| Name   | Type     | Description                   |
+| ------ | -------- | ----------------------------- |
+| `html` | `String` | The HTML content to be shown. |
 
-## Нативный компонент
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.TextView`](https://developer.android.com/reference/android/widget/TextView.html) | [`UITextView`](https://developer.apple.com/documentation/uikit/uitextview)
+| Android                                                                                           | iOS                                                                        |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [`android.widget.TextView`](https://developer.android.com/reference/android/widget/TextView.html) | [`UITextView`](https://developer.apple.com/documentation/uikit/uitextview) |
