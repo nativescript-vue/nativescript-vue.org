@@ -1,14 +1,17 @@
 ---
 title: Button
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
-contributors: [sn0wil]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<Button>` is a UI component that displays a button which reacts to a user gesture.
 
-`<Button>`  - визуальный компонент, отображающий кнопку, реагирующую на жесты пользователя.
+For more information about the available gestures, see [Gestures in the official NativeScript documentation](https://docs.nativescript.org/ui/gestures).
 
-Для более детальной информации о доступных действиях, ознакомьтесь с [Жестами в официальной документации NativeScript](https://docs.nativescript.org/ui/gestures).
-
----
+* * *
 
 ```html
 <Button text="Button" @tap="onButtonTap" />
@@ -16,21 +19,21 @@ contributors: [sn0wil]
 
 [> screenshots for=Button <]
 
-## Свойства
+## Props
 
-| Имя | тип | Описание |
-|------|------|-------------|
-| `text` | `String` | Задает текст кнопки.
-| `textWrap` | `Boolean` | Получает или устанавливает влезает ли текст в кнопку. Применительно для длинных заголовков. Значение по умолчанию - `false`.
+| Name       | Type      | Description                                                                                                      |
+| ---------- | --------- | ---------------------------------------------------------------------------------------------------------------- |
+| `text`     | `String`  | Sets the label of the button.                                                                                    |
+| `textWrap` | `Boolean` | Gets or sets whether the widget wraps the text of the label. Useful for longer labels. Default value is `false`. |
 
-## События
+## Events
 
-| Имя | Описание |
-|------|-------------|
-| `tap` | Срабатывает при нажатии на кнопку.
+| Name  | Description                        |
+| ----- | ---------------------------------- |
+| `tap` | Emitted when the button is tapped. |
 
-## Нативный компонент
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.Button`](https://developer.android.com/reference/android/widget/Button.html) | [`UIButton`](https://developer.apple.com/documentation/uikit/uibutton)
+| Android                                                                                       | iOS                                                                    |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`android.widget.Button`](https://developer.android.com/reference/android/widget/Button.html) | [`UIButton`](https://developer.apple.com/documentation/uikit/uibutton) |
