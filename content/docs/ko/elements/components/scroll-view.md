@@ -1,12 +1,13 @@
 ---
-title: 스크롤뷰 (ScrollView)
+title: ScrollView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_scroll_view_.scrollview
-contributors: [qgp9]
+contributors:
+  - eddyverbruggen
+  - ikoevska
 ---
+`<ScrollView>` is a UI component that shows a scrollable content area. Content can be scrolled vertically or horizontally.
 
-스크롤뷰(ScrollView) 컴포넌트는 스크롤 가능한 컨텐츠를 표시할 수 있게 해줍니다.
-
----
+* * *
 
 ```html
 <ScrollView orientation="horizontal">
@@ -24,12 +25,21 @@ contributors: [qgp9]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `orientation` | `String` | `horizontal` 혹은 `vertical`. 기본값은 `vertical`.
+| name                        | type      | description                                                                                                               |
+| --------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `orientation`               | `String`  | Gets or sets the direction in which the content can be scrolled: `horizontal` or `vertical`.  
+Default value: `vertical`. |
+| `scrollBarIndicatorVisible` | `Boolean` | Specifies if the scrollbar is visible.  
+Default value: `true`.                                                           |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `scroll`| 스크롤 이벤트가 발생했을때 발생(Emit)
+| Name     | Description                         |
+| -------- | ----------------------------------- |
+| `scroll` | Emitted when a scroll event occurs. |
+
+## Native component
+
+| Android                                                                          | iOS                                                                            |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [`android.view`](https://developer.android.com/reference/android/view/View.html) | [`UIScrollView`](https://developer.apple.com/documentation/uikit/uiscrollview) |
