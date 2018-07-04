@@ -1,32 +1,34 @@
 ---
-title: 이미지 (Image)
+title: Image
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_image_.image
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<Image>` is a UI component that shows an image from an [ImageSource](https://docs.nativescript.org/api-reference/modules/_image_source_) or from a URL.
 
-이미지(Image) 컴포넌트는 [ImageSource](https://docs.nativescript.org/api-reference/modules/_image_source_) 나 URL 로부터 이미지를 표시합니다.
+* * *
 
----
-
-#### `app` 디렉토리로부터 상대경로로 이미지 표시
+#### Displaying an image relative to the `app` directory
 
 ```html
 <Image src="~/logo.png" stretch="none" />
 ```
 
-#### URL 로 부터 이미지 표시
+#### Displaying an image from a URL
 
 ```html
 <Image src="https://art.nativescript-vue.org/NativeScript-Vue-White-Green.png" stretch="none" />
 ```
 
-#### `App_Resources` 로 부터 이미지 표시
+#### Displaying an image from `App_Resources`
 
 ```html
 <Image src="res://icon" stretch="none" />
 ```
 
-#### `base64` 인코딩 이미지
+#### Displaying a `base64`-encoded image
 
 ```html
 <Image src="data:Image/png;base64,iVBORw..." stretch="none" />
@@ -36,12 +38,21 @@ contributors: [qgp9]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `src` | `String`, [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_) | 이미지 소스.
+| Name          | Type                                                                                            | Description                                                                                                                                                                                                                                                          |
+| ------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src`         | `String` or [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_) | Gets or sets the source of the image as a URL or an image source.                                                                                                                                                                                                    |
+| `imageSource` | [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_)             | Gets or sets the image source of the image.                                                                                                                                                                                                                          |
+| `tintColor`   | `Color`                                                                                         | (Style property) Sets a color to tint template images.                                                                                                                                                                                                               |
+| `stretch`     | `Stretch`                                                                                       | (Style property) Gets or sets the way the image is resized to fill its allocated space.  
+Valid values: `none`, `aspectFill`, `aspectFit`, or `fill`.  
+For more information, see [Stretch](https://docs.nativescript.org/api-reference/modules/_ui_enums_.stretch). |
+| `loadMode`    |                                                                                                 | Gets or sets the loading strategy for the images on the local file system.  
+Valid values: `sync` or `async`.  
+Default value: `async`.  
+For more information, see [loadMode](https://docs.nativescript.org/api-reference/classes/_ui_image_.image#loadmode).       |
 
-## 네이티브 컴포넌트
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| android.widget.ImageView | UIImageView
+| Android                                                                                             | iOS                                                                          |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.ImageView`](https://developer.android.com/reference/android/widget/ImageView.html) | [`UIImageView`](https://developer.apple.com/documentation/uikit/uiimageview) |
