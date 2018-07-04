@@ -1,19 +1,32 @@
 ---
-title: 세그먼트바 (SegmentedBar)
+title: SegmentedBar
 apiRef: http://docs.nativescript.org/api-reference/modules/_ui_segmented_bar_.html
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<SegmentedBar>` is a UI bar component that displays a set of buttons for discrete selection. Can show text or images.
 
-세그먼트바(SegmentedBar) 컴포넌트는 불연속적인 선택을 위해 탭형태의 뷰 컬랙션을 보여주는 간단한 방법을 제공합니다.
+As opposed to `<TabView>`: * The position of `<SegmentedBar>` is not fixed. * You can place and style it as needed on the page or inside additional app elements such as hamburger menus. * You need to handle the content shown after selection separately.
 
----
+* * *
+
+```html
+<SegmentedBar>
+  <SegmentedBarItem title="First" />
+  <SegmentedBarItem title="Second" />
+  <SegmentedBarItem title="Third" />
+</SegmentedBar>
+```
 
 ```html
 <SegmentedBar :items="listOfItems" selectedIndex="0"
     @selectedIndexChange="onSelectedIndexChange" />
 ```
 
-**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
+`<SegmentedBar>` provides two-way data binding using `v-model`.
 
 ```html
 <SegmentedBar :items="listOfItems" v-model="selectedItem" />
@@ -23,19 +36,21 @@ contributors: [qgp9]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `items` | `Array<SegmentedBarItem>` | 세그먼트바에 표시될 아이템 리스트.
-| `selectedIndex` | `Number` | 선택된 아이템들의 인덱스
-| `selectedBackgroundColor` | `Color` | 선텍된 아이템들의 배경색. 전체 바에 배경색을 적용하려면 `backgroundColor`를 사용하세요.
+| Name                      | Type                            | Description                                                                                                                                                 |
+| ------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `items`                   | `Array<SegmentedBarItem>` | An array of items to be displayed in the segmented bar. Represents the button labels or icons of the segmented bar.  
+The array must be created in advance. |
+| `selectedIndex`           | `Number`                        | Gets or sets the index of the selected item.                                                                                                                |
+| `selectedBackgroundColor` | `Color`                         | (Style property) Gets or sets the background color of the selected item. To set the background color of the entire bar, use `backgroundColor`.              |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `selectedIndexChange`| 세그멘트 바의 아이템이 탭될때 발생.
+| Name                  | Description                                              |
+| --------------------- | -------------------------------------------------------- |
+| `selectedIndexChange` | Emitted when the an item on the segmented bar is tapped. |
 
-## Native Component
-| Android | iOS |
-|---------|-----|
-| android.widget.TabHost | UISegmentedControl
+## Native component
+
+| Android                                                                                         | iOS                                                                                        |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [`android.widget.TabHost`](https://developer.android.com/reference/android/widget/TabHost.html) | [`UISegmentedControl`](https://developer.apple.com/documentation/uikit/uisegmentedcontrol) |
