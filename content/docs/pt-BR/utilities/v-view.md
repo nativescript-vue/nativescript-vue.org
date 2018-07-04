@@ -1,49 +1,51 @@
 ---
-title: diretiva v-view
-contributors: [alexhiroshi]
+title: v-view
+contributors:
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+The `v-view` directive lets you set the current element's `View` as a parent property.
 
-A diretiva `v-view` é usada para definir os elementos `View` atuais com uma propriedade pai.
+* * *
 
-### Uso
-
-```html
+```HTML
 <Child v-view:parentPropertyName />
 <!-- same as: -->
 <Child ~parentPropertyName />
 ```
 
-```html
+```HTML
 <Child v-view:parentArrayPropertyName.array />
 <!-- same as: -->
 <Child ~parentArrayPropertyName.array />
 ```
 
----
+* * *
 
-Existem muitos componentes `NativeScript` que precisam de uma configuração de propriedade para uma instância válida de `View`, o que não é possível com um template. Usando essa diretiva, você ganha tempo por não ter que registrar uma nova diretiva / referência nos elementos pai, e configurar as propriedades do pai manualmente.
+### Example: `<RadSideDrawer>`
 
-Para ilustrar melhor o que essa diretiva faz, vamos ver o componente `RadSideDrawer` do pacote [Progress NativeScript UI](http://docs.telerik.com/devtools/nativescript-ui/Controls/Angular/SideDrawer/getting-started):
+The `<RadSideDrawer>` component is part of the [Progress NativeScript UI](http://docs.telerik.com/devtools/nativescript-ui/Controls/Angular/SideDrawer/getting-started) package.
 
-O componente `RadSideDrawer` espera que as propriedades `drawerContent` e `mainContent` sejam definidas para as instâncias da `View`, usando a diretiva `v-view` ficaria assim:
+The `<RadSideDrawer>` component requires the `drawerContent` and `mainContent` properties to be set to `View` instances. Using the `v-view` directive, you can do this with a few lines of code:
 
-```html
+```HTML
 <RadSideDrawer>
   <StackLayout ~drawerContent />
   <StackLayout ~mainContent />
 </RadSideDrawer>
 ```
 
-Sem essa diretiva você teria que fazer algo como:
+Without the `v-view` directive, you need to go a more tedious and error-prone route:
 
-```html
+```HTML
 <RadSideDrawer ref="drawer">
   <StackLayout ref="drawerContent" />
   <StackLayout ref="mainContent" />
 </RadSideDrawer>
 ```
 
-```javascript
+```JavaScript
 {
   mounted() {
     this.$refs.drawer.nativeView.drawerContent = this.$refs.drawerContent.nativeView
@@ -51,5 +53,3 @@ Sem essa diretiva você teria que fazer algo como:
   }
 }
 ```
-
-Que pode ser tedioso e muito propenso a erros.

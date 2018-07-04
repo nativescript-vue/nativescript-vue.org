@@ -1,19 +1,21 @@
 ---
 title: Slider
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_slider_.slider
-contributors: [sn0wil]
-
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<Slider>` is a UI component that provides a slider control for picking values within a specified numeric range.
 
-`<Slider>` - визуальный компонент, обеспечивающий управление ползунком для выбора значений в пределах определенного чилового диапазона.
-
----
+* * *
 
 ```html
 <Slider value="80" @valueChange="onValueChanged" />
 ```
 
-`<Slider>` обеспечивает двустороннюю привязку данных, используя `v-model`.
+`<Slider>` provides two-way data binding using `v-model`:
 
 ```html
 <Slider v-model="value" />
@@ -21,22 +23,25 @@ contributors: [sn0wil]
 
 [> screenshots for=Slider <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `value` | `Number` | Получает или задает выбранное значение слайдера.<br/>Значение по умолчанию: `0`.
-| `minValue` | `Number` | Получает или задает минимальное значение слайдера.<br/>Значение по умолчанию: `0`.
-| `maxValue` | `Number` | Получает или задает максимальное значение слайдера.<br/>Значение по умолчанию: `100`.
+| Name       | Type     | Description                                                                    |
+| ---------- | -------- | ------------------------------------------------------------------------------ |
+| `value`    | `Number` | Gets or sets the currently selected value of the slider.  
+Default value: `0`. |
+| `minValue` | `Number` | Gets or sets the minimum value of the slider.  
+Default value: `0`.            |
+| `maxValue` | `Number` | Gets or sets the maximum value of the slider.  
+Default value: `100`.          |
 
-## События
+## Events
 
-| Имя | Описание |
-|------|-------------|
-| `valueChange`| Срабатывает при изменении значения слайдера.Emitted when the value of the slider changes.
+| Name          | Description                                   |
+| ------------- | --------------------------------------------- |
+| `valueChange` | Emitted when the value of the slider changes. |
 
 ## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.SeekBar`](https://developer.android.com/reference/android/widget/SeekBar.html) | [`UISlider`](https://developer.apple.com/documentation/uikit/uislider)
+| Android                                                                                         | iOS                                                                    |
+| ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`android.widget.SeekBar`](https://developer.android.com/reference/android/widget/SeekBar.html) | [`UISlider`](https://developer.apple.com/documentation/uikit/uislider) |

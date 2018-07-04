@@ -1,21 +1,24 @@
 ---
 title: TextField
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_text_field_
-contributors: [alexhiroshi]
-
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - TheOriginalJosh
+  - eddyverbruggen
+  - ikoevska
 ---
+`<TextField>` is an input component that creates an editable single-line box.
 
-`<TextField>` é um componente de campo de texto editável com uma única linha.
+`<TextField>` extends [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) and [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase) which provide additional properties and events.
 
-`<TextField>` estende [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) e [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase) que fornece propriedades e eventos adicionais.
-
----
+* * *
 
 ```html
 <TextField :text="textFieldValue" hint="Enter text..." />
 ```
 
-`<TextField>` suporta two-way data binding usando `v-model`.
+`<TextField>` provdes two-way data binding using `v-model`.
 
 ```html
 <TextField v-model="textFieldValue" />
@@ -23,30 +26,33 @@ contributors: [alexhiroshi]
 
 [> screenshots for=TextField <]
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `text` | `String` | Obtém ou define o valor do campo.
-| `hint` | `String` | Obtém ou define o texto do placeholder.
-| `editable` | `Boolean` | Quando `true`, indica que o usuário pode editar o valor do campo.
-| `maxLength` | `Number` | Limita o campo para um número específico de caracteres.
-| `secure` | `Boolean` | Esconde o texto digitado quando `true`. Use essa propriedade para criar um campo de senha.<br/>Valor padrão: `false`.
-| `keyboardType` | `KeyboardType` | Exibe um teclado personalizado para facilitar a entrada de textos.<br/>Valores válidos: `datetime`, `phone`, `number`, `url` ou `email`.
-| `returnKeyType` | `ReturnKeyType` | Obtém ou define o texto do teclado return.<br/>Valores válidos: `done`, `next`, `go`, `search` ou `send`.
-| `autocorrect` | `Boolean` | Habilita ou desabilita a auto correção.
+| Name            | Type            | Description                                                                                                      |
+| --------------- | --------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `text`          | `String`        | Gets or sets the value of the field.                                                                             |
+| `hint`          | `String`        | Gets or sets the placeholder text.                                                                               |
+| `editable`      | `Boolean`       | When `true`, indicates that the user can edit the value of the field.                                            |
+| `maxLength`     | `Number`        | Limits input to the spcified number of characters.                                                               |
+| `secure`        | `Boolean`       | Hides the entered text when `true`. Use this property to create password input fields.  
+Default value: `false`. |
+| `keyboardType`  | `KeyboardType`  | Shows a custom keyboard for easier text input.  
+Valid values: `datetime`, `phone`, `number`, `url`, or `email`. |
+| `returnKeyType` | `ReturnKeyType` | Gets or sets the label of the return key.  
+Valid values: `done`, `next`, `go`, `search`, or `send`.             |
+| `autocorrect`   | `Boolean`       | Enables or disables autocorrect.                                                                                 |
 
-## Eventos
+## Events
 
-| nome | descrição |
-|------|-------------|
-| `textChange` | Emitido quando o texto é alterado.
-| `returnPress` | Emitido quando o teclado return é precionado.
-| `focus` | Emitido quando o campo está em foco.
-| `blur` | Emitido quando o campo perder o foco.
+| Name          | Description                             |
+| ------------- | --------------------------------------- |
+| `textChange`  | Emitted when the text changes.          |
+| `returnPress` | Emitted when the return key is pressed. |
+| `focus`       | Emitted when the field is in focus.     |
+| `blur`        | Emitted when the field loses focus.     |
 
-## Componente Nativo
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.EditText`](https://developer.android.com/reference/android/widget/EditText.html) | [`UITextField`](https://developer.apple.com/documentation/uikit/uitextfield)
+| Android                                                                                           | iOS                                                                          |
+| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.EditText`](https://developer.android.com/reference/android/widget/EditText.html) | [`UITextField`](https://developer.apple.com/documentation/uikit/uitextfield) |

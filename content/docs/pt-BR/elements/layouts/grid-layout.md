@@ -1,28 +1,29 @@
 ---
 title: GridLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_grid_layout_
-contributors: [alexhiroshi]
+contributors:
+  - rigor789
+  - ikoevska
 ---
+`<GridLayout>` is a layout component that lets you arrange its child elements in a table-like manner.
 
-`<GridLayout>` é um componenete de layout que organiza seus elementos filhos semelhante a uma tabela.
+The grid consists of rows, columns, and cells. A cell can span one or more rows and one or more columns. It can contain multiple child elements which can span over multiple rows and columns, and even overlap each other.
 
-A grid consiste em linhas, colunas e células. Uma célula pode ocupar uma ou mais linhas e colunas. Pode conter múltiplos elementos filhos que podem ocupar múltiplas linhas e colunas, até uma sobrepor a outra.
+By default, the `<GridLayout>` has one column and one row. You can add columns and rows by configuring the `columns` and the `rows` property. In these properties, you need to set the number of columns and rows and their width and height. You set the number of columns by listing their widths, separated by a comma. You set the number of rows by listing their heights, separated by a comma.
 
-Por padrão, o `<GridLayout>` tem uma coluna e uma linha. Você pode adicionar colunas e linhas configurando as propriedades `columns` e `rows`. Nessas propriedades, você precisa definir o número de colunas e linha, e a sua largura e altura. Você define o número de colunas e linhas, listando respectivamente suas larguras e alturas, separadas por vírgula.
+You can set a fixed size for column width and row height or you can create them in a responsive manner.
 
-Você pode definir um tamanho fixo para largura da coluna e a altura da linha, ou pode criá-los de maneira responsiva.
+* **An absolute number:** Indicates a fixed size.
+* **auto:** Makes the column as wide as its widest child or makes the row as tall as its tallest child.
+* **\*:** Takes as much space as available after filling all auto and fixed size columns or rows.
 
-* **Um número absoluto:** Indica um tamanho fixo.
-* **auto:** Deixa a coluna larga como o filho mais largo, ou deixa a linha alta como o filho mais alto.
-* **\*:** Pega todo o espaço disponível depois de preencher todos os tamanhos automáticos e fixos das colunas ou linhas.
+See [Props](#props) for more information.
 
-Veja [Propriedades](#propriedades) para mais informações.
+### Examples
 
-### Exemplos
+#### Grid layout with fixed sizing
 
-#### Layout de Grid com tamanho fixo
-
-O exemplo seguinte cria um simples grid 2 por 2 com larguras de colunas fixas e altura de linhas.
+The following example creates a simple 2-by-2 grid with fixed column widths and row heights.
 
 ```html
 <GridLayout columns="115, 115" rows="115, 115">
@@ -32,11 +33,12 @@ O exemplo seguinte cria um simples grid 2 por 2 com larguras de colunas fixas e 
   <Label text="1,1" row="1" col="1" backgroundColor="#43b883"/>
 </GridLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout.svg" />
 
-#### Layout de Grid com tamanho proporcional
+#### Grid layout with star sizing
 
-O exemplo seguinte cria um grid com design responsivo, onde o espaço é alocado proporcionalmente aos elementos filhos.
+The following example creates a grid with responsive design, where space is alotted proportionally to child elements.
 
 ```html
 <GridLayout columns="*, 2*" rows="2*, 3*" backgroundColor="#3c495e">
@@ -46,9 +48,10 @@ O exemplo seguinte cria um grid com design responsivo, onde o espaço é alocado
   <Label text="1,1" row="1" col="1" backgroundColor="#43b883"/>
 </GridLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_star_sizing.svg" />
 
-#### Layout de Grid com tamanho fixo e automático
+#### Grid layout with fixed and auto sizing
 
 ```html
 <GridLayout columns="80, auto" rows="80, 80" backgroundColor="#3c495e">
@@ -58,11 +61,12 @@ O exemplo seguinte cria um grid com design responsivo, onde o espaço é alocado
   <Label text="1,1" row="1" col="1" backgroundColor="#43b883"/>
 </GridLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_fixed_auto.svg" />
 
-#### Layout de Grid com mistura de tamanho e células mescladas
+#### Grid layout with mixed sizing and merged cells
 
-O exemplo seguinte cria um grid complexo com design responsivo, configurações de largura e altura diferentes, e algumas células mescladas.
+The following example creates a complex grid with responsive design, mixed width and height settings, and some merged cells.
 
 ```html
 <GridLayout columns="40, auto, *" rows="40, auto, *" backgroundColor="#3c495e">
@@ -75,22 +79,21 @@ O exemplo seguinte cria um grid complexo com design responsivo, configurações 
   <Label text="2,2" row="2" col="2" backgroundColor="#43b883"/>
 </GridLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_complex.svg" />
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-`columns` | `String` | Um valor em texto representando as larguras das colunas delimitada por vírgula.<br/>Valores válidos: um número absoluto, `auto` ou `*`.<br/>Um número indica a largura absoluta da coluna. `auto` faz a coluna larga como o filho mais largo. `*` faz a coluna ocupar todo espaço disponível na horizontal. O espaço é proporcionalmente dividido com todas as colunas com asterisco. Você pode definir valores como `3*` e `5*` para indicar uma proporção de 3:5
-`rows` | `String` |Um valor em texto representando as alturas das linhas delimitada por vírgula.<br/>Valores válidos: um número absoluto, `auto` ou `*`.<br/>Um número indica a altura absoluta da linha. `auto` faz a linha alta como o filho mais alto. `*` faz a linha ocupar todo espaço na vertical. O espaço é proporcionalmente dividido com todoas as linhas com asterisco. Você pode definir valores como `3*` e `5*` para indicar uma proporção de 3:5
+| Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `columns` | `String` | A string value representing column widths delimited with commas.  
+Valid values: an absolute number, `auto`, or `*`.  
+A number indicates an absolute column width. `auto` makes the column as wide as its widest child. `*` makes the column occupy all available horizontal space. The space is proportionally divided over all star-sized columns. You can set values such as `3*` and `5*` to indicate a ratio of 3:5 in sizes. `rows` | `String` | A string value representing row heights delimited with commas.  
+Valid values: an absolute number, `auto`, or `*`.  
+A number indicates an absolute row height. `auto` makes the row as tall as its tallest child. `*` makes the row occupy all available vertical space. The space is proportionally divided over all star-sized rows. You can set values such as `3*` and `5*` to indicate a ratio of 3:5 in sizes.
 
-## Propriedades filhas adicionais
+## Additional children props
 
-Quando um elemento é filho direto de um GridLayout, você pode trabalhar com as seguintes propriedades adicionais:
+When an element is a direct child of the GridLayout, you can work with the following additional properties.
 
-| nome | tipo | descrição |
-|------|------|-------------|
-`row` | `Number` | Especifica a linha para este elemento. Combinado com uma propriedade `column`, especifica a coordenada da célula do elemento.<br/>A primeira linha é indicada por `0`.
-`column` | `Number` | Especifica a coluna para o elemente. Combinado com uma propriedade `row`, especifica a coordenada da célula do elemento.<br/>A primeira coluna é indica por `0`.
-`rowSpan` | `Number` | Especifica o número de linhas que o elemento ocupa.
-`colSpan` | `Number` | Especifica o número de colunas que o elemento ocupa.
+| Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `row` | `Number` | Specifies the row for this element. Combined with a `col` property, specifies the cell coordinates of the element.  
+The first row is indicated by `0`. `col` | `Number` | Specifies the column for the element. Combined with a `row` property, specifies the cell coordinates of the element.  
+The first column is indicated by `0`. `rowSpan` | `Number` | Specifies the number of rows which this element spans across. `colSpan` | `Number` | Specifies the number of columns which this element spans across.

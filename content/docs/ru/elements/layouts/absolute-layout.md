@@ -1,14 +1,14 @@
 ---
 title: AbsoluteLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_absolute_layout_
-contributors: [lex111]
+contributors:
+  - rigor789
 ---
+The AbsoluteLayout container is the simplest layout container in NativeScript. It uses absolute top-left coordinates to position its children. The AbsoluteLayout will not enforce any layout constraints on its children and will not resize them at runtime when its size changes.
 
-Контейнер AbsoluteLayout — это самый простой контейнер макета в NativeScript. Он использует абсолютные верхние левые координаты для расположения своих дочерних элементов. AbsoluteLayout не будет применять ограничения макета на своих дочерних элементах и не будет изменять их размер во время выполнения при изменении их размеров.
+### Samples
 
-### Примеры
-
-#### Макет в виде сетки
+#### A grid-like layout
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -18,9 +18,10 @@ contributors: [lex111]
   <Label text="120,120" left="120" top="120" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_grid.svg" />
 
-#### Перекрывающиеся элементы
+#### Overlapping elements
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -28,19 +29,18 @@ contributors: [lex111]
   <Label text="30,40" left="30" top="40" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_overlap.svg" />
 
+## Props
 
-## Свойства
+AbsoluteLayout has no props.
 
-AbsoluteLayout не имеет свойств.
+## Additional Children Props
 
-## Дополнительные свойства дочерних элементов
+When an element is a direct child of the AbsoluteLayout, the following props get a meaning:
 
-Когда элемент — прямой дочерний элемент AbsoluteLayout, доступны следующие
-свойства:
-
-| Название | Тип | Описание |
-|------|------|-------------|
-| `top` | `Number` | Значение, представляющее расстояние от верхней части родительского AbsoluteLayout
-| `left` | `Number` | Значение, представляющее расстояние с левой части родительского AbsoluteLayout
+| name   | type     | description                                                                  |
+| ------ | -------- | ---------------------------------------------------------------------------- |
+| `top`  | `Number` | A value representing the distance from the top of the parent AbsoluteLayout  |
+| `left` | `Number` | A value representing the distance from the left of the parent AbsoluteLayout |

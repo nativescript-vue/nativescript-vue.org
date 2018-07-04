@@ -1,12 +1,13 @@
 ---
 title: ScrollView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_scroll_view_.scrollview
-contributors: [alexhiroshi]
+contributors:
+  - eddyverbruggen
+  - ikoevska
 ---
+`<ScrollView>` is a UI component that shows a scrollable content area. Content can be scrolled vertically or horizontally.
 
-O componente ScrollView permite que você mostre o conteúdo com rolagem.
-
----
+* * *
 
 ```html
 <ScrollView orientation="horizontal">
@@ -22,14 +23,23 @@ O componente ScrollView permite que você mostre o conteúdo com rolagem.
 
 [> screenshots for=ScrollView <]
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `orientation` | `String` | `horizontal` ou `vertical`. Padrão `vertical`.
+| name                        | type      | description                                                                                                               |
+| --------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `orientation`               | `String`  | Gets or sets the direction in which the content can be scrolled: `horizontal` or `vertical`.  
+Default value: `vertical`. |
+| `scrollBarIndicatorVisible` | `Boolean` | Specifies if the scrollbar is visible.  
+Default value: `true`.                                                           |
 
-## Eventos
+## Events
 
-| nome | descrição |
-|------|-------------|
-| `scroll`| Emitido quando ocorre o evento de rolagem
+| Name     | Description                         |
+| -------- | ----------------------------------- |
+| `scroll` | Emitted when a scroll event occurs. |
+
+## Native component
+
+| Android                                                                          | iOS                                                                            |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [`android.view`](https://developer.android.com/reference/android/view/View.html) | [`UIScrollView`](https://developer.apple.com/documentation/uikit/uiscrollview) |
