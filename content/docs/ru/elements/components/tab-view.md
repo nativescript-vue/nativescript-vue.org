@@ -1,12 +1,16 @@
 ---
 title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
+  - kharysharpe
 ---
+`<TabView>` is a navigation component that shows content grouped into tabs and lets users switch between tabs.
 
-`<TabView>` - навигационный компонент, отображающий контент, сгруппированный по вкладкам и позволяющий пользователю переключиться между ними.
-
----
+* * *
 
 ```html
 <TabView :selectedIndex="selectedIndex">
@@ -19,11 +23,11 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 </TabView>
 ```
 
-**Примечание:** В данный момент `TabViewItem` ожидает один дочерний элемент. В большинстве случаев вы можете обернуть ваш контент в макет.
+**NOTE:** Currently, `TabViewItem` expects a single child element. In most cases, you might want to wrap your content in a layout.
 
 [> screenshots for=TabView <]
 
-#### Добавление иконок во вкладки
+#### Adding icons to tabs
 
 ```html
 <TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
@@ -35,25 +39,26 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
   </TabViewItem>
 </TabView>
 ```
-**Примечание:** шрифты иконок могут работать в некоторых случаях, но в основном рекомендуется использовать изображения в качестве иконок для вкладок.
 
-## Свойства
+**NOTE:** Use images for tab icons instead of icon fonts.
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `selectedIndex` | `Number` | Получает или задает выбранную вкладку. Значение по умолчанию `0`.
-| `tabTextColor` | `Color` | (Свойство стиля)Получает или задает значение цвета текста заголовков вкладок.
-| `tabBackgroundColor` | `Color` | (Свойство стиля)Получает или задает значение цвета фона для вкладок.
-| `selectedTabTextColor` | `Color` | (Свойство стиля)Получает или задает значение цвета текста закголовка выбранной вкладки.
+## Props
 
-## События
+| Name                   | Type     | Description                                                             |
+| ---------------------- | -------- | ----------------------------------------------------------------------- |
+| `selectedIndex`        | `Number` | Gets or sets the currently selected tab. Default is `0`.                |
+| `tabTextColor`         | `Color`  | (Style property) Gets or sets the text color of the tabs titles.        |
+| `tabBackgroundColor`   | `Color`  | (Style property) Gets or sets the background color of the tabs.         |
+| `selectedTabTextColor` | `Color`  | (Style property) Gets or sets the text color of the selected tab title. |
 
-| Имя | Описание |
-|------|-------------|
-| `tabChange` | Срабатывает при нажатии на один из компонентов `<TabViewItem>`.
+## Events
 
-## Нативный компонент
+| Name        | Description                                                         |
+| ----------- | ------------------------------------------------------------------- |
+| `tabChange` | Emitted when one of the `<TabViewItem>` components is tapped. |
 
-| Android | iOS |
-|---------|-----|
-| [`android.support.v4.view.ViewPager`](https://developer.android.com/reference/android/support/v4/view/ViewPager.html) | [`UITabBarController`](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
+## Native component
+
+| Android                                                                                                               | iOS                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [`android.support.v4.view.ViewPager`](https://developer.android.com/reference/android/support/v4/view/ViewPager.html) | [`UITabBarController`](https://developer.apple.com/documentation/uikit/uitabbarcontroller) |
