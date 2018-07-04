@@ -1,3 +1,7 @@
 files:
   - source: /content/docs/en/**/*.md
-    translation: /content/docs/%two_letters_code%/**/%original_file_name%
+    translation: /content/docs/%locale%/**/%original_file_name%
+    languages_mapping:
+      locale:
+        ko: ko
+        ru: ru
