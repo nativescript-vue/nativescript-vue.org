@@ -1,18 +1,20 @@
 ---
 title: SearchBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_search_bar_.searchbar
-contributors: [MisterBrownRSA, rigor789, ikoevska]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<SearchBar>` is a UI component that provides a user interface for entering search queries and submitting requests to the search provider.
 
-`<SearchBar>` - визуальный компонент, который предоставляет пользовательский интерфейс для ввода поисковых запросов и отправки запросов поисковому провайдеру.
-
----
+* * *
 
 ```html
 <SearchBar hint="Search hint" :text="searchPhrase" @textChange="onTextChanged" @submit="onSubmit" />
 ```
 
-`<SearchBar>` обеспечивает двустороннюю привязку данных, используя `v-model`.
+`<SearchBar>` provides two-way data binding using `v-model`.
 
 ```html
 <SearchBar v-model="searchQuery" />
@@ -20,25 +22,25 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 [> screenshots for=SearchBar <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `hint` | `String` | Получает или задает текст для подсказки текстового поля.
-| `text` | `String` | Получает или задает значение поискового запроса.
-| `textFieldBackgroundColor` | `Color` | Получает или задает цвет фона для поля ввода.
-| `textFieldHintColor` | `Color` | Получает или задает цвет текста для подсказки текстового поля.
+| Name                       | Type     | Description                                          |
+| -------------------------- | -------- | ---------------------------------------------------- |
+| `hint`                     | `String` | Gets or sets placeholder text for the input area.    |
+| `text`                     | `String` | Gets or sets the value of the search query.          |
+| `textFieldBackgroundColor` | `Color`  | Gets or sets the background color of the input area. |
+| `textFieldHintColor`       | `Color`  | Gets or sets the color of the placeholder text.      |
 
-## События
+## Events
 
-| Имя | Описание |
-|------|-------------|
-| `textChange` | Срабатывает для изменении текста.
-| `submit` | Срабатывает при подтверждении (submit) в поле ввода.
-| `clear` | Срабатывает, когда текущее значение поля ввода очищено с помощью кнопки **X**, расположенного в поле ввода.
+| name         | description                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------------- |
+| `textChange` | Emitted when the text is changed.                                                            |
+| `submit`     | Emitted when the search input is submitted.                                                  |
+| `clear`      | Emitted when the current search input is cleared through the **X** button in the input area. |
 
-## Нативный компонент
+## Native Component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.SearchView`](https://developer.android.com/reference/android/widget/SearchView.html)	| [`UISearchBar`](https://developer.apple.com/documentation/uikit/uisearchbar)
+| Android                                                                                               | iOS                                                                          |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.SearchView`](https://developer.android.com/reference/android/widget/SearchView.html) | [`UISearchBar`](https://developer.apple.com/documentation/uikit/uisearchbar) |
