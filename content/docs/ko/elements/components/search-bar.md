@@ -1,18 +1,20 @@
 ---
-title: 검색바 (SearchBar)
+title: SearchBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_search_bar_.searchbar
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<SearchBar>` is a UI component that provides a user interface for entering search queries and submitting requests to the search provider.
 
-검색바(SearchBar) 는 검색 커리를 입력하고 검색 제공자에게 요청을 보낼수 있는 사용자 인터페이스를 제공합니다.
-
----
+* * *
 
 ```html
 <SearchBar hint="Search hint" :text="searchPhrase" @textChange="onTextChanged" @submit="onSubmit" />
 ```
 
-**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
+`<SearchBar>` provides two-way data binding using `v-model`.
 
 ```html
 <SearchBar v-model="searchQuery" />
@@ -22,20 +24,23 @@ contributors: [qgp9]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `hint` | `String` | 편집가능한 인풋 영역의 텍스트 플레이스홀더
-| `text` | `String` | 검색 인풋의 value
+| Name                       | Type     | Description                                          |
+| -------------------------- | -------- | ---------------------------------------------------- |
+| `hint`                     | `String` | Gets or sets placeholder text for the input area.    |
+| `text`                     | `String` | Gets or sets the value of the search query.          |
+| `textFieldBackgroundColor` | `Color`  | Gets or sets the background color of the input area. |
+| `textFieldHintColor`       | `Color`  | Gets or sets the color of the placeholder text.      |
 
-## ## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `textChange`| 텍스트가 바뀔때 발생.
-| `submit`| 검색 인풋이 submit 될때 발생
+| name         | description                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------------- |
+| `textChange` | Emitted when the text is changed.                                                            |
+| `submit`     | Emitted when the search input is submitted.                                                  |
+| `clear`      | Emitted when the current search input is cleared through the **X** button in the input area. |
 
 ## Native Component
 
-| Android | iOS |
-|---------|-----|
-| android.widget.SearchView	| UISearchBar
+| Android                                                                                               | iOS                                                                          |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.SearchView`](https://developer.android.com/reference/android/widget/SearchView.html) | [`UISearchBar`](https://developer.apple.com/documentation/uikit/uisearchbar) |
