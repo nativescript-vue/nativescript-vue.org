@@ -1,20 +1,22 @@
 ---
 title: TimePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_time_picker_.timepicker
-contributors: [sn0wil]
-
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<TimePicker>` is a UI component that lets users select time.
 
-`<TimePicker>`  - визуальный компонент, позволяющий пользователю выбрать время. 
+> See also: [DatePicker](/en/docs/elements/components/date-picker).
 
-Также смотрите: [DatePicker](/ru/docs/elements/components/date-picker).
----
+* * *
 
 ```html
 <TimePicker :hour="selectedHour" :minute="selectedMinute" />
 ```
 
-`<TimePicker>` обеспечивает двустороннюю привязку данных, используя `v-model`.
+`<TimePicker>` provides two-way data binding using `v-model`.
 
 ```html
 <TimePicker v-model="selectedTime" />
@@ -22,27 +24,28 @@ contributors: [sn0wil]
 
 [> screenshots for=TimePicker <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `hour` | `Number` | Получает или задает выбранный час.
-| `minute` | `Number` | Получает или задает выбранную минуту.
-| `time` | `Date` | Получает или задает выбранное время.
-| `minHour` | `Number` | Получает или задает минимально возможный для выбора час.
-| `maxHour` | `Number` | Получает или задает максимально возможный для выбора час.
-| `minMinute` | `Number` | Получает или задает минимально возможную для выбора минуту.
-| `maxMinute` | `Number` | Получает или задает максимально возможную для выбора минуту.
-| `minuteInterval` | `Number` | Получает или задает доступный для выбора интервал в минутах. Например: 5 или 15 минут.<br/>Значение по умолчанию: `1`.
+| Name             | Type     | Description                                                                                      |
+| ---------------- | -------- | ------------------------------------------------------------------------------------------------ |
+| `hour`           | `Number` | Gets or sets the selected hour.                                                                  |
+| `minute`         | `Number` | Gets or sets the selected minute.                                                                |
+| `time`           | `Date`   | Gets or sets the selected time.                                                                  |
+| `minHour`        | `Number` | Gets or sets the minimum selectable hour.                                                        |
+| `maxHour`        | `Number` | Gets or sets the maximum selectable hour.                                                        |
+| `minMinute`      | `Number` | Gets or sets the minimum selectable minute.                                                      |
+| `maxMinute`      | `Number` | Gets or sets the maximum selectable minute.                                                      |
+| `minuteInterval` | `Number` | Gets or sets the selectable minute interval. For example: 5 or 15 minutes.  
+Default value: `1`. |
 
-## События
+## Events
 
-| Имя | Описание |
-|------|-------------|
-| `timeChange` | Срабатывает при изменении времени.
+| Name         | Description                             |
+| ------------ | --------------------------------------- |
+| `timeChange` | Emitted when the selected time changes. |
 
-## Нативный компонент
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.TimePicker`](https://developer.android.com/reference/android/widget/TimePicker) | [`UIDatePicker`](https://developer.apple.com/documentation/uikit/uidatepicker)
+| Android                                                                                          | iOS                                                                            |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| [`android.widget.TimePicker`](https://developer.android.com/reference/android/widget/TimePicker) | [`UIDatePicker`](https://developer.apple.com/documentation/uikit/uidatepicker) |
