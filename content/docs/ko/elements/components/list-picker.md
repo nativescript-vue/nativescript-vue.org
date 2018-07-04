@@ -1,19 +1,21 @@
 ---
 title: ListPicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_picker_.listpicker
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<ListPicker>` is a UI component that lets the user select a value from a pre-configured list.
 
-ListPicker 컴포넌트는 사용자가 리스트로 부터 값을 선택할 수 있도록 해줍니다.
-
----
+* * *
 
 ```html
 <ListPicker :items="listOfItems" selectedIndex="0"
     @selectedIndexChange="selectedIndexChanged" />
 ```
 
-**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
+`<ListPicker>` provides two-way data binding using `v-model`.
 
 ```html
 <ListPicker :items="listOfItems" v-model="selectedItem" />
@@ -23,19 +25,19 @@ ListPicker 컴포넌트는 사용자가 리스트로 부터 값을 선택할 수
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `items` | `Array<String>` | 리스트 선택기에 표시되는 옵션들의 스트링 배열.
-| `selectedIndex` | `Number` | 현재 선택된 아이템의 인덱스.
+| Name            | Type                  | Description                                                     |
+| --------------- | --------------------- | --------------------------------------------------------------- |
+| `items`         | `Array<String>` | Gets or sets the items displayed as options in the list picker. |
+| `selectedIndex` | `Number`              | Gets or sets the index of the currently selected item.          |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `selectedIndexChange`| 리스트 선택기에서 선택된 옵션(인덱스)가 바뀔때 발생(Emit)
+| Name                  | Description                                                 |
+| --------------------- | ----------------------------------------------------------- |
+| `selectedIndexChange` | Emitted when the currently selected option (index) changes. |
 
-## 네이티브 컴포넌트
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| android.widget.NumberPicker | UIPickerView
+| Android                                                                                                   | iOS                                                                            |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [`android.widget.NumberPicker`](https://developer.android.com/reference/android/widget/NumberPicker.html) | [`UIPickerView`](https://developer.apple.com/documentation/uikit/uipickerview) |
