@@ -1,32 +1,46 @@
 ---
-title: Использование плагинов NativeScript
-contributors: [sn0wil, lex111]
+title: Using NativeScript Plugins
+contributors:
+  - EddyVerbruggen
+  - naderio
+  - rigor789
+  - ikoevska
 ---
+Plugins work as in [any other NativeScript app](https://docs.nativescript.org/plugins/plugins), but you may wonder how *UI* plugins work with Vue.
 
-Плагины работают так же, как и в любом другом приложении NativeScript, но вы можете задаться вопросом, как модули *UI* будут работать с Vue.
+UI plugins work almost identically to how you'd use a NativeScript UI plugin in an Angular app.
 
-Использование UI-плагинов очень похоже на использование NativeScript UI-плагинов в приложении на Angular. Рассмотрим пример использования [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient), который используется в примере [listview sample](https://github.com/rigor789/nativescript-vue/tree/master/samples/app/app-with-list-view.js):
- 
-Установите плагин, используя NativeScript CLI:
+## Sample use: nativescript-gradient
+
+Let's review how you can use [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient). You can also check its use in the [listview sample](https://github.com/rigor789/nativescript-vue/tree/master/samples/app/app-with-list-view.js).
+
+### Install the plugin using the NativeScript CLI
+
+After you have [set up your system for NativeScript development](/en/docs/getting-started/installation), run the following command:
 
 ```shell
 $ npm install --save nativescript-gradient
 ```
 
-**Важно:** Если вы используете [vue-cli-template](/ru/docs/getting-started/templates/#nativescript-vuevue-cli-template), вам может потребоваться запустить:
+> **NOTE:** If you are using the [vue-cli-template](/en/docs/getting-started/templates/#nativescript-vuevue-cli-template), you may have to run the following:
 
 ```shell
 $ npm run clean
 ```
-Откройте входной файл вашего приложения и добавьте в начале:
 
-```js
+### Register the plugin in your app
+
+Open your app entry file (llikely `app.js` or `main.js`) and add the following line at the top:
+
+```JavaScript
 Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient)
 ```
 
-Затем в вашем шаблоне вы можете использовать новый элемент:
+This requires and registers the plugin in your `Vue` instance. The `registerElement` function expects the name of the `<Element>` as the first argument, and a function that returns the plugin as its second argument. Provide the element name exactly as you are supposed to call it in your code. Provide the plugin name exactly as its npm package name.
 
-```html
+### Use the plugin in your app
+
+```HTML
 <Gradient direction="to right" colors="#FF0077, red, #FF00FF">
   <Label text="Best gradient." horizontalAlignment="center"
          style="color: white; padding: 20" />
