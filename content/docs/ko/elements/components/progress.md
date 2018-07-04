@@ -1,12 +1,17 @@
 ---
-title: 프로그레스 (Progress)
+title: Progress
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_progress_.progress
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<Progress>` is a UI component that shows a bar to indicate the progress of a task.
 
-프로그레스(Progress) 컴포넌트는 진행상태를 시각적으로 보여주는 바(막대)입니다.
+See also: [ActivityIndicator](/en/docs/elements/components/activity-indicator).
 
----
+* * *
 
 ```html
 <Progress :value="currentProgress" />
@@ -16,19 +21,20 @@ contributors: [qgp9]
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `value` | `Number` | 최대값을 기준으로한 현재 진행 상태.
-| `maxValue` | `Number` | 진행상태의 최대값. 기본값은 `100`.
+| Name       | Type     | Description                                                                                      |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------ |
+| `value`    | `Number` | Gets or sets the current value of the progress bar. Must be within the range of 0 to `maxValue`. |
+| `maxValue` | `Number` | Gets or sets the maximum value of the progress bar.  
+Default value: `100`.                      |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `valueChange` | value 프로퍼티가 바뀔때 발생
+| Name          | Description                                |
+| ------------- | ------------------------------------------ |
+| `valueChange` | Emitted when the `value` property changes. |
 
-## 네이티브 컴포넌트
+## Native Component
 
-| Android | iOS |
-|---------|-----|
-| android.widget.ProgressBar (indeterminate = false) | UIProgressView
+| Android                                                                                                                         | iOS                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| [`android.widget.ProgressBar` (indeterminate = false)](https://developer.android.com/reference/android/widget/ProgressBar.html) | [`UIProgressView`](https://developer.apple.com/documentation/uikit/uiprogressview) |
