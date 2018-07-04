@@ -1,12 +1,16 @@
 ---
 title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [alexhiroshi]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
+  - kharysharpe
 ---
+`<TabView>` is a navigation component that shows content grouped into tabs and lets users switch between tabs.
 
-`<TabView>` é um componente de navegação que mostra conteúdos agrupados em abas e permite o usuário alterar entre elas.
-
----
+* * *
 
 ```html
 <TabView :selectedIndex="selectedIndex">
@@ -18,27 +22,43 @@ contributors: [alexhiroshi]
   </TabViewItem>
 </TabView>
 ```
-**Nota:** `TabViewItem` atualmente espera um úncio elemento filho, na maioria dos casos você vai querer envolver o seu conteúdo em um layout.
+
+**NOTE:** Currently, `TabViewItem` expects a single child element. In most cases, you might want to wrap your content in a layout.
 
 [> screenshots for=TabView <]
 
-## Propriedades
+#### Adding icons to tabs
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `selectedIndex` | `Number` | Obtém ou define a aba atualmente selecionada. Padrão é `0`.
-| `tabTextColor` | `Color` | (Propriedade de estilo) Obtém ou define a cor do texto dos títulos das abas.
-| `tabBackgroundColor` | `Color` | (Propriedade de estilo) Obtém ou define a cor de fundo das abas.
-| `selectedTabTextColor` | `Color` | (Propriedade de estilo) Obtém ou define a cor do texto do título da aba selecionada.
+```html
+<TabView :selectedIndex="selectedIndex" iosIconRenderingMode="alwaysOriginal">
+  <TabViewItem title="Tab 1" iconSource="~/images/icon.png">
+    <Label text="Content for Tab 1" />
+  </TabViewItem>
+  <TabViewItem title="Tab 2" iconSource="~/images/icon.png">
+    <Label text="Content for Tab 2" />
+  </TabViewItem>
+</TabView>
+```
 
-## Eventos
+**NOTE:** Use images for tab icons instead of icon fonts.
 
-| nome | descrição |
-|------|-------------|
-| `tabChange` | Emitido quando um componente `<TabViewItem>` é tocado.
+## Props
 
-## Componente Nativo
+| Name                   | Type     | Description                                                             |
+| ---------------------- | -------- | ----------------------------------------------------------------------- |
+| `selectedIndex`        | `Number` | Gets or sets the currently selected tab. Default is `0`.                |
+| `tabTextColor`         | `Color`  | (Style property) Gets or sets the text color of the tabs titles.        |
+| `tabBackgroundColor`   | `Color`  | (Style property) Gets or sets the background color of the tabs.         |
+| `selectedTabTextColor` | `Color`  | (Style property) Gets or sets the text color of the selected tab title. |
 
-| Android | iOS |
-|---------|-----|
-| [`android.support.v4.view.ViewPager`](https://developer.android.com/reference/android/support/v4/view/ViewPager.html) | [`UITabBarController`](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
+## Events
+
+| Name        | Description                                                         |
+| ----------- | ------------------------------------------------------------------- |
+| `tabChange` | Emitted when one of the `<TabViewItem>` components is tapped. |
+
+## Native component
+
+| Android                                                                                                               | iOS                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [`android.support.v4.view.ViewPager`](https://developer.android.com/reference/android/support/v4/view/ViewPager.html) | [`UITabBarController`](https://developer.apple.com/documentation/uikit/uitabbarcontroller) |
