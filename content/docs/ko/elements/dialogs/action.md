@@ -1,24 +1,26 @@
 ---
-title: 액션다이얼로그 (ActionDialog)
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action
-contributors: [qgp9]
+title: ActionDialog
+apiRef: 'https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action'
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+The `action()` method shows a list of selectable options and a cancellation button. Use it to let the user choose between options or dismiss the selection.
 
-액션 다이얼로그(ActionDialog)로 선택가능한 옵션들의 리스트를 가진  다이얼로그를 만들 수 있습니다. selectable options.
+The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
----
+* * *
 
-```javascript
-const dialogs = require('ui/dialogs')
+## Basic use
 
-module.exports = {
-  mounted() {
-    dialogs.action('Choose one!', 'Or cancel...', ['cheese', 'wine'])
-    .then(result => {
-      console.log(result);
-    })
-  }
-}
+The `action()` method is available globally. You can call it anywhere in your app.
+
+```JavaScript
+action("Your message", "Cancel button text", ["Option1", "Option2"])
+  .then(result => {
+    console.log(result);
+  });
 ```
 
 [> screenshots for=ActionDialog <]
