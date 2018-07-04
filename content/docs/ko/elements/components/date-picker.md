@@ -1,18 +1,22 @@
 ---
-title: 날짜선택 (DatePicker)
+title: DatePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker
-contributors: [qgp9]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<DatePicker>` is a UI component that lets users select a date from a pre-configured range.
 
-DatePicker 컴포넌트는 사용자가 날짜를 선택할 수 있도록 합니다.
+> See also: [TimePicker](/en/docs/elements/components/time-picker).
 
----
+* * *
 
 ```html
 <DatePicker @loaded="onDatePickerLoaded" @dateChange="onDateChanged" />
 ```
 
-**노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
+`<DatePicker>` provides two-way data binding using `v-model`.
 
 ```html
 <DatePicker v-model="selectedDate" />
@@ -22,23 +26,23 @@ DatePicker 컴포넌트는 사용자가 날짜를 선택할 수 있도록 합니
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `date` | `Date` | 현재 표시되는 날짜.
-| `minDate` | `Date` | 최소 선택 가능 날짜.
-| `maxDate` | `Date` | 최대 선택 가능 날짜.
-| `day` | `Number` | 현재 선택된 날.
-| `month` | `Number` | 현재 선택된 달.
-| `year` | `Number` | 현재 선택된 년.
+| Name      | Type     | Description                                        |
+| --------- | -------- | -------------------------------------------------- |
+| `date`    | `Date`   | Gets or sets the complete date.                    |
+| `minDate` | `Date`   | Gets or sets the earliest possible date to select. |
+| `maxDate` | `Date`   | Gets or sets the latest possible date to select.   |
+| `day`     | `Number` | Gets or sets the day.                              |
+| `month`   | `Number` | Gets or sets the month.                            |
+| `year`    | `Number` | Gets or sets the year.                             |
 
-## 이벤트
+## Events
 
-| 이름 | 설명 |
-|------|-------------|
-| `dateChange` | 선택된 날짜가 바뀔때 발생(Emit)
+| Name         | Description                             |
+| ------------ | --------------------------------------- |
+| `dateChange` | Emitted when the selected date changes. |
 
-## 네이티브 컴포넌트
+## Native component
 
-| Android |	iOS |
-|---------|-----|
-| android.widget.DatePicker | UIDatePicker
+| Android                                                                                               | iOS                                                                            |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [`android.widget.DatePicker`](https://developer.android.com/reference/android/widget/DatePicker.html) | [`UIDatePicker`](https://developer.apple.com/documentation/uikit/uidatepicker) |
