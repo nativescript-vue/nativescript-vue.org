@@ -1,32 +1,34 @@
 ---
 title: Image
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_image_.image
-contributors: [sn0wil]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<Image>` is a UI component that shows an image from an [ImageSource](https://docs.nativescript.org/api-reference/modules/_image_source_) or from a URL.
 
-`<Image>` - визуальный компонент, отображающий изображение из [ImageSource](https://docs.nativescript.org/api-reference/modules/_image_source_) или из URL.
+* * *
 
----
-
-#### Показ изображения из папки `app`
+#### Displaying an image relative to the `app` directory
 
 ```html
 <Image src="~/logo.png" stretch="none" />
 ```
 
-#### Показ изображения из URL
+#### Displaying an image from a URL
 
 ```html
 <Image src="https://art.nativescript-vue.org/NativeScript-Vue-White-Green.png" stretch="none" />
 ```
 
-#### Показ изображения из `App_Resources`
+#### Displaying an image from `App_Resources`
 
 ```html
 <Image src="res://icon" stretch="none" />
 ```
 
-#### Показ `base64`-кодированного изображения
+#### Displaying a `base64`-encoded image
 
 ```html
 <Image src="data:Image/png;base64,iVBORw..." stretch="none" />
@@ -34,18 +36,23 @@ contributors: [sn0wil]
 
 [> screenshots for=Image <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `src` | `String` или [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_) | Получает или задает источник для изображения как URL или путь (ор. image source).
-|`imageSource` | [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_) | Получает или задает источник для изображения.
-| `tintColor` | `Color` | (свойство стиля (Style property)) Устанавливает цвет для оттенка изображения.
-| `stretch` | `Stretch` | (свойство стиля (Style property)) Получает или задает способ изменения размера изображения для заполнения доступного пространства.<br/>Возможные значения: `none`, `aspectFill`, `aspectFit` или `fill`.<br/>Для более подробной информации ознакомьтесь с [Stretch](https://docs.nativescript.org/api-reference/modules/_ui_enums_.stretch). 
-| `loadMode` | | Получает или задает стратегию загрузки изображений из локальной файловой системы.<br/>Возможные значения: `sync` или `async`.<br/>Значение по умолчанию: `async`.<br/>Для более детальной информации смотрите [loadMode](https://docs.nativescript.org/api-reference/classes/_ui_image_.image#loadmode).
+| Name          | Type                                                                                            | Description                                                                                                                                                                                                                                                          |
+| ------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src`         | `String` or [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_) | Gets or sets the source of the image as a URL or an image source.                                                                                                                                                                                                    |
+| `imageSource` | [`ImageSource`](https://docs.nativescript.org/api-reference/modules/_image_source_)             | Gets or sets the image source of the image.                                                                                                                                                                                                                          |
+| `tintColor`   | `Color`                                                                                         | (Style property) Sets a color to tint template images.                                                                                                                                                                                                               |
+| `stretch`     | `Stretch`                                                                                       | (Style property) Gets or sets the way the image is resized to fill its allocated space.  
+Valid values: `none`, `aspectFill`, `aspectFit`, or `fill`.  
+For more information, see [Stretch](https://docs.nativescript.org/api-reference/modules/_ui_enums_.stretch). |
+| `loadMode`    |                                                                                                 | Gets or sets the loading strategy for the images on the local file system.  
+Valid values: `sync` or `async`.  
+Default value: `async`.  
+For more information, see [loadMode](https://docs.nativescript.org/api-reference/classes/_ui_image_.image#loadmode).       |
 
-## Нативный компонент
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.ImageView`](https://developer.android.com/reference/android/widget/ImageView.html) | [`UIImageView`](https://developer.apple.com/documentation/uikit/uiimageview)
+| Android                                                                                             | iOS                                                                          |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.ImageView`](https://developer.android.com/reference/android/widget/ImageView.html) | [`UIImageView`](https://developer.apple.com/documentation/uikit/uiimageview) |

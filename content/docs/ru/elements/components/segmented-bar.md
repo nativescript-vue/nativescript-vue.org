@@ -1,17 +1,18 @@
 ---
 title: SegmentedBar
 apiRef: http://docs.nativescript.org/api-reference/modules/_ui_segmented_bar_.html
-contributors: [sn0wil]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<SegmentedBar>` is a UI bar component that displays a set of buttons for discrete selection. Can show text or images.
 
-`<SegmentedBar>` - это визуальный компонент, отображающий набор кнопок для разделенных областей. Также может отображать текст или изображения.
+As opposed to `<TabView>`: * The position of `<SegmentedBar>` is not fixed. * You can place and style it as needed on the page or inside additional app elements such as hamburger menus. * You need to handle the content shown after selection separately.
 
-В отличие от `<TabView>`:
-* Положение `<SegmentedBar>` не фиксировано.
-* Вы можете располагать и изменять стили так, как необходимо на странице или внутри дополнительных элементов (например, гамбургер-меню).
-* Вам нужно отдельно обрабатывать содержимое, отображаемое после выбора, отдельно.
+* * *
 
----
 ```html
 <SegmentedBar>
   <SegmentedBarItem title="First" />
@@ -25,7 +26,7 @@ contributors: [sn0wil]
     @selectedIndexChange="onSelectedIndexChange" />
 ```
 
-`<SegmentedBar>` обеспечивает двустороннюю привязку данных, используя `v-model`.
+`<SegmentedBar>` provides two-way data binding using `v-model`.
 
 ```html
 <SegmentedBar :items="listOfItems" v-model="selectedItem" />
@@ -33,22 +34,23 @@ contributors: [sn0wil]
 
 [> screenshots for=SegmentedBar <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `items` | `Array<SegmentedBarItem>` | Массив элементов, которые отображаются в segmented bar. Представляют собой заголовки кнопок или иконки.<br/>Массив должен быть создан заранее. 
-| `selectedIndex` | `Number` | Получает или задает индекс выбранного элемента.
-| `selectedBackgroundColor` | `Color` | (Стилевое свойство) Получает или задает цвет фона выбранного элемент. Для задания цвета фона всего компонента используйте `backgroundColor`.
+| Name                      | Type                            | Description                                                                                                                                                 |
+| ------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `items`                   | `Array<SegmentedBarItem>` | An array of items to be displayed in the segmented bar. Represents the button labels or icons of the segmented bar.  
+The array must be created in advance. |
+| `selectedIndex`           | `Number`                        | Gets or sets the index of the selected item.                                                                                                                |
+| `selectedBackgroundColor` | `Color`                         | (Style property) Gets or sets the background color of the selected item. To set the background color of the entire bar, use `backgroundColor`.              |
 
-## События
+## Events
 
-| Имя | Описание |
-|------|-------------|
-| `selectedIndexChange`| Срабатывает при нажатии на элемент в области.
+| Name                  | Description                                              |
+| --------------------- | -------------------------------------------------------- |
+| `selectedIndexChange` | Emitted when the an item on the segmented bar is tapped. |
 
-## Нативный компонент
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.TabHost`](https://developer.android.com/reference/android/widget/TabHost.html) | [`UISegmentedControl`](https://developer.apple.com/documentation/uikit/uisegmentedcontrol)
+| Android                                                                                         | iOS                                                                                        |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [`android.widget.TabHost`](https://developer.android.com/reference/android/widget/TabHost.html) | [`UISegmentedControl`](https://developer.apple.com/documentation/uikit/uisegmentedcontrol) |
