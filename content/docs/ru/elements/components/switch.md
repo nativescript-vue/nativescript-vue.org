@@ -1,20 +1,22 @@
 ---
 title: Switch
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_switch_.switch
-contributors: [sn0wil]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<Switch>` is a UI component that lets users toggle between two states.
 
-`<Switch>` - визуальный компонент, дающий пользователю возможность переключения между двумя состояниями.
+The default state is `false` or OFF.
 
-Значение по умолчанию `false` или OFF.
-
----
+* * *
 
 ```html
 <Switch checked="true" />
 ```
 
-`<Switch>` обеспечивает двустороннюю привязку данных, используя `v-model`.
+`<Switch>`provides two-way data binding using `v-model`.
 
 ```html
 <Switch v-model="itemEnabled" />
@@ -22,20 +24,21 @@ contributors: [sn0wil]
 
 [> screenshots for=Switch <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `checked` | `Boolean` | Получает или задает значение переключателя.<br/>Значение по умолчанию: `false`.
+| Name      | Type      | Description                                                               |
+| --------- | --------- | ------------------------------------------------------------------------- |
+| `checked` | `Boolean` | Gets or sets the value of the switch selection.  
+Default value: `false`. |
 
-## События
+## Events
 
-| Имя | Описание |
-|------|-------------|
-| `checkedChange`| Срабатывает при переключении.
+| Name            | Description                                |
+| --------------- | ------------------------------------------ |
+| `checkedChange` | Emitted when the switch selection changes. |
 
-## Нативный компонент
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.Switch`](https://developer.android.com/reference/android/widget/Switch.html) | [`UISwitch`](https://developer.apple.com/documentation/uikit/uiswitch)
+| Android                                                                                       | iOS                                                                    |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`android.widget.Switch`](https://developer.android.com/reference/android/widget/Switch.html) | [`UISwitch`](https://developer.apple.com/documentation/uikit/uiswitch) |
