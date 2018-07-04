@@ -1,17 +1,28 @@
 ---
-title: 수동 라우팅
-contributors: [qgp9]
+title: Manual Routing
+contributors:
+  - eddyverbruggen
+  - fartek
+  - rigor789
+  - ikoevska
 ---
+The easiest way to do routing in NativeScript-Vue is by using any of the following convenience functions:
 
-NativeScript-Vue 에서 라우팅을 하는 가장 쉬운 방법은 `$navigateTo`, `$navigateBack`, `$showModal` 과 같은 편리한 함수를 사용하는 것입니다.
+* [`$navigateTo`](#navigateto)
+* [`$navigateBack`](#navigateback)
+* [`$showModal`](#showmodal)
+
+> All examples on this page discuss how to handle routing between the `Master` and `Detail` components of a mobile app.
 
 ### `$navigateTo`
-`Master` 와 `Detail` 이라는 컴포넌트들이 있다고 가정하고, `Master` 에서 `Detail` 로 이동하기를 원할때 `$navigateTo` 를 호출하기 위한 두가지 방법이 있습니다: 뷰(view)에서 혹은 메소드에서:
 
-#### 뷰(view) 에서
-`Master` 컴포넌트의 `data` 프로퍼티를 통해 `Detail` 컴포넌트를 노출시키고 view 에서 바로 `$navigateTo(<프로퍼티 이름>)` 을 호출합니다.
+You can call `$navigateTo` in the view or in a method.
 
-```vue
+#### In the view
+
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly.
+
+```Vue
 const Vue = require('nativescript-vue');
 
 const Master = {
@@ -47,10 +58,11 @@ new Vue({
 }).$start()
 ```
 
-#### 메소드에서
-버튼을 메소드에 연결하고 이 메소드에서 `this.$navigateTo(Detail)` 을 사용하여 `Detail` 컴포넌트로 이동합니다.
+#### In a method
 
-```vue
+Bind a button to a method and use `this.$navigateTo(Detail)` to navigate to the `Detail` component.
+
+```Vue
 const Master = {
   template: `
     <Page>
@@ -80,10 +92,36 @@ const Detail = {
 };
 ```
 
-### `$navigateBack`
-`Detail` 에 전역적으로 노출된 `$navigateBack` 함수를 호출하는 버튼을 추가합니다.
+#### Passing props to the target component
 
-```vue
+`$navigateTo` accepts a second `options` parameter. You can use the parameter to:
+
+* set the transition 
+* pass a `context` object with props to be used when instantiating the target component 
+
+For example:
+
+```JavaScript
+this.$navigateTo(Detail, {
+  transition: {},
+  transitionIOS: {},
+  transitionAndroid: {},
+
+  context: {
+    propsData: {
+      foo: 'bar',
+    }
+  }
+});
+```
+
+For more information about the options that you can pass, see [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
+
+### `$navigateBack`
+
+In the `Detail` component, add a button that triggers the globally exposed `$navigateBack` function.
+
+```Vue
 const Detail = {
   template: `
     <Page>
@@ -97,12 +135,56 @@ const Detail = {
 ```
 
 ### `$showModal`
-`Detail` 페이지를 모달 페이지로 보여주고 싶다면, 간단히 `$navigateTo` 를 `$showModal`로 바꾸면 됩니다.
-앞에서 처럼 이 메소드는 view 나 함수에서 호출
 
-모달을 닫으려면 `$modal.close` 을 호출하면 됩니다.
+Use `$showModal` to show the `Detail` page modally. This function behaves similarly to `$navigateTo`.
 
-```vue
+You can call `$showModal` in the view or in a method. To close the modal, call `$modal.close`.
+
+#### In the view
+
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$showModal(<propertyName>)` in the view directly.
+
+```Vue
+const Vue = require('nativescript-vue');
+
+const Master = {
+  template: `
+    <Page>
+      <ActionBar title="Master" />
+      <StackLayout>
+        <Button text="To Details directly" @tap="$showModal(detailPage)" />
+      </StackLayout>
+    </Page>
+  `,
+
+  data() {
+    return {
+      detailPage: Detail
+    }
+  }
+};
+
+const Detail = {
+  template: `
+    <Page>
+      <ActionBar title="Detail"/>
+      <StackLayout>
+        <Button @tap="$modal.close" text="Close" />                    
+      </StackLayout>
+    </Page>
+  `
+};
+
+new Vue({
+  render: h => h(Master)
+}).$start()
+```
+
+#### In a method
+
+Bind a button to a method and use `this.$showModal(Detail)` to navigate to the `Detail` component.
+
+```Vue
 const Master = {
   template: `
     <Page>
@@ -130,3 +212,49 @@ const Detail = {
     </Page>
   `
 };
+```
+
+#### Passing props to the modal
+
+`$showModal` accepts a second parameter. You can use the parameter to pass in a `context` object containing `propsData` to the target component. For example:
+
+```JavaScript
+this.$showModal(Detail, { context: { propsData: { id: 14 }}});
+```
+
+You also need to update the `Detail` component to be able to accept the `id` prop. You can do this by defining a `props` option inside the component:
+
+```vue
+const Detail = {
+  props: ['id'],
+  template: `
+    <Page>
+      <ActionBar title="Detail"/>
+      <StackLayout>
+        <Label :text="id" />
+        <Button @tap="$modal.close" text="Close" />                    
+      </StackLayout>
+    </Page>
+  `,
+};
+```
+
+The prop is now accessible throughout the component with `this.id`.
+
+For more information about props, see the [official Vue documentation](https://vuejs.org/v2/guide/components-props.html)
+
+#### Returning data from the modal
+
+When calling `$showModal`, a promise is returned which resolves with any data passed to the `$modal.close` function.
+
+In the following example, closing the modal outputs 'Foo' in the console.
+
+```JavaScript
+// ... inside Master
+this.$showModal(Detail).then(data => console.log(data));
+```
+
+```HTML
+<!-- inside Detail -->
+<Button @tap="$modal.close('Foo')" text="Close" />    
+```
