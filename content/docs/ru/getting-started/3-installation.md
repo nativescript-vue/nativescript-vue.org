@@ -1,46 +1,49 @@
 ---
-title: Установка
-contributors: [sn0wil, lex111]
+title: Installation
+contributors:
+  - rigor789
+  - TheOriginalJosh
+  - eddyverbruggen
+  - ikoevska
 ---
-Для использования NativeScript-Vue, ваша система должна быть правильно настроена, чтобы ваши приложения могли компилироваться.
+To use NativeScript-Vue, you need to set up your system to compile your apps.
 
-## Требования
+## Prerequisites
 
 - [Node.js](#nodejs)
 - [NativeScript CLI](#nativescript-cli)
-- [Windows](#windows) (для разработки Android-приложений на Windows)
-- [macOS](#macos) (для разработки iOS- и Android-приложений на macOS)
-- [Linux](#linux) (для разработки Android-приложений на Linux)
+- [Windows](#windows) (for developing Android applications on Windows)
+- [macOS](#macos) (for developing iOS and Android applications on macOS)
+- [Linux](#linux) (for developing Android applications on Linux)
 
 ### Node.js
 
-Загрузите и установите последнюю LTS-версию Node.js на [https://nodejs.org/](https://nodejs.org/). Перезапустите терминал и убедитесь, что установка прошла успешно с помощью команды `node --version`.
+Download and install the latest *LTS* version of Node.js from <https://nodejs.org/>. Restart your terminal and verify the installation was successful by running `node --version`.
 
 ### NativeScript CLI
 
-Для установки NativeScript CLI откройте терминал и запустите команду
+To install the NativeScript CLI, open your terminal and run:
 
 ```shell
 $ npm install -g nativescript
 ```
 
-Вы можете проверить, что установка прошла успешно, запустив `tns` в вашем терминале. Вы должны увидеть список всех доступных команд.
-
+Verify the installation was successful by running `tns` in your terminal. You should see a list of the available commands.
 
 ### Windows
 
-Системные требования и инструкция по установке Android SDK для Windows:
+Check the system requirements and follow the setup instructions for the Android SDK on Windows:
 
-[Установка: Windows](https://docs.nativescript.org/start/ns-setup-win)
+[Advanced setup: Windows](https://docs.nativescript.org/start/ns-setup-win)
 
 ### macOS
 
-Системные требования и инструкция по установке Xcode и Android SDK для Mac:
+Check the system requirements and follow the setup instructions for Xcode and the Android SDK on macOS:
 
-[Установка: macOS](https://docs.nativescript.org/start/ns-setup-os-x)
+[Advanced setup: macOS](https://docs.nativescript.org/start/ns-setup-os-x)
 
 ### Linux
 
-Системные требования и инструкция по установке Android SDK для Linux:
+Check the system requirements and follow the setup instructions for the Android SDK on Linux:
 
-[Установка: Linux](https://docs.nativescript.org/start/ns-setup-linux)
+[Advanced setup: Linux](https://docs.nativescript.org/start/ns-setup-linux)
