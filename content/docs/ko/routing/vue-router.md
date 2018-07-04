@@ -1,35 +1,44 @@
 ---
 title: Vue Router
-contributors: [qgp9]
+contributors:
+  - eddyverbruggen
+  - rigor789
+  - ikoevska
 ---
+> Currently, integration with Vue Router is **experimental**. If you want to use a non-experimental approach, you can try [manual routing](/en/docs/routing/manual-routing).
 
-[수동 라우팅](/ko/docs/routing/manual-routing) 이 당신의 유스-케이스와 잘 맞지 않는다면, 완전히 지원되는 [Vue Router](https://router.vuejs.org/kr) 를 배워보세요.
+With the router, you can choose between [component-based routing](https://router.vuejs.org/api/#router-view) and page-based routing. In a mobile app, you are more likely to implement page-based routing.
 
-## 설치
-명령줄에서 다음을 실행합니다:
-```bash
-npm i vue-router --save
+## Install and require the plugin
+
+In the command prompt, run:
+
+```Shell
+$ npm install --save vue-router
 ```
 
-## 사용법
-전체 예제를 설명과 함께 잘라서 봅시다.
-Vue Router에는 더 다양한 트릭들이 있기 때문에 [공식문서](https://router.vuejs.org/kr)를 꼭 방문해 보세요.
+In the entry file for your app (likely, `app.js` or `main.js`), require Vue and Vue Router and let them shake hands.
 
----
-Vue, VueRouter 를 require 하고, 서로 악수하게 합니다 🤝
-```js
+```JavaScript
 const Vue = require('nativescript-vue');
 const VueRouter = require('vue-router');
 
 Vue.use(VueRouter);
 ```
 
----
-현재 라우터를 제목(`$route.path`)으로 `Master` 페이지를 정의합니다.
-그리고 `@tap="$router.push('/detail')"` 과 함께 버튼을  만들어서 새 페이지가 스택에 추가되고 그 페이지로 이동할 수 있게 합니다.
+## Usage
 
-또한 `user` 쿼리 파라미터(query param)와 함께 같은 페이지로 향하는 버튼도 만듭니다.
-```html
+This section walks you through a complete example of page-based routing, breaking it down into key pieces and providing comments along the way.
+
+* * *
+
+Define a `Master` page with the current router as its title (`$route.path`).
+
+Create a button with a `@tap="$router.push('/detail')"`. When tapped, a new `Detail` page is pushed on the stack and navigated to.
+
+Create a second button with a query param `user`. When tapped, it passes additional information to the `Detail` page.
+
+```HTML
 const Master = {
   template: `
     <Page>
@@ -43,19 +52,15 @@ const Master = {
 };
 ```
 
----
-`Detail` 페이지를 `NavigationButton` 과 함께 정의합니다.
-iOS 에서 이 것은 자동으로 스택의 전페이지로 이동하게 만듭니다.
-하지만 안드로이드에선 `tap` 핸들러가 필요합니다.(iOS에서는 무시됩니다.)
-따라서  `@tap="$router.back()"` 를 추가합니다.
+* * *
 
-`Master` 페이지의 두번째 버튼에서 `user` query param을 썼던걸 기억하시나요?
-`Details` 페이지에서 다음처럼 그것을 참조할 수 있습니다:
-`<Label :text="$route.query.user">`
+Define a `Detail` page with a `NavigationButton`. On iOS, the button automatically brings you back to the previous page in the stack. On Android, you need to add a `tap` handler (ignored on iOS) to take you back: `@tap="$router.back()"`.
 
-마지막으로, 아래 예제처럼 `$router.go(<number-of-pages>)` 이용해 뒤로 (혹은 앞으로) 이동할 수 있습니다.
+Use the `user` query param, defined in the `Master` page. For example, display its value as text on the `Detail` page: `<Label :text="$route.query.user">`.
 
-```html
+Create a button with `$router.go(<number-of-pages>)`. When tapped, it navigates one page back in the stack.
+
+```HTML
 const Detail = {
   template: `
     <Page>
@@ -71,9 +76,11 @@ const Detail = {
 };
 ```
 
----
-아래처럼 어플리케이션의 모든 페이지를 정의합니다.
-```js
+* * *
+
+Create a router instance, enable page routing, and define all the pages of your app.
+
+```JavaScript
 const router = new VueRouter({
   pageRouting: true,
   routes: [
@@ -84,16 +91,30 @@ const router = new VueRouter({
 });
 ```
 
----
-그리고 앱이 시작할때 라우트들 중 하나를 로드합니다:
-```js
+* * *
+
+Load one of the routes when the app starts.
+
+```JavaScript
 router.replace('/master');
 ```
 
----
-오, 그리고 `Vue` 에가 당신의 라우트들에 대해 알려주는 걸 잊지 마세요:
-```js
+* * *
+
+Tell `Vue` about your routes.
+
+```JavaScript
 new Vue({
   router
 }).$start();
 ```
+
+## See also
+
+Vue Router has more tricks up its sleeve, so be sure to visit [the official documentation](https://router.vuejs.org/en/).
+
+Check out the following [NativeScript-Vue samples](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples):
+
+* [app-with-page-routing](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples/app/app-with-page-routing.js)
+* [app-with-router](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples/app/app-with-router.js)
+* [app-with-router-pages](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples/app/app-with-router-pages.js)
