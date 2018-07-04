@@ -1,25 +1,34 @@
 ---
-title: 빨리 시작하기
-contributors: [qgp9]
+title: Quick Start
+contributors:
+  - rigor789
+  - eddyverbruggen
+  - damain
+  - ikoevska
 ---
+If you don't want the hassle of installing and configuring your system before you can have a taste of NativeScript-Vue, the [NativeScript Playground](/en/docs/getting-started/playground-tutorial) has you covered.
 
-NativeScript-Vue를 쉽게 사용해보고 싶다면, [NativeScript Playground](https://play.nativescript.org?template=play-vue)를 사용해보시기를 강력하게 추천합니다. 그것이 NativeScript-Vue를 사용해 볼 수 있는 가장 쉬운 시작입니다.
-
-이미 여러분의 로컬 머신에서 작업할 준비가 되었고, [네이티브 개발을 위한 시스템](/ko/docs/getting-started/installation)이 준비되었다면 템플릿을 사용하여 시작할 수 있습니다.
+But if [you already have your system ready for native development](/en/docs/getting-started/installation), you can start by using a template:
 
 ```shell
-$ $ npm install -g @vue/cli @vue/cli-init
+$ npm install -g @vue/cli @vue/cli-init
 $ vue init nativescript-vue/vue-cli-template <project-name>
 $ cd <project-name>
 $ npm install
 ```
 
-그리고나면 당신의 앱을 다음처럼 열 수 있습니다.
+Next, run your app using:
 
 ```shell
 $ npm run watch:<platform>
 ```
 
-`<platform>`: `ios` | `android`.
+where platform is `ios` or `android`.
 
-사용가능한 템플릿의 더 자세한 정보는 [템플릿 문서](/ko/docs/getting-started/templates)를 참고하세요.
+This set of commands performs the following operations on your system:
+
+1. Installs the Vue CLI and its init add-on on your system. This lets you use both the NativeScript CLI and the Vue CLI on your system. Skip this command, if you already have Vue CLI installed.
+2. Pulls the selected template (the Vue CLI-compatible NativeScript-Vue template) and creates a project locally. This template relies on `.vue` components and provides routing and Vuex state management out of the box. For more information about the available templates, see [Templates](/en/docs/getting-started/templates).
+3. Switches to the directory containing the newly created project.
+4. Installs any npm dependencies locally.
+5. Builds and runs the project on any connected devices or installed emulators for the selected platform. The `watch` option detects code changes and applies them automatically.
