@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Instalación
 contributors: [ianaya89]
 ---
 

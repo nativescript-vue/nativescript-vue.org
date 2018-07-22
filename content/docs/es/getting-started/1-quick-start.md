@@ -1,5 +1,5 @@
 ---
-title: Quick Start
+title: Comienzo Rápido
 contributors: [ianaya89]
 ---
 Si no quieres lidiar con la instalacion y configuracion antes de poder proabar NativeScript-Vue, puedes hechar un vistazo a [NativeScript Playground](/en/docs/getting-started/playground-tutorial).
