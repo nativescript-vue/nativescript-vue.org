@@ -21,7 +21,7 @@ confirm('Your message')
   });
 ```
 
-## Configurar las opciones de `confirm`
+## Configurar las opciones del
 
 ```javascript
 confirm({

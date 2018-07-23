@@ -26,7 +26,7 @@ contributors: [ianaya89]
 |------|-------------|
 | `busyChange`| Emitido cada vez que la propiedad `busy` cambia de valor.
 
-## Componente Nativo
+## Componente nativo
 
 | Android | iOS |
 |---------|-----|
