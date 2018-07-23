@@ -49,6 +49,7 @@ contributors: [rigor789, ikoevska]
   <Label text="center" backgroundColor="#1c6b48" />
 </DockLayout>
 ```
+<img class="md:w-1/2 lg:w-1/3" https://art.nativescript-vue.org/layouts/dock_layout_all_sides_and_stretch.svg" />
 
 ### Multiple children on the same side
 
