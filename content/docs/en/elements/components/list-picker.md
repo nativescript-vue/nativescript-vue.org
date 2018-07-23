@@ -1,7 +1,7 @@
 ---
 title: ListPicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_picker_.listpicker
-contributors: [ianaya89]
+contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
 `<ListPicker>` is a UI component that lets the user select a value from a pre-configured list.
@@ -13,7 +13,7 @@ contributors: [ianaya89]
     @selectedIndexChange="selectedIndexChanged" />
 ```
 
-`<ListPicker>` provee enlace de datos bidireccional (*two-way data binding*) usando `v-model`.
+`<ListPicker>` provides two-way data binding using `v-model`.
 
 ```html
 <ListPicker :items="listOfItems" v-model="selectedItem" />
@@ -21,20 +21,20 @@ contributors: [ianaya89]
 
 [> screenshots for=ListPicker <]
 
-## Propiedades
+## Props
 
-| Nombre | Tipo | Descripción |
+| Name | Type | Description |
 |------|------|-------------|
-| `items` | `Array<String>` | Obtiene o establece los elementos que se muestran como opciones en el `<ListPicker`.
-| `selectedIndex` | `Number` | Obtiene o establece el índice del elemento que se encuentra seleccionado.
+| `items` | `Array<String>` | Gets or sets the items displayed as options in the list picker.
+| `selectedIndex` | `Number` | Gets or sets the index of the currently selected item.
 
-## Eventos
+## Events
 
-| Nombre | Descripción |
+| Name | Description |
 |------|-------------|
-| `selectedIndexChange`| Emitido cada vez que cambia el elemento seleccionado.
+| `selectedIndexChange`| Emitted when the currently selected option (index) changes.
 
-## Componente nativo
+## Native component
 
 | Android | iOS |
 |---------|-----|
