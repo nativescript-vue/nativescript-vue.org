@@ -40,6 +40,7 @@ Metalsmith(cwd)
     moment,
     localeMap: {
       'en': 'English',
+      'es': 'Español',
       'ko': '한국어',
       'pt-BR': 'Português do Brasil',
       'ru': 'Русский'
@@ -115,7 +116,7 @@ Metalsmith(cwd)
   })
   .use(locales({
     defaultLocale: 'en',
-    locales: ['en', 'ko', 'pt-BR', 'ru']
+    locales: ['en', 'es', 'ko', 'pt-BR', 'ru']
   }))
   .use(versions({
     versions: [

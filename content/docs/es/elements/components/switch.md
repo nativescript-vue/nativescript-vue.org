@@ -14,7 +14,7 @@ El valor por defecto es `false` o apagado (*Off*).
 <Switch checked="true" />
 ```
 
-`<Switch>` prevee enlace de datos bidireccional (*two-way data binding*) usando `v-model`.
+`<Switch>` provee enlace de datos bidireccional (*two-way data binding*) usando `v-model`.
 
 ```html
 <Switch v-model="itemEnabled" />
