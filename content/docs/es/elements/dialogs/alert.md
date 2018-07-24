@@ -21,7 +21,7 @@ alert('Your message')
   });
 ```
 
-## Configurar las opciones del dialogo
+## Configurar las opciones del diálogo
 
 ```JavaScript
 alert({
