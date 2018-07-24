@@ -19,7 +19,7 @@ contributors: [ianaya89]
 </TabView>
 ```
 
-**NOTA:** Actualmente, el componente `TabViewItem` espera recibir un solo elemeno hijo. En la mayoría de los casos, necesitas envolver tu contenido en un contenedor.
+**NOTA:** Actualmente, el componente `TabViewItem` espera recibir un solo elemeno hijo. En la mayoría de los casos, necesitas envolver tu contenido en componente *layout*.
 
 [> screenshots for=TabView <]
 
