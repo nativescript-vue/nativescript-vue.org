@@ -7,7 +7,7 @@ contributors: [ianaya89]
 
 `<TextField>` es un componente de UI que permite al usuario ingresar información a traves de un cuadro de texto (de una sola línea).
 
-El componente `<TextField>` extiende [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) y [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase), y provee propiedades y eventos adicionales.
+El componente `<TextField>` extiende a [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) y a[`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase),provee propiedades y eventos adicionales.
 
 ---
 
