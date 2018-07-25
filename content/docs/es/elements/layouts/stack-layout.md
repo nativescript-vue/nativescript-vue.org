@@ -71,4 +71,4 @@ El contenedor `StackLayout` apila los elementos hijos de forma vertical (comport
 
 ## Propiedades de elementos hijos
 
-There are no additional properties for child elements.
+No existen propiedades adicionales para los elementos hijos.
