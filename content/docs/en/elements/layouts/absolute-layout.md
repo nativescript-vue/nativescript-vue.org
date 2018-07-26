@@ -12,7 +12,7 @@ The `<AbsoluteLayout>` container is the simplest layout container in NativeScrip
 * Doesn't enforce any layout constraints on its children.
 * Doesn't resize its children at runtime when its size changes.
 
-## Samples
+## Examples
 
 ### A grid-like layout
 
@@ -36,14 +36,13 @@ The `<AbsoluteLayout>` container is the simplest layout container in NativeScrip
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_overlap.svg" />
 
-
 ## Props
 
 `<AbsoluteLayout>` has no props.
 
 ## Additional children props
 
-The following props are available for elements that are direct children of an `<AbsoluteLayout>`.
+When an element is a direct child of `<AbsoluteLayout>`, you can work with the following additional properties.
 
 | Name | Type | Description |
 |------|------|-------------|

@@ -12,7 +12,7 @@ contributors: [rigor789, ikoevska]
 * Enforces layout constraints to its children.
 * Resizes its children at runtime when its size changes.
 
-## Samples
+## Examples
 
 ### Dock to every side without stretching last child
 
@@ -71,7 +71,7 @@ contributors: [rigor789, ikoevska]
 
 ## Additional children props
 
-The following props are available for elements that are direct children of a `<DockLayout>`.
+When an element is a direct child of `<DockLayout>`, you can work with the following additional properties.
 
 | Name | Type | Description |
 |------|------|-------------|
