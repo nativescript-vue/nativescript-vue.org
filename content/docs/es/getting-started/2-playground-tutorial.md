@@ -1,88 +1,89 @@
 ---
 title: Playground Tutorial
-contributors: [ikoevska, rigor789, hines-sharrod]
+contributors: [ianaya89]
 ---
 
-The [NativeScript Playground](https://play.nativescript.org?template=play-vue) is a place in the cloud where you can just play around with NativeScript and Vue.js from your browser until you figure out the basics. Fire the link and start dragging and dropping component code around the place.
+El [NativeScript Playground](https://play.nativescript.org?template=play-vue) es un lugar en la nube donde puedas dar tus primeros pasos con NativeScript y Vue.js desde tu navegador. Simplemente ingresa al link y comienza arrastrar y soltar el código de los componentes.
 
-You can work in the Playground for as long as you like. You can use it to just get a taste of NativeScript development or to develop your entire project inside. However, when you get to the point where you are ready to put your app out there, you need to jump on the more advanced wagon and [install NativeScript tools locally](/en/docs/getting-started/installation) and then [pick a template to start with](/en/docs/getting-started/templates).
+Puedes trabajar con el *Playground* tanto como quieras: usarlo para probar como desarrollar con NativeScript o incluso dearrollar todo tu proyecto en la plataforma. Sin embarjo, cuando llegue el momento de llevar tu aplicación al mundo vas a necesitar instalar las [herramientas de NativeScript de forma local]((/es/docs/getting-started/installation) y luego [elegir uno de los templates disponibles](/es/docs/getting-started/templates).
 
-**This page consists of two parts:**
-* [Part 1: Getting familiar with the Playground](#part-1-getting-familiar-with-the-playground)
-    * [Before you start](#before-you-start)
-    * [The lay of the land](#the-lay-of-the-land)
-    * [Drag and drop to code](#drag-and-drop-to-code)
-    * [Check it out real-time](#check-it-out-real-time)
-    * [Configure your code](#configure-your-code)
-* [Part 2: Building an app](#part-2-building-an-app)
-    * [The bare Vue.js template](#the-bare-vuejs-template)
-    * [Basic design](#basic-design)
-    * [Basic functionality: Add tasks](#basic-functionality-add-tasks)
-    * [Basic functionality: View, complete, and delete tasks from the To Do tab](#basic-functionality-view-complete-and-delete-tasks-from-the-to-do-tab)
-    * [Basic functionality: View, return to active tasks, and delete tasks from the Completed tab](#basic-functionality-view-return-to-active-tasks-and-delete-tasks-from-the-completed-tab)
-    * [Advanced design: Styled input field and button](#advanced-design-styled-input-field-and-button)
-    * [Advanced design: Styled tab navigation](#advanced-design-styled-tab-navigation)
-    * [Advanced design: Styled active tasks](#advanced-design-styled-active-tasks)
-    * [Advanced design: Styled completed tasks](#advanced-design-styled-completed-tasks)
+**Esta sección, consiste en dos partes:**
+* [Parte 1: Familiarizandose con el Playround](#part-1-getting-familiar-with-the-playground)
+    * [Antes de comenzar](#before-you-start)
+    * [La disposición de la tierra](#the-lay-of-the-land)
+    * [Arrastra y suelta el código](#drag-and-drop-to-code)
+    * [Chequeo en tiempo real](#check-it-out-real-time)
+    * [Configura tu código](#configure-your-code)
+* [Parte 2: Construyendo una aplicación](#part-2-building-an-app)
+    * [El template básico de Vue.js](#the-bare-vuejs-template)
+    * [Diseño básico](#basic-design)
+    * [Funcionalidad básica: Agregar tareas](#basic-functionality-add-tasks)
+    * [Funcionalidad básica: Ver, completar y borrar tareas de la pestaña "To Do"](#basic-functionality-view-complete-and-delete-tasks-from-the-to-do-tab)
+    * [Funcionalidad básica: Ver, volver a tareas activas y borrar tareas de la pestaña "Completed"](#basic-functionality-view-return-to-active-tasks-and-delete-tasks-from-the-completed-tab)
+    * [Diseño avanzado: Estilar campo de texto y botón](#advanced-design-styled-input-field-and-button)
+    * [Diseño avanzado: Estilar pestaña de navegación](#advanced-design-styled-tab-navigation)
+    * [Diseño avanzado: Estilar tareas activas](#advanced-design-styled-active-tasks)
+    * [Diseño avanzado: Estilar tareas completadas](#advanced-design-styled-completed-tasks)
 
 
-# Part 1: Getting familiar with the Playground
+# Parte 1: Familiarizandose con el Playround
 
-Firing [this link](https://play.nativescript.org/?template=play-vue) gets you to a simple code editor in the cloud where a very basic NativeScript + Vue.js template is pre-loaded for you.
+Abriendo [este link](https://play.nativescript.org/?template=play-vue) vas a poder ver un editor de código simple en la nube, donde un template básico de NativeScript + Vue.js esta precargado para ti.
 
-> **TIP:** Head to [Sample Tasks for the Playground](/en/docs/getting-started/playground-tutorial) for ideas about how to get started in the Playground.
+> **TIP:** Checa [Sample Tasks for the Playground](/en/docs/getting-started/playground-tutorial) para tomar ideas de como empezar con el Playground.
 
-### Before you start
+### Antes de comenzar
 
 ![playground welcome screen](/screenshots/ns-playground/playground-home.png)
 
-If this is your first time here, the Playground prompts you to install a couple of mobile apps&mdash;the NativeScript Playground and the NativeScript Preview. Together they let you see your code changes applied in real time on device. No code building and bundling required.
+Si esta es tu primera vez aqui, el *Playground* te solicitará instalar algunas aplicaciones móviles: NativeScript Playground y NativeScript Preview. Ambas te permiten ver en tiempo real, los cambios que realizas en el código sin necesidad de recompilar el mismo.
 
-You can ignore this step but without it, you'll miss most of the fun and excitement of playing around with Vue.js and NativeScript.
+Puedes obviar este paso, pero si lo haces vas a perderte mucha de la diversión de jugar un poco con Vue.js y NativeScript.
 
-Keep the apps running while you're experimenting with the code.
+Manten las aplicaciones corriendo mientras experimentas un poco con el código.
 
-### The lay of the land
+### La disposición de la tierra
 
 ![](/screenshots/ns-playground/playground-layout.png)
 
-The left sidebar offers a file explorer and a **Components** panel. Most of your effort on your app will happen in `app.js` and `app.css`, containing the app functionality and taking care of the app styles, respectively. No need to deep dive in any other files for now.
+La barra lateral izquierda, ofrcece un explorador de archivos y un panel de **Componentes**. La mayor parte de tu tiempo, vas a estar trabajando en el archivo `app.js` y `app.css`, los cuales contienen la funcionalidad de la aplicación y los estilos de la misma. Por el momento no necesitamos indagar en estos archivos.
 
-The **Components** panel provides quick access to already pre-configured code for all available NativeScript UI components.
+El panel de **Components** provee una acceso rápido a código pre-configurado de los componentes de UI de NativeScript.
 
-From the top of the page, you can push changes to the preview apps on your device, save, and download your code.
+Desde la parte superior de la página, puedes subir tus cambios de código para previsualizar las aplicaciones en tu dipositivo, guardar los cambios e incluso descargar el coódigo.
 
-The bottom of the page is your best friend providing real-time error reports and device logs.
+En la parte inferior, encontrarás a tu mejor amigo a la hora de obtener información en tiempo real acerca de errores y logueos.
 
-### Drag and drop to code
+### Arrastra y suelta el código
 
 ![](/screenshots/ns-playground/playground-drag-and-drop.gif)
 
-Just click a component from the **Components** panel and drag it to the code editor, somewhere inside the `template` block. Releasing the mouse button inserts some pre-written sample code for the respective component. Any methods that go with it (such as what happens on button or item tap) are automatically added at the top of the page before the `template` block.
+Simplemente haz click en un componente del panel y sueltalo en el editor de código (en cualquier lugar del bloque `template`). Al soltar el botón del mouse, se inserta un código de muestra previamente escrito para el componente respectivo. Cualquier método que vaya con él (como el que ocurre al presionar un item) se agrega automáticamente en la parte superior de la página antes del bloque `template`.
 
-> **TIP:** Use the search of the **Components** panel to quickly find the element that you want to use. The search works only with the title of the component and not the actual name used in the code. For example: the search finds *text field* but does not find *textfield*.
->
+> **TIP:** Usa la funcionalidad de búsqueda del panel de **Components** para acceder rápidamente al elemento que necesitas. Ten en cuenta que la búsqueda funciona solo con el titulo del componente y no con el nombre del código. Por ejemplo: puedes buscar *text field* pero no *textfield*.
 > ![](/screenshots/ns-playground/playground-component-search.gif)
 
-For most UI components to work, you need to drop them inside the `<Page>` block, preferably inside a layout component. Layouts tell your app how to position the UI components on the screen.
+Para que la mayoría de los componentes funcionen, necesitas soltarlos dentro del bloque `<Page`, preferentemente dentro de un contenedor (`layout`). Recuerda que los contenedores le permiten a la aplicación, saber como pocicionar el contenido dentro de la pantalla.
 
-> **NOTE:** Right now, there's nothing stopping you from dropping the code at a place that will cause your app to crash or simply not load. In those cases, check the **Errors** and **Device Logs** tabs for more information.
+> **NOTA:** Actualmente, no hay nada que impida que sueltes código en algun lugar que cause que la aplicación colapse o deje de funcionar. En esos casos, debes estar atento a las pestañas **Errors** y **Device Logs** para poder detectar el problema.
 
-### Check it out real-time
+### Chequeo en tiempo real
 
 ![](/screenshots/ns-playground/playground-preview.gif)
 
-After you place the code in a valid spot, hit **Preview** (or `Ctrl+S` or `Cmd+S`) and see your app refresh on your device screen in an instant.
+Una vez que ubicas tu código en un lugar válido, puedres presionar el boton **Preview** (o `Ctrl+S`/`Cmd+S`) y ver como tu aplicación se actualiza en tu pantalla de forma instantanea.
 
-In some cases, when you interact with the app, it will close unexpectedly. Just fire it up again and inspect the crash report.
+En algunos casos, cuando interactuas con tu aplicación, esta puede cerrarse de manera inesperada. Simplemente vuelve a lanzarla y checa los reportes de errores.
 
-If at any point you stop seeing your changes applied on the device, click **QR code** and re-scan the QR code with the *Playground* app.
+Si en algun punto dejas de visualizar en el dispositivo los cambios aplicados, haz clic en el **código QR** y vuelve a escanearlo.
 
-### Configure your code
+### Configura tu código
 
-So, the component runs and shows on your screen. You're excited but you want to make it your own. Hack away at the default code suggested by the Playground. Fix sizes and labels, remove or add elements.
+Entonces, el componente se ejecuta y se muestra en la pantalla. Seguramente estes entusiasmado con los reultados pero quieres hacer algo por ti mismo.
 
-Go to `app.css` and switch up the styling a bit. Experiment with colors and font sizes.
+So, the component runs and shows on your screen. You're excited but you want to make it your own. Puedes *hackear* el código sugerido por defecto, cambia tamaños, etiquetas o incluso agrega y quita elementos. Animate a explorar.
+
+Puedes ir al archivo `app.css` y modificar algunos estilos. Por ejemplo, experimenta cambiando colores y tamaños de texto.
 
 # Part 2: Building an app
 

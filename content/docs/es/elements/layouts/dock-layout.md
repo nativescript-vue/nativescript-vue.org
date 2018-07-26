@@ -1,7 +1,7 @@
 ---
 title: DockLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_layout_
-contributors: [rigor789]
+contributors: [ianaya89]
 ---
 
 El contenedor `DockLayout` provee un mecanismo de acoplamiento para los elementos hijos, basado en los valores `left`, `right`, `top`, `bottom`. Para definir el tipo de acoplamiento de un elemento hijo, se puede utilizar la propiedad `dock`. Para acoplar un elemento hijo en el centro de un `DockLayout`, este deberá ser el último hijo del contenedor `DockLayout` y la propiedad de `stretchLastChild` (de `DockLayout`) deberá tener el valor `true`.

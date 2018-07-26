@@ -1,7 +1,7 @@
 ---
 title: GridLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_grid_layout_
-contributors: [rigor789, ikoevska]
+contributors: [ianaya89]
 ---
 
 El contenedor `<GridLayout>` permite alinear los elementos hijos de una forma similar a una tabla o grilla.

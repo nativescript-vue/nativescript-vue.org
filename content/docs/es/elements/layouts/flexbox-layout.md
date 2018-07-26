@@ -1,7 +1,7 @@
 ---
 title: FlexboxLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_flexbox_layout_
-contributors: [rigor789]
+contributors: [ianaya89]
 ---
 
 El contenedor `FlexboxLayout` es una implementación (no exact) de [CSS Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
