@@ -38,7 +38,7 @@ The `<AbsoluteLayout>` container is the simplest layout container in NativeScrip
 
 ## Props
 
-`<AbsoluteLayout>` has no props.
+None.
 
 ## Additional children props
 

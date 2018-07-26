@@ -14,7 +14,7 @@ contributors: [rigor789, ikoevska]
 
 ## Examples
 
-### Dock to every side without stretching last child
+### Dock to every side without stretching the last child
 
 ```html
 <DockLayout stretchLastChild="false" backgroundColor="#3c495e">
@@ -26,7 +26,7 @@ contributors: [rigor789, ikoevska]
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_no_stretch.svg" />
 
-### Dock to every side with stretching last child
+### Dock to every side and stretch the last child
 
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
@@ -51,7 +51,7 @@ contributors: [rigor789, ikoevska]
 ```
 <img class="md:w-1/2 lg:w-1/3" https://art.nativescript-vue.org/layouts/dock_layout_all_sides_and_stretch.svg" />
 
-### Multiple children on the same side
+### Dock multiple children to the same side
 
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
