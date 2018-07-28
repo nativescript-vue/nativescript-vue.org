@@ -46,5 +46,5 @@ When an element is a direct child of `<AbsoluteLayout>`, you can work with the f
 
 | Name | Type | Description |
 |------|------|-------------|
-| `top` | `Number` | Gets or sets the distance, in pixels, between the top edge of the child and the top edge of its parent `<AbsoluteLayout>` client area.
-| `left` | `Number` | Gets or sets the distance, in pixels, between the left edge of the child and the left edge of its parent `<AbsoluteLayout>` client area.
+| `top` | `Number` | Gets or sets the distance, in pixels, between the top edge of the child and the top edge of its parent.
+| `left` | `Number` | Gets or sets the distance, in pixels, between the left edge of the child and the left edge of its parent.
