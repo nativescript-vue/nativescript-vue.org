@@ -52,7 +52,7 @@ contributors: [rigor789, ikoevska]
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_custom_order.svg" />
 
-#### Wrapping
+#### Row layout with wrapping
 
 ```html
 <FlexboxLayout flexWrap="wrap" backgroundColor="#3c495e">
@@ -64,7 +64,7 @@ contributors: [rigor789, ikoevska]
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_wrap.svg" />
 
-#### Reverse column, with different `alignSelf`
+#### Column layout with reverse order and items with a different `alignSelf`
 
 ```html
 <FlexboxLayout flexDirection="column-reverse"
@@ -81,8 +81,8 @@ contributors: [rigor789, ikoevska]
 
 | Name | Type | Description |
 |------|------|-------------|
-`flexDirection` | `String` | Sets the direction for placing child elements in the flexbox container.<br/>Valid values: `row` (same as text direction), `row-reverse` (opposite to text direction), `column` (same as row but top to bottom), and `column-reverse` (same as `row-reverse` but top to bottom).<br/>Default value: `row`.
-`flexWrap` | `String` | Sets whether child elements are forced in a single line or can flow into multiple lines. If set to multiple lines, also defines the cross axis which determines the direction new lines are stacked in.<br/>Valid values: `nowrap` (single-line which may cause the container to overflow), `wrap` (multi-lines, direction is defined by `flexDirection`), and `wrap-reverse` (multi-lines, opposite to direction defined by `flexDirection`).<br/>Default value: `nowrap`.
+`flexDirection` | `String` | Sets the direction for placing child elements in the flexbox container.<br/>Valid values:<br/>`row` (horizontal, left to right),<br/>`row-reverse` (horizontal, right to left),<br/>`column` (vertical, top to bottom), and<br/>`column-reverse` (vertical, bottom to top).<br/>Default value: `row`.
+`flexWrap` | `String` | Sets whether child elements are forced in a single line or can flow into multiple lines. If set to multiple lines, also defines the cross axis which determines the direction new lines are stacked in.<br/>Valid values:<br/>`nowrap` (single line which may cause the container to overflow),<br/>`wrap` (multiple lines, direction is defined by `flexDirection`),<br/>and `wrap-reverse` (multiple lines, opposite to the direction defined by `flexDirection`).<br/>Default value: `nowrap`.
 `justifyContent` | `String` |  Sets the alignment of child elements along the main axis. You can use it to distribute leftover free space when all the child elements on a line are inflexible or are flexible but have reached their maximum size. You can also use it to exert some control over the alignment of items when they overflow the line.<br/>Valid values: `flex-start` (items are packed toward the start line), `flex-end` (items are packed toward the end line), `center` (items are centered along the line), `space-between` (items are evenly distributed on the line; first item is on the start line, last item on the end line), and `space-around` (items are evenly distributed on the line with equal space around them).<br/>Default value: `flex-start`.
 `alignItems` | `String` | (Android-only) Sets the alignment of child elements along the cross axis on the current line. Acts as `justifyContent` but for the cross axis.<br/>Valid values: `flex-start` (cross-start margin edge of the items is placed on the cross-start line), `flex-end` (cross-end margin edge of the items is placed on the cross-end line), `center` (items are centered in the cross axis), `baseline` (the item baselines are aligned), `stretch` (stretch to fill the container but respect `min-width` and `max-width`).<br/>Default value: `stretch`.
 `alignContent` | `String` | Sets how lines are aligned in the flex container on the cross axis, similar to how `justifyContent` aligns individual items within the main axis.<br/> This property has no effect when the flex container has only one line.<br/>Valid values: `flex-start` (lines are packed to the start of the container), `flex-end` (lines are packed to the end of the container), `center` (lines are packed to the center of the container), `space-between` (lines are evenly distributed; the first line is at the start of the container while the last one is at the end), `space-around` (lines are evenly distributed with equal space between them), and `stretch` (lines are stretched to take up the remaining space).<br/>Default value: `stretch`.
