@@ -4,11 +4,11 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_lay
 contributors: [rigor789, ikoevska]
 ---
 
-`<DockLayout>` is a layout container that provides a docking mechanism for child elements to the sides or the center of the layoyt.
+`<DockLayout>` is a layout container that lets you dock child elements to the sides or the center of the layoyt.
 
 `<DockLayout>` has the following behavior:
 
-* Uses the `dock` property to dock its children to the `left`, `right`, `top`, `bottom` or center of the layout.<br/>To dock a child element to the center, it must be the **last child** of the container and the `stretchLastChild` property of the parent must be set to `true`.
+* Uses the `dock` property to dock its children to the `left`, `right`, `top`, `bottom` or center of the layout.<br/>To dock a child element to the center, it must be the **last child** of the container and you must set the `stretchLastChild` property of the parent to `true`.
 * Enforces layout constraints to its children.
 * Resizes its children at runtime when its size changes.
 
@@ -49,7 +49,7 @@ contributors: [rigor789, ikoevska]
   <Label text="center" backgroundColor="#1c6b48" />
 </DockLayout>
 ```
-<img class="md:w-1/2 lg:w-1/3" https://art.nativescript-vue.org/layouts/dock_layout_all_sides_and_stretch.svg" />
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_all_sides_and_stretch.svg" />
 
 ### Dock multiple children to the same side
 
