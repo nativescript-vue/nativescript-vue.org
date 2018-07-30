@@ -30,7 +30,7 @@ The following example creates a simple grid. For more information about creating
 
 ### Overlapping elements
 
-The following example creats a group of overlapping items.
+The following example creates a group of overlapping items.
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
