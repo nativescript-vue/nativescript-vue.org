@@ -12,7 +12,7 @@ By default, `<GridLayout>` has one column and one row. You can add columns and r
 
 You can set a fixed size for column width and row height or you can create them in a responsive manner:
 
-* **an absolute number:** Indicates a fixed size.
+* **An absolute number:** Indicates a fixed size.
 * **auto:** Makes the column as wide as its widest child or makes the row as tall as its tallest child.
 * **\*:** Takes as much space as available after filling all auto and fixed size columns or rows.
 
@@ -49,6 +49,8 @@ The following example creates a grid with responsive design, where space is alot
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_star_sizing.svg" />
 
 ### Grid layout with fixed and auto sizing
+
+The following example create a grid with one auto-sized column and one column with fixed size. Rows have a fixed height.
 
 ```html
 <GridLayout columns="80, auto" rows="80, 80" backgroundColor="#3c495e">

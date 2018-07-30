@@ -16,6 +16,8 @@ The `<AbsoluteLayout>` container is the simplest layout container in NativeScrip
 
 ### A grid-like layout
 
+The following example creates a simple grid. For more information about creating grid layouts, see [GridLayout](/en/docs/elements/layouts/grid-layout).
+
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
   <Label text="10,10" left="10" top="10" width="100" height="100" backgroundColor="#43b883"/>
@@ -27,6 +29,8 @@ The `<AbsoluteLayout>` container is the simplest layout container in NativeScrip
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_grid.svg" />
 
 ### Overlapping elements
+
+The following example creats a group of overlapping items.
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">

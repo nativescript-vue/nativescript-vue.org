@@ -10,6 +10,8 @@ contributors: [rigor789, ikoevska]
 
 #### Default flex layout
 
+The following example creates a row of three equally-sized elements that span across the entire height of the screen.
+
 ```html
 <FlexboxLayout backgroundColor="#3c495e">
   <Label text="first" width="70" backgroundColor="#43b883"/>
@@ -20,6 +22,8 @@ contributors: [rigor789, ikoevska]
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_stretch.svg" />
 
 #### Column flex layout
+
+The following example creates a column of 3 equally-sized elements that span across the entire width of the screen.
 
 ```html
 <FlexboxLayout flexDirection="column" backgroundColor="#3c495e">
@@ -32,6 +36,8 @@ contributors: [rigor789, ikoevska]
 
 #### Row flex layout with items aligned to `flex-start`
 
+The following example creates a row of 3 items placed at the top of the screen. Items are placed in the order they were declared in.
+
 ```html
 <FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
   <Label text="first" width="70" height="70" backgroundColor="#43b883"/>
@@ -42,6 +48,8 @@ contributors: [rigor789, ikoevska]
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_flex-start.svg" />
 
 #### Row flex layout with custom order
+
+The following example creates a row of 3 items placed at the top of the screen. Items are placed in a customized order.
 
 ```html
 <FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
@@ -54,6 +62,8 @@ contributors: [rigor789, ikoevska]
 
 #### Row flex layout with wrapping
 
+The following example creates four items with enabled line wrapping. When the row runs out of space, the container wraps the last item on a new line.
+
 ```html
 <FlexboxLayout flexWrap="wrap" backgroundColor="#3c495e">
   <Label text="first" width="30%" backgroundColor="#43b883"/>
@@ -65,6 +75,12 @@ contributors: [rigor789, ikoevska]
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_wrap.svg" />
 
 #### Column flex layout with reverse order and items with a different `alignSelf`
+
+The following example shows how to use:
+
+* `flexDirection` to place items in a column, starting from the bottom.
+* `justifyContent` to create equal spacing between the vertically placed items.
+* `alignSelf` to modify the position of items across the main axis.
 
 ```html
 <FlexboxLayout flexDirection="column-reverse"

@@ -16,6 +16,8 @@ contributors: [rigor789, ikoevska]
 
 ### Dock to every side without stretching the last child
 
+The following example creates a frame-like layout consisting of 4 elements, position at the 4 edges of the screen.
+
 ```html
 <DockLayout stretchLastChild="false" backgroundColor="#3c495e">
   <Label text="left" dock="left" width="40" backgroundColor="#43b883"/>
@@ -28,6 +30,8 @@ contributors: [rigor789, ikoevska]
 
 ### Dock to every side and stretch the last child
 
+The following example shows how `stretchLastChild` affects the positioning of child elements in a `DockLayout` container. The last child (`bottom`) is stretched to take up all the remaining space after positioning the first three elements.
+
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
   <Label text="left" dock="left" width="40" backgroundColor="#43b883"/>
@@ -39,6 +43,8 @@ contributors: [rigor789, ikoevska]
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_stretch.svg" />
 
 ### Dock to every side and the center
+
+The following example creates a `<DockLayout>` of 5 elements. The first four wrap the center element in a frame. 
 
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
@@ -53,6 +59,8 @@ contributors: [rigor789, ikoevska]
 
 ### Dock multiple children to the same side
 
+The following example creates a single line of 4 elements that stretch across the entire height and width of the screen.
+ 
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
   <Label text="left 1" dock="left" width="40" backgroundColor="#43b883"/>
