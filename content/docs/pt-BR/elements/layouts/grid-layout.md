@@ -5,13 +5,13 @@ contributors:
   - rigor789
   - ikoevska
 ---
-`<GridLayout>` is a layout component that lets you arrange its child elements in a table-like manner.
+`<GridLayout>` is a layout container that lets you arrange its child elements in a table-like manner.
 
 The grid consists of rows, columns, and cells. A cell can span one or more rows and one or more columns. It can contain multiple child elements which can span over multiple rows and columns, and even overlap each other.
 
-By default, the `<GridLayout>` has one column and one row. You can add columns and rows by configuring the `columns` and the `rows` property. In these properties, you need to set the number of columns and rows and their width and height. You set the number of columns by listing their widths, separated by a comma. You set the number of rows by listing their heights, separated by a comma.
+By default, `<GridLayout>` has one column and one row. You can add columns and rows by configuring the `columns` and the `rows` properties. In these properties, you need to set the number of columns and rows and their width and height. You set the number of columns by listing their widths, separated by a comma. You set the number of rows by listing their heights, separated by a comma.
 
-You can set a fixed size for column width and row height or you can create them in a responsive manner.
+You can set a fixed size for column width and row height or you can create them in a responsive manner:
 
 * **An absolute number:** Indicates a fixed size.
 * **auto:** Makes the column as wide as its widest child or makes the row as tall as its tallest child.
@@ -19,9 +19,9 @@ You can set a fixed size for column width and row height or you can create them 
 
 See [Props](#props) for more information.
 
-### Examples
+## Examples
 
-#### Grid layout with fixed sizing
+### Grid layout with fixed sizing
 
 The following example creates a simple 2-by-2 grid with fixed column widths and row heights.
 
@@ -36,7 +36,7 @@ The following example creates a simple 2-by-2 grid with fixed column widths and 
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout.svg" />
 
-#### Grid layout with star sizing
+### Grid layout with star sizing
 
 The following example creates a grid with responsive design, where space is alotted proportionally to child elements.
 
@@ -51,7 +51,9 @@ The following example creates a grid with responsive design, where space is alot
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_star_sizing.svg" />
 
-#### Grid layout with fixed and auto sizing
+### Grid layout with fixed and auto sizing
+
+The following example create a grid with one auto-sized column and one column with fixed size. Rows have a fixed height.
 
 ```html
 <GridLayout columns="80, auto" rows="80, 80" backgroundColor="#3c495e">
@@ -64,7 +66,7 @@ The following example creates a grid with responsive design, where space is alot
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_fixed_auto.svg" />
 
-#### Grid layout with mixed sizing and merged cells
+### Grid layout with mixed sizing and merged cells
 
 The following example creates a complex grid with responsive design, mixed width and height settings, and some merged cells.
 
@@ -92,7 +94,7 @@ A number indicates an absolute row height. `auto` makes the row as tall as its t
 
 ## Additional children props
 
-When an element is a direct child of the GridLayout, you can work with the following additional properties.
+When an element is a direct child of `<GridLayout>`, you can work with the following additional properties.
 
 | Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `row` | `Number` | Specifies the row for this element. Combined with a `col` property, specifies the cell coordinates of the element.  
 The first row is indicated by `0`. `col` | `Number` | Specifies the column for the element. Combined with a `row` property, specifies the cell coordinates of the element.  
