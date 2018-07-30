@@ -3,12 +3,15 @@ title: StackLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_stack_layout_
 contributors:
   - rigor789
+  - ikoevska
 ---
-The StackLayout container stacks the child elements either vertically (default), or horizontally.
+`<StackLayout>` is a layout container that lets you stack the child elements vertically (default) or horizontally.
 
 ### Samples
 
-#### Default StackLayout
+#### Default stacking
+
+The following example creates a vertical stack of 3 equally-sized elements. Items are stretched to cover the entire width of the screen. Items are placed in the order they were declared in.
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -20,7 +23,9 @@ The StackLayout container stacks the child elements either vertically (default),
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical.svg" />
 
-#### Horizontal StackLayout
+#### Horizontal stacking
+
+The following example creates a horizontal stack of 3 equally-sized elements. Items are stretched to cover the entire height of the screen. Items are placed in the order they were declared in.
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -32,7 +37,9 @@ The StackLayout container stacks the child elements either vertically (default),
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal.svg" />
 
-#### StackLayout with horizontally aligned children
+#### Stack layout with horizontally aligned children
+
+The following example creates a diagonal stack of items with responsive sizes. Items are vertically stacked.
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -49,7 +56,9 @@ The StackLayout container stacks the child elements either vertically (default),
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical_align_children.svg" />
 
-#### Horizontal StackLayout with vertically aligned children
+#### Horizontal stack layout with vertically aligned children
+
+The following example creates a diagonal stack of items with responsive sizes. Items are horizontally stacked.
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -68,8 +77,10 @@ The StackLayout container stacks the child elements either vertically (default),
 
 ## Props
 
-| name | type | description | |\---\---|\---\---|\---\---\---\----| `orientation` | `String` | Specifies the direction of the stacking. Possible values are `vertical` and `horizontal`. The default value is `vertical`.
+| Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `orientation` | `String` | Specifies the stacking direction.  
+Valid values: `vertical` and `horizontal`.  
+Default value: `vertical`.
 
-## Additional Children Props
+## Additional children props
 
-There are no additional properties for child elements.
+None.
