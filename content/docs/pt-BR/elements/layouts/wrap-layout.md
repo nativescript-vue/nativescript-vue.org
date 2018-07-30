@@ -3,12 +3,15 @@ title: WrapLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_wrap_layout_
 contributors:
   - rigor789
+  - ikoevska
 ---
-The WrapLayout container positions its children in rows or columns, based on the orientation property, until the space is filled and then wraps them onto a new row or column.
+`<WrapLayout>` is a layout container that lets you position items in rows or columns, based on the `orientation` property. When the space is filled, the container automatically wraps items onto a new row or column.
 
 ### Samples
 
-#### Default WrapLayout
+#### Default wrap layout
+
+The following example creates a row of equally-sized items. When the row runs out of space, the container wraps the last item on a new row.
 
 ```html
 <WrapLayout backgroundColor="#3c495e">
@@ -21,7 +24,9 @@ The WrapLayout container positions its children in rows or columns, based on the
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_horizontal.svg" />
 
-#### Vertical WrapLayout
+#### Vertical wrap layout
+
+The following example creates a column of equally-sized items. When the row runs out of space, the container wraps the last item on a new column.
 
 ```html
 <WrapLayout orientation="vertical" backgroundColor="#3c495e">
@@ -36,8 +41,12 @@ The WrapLayout container positions its children in rows or columns, based on the
 
 ## Props
 
-| name | type | description | |\---\---|\---\---|\---\---\---\----| `orientation` | `String` | A value indicating the flow direction. If orientation is `horizontal`, items are arranged in rows. If orientation is `vertical`, items are arranged in columns. The default value is `horizontal`. `itemWidth` | `Number` | The width used to measure and layout each child. Default value is `Number.NaN`, which does not restrict children. `itemHeight` | `Number` | The height used to measure and layout each child. Default value is `Number.NaN`, which does not restrict children.
+| Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `orientation` | `String` | Specifies the stacking direction.  
+Valid values: `horizontal` (arranges items in rows) and `vertical` (arranges items in columns).  
+Default value: `horizontal`. `itemWidth` | `Number` | Sets the width used to measure and layout each child.  
+Default value: `Number.NaN`, which does not restrict children. `itemHeight` | `Number` | Sets the height used to measure and layout each child.  
+Default value is `Number.NaN`, which does not restrict children.
 
-## Additional Children Props
+## Additional children props
 
-There are no additional properties for child elements.
+None.
