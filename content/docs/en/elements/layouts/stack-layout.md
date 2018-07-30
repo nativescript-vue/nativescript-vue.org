@@ -10,6 +10,8 @@ contributors: [rigor789, ikoevska]
 
 #### Default stacking
 
+The following example creates a vertical stack of 3 equally-sized elements. Items are stretched to cover the entire width of the screen. Items are placed in the order they were declared in.
+
 ```html
 <StackLayout backgroundColor="#3c495e">
   <Label text="first" height="70" backgroundColor="#43b883"/>
@@ -21,6 +23,8 @@ contributors: [rigor789, ikoevska]
 
 #### Horizontal stacking
 
+The following example creates a horizontal stack of 3 equally-sized elements. Items are stretched to cover the entire height of the screen. Items are placed in the order they were declared in.
+
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
   <Label text="first" width="70" backgroundColor="#43b883"/>
@@ -31,6 +35,8 @@ contributors: [rigor789, ikoevska]
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal.svg" />
 
 #### Stack layout with horizontally aligned children
+
+The following example creates a diagonal stack of items with responsive sizes. Items are vertically stacked.
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -47,6 +53,8 @@ contributors: [rigor789, ikoevska]
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical_align_children.svg" />
 
 #### Horizontal stack layout with vertically aligned children
+
+The following example creates a diagonal stack of items with responsive sizes. Items are horizontally stacked.
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -67,7 +75,6 @@ contributors: [rigor789, ikoevska]
 | Name | Type | Description |
 |------|------|-------------|
 `orientation` | `String` | Specifies the stacking direction.<br/>Valid values: `vertical` and `horizontal`.<br/>Default value: `vertical`.
-
 
 ## Additional children props
 
