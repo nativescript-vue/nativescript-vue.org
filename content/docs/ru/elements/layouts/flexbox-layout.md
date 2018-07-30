@@ -3,12 +3,15 @@ title: FlexboxLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_flexbox_layout_
 contributors:
   - rigor789
+  - ikoevska
 ---
-The FlexboxLayout container is a non-exact implementation of the [Css Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+`<FlexboxLayout>` is a layout container that provides a non-exact implementation of the [CSS Flexbox layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox). This layout lets you arrange child components both horizontally and vertically.
 
-### Samples
+### Examples
 
 #### Default flex layout
+
+The following example creates a row of three equally-sized elements that span across the entire height of the screen.
 
 ```html
 <FlexboxLayout backgroundColor="#3c495e">
@@ -22,6 +25,8 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
 
 #### Column flex layout
 
+The following example creates a column of 3 equally-sized elements that span across the entire width of the screen.
+
 ```html
 <FlexboxLayout flexDirection="column" backgroundColor="#3c495e">
   <Label text="first" height="70" backgroundColor="#43b883"/>
@@ -32,7 +37,9 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_column_stretch.svg" />
 
-#### Row layout with items aligned to flex-start
+#### Row flex layout with items aligned to `flex-start`
+
+The following example creates a row of 3 items placed at the top of the screen. Items are placed in the order they were declared in.
 
 ```html
 <FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
@@ -44,7 +51,9 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_flex-start.svg" />
 
-#### Row layout with custom order
+#### Row flex layout with custom order
+
+The following example creates a row of 3 items placed at the top of the screen. Items are placed in a customized order.
 
 ```html
 <FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
@@ -56,7 +65,9 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_custom_order.svg" />
 
-#### Wrapping
+#### Row flex layout with wrapping
+
+The following example creates four items with enabled line wrapping. When the row runs out of space, the container wraps the last item on a new line.
 
 ```html
 <FlexboxLayout flexWrap="wrap" backgroundColor="#3c495e">
@@ -69,7 +80,13 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_wrap.svg" />
 
-#### Reverse column, with different alignSelf
+#### Column flex layout with reverse order and items with a different `alignSelf`
+
+The following example shows how to use:
+
+* `flexDirection` to place items in a column, starting from the bottom.
+* `justifyContent` to create equal spacing between the vertically placed items.
+* `alignSelf` to modify the position of items across the main axis.
 
 ```html
 <FlexboxLayout flexDirection="column-reverse"
@@ -85,10 +102,52 @@ The FlexboxLayout container is a non-exact implementation of the [Css Flexbox La
 
 ## Props
 
-| name | type | description | |\---\---|\---\---|\---\---\---\----| `flexDirection` | `String` | The direction in which flex items are placed in the flex container. The `flexDirection` property accepts 4 different values: `row` (same as text direction), `row-reverse` (opposite to text direction), `column` (same as row but top to bottom), and `column-reverse` (same as row-reverse top to bottom). The default value is `row`. `flexWrap` | `String` | Sets whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, it also defines the cross-axis which determines the direction new lines are stacked in. The `flexWrap` property accepts 3 different values: `nowrap` (single-line which may cause the container to overflow), `wrap` (multi-lines, direction is defined by flexDirection), and `wrap-reverse` (multi-lines, opposite to direction defined by flexDirection). The default value is `nowrap`. `justifyContent` | `String` | Sets the alignment along the main axis. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line. The justifyContent property accepts 5 different values: `flex-start` (items are packed toward the start line), `flex-end` (items are packed toward to end line), `center` (items are centered along the line), `space-between` (items are evenly distributed in the line; first item is on the start line, last item on the end line), and `space-around` (items are evenly distributed in the line with equal space around them). The default value is `flex-start`. `alignItems` | `String` | Sets how flex items are laid out along the cross axis on the current line. You can think of it as the `justifyContent` version for the cross-axis (perpendicular to the main-axis). The `alignItems` property accepts 5 different values: `flex-start` (cross-start margin edge of the items is placed on the cross-start line), `flex-end` (cross-end margin edge of the items is placed on the cross-end line), `center` (items are centered in the cross-axis), `baseline` (items are aligned such as their baselines align), `stretch` (stretch to fill the container but still respect `min-width`/`max-width`). The default value is `stretch`. `alignContent` | `String` | Sets how flex items are aligned in the flex container on the cross-axis, similar to how `justifyContent` aligns individual items within the main-axis. The `alignContent` property accepts 6 different values: `flex-start` (lines packed to the start of the container), `flex-end` (lines packed to the end of the container), `center` (lines packed to the center of the container), `space-between` (lines evenly distributed; the first line is at the start of the container while the last one is at the end), `space-around` (lines evenly distributed with equal space between them), and `stretch` (lines stretch to take up the remaining space). The default value is `stretch`. This property has no effect when the flex container has only a single line.
+| Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `flexDirection` | `String` | Sets the direction for placing child elements in the flexbox container.  
+Valid values:  
+`row` (horizontal, left to right),  
+`row-reverse` (horizontal, right to left),  
+`column` (vertical, top to bottom), and  
+`column-reverse` (vertical, bottom to top).  
+Default value: `row`. `flexWrap` | `String` | Sets whether child elements are forced in a single line or can flow into multiple lines. If set to multiple lines, also defines the cross axis which determines the direction new lines are stacked in.  
+Valid values:  
+`nowrap` (single line which may cause the container to overflow),  
+`wrap` (multiple lines, direction is defined by `flexDirection`),and  
+`wrap-reverse` (multiple lines, opposite to the direction defined by `flexDirection`).  
+Default value: `nowrap`. `justifyContent` | `String` | Sets the alignment of child elements along the main axis. You can use it to distribute leftover space when all the child elements on a line are inflexible or are flexible but have reached their maximum size. You can also use it to control the alignment of items when they overflow the line.  
+Valid values:  
+`flex-start` (items are packed toward the start line),  
+`flex-end` (items are packed toward the end line),  
+`center` (items are centered along the line),  
+`space-between` (items are evenly distributed on the line; first item is on the start line, last item on the end line), and  
+`space-around` (items are evenly distributed on the line with equal space around them).  
+Default value: `flex-start`. `alignItems` | `String` | (Android-only) Sets the alignment of child elements along the cross axis on the current line. Acts as `justifyContent` for the cross axis.  
+Valid values:  
+`flex-start` (cross-start margin edge of the items is placed on the cross-start line),  
+`flex-end` (cross-end margin edge of the items is placed on the cross-end line),  
+`center` (items are centered оn the cross axis),  
+`baseline` (the item baselines are aligned), and  
+`stretch` (items are stretched to fill the container but respect `min-width` and `max-width`).  
+Default value: `stretch`. `alignContent` | `String` | Sets how lines are aligned in the flex container on the cross axis, similar to how `justifyContent` aligns individual items within the main axis.  
+This property has no effect when the flex container has only one line.  
+Valid values:  
+`flex-start` (lines are packed to the start of the container),  
+`flex-end` (lines are packed to the end of the container),  
+`center` (lines are packed to the center of the container),  
+`space-between` (lines are evenly distributed; the first line is at the start of the container while the last one is at the end),  
+`space-around` (lines are evenly distributed with equal space between them), and  
+`stretch` (lines are stretched to take up the remaining space).  
+Default value: `stretch`.
 
-## Additional Children Props
+## Additional children props
 
-When an element is a direct child of the FlexboxLayout, the following props get a meaning:
+When an element is a direct child of `<FlexboxLayout>`, you can work with the following additional properties.
 
-| name | type | description | |\---\---|\---\---|\---\---\---\----| `order` | `Number` | Changes the default ordering of the flex items `flexGrow` | `Number` | Unitless value that serves as a proportion indicating whether the flex item is able to grow if necessary. It dictates what amount of the available space inside the flex container the item should take up. `flexShrink` | `Number` | A value indicating the "flex shrink factor", which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when there is not enough space on the row. When omitted, it is set to 1 and the flex shrink factor is multiplied by the flex basis when distributing negative space. `alignSelf` | `String` | A value that overrides the `alignItems` value for specific flex items. This property accepts the same 5 values as `alignItems`: `flex-start` (cross-start margin edge of the item is placed on the cross-start line), `flex-end` (cross-end margin edge of the item is placed on the cross-end line), `center` (item is centered in the cross-axis), `baseline` (items are aligned such as their baselines are aligned), and `stretch` (stretch to fill the container but still respect `min-width`/`max-width`). The default value is `stretch`. `flexWrapBefore` | `Boolean` | A boolean value controlling item wrapping. Setting it to `true` will force the item to wrap onto a new line. The default value is `false`. (This property is not part of the official flexbox specification.)
+| Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `order` | `Number` | Sets the order in which child element appear in relation to one another. `flexGrow` | `Number` | Indicates that the child should grow in size, if necessary. Sets how much the child will grow in proportion to the rest of the child elements in the flex container. `flexShrink` | `Number` | Indicates that the child should shrink when the row runs out of space. Sets how much the flex item will shrink in proportion to the rest of the child elements in the flex container. When not specified, its value is set to `1`. `alignSelf` | `String` | (Android-only) Overrides the `alignItems` value for the child.  
+Valid values:  
+`flex-start` (cross-start margin edge of the item is placed on the cross-start line),  
+`flex-end` (cross-end margin edge of the item is placed on the cross-end line),  
+`center` (item is centered on the cross axis),  
+`baseline` (the item baselines are aligned), and  
+`stretch` (items is stretched to fill the container but respects `min-width` and `max-width`).  
+Default value: `stretch`. `flexWrapBefore` | `Boolean` | When `true`, forces the item to wrap onto a new line. This property is not part of the official Flexbox specification.  
+Default value: `false`.
