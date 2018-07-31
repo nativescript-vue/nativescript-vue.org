@@ -46,7 +46,7 @@ Keep the apps running while you're experimenting with the code.
 
 ![](/screenshots/ns-playground/playground-layout.png)
 
-The left sidebar offers a file explorer and a **Components** panel. Most of your effort on your app will happen in `app.js` and `app.css`, containing the app functionality and taking care of the app styles, respectively. No need to deep dive in any other files for now.
+The left sidebar offers a file explorer and a **Components** panel. Most of your effort on your app will happen in `components` > `HelloWorld.vue`, where you'll be creating the user interface and the business logic behind it. No need to deep dive in any other files for now.
 
 The **Components** panel provides quick access to already pre-configured code for all available NativeScript UI components.
 
