@@ -4,9 +4,9 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#prompt
 contributors: [ianaya89]
 ---
 
-El método `prompt()` muestra en pantalla un dialogo que permite al usuario ingresar información en un campo de texto.
+El método `prompt()` muestra en pantalla un diálogo que permite al usuario ingresar información en un campo de texto.
 
-El método forma parte del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+Este método forma parte del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 
@@ -45,7 +45,7 @@ inputType: dialogs.inputType.email
 inputType: dialogs.inputType.password
 ```
 
-**NOTE:** Esta opción no esta disponible de forma global, por lo tanto debes importar el módulo `dialogs` antes de poder usar `inputType`.
+**NOTA:** Esta opción no esta disponible de forma global, por lo tanto debes importar el módulo `dialogs` antes de poder usar `inputType`.
 
 ```JavaScript
 const dialogs = require('tns-core-modules/ui/dialogs')

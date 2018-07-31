@@ -35,7 +35,7 @@ contributors: [ianaya89]
 |------|-------------|
 | `textChange` | Emitido cada vez que cambia el valor del campo de texto.
 | `submit` | Emitido cuando se envian el valor del campo de texto.
-| `clear` | Emitido cada vez que se limpia el valor del campo de texto (presionando el boton **X**).
+| `clear` | Emitido cada vez que se limpia el valor del campo de texto (presionando el botón **X**).
 
 ## Componente nativo
 

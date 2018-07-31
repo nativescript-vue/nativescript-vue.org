@@ -25,7 +25,7 @@ contributors: [ianaya89]
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
-| `items` | `Array<String>` | Obtiene o establece los elementos que se muestran como opciones en el `<ListPicker`.
+| `items` | `Array<String>` | Obtiene o establece los elementos que se muestran como opciones en el `<ListPicker>`.
 | `selectedIndex` | `Number` | Obtiene o establece el índice del elemento que se encuentra seleccionado.
 
 ## Eventos

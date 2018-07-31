@@ -4,9 +4,9 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#confirm
 contributors: [ianaya89]
 ---
 
-El método `confirm()` muestra un mensaje de confirmacion con un botón de OK y otro de cancelación.
+El método `confirm()` muestra un mensaje de confirmación con un botón de OK y otro de cancelación.
 
-El método es parte del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+Este método forma parte del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 

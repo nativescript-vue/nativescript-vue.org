@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_flexbox_
 contributors: [ianaya89]
 ---
 
-El contenedor `FlexboxLayout` es una implementación (no exact) de [CSS Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+El contenedor `FlexboxLayout` es una implementación (no exacta) de [CSS Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 
 ### Ejemplos
 
@@ -89,7 +89,7 @@ El contenedor `FlexboxLayout` es una implementación (no exact) de [CSS Flexbox 
 
 ## Propiedades de elementos hijos
 
-Cuando un elemento es un hijo directo de `FlexboxLayout`, las siguientes propiedades toman significado (en el elemento hijo):
+Cuando un elemento es hijo directo de `FlexboxLayout`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|

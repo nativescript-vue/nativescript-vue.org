@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabvie
 contributors: [ianaya89]
 ---
 
-`<TabView>` es un componente de navegación que permite mostrar contenido agrupado en pestaña y permite a los usuarios cambiar la pestaña visible.
+`<TabView>` es un componente de navegación que muestra contenido agrupado en pestañas y permite a los usuarios cambiar la pestaña visible.
 
 ---
 
@@ -19,7 +19,7 @@ contributors: [ianaya89]
 </TabView>
 ```
 
-**NOTA:** Actualmente, el componente `TabViewItem` espera recibir un solo elemeno hijo. En la mayoría de los casos, necesitas envolver tu contenido en componente *layout*.
+**NOTA:** Actualmente, el componente `TabViewItem` espera recibir un solo elemento hijo. En la mayoría de los casos, necesitas envolver tu contenido en un componente contenedor o *layout*.
 
 [> screenshots for=TabView <]
 
@@ -35,7 +35,7 @@ contributors: [ianaya89]
   </TabViewItem>
 </TabView>
 ```
-**NOTS:** Utiliza imágenes para los íconos en lugar de fuentes.
+**NOTA:** Utiliza imágenes para los íconos en lugar de fuentes.
 
 ## Propiedades
 

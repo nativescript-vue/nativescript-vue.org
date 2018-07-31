@@ -6,7 +6,7 @@ contributors: [ianaya89]
 
 El método `login()` muestra en pantalla, un diálogo donde el usuario puede ingresar credenciales para iniciar sesión.
 
-El método forma parte del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+Este método forma parte del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 

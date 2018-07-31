@@ -26,7 +26,7 @@ El valor por defecto es `false` o apagado (*Off*).
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
-| `checked` | `Boolean` | Obtiene o establece el valor actual del element *switch*.<br/>Valor por defecto: `false`.
+| `checked` | `Boolean` | Obtiene o establece el valor actual del elemento *switch*.<br/>Valor por defecto: `false`.
 
 ## Eventos
 

@@ -4,9 +4,9 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
 contributors: [ianaya89]
 ---
 
-`<Button>` es un componente de UI que muestra un boton, el cual puede reaccionar ante un gesto del usuario.
+`<Button>` es un componente de UI que muestra un botón, el cual puede reaccionar ante un gesto del usuario.
 
-Para más informacion sobre los posibles gestos, puedes veravailable gestures [Gestos en la documentación oficial de NativeScript](https://docs.nativescript.org/ui/gestures).
+Para más informacion sobre los gestos disponibles, puedes ver [la documentación oficial de NativeScript](https://docs.nativescript.org/ui/gestures).
 
 ---
 
@@ -27,7 +27,7 @@ Para más informacion sobre los posibles gestos, puedes veravailable gestures [G
 
 | Nombre | Descripción |
 |------|-------------|
-| `tap` | Emitido cada vez que el boton es presionado.
+| `tap` | Emitido cada vez que el botón es presionado.
 
 ## Componente nativo
 

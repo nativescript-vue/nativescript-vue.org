@@ -6,7 +6,7 @@ contributors: [ianaya89]
 
 `<TimePicker>` es un componente de UI que permite al usuario seleccionar un valor de tiempo.
 
-> Pueder ver también, [DatePicker](/en/docs/elements/components/date-picker).
+> También puedes ver [DatePicker](/en/docs/elements/components/date-picker).
 
 ---
 

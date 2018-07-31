@@ -46,8 +46,8 @@ Para aplicar múltiples estilos al texto puedes usar el componente `<FormattedSt
 | `hint` | `String` | Obtiene o establece el texto del *placeholder* (siempre y cuando se un campo editable).
 | `editable` | `Boolean` | Indica cuando el usuario puede modificar el valor del campo de texto.<br>Valor pore defecto: `true`.
 | `maxLength` | `Number` | Limita el valor del campo de texto a un número determinado de caracteres.
-| `keyboardType` | `KeyboardType` | Muestra un tipo de teclado determinado para facilitar el ingreso de texto<br/>Posibles valores: `datetime`, `phone`, `number`, `url`, or `email`.
-| `returnKeyType` | Obtiene o establece el nombre de la tecla de retorno<br/>Posibles valores: `done`, `next`, `go`, `search`, or `send`.
+| `keyboardType` | `KeyboardType` | Muestra un tipo de teclado determinado para facilitar el ingreso de texto<br/>Posibles valores: `datetime`, `phone`, `number`, `url`, o `email`.
+| `returnKeyType` | Obtiene o establece el nombre de la tecla de retorno<br/>Posibles valores: `done`, `next`, `go`, `search`, o `send`.
 | `autocorrect` | `Boolean` | Habilita o deshabilita el autocorrector.
 
 ## Events

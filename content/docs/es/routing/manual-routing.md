@@ -13,7 +13,7 @@ La manera mas simple de usar rutas en NativeScript-Vue es usando cualquiera de e
 
 ### `$navigateTo`
 
-Puedes llamar a la funcioón `$navigateTo` dentro de la vista o tambien dentro de un método.
+Puedes llamar a la funcioón `$navigateTo` dentro de la vista o también dentro de un método.
 
 #### Dentro de la vista
 
@@ -57,7 +57,7 @@ new Vue({
 
 #### Dentro de un método
 
-Enlaza un boton (`<button>`) a un método del *view model* y escribe dentro de este, una llamada a la función `this.$navigateTo(Detail)` para navegar al componente `Detail`
+Enlaza un botón (`<button>`) a un método del *view model* y escribe dentro de este, una llamada a la función `this.$navigateTo(Detail)` para navegar al componente `Detail`
 
 ```Vue
 const Master = {
@@ -178,7 +178,7 @@ new Vue({
 
 #### Dentro de un método
 
-Enlaza un boton (`<button>`) a un método del *view model* y escribe dentro de este, una llamada a la función `this.$showModal(Detail)` para navegar al componente `Detail`
+Enlaza un botón (`<button>`) a un método del *view model* y escribe dentro de este, una llamada a la función `this.$showModal(Detail)` para navegar al componente `Detail`
 
 ```Vue
 const Master = {
@@ -235,7 +235,7 @@ const Detail = {
 };
 ```
 
-La propiedad `id` esta ahora disponible en el componente a traves de `this.id`
+La propiedad `id` esta ahora disponible en el componente a través de `this.id`
 
 Para mas información sobre propiedades, checa [la documentación oficial de Vue](https://vuejs.org/v2/guide/components-props.html)
 

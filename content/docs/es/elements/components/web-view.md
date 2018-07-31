@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_web_view_.webvie
 contributors: [ianaya89]
 ---
 
-`<WebView>` es un componente de UI que permite mostrar contenido web en tu aplicación. Puedes disponer y visualizar contenido que se obtiene a traves de una URL o de un archivo HTML loca. También puedes renderizar contenido HTML estático.
+`<WebView>` es un componente de UI que permite mostrar contenido web en tu aplicación. Puedes disponer y visualizar contenido que se obtiene a través de una URL o de un archivo HTML loca. También puedes renderizar contenido HTML estático.
 
 
 Puedes ver también: [HtmlView](/en/docs/elements/components/html-view).

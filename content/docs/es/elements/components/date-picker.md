@@ -6,7 +6,7 @@ contributors: [ianaya89]
 
 `<DatePicker>` es un componente de UI que permite al usuario seleccionar una fecha a partir de un rango pre-configurado.
 
-> Puedes ver también, [TimePicker](/en/docs/elements/components/time-picker).
+> Puedes ver también: [TimePicker](/en/docs/elements/components/time-picker).
 
 ---
 
@@ -29,9 +29,9 @@ contributors: [ianaya89]
 | `date` | `Date` | Obtiene o establece la fecha completa.
 | `minDate` | `Date` | Obtiene o establece la mínima fecha posible para seleccionar.
 | `maxDate` | `Date` | Obtiene o establece la máxima fecha posible para seleccionar.
-| `day` | `Number` | Obtiene o establece el día de la fecha
-| `month` | `Number` | Obtiene o establece el mes de la fecha
-| `year` | `Number` | Obtiene o establece el año de la fecha
+| `day` | `Number` | Obtiene o establece el día de la fecha.
+| `month` | `Number` | Obtiene o establece el mes de la fecha.
+| `year` | `Number` | Obtiene o establece el año de la fecha.
 
 ## Eventos
 

@@ -33,7 +33,7 @@ contributors: [ianaya89]
 
 | Nombre | Descripción |
 |------|-------------|
-| `valueChange`| Emitido cada vez que cambia el valor del slider.
+| `valueChange`| Emitido cada vez que cambia el valor del *slider*.
 
 ## Componente nativo
 

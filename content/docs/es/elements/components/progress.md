@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_progress_.progre
 contributors: [ianaya89]
 ---
 
-`<Progress>` es un componente de UI que muestra una barra para indicar el progreso de una determinada tarea.
+`<Progress>` es un componente de UI que muestra una barra para indicar el progreso de una tarea determinada.
 
 Puedes ver también: [ActivityIndicator](/en/docs/elements/components/activity-indicator).
 
@@ -20,7 +20,7 @@ Puedes ver también: [ActivityIndicator](/en/docs/elements/components/activity-i
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
-| `value` | `Number` | Obtiene o establece el actual valor de la barra de progreso. El número debe estar entre el rando de `0` a `maxValue`.
+| `value` | `Number` | Obtiene o establece el valor actual de la barra de progreso. El número debe estar entre el rango `0` a `maxValue`.
 | `maxValue` | `Number` | Obtiene o establece el máximo valor posible que puede tener la barra de progreso.<br/>Valor por defecto: `100`.
 
 ## Events

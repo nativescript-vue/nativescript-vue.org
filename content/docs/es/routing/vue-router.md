@@ -33,7 +33,7 @@ Define una página `Mater` con el *router* como título (`$route.path`).
 
 Crea un botón con el evento siguiente evento: `@tap="$router.push('/detail')"`. Cada vez que se presione este botón, una nueva página `Detail` será apilada en la pila de navegación.
 
-Crea un segundo botón con el mismo evento pero agrega un parametro de tipo *query* llamado `user` a la ruta. Cuando se presione este boton, le enviara información adicional a la página `Detail`.
+Crea un segundo botón con el mismo evento pero agrega un parametro de tipo *query* llamado `user` a la ruta. Cuando se presione este botón, le enviara información adicional a la página `Detail`.
 
 ```HTML
 const Master = {
@@ -54,7 +54,7 @@ Define la página `Detail` con un `NavigationButton`. Recuerda que en iOS, este 
 
 Dentro de `Detail`, puedes utilizar el parametro de tipo *query* llamado `user` que definiste en la página `Master`. Por ejemplo, se puede visualizar ese valor como texto dentro de un componente `Label`: `<Label :text="$route.query.user">`.
 
-Crea otro botón con el siguiente evento: `@tap="$router.go(<número-de-páginas>)`. Esto permitirá que cuando se presione ese boton, puedes navegar hacia atras una determinada cantidad de páginas.
+Crea otro botón con el siguiente evento: `@tap="$router.go(<número-de-páginas>)`. Esto permitirá que cuando se presione ese botón, puedes navegar hacia atras una determinada cantidad de páginas.
 
 ```HTML
 const Detail = {

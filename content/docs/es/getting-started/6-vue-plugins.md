@@ -3,14 +3,14 @@ title: Usando Plugins de Vue
 contributors: [ianaya89]
 ---
 
-Esta seccioón provee un resumen de los plugins de Vue actualmente soportados que funcionan con NativeScript-Vue.
+Esta seccioón provee un resumen de los plugins de Vue que funcionan con NativeScript-Vue.
 
 * [Vue Router](#vue-router)
 * [Vuex](#vuex)
 
 ## Vue Router
 
-> Actualmente, la integracion con Vue Router esta en modo **experimental**. Para mas información, lee [la sección Vue Router](/es/docs/routing/vue-router/).
+> Actualmente, la integracion con Vue Router esta en modo **experimental**. Para mas información puedes ver [la sección Vue Router](/es/docs/routing/vue-router/).
 
 ### Instalar y registrar el plugin
 
@@ -42,14 +42,14 @@ $ npm install --save vuex
 
 ### Importar el plugin
 
-Abre el archivo principal de tu aplicacion (*entry file*, comunmente llamado `app.js` o `main.js`) y luego agrega las siguientes lineas al comienzo del archivo:
+Abre el archivo principal de tu aplicación (*entry file*, comunmente llamado `app.js` o `main.js`) y luego agrega las siguientes lineas al comienzo del archivo:
 
 ```js
 import Vuex from 'vuex'
 Vue.use(Vuex)
 ```
 
-Una vez que hayas hecho esto, vas a poder disponer de Vuex para manejar el estado de tu aplicación móvil de forma muy similar a la que usas en tus aplicaciones web basadas en Vue.
+Una vez que hayas hecho esto, vas a poder disponer de Vuex para manejar el estado de tu aplicación móvil de forma muy similar a la implementada en tus aplicaciones web basadas en Vue.
 
 ### Uso: Crear el *store*
 
@@ -73,7 +73,7 @@ const store = new Vuex.Store({
 
 Ahora puedes manejar el estado de la aplicación, llamando al *store* que acabas de crear. En el siguiente ejemplo, la app registra los cambios de la propiedad `count` a medida que presionamos los botons `+` o `-`. Ten en cuenta que no esta cambiando el estado de forma directa, sino con llamadas a las *mutations* que permiten incrementar/decrementar el valor de `count`.
 
-```js
+```javascript
 new Vue({
   computed: {
     count(){
@@ -104,6 +104,6 @@ new Vue({
 }).$start()
 ```
 
-Para mas información sobre el funcionamiento de Vue, puedes checar la [documentación](https://vuex.vuejs.org/en/core-concepts.html).
+Para mas información sobre el funcionamiento de Vue, puedes ver la [documentación oficial](https://vuex.vuejs.org/en/core-concepts.html).
 
-Para mas informacion sobre como manejar elementos de Vuex, explora [el directorio `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) de la aplicación de ejemplo NativeScript-Vue Groceries.
+Para mas informacion sobre como manejar elementos de Vuex, explora [el directorio `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) de la aplicación de ejemplo *NativeScript-Vue Groceries*.

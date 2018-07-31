@@ -26,7 +26,7 @@ contributors: [ianaya89]
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
-| `orientation` | `String` | Obtiene o establece la dirección en la cual se desplaza el contenido: `horizontal` or `vertical`.<br/>Valor por defecto: `vertical`.
+| `orientation` | `String` | Obtiene o establece la dirección en la cual se desplaza el contenido: `horizontal` o `vertical`.<br/>Valor por defecto: `vertical`.
 | `scrollBarIndicatorVisible` | `Boolean` | Especifíca si la barra de desplazamiento esta visible o no.<br/>Valor por defecto: `true`.
 
 ## Eventos

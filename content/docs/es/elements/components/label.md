@@ -6,7 +6,7 @@ contributors: [ianaya89]
 
 `<Label>` es un componentede UI para mostrar un texto de solo lectura.
 
-**IMPORTANTE**: Este `<Label>` **no** es lo mismo que el `<label>` de HTML.
+**IMPORTANTE**: Este `<Label>` **NO** es lo mismo que el `<label>` de HTML.
 
 ---
 
@@ -36,7 +36,7 @@ Si necesitas agregar estilos a partes del texto, puedes usar una combinación de
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
-| `text` | `String` | Obtiene o establece el texto del elemento *label*
+| `text` | `String` | Obtiene o establece el texto del elemento *label*.
 | `textWrap` | `Boolean` | Obtiene o establece cuando el texto se ajusta o no al elemento que lo contiene.<br/>Valor por defecto: `false`.
 
 ## Componente nativo

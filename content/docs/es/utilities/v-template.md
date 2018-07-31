@@ -10,13 +10,13 @@ El componente `<v-template>` permite definir una plantilla reutilizable con comp
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
 | `if` | `String` | La condición mediante la cual se usará el *template*.
-| `name` | `String` | El nombre del *template* (si no es especificado, se auto genera).
+| `name` | `String` | El nombre del *template* (si no es especificado, se autogenera).
 
 ## Uso básico
 
 El componente `<v-template>` es utilizado internamente por el componente [ListView](/es/docs/elements/components/list-view) para iterar los elementos de la lista.
 
-## Uso avanzad
+## Uso avanzado
 
 Puedes usar el componente `v-template` para implementar componentes perzonalizados que requieran una o múltiples plantillas.
 
@@ -34,7 +34,7 @@ Los *templates* son almacenados como objetos, conforme a lo que indica la interf
 
 La propiedad `selectorFn` retorna una función que acepta una solo parametro. Este parametro representa al item cuyo template es seleccionado.
 
-Lo que hace esta función es recorrer todos los *templates* registrados en la instancia `TemplateBag` y delvolver el primero que cumple con la condición `if` especificada. En caso de no encontrar un coinsidencia, devuelve `default`.
+Lo que hace esta función es recorrer todos los *templates* registrados en la instancia `TemplateBag` y delvolver el primero que cumple con la condición `if` especificada. En caso de no encontrar una coincidencia, devuelve `default`.
 
 #### Métodos disponibles
 

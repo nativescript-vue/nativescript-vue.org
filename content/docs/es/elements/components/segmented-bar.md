@@ -6,10 +6,10 @@ contributors: [ianaya89]
 
 `<SegmentedBar>` es un componente de UI que muestra en pantalla una serie de botones para un selección discreta. Los botones pueden contener texto o imágenes.
 
-A lo contrario que sucede con el componente `<TabView>`:
+Al contrario de lo que sucede con el componente `<TabView>`:
 * La posición del componente `<SegmentedBar>` no es fija.
-* Puedes ubicar y personalizar el componente dentro de la página o dentro de otros elementos como un menu hamburguesa.
-* El contenido que se muestra luega de la selección (de un botón), debe ser manejado por separado.
+* Puedes ubicar y personalizar el componente dentro de la página o dentro de otros elementos (como un menu hamburguesa).
+* El contenido que se muestra luego de la selección (de un botón), debe ser manejado por separado.
 
 ---
 ```html
@@ -35,7 +35,7 @@ A lo contrario que sucede con el componente `<TabView>`:
 
 ## Propiedades
 
-| Nombre | Tipo | Descrición |
+| Nombre | Tipo | Descripción |
 |------|------|-------------|
 | `items` | `Array<SegmentedBarItem>` | La colección de elementos que se desea mostrar (la cual debe ser creada antes de renderizar el componente).
 | `selectedIndex` | `Number` | Obtiene o establece el índice del item seleccionado.
@@ -43,7 +43,7 @@ A lo contrario que sucede con el componente `<TabView>`:
 
 ## Eventos
 
-| Nombre | Descrición |
+| Nombre | Descripción |
 |------|-------------|
 | `selectedIndexChange`| Emitido cada vez que un item es presionado.
 

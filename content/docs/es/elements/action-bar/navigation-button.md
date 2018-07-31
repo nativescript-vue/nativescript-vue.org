@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.navi
 contributors: [ianaya89]
 ---
 
-El componente NavigationButton es una abstracción de NativeScript para el botón de Navegación de Android y el boton "atrás" de iOS.
+El componente NavigationButton es una abstracción de NativeScript para el botón de Navegación de Android y el botón "atrás" de iOS.
 
 ---
 
@@ -27,4 +27,4 @@ El componente NavigationButton es una abstracción de NativeScript para el botó
 
 | Nombre | Descripción |
 |------|-------------|
-| `tap`| Emitido cada vez que el boton es presionado.
+| `tap`| Emitido cada vez que el botón es presionado.

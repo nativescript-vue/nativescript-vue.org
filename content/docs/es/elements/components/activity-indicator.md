@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicat
 contributors: [ianaya89]
 ---
 
-`<ActivityIndicator>` es un componente de UI que muestra un indicador de progreso. Este componente permite señalar al usuario el estado de una operación que corre en segundo plano.
+`<ActivityIndicator>` es un componente de UI que muestra un indicador de progreso. Este componente permite señalar al usuario el estado de una operación que se ejecuta en segundo plano.
 
 ---
 

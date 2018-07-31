@@ -6,7 +6,7 @@ contributors: [ianaya89]
 
 El método `alert()` muestra un mensaje con un botón de OK. Puedes usarlo cuando tengas que mostrar información o notificaciones que no requieran de una acción por parte del usuario.
 
-El método forma para del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+Este método forma parte del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 

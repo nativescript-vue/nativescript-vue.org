@@ -5,7 +5,7 @@ contributors: [ianaya89]
 ---
 
 El contenedor `AbsoluteLayout` es el *layout* mas simple de NativeScript. Usa coordenadas absolutas para posicionar los componentes hijos a partir del vértice superior izquierdo.
-`AbsoluteLayout` no aplicará ninguna restricción de diseño a sus elementos hijos y tampoco no los redimensionará en el tiempo de ejecución (cuando cambie su tamaño).
+`AbsoluteLayout` no aplicará ninguna restricción de diseño a tus elementos hijos y tampoco los redimensionará en tiempo de ejecución (cuando cambie su tamaño).
 
 ### Ejemplos
 
@@ -38,7 +38,7 @@ El contenedor `AbsoluteLayout` es el *layout* mas simple de NativeScript. Usa co
 
 ## Propiedades de elementos hijos
 
-Cuando un elemento es un hijo directo de `AbsoluteLayout`, las siguientes propiedades toman significado (en el elemento hijo):
+Cuando un elemento es hijo directo de `AbsoluteLayout`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|

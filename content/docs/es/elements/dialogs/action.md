@@ -4,9 +4,9 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action
 contributors: [ianaya89]
 ---
 
-El método `action()`, muestra una lista de opciones seleccionables y un boton de cancelación. Utiliza este elemento para permitir que el usuario elija entre varias opciones o que cancele la selección.
+El método `action()`, muestra una lista de opciones seleccionables y un botón de cancelación. Utiliza este elemento para permitir que el usuario elija entre varias opciones o que cancele la selección.
 
-El método es para del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+Este método forma parte del [módulo de `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
 ---
 

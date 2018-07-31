@@ -6,11 +6,11 @@ contributors: [ianaya89]
 
 El contenedor `<GridLayout>` permite alinear los elementos hijos de una forma similar a una tabla o grilla.
 
-La grilla esta compuesta pof filas, columnas y celdas. Una celda puede abarcar una o mas filas y una o mas columnas. También puede contener múltiples elementos hijos, los cuales pueden abarcar mutiples filas y/o columnas e incluso superponerse unos con otros.
+La grilla esta compuesta por filas, columnas y celdas. Una celda puede abarcar una o mas filas y una o mas columnas. También puede contener múltiples elementos hijos, los cuales pueden abarcar mútiples filas y/o columnas e incluso superponerse unos con otros.
 
 Por defecto, el contenedor  `<GridLayout>` tiene una sola fila y una sola columna pero puedes agregar mas utilizando las propiedaes `columns` y `rows`. En ambas propiedades debes establecer la cantidad de columna/filas y el ancho y alto de las mismas. La manera de indicar la cantidad de columnas, es escribir una lista separada por comas con el ancho (*width*) de las mismas. El mismo procedimiento se aplica para las filas pero estableciendo al alto (*height*).
 
-Ten en cuenta que puedas configurar un ancho de columna y alto de file de forma fija tanto como de forma dinámica para lograr un efecto *responsive*.
+Ten en cuenta que puedas configurar un ancho de columna y alto de fila de forma fija o también de forma dinámica para lograr un efecto *responsive*.
 
 * **Número absoluto:** Indicar un tamaño fijo.
 * **auto:** Configurar que la columna sea tan ancha como su hijo más ancho o que la fila sea tan alta como su hijo más alto.
@@ -83,7 +83,8 @@ El siguiente ejemplo crea una grilla *responsive* con compleja con ancho y altos
 `rows` | `String` | Un valor de tipo `String` representando los altos de las filas (separados por coma: `,`)<br/>Posibles valores: Número absoluto (valor fijo de la columna), `auto` (hace que la fila sea tan alta como su elemento hijo más alto) o `*` (hace que la fila ocupe todo el espacio vertical disponible. El espacio está dividido proporcionalmente en todas las columnas de tamaño estrella. Puede establecer valores como `3*` y `5*` para indicar una proporción de 3:5 en tamaños).
 
 ## Propiedades de elementos hijos
-Cuando un elemento es un hijo directo de `GridLayout`, las siguientes propiedades toman significado (en el elemento hijo):
+
+Cuando un elemento es hijo directo de `GridLayout`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|

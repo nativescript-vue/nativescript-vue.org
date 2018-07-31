@@ -52,7 +52,7 @@ El contenedor `DockLayout` provee un mecanismo de acoplamiento para los elemento
 
 ## Propiedades de elementos hijos
 
-Cuando un elemento es un hijo directo de `DockLayout`, las siguientes propiedades toman significado (en el elemento hijo):
+Cuando un elemento es hijo directo de `DockLayout`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|

@@ -3,42 +3,40 @@ title: Playground Tutorial
 contributors: [ianaya89]
 ---
 
-El [NativeScript Playground](https://play.nativescript.org?template=play-vue) es un lugar en la nube donde puedas dar tus primeros pasos con NativeScript y Vue.js desde tu navegador. Simplemente ingresa al link y comienza arrastrar y soltar el código de los componentes.
+El [NativeScript Playground](https://play.nativescript.org?template=play-vue) es un lugar en la nube donde puedas dar tus primeros pasos con **NativeScript-Vue** desde tu navegador. Simplemente ingresa al link y comienza arrastrar y soltar componentes.
 
-Puedes trabajar con el *Playground* tanto como quieras: usarlo para probar como desarrollar con NativeScript o incluso dearrollar todo tu proyecto en la plataforma. Sin embarjo, cuando llegue el momento de llevar tu aplicación al mundo vas a necesitar instalar las [herramientas de NativeScript de forma local]((/es/docs/getting-started/installation) y luego [elegir uno de los templates disponibles](/es/docs/getting-started/templates).
+Puedes trabajar con el *Playground* tanto como quieras: usarlo para probar como desarrollar con NativeScript o incluso dearrollar todo tu proyecto en la plataforma. Sin embarjo, cuando llegue el momento de llevar tu aplicación al mundo, vas a necesitar instalar las [herramientas de NativeScript localmente]((/es/docs/getting-started/installation) y luego [elegir uno de los templates disponibles](/es/docs/getting-started/templates).
 
 **Esta sección, consiste en dos partes:**
-* [Parte 1: Familiarizandose con el Playround](#part-1-getting-familiar-with-the-playground)
-    * [Antes de comenzar](#before-you-start)
-    * [La disposición de la tierra](#the-lay-of-the-land)
-    * [Arrastra y suelta el código](#drag-and-drop-to-code)
-    * [Chequeo en tiempo real](#check-it-out-real-time)
-    * [Configura tu código](#configure-your-code)
-* [Parte 2: Construyendo una aplicación](#part-2-building-an-app)
-    * [El template básico de Vue.js](#the-bare-vuejs-template)
-    * [Diseño básico](#basic-design)
-    * [Funcionalidad básica: Agregar tareas](#basic-functionality-add-tasks)
-    * [Funcionalidad básica: Ver, completar y borrar tareas de la pestaña "To Do"](#basic-functionality-view-complete-and-delete-tasks-from-the-to-do-tab)
-    * [Funcionalidad básica: Ver, volver a tareas activas y borrar tareas de la pestaña "Completed"](#basic-functionality-view-return-to-active-tasks-and-delete-tasks-from-the-completed-tab)
-    * [Diseño avanzado: Estilar campo de texto y botón](#advanced-design-styled-input-field-and-button)
-    * [Diseño avanzado: Estilar pestaña de navegación](#advanced-design-styled-tab-navigation)
-    * [Diseño avanzado: Estilar tareas activas](#advanced-design-styled-active-tasks)
-    * [Diseño avanzado: Estilar tareas completadas](#advanced-design-styled-completed-tasks)
+* [Parte 1: Familiarizandose con el Playround](#parte-1-familiarizandose-con-el-playground)
+    * [Antes de comenzar](#antes-de-comenzar)
+    * [La disposición de la tierra](#la-disposición-de-la-tierra)
+    * [Arrastra y suelta código](#arrastra-y-suelta-código)
+    * [Chequeo en tiempo real](#cheque-en-tiempo-real)
+    * [Configura tu código](#configura-tu-código)
+* [Parte 2: Construyendo una aplicación](#parte-2-construyendo-una-aplicación)
+    * [El template básico de Vue.js](#el-template-básico-de-vuejs)
+    * [Diseño básico](#diseño-básico)
+    * [Funcionalidad básica: Agregar tareas](#funcionalidad-básica-agregar-tareas)
+    * [Funcionalidad básica: Ver, completar y borrar tareas de la pestaña "To Do"](#funcionalidad-básica-ver-completar-y-borrar-tareas-de-la-pestaña-to-do.)
+    * [Funcionalidad básica: Ver, volver a tareas activas y borrar tareas de la pestaña "Completed"](#funcionalidad-básica-ver-volver-a-tareas-activas-y-borrar-tareas-de-la-pestaña-completed)
+-   * [Diseño avanzado: Estilar campo de texto y botón](#diseño-avanzado-styled-input-field-and-button)
+    * [Diseño avanzado: Estilar pestaña de navegación](#diseño-avanzado-styled-tab-navigation)
+    * [Diseño avanzado: Estilar tareas activas](#diseño-avanzado-styled-active-tasks)
+    * [Diseño avanzado: Estilar tareas completadas](#diseño-avanzado-styled-completed-tasks)
 
 
 # Parte 1: Familiarizandose con el Playround
 
-Abriendo [este link](https://play.nativescript.org/?template=play-vue) vas a poder ver un editor de código simple en la nube, donde un template básico de NativeScript + Vue.js esta precargado para ti.
-
-> **TIP:** Checa [Sample Tasks for the Playground](/en/docs/getting-started/playground-tutorial) para tomar ideas de como empezar con el Playground.
+Abriendo [este link](https://play.nativescript.org/?template=play-vue) vas a poder ver un editor de código simple y en la nube, donde un template básico de NativeScript + Vue.js esta precargado para que empieces a usar.
 
 ### Antes de comenzar
 
 ![playground welcome screen](/screenshots/ns-playground/playground-home.png)
 
-Si esta es tu primera vez aqui, el *Playground* te solicitará instalar algunas aplicaciones móviles: NativeScript Playground y NativeScript Preview. Ambas te permiten ver en tiempo real, los cambios que realizas en el código sin necesidad de recompilar el mismo.
+Si esta es tu primera vez aquí, el *Playground* te solicitará instalar algunas aplicaciones móviles: NativeScript Playground y NativeScript Preview. Ambas te permiten ver en tiempo real, los cambios que realizas en el código sin necesidad de recompilar el mismo.
 
-Puedes obviar este paso, pero si lo haces vas a perderte mucha de la diversión de jugar un poco con Vue.js y NativeScript.
+Puedes obviar este paso, pero si lo haces te vas a perder mucha de la diversión de jugar un poco con Vue.js y NativeScript.
 
 Manten las aplicaciones corriendo mientras experimentas un poco con el código.
 
@@ -71,7 +69,7 @@ Para que la mayoría de los componentes funcionen, necesitas soltarlos dentro de
 
 ![](/screenshots/ns-playground/playground-preview.gif)
 
-Una vez que ubicas tu código en un lugar válido, puedres presionar el boton **Preview** (o `Ctrl+S`/`Cmd+S`) y ver como tu aplicación se actualiza en tu pantalla de forma instantanea.
+Una vez que ubicas tu código en un lugar válido, puedres presionar el botón **Preview** (o `Ctrl+S`/`Cmd+S`) y ver como tu aplicación se actualiza en tu pantalla de forma instantanea.
 
 En algunos casos, cuando interactuas con tu aplicación, esta puede cerrarse de manera inesperada. Simplemente vuelve a lanzarla y checa los reportes de errores.
 
@@ -96,10 +94,10 @@ Si quieres explorar mas a fondo el [NativeScript Playground](https://play.native
 * Funcionalidad básica
   * Agregar tareas: el usuario puede agregar tareas como texto
   * Ver tareas: Las nuevas tareas son mostradas como activas y pueden ser presionadas
-  * Tareas completadas: Al presionar una tarea activa se despliega un dialogo (de tipo *action*) con opciones
-  * Borrar tareas: Al presionar una tarea activa o completada se despligue una dialogo (de tipo *action*) con opciones
+  * Tareas completadas: Al presionar una tarea activa se despliega un diálogo (de tipo *action*) con opciones
+  * Borrar tareas: Al presionar una tarea activa o completada se despligue una diálogo (de tipo *action*) con opciones
 * Diseño avanzado
-  * Campo de texto y boton para agregar tareas con estilo personalizado
+  * Campo de texto y botón para agregar tareas con estilo personalizado
   * Pestañas con estilos personalizados
   * Tareas activas con estilos personalizados
   * Tareas completadas con estilos personalizados
@@ -138,7 +136,7 @@ Comunmente, luego del elemento `<ActionBar>`, vas a colocar componentes de neveg
 
 Usa el componente `<TabView>` para crear una aplicación con dos pestañas
 
-1. Remueve el componente `<ScrollView>` con todo su contenido creado por defecto<br/>Los componentes `<ScrollView>` tambien son elementos de primer nivel utilizados para contenido desplazable.
+1. Remueve el componente `<ScrollView>` con todo su contenido creado por defecto<br/>Los componentes `<ScrollView>` también son elementos de primer nivel utilizados para contenido desplazable.
 1. Arrastra y suelta el componente `<TabView>` donde lo quieras ubicar.<br/>Ten en cuenta que el Playground no aplica formato de código automatico al insertar nuevos componentes.
 1. Configura el alto (*height*) del elemento `<TabView>` para rellenar toda la pantalla (`100%`).<br/>En dispositivos iOS, el alto por defecto causa que las pestañas se muestren en el medio de la pantalla.
 1. Cambia los titlos de los elementos `<TabViewItem>` y su contenido, para reflejar el proposito de los mismos.<br/>En este punto, el contenido de texto de las pestañas es mostrado en elementos `<Label>` sin estilos ni formatos. Aplica la propiedad `textWrap="true"` a los componentes `<Label>` para mejorar la visualización del texto.
@@ -248,7 +246,7 @@ new Vue({
               <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
+            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Asegurate de configurar un alto (height) o tu lista no quedará visible en iOS. -->
               <v-template>
                 <Label :text="todo.name" />
               </v-template>
@@ -267,7 +265,7 @@ new Vue({
 }).$start();
 ```
 
-## Funcionalidad básica: Ver, completar y borrar tareas de la pestaña "To Do".
+## Funcionalidad básica: Ver, completar y borrar tareas de la pestaña "To Do"
 
 ### Progreso de la sección
 
@@ -279,7 +277,7 @@ Asi es como tu aplicación luce al principio de la sección y como lo hara una v
 
 ### Conceptos básicos de NativeScript
 
-Por defecto, el componente `<ListView>` detecta el gesto `tap` en cada item y emite el evento correspondiente. El evento contiene información con el índice del objeto presionado y la colección de todos los items. Para permitir que el usuario elija que hacer luego del gesto `tap`, podriamos lanzar un dialogo cada vez que ocurra el evento en cuestión
+Por defecto, el componente `<ListView>` detecta el gesto `tap` en cada item y emite el evento correspondiente. El evento contiene información con el índice del objeto presionado y la colección de todos los items. Para permitir que el usuario elija que hacer luego del gesto `tap`, podriamos lanzar un diálogo cada vez que ocurra el evento en cuestión
 
 El [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_) esta disponible de forma global y provee diferentes tipos de dialogos: `alert`, `action`, `prompt`, `login` y `confirmation`. Este ejemplo, utliza el de tipo [`action()`](/es/docs/elements/dialogs/action) para permitir que el usuario elija si quiere marcar una tarea como completada o si quiere eliminarla de la lista.
 
@@ -289,16 +287,16 @@ El [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_d
 1. En el nuevo componente `<ListView>` muestra elementos desde la colección de tareas completadas (`dones`).
 
   ```HTML
-  <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
+  <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Asegurate de configurar un alto (height) o tu lista no quedará visible en iOS. -->
     <v-template>
       <Label :text="done.name" />
     </v-template>
   </ListView>
   ```
 1. Modificar el método`onItemTap`.
-  * El método muestra el dialogo `action()`.
+  * El método muestra el diálogo `action()`.
   * El método imprime en consola la selección del usuario.
-  * Basado en ese selección, el método mueve elementos desde la colección de `todos` a la colección de `dones`, borra elementos de la colección `todos` o cierral el dialogo. Usa el método `splice()` para evitar "agujeros" en tu colección y `unshift()` para asegurarte que las nuevas tareas son mostradas al comienzo (ambos son métodos nativos de los objetos `Array` de JavaScript).
+  * Basado en ese selección, el método mueve elementos desde la colección de `todos` a la colección de `dones`, borra elementos de la colección `todos` o cierral el diálogo. Usa el método `splice()` para evitar "agujeros" en tu colección y `unshift()` para asegurarte que las nuevas tareas son mostradas al comienzo (ambos son métodos nativos de los objetos `Array` de JavaScript).
 
   ```javascript
   onItemTap(args) {
@@ -313,7 +311,7 @@ El [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_d
             case 'Delete forever':
               this.todos.splice(args.index, 1); // Eliminar la tarea activa presionada
               break;
-            case 'Cancel' || undefined: // Cerrar el dialogo
+            case 'Cancel' || undefined: // Cerrar el diálogo
               break;
           }
       })
@@ -346,7 +344,7 @@ new Vue({
             case 'Delete forever':
               this.todos.splice(args.index, 1); // Eliminar la tarea activa presionada
               break;
-            case 'Cancel' || undefined: // Cerrar el dialogo
+            case 'Cancel' || undefined: // Cerrar el diálogo
               break;
           }
       })
@@ -370,7 +368,7 @@ new Vue({
               <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
+            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Asegurate de configurar un alto (height) o tu lista no quedará visible en iOS. -->
               <v-template>
                 <Label :text="todo.name" />
               </v-template>
@@ -379,7 +377,7 @@ new Vue({
         </TabViewItem>
 
         <TabViewItem title="Completed">
-          <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
+          <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Asegurate de configurar un alto (height) o tu lista no quedará visible en iOS. -->
               <v-template>
                 <Label :text="done.name" />
               </v-template>
@@ -393,7 +391,7 @@ new Vue({
 }).$start();
 ```
 
-## Funcionalidad básica: Ver, retornar a tareas activas y borrar tareas de la pestaña *Completed*
+## Funcionalidad básica: Ver, volver a tareas activas y borrar tareas de la pestaña "Completed"
 
 ### Progreso de la sección
 
@@ -411,9 +409,9 @@ Esta implementación no requiere ningun conocimiento extra.
 
 Para la segunda pestaña modifica el método `onDoneTap`:
 
-* El método muestra dialogo `action()`.
+* El método muestra diálogo `action()`.
 * El método imprime en consola la selección del usuario (*debugging*).
-* Basandose en la selección, el método mueve los elementos desde la colección de `dones` a la de `todos`, elimina elementos de la colección de `dones` o cierra el dialogo. Usa el método `splice()` para evitar "agujeros" en tu colección y `unshift()` para asegurarte que las nuevas tareas son mostradas al comienzo (ambos son métodos nativos de los objetos `Array` de JavaScript).
+* Basandose en la selección, el método mueve los elementos desde la colección de `dones` a la de `todos`, elimina elementos de la colección de `dones` o cierra el diálogo. Usa el método `splice()` para evitar "agujeros" en tu colección y `unshift()` para asegurarte que las nuevas tareas son mostradas al comienzo (ambos son métodos nativos de los objetos `Array` de JavaScript).
 
   ```javascript
   onDoneTap(args) {
@@ -502,7 +500,7 @@ new Vue({
               <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
               <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
             </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height="100%" > <!-- Make sure to set a height or your list will not show on iOS. -->
+            <ListView for="todo in todos" @itemTap="onItemTap" height="100%" > <!-- Asegurate de configurar un alto (height) o tu lista no quedará visible en iOS. -->
               <v-template>
                 <Label :text="todo.name" />
               </v-template>
@@ -511,7 +509,7 @@ new Vue({
         </TabViewItem>
 
         <TabViewItem title="Completed">
-          <ListView for="done in dones" @itemTap="onDoneTap" height="100%" > <!-- Make sure to set a height or your list will not show on iOS. -->
+          <ListView for="done in dones" @itemTap="onDoneTap" height="100%" > <!-- Asegurate de configurar un alto (height) o tu lista no quedará visible en iOS. -->
               <v-template>
                 <Label :text="done.name" />
               </v-template>

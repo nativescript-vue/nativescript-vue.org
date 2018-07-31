@@ -5,9 +5,9 @@ contributors: [ianaya89]
 
 ---
 
-`<TextField>` es un componente de UI que permite al usuario ingresar información a traves de un cuadro de texto (de una sola línea).
+`<TextField>` es un componente de UI que permite al usuario ingresar información a través de un campo de texto (de una sola línea).
 
-El componente `<TextField>` extiende a [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) y a[`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase),provee propiedades y eventos adicionales.
+El componente `<TextField>` extiende a [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) y a [`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase), agregando propiedades y eventos adicionales.
 
 ---
 
@@ -32,8 +32,8 @@ El componente `<TextField>` extiende a [`TextBase`](https://docs.nativescript.or
 | `editable` | `Boolean` | Indica cuando el usuario puede modificar el valor del campo de texto.<br>Valor pore defecto: `true`.
 | `maxLength` | `Number` | Limita el valor del campo de texto a un número determinado de caracteres.
 | `secure` | `Boolean` | Oculta el valor del campo de texto. Usa este propiedad para crear campos de texto para contraseñas.<br/>Default value: `false`.
-| `keyboardType` | `KeyboardType` | Muestra un tipo de teclado determinado para facilitar el ingreso de texto<br/>Posibles valores: `datetime`, `phone`, `number`, `url`, or `email`.
-| `returnKeyType` | `ReturnKeyType` | Obtiene o establece el nombre de la tecla de retorno<br/>Posibles valores: `done`, `next`, `go`, `search`, or `send`.
+| `keyboardType` | `KeyboardType` | Muestra un tipo de teclado determinado para facilitar el ingreso de texto<br/>Posibles valores: `datetime`, `phone`, `number`, `url`, o `email`.
+| `returnKeyType` | `ReturnKeyType` | Obtiene o establece el nombre de la tecla de retorno<br/>Posibles valores: `done`, `next`, `go`, `search`, o `send`.
 | `autocorrect` | `Boolean` | Habilita o deshabilita el autocorrector.
 
 ## Events
