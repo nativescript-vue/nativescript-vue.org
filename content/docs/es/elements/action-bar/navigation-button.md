@@ -19,9 +19,9 @@ El componente NavigationButton es una abstracción de NativeScript para el botó
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
 | `text` | `String` | Establece el texto que se mostrará en iOS.
-| `android.systemIcon` | `String` | Establece el ícono que se mostrará en Android.
+| `android.systemIcon` | `String` | Establece el icono que se mostrará en Android.
 
-**La lista de posibles íconos para Android se puede encontrar en este [link](https://developer.android.com/reference/android/R.drawable.html), los íconos son aquellos que comienzan con el prefijo `ic_`.**
+**La lista de posibles iconos para Android se puede encontrar en este [link](https://developer.android.com/reference/android/R.drawable.html), los iconos son aquellos que comienzan con el prefijo `ic_`.**
 
 ## Eventos
 

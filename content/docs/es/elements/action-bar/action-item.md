@@ -19,9 +19,9 @@ El componente ActionItem es utilizado para agregar botones (con acciones) al com
 </ActionBar>
 ```
 
-#### Mostrando items con condicionales
+#### Mostrando elementos con condicionales
 
-Los elementos `ActionItems` pueden ser represantados usando condiciones con la directiva `v-show`.
+Los elementos `ActionItems` pueden ser representados usando condiciones con la directiva `v-show`.
 
 ```html
 <ActionBar title="My App">

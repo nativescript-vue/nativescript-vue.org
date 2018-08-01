@@ -65,7 +65,7 @@ onItemTap(event) {
 |------|------|-------------|
 | `for` | `String` | Provee una expresión para iterar por todos los elementos.<br/>Por ejemplo: <ul><li><code>item in listOfItems</code></li><li><code>(item, index) in listOfItems</code></li><li><code>item in [1, 2, 3, 4, 5]</code></li></ul>
 | `items` | `Array<any>` | Una colección de elementos para mostrar dentro del `<ListView>`.<br/>**Esta propiedad es solo para uso avanzado. En su lugar use la propiedad `for`.**
-| `separatorColor` | `Color` | Establece la línea que separa cada elemento. Puedes usar el valor `transparent` para removerla.
+| `separatorColor` | `Color` | Establece la línea que separa cada elemento. Puedes usar el valor `transparent` para eliminarla.
 
 ## Eventos
 

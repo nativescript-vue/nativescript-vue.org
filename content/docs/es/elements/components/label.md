@@ -16,7 +16,7 @@ contributors: [ianaya89]
 
 [> screenshots for=Label <]
 
-### Agregand stilos a `<Label>`
+### Agregando estilos a `<Label>`
 
 Si necesitas agregar estilos a partes del texto, puedes usar una combinación de los elementos [`FormattedString`](https://docs.nativescript.org/angular/ui/ng-ui-widgets/formatted-string) y [`Span`](https://docs.nativescript.org/api-reference/classes/_text_span_.span).
 
