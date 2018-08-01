@@ -1,18 +1,20 @@
 ---
 title: LoginDialog
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#login
-contributors: [alexhiroshi]
+apiRef: 'https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#login'
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+The `login()` method shows a dialog where the user can provide login credentials.
 
-O método `login()` exibe um diálogo onde o usuário pode fornecer credenciais de login.
+The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
-O método faz parte do [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+* * *
 
----
+## Basic use
 
-## Uso básico
-
-O método `login()` está disponível globalmente. Você pode chamar de qualquer lugar do seu aplicativo.
+The `login()` method is available globally. You can call it anywhere in your app.
 
 ```javascript
 login("Your message", "Username field value", "Password field value").then(result => {
@@ -20,7 +22,7 @@ login("Your message", "Username field value", "Password field value").then(resul
 });
 ```
 
-## Configurar opções
+## Configure dialog options
 
 ```JavaScript
 login({

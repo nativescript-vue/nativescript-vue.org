@@ -1,11 +1,14 @@
 ---
-title: Introdução rápida
-contributors: [alexhiroshi, WesleiRamos]
+title: Quick Start
+contributors:
+  - rigor789
+  - eddyverbruggen
+  - damain
+  - ikoevska
 ---
+If you don't want the hassle of installing and configuring your system before you can have a taste of NativeScript-Vue, the [NativeScript Playground](/en/docs/getting-started/playground-tutorial) has you covered.
 
-Se você não quiser ter o trabalho de instalar e configurar seu sistema antes de desenvolver com NativeScript + Vue.js, você pode usar [Playground do NativeScript](/pt-BR/docs/getting-started/playground-tutorial).
-
-Mas se [você já tem o sistema pronto para o desenvolvimento nativo](/pt-BR/docs/getting-started/installation), você pode começar usando um template:
+But if [you already have your system ready for native development](/en/docs/getting-started/installation), you can start by using a template:
 
 ```shell
 $ npm install -g @vue/cli @vue/cli-init
@@ -14,18 +17,18 @@ $ cd <project-name>
 $ npm install
 ```
 
-e então execute o seu aplicativo usando:
+Next, run your app using:
 
 ```shell
 $ npm run watch:<platform>
 ```
 
-onde platform é `ios` ou `android`.
+where platform is `ios` or `android`.
 
-Este conjunto de comandos realiza as seguintes operações no seu systema:
+This set of commands performs the following operations on your system:
 
-1. Instala o Vue CLI e seu complemento de inicialização no seu sistema. Isto permite você usar NativeScript CLI e o Vue CLI no seu sistema. Ignore esse comando se você já possui o Vue CLI instalado.
-2. Extrai o template selecionado (o template NativeScript-Vue compativel com Vue CLI) e cria um projeto localmente. Este template depende dos componentes `.vue` e fornece roteamento e gerenciamento de estado Vuex pronto para o uso. Para mais informações sobre os templates disponíveis, veja a [documentação de templates](/pt-BR/docs/getting-started/templates).
-3. Alterna para o diretório que contém o projeto recem criado.
-4. Instala qualquer dependência npm localmente.
-5. Cria e executa o projeto em quaisquer dispositivo conectado ou emulador instalado para a plataforma selecionada. A opção `watch` detecta mudanças no código e as aplica automaticamente.
+1. Installs the Vue CLI and its init add-on on your system. This lets you use both the NativeScript CLI and the Vue CLI on your system. Skip this command, if you already have Vue CLI installed.
+2. Pulls the selected template (the Vue CLI-compatible NativeScript-Vue template) and creates a project locally. This template relies on `.vue` components and provides routing and Vuex state management out of the box. For more information about the available templates, see [Templates](/en/docs/getting-started/templates).
+3. Switches to the directory containing the newly created project.
+4. Installs any npm dependencies locally.
+5. Builds and runs the project on any connected devices or installed emulators for the selected platform. The `watch` option detects code changes and applies them automatically.

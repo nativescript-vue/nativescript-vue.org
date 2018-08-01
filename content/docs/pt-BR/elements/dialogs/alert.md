@@ -1,18 +1,20 @@
 ---
 title: AlertDialog
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#alert
-contributors: [alexhiroshi]
+apiRef: 'https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#alert'
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+The `alert()` method shows a message and an OK button. Use it to show information and notifications that do not require an action from the user.
 
-O método `alert()` exibe uma mensagem e um botão de OK. Use-o para mostrar informações e notificações que não precisam de uma ação do usuário.
+The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
-O método faz parte do [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+* * *
 
----
+## Basic use
 
-## Uso básico
-
-O método `alert()` está disponível globalmente. Você pode chamar de qualquer lugar do seu aplicativo.
+The `alert()` method is available globally. You can call it anywhere in your app.
 
 ```javascript
 alert('Your message')
@@ -21,7 +23,7 @@ alert('Your message')
   });
 ```
 
-## Configurar opções
+## Configure dialog options
 
 ```JavaScript
 alert({

@@ -1,14 +1,17 @@
 ---
 title: WrapLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_wrap_layout_
-contributors: [alexhiroshi]
+contributors:
+  - rigor789
+  - ikoevska
 ---
+`<WrapLayout>` is a layout container that lets you position items in rows or columns, based on the `orientation` property. When the space is filled, the container automatically wraps items onto a new row or column.
 
-O container WrapLayout posiciona os filhos em linhas ou colunas, baseado na propriedade orientation até o espaço ser preenchido, e então e ele os coloca em uma nova linha ou coluna.
+### Samples
 
-### Exemplos
+#### Default wrap layout
 
-#### WrapLayout padrão
+The following example creates a row of equally-sized items. When the row runs out of space, the container wraps the last item on a new row.
 
 ```html
 <WrapLayout backgroundColor="#3c495e">
@@ -18,9 +21,12 @@ O container WrapLayout posiciona os filhos em linhas ou colunas, baseado na prop
   <Label text="fourth" width="30%" height="30%" backgroundColor="#289062"/>
 </WrapLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_horizontal.svg" />
 
-#### WrapLayout Vertical
+#### Vertical wrap layout
+
+The following example creates a column of equally-sized items. When the row runs out of space, the container wraps the last item on a new column.
 
 ```html
 <WrapLayout orientation="vertical" backgroundColor="#3c495e">
@@ -30,17 +36,17 @@ O container WrapLayout posiciona os filhos em linhas ou colunas, baseado na prop
   <Label text="fourth" width="30%" height="30%" backgroundColor="#289062"/>
 </WrapLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_vertical.svg" />
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-`orientation` | `String` | Valor indicando a direção do fluxo. Se o valor de orientation é `horizontal`, os itens são organizados em linhas. Se o valor de orientation é `vertical`, os itens são organizados em colunas. O valor padrão é `horizontal`.
-`itemWidth` | `Number` | A largura usada para medir e desenhar cada filho. Valor padrão é `Number.NaN`, que não restrige aos filhos.
-`itemHeight` | `Number` | A altura usado para medir e desenhar cada filho. Valor padrão é `Number.NaN`, que não restrige aos filhos.
+| Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `orientation` | `String` | Specifies the stacking direction.  
+Valid values: `horizontal` (arranges items in rows) and `vertical` (arranges items in columns).  
+Default value: `horizontal`. `itemWidth` | `Number` | Sets the width used to measure and layout each child.  
+Default value: `Number.NaN`, which does not restrict children. `itemHeight` | `Number` | Sets the height used to measure and layout each child.  
+Default value is `Number.NaN`, which does not restrict children.
 
+## Additional children props
 
-## Propriedades filhas adicionais
-
-Não existem propriedades adicionais para elementos filhos.
+None.

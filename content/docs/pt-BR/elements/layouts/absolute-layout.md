@@ -1,14 +1,23 @@
 ---
 title: AbsoluteLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_absolute_layout_
-contributors: [alexhiroshi]
+contributors:
+  - rigor789
+  - ikoevska
 ---
+The `<AbsoluteLayout>` container is the simplest layout container in NativeScript.
 
-O container AbsoluteLayout é o container de layout mais simples do NativeScript. Ele usa coordenadas absolutas do topo e da esquerda do container para posicionar os filhos. O AbsoluteLayout não aplicará nenhum restrição de layout nos filhos e também não redimensionará em tempo de execução quando o seu tamanho mudar.
+`<AbsoluteLayout>` has the following behavior:
 
-### Exemplos
+* Uses a pair of absolute left/top coordinates to position its children.
+* Doesn't enforce any layout constraints on its children.
+* Doesn't resize its children at runtime when its size changes.
 
-#### Um layout de grid
+## Examples
+
+### A grid-like layout
+
+The following example creates a simple grid. For more information about creating grid layouts, see [GridLayout](/en/docs/elements/layouts/grid-layout).
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -18,9 +27,12 @@ O container AbsoluteLayout é o container de layout mais simples do NativeScript
   <Label text="120,120" left="120" top="120" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_grid.svg" />
 
-#### Elementos sobrepostos
+### Overlapping elements
+
+The following example creates a group of overlapping items.
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -28,18 +40,18 @@ O container AbsoluteLayout é o container de layout mais simples do NativeScript
   <Label text="30,40" left="30" top="40" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_overlap.svg" />
 
+## Props
 
-## Propriedades
+None.
 
-AbsoluteLayout não tem propriedades.
+## Additional children props
 
-## Propriedades filhas adicionais
+When an element is a direct child of `<AbsoluteLayout>`, you can work with the following additional properties.
 
-Quando um elemento é filho direto de um AbsoluteLayout, as seguintes propriedades obtêm um significado:
-
-| nome | tipo | descrição |
-|------|------|-------------|
-| `top` | `Number` | Um valor representando a distância do topo do AbsoluteLayout pai
-| `left` | `Number` | Um valor representando a distância da esquerda do AbsoluteLayout pai
+| Name   | Type     | Description                                                                                               |
+| ------ | -------- | --------------------------------------------------------------------------------------------------------- |
+| `top`  | `Number` | Gets or sets the distance, in pixels, between the top edge of the child and the top edge of its parent.   |
+| `left` | `Number` | Gets or sets the distance, in pixels, between the left edge of the child and the left edge of its parent. |

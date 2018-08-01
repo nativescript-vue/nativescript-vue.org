@@ -1,19 +1,21 @@
 ---
 title: Slider
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_slider_.slider
-contributors: [alexhiroshi]
-
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<Slider>` is a UI component that provides a slider control for picking values within a specified numeric range.
 
-O componente Slider permite o usuário inserir um valor numérico de um intervalo especificado.
-
----
+* * *
 
 ```html
 <Slider value="80" @valueChange="onValueChanged" />
 ```
 
-**Nota**: Esse componente suporta two-way data binding usando `v-model`:
+`<Slider>` provides two-way data binding using `v-model`:
 
 ```html
 <Slider v-model="value" />
@@ -21,22 +23,25 @@ O componente Slider permite o usuário inserir um valor numérico de um interval
 
 [> screenshots for=Slider <]
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `value` | `Number` | Valor do slider.
-| `minValue` | `Number` | Valor mínimo do slider. Padrão `0`.
-| `maxValue` | `Number` | Valor máximo do slider. Padrão `100`.
+| Name       | Type     | Description                                                                    |
+| ---------- | -------- | ------------------------------------------------------------------------------ |
+| `value`    | `Number` | Gets or sets the currently selected value of the slider.  
+Default value: `0`. |
+| `minValue` | `Number` | Gets or sets the minimum value of the slider.  
+Default value: `0`.            |
+| `maxValue` | `Number` | Gets or sets the maximum value of the slider.  
+Default value: `100`.          |
 
-## Eventos
+## Events
 
-| nome | descrição |
-|------|-------------|
-| `valueChange`| Emitido quando o valor do slider é alterado.
+| Name          | Description                                   |
+| ------------- | --------------------------------------------- |
+| `valueChange` | Emitted when the value of the slider changes. |
 
-## Componente Nativo
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| android.widget.SeekBar | UISlider
+| Android                                                                                         | iOS                                                                    |
+| ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`android.widget.SeekBar`](https://developer.android.com/reference/android/widget/SeekBar.html) | [`UISlider`](https://developer.apple.com/documentation/uikit/uislider) |

@@ -1,15 +1,23 @@
 ---
-title: 고정 (AbsoluteLayout)
+title: AbsoluteLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_absolute_layout_
-contributors: [qgp9]
+contributors:
+  - rigor789
+  - ikoevska
 ---
+The `<AbsoluteLayout>` container is the simplest layout container in NativeScript.
 
-AbsoluteLayout 컨테이너는 네이티브-스크립트에서 가장 간단한 레이아웃 컨테이너입니다. 이 컨테이너는 자식들의 위치로 절대 top-left 좌표를 사용합니다.
-AbsoluteLayout은 자식들의 레이아웃을 제안하지 않고 런타임에 자신의 크기가 변경될때 자식들의 크기를 변경하지 않습니다.
+`<AbsoluteLayout>` has the following behavior:
 
-### 예제
+* Uses a pair of absolute left/top coordinates to position its children.
+* Doesn't enforce any layout constraints on its children.
+* Doesn't resize its children at runtime when its size changes.
 
-#### 그리드 같은(grid-like) 레이아웃
+## Examples
+
+### A grid-like layout
+
+The following example creates a simple grid. For more information about creating grid layouts, see [GridLayout](/en/docs/elements/layouts/grid-layout).
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -19,9 +27,12 @@ AbsoluteLayout은 자식들의 레이아웃을 제안하지 않고 런타임에 
   <Label text="120,120" left="120" top="120" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_grid.svg" />
 
-#### 요소 겹침 (Overlapping elements)
+### Overlapping elements
+
+The following example creates a group of overlapping items.
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -29,18 +40,18 @@ AbsoluteLayout은 자식들의 레이아웃을 제안하지 않고 런타임에 
   <Label text="30,40" left="30" top="40" width="100" height="100" backgroundColor="#43b883"/>
 </AbsoluteLayout>
 ```
-<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_overlap.svg" />
 
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_overlap.svg" />
 
 ## Props
 
-AbsoluteLayout은 prop이 없습니다.
+None.
 
-## 추가적인 자식들의 Props (Additional Children Props)
+## Additional children props
 
-요소가 AbsoluteLayout의 바로 아래 자식일때, 다음 prop들을 사용할 수 있습니다:
+When an element is a direct child of `<AbsoluteLayout>`, you can work with the following additional properties.
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-| `top` | `Number` | 부모 AbsoluteLayout의 top으로 부터 거리
-| `left` | `Number` | 부모 AbsoluteLayout의 left로 부터 거리
+| Name   | Type     | Description                                                                                               |
+| ------ | -------- | --------------------------------------------------------------------------------------------------------- |
+| `top`  | `Number` | Gets or sets the distance, in pixels, between the top edge of the child and the top edge of its parent.   |
+| `left` | `Number` | Gets or sets the distance, in pixels, between the left edge of the child and the left edge of its parent. |

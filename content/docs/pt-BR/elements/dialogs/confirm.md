@@ -1,18 +1,20 @@
 ---
 title: ConfirmDialog
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#confirm
-contributors: [alexhiroshi]
+apiRef: 'https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#confirm'
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+The `confirm()` method shows a confirmation message and Cancel and OK buttons.
 
-O método `confirm()` exibe uma mensagem de confirmação com botões de Cancel e OK.
+The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
-O método faz parte do [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+* * *
 
----
+## Basic use
 
-## Uso básico
-
-O método `confirm()` está disponível globalmente. Você pode chamar de qualquer lugar do seu aplicativo.
+The `confirm()` method is available globally. You can call it anywhere in your app.
 
 ```javascript
 confirm('Your message')
@@ -21,7 +23,7 @@ confirm('Your message')
   });
 ```
 
-## Configurar opções
+## Configure dialog options
 
 ```javascript
 confirm({
