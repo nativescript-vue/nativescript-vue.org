@@ -1,12 +1,12 @@
 ---
 title: ActionItem
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionitem
-contributors: [alexhiroshi]
+contributors:
+  - rigor789
 ---
+The ActionItem component is used to add additional action buttons to the ActionBar.
 
-O componenete ActionItem é usado para incluir botões de ação adicionais na ActionBar.
-
----
+* * *
 
 ```html
 <ActionBar title="My App">
@@ -19,9 +19,9 @@ O componenete ActionItem é usado para incluir botões de ação adicionais na A
 </ActionBar>
 ```
 
-#### Condicionalmente mostrando action itens
+#### Conditionally showing action items
 
-As ActionItems podem ser exibidas com base em uma condição usando a diretiva `v-show`.
+ActionItems can be displayed based on a condition using the `v-show` directive.
 
 ```html
 <ActionBar title="My App">
@@ -40,17 +40,24 @@ As ActionItems podem ser exibidas com base em uma condição usando a diretiva `
 </ActionBar>
 ```
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `ios.systemIcon` | `String` | Define o ícone para iOS.
-| `android.systemIcon` | `String` | Define o ícone para Android.
-| `ios.position` | `String` | Define a posição para o iOS.<br>Possíveis valores:<br>- `left` (padrão): Coloca o item do lado esquerdo da ActionBar.<br>- `right`: Coloca o item do lado direito da ActionBar.
-| `android.position` | `String` | Define a posição para o Android.<br>Possíveis valores:<br>- `actionBar` (padrão): Coloca o item na ActionBar.<br>- `popup`: Coloca o item no menu de opções. Os itens serão renderizado como texto.<br>- `actionBarIfRoom`: Coloca o item na ActionBar se houver espaço. Caso contrário, coloca no menu de opções.
+| name                 | type     | description                                                                                                                                                                                                                                                                                                         |
+| -------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ios.systemIcon`     | `String` | Sets the icon for iOS.                                                                                                                                                                                                                                                                                              |
+| `android.systemIcon` | `String` | Sets the icon for Android.                                                                                                                                                                                                                                                                                          |
+| `ios.position`       | `String` | Sets the position for iOS.  
+Possible values:  
+- `left` (default): Puts the item on the left side of the ActionBar.  
+- `right`: Puts the item on the right side of the ActionBar.                                                                                                                                 |
+| `android.position`   | `String` | Sets the position for Android.  
+Possible values:  
+- `actionBar` (default): Puts the item in the ActionBar.  
+- `popup`: Puts the item in the options menu. Items will be rendered as text.  
+- `actionBarIfRoom`: Puts the item in the ActionBar if there is room for it. Otherwise, puts it in the options menu. |
 
-## Eventos
+## Events
 
-| nome | descrição |
-|------|-------------|
-| `tap`| Emitido quando o ActionItem for tocado.
+| name  | description                                  |
+| ----- | -------------------------------------------- |
+| `tap` | Emitted when the ActionItem has been tapped. |

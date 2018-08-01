@@ -1,12 +1,13 @@
 ---
 title: ActionBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionbar
-contributors: [sn0wil]
+contributors:
+  - rigor789
+  - eddyverbruggen
 ---
-
 Компонент ActionBar - это абстракция NativeScript для Android ActionBar и iOS NavigationBar.
 
----
+* * *
 
 #### Использование заголовка
 
@@ -32,18 +33,18 @@ contributors: [sn0wil]
 ```
 
 #### Удаление рамок
-  На iOS и Android внизу ActionBar рисуется маленькая рамка.
-  Кроме того, цвет фона ActionBar на iOS немного отличается от того, что вы указываете,
-  потому что iOS применяет фильтр. Чтобы удалить этот фильтр и рамку, установите свойство `flat` в значение `true`.
+
+На iOS и Android внизу ActionBar рисуется маленькая рамка. Кроме того, цвет фона ActionBar на iOS немного отличается от того, что вы указываете, потому что iOS применяет фильтр. Чтобы удалить этот фильтр и рамку, установите свойство `flat` в значение `true`.
+
 ```html
 <ActionBar title="My App" flat="true" />
 ```
 
 ## Свойства
 
-| Название | Тип | Описание |
-|------|------|-------------|
-| `title` | `String` | Заголовок, отображаемый в ActionBar.
-| `android.icon` | `String` | Иконка, отображаемая на Android.
-| `android.iconVisibility` | `String` | Устанавливается, когда иконка видима.
-| `flat` | `boolean` | Удаляет рамку и цвет фильтра на iOS. Значение по умолчанию - `false`.
+| название                 | тип       | описание                                                              |
+| ------------------------ | --------- | --------------------------------------------------------------------- |
+| `title`                  | `String`  | Заголовок, отображаемый в ActionBar.                                  |
+| `android.icon`           | `String`  | Иконка, отображаемая на Android.                                      |
+| `android.iconVisibility` | `String`  | Устанавливается, когда иконка видима.                                 |
+| `flat`                   | `boolean` | Удаляет рамку и цвет фильтра на iOS. Значение по умолчанию - `false`. |

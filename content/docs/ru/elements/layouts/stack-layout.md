@@ -1,14 +1,17 @@
 ---
 title: StackLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_stack_layout_
-contributors: [lex111]
+contributors:
+  - rigor789
+  - ikoevska
 ---
+`<StackLayout>` is a layout container that lets you stack the child elements vertically (default) or horizontally.
 
-Контейнер StackLayout собирает в стек дочерние элементы либо по вертикали (по умолчанию), либо по горизонтали.
+### Samples
 
-### Примеры
+#### Default stacking
 
-#### StackLayout по умолчанию
+The following example creates a vertical stack of 3 equally-sized elements. Items are stretched to cover the entire width of the screen. Items are placed in the order they were declared in.
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -17,9 +20,12 @@ contributors: [lex111]
   <Label text="third" height="70" backgroundColor="#1c6b48"/>
 </StackLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical.svg" />
 
-#### Горизонтальный StackLayout
+#### Horizontal stacking
+
+The following example creates a horizontal stack of 3 equally-sized elements. Items are stretched to cover the entire height of the screen. Items are placed in the order they were declared in.
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -28,9 +34,12 @@ contributors: [lex111]
   <Label text="third" width="70" backgroundColor="#1c6b48"/>
 </StackLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal.svg" />
 
-#### StackLayout с горизонтально выровненными дочерними элементами
+#### Stack layout with horizontally aligned children
+
+The following example creates a diagonal stack of items with responsive sizes. Items are vertically stacked.
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -44,9 +53,12 @@ contributors: [lex111]
          height="70" backgroundColor="#43b883"/>
 </StackLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical_align_children.svg" />
 
-#### Горизонтальный StackLayout с вертикально выровненными дочерними элементами
+#### Horizontal stack layout with vertically aligned children
+
+The following example creates a diagonal stack of items with responsive sizes. Items are horizontally stacked.
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -60,14 +72,15 @@ contributors: [lex111]
          width="70" backgroundColor="#43b883"/>
 </StackLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal_align_children.svg" />
 
-## Свойства
+## Props
 
-| Название | Тип | Описание |
-|------|------|-------------|
-`orientation` | `String` | Указывает направление размещения. Возможные значения: `vertical` и `horizontal`. Значение по умолчанию — `vertical`.
+| Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `orientation` | `String` | Specifies the stacking direction.  
+Valid values: `vertical` and `horizontal`.  
+Default value: `vertical`.
 
-## Дополнительные свойства дочерних элементов
+## Additional children props
 
-Дополнительных свойств для дочерних элементов нет.
+None.

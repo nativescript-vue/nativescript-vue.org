@@ -1,16 +1,24 @@
 ---
-title: 독 (DockLayout)
+title: DockLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_layout_
-contributors: [qgp9]
+contributors:
+  - rigor789
+  - ikoevska
 ---
+`<DockLayout>` is a layout container that lets you dock child elements to the sides or the center of the layoyt.
 
-DockLayout는 도킹 메커니즘을 제공하는 레이아웃입니다. 자식 요소들은 레이아웃의 `left`, `right`, `top`, `bottom` 혹은 center 에 도킹될 수 있습니다. 자식 요소의 도킹 방향을 정의하려면 `dock` 프로퍼티를 사용합니다.
-자식 요소를 DockLayout의 중간(center)에 위치시킬때, 자식요소는 반드시 DockLayout의 **마지막 자식** 이어야 하고
-DockLayout의 `stretchLastChild` 프로퍼티가 반드시 `true` 여야 합니다.
+`<DockLayout>` has the following behavior:
 
-### 샘플
+* Uses the `dock` property to dock its children to the `left`, `right`, `top`, `bottom` or center of the layout.  
+    To dock a child element to the center, it must be the **last child** of the container and you must set the `stretchLastChild` property of the parent to `true`.
+* Enforces layout constraints to its children.
+* Resizes its children at runtime when its size changes.
 
-#### 마지막 자식을 늘리지(stretch)않고 모든 방향으로 도킹
+## Examples
+
+### Dock to every side without stretching the last child
+
+The following example creates a frame-like layout consisting of 4 elements, position at the 4 edges of the screen.
 
 ```html
 <DockLayout stretchLastChild="false" backgroundColor="#3c495e">
@@ -20,9 +28,12 @@ DockLayout의 `stretchLastChild` 프로퍼티가 반드시 `true` 여야 합니�
   <Label text="bottom" dock="bottom" height="40" backgroundColor="#289062"/>
 </DockLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_no_stretch.svg" />
 
-#### 마지막 자식을 늘리면서(stretch) 모든 방향으로 도킹
+### Dock to every side and stretch the last child
+
+The following example shows how `stretchLastChild` affects the positioning of child elements in a `DockLayout` container. The last child (`bottom`) is stretched to take up all the remaining space after positioning the first three elements.
 
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
@@ -32,9 +43,28 @@ DockLayout의 `stretchLastChild` 프로퍼티가 반드시 `true` 여야 합니�
   <Label text="bottom" dock="bottom" backgroundColor="#1c6b48"/>
 </DockLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_stretch.svg" />
 
-#### 한 방향의 여러 자식들
+### Dock to every side and the center
+
+The following example creates a `<DockLayout>` of 5 elements. The first four wrap the center element in a frame.
+
+```html
+<DockLayout stretchLastChild="true" backgroundColor="#3c495e">
+  <Label text="left" dock="left" width="40" backgroundColor="#43b883"/>
+  <Label text="top" dock="top" height="40" backgroundColor="#289062"/>
+  <Label text="right" dock="right" width="40" backgroundColor="#43b883"/>
+  <Label text="bottom" dock="bottom" height="40" backgroundColor="#289062"/>
+  <Label text="center" backgroundColor="#1c6b48" />
+</DockLayout>
+```
+
+<img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_all_sides_and_stretch.svg" />
+
+### Dock multiple children to the same side
+
+The following example creates a single line of 4 elements that stretch across the entire height and width of the screen.
 
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
@@ -44,18 +74,20 @@ DockLayout의 `stretchLastChild` 프로퍼티가 반드시 `true` 여야 합니�
   <Label text="last child" backgroundColor="#43b883"/>
 </DockLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/dock_layout_multiple_on_same_side.svg" />
 
 ## Props
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-`stretchLastChild` | `Boolean` | 마지막 자식을 남은 공간에 맞추는 늘이기(stretching)의 활성/비활성화
+| Name               | Type      | Description                                                               |
+| ------------------ | --------- | ------------------------------------------------------------------------- |
+| `stretchLastChild` | `Boolean` | Enables or disables stretching the last child to fit the remaining space. |
 
-## 추가적인 자식 Props
+## Additional children props
 
-요소가 DockLayout의 직접적인 자식일때 다음 Prop들이 가능:
+When an element is a direct child of `<DockLayout>`, you can work with the following additional properties.
 
-| 이름 | 타입 | 설명 |
-|------|------|-------------|
-`dock` | `String` | 요소의 도킹 방향을 지정. 가능한 값: `top`, `right`, `bottom`, `left`
+| Name   | Type     | Description                                                                                       |
+| ------ | -------- | ------------------------------------------------------------------------------------------------- |
+| `dock` | `String` | Specifies which side to dock the element to.  
+Valid values: `top`, `right`, `bottom`, or `left`. |

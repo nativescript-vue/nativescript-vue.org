@@ -1,14 +1,17 @@
 ---
 title: WrapLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_wrap_layout_
-contributors: [lex111]
+contributors:
+  - rigor789
+  - ikoevska
 ---
+`<WrapLayout>` is a layout container that lets you position items in rows or columns, based on the `orientation` property. When the space is filled, the container automatically wraps items onto a new row or column.
 
-Контейнер WrapLayout помещает свои дочерние элементы в строки или столбцы, основываясь на свойство ориентации, пока пространство не будет заполнено, а затем оборачивает их в новую строку или столбец.
+### Samples
 
-### Примеры
+#### Default wrap layout
 
-#### WrapLayout по умолчанию
+The following example creates a row of equally-sized items. When the row runs out of space, the container wraps the last item on a new row.
 
 ```html
 <WrapLayout backgroundColor="#3c495e">
@@ -18,9 +21,12 @@ contributors: [lex111]
   <Label text="fourth" width="30%" height="30%" backgroundColor="#289062"/>
 </WrapLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_horizontal.svg" />
 
-#### Вертикальный WrapLayout
+#### Vertical wrap layout
+
+The following example creates a column of equally-sized items. When the row runs out of space, the container wraps the last item on a new column.
 
 ```html
 <WrapLayout orientation="vertical" backgroundColor="#3c495e">
@@ -30,17 +36,17 @@ contributors: [lex111]
   <Label text="fourth" width="30%" height="30%" backgroundColor="#289062"/>
 </WrapLayout>
 ```
+
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_vertical.svg" />
 
-## Свойства
+## Props
 
-| Название | Тип | Описание |
-|------|------|-------------|
-`orientation` | `String` | Значение, указывающее направление потока. Если ориентация горизонтальная (`horizontal`), то элементы располагаются в столбцах. Если ориентация вертикальная `vertical`), элементы располагаются в столбцах. Значение по умолчанию — `horizontal`.
-`itemWidth` | `Number` | Ширина, используемая для измерения и расположения каждого дочернего элемента. Значение по умолчанию — `Number.NaN`, которое не ограничивает дочерние элементы.
-`itemHeight` | `Number` | Высота, используемая для измерения и расположения каждого дочернего элемента. Значение по умолчанию — `Number.NaN`, которое не ограничивает дочерние элементы.
+| Name | Type | Description | |\---\---|\---\---|\---\---\---\----| `orientation` | `String` | Specifies the stacking direction.  
+Valid values: `horizontal` (arranges items in rows) and `vertical` (arranges items in columns).  
+Default value: `horizontal`. `itemWidth` | `Number` | Sets the width used to measure and layout each child.  
+Default value: `Number.NaN`, which does not restrict children. `itemHeight` | `Number` | Sets the height used to measure and layout each child.  
+Default value is `Number.NaN`, which does not restrict children.
 
+## Additional children props
 
-## Дополнительные свойства дочерних элементов
-
-Дополнительных свойств для дочерних элементов нет.
+None.

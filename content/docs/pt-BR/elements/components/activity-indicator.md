@@ -1,12 +1,14 @@
 ---
 title: ActivityIndicator
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicator_.activityindicator
-contributors: [alexhiroshi]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<ActivityIndicator>` is a UI component that shows a progress indicator signaling to the user of an operation running in the background.
 
-`<ActivityIndicator>` é um componente de UI que exibe um indicador de progresso que sinaliza para o usuário uma operação executando em background.
-
----
+* * *
 
 ```html
 <ActivityIndicator busy="true" @busyChange="onBusyChanged" />
@@ -14,20 +16,20 @@ contributors: [alexhiroshi]
 
 [> screenshots for=ActivityIndicator <]
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `busy` | `Boolean` | Obtém ou define se o indicador está ativo. Quando `true`, o indicador está ativo.
+| Name   | Type      | Description                                                                         |
+| ------ | --------- | ----------------------------------------------------------------------------------- |
+| `busy` | `Boolean` | Gets or sets whether the indicator is active. When `true`, the indicator is active. |
 
-## Eventos
+## Events
 
-| nome | descrição |
-|------|-------------|
-| `busyChange`| Emitido quando a propriedade `busy` é alterada.
+| Name         | Description                                  |
+| ------------ | -------------------------------------------- |
+| `busyChange` | Emitted when the `busy` property is changed. |
 
-## Componente Nativo
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.ProgressBar` (indeterminate = true)](https://developer.android.com/reference/android/widget/ProgressBar.html)	| [`UIActivityIndicatorView`](https://developer.apple.com/documentation/uikit/uiactivityindicatorview)
+| Android                                                                                                                        | iOS                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| [`android.widget.ProgressBar` (indeterminate = true)](https://developer.android.com/reference/android/widget/ProgressBar.html) | [`UIActivityIndicatorView`](https://developer.apple.com/documentation/uikit/uiactivityindicatorview) |

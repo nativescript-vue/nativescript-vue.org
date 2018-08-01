@@ -1,19 +1,21 @@
 ---
 title: ListPicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_picker_.listpicker
-contributors: [MisterBrownRSA, rigor789, ikoevska]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+`<ListPicker>` is a UI component that lets the user select a value from a pre-configured list.
 
-`<ListPicker>` - визуальный компонент, позволяющий пользователю выбирать значение из заранее заданного списка.
-
----
+* * *
 
 ```html
 <ListPicker :items="listOfItems" selectedIndex="0"
     @selectedIndexChange="selectedIndexChanged" />
 ```
 
-`<ListPicker>` обеспечивает двустороннюю привязку данных, используя `v-model`.
+`<ListPicker>` provides two-way data binding using `v-model`.
 
 ```html
 <ListPicker :items="listOfItems" v-model="selectedItem" />
@@ -21,21 +23,21 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 [> screenshots for=ListPicker <]
 
-## Свойства
+## Props
 
-| Имя | Тип | Описание |
-|------|------|-------------|
-| `items` | `Array<String>` | Задает или получает элементы, которые будут отображаться в списке.
-| `selectedIndex` | `Number` | Задает или получает индекс выбранного элемента.
+| Name            | Type                  | Description                                                     |
+| --------------- | --------------------- | --------------------------------------------------------------- |
+| `items`         | `Array<String>` | Gets or sets the items displayed as options in the list picker. |
+| `selectedIndex` | `Number`              | Gets or sets the index of the currently selected item.          |
 
-## События
+## Events
 
-| Имя | Описание |
-|------|-------------|
-| `selectedIndexChange`| Срабатывает, когда выбранное значение (индекс) изменяется.
+| Name                  | Description                                                 |
+| --------------------- | ----------------------------------------------------------- |
+| `selectedIndexChange` | Emitted when the currently selected option (index) changes. |
 
-## Нативный компонент
+## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.NumberPicker`](https://developer.android.com/reference/android/widget/NumberPicker.html) | [`UIPickerView`](https://developer.apple.com/documentation/uikit/uipickerview)
+| Android                                                                                                   | iOS                                                                            |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [`android.widget.NumberPicker`](https://developer.android.com/reference/android/widget/NumberPicker.html) | [`UIPickerView`](https://developer.apple.com/documentation/uikit/uipickerview) |

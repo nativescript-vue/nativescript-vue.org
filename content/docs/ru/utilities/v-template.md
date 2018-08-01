@@ -1,57 +1,52 @@
 ---
-title: Компонент v-template
-contributors: [sn0wil]
+title: v-template
+contributors:
+  - rigor789
+  - ikoevska
 ---
+The `<v-template>` component lets you define markup that you can reuse as a template.
 
-Компонент `v-template` используется для определения разметки, которая может быть переиспользована как шаблон.
+## Props
 
-Он используется внутри [Компонента ListView](/ru/docs/elements/components/list-view).
+| Name   | Type     | Description                                          |
+| ------ | -------- | ---------------------------------------------------- |
+| `if`   | `String` | The condition for using this template.               |
+| `name` | `String` | The name of the template, auto-generated if omitted. |
 
-## Свойства
+## Basic usage
 
-| имя | тип | описание |
-|------|------|-------------|
-| `if` | `String` | Условие для использования этого шаблона.
-| `name` | `String` | Имя шаблона, которе будет автоматически сгенерировано или опущено.
+The `<v-template>` component is used internally by the [ListView component](/en/docs/elements/components/list-view) to iterate over its list items.
 
-# Продвинутое использование
+## Advanced usage
 
-Остальная часть этого документа предназначена для продвинутых пользователей, реализующих свои собственные компоненты, для которых требуется шаблон или несколько шаблонов.
+You can use `v-template` to implement custom components that require a template or multiple templates.
 
-`v-template` ничего не отображает при размещении в шаблоне, вместо этого он добавляет свойство `$templates` к родительскому элементу или компоненту, который является [`TemplateBag`](https://github.com/nativescript-vue/nativescript-vue/blob/master/platform/nativescript/runtime/components/v-template.js#L36), а затем регистрируется как доступный шаблон.
+`v-template` does not render anything when placed in the template. Instead, it adds a `$templates` property to the parent element. This `$templates` property is a [`TemplateBag` instance](https://github.com/nativescript-vue/nativescript-vue/blob/master/platform/nativescript/runtime/components/v-template.js#L36).
 
-### TemplateBag
+Next, `v-template` registers itself as an available template in the respective `TemplateBag` instance for the parent element. Any existing `TemplateBag` instance on the parent element is reused.
 
-Класс `TemplateBag` полезен для регистрации нескольких шаблонов и предоставляет функцию для выбора правильного шаблона на основе элемента и условий, предоставляемых для каждого шаблона.
+### The `TemplateBag` class
 
-Шаблоны хранятся как объекты, соответствующие интерфейсу [`KeyedTemplate`](https://docs.nativescript.org/api-reference/interfaces/_ui_core_view_.keyedtemplate).
+The `TemplateBag` class lets you register multiple templates and select the correct template based on the item and the conditions provided for each template.
 
-#### Свойство `selectorFn`
+Templates are stored as objects conforming to the [`KeyedTemplate`](https://docs.nativescript.org/api-reference/interfaces/_ui_core_view_.keyedtemplate) interface.
 
-Свойство `selectorFn` возвращает функцию, которая принимает единственный параметр, который должен быть элементом, шаблон которого должен быть выбран. Он пройдет через все шаблоны, зарегистрированные в `TemplateBag`, и вернет первый, где условие `if` возвращает истинное значение, и если ни один из шаблонов не соответствует ему, он вернет `default`.
+#### The `selectorFn` property
 
-#### Доступные метода
+The `selectorFn` property returns a function that accepts a single parameter. This parameter is the item whose template is selected.
 
-##### registerTemplate(name: String, condition: String?, scopedFn: Function): void
+The single-parameter function goes through all templates registered in the `TemplateBag` instance and returns the first one where the `if` condition is met. If none of the templates match, returns `default`.
 
-Этот метод используется для регистрации шаблонов в сущности `TemplateBag`. `scopedFn` должен быть функцией ренедера [слота с ограниченной областью видимости](https://ru.vuejs.org/v2/guide/components-slots.html#%D0%A1%D0%BB%D0%BE%D1%82%D1%8B-%D1%81-%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%D1%8E-%D0%B2%D0%B8%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8)
- 
-##### getConditionFn(condition: String): Function
- 
-Этот метод строит функцию, которая оценивает данное условие. Эти методы используются внутренне.
+#### Available methods
 
-##### getKeyedTemplate(name: String): [KeyedTemplate](https://docs.nativescript.org/api-reference/interfaces/_ui_core_view_.keyedtemplate)
- 
-Этот метод возвращает `KeyedTemplate` с заданным именем.
-
-##### patchTemplate(name: String, context: any, oldVnode: VNode?): View
-
-Этот метод будет исправлять существующий `VNode`, используя предоставленный `context. Если `oldVnode` не предоставлен, он создаст новый экземпляр View для данного шаблона.
-
-##### getAvailable(): Array<String>
-
-Возвращает массив доступных `KeyedTemplates` (возвращает массив имен шаблонов).
-
-##### getKeyedTemplates(): Array<KeyedTemplate>
-
-Возвращает массив всех `KeyedTemplates`, зарегистрированных в` TemplateBag`
+| Method                                                                         | Description                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `registerTemplate(name: String, condition: String?, scopedFn: Function): void` | _Mainly used internally._  
+Registers templates in the `TemplateBag` instance.  
+The `scopedFn` should be a render function of a [scoped slot](https://vuejs.org/v2/guide/components.html#Scoped-Slots)          |
+| `getConditionFn(condition: String): Function`                                  | _Used internally._  
+Builds a function that evaluates the given condition.                                                                                                                                       |
+| `getAvailable(): Array<String>`                                          | Returns an array of available [`KeyedTemplates`](https://docs.nativescript.org/api-reference/interfaces/_ui_core_view_.keyedtemplate). (Returns an array of template names.)                                       |
+| `getKeyedTemplate(name: String): KeyedTemplate`                                | Returns the [`KeyedTemplate`](https://docs.nativescript.org/api-reference/interfaces/_ui_core_view_.keyedtemplate) with the specified name.                                                                        |
+| `getKeyedTemplates(): Array<KeyedTemplate>`                              | Returns an array of all the [`KeyedTemplates`](https://docs.nativescript.org/api-reference/interfaces/_ui_core_view_.keyedtemplate) registered in the `TemplateBag`.                                               |
+| `patchTemplate(name: String, context: any, oldVnode: VNode?): View`            | Patches an existing [`VNode`](https://vuejs.org/v2/guide/render-function.html#The-Virtual-DOM) using the provided `context`. If no `oldVnode` is provided, creates a new View instance for the specified template. |

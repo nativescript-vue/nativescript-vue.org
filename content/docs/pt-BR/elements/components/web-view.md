@@ -1,13 +1,17 @@
 ---
 title: WebView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_web_view_.webview
-contributors: [alexhiroshi, WesleiRamos]
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+`<WebView>` is a UI component that lets you show web content in your app. You can pull and show content from a URL or a local HTML file, or you can render static HTML content.
 
-`<WebView>` é um componente da UI que permite você exibir contéudo da web no seu aplicativo. Você pode carregar e mostrar conteúdo a partir de uma URL ou um arquivo HTML local, ou você pode renderizar contéudo estático em HTML.
+See also: [HtmlView](/en/docs/elements/components/html-view).
 
-Veja também: [HtmlView](/pt-BR/docs/elements/components/html-view).
----
+* * *
 
 ```html
 <WebView src="http://nativescript-vue.org/" />
@@ -19,20 +23,22 @@ Veja também: [HtmlView](/pt-BR/docs/elements/components/html-view).
 
 [> screenshots for=WebView <]
 
-## Propriedades
+## Props
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `src` | `String` | Obtém ou define o conteúdo web.<br/>Valores válidos: uma URL absoluta, o caminho do arquivo HTML local, ou HTML estático.
+| Name  | Type     | Description                                                                                                             |
+| ----- | -------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `src` | `String` | Gets or sets the displayed web content.  
+Valid values: an absolute URL, the path to a local HTML file, or static HTML. |
 
-## Eventos
+## Events
 
-| nome | descrição |
-|------|-------------|
-| `loadStarted`| Emitido quando a página começa a carregar na WebView.
-| `loadFinished`| Emitido quando a página termina de carregar na WebView.
+| Name           | Description                                                          |
+| -------------- | -------------------------------------------------------------------- |
+| `loadStarted`  | Emitted when the page has started loading in the `<WebView>`.  |
+| `loadFinished` | Emitted when the page has finished loading in the `<WebView>`. |
 
-## Componente Nativo
-| Android | iOS |
-|---------|-----|
-| [`android.webkit.WebView`](https://developer.android.com/reference/android/webkit/WebView) | [`WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview)
+## Native component
+
+| Android                                                                                    | iOS                                                                       |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| [`android.webkit.WebView`](https://developer.android.com/reference/android/webkit/WebView) | [`WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview) |

@@ -1,18 +1,20 @@
 ---
 title: PromptDialog
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#prompt
-contributors: [alexhiroshi]
+apiRef: 'https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#prompt'
+contributors:
+  - MisterBrownRSA
+  - rigor789
+  - ikoevska
 ---
+The `prompt()` method shows a dialog with a single-line field for user input.
 
-O método `prompt()` exibe um diálogo com um campo de uma linha para o usuário digitar.
+The method is part of the [`dialogs` module](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
 
-O método faz parte do [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_).
+* * *
 
----
+## Basic use
 
-## Uso básico
-
-O método `prompt()` está disponível globalmente. Você pode chamar de qualquer lugar do seu aplicativo.
+The `prompt()` method is available globally. You can call it anywhere in your app.
 
 ```JavaScript
 prompt('Your message to the user', 'Suggested user input')
@@ -21,7 +23,7 @@ prompt('Your message to the user', 'Suggested user input')
 })
 ```
 
-## Configurar opções
+## Configure dialog options
 
 ```JavaScript
 prompt({
@@ -35,9 +37,9 @@ prompt({
 });
 ```
 
-## Configurar tipo do campo
+## Configure input type
 
-Você também pode configurar o tipo do input usando `inputType`. É possível escolher entre texto simples (`text`), campo de e-mail (`email`), e campo de senha (`password`).
+You can also configure the input type using `inputType`. You can choose between plain text (`text`), email-enabled input (`email`), and password-like hidden input (`password`).
 
 ```JavaScript
 inputType: dialogs.inputType.text
@@ -45,13 +47,13 @@ inputType: dialogs.inputType.email
 inputType: dialogs.inputType.password
 ```
 
-**NOTA:** Essa opção não está disponível globalmente e você precisa adicionar o módulo `dialogs`, com require, em seu aplicativo antes de usar `inputType`.
+**NOTE:** This option is not globally available and you need to require the `dialogs` module in your app before using `inputType`.
 
 ```JavaScript
 const dialogs = require('tns-core-modules/ui/dialogs')
 ```
 
-### Exemplo
+### Example
 
 ```JavaScript
 const dialogs = require('tns-core-modules/ui/dialogs')

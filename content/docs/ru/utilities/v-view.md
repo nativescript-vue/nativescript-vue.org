@@ -1,50 +1,51 @@
 ---
-title: Директива v-view
-contributors: [sn0wil]
+title: v-view
+contributors:
+  - rigor789
+  - eddyverbruggen
+  - ikoevska
 ---
+The `v-view` directive lets you set the current element's `View` as a parent property.
 
-Директива `v-view` используется для задания текущих элементов `View` в качестве родительского свойства.
+* * *
 
-### Использование
-
-```html
+```HTML
 <Child v-view:parentPropertyName />
-<!-- равнозначно: -->
+<!-- same as: -->
 <Child ~parentPropertyName />
 ```
 
-```html
+```HTML
 <Child v-view:parentArrayPropertyName.array />
-<!-- равнозначно: -->
+<!-- same as: -->
 <Child ~parentArrayPropertyName.array />
 ```
 
----
+* * *
 
-Существует много компонентов `NativeScript`, которые требуют установки свойства в действительный экземпляр `View`, что невозможно с использованием шаблона. Использование этой директивы экономит время, не регистрируя новые директивы / ссылки на родительские элементы и не устанавливая родительские свойства вручную.
+### Example: `<RadSideDrawer>`
 
-Чтобы лучше проиллюстрировать, что делает эта директива, давайте посмотрим на компонент `RadSideDrawer` из [Progress NativeScript UI](http://docs.telerik.com/devtools/nativescript-ui/Controls/Angular/SideDrawer/getting-started):
+The `<RadSideDrawer>` component is part of the [Progress NativeScript UI](http://docs.telerik.com/devtools/nativescript-ui/Controls/Angular/SideDrawer/getting-started) package.
 
-Компонент `RadSideDrawer` ожидает, что свойства `drawerContent` и` mainContent` будут установлены в экземпляры `View`,
-используя директиву `v-view`, и он будет выглядеть так:
+The `<RadSideDrawer>` component requires the `drawerContent` and `mainContent` properties to be set to `View` instances. Using the `v-view` directive, you can do this with a few lines of code:
 
-```html
+```HTML
 <RadSideDrawer>
   <StackLayout ~drawerContent />
   <StackLayout ~mainContent />
 </RadSideDrawer>
 ```
 
-Без этой директивы у вас бы было что-то вроде:
+Without the `v-view` directive, you need to go a more tedious and error-prone route:
 
-```html
+```HTML
 <RadSideDrawer ref="drawer">
   <StackLayout ref="drawerContent" />
   <StackLayout ref="mainContent" />
 </RadSideDrawer>
 ```
 
-```javascript
+```JavaScript
 {
   mounted() {
     this.$refs.drawer.nativeView.drawerContent = this.$refs.drawerContent.nativeView
@@ -52,5 +53,3 @@ contributors: [sn0wil]
   }
 }
 ```
-
-Что может стать утомительным и очень подвержено ошибкам.

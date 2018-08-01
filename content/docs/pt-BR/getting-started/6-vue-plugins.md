@@ -1,56 +1,64 @@
 ---
-title: Usando Plugins do Vue
-contributors: [alexhiroshi, WesleiRamos]
+title: Using Vue Plugins
+contributors:
+  - jlooper
+  - ikoevska
 ---
-
-Esta página fornece uma visão geral dos plugins atualmente suportados pelo Vue que funcionam com NativeScript-Vue.
+This page provides an overview of the currently supported Vue plugins that work with NativeScript-Vue.
 
 * [Vue Router](#vue-router)
 * [Vuex](#vuex)
 
 ## Vue Router
 
-> Atualmente, a integração com Vue Router é **experimental**. Para mais informações, acesse [acesse a página do VueRouter](/pt-BR/docs/routing/vue-router/).
+> Currently, integration with Vue Router is **experimental**. For more information, see [the Vue Router page](/en/docs/routing/vue-router/).
 
-### Notas de uso
+### Install and require the plugin
 
-A estratégia de roteamento no celular é diferente da estratégia de roteamento no navegador e o formato de roteamento del links familiar do Vue não funciona com NativeScript-Vue.
+For detailed information about how to install the plugin and make it available in your NativeScript-Vue app, see [the Vue Router page](/en/docs/routing/vue-router/).
 
-Em vez disso, você precisa **mudar para a nova rota usando o método `route.push`**. O seguinte exemplo mostra como usar o evento `tap` para mudar a rota.
+### Usage notes
+
+The routing strategy on mobile is different than the routing strategy in the browser and the familiar Vue format of router links does not work with NativeScript-Vue.
+
+Instead, you need to **change to a new route using the `route.push` method**. The following example shows how to use the `tap` event to change the route.
 
 ```HTML
 <Button class="btn btn-primary" @tap="$router.push('/counter')">Counter</Button>
 ```
 
-Para uma documentação mais aprofundada sobre roteamento, [acesse a página do VueRouter](/pt-BR/docs/routing/vue-router/).
+For detailed information about how to use the plugin in your NativeScript-Vue app, see [the Vue Router page](/en/docs/routing/vue-router/).
 
 ## Vuex
 
-Vuex é um padrão e biblioteca de gerenciamento de estado do Vue.js. Ele serve como um local de armazenamento para todos os componentes em uma aplicação que implementa regras para garantir que o estado mude de forma previsível. Vuex pode ser usado nos aplicativos NativeScript; um exemplo, veja o [NativeScript Groceries Vue](https://github.com/tralves/groceries-ns-vue).
+Vuex is a state management pattern and library. It serves as a store for all the components in an app and implements rules to ensure that state is mutated in a predictable fashion.
 
-### Instalar
+### Install the plugin
 
-Instale o Vuex como você normalmente faria em seu app Vue.js. Com npm, por exemplo:
+Install Vuex as you would normally in your Vue.js app. With npm, for example:
 
 ```shell
 $ npm install --save vuex
 ```
 
-A versão mais nova do Vuex será adicionada em seu arquivo `package.json`.
+The most recent version of Vuex will be added to your `package.json`.
 
-### Importar
+### Import the plugin
 
-Abra o arquivo de entrada do seu app (algo como `apps.js` ou `main.js`) e adicione o seguinte no topo:
+Open your app entry file (llikely `app.js` or `main.js`) and add the following line at the top:
 
 ```js
 import Vuex from 'vuex'
 Vue.use(Vuex)
 ```
-Agora você pode usar o Vuex no seu app, da mesma forma que você faria em um app Vue padrão da web para gerenciar o estado.
 
-### Crie um Store
+Now you can use Vuex to manage the state of your mobile app, similar to how you would use it in a standard Vue web app.
 
-Acima da nova instância do Vue, ou em uma pasta separada (por exemplo `/store` na sua pasta app), crie uma nova constante para armazenar seu estado. É aqui que você irá chamar a API do Vuex. Uma simples constante store que inclui o estado do contador que você controla ao longo do seu aplicativo por meio do rastreamento de suas mutações:
+### Usage: Create a store
+
+You need to create a new constant to store your state and invoke Vuex API calls. You can do that in the app entry file after the creation of the Vue instance or in a separate folder (for example, `/store`).
+
+In the following example, a simple store constant includes the state of a counter and tracks its mutations:
 
 ```js
 const store = new Vuex.Store({
@@ -64,9 +72,9 @@ const store = new Vuex.Store({
 })
 ```
 
-### Use a Store
+### Usage: Use the store
 
-Agora você pode gerenciar o state chamando a store que você acabou de criar. O exemplo abaixo, o aplicativo rastreia o valor do contador conforme você preciona um botão '+'ou '-'. Note que você não manipula o state em si, mas sim as mutations para incrementar e decrementar seu valor.
+Now you can manage state by calling the store you just created. In the following example, the app tracks the count value as you press a '+' or '-' button. Note that you don't manipulate the state itself, but call mutations to increment and decrement its value.
 
 ```js
 new Vue({
@@ -99,4 +107,6 @@ new Vue({
 }).$start()
 ```
 
-Mais informações sobre Vuex e como gerenciar estados, pode ser encontrado na [documentação do Vuex](https://vuex.vuejs.org/en/core-concepts.html). Uma arquitetura boa para gerenciar vários elementos do Vuex, pode ser encontrado no aplicativo Groceries na [pasta `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store).
+For more information about Vuex, see [the Vuex documentation](https://vuex.vuejs.org/en/core-concepts.html).
+
+For more examples about how to manage the elements of Vuex, explore the [`/store` folder](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) of the NativeScript-Vue Groceries sample.
