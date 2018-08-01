@@ -14,8 +14,8 @@ El contenedor `<AbsoluteLayout>` es el *layout* más simple de NativeScript
 `<AbsoluteLayout>` se comporta de la siguiente forma:
 
 * Usa un par de coordinadas absolutas izquierda/derecha para posicioanr los elementos hijos.
-* No fuerza ningún tipo de restricción sobre los elementos hijos.
-* No redimensiona los elementos hijos en tiempo de ejecución, cuando estos cambien de tamaño.
+* **No** fuerza ningún tipo de restricción de posicionamiento sobre los elementos hijos.
+* **No** redimensiona los elementos hijos en tiempo de ejecución, cuando estos cambien de tamaño.
 
 ## Ejemplos
 
