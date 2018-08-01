@@ -9,7 +9,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 ```html
 <ListView for="item in listOfItems" @itemTap="onItemTap">
   <v-template>
-    <!-- Shows the list item label in the default color and stye. -->
+    <!-- Shows the list item label in the default color and style. -->
     <Label :text="item.text" />
   </v-template>
 </ListView>

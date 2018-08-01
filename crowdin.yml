@@ -1,0 +1,7 @@
+files:
+  - source: /content/docs/en/**/*.md
+    translation: /content/docs/%locale%/**/%original_file_name%
+    languages_mapping:
+      locale:
+        ko: ko
+        ru: ru

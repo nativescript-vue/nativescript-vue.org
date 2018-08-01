@@ -1,6 +1,6 @@
 ---
 title: ActionDialog
-apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action 
+apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#action
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 

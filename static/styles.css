@@ -535,12 +535,42 @@ ul {
  * Tailwind custom reset styles
  */
 
+/**
+ * Allow adding a border to an element by just adding a border-width.
+ *
+ * By default, the way the browser specifies that an element should have no
+ * border is by setting it's border-style to `none` in the user-agent
+ * stylesheet.
+ *
+ * In order to easily add borders to elements by just setting the `border-width`
+ * property, we change the default border-style for all elements to `solid`, and
+ * use border-width to hide them instead. This way our `border` utilities only
+ * need to set the `border-width` property instead of the entire `border`
+ * shorthand, making our border utilities much more straightforward to compose.
+ *
+ * https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
 *,
 *::before,
 *::after {
   border-width: 0;
   border-style: solid;
   border-color: #dae1e7;
+}
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+img {
+  border-style: solid;
 }
 
 /**
@@ -680,10 +710,6 @@ button,
   background-color: #fff5eb;
 }
 
-.bg-orange-light {
-  background-color: #faad63;
-}
-
 .bg-orange-dark {
   background-color: #de751f;
 }
@@ -750,10 +776,6 @@ button,
 
 .hover\:bg-orange-lightest:hover {
   background-color: #fff5eb;
-}
-
-.hover\:bg-orange-light:hover {
-  background-color: #faad63;
 }
 
 .hover\:bg-orange-dark:hover {
@@ -884,10 +906,6 @@ button,
   border-color: #fff5eb;
 }
 
-.border-orange-light {
-  border-color: #faad63;
-}
-
 .border-orange-dark {
   border-color: #de751f;
 }
@@ -954,10 +972,6 @@ button,
 
 .hover\:border-orange-lightest:hover {
   border-color: #fff5eb;
-}
-
-.hover\:border-orange-light:hover {
-  border-color: #faad63;
 }
 
 .hover\:border-orange-dark:hover {
@@ -2004,6 +2018,10 @@ button,
   margin-left: 1px;
 }
 
+.max-h-16 {
+  max-height: 4rem;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -2822,10 +2840,6 @@ button,
   color: #fff5eb;
 }
 
-.text-orange-light {
-  color: #faad63;
-}
-
 .text-orange-dark {
   color: #de751f;
 }
@@ -2892,10 +2906,6 @@ button,
 
 .hover\:text-orange-lightest:hover {
   color: #fff5eb;
-}
-
-.hover\:text-orange-light:hover {
-  color: #faad63;
 }
 
 .hover\:text-orange-dark:hover {
@@ -3388,10 +3398,6 @@ button,
     background-color: #fff5eb;
   }
 
-  .sm\:bg-orange-light {
-    background-color: #faad63;
-  }
-
   .sm\:bg-orange-dark {
     background-color: #de751f;
   }
@@ -3458,10 +3464,6 @@ button,
 
   .sm\:hover\:bg-orange-lightest:hover {
     background-color: #fff5eb;
-  }
-
-  .sm\:hover\:bg-orange-light:hover {
-    background-color: #faad63;
   }
 
   .sm\:hover\:bg-orange-dark:hover {
@@ -3592,10 +3594,6 @@ button,
     border-color: #fff5eb;
   }
 
-  .sm\:border-orange-light {
-    border-color: #faad63;
-  }
-
   .sm\:border-orange-dark {
     border-color: #de751f;
   }
@@ -3662,10 +3660,6 @@ button,
 
   .sm\:hover\:border-orange-lightest:hover {
     border-color: #fff5eb;
-  }
-
-  .sm\:hover\:border-orange-light:hover {
-    border-color: #faad63;
   }
 
   .sm\:hover\:border-orange-dark:hover {
@@ -4712,6 +4706,10 @@ button,
     margin-left: 1px;
   }
 
+  .sm\:max-h-16 {
+    max-height: 4rem;
+  }
+
   .sm\:max-h-full {
     max-height: 100%;
   }
@@ -5522,10 +5520,6 @@ button,
     color: #fff5eb;
   }
 
-  .sm\:text-orange-light {
-    color: #faad63;
-  }
-
   .sm\:text-orange-dark {
     color: #de751f;
   }
@@ -5592,10 +5586,6 @@ button,
 
   .sm\:hover\:text-orange-lightest:hover {
     color: #fff5eb;
-  }
-
-  .sm\:hover\:text-orange-light:hover {
-    color: #faad63;
   }
 
   .sm\:hover\:text-orange-dark:hover {
@@ -6047,10 +6037,6 @@ button,
     background-color: #fff5eb;
   }
 
-  .md\:bg-orange-light {
-    background-color: #faad63;
-  }
-
   .md\:bg-orange-dark {
     background-color: #de751f;
   }
@@ -6117,10 +6103,6 @@ button,
 
   .md\:hover\:bg-orange-lightest:hover {
     background-color: #fff5eb;
-  }
-
-  .md\:hover\:bg-orange-light:hover {
-    background-color: #faad63;
   }
 
   .md\:hover\:bg-orange-dark:hover {
@@ -6251,10 +6233,6 @@ button,
     border-color: #fff5eb;
   }
 
-  .md\:border-orange-light {
-    border-color: #faad63;
-  }
-
   .md\:border-orange-dark {
     border-color: #de751f;
   }
@@ -6321,10 +6299,6 @@ button,
 
   .md\:hover\:border-orange-lightest:hover {
     border-color: #fff5eb;
-  }
-
-  .md\:hover\:border-orange-light:hover {
-    border-color: #faad63;
   }
 
   .md\:hover\:border-orange-dark:hover {
@@ -7371,6 +7345,10 @@ button,
     margin-left: 1px;
   }
 
+  .md\:max-h-16 {
+    max-height: 4rem;
+  }
+
   .md\:max-h-full {
     max-height: 100%;
   }
@@ -8181,10 +8159,6 @@ button,
     color: #fff5eb;
   }
 
-  .md\:text-orange-light {
-    color: #faad63;
-  }
-
   .md\:text-orange-dark {
     color: #de751f;
   }
@@ -8251,10 +8225,6 @@ button,
 
   .md\:hover\:text-orange-lightest:hover {
     color: #fff5eb;
-  }
-
-  .md\:hover\:text-orange-light:hover {
-    color: #faad63;
   }
 
   .md\:hover\:text-orange-dark:hover {
@@ -8706,10 +8676,6 @@ button,
     background-color: #fff5eb;
   }
 
-  .lg\:bg-orange-light {
-    background-color: #faad63;
-  }
-
   .lg\:bg-orange-dark {
     background-color: #de751f;
   }
@@ -8776,10 +8742,6 @@ button,
 
   .lg\:hover\:bg-orange-lightest:hover {
     background-color: #fff5eb;
-  }
-
-  .lg\:hover\:bg-orange-light:hover {
-    background-color: #faad63;
   }
 
   .lg\:hover\:bg-orange-dark:hover {
@@ -8910,10 +8872,6 @@ button,
     border-color: #fff5eb;
   }
 
-  .lg\:border-orange-light {
-    border-color: #faad63;
-  }
-
   .lg\:border-orange-dark {
     border-color: #de751f;
   }
@@ -8980,10 +8938,6 @@ button,
 
   .lg\:hover\:border-orange-lightest:hover {
     border-color: #fff5eb;
-  }
-
-  .lg\:hover\:border-orange-light:hover {
-    border-color: #faad63;
   }
 
   .lg\:hover\:border-orange-dark:hover {
@@ -10030,6 +9984,10 @@ button,
     margin-left: 1px;
   }
 
+  .lg\:max-h-16 {
+    max-height: 4rem;
+  }
+
   .lg\:max-h-full {
     max-height: 100%;
   }
@@ -10840,10 +10798,6 @@ button,
     color: #fff5eb;
   }
 
-  .lg\:text-orange-light {
-    color: #faad63;
-  }
-
   .lg\:text-orange-dark {
     color: #de751f;
   }
@@ -10910,10 +10864,6 @@ button,
 
   .lg\:hover\:text-orange-lightest:hover {
     color: #fff5eb;
-  }
-
-  .lg\:hover\:text-orange-light:hover {
-    color: #faad63;
   }
 
   .lg\:hover\:text-orange-dark:hover {
@@ -11365,10 +11315,6 @@ button,
     background-color: #fff5eb;
   }
 
-  .xl\:bg-orange-light {
-    background-color: #faad63;
-  }
-
   .xl\:bg-orange-dark {
     background-color: #de751f;
   }
@@ -11435,10 +11381,6 @@ button,
 
   .xl\:hover\:bg-orange-lightest:hover {
     background-color: #fff5eb;
-  }
-
-  .xl\:hover\:bg-orange-light:hover {
-    background-color: #faad63;
   }
 
   .xl\:hover\:bg-orange-dark:hover {
@@ -11569,10 +11511,6 @@ button,
     border-color: #fff5eb;
   }
 
-  .xl\:border-orange-light {
-    border-color: #faad63;
-  }
-
   .xl\:border-orange-dark {
     border-color: #de751f;
   }
@@ -11639,10 +11577,6 @@ button,
 
   .xl\:hover\:border-orange-lightest:hover {
     border-color: #fff5eb;
-  }
-
-  .xl\:hover\:border-orange-light:hover {
-    border-color: #faad63;
   }
 
   .xl\:hover\:border-orange-dark:hover {
@@ -12689,6 +12623,10 @@ button,
     margin-left: 1px;
   }
 
+  .xl\:max-h-16 {
+    max-height: 4rem;
+  }
+
   .xl\:max-h-full {
     max-height: 100%;
   }
@@ -13499,10 +13437,6 @@ button,
     color: #fff5eb;
   }
 
-  .xl\:text-orange-light {
-    color: #faad63;
-  }
-
   .xl\:text-orange-dark {
     color: #de751f;
   }
@@ -13569,10 +13503,6 @@ button,
 
   .xl\:hover\:text-orange-lightest:hover {
     color: #fff5eb;
-  }
-
-  .xl\:hover\:text-orange-light:hover {
-    color: #faad63;
   }
 
   .xl\:hover\:text-orange-dark:hover {
