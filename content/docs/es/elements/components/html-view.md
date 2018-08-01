@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_html_view_.htmlv
 contributors: [ianaya89]
 ---
 
-`<HtmlView>` es un component de UI que permite mostrar contenido HTML estático.
+`<HtmlView>` es un componente que permite mostrar contenido HTML estático.
 
 Puedes ver también: [WebView](/en/docs/elements/components/web-view).
 
@@ -22,7 +22,7 @@ Puedes ver también: [WebView](/en/docs/elements/components/web-view).
 |------|------|-------------|
 | `html` | `String` | El contenido HTML que deseas mostrar.
 
-## Componente native
+## Componente nativo
 
 | Android | iOS |
 |---------|-----|
