@@ -13,7 +13,6 @@ function plugin() {
       if (res) {
         const data = files[file];
         data.order = res[1];
-
         data.slug = data.slug.replace(res[0], '');
 
         // rename file to not include the order
