@@ -1,15 +1,27 @@
 ---
 title: AbsoluteLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_absolute_layout_
+docRef: https://docs.nativescript.org/ui/layouts/layout-containers#absolutelayout
 contributors: [ianaya89]
 ---
 
-El contenedor `AbsoluteLayout` es el *layout* mas simple de NativeScript. Usa coordenadas absolutas para posicionar los componentes hijos a partir del vértice superior izquierdo.
+
+El contenedor `AbsoluteLayout` es el *layout* más simple de NativeScript. Usa coordenadas absolutas para posicionar los componentes hijos a partir del vértice superior izquierdo.
 `AbsoluteLayout` no aplicará ninguna restricción de diseño a tus elementos hijos y tampoco los redimensionará en tiempo de ejecución (cuando cambie su tamaño).
 
-### Ejemplos
+El contenedor `<AbsoluteLayout>` es el *layout* más simple de NativeScript
 
-#### Diseño de tipo grilla
+`<AbsoluteLayout>` se comporta de la siguiente forma:
+
+* Usa un par de coordinadas absolutas izquierda/derecha para posicioanr los elementos hijos.
+* **No** fuerza ningún tipo de restricción de posicionamiento sobre los elementos hijos.
+* **No** redimensiona los elementos hijos en tiempo de ejecución, cuando estos cambien de tamaño.
+
+## Ejemplos
+
+### Diseño de tipo grilla
+
+El siguiente ejemplo crea una grilla simple. Para más información sobre *layouts* de grillas puedes ver [GridLayout](/es/docs/elements/layouts/grid-layout).
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -21,7 +33,9 @@ El contenedor `AbsoluteLayout` es el *layout* mas simple de NativeScript. Usa co
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_grid.svg" />
 
-#### Superponiendo elementos
+### Superponiendo elementos
+
+El siguiente ejemplo crea un grupo de elementos que se superponen entre ellos.
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">
@@ -31,16 +45,15 @@ El contenedor `AbsoluteLayout` es el *layout* mas simple de NativeScript. Usa co
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/absolute_layout_overlap.svg" />
 
-
 ## Propiedades
 
-`AbsoluteLayout` no tiene propiedades.
+No tiene propiedades.
 
-## Propiedades de elementos hijos
+## Additional children props
 
-Cuando un elemento es hijo directo de `AbsoluteLayout`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
+Cuando un elemento es hijo directo de AbsoluteLayout, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
 
-| Nombre | Tipo | Descripción |
+| Name | Type | Description |
 |------|------|-------------|
-| `top` | `Number` | Representa la distancia desde el margen superior del `AbsoluteLayout`
-| `left` | `Number` | Representa la distancia desde el margen izquierdo del `AbsoluteLayout`
+| `top` | `Number` | Obtiene o establece la distancia (en píxeles) entre el borde superior del elemento hijo y el borde superior del elemento padre.
+| `left` | `Number` | Obtiene o establece la distancia (en píxeles) entre el borde izquierdo del elemento hijo y el borde izquierdo del elemento padre.

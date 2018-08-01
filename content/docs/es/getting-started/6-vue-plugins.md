@@ -10,7 +10,7 @@ Esta seccioón provee un resumen de los plugins de Vue que funcionan con NativeS
 
 ## Vue Router
 
-> Actualmente, la integracion con Vue Router esta en modo **experimental**. Para mas información puedes ver [la sección Vue Router](/es/docs/routing/vue-router/).
+> Actualmente, la integracion con Vue Router esta en modo **experimental**. Para más información puedes ver [la sección Vue Router](/es/docs/routing/vue-router/).
 
 ### Instalar y registrar el plugin
 
@@ -104,6 +104,6 @@ new Vue({
 }).$start()
 ```
 
-Para mas información sobre el funcionamiento de Vue, puedes ver la [documentación oficial](https://vuex.vuejs.org/en/core-concepts.html).
+Para más información sobre el funcionamiento de Vue, puedes ver la [documentación oficial](https://vuex.vuejs.org/en/core-concepts.html).
 
-Para mas informacion sobre como manejar elementos de Vuex, explora [el directorio `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) de la aplicación de ejemplo *NativeScript-Vue Groceries*.
+Para más informacion sobre como manejar elementos de Vuex, explora [el directorio `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) de la aplicación de ejemplo *NativeScript-Vue Groceries*.

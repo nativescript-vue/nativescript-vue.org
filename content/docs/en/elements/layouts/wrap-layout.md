@@ -6,9 +6,9 @@ contributors: [rigor789, ikoevska]
 
 `<WrapLayout>` is a layout container that lets you position items in rows or columns, based on the `orientation` property. When the space is filled, the container automatically wraps items onto a new row or column.
 
-### Samples
+### Examples
 
-#### Default wrap layout
+### Default wrap layout
 
 The following example creates a row of equally-sized items. When the row runs out of space, the container wraps the last item on a new row.
 
@@ -23,7 +23,7 @@ The following example creates a row of equally-sized items. When the row runs ou
 
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_horizontal.svg" />
 
-#### Vertical wrap layout
+### Vertical wrap layout
 
 The following example creates a column of equally-sized items. When the row runs out of space, the container wraps the last item on a new column.
 

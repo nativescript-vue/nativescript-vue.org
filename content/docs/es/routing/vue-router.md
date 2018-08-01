@@ -104,7 +104,7 @@ new Vue({
 
 ## Puedes ver también
 
-*vue-router* tiene mas trucos debajo de la manga, para conocerlos mejor puedes visitar [la documentación oficial]((https://router.vuejs.org/en/).
+*vue-router* tiene más trucos debajo de la manga, para conocerlos mejor puedes visitar [la documentación oficial]((https://router.vuejs.org/en/).
 
 También puedes encontrar varios [ejemplos de NativeScript-Vue](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples):
 

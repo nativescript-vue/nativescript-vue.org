@@ -6,9 +6,9 @@ contributors: [rigor789, ikoevska]
 
 `<FlexboxLayout>` is a layout container that provides a non-exact implementation of the [CSS Flexbox layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox). This layout lets you arrange child components both horizontally and vertically.
 
-### Examples
+## Examples
 
-#### Default flex layout
+### Default flex layout
 
 The following example creates a row of three equally-sized elements that span across the entire height of the screen.
 
@@ -21,9 +21,9 @@ The following example creates a row of three equally-sized elements that span ac
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_stretch.svg" />
 
-#### Column flex layout
+### Column flex layout
 
-The following example creates a column of 3 equally-sized elements that span across the entire width of the screen.
+The following example creates a column of three equally-sized elements that span across the entire width of the screen.
 
 ```html
 <FlexboxLayout flexDirection="column" backgroundColor="#3c495e">
@@ -34,9 +34,9 @@ The following example creates a column of 3 equally-sized elements that span acr
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_column_stretch.svg" />
 
-#### Row flex layout with items aligned to `flex-start`
+### Row flex layout with items aligned to `flex-start`
 
-The following example creates a row of 3 items placed at the top of the screen. Items are placed in the order they were declared in.
+The following example creates a row of three items placed at the top of the screen. Items are placed in the order they were declared in.
 
 ```html
 <FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
@@ -47,9 +47,9 @@ The following example creates a row of 3 items placed at the top of the screen. 
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_flex-start.svg" />
 
-#### Row flex layout with custom order
+### Row flex layout with custom order
 
-The following example creates a row of 3 items placed at the top of the screen. Items are placed in a customized order.
+The following example creates a row of three items placed at the top of the screen. Items are placed in a customized order.
 
 ```html
 <FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
@@ -60,7 +60,7 @@ The following example creates a row of 3 items placed at the top of the screen. 
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_custom_order.svg" />
 
-#### Row flex layout with wrapping
+### Row flex layout with wrapping
 
 The following example creates four items with enabled line wrapping. When the row runs out of space, the container wraps the last item on a new line.
 
@@ -74,7 +74,7 @@ The following example creates four items with enabled line wrapping. When the ro
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_wrap.svg" />
 
-#### Column flex layout with reverse order and items with a different `alignSelf`
+### Column flex layout with reverse order and items with a different `alignSelf`
 
 The following example shows how to use:
 
@@ -109,8 +109,8 @@ When an element is a direct child of `<FlexboxLayout>`, you can work with the fo
 
 | Name | Type | Description |
 |------|------|-------------|
-`order` | `Number` | Sets the order in which child element appear in relation to one another. 
+`order` | `Number` | Sets the order in which child element appear in relation to one another.
 `flexGrow` | `Number` | Indicates that the child should grow in size, if necessary. Sets how much the child will grow in proportion to the rest of the child elements in the flex container.
 `flexShrink` | `Number` | Indicates that the child should shrink when the row runs out of space. Sets how much the flex item will shrink in proportion to the rest of the child elements in the flex container. When not specified, its value is set to `1`.
 `alignSelf` | `String` | (Android-only) Overrides the `alignItems` value for the child.<br/>Valid values:<br/>`flex-start` (cross-start margin edge of the item is placed on the cross-start line),<br/>`flex-end` (cross-end margin edge of the item is placed on the cross-end line),<br/>`center` (item is centered on the cross axis),<br/>`baseline` (the item baselines are aligned), and<br/>`stretch` (items is stretched to fill the container but respects `min-width` and `max-width`).<br/>Default value: `stretch`.
-`flexWrapBefore` | `Boolean` | When `true`, forces the item to wrap onto a new line. This property is not part of the official Flexbox specification.<br/>Default value: `false`. 
+`flexWrapBefore` | `Boolean` | When `true`, forces the item to wrap onto a new line. This property is not part of the official Flexbox specification.<br/>Default value: `false`.

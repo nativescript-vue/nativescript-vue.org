@@ -6,9 +6,9 @@ contributors: [ianaya89]
 
 El contenedor `<GridLayout>` permite alinear los elementos hijos de una forma similar a una tabla o grilla.
 
-La grilla esta compuesta por filas, columnas y celdas. Una celda puede abarcar una o mas filas y una o mas columnas. También puede contener múltiples elementos hijos, los cuales pueden abarcar mútiples filas y/o columnas e incluso superponerse unos con otros.
+La grilla esta compuesta por filas, columnas y celdas. Una celda puede abarcar una o más filas y una o más columnas. También puede contener múltiples elementos hijos, los cuales pueden abarcar mútiples filas y/o columnas e incluso superponerse unos con otros.
 
-Por defecto, el contenedor  `<GridLayout>` tiene una sola fila y una sola columna pero puedes agregar mas utilizando las propiedaes `columns` y `rows`. En ambas propiedades debes establecer la cantidad de columna/filas y el ancho y alto de las mismas. La manera de indicar la cantidad de columnas, es escribir una lista separada por comas con el ancho (*width*) de las mismas. El mismo procedimiento se aplica para las filas pero estableciendo al alto (*height*).
+Por defecto, el contenedor  `<GridLayout>` tiene una sola fila y una sola columna pero puedes agregar más utilizando las propiedaes `columns` y `rows`. En ambas propiedades debes establecer la cantidad de columna/filas y el ancho y alto de las mismas. La manera de indicar la cantidad de columnas, es escribir una lista separada por comas con el ancho (*width*) de las mismas. El mismo procedimiento se aplica para las filas pero estableciendo al alto (*height*).
 
 Ten en cuenta que puedas configurar un ancho de columna y alto de fila de forma fija o también de forma dinámica para lograr un efecto *responsive*.
 
@@ -16,9 +16,9 @@ Ten en cuenta que puedas configurar un ancho de columna y alto de fila de forma 
 * **auto:** Configurar que la columna sea tan ancha como su hijo más ancho o que la fila sea tan alta como su hijo más alto.
 * **\*:** Tomar tanto espacio como está disponible después de llenar todas las columnas o filas automáticas y de tamaño fijo.
 
-### Ejemplos
+## Ejemplos
 
-#### Contenedor de grilla con tamaño fijo
+### Contenedor de grilla con tamaño fijo
 
 El siguiente ejemplo crea una simple grilla de 2x2 con columnas y filas de tamaño fijo.
 
@@ -32,7 +32,7 @@ El siguiente ejemplo crea una simple grilla de 2x2 con columnas y filas de tama�
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout.svg" />
 
-#### Contenedor de grilla con tamaño estrella
+### Contenedor de grilla con tamaño estrella
 
 El siguiente ejemplo crea una grilla *responsive*, donde el espacio se asigna proporcionalmente a los elementos hijos.
 
@@ -46,7 +46,9 @@ El siguiente ejemplo crea una grilla *responsive*, donde el espacio se asigna pr
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_star_sizing.svg" />
 
-#### Contenedor de grilla con tamaño fijo y ajustable a la pantalla
+### Contenedor de grilla con tamaño fijo y ajustable a la pantalla
+
+El siguiente ejemplo crea una grilla con una columna ajustable a la pantalla y una con tamaño fijo. Las filas tiene un alto fijo.
 
 ```html
 <GridLayout columns="80, auto" rows="80, 80" backgroundColor="#3c495e">
@@ -58,7 +60,7 @@ El siguiente ejemplo crea una grilla *responsive*, donde el espacio se asigna pr
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_fixed_auto.svg" />
 
-#### Contenedor de grilla mixta con tamaño mixto y celdas combinadas
+### Contenedor de grilla mixta con tamaño mixto y celdas combinadas
 
 El siguiente ejemplo crea una grilla *responsive* con compleja con ancho y altos mixtos y celdas combinadas.
 

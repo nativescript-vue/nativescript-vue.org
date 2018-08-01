@@ -3,7 +3,7 @@ title: Templates
 contributors: [ianaya89]
 ---
 
-Esta sección provee un resumen sobre los templates que puedes utilizar para desarrollar aplicaciones con NativeScript-Vue. La lista se mantiene actualizada a medida que se crean nuevos templates o se deprecan templates mas antiguos.
+Esta sección provee un resumen sobre los templates que puedes utilizar para desarrollar aplicaciones con NativeScript-Vue. La lista se mantiene actualizada a medida que se crean nuevos templates o se deprecan templates más antiguos.
 
 > **NOTA:** Para usar cualquiera de los templates en la lista, primero debes tener tu [ambiente de desarrollo listo](/es/docs/getting-started/installation).
 

@@ -4,11 +4,13 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_wrap_lay
 contributors: [ianaya89]
 ---
 
-El contenedor `WrapLayout` permite posicionar los elementos hijos en filas o columnas, basado en una propiedad de orientación. El contenedor coloca los elementos hasta que el espacio este totalmente ocupado y luego envuelve los elementos restantes en una nueva fila o columna.
+El contenedor `WrapLayout` permite posicionar los elementos hijos en filas o columnas, usando una propiedad de orientación. El contenedor coloca los elementos hasta que el espacio este totalmente ocupado y luego envuelve los elementos restantes en una nueva fila o columna.
 
-### Ejemplo
+## Ejemplos
 
-#### `WrapLayout` por defecto
+### Contenedor envolvente por defecto (horizontal)
+
+El siguiente ejemplo crea una fila de elementos equivalentes en tamaño. Cuando no queda suficiente, el contenedor envuelve el último elemento en una nueva fila.
 
 ```html
 <WrapLayout backgroundColor="#3c495e">
@@ -20,7 +22,9 @@ El contenedor `WrapLayout` permite posicionar los elementos hijos en filas o col
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/wrap_layout_horizontal.svg" />
 
-#### `WrapLayout` vertical
+### Contenedor envolvente vertical
+
+El siguiente ejemplo crea una columna de elementos equivalentes en tamaño. Cuando no queda suficiente, el contenedor envuelve el último elemento en una nueva columna.
 
 ```html
 <WrapLayout orientation="vertical" backgroundColor="#3c495e">

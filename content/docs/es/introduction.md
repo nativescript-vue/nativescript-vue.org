@@ -33,7 +33,7 @@ Si ya tienes experienca con Vue.js, hay dos cosas muy importantes que debes apre
 * **Trabajar con NativeScript CLI**: NativeScript **NO** es un *framework* para desarrollar aplicaciones web, sino para desarrollar aplicaciones de iOS y Android. Vas a tener que aprender algunos comandos de NativeScript CL y algunas cosas básicas sobre simuladores de iOS y Androud.
 * **Aprender sobre los componentes UI de NativeScript**: Como NativeScript utiliza componentes nativos para la interfaz de usuario, elementos HTML como `<div>` y `<span>` no existen dentro de su escositema. En su lugar, necesitas aprender un [*set* de nuevos componentes](https://docs.nativescript.org/ui/components) que van a servir para *renderizar* las diferentes interfaces.
 
-No te preocupes! A pesar de que hay una curva de aprendizaje para dominar **NativeScript-Vue**, te vas a dar cuenta que es mucho mas sencillo que aprender iOS y Android desde el comienzo. Despues de todo, tus aplicaciones van a estar basadas en JavaScript y Vue.
+No te preocupes! A pesar de que hay una curva de aprendizaje para dominar **NativeScript-Vue**, te vas a dar cuenta que es mucho más sencillo que aprender iOS y Android desde el comienzo. Despues de todo, tus aplicaciones van a estar basadas en JavaScript y Vue.
 
 ## ¿Te gustaría involucrarte?
 

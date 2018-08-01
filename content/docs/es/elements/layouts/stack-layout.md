@@ -4,11 +4,13 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_stack_la
 contributors: [ianaya89]
 ---
 
-El contenedor `StackLayout` apila los elementos hijos de forma vertical (comportamiento por defecto) u horizontal
+El contenedor `StackLayout` apila los elementos hijos de forma vertical (comportamiento por defecto) u horizontal.
 
-### Ejemplos
+## Ejemplos
 
-#### StackLayout Vertical (valor por defecto)
+### Apilamiento vertical (valor por defecto)
+
+El siguiente ejemplo crea una pila vertical de tres elementos equivalentes en tamaño. Los elementos son estirados para cubrir todo el alto de la pantalla. Los elementos se colocan en órden de declaración.
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -19,7 +21,9 @@ El contenedor `StackLayout` apila los elementos hijos de forma vertical (comport
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical.svg" />
 
-#### StackLayout Horizontal
+### Apilamiento horizontal
+
+El siguiente ejemplo crea una pila horizontal de tres elementos equivalentes en tamaño. Los elementos son estirados para cubrir todo el alto de la pantalla. Los elementos se colocan en órden de declaración.
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -30,7 +34,9 @@ El contenedor `StackLayout` apila los elementos hijos de forma vertical (comport
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal.svg" />
 
-#### StackLayout Vertical con elementos hijos alineados horizontalmente
+### Apilamiento vertical con elementos hijos alineados horizontalmente
+
+El siguiente ejemplo crea una pila de elementos *responsive* de forma diagonal. Los elementos estan apilados verticalmente.
 
 ```html
 <StackLayout backgroundColor="#3c495e">
@@ -46,7 +52,9 @@ El contenedor `StackLayout` apila los elementos hijos de forma vertical (comport
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical_align_children.svg" />
 
-#### StackLayout Horizontal con elementos hijos alineados verticalmente
+### Apilamiento horizontal con elementos hijos alineados verticalmente
+
+El siguiente ejemplo crea una pila de elementos *responsive* de forma diagonal. Los elementos estan apilados horizontalmente.
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
