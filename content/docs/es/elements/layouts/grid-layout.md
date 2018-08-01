@@ -16,9 +16,9 @@ Ten en cuenta que puedas configurar un ancho de columna y alto de fila de forma 
 * **auto:** Configurar que la columna sea tan ancha como su hijo más ancho o que la fila sea tan alta como su hijo más alto.
 * **\*:** Tomar tanto espacio como está disponible después de llenar todas las columnas o filas automáticas y de tamaño fijo.
 
-### Ejemplos
+## Ejemplos
 
-#### Contenedor de grilla con tamaño fijo
+### Contenedor de grilla con tamaño fijo
 
 El siguiente ejemplo crea una simple grilla de 2x2 con columnas y filas de tamaño fijo.
 
@@ -32,7 +32,7 @@ El siguiente ejemplo crea una simple grilla de 2x2 con columnas y filas de tama�
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout.svg" />
 
-#### Contenedor de grilla con tamaño estrella
+### Contenedor de grilla con tamaño estrella
 
 El siguiente ejemplo crea una grilla *responsive*, donde el espacio se asigna proporcionalmente a los elementos hijos.
 
@@ -46,7 +46,9 @@ El siguiente ejemplo crea una grilla *responsive*, donde el espacio se asigna pr
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_star_sizing.svg" />
 
-#### Contenedor de grilla con tamaño fijo y ajustable a la pantalla
+### Contenedor de grilla con tamaño fijo y ajustable a la pantalla
+
+El siguiente ejemplo crea una grilla con una columna ajustable a la pantalla y una con tamaño fijo. Las filas tiene un alto fijo.
 
 ```html
 <GridLayout columns="80, auto" rows="80, 80" backgroundColor="#3c495e">
@@ -58,7 +60,7 @@ El siguiente ejemplo crea una grilla *responsive*, donde el espacio se asigna pr
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_fixed_auto.svg" />
 
-#### Contenedor de grilla mixta con tamaño mixto y celdas combinadas
+### Contenedor de grilla mixta con tamaño mixto y celdas combinadas
 
 El siguiente ejemplo crea una grilla *responsive* con compleja con ancho y altos mixtos y celdas combinadas.
 
