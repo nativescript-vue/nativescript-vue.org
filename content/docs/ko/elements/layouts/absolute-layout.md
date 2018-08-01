@@ -1,6 +1,7 @@
 ---
 title: AbsoluteLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_absolute_layout_
+docRef: 'https://docs.nativescript.org/ui/layouts/layout-containers#absolutelayout'
 contributors:
   - rigor789
   - ikoevska
