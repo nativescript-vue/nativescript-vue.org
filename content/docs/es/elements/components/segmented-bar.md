@@ -4,7 +4,7 @@ apiRef: http://docs.nativescript.org/api-reference/modules/_ui_segmented_bar_.ht
 contributors: [ianaya89]
 ---
 
-`<SegmentedBar>` es un componente de UI que muestra en pantalla una serie de botones para un selección discreta. Los botones pueden contener texto o imagenes.
+`<SegmentedBar>` es un componente de UI que muestra en pantalla una serie de botones para un selección discreta. Los botones pueden contener texto o imágenes.
 
 Al contrario de lo que sucede con el componente `<TabView>`:
 * La posición del componente `<SegmentedBar>` no es fija.

@@ -35,7 +35,7 @@ contributors: [ianaya89]
   </TabViewItem>
 </TabView>
 ```
-**NOTA:** Utiliza imagenes para los íconos en lugar de fuentes.
+**NOTA:** Utiliza imágenes para los íconos en lugar de fuentes.
 
 ## Propiedades
 
