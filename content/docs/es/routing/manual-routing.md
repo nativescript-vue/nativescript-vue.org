@@ -3,7 +3,7 @@ title: Ruteo Manual
 contributors: [ianaya89]
 ---
 
-La manera mas simple de usar rutas en NativeScript-Vue es usando cualquiera de estas funciones convencionales:
+La manera más simple de usar rutas en NativeScript-Vue es usando cualquiera de estas funciones convencionales:
 
 * [`$navigateTo`](#navigateto)
 * [`$navigateBack`](#navigateback)
@@ -112,7 +112,7 @@ this.$navigateTo(Detail, {
 });
 ```
 
-Para mas información  sobre las opciones que puedes utilizar, checa [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
+Para más información  sobre las opciones que puedes utilizar, checa [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
 
 ### `$navigateBack`
 
@@ -237,7 +237,7 @@ const Detail = {
 
 La propiedad `id` esta ahora disponible en el componente a través de `this.id`
 
-Para mas información sobre propiedades, checa [la documentación oficial de Vue](https://vuejs.org/v2/guide/components-props.html)
+Para más información sobre propiedades, checa [la documentación oficial de Vue](https://vuejs.org/v2/guide/components-props.html)
 
 ####  Retornando data desde la ventana modal
 

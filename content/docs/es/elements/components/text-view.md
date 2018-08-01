@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_text_view_.textv
 contributors: [ianaya89]
 ---
 
-`<TextView>` es un componente de UI que muestra un contenedor de texto editable o de solo-lectura. Puedes utilizarlo para permitir que el usuario ingrese grande cantidades de texto o simplemente para mostrar texto en mas de una línea.
+`<TextView>` es un componente de UI que muestra un contenedor de texto editable o de solo-lectura. Puedes utilizarlo para permitir que el usuario ingrese grande cantidades de texto o simplemente para mostrar texto en más de una línea.
 
 El componente `<TextView>` extiende a [`TextBase`](https://docs.nativescript.org/api-reference/classes/_ui_text_base_.textbase) y a[`EditableTextBase`](https://docs.nativescript.org/api-reference/classes/_ui_editor_text_base_.editabletextbase),agregando propiedades y eventos adicionales.
 

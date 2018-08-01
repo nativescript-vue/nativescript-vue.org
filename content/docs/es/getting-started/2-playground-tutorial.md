@@ -8,7 +8,7 @@ El [NativeScript Playground](https://play.nativescript.org?template=play-vue) es
 Puedes trabajar con el *Playground* tanto como quieras: usarlo para probar como desarrollar con NativeScript o incluso dearrollar todo tu proyecto en la plataforma. Sin embarjo, cuando llegue el momento de llevar tu aplicación al mundo, vas a necesitar instalar las [herramientas de NativeScript localmente]((/es/docs/getting-started/installation) y luego [elegir uno de los templates disponibles](/es/docs/getting-started/templates).
 
 **Esta sección, consiste en dos partes:**
-* [Parte 1: Familiarizandose con el Playround](#parte-1-familiarizandose-con-el-playground)
+* [Parte 1: Familiarizandose con el Playground](#parte-1-familiarizandose-con-el-playground)
     * [Antes de comenzar](#antes-de-comenzar)
     * [La disposición de la tierra](#la-disposición-de-la-tierra)
     * [Arrastra y suelta código](#arrastra-y-suelta-código)
@@ -26,7 +26,7 @@ Puedes trabajar con el *Playground* tanto como quieras: usarlo para probar como 
     * [Diseño avanzado: Estilar tareas completadas](#diseño-avanzado-styled-completed-tasks)
 
 
-# Parte 1: Familiarizandose con el Playround
+# Parte 1: Familiarizandose con el Playground
 
 Abriendo [este link](https://play.nativescript.org/?template=play-vue) vas a poder ver un editor de código simple y en la nube, donde un template básico de NativeScript + Vue.js esta precargado para que empieces a usar.
 
@@ -44,24 +44,25 @@ Manten las aplicaciones corriendo mientras experimentas un poco con el código.
 
 ![](/screenshots/ns-playground/playground-layout.png)
 
-La barra lateral izquierda, ofrcece un explorador de archivos y un panel de **Componentes**. La mayor parte de tu tiempo, vas a estar trabajando en el archivo `app.js` y `app.css`, los cuales contienen la funcionalidad de la aplicación y los estilos de la misma. Por el momento no necesitamos indagar en estos archivos.
+La barra lateral izquierda, ofrece un explorador de archivos y un panel **Components**. La mayor parte de tu tiempo, vas a estar trabajando en el archivo `app.js` y `app.css`, los cuales contienen la funcionalidad de la aplicación y los estilos de la misma. Por el momento no necesitamos indagar en estos archivos.
 
 El panel de **Components** provee una acceso rápido a código pre-configurado de los componentes de UI de NativeScript.
 
-Desde la parte superior de la página, puedes subir tus cambios de código para previsualizar las aplicaciones en tu dipositivo, guardar los cambios e incluso descargar el coódigo.
+Desde la parte superior de la página, puedes subir tus cambios de código para previsualizar las aplicaciones en tu dipositivo, guardar los cambios e incluso descargar el código.
 
-En la parte inferior, encontrarás a tu mejor amigo a la hora de obtener información en tiempo real acerca de errores y logueos.
+En la parte inferior, encontrarás a tu mejor amigo a la hora de obtener información en tiempo real. En este panel vas a poder leer errores e informacion de *logging*
 
 ### Arrastra y suelta el código
 
 ![](/screenshots/ns-playground/playground-drag-and-drop.gif)
 
-Simplemente haz click en un componente del panel y sueltalo en el editor de código (en cualquier lugar del bloque `template`). Al soltar el botón del mouse, se inserta un código de muestra previamente escrito para el componente respectivo. Cualquier método que vaya con él (como el que ocurre al presionar un item) se agrega automáticamente en la parte superior de la página antes del bloque `template`.
+Simplemente haz click en un componente del panel y sueltalo en el editor de código (en cualquier lugar dentro del bloque `template`). Al soltar el botón del mouse, se inserta un código predeterminado. relacionado al componente en cuestión. Cualquier posible método que relacionado al componente (como el que ocurre al presionar un item), se agrega automáticamente en la parte superior de la página antes del bloque `template`.
 
-> **TIP:** Usa la funcionalidad de búsqueda del panel de **Components** para acceder rápidamente al elemento que necesitas. Ten en cuenta que la búsqueda funciona solo con el titulo del componente y no con el nombre del código. Por ejemplo: puedes buscar *text field* pero no *textfield*.
+> **TIP:** Usa la funcionalidad de búsqueda del panel de **Components** para acceder rápidamente al elemento que necesitas. Ten en cuenta que la búsqueda funciona solo con el título del componente y no con el nombre de código. Por ejemplo: puedes buscar con las palabras *text field* pero no con *TextField*.
+>
 > ![](/screenshots/ns-playground/playground-component-search.gif)
 
-Para que la mayoría de los componentes funcionen, necesitas soltarlos dentro del bloque `<Page`, preferentemente dentro de un contenedor (`layout`). Recuerda que los contenedores le permiten a la aplicación, saber como pocicionar el contenido dentro de la pantalla.
+Para que la mayoría de los componentes funcionen, necesitas soltarlos dentro del bloque `<Page>`, preferentemente dentro de un contenedor (*layout*). Recuerda que los contenedores le permiten a la aplicación, saber como posicionar el contenido dentro de la pantalla.
 
 > **NOTA:** Actualmente, no hay nada que impida que sueltes código en algun lugar que cause que la aplicación colapse o deje de funcionar. En esos casos, debes estar atento a las pestañas **Errors** y **Device Logs** para poder detectar el problema.
 
@@ -69,7 +70,7 @@ Para que la mayoría de los componentes funcionen, necesitas soltarlos dentro de
 
 ![](/screenshots/ns-playground/playground-preview.gif)
 
-Una vez que ubicas tu código en un lugar válido, puedres presionar el botón **Preview** (o `Ctrl+S`/`Cmd+S`) y ver como tu aplicación se actualiza en tu pantalla de forma instantanea.
+Una vez que ubicas tu código en un lugar válido, puedres presionar el botón **Preview** (o `Ctrl+S`/`Cmd+S`) y ver como tu aplicación se actualiza en tu pantalla de forma instantánea.
 
 En algunos casos, cuando interactuas con tu aplicación, esta puede cerrarse de manera inesperada. Simplemente vuelve a lanzarla y checa los reportes de errores.
 
@@ -77,15 +78,15 @@ Si en algun punto dejas de visualizar en el dispositivo los cambios aplicados, h
 
 ### Configura tu código
 
-Entonces, el componente se ejecuta y se muestra en la pantalla. Seguramente estes entusiasmado con los reultados pero quieres hacer algo por ti mismo.
+Ahora el componente se ejecuta y se muestra en la pantalla. Seguramente estas entusiasmado con los reultados pero quieres hacer algo por ti mismo.
 
-So, the component runs and shows on your screen. You're excited but you want to make it your own. Puedes *hackear* el código sugerido por defecto, cambia tamaños, etiquetas o incluso agrega y quita elementos. Animate a explorar.
+Puedes *hackear* el código sugerido por defecto, cambia tamaños, etiquetas o incluso agrega y quita elementos. Anímate a explorar.
 
 Puedes ir al archivo `app.css` y modificar algunos estilos. Por ejemplo, experimenta cambiando colores y tamaños de texto.
 
 # Parte 2: Construyendo una aplicación
 
-Si quieres explorar mas a fondo el [NativeScript Playground](https://play.nativescript.org?template=play-vue), puedes empezar por crear una simple aplicación *to-do* con los siguientes requerimientos:
+Si quieres explorar más a fondo el [NativeScript Playground](https://play.nativescript.org?template=play-vue), puedes empezar por crear una simple aplicación *to-do* con los siguientes requerimientos:
 
 * Diseño básico
   * Diseño de dos pestañas
@@ -108,7 +109,7 @@ Si quieres explorar mas a fondo el [NativeScript Playground](https://play.native
 
 ![](/screenshots/ns-playground/playground-home.png)
 
-Todo el desarrolla de este tutorial transcurre en los archivos `app.js` y `app.css`, los cuales contienen la funcionalidad de la aplicación y los estilos de la misma.
+Todo el desarrollo de este tutorial transcurre en los archivos `app.js` y `app.css`, los cuales contienen la funcionalidad de la aplicación y los estilos de la misma.
 
 El archivo `app.js` consiste en una simple declaración de un `template` sin singun tipo de funcionalidad extra. Mientras que vayas arrastrando y soltando componentes de UI dentro de la aplicación, el mismo Playground va a ir agregando bloques `methods` con el código correspondiente.
 
@@ -118,7 +119,7 @@ Dentro de `app.js`, vas a estar trabajando en el bloque `template` para diseñar
 
 ### Progreso de la Sección
 
-Asi es como tu aplicación luce al principio de la sección y como lo hara una vez que finalices la misma.
+Asi es como tu aplicación luce al principio de la sección y como lo hará una vez que finalices la misma.
 
 | Pantalla Inicial | Pestaña 1 | Pestaña 2 |
 |-------|-----|-----|
@@ -126,20 +127,20 @@ Asi es como tu aplicación luce al principio de la sección y como lo hara una v
 
 ### Conceptos básicos de NativeScript
 
-`<Page>` es un elemento de interfaz de primer nivel en una aplicación NativeScript-Vue. Todos los demas elementos estarán anidados dentro de este.
+`<Page>` es un elemento de interfaz de primer nivel en una aplicación **NativeScript-Vue**. Todos los demas elementos estarán anidados dentro de este.
 
-El elemento `<ActionBar>` muestra una barra de accion para el elemento`<Page>`. Un elemento `<Page>` no puede contener mas de un elemento `<ActionBar>`.
+El elemento `<ActionBar>` muestra una barra de acción para el elemento`<Page>`. Un elemento `<Page>` no puede contener más de un elemento `<ActionBar>`.
 
-Comunmente, luego del elemento `<ActionBar>`, vas a colocar componentes de nevegación (como un *drawer* o un *tab view*) o componentes de disposición (*layout*). Ambos tipos de elemento controlan como distribuir y posicionar el contenido de tu aplicación.
+Comunmente, luego del elemento `<ActionBar>`, vas a colocar componentes de nevegación (como un *drawer* o un *tab view*) o componentes de posicionamiento (*layout*). Ambos tipos de elemento controlan como distribuir y posicionar el contenido de tu aplicación.
 
 ### Requerimientos de Implementación
 
 Usa el componente `<TabView>` para crear una aplicación con dos pestañas
 
 1. Remueve el componente `<ScrollView>` con todo su contenido creado por defecto<br/>Los componentes `<ScrollView>` también son elementos de primer nivel utilizados para contenido desplazable.
-1. Arrastra y suelta el componente `<TabView>` donde lo quieras ubicar.<br/>Ten en cuenta que el Playground no aplica formato de código automatico al insertar nuevos componentes.
+1. Arrastra y suelta el componente `<TabView>` donde lo quieras ubicar.<br/>Ten en cuenta que el Playground no aplica formato de código automáticamente al insertar nuevos componentes.
 1. Configura el alto (*height*) del elemento `<TabView>` para rellenar toda la pantalla (`100%`).<br/>En dispositivos iOS, el alto por defecto causa que las pestañas se muestren en el medio de la pantalla.
-1. Cambia los titlos de los elementos `<TabViewItem>` y su contenido, para reflejar el proposito de los mismos.<br/>En este punto, el contenido de texto de las pestañas es mostrado en elementos `<Label>` sin estilos ni formatos. Aplica la propiedad `textWrap="true"` a los componentes `<Label>` para mejorar la visualización del texto.
+1. Cambia los títulos de los elementos `<TabViewItem>` y su contenido, para que reflejen el propósito de los mismos.<br/>En este punto, el contenido de texto de las pestañas es mostrado en elementos `<Label>` sin estilos y sin formatos. Aplica la propiedad `textWrap="true"` a los componentes `<Label>` para mejorar la visualización del texto.
 
 Al final de este paso, tu código deberia asemejarse al siguiente ejemplo:
 
@@ -171,7 +172,7 @@ new Vue({
 
 ### Progreso de la sección
 
-Asi es como tu aplicación luce al principio de la sección y como lo hara una vez que finalices la misma.
+Asi es como tu aplicación luce al principio de la sección y como lo hará una vez que finalices la misma.
 
 | Pantalla Inicial | Pestaña 1 - Sin tareas | Pestaña 1 - Con tareas |
 |-------|-----|-------------|
@@ -179,18 +180,18 @@ Asi es como tu aplicación luce al principio de la sección y como lo hara una v
 
 ### Conceptos básicos de NativeScript
 
-Los componentes de distribución (*layouts*), te permiten acomodar los componentes de UI en tu aplicación. Cada vez que necesites colocar mas de un componente en patanlla, vas a necesitar usar componentes de distribución. Los componentes `<StackLayout>` y `<GridLayout>`son las opciones mas básicas y versatiles. Permiten ubicar contenido en formal vertical o de grilla, respectivamente. Mientras que `<StackLayout>` muestra elementos en una sequencia natural, `<GridLayout>` permite elegir de forma mas precisa como posicionar los elementos dentro de un sistema de grillas.
+Los componentes de posicionamiento (*layouts*), te permiten acomodar los componentes de UI en tu aplicación. Cada vez que necesites colocar más de un componente en patanlla, vas a necesitar usar componentes de posicionamiento. Los componentes `<StackLayout>` y `<GridLayout>`son las opciones más básicas y versátiles. Permiten ubicar contenido en formal vertical o de grilla, respectivamente. Mientras que `<StackLayout>` muestra elementos en una secuencia natural, `<GridLayout>` permite elegir de forma más precisa como posicionar los elementos dentro de un sistema de grillas.
 
 ### Requerimientos de Implementación
 
-Usa el componente `<GridLayout>` para acomodar el elemento `<TextField>` y el elemento `<Button>` dentro de la página. Estos ultimos son los componentes que permitirán el ingreso de datos a la aplicación.
+Usa el componente `<GridLayout>` para acomodar el elemento `<TextField>` y el elemento `<Button>` dentro de la página. Estos últimos son los componentes que permitirán el ingreso de datos a la aplicación.
 
 Usa el componente `<ListView>` para mostrar tareas debajo del campo de texto
 
 1. Borra el componente `<Label>` dentro del primer elemento `<TabViewItem>`.
 1. Arrastra y suelta el componente `<StackLayout>` dentro del primer elemento `<TabViewItem>`<br/>El código por defecto crea un contenido vertical bastante colorido.
 1. Borra todos los componentes `<Label>` dentro del elemento `<StackLayout>`.
-1. Arrastra y suelta el componenten `<GridLayout>` dentro del elemento `<StackLayout>`.<br/>El código por defecto crea una tabla colorida que muestra como ubicar elementos y combinar celdas.
+1. Arrastra y suelta el componente `<GridLayout>` dentro del elemento `<StackLayout>`.<br/>El código por defecto crea una tabla colorida que muestra como ubicar elementos y combinar celdas.
 1. Borra todos los componentes `<Label>` del elemento `<GridLayout>`.
 1. Configura el componente `<StackLayout>`.
     * Remueve el color de fondo.
@@ -199,8 +200,8 @@ Usa el componente `<ListView>` para mostrar tareas debajo del campo de texto
     * Ajusta la grilla para que tenga dos columnas y una fila.
     * Establece el ancho de la grilla al valor `100%` para que ocupe todo el ancho de pantalla.
     * Remueve cualquier otra configuracioón de la grilla.
-1. Arrastra y suelta el componente `<TextField>` y el componente `<Button>` dentro del elemento `<GridLayout>`<br/>El Playground agregará código JavaScript por primera vez. Puedes ver que se agrego al código tanto un bloque `data()` como un bloque `methods` (encima de `template`). En los próximos pasos, vas a tener que agregar código a estos bloques para crear la funcionalidad de la aplicación.
-1. Arrastra y suelta el componente `<ListView>` debajo de la grilla.<br/>El código por defecto crea una lista de paises con sus respectivos íconos.
+1. Arrastra y suelta el componente `<TextField>` y el componente `<Button>` dentro del elemento `<GridLayout>`<br/>El Playground agregará código JavaScript por primera vez. Puedes ver que se agrego al código tanto un bloque `data()` como un bloque `methods` (arriba de `template`). En los próximos pasos, vas a tener que agregar código a estos bloques para crear la funcionalidad de la aplicación.
+1. Arrastra y suelta el componente `<ListView>` debajo de la grilla.<br/>El código por defecto crea una lista de países con sus respectivos íconos.
 1. Configura el componente posicionando los elementos dentro de la grilla.
     * Coloca el componente `<TextField>` dentro de la celda perteneciente a la primera fila y primer columna.
     * Coloca el componente `<Button>` dentro de la celda perteneciente a la primera fila y segunda columna.
@@ -224,12 +225,12 @@ new Vue({
   },
   methods: {
     onItemTap(args) {
-      console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
+      console.log('Task with index: ' + args.index + ' tapped'); // Imprime en consola la tarea presionada.
     },
     onButtonTap() {
-      console.log('New task added: ' + this.textFieldValue + '.'); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
-      this.textFieldValue = ''; // Clears the text field so that users can start adding new tasks immediately.
+      console.log('New task added: ' + this.textFieldValue + '.'); // Imprime en consola la nueva tarea.
+      this.todos.unshift({ name: this.textFieldValue }); // Agrega tareas a la colección de ToDo
+      this.textFieldValue = ''; // Limpia el campo de texto
     },
   },
 
@@ -269,7 +270,7 @@ new Vue({
 
 ### Progreso de la sección
 
-Asi es como tu aplicación luce al principio de la sección y como lo hara una vez que finalices la misma.
+Asi es como tu aplicación luce al principio de la sección y como lo hará una vez que finalices la misma.
 
 | Pestaña 1 - Tareas agregadas | Pestaña 1 - Item Presionado | Pestaña 2 - Tareas completadas
 |-----|-------------|-------|
@@ -296,7 +297,7 @@ El [módulo `dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_d
 1. Modificar el método`onItemTap`.
   * El método muestra el diálogo `action()`.
   * El método imprime en consola la selección del usuario.
-  * Basado en ese selección, el método mueve elementos desde la colección de `todos` a la colección de `dones`, borra elementos de la colección `todos` o cierral el diálogo. Usa el método `splice()` para evitar "agujeros" en tu colección y `unshift()` para asegurarte que las nuevas tareas son mostradas al comienzo (ambos son métodos nativos de los objetos `Array` de JavaScript).
+  * Basado en ese selección, el método mueve elementos desde la colección de `todos` a la colección de `dones`, borra elementos de la colección `todos` o cierra el diálogo. Usa el método `splice()` para evitar "agujeros" en tu colección y `unshift()` para asegurarte que las nuevas tareas se muestren al comienzo (ambos son métodos nativos de los objetos `Array` de JavaScript).
 
   ```javascript
   onItemTap(args) {
@@ -395,7 +396,7 @@ new Vue({
 
 ### Progreso de la sección
 
-Asi es como tu aplicación luce al principio de la sección y como lo hara una vez que finalices la misma.
+Asi es como tu aplicación luce al principio de la sección y como lo hará una vez que finalices la misma.
 
 | Pestaña 2 - Tareas completadas | Pestaña 2 - Item presionado | Pestaña 1 - Tareas activas
 |-----|-------------|-----|
@@ -409,7 +410,7 @@ Esta implementación no requiere ningun conocimiento extra.
 
 Para la segunda pestaña modifica el método `onDoneTap`:
 
-* El método muestra diálogo `action()`.
+* El método muestra un diálogo `action()`.
 * El método imprime en consola la selección del usuario (*debugging*).
 * Basandose en la selección, el método mueve los elementos desde la colección de `dones` a la de `todos`, elimina elementos de la colección de `dones` o cierra el diálogo. Usa el método `splice()` para evitar "agujeros" en tu colección y `unshift()` para asegurarte que las nuevas tareas son mostradas al comienzo (ambos son métodos nativos de los objetos `Array` de JavaScript).
 
@@ -527,7 +528,7 @@ new Vue({
 
 ### Progreso de la sección
 
-Asi es como tu aplicación luce al principio de la sección y como lo hara una vez que finalices la misma.
+Asi es como tu aplicación luce al principio de la sección y como lo hará una vez que finalices la misma.
 
 | Pestaña 1 - Sin estukis | Pestaña 1 - Boton con estilos | Pestaña 1 - Campo de texto con estilos |
 |-----|-------------|----|
@@ -535,9 +536,9 @@ Asi es como tu aplicación luce al principio de la sección y como lo hara una v
 
 ### Conceptos básicos de NativeScript
 
-Cuando trabajas con NativeScript-Vue, puedes usar CSS global o en línea para estilar la aplicación. El CSS global es aplicado primero y se maneja dentro del archivo `app.css` (ubicado en la raíz del proyecto). Tambien puedes leer [la seccion de estilos de NativeScript](https://docs.nativescript.org/ui/styling).
+Cuando trabajas con **NativeScript-Vue**, puedes usar CSS global o en línea para estilar la aplicación. El CSS global es aplicado primero y se maneja dentro del archivo `app.css` (ubicado en la raíz del proyecto). Tambien puedes leer [la seccion de estilos de NativeScript](https://docs.nativescript.org/ui/styling).
 
-Con el tipo de selector, puedes seleccionar un componente de la UI y aplicar estilos personalizados. Para seleccionar el componente debes usar su nombre tal cual esta provisto en el código. Por ejemplo para agregar una regla de css a una pestaña debes usar como nombre `TabView`.
+Con el tipo de selector CSS, puedes seleccionar un componente de la UI y aplicar estilos personalizados. Para seleccionar el componente debes usar su nombre tal cual esta provisto en el código. Por ejemplo para agregar una regla de css a una pestaña debes usar como nombre `TabView`.
 
 ### Requerimientos de Implementación
 
@@ -582,7 +583,7 @@ TextField {
 
 ### Progreso de la sección
 
-Asi es como tu aplicación luce al principio de la sección y como lo hara una vez que finalices la misma.
+Asi es como tu aplicación luce al principio de la sección y como lo hará una vez que finalices la misma.
 
 | Pestañas - Sin estilos | Pestañas - Con estilos
 |-----|-------------|
@@ -592,13 +593,13 @@ Asi es como tu aplicación luce al principio de la sección y como lo hara una v
 
 El componente `<TabView>` provee algunas propiedades de estilo por defecto. Puedes aplicar `textTransform` a los titulos de las pestañas y cambiar la fuentes y colores (`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`, `tabBackgroundColor`).
 
-> **NOTA:** Actualmente, `tabTextFontSize` no funciona en iOS, no puedes modificar el tamaño de fuente en los titulos de las pestañas.
+> **NOTA:** Actualmente, `tabTextFontSize` no funciona en iOS. Por lo tanto no puedes modificar el tamaño de fuente en los titulos de las pestañas.
 
 ### Requerimientos de Implementación
 
 #### Cambiar color y tamaño de fuente en el título de la ventana seleccionada
 
-En el archivo `app.js`, en la línea 57, agrega las propiedades `selectedTabTextColor` y `tabTextFontSize`. Si estas probando esto en iOS, recuerda que el tamaño de la fuenta no se modificará.
+En el archivo `app.js`, en la línea 57, agrega las propiedades `selectedTabTextColor` y `tabTextFontSize`. Si estás probando en iOS, recuerda que el tamaño de la fuenta no se modificará.
 
 ```HTML
 <TabView height="100%" selectedTabTextColor="#53ba82" tabTextFontSize="20" >
@@ -618,7 +619,7 @@ En el archivo `app.js`, en las líneas 58 y 73, agregar la propiedad `textTransf
 
 ## Diseño avanzado: Tareas activas con estilos personalizados
 
-Asi es como tu aplicación luce al principio de la sección y como lo hara una vez que finalices la misma.
+Asi es como tu aplicación luce al principio de la sección y como lo hará una vez que finalices la misma.
 
 | Tareas activas - Sin estilos | Tareas activas - Sin separador | Tareas activas - Con estilos |
 |-----|-------------|---|
@@ -626,7 +627,7 @@ Asi es como tu aplicación luce al principio de la sección y como lo hara una v
 
 ### Conceptos básicos de NativeScript
 
-Los componentes `<ListView>` y `<Label>` tienen por defecto algunas propiedades que puedes usar para controlar elementos como el separador de la lista o el texto envuelto. Para la mayoria de los cambios de aspecto de los componentes, debes usar estilos CSS (`app.css`).
+Los componentes `<ListView>` y `<Label>` tienen por defecto algunas propiedades que puedes usar para controlar elementos como el separador de la lista o el texto envuelto. Para la mayoría de los cambios de aspecto de los componentes, debes usar estilos CSS (`app.css`).
 
 Para agregar reglas de estilos que funcionen para el texto de tareas activas, puedes configurar un `id` en el elemento `<Label>`.
 
@@ -657,7 +658,7 @@ Para agregar reglas de estilos que funcionen para el texto de tareas activas, pu
 
 ## Diseño avanzado: Tareas completadas con estilos personalizados
 
-Asi es como tu aplicación luce al principio de la sección y como lo hara una vez que finalices la misma.
+Asi es como tu aplicación luce al principio de la sección y como lo hará una vez que finalices la misma.
 
 | Tareas completadas - Sin estilos | Tareas completadas - Con estilos |
 |-----|-------------|

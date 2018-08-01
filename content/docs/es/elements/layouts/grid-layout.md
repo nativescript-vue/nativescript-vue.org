@@ -6,9 +6,9 @@ contributors: [ianaya89]
 
 El contenedor `<GridLayout>` permite alinear los elementos hijos de una forma similar a una tabla o grilla.
 
-La grilla esta compuesta por filas, columnas y celdas. Una celda puede abarcar una o mas filas y una o mas columnas. También puede contener múltiples elementos hijos, los cuales pueden abarcar mútiples filas y/o columnas e incluso superponerse unos con otros.
+La grilla esta compuesta por filas, columnas y celdas. Una celda puede abarcar una o más filas y una o más columnas. También puede contener múltiples elementos hijos, los cuales pueden abarcar mútiples filas y/o columnas e incluso superponerse unos con otros.
 
-Por defecto, el contenedor  `<GridLayout>` tiene una sola fila y una sola columna pero puedes agregar mas utilizando las propiedaes `columns` y `rows`. En ambas propiedades debes establecer la cantidad de columna/filas y el ancho y alto de las mismas. La manera de indicar la cantidad de columnas, es escribir una lista separada por comas con el ancho (*width*) de las mismas. El mismo procedimiento se aplica para las filas pero estableciendo al alto (*height*).
+Por defecto, el contenedor  `<GridLayout>` tiene una sola fila y una sola columna pero puedes agregar más utilizando las propiedaes `columns` y `rows`. En ambas propiedades debes establecer la cantidad de columna/filas y el ancho y alto de las mismas. La manera de indicar la cantidad de columnas, es escribir una lista separada por comas con el ancho (*width*) de las mismas. El mismo procedimiento se aplica para las filas pero estableciendo al alto (*height*).
 
 Ten en cuenta que puedas configurar un ancho de columna y alto de fila de forma fija o también de forma dinámica para lograr un efecto *responsive*.
 

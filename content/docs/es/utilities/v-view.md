@@ -34,7 +34,7 @@ Este componente, requiere las propiedades `drawerContent` y `mainContent` para s
 </RadSideDrawer>
 ```
 
-Si no utilizas la directiva `v-view`, necesitas un trabajo mas tedioso para lograr el mismo resultado:
+Si no utilizas la directiva `v-view`, necesitas un trabajo más tedioso para lograr el mismo resultado:
 
 ```HTML
 <RadSideDrawer ref="drawer">

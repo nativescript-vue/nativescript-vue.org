@@ -6,10 +6,10 @@ contributors: [ianaya89]
 ---
 
 
-El contenedor `AbsoluteLayout` es el *layout* mas simple de NativeScript. Usa coordenadas absolutas para posicionar los componentes hijos a partir del vértice superior izquierdo.
+El contenedor `AbsoluteLayout` es el *layout* más simple de NativeScript. Usa coordenadas absolutas para posicionar los componentes hijos a partir del vértice superior izquierdo.
 `AbsoluteLayout` no aplicará ninguna restricción de diseño a tus elementos hijos y tampoco los redimensionará en tiempo de ejecución (cuando cambie su tamaño).
 
-El contenedor `<AbsoluteLayout>` es el *layout* mas simple de NativeScript
+El contenedor `<AbsoluteLayout>` es el *layout* más simple de NativeScript
 
 `<AbsoluteLayout>` se comporta de la siguiente forma:
 
@@ -21,7 +21,7 @@ El contenedor `<AbsoluteLayout>` es el *layout* mas simple de NativeScript
 
 ### Diseño de tipo grilla
 
-El siguiente ejemplo crea una grilla simple. Para mas información sobre *layouts* de grillas puedes ver [GridLayout](/es/docs/elements/layouts/grid-layout).
+El siguiente ejemplo crea una grilla simple. Para más información sobre *layouts* de grillas puedes ver [GridLayout](/es/docs/elements/layouts/grid-layout).
 
 ```html
 <AbsoluteLayout backgroundColor="#3c495e">

@@ -23,7 +23,7 @@ contributors: [ianaya89]
 
 El componente [`<v-template>`](/en/docs/utilities/v-template) es utilizado para definir como se va a mostrar cada elemento de la lista dentro de la pantalla.
 
-Si necesitas visualizar uno o mas elementos de manera diferente al resto, puedes ingresarlos como hijos de un componente `<v-template>` y utilizar las condiciones que sean necesarias. Dentro de un `<ListView>`, puedes usar todos los `<v-template>` que creas necesarios.
+Si necesitas visualizar uno o más elementos de manera diferente al resto, puedes ingresarlos como hijos de un componente `<v-template>` y utilizar las condiciones que sean necesarias. Dentro de un `<ListView>`, puedes usar todos los `<v-template>` que creas necesarios.
 
 ```html
 <ListView for="item in listOfItems" @itemTap="onItemTap">
