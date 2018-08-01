@@ -4,11 +4,13 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_flexbox_
 contributors: [ianaya89]
 ---
 
-El contenedor `FlexboxLayout` es una implementación (no exacta) de [CSS Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+El contenedor `FlexboxLayout` es una implementación (no exacta) de [CSS Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox). Este contenedor, permite ubicar elemento hijos de forma horizontal y vertical.
 
-### Ejemplos
+## Ejemplos
 
-#### Contenido flexible por defecto
+### Contenido flexible por defecto
+
+El siguiente ejemplo crea una fila de tres elementos (equivalentes en tamaño) que se expanden a lo largo de la pantalla.
 
 ```html
 <FlexboxLayout backgroundColor="#3c495e">
@@ -19,7 +21,9 @@ El contenedor `FlexboxLayout` es una implementación (no exacta) de [CSS Flexbox
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_stretch.svg" />
 
-#### Contenido flexible en columnas
+### Contenido flexible en columnas
+
+El siguiente ejemplo crea una columna de tres elementos (equivalentes en tamaño) que se expanden a lo ancho de la pantalla.
 
 ```html
 <FlexboxLayout flexDirection="column" backgroundColor="#3c495e">
@@ -30,7 +34,9 @@ El contenedor `FlexboxLayout` es una implementación (no exacta) de [CSS Flexbox
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_column_stretch.svg" />
 
-#### Contenido en fila con items alineados con `flex-start`
+### Contenido en fila con items alineados con `flex-start`
+
+El siguiente ejemplo crea una fila de tres elementos ubicados en la parte superior de la pantalla. Los elementos se colocan en órden de declaración.
 
 ```html
 <FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
@@ -41,7 +47,9 @@ El contenedor `FlexboxLayout` es una implementación (no exacta) de [CSS Flexbox
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_flex-start.svg" />
 
-#### Contenido en fila con órden personalizado
+### Contenido en fila con órden personalizado
+
+El siguiente ejemplo crea una fila de tres elementos ubicados en la parte superior de la pantalla. Los elementos se colocan con un órden personalizado usando la propiedad `order`.
 
 ```html
 <FlexboxLayout alignItems="flex-start" backgroundColor="#3c495e">
@@ -52,7 +60,9 @@ El contenedor `FlexboxLayout` es una implementación (no exacta) de [CSS Flexbox
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_row_custom_order.svg" />
 
-#### Contenedor envolvemente
+### Contenedor envolventes
+
+El siguiente ejemplo crea cuatro elementos envolventes. Cuando la fila no tiene espacio suficiente, el contenedor envuelve el ultimo elemento en una nueva línea.
 
 ```html
 <FlexboxLayout flexWrap="wrap" backgroundColor="#3c495e">
@@ -64,11 +74,16 @@ El contenedor `FlexboxLayout` es una implementación (no exacta) de [CSS Flexbox
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/flexbox_layout_wrap.svg" />
 
-#### Contenido en columna de forma invertida
+### Contenido en columna de forma invertida
+
+El siguiente ejemplo muestra como usar:
+
+* `flexDirection` para colocar elementos en una columna, empezando por la parte inferior.
+* `justifyContent` para crear espacio equivalente (vertical) entre elementos.
+* `alignSelf` para modificar la posición de los elementos en base al eje horizontal.
 
 ```html
-<FlexboxLayout flexDirection="column-reverse"
-               justifyContent="space-around" backgroundColor="#3c495e">
+<FlexboxLayout flexDirection="column-reverse" justifyContent="space-around" backgroundColor="#3c495e">
   <Label text="first" height="70" backgroundColor="#43b883"/>
   <Label text="second" alignSelf="center" width="70" height="70" backgroundColor="#1c6b48"/>
   <Label text="third\nflex-end" alignSelf="flex-end" width="70" height="70" backgroundColor="#289062"/>
