@@ -1,5 +1,5 @@
 ---
-title: Usando Plusings de NativeScript
+title: Usando Plugins de NativeScript
 contributors: [ianaya89]
 ---
 
