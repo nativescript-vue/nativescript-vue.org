@@ -56,9 +56,9 @@ The bottom of the page is your best friend providing real-time error reports and
 
 ### Drag and drop to code
 
-![](/screenshots/ns-playground/playground-drag-and-drop.gif)
+<!-- REDO: ![](/screenshots/ns-playground/playground-drag-and-drop.gif) -->
 
-Just click a component from the **Components** panel and drag it to the code editor, somewhere inside the `template` block. Releasing the mouse button inserts some pre-written sample code for the respective component. Any methods that go with it (such as what happens on button or item tap) are automatically added at the top of the page before the `template` block. 
+Just click a component from the **Components** panel and drag it to the code editor, somewhere inside the `<template>` block in `components` > `HelloWorld.vue`. Releasing the mouse button inserts some pre-written sample code for the respective component. Any methods that go with it (such as what happens on button or item tap) are automatically added right below in the `<script>` block. 
 
 > **TIP:** Use the search of the **Components** panel to quickly find the element that you want to use. The search works only with the title of the component and not the actual name used in the code. For example: the search finds *text field* but does not find *textfield*.
 >
@@ -82,7 +82,7 @@ If at any point you stop seeing your changes applied on the device, click **QR c
 
 So, the component runs and shows on your screen. You're excited but you want to make it your own. Hack away at the default code suggested by the Playground. Fix sizes and labels, remove or add elements.
 
-Go to `app.css` and switch up the styling a bit. Experiment with colors and font sizes. 
+Scroll down to the `<style scoped>` block and switch up the styling a bit. Experiment with colors and font sizes. 
 
 # Part 2: Building an app
 
