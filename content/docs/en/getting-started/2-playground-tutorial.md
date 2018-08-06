@@ -109,11 +109,11 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
 
 ![](/screenshots/ns-playground/playground-home.png)
 
-All development effort for this tutorial happens in `app.js` and `app.css`, containing the app functionality and taking care of the app styles, respectively.
+All development effort for this tutorial happens in `components` > `HelloWorld.vue`, containing both the app functionality and styles.
 
-The `app.js` for your newly created Vue.js project consists of a simple `template` declaration without any functionality. As you drag and drop user interface components to the app, the Playground also adds a `methods` block and populates it with code containing actual app functionality.
+`HelloWorld.vue` begins with a simple `<template>` block consisting of several labels and no connected code-behind logic. As you drag and drop user interface components to the app, the Playground populates the `<script>` block.
 
-In `app.js`, you'll be working in the `template` block to design the user interface or in the `methods` block to build the app functionality. The `template` block requires NativeScript-compatible XML. The `methods` block accepts both Vue.js and NativeScript JavaScript code.
+You'll be working in the `<template>` block to design the user interface or in the `<script>` block to build the app functionality. The `<template>` block requires NativeScript-compatible XML. The `<script>` block accepts both Vue.js and NativeScript JavaScript code.
 
 ## Basic design
 
