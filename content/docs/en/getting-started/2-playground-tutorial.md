@@ -109,7 +109,7 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
 
 ![](/screenshots/ns-playground/playground-home.png)
 
-All development effort for this tutorial happens in `components` > `HelloWorld.vue`, containing both the app functionality and styles.
+All development for this tutorial happens in `components` > `HelloWorld.vue`, containing the front end, the code-behind logic, and most of the styles.
 
 `HelloWorld.vue` begins with a simple `<template>` block consisting of several labels and no connected code-behind logic. As you drag and drop user interface components to the app, the Playground populates the `<script>` block.
 
@@ -127,7 +127,7 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-The `<Page>` element is the top-level user interface element of every NativeScript+Vue.js app. All other user interface elements are nested within.
+The `<Page>` element is the top-level user interface element of every NativeScript-Vue app. All other user interface elements are nested within.
 
 The `<ActionBar>` element shows an action bar for the `<Page>`. A `<Page>` cannot contain more than one `<ActionBar>`.
 
@@ -137,35 +137,53 @@ Typically, after the `<ActionBar>`, you will have navigation components (such as
 
 Use the `<TabView>` component to create a two-tab app. 
 
+1. Change the title of the `<ActionBar>` to reflect the app purpose.
 1. Remove the default `<ScrollView>` block and all its contents that come with the template.<br/>`<ScrollView>` components are top-level layout containers for scrollable content.
-1. Drag and drop the `<TabView>` component in its place.<br/>The Playground doesn't apply code formatting and doesn't take care of indentation when inserting new components.
-1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).<br/>On an iOS device the default height setting causes the tabs to show somewhere around the middle of the screen.
+1. Drag and drop the `<TabView>` component in its place.<br/>The Playground applies some code formatting, including taking care of indentation. However, the formatting is applied after the insertion and using the browser's undo feature only reverts the formatting and not the insertion of code.
+1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).
 1. Change the titles of the `<TabViewItem>` elements and their contents to reflect their purpose.<br/>At this point, text content for the tabs is shown in `<Label>` components with no styling and formatting. Apply the `textWrap="true"` property to the respective `<Label>` components to improve the visualization of the text.
 
-At the end of this stage, your code should resemble this sample:
+At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
 ```JavaScript
-const Vue = require("nativescript-vue");
-
-new Vue({
-
-  template: `
-    <Page class="page">
-      <ActionBar title="My Tasks" class="action-bar" />
+<template>
+  <Page class="page">
+    <ActionBar title="My Tasks" class="action-bar" />
+    
+    <TabView height="100%">
+      <TabViewItem title="To Do">
+        <Label text="This tab will list active tasks and will let users add new tasks." textWrap="true" />
+      </TabViewItem>
       
-      <TabView height="100%">
-        <TabViewItem title="To Do">
-          <Label text="This tab will list active tasks and will let users add new tasks." textWrap="true" />
-        </TabViewItem>
-        <TabViewItem title="Completed">
-          <Label text="This tab will list completed tasks for tracking." textWrap="true" />
-        </TabViewItem>
-      </TabView>
+      <TabViewItem title="Completed">
+        <Label text="This tab will list completed tasks for tracking." textWrap="true" />
+      </TabViewItem>
+    
+    </TabView>
+  </Page>
+</template>
 
-    </Page>
-  `,
+<script>
+  export default {
+    data () {
+        return {
+        };
+    },
+}
 
-}).$start();
+</script>
+
+<style scoped>
+  .home-panel {
+    vertical-align: center;
+    font-size: 20;
+    margin: 15;
+  }
+
+  .description-label {
+    margin-bottom: 15;
+  }
+</style>
 ```
 
 ## Basic functionality: Add tasks
