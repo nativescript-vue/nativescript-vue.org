@@ -56,7 +56,7 @@ The bottom of the page is your best friend providing real-time error reports and
 
 ### Drag and drop to code
 
-<!-- REDO: ![](/screenshots/ns-playground/playground-drag-and-drop.gif) -->
+![](/screenshots/ns-playground/playground-drag-and-drop.gif)
 
 Just click a component from the **Components** panel and drag it to the code editor, somewhere inside the `<template>` block in `components` > `HelloWorld.vue`. Releasing the mouse button inserts some pre-written sample code for the respective component. Any methods that go with it (such as what happens on button or item tap) are automatically added right below in the `<script>` block. 
 
