@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_lay
 contributors: [rigor789, ikoevska]
 ---
 
-`<DockLayout>` is a layout container that lets you dock child elements to the sides or the center of the layoyt.
+`<DockLayout>` is a layout container that lets you dock child elements to the sides or the center of the layout.
 
 `<DockLayout>` has the following behavior:
 
