@@ -145,7 +145,7 @@ Use the `<TabView>` component to create a two-tab app.
 
 At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
-```JavaScript
+```HTML
 <template>
   <Page class="page">
     <ActionBar title="My Tasks" class="action-bar" />
@@ -219,7 +219,7 @@ Use a `<ListView>` to show tasks below the input field.
     * Set the grid to consist of two columns and one row.
     * Set the width of the grid to 100% so that it takes the entire width of the screen.
     * Remove any additional settings for the grid.
-1. Drag and drop a `<TextField>` and a `<Button>` within the `<GridLayout>` block.<br/>The Playground adds JavaScript code to your code for the first time. Note the `data()` and `methods` blocks added above the `template` block. In next implementation steps, you will need to add code to these sections to create some of the app functionality.
+1. Drag and drop a `<TextField>` and a `<Button>` within the `<GridLayout>` block.<br/>The Playground adds JavaScript code to your code for the first time. Note the `data()` and `methods` blocks added in the `<script>` block below. In next implementation steps, you will need to add code to these sections to create some of the app functionality.
 1. Drag and drop a `<ListView>` below the grid.<br/>The default code creates a list of countries and country flag icons.
 1. Configure the positioning of the elements within the grid.
     * Set the `<TextField>` to inhabit the first column and the first row.
@@ -230,19 +230,44 @@ Use a `<ListView>` to show tasks below the input field.
 1. Clear the text field after input.
 1. List task name on the screen.
 
-At the end of this stage, your code should resemble this sample:
+At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
-```JavaScript
-const Vue = require("nativescript-vue");
+```HTML
+<template>
+  <Page class="page">
+    <ActionBar title="My Tasks" class="action-bar" />
 
-new Vue({
-  data() {
-    return {
-      todos: [],
-      textFieldValue: "",
-    }
-  },
-  methods: {
+    <TabView height="100%">
+      <TabViewItem title="To Do">
+
+        <StackLayout orientation="vertical" width="100%" height="100%">
+
+          <GridLayout columns="2*,*" rows="*" width="100%">
+            <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" />
+            <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
+          </GridLayout>
+
+          <ListView for="todo in todos" @itemTap="onItemTap" height="100%">
+            <!-- Make sure to set a height or your list will not show on iOS. -->
+            <v-template>
+              <Label :text="todo.name" />
+            </v-template>
+          </ListView>
+        </StackLayout>
+      </TabViewItem>
+
+      <TabViewItem title="Completed">
+        <Label text="This tab will list completed tasks for tracking." textWrap="true" />
+      </TabViewItem>
+
+    </TabView>
+  </Page>
+</template>
+
+<script>
+  export default {
+    methods: {
     onItemTap(args) {
       console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
     },
@@ -253,36 +278,27 @@ new Vue({
     },
   },
 
+    data() {
+    return {
+      todos: [],
+      textFieldValue: "",
+    }
+  },
+}
 
-  template: `
-    <Page class="page">
-      <ActionBar title="My Tasks" class="action-bar" />
-      
-      <TabView height="100%">
-        <TabViewItem title="To Do">
-          <!-- Positions an input field, a button, and the list of tasks in a grid. -->
-          <StackLayout orientation="vertical" width="100%" height="100%">
-            <GridLayout columns="2*,*" rows="auto" width="100%">
-              <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
-              <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
-            </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="todo.name" />
-              </v-template>
-            </ListView>
-          </StackLayout> 
-        </TabViewItem>
+</script>
 
-        <TabViewItem title="Completed">
-          <Label text="This tab will list completed tasks for tracking." textWrap="true" />
-        </TabViewItem>
-      </TabView>
+<style scoped>
+  .home-panel {
+    vertical-align: center;
+    font-size: 20;
+    margin: 15;
+  }
 
-    </Page>
-  `,
-
-}).$start();
+  .description-label {
+    margin-bottom: 15;
+  }
+</style>
 ```
 
 ## Basic functionality: View, complete, and delete tasks from the To Do tab
