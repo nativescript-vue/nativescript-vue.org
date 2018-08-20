@@ -27,6 +27,18 @@ $ npm install -g nativescript
 
 Verify the installation was successful by running `tns` in your terminal. You should see a list of the available commands.
 
+### Quick Installation
+
+Choose a [template](https://nativescript-vue.org/docs/getting-started/templates/) 
+
+```shell
+$ cd myproject
+$ npm i
+$ tns setup
+```
+
+This will install all ios and android requirements rather than having to manually install them all.
+
 ### Windows
 
 Check the system requirements and follow the setup instructions for the Android SDK on Windows:
