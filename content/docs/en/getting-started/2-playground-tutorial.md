@@ -218,17 +218,26 @@ Use a `<ListView>` to show tasks below the input field.
 1. Configure the `<GridLayout>`.
     * Set the grid to consist of two columns and one row.
     * Set the width of the grid to 100% so that it takes the entire width of the screen.
+    * Set the height of the grid to 20%.
     * Remove any additional settings for the grid.
 1. Drag and drop a `<TextField>` and a `<Button>` within the `<GridLayout>` block.<br/>The Playground adds JavaScript code to your code for the first time. Note the `data()` and `methods` blocks added in the `<script>` block below. In next implementation steps, you will need to add code to these sections to create some of the app functionality.
-1. Drag and drop a `<ListView>` below the grid.<br/>The default code creates a list of countries and country flag icons.
+1. Drag and drop a `<ListView>` below the grid.<br/>The default code creates a list of countries and country flag icons within a `<FlexboxLayout>`.
 1. Configure the positioning of the elements within the grid.
     * Set the `<TextField>` to inhabit the first column and the first row.
     * Set the `<Button>` to inhabit the second column and the first row.
-1. Clean up sample code from the `<TextField>` and the `<ListView>`. Set a height for the `<ListView>`.
-1. Log newly added tasks in the console.
-1. Add newly added tasks into the array of tasks. Use `unshift` to place new items at the top of the page.
-1. Clear the text field after input.
-1. List task name on the screen.
+1. Configure the `<TextField>`.
+    * Make the text field editable.
+    * Enable adding tasks using `Return` from the keyboard.
+1. Clean up and configure the `<ListView>`.
+    * Remove all its nested blocks except for the `<Label>`.
+    * Set its height to 80%.
+    * Replace the `countries`-related binding with a binding to your array of active tasks.
+    * In the `<script>` block, remove the array of countries and create an empty array for your active tasks.
+1. In the `<scripts>` block, tie some logic to the tapping of the button.
+    * Log newly added tasks in the console.
+    * Add newly added tasks into the array of active tasks. Use `unshift` to place new items at the top of the page.
+    * Clear the text field after input.
+1. Use the `<Label>` in the `<ListView>` to list the newly added task on the screen.
 
 At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
@@ -242,25 +251,21 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
         <StackLayout orientation="vertical" width="100%" height="100%">
 
-          <GridLayout columns="2*,*" rows="*" width="100%">
-            <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" />
-            <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
-            <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
+          <GridLayout columns="2*,*" rows="*" width="100%" height="20%">
+            <TextField col="0" row="0" v-model="textFieldValue" hint="Type new task..." />
+            <Button col="1" row="0" text="Add task" @tap="onButtonTap" />
           </GridLayout>
 
-          <ListView for="todo in todos" @itemTap="onItemTap" height="100%">
-            <!-- Make sure to set a height or your list will not show on iOS. -->
+          <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:80%">
             <v-template>
-              <Label :text="todo.name" />
+              <Label :text="todo.name" class="list-group-item-heading" />
             </v-template>
           </ListView>
         </StackLayout>
       </TabViewItem>
-
       <TabViewItem title="Completed">
         <Label text="This tab will list completed tasks for tracking." textWrap="true" />
       </TabViewItem>
-
     </TabView>
   </Page>
 </template>
@@ -268,24 +273,24 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 <script>
   export default {
     methods: {
-    onItemTap(args) {
-      console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
-    },
-    onButtonTap() {
+        onItemTap: function(args) {
+            console.log('Item with index: ' + args.index + ' tapped');
+        },
+
+        onButtonTap() {
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
-      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
+            this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+        },
     },
-  },
 
     data() {
-    return {
-      todos: [],
-      textFieldValue: "",
-    }
-  },
+        return {
+            todos: [],
+            textFieldValue: "",
+        };
+    },
 }
-
 </script>
 
 <style scoped>
@@ -313,7 +318,7 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-Out-of-the-box, the `<ListView>` component detects a tap gesture for every item and emits an event for it. The event carries information about the index of the tapped array item and the array item itself. To let the user choose the outcome of a tap gesture and expand the functionality of your add, you can tie a dialog to the event.
+Out-of-the-box, the `<ListView>` component detects a tap gesture for every item and emits an event for it. The event carries information about the index of the tapped array item and the array item itself. To let the user choose the outcome of a tap gesture and expand the functionality of your app, you can tie a dialog to the event.
 
 [`dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_) is a globablly available module that provides several configurable dialog types for apps: alert, action, prompt, login, confirmation. This implementation relies on [`action()`](/en/docs/elements/dialogs/action) to let the user choose if they want to mark a task as completed or delete it from the list of active tasks.
 
