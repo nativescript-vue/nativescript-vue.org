@@ -218,7 +218,7 @@ Use a `<ListView>` to show tasks below the input field.
 1. Configure the `<GridLayout>`.
     * Set the grid to consist of two columns and one row.
     * Set the width of the grid to 100% so that it takes the entire width of the screen.
-    * Set the height of the grid to 20%.
+    * Set the height of the grid to 25%. Otherwise, the `<ListView>` you'll be adding later might overlap the `<GridLayout>`.
     * Remove any additional settings for the grid.
 1. Drag and drop a `<TextField>` and a `<Button>` within the `<GridLayout>` block.<br/>The Playground adds JavaScript code to your code for the first time. Note the `data()` and `methods` blocks added in the `<script>` block below. In next implementation steps, you will need to add code to these sections to create some of the app functionality.
 1. Drag and drop a `<ListView>` below the grid.<br/>The default code creates a list of countries and country flag icons within a `<FlexboxLayout>`.
@@ -230,7 +230,7 @@ Use a `<ListView>` to show tasks below the input field.
     * Enable adding tasks using `Return` from the keyboard.
 1. Clean up and configure the `<ListView>`.
     * Remove all its nested blocks except for the `<Label>`.
-    * Set its height to 80%.
+    * Set its height to 75%. Otherwise, the `<ListView>` might overlap the `<GridLayout>`.
     * Replace the `countries`-related binding with a binding to your array of active tasks.
     * In the `<script>` block, remove the array of countries and create an empty array for your active tasks.
 1. In the `<scripts>` block, tie some logic to the tapping of the button.
@@ -243,43 +243,43 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
 ```HTML
 <template>
-  <Page class="page">
-    <ActionBar title="My Tasks" class="action-bar" />
+    <Page class="page">
+        <ActionBar title="My Tasks" class="action-bar" />
 
-    <TabView height="100%">
-      <TabViewItem title="To Do">
+        <TabView height="100%">
+            <TabViewItem title="To Do">
+                <!-- Positions an input field, a button, and the list of tasks in a vertical stack. -->
+                <StackLayout orientation="vertical" width="100%" height="100%">
 
-        <StackLayout orientation="vertical" width="100%" height="100%">
+                    <GridLayout columns="2*,*" rows="*" width="100%" height="25%">
+                        <TextField col="0" row="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+                        <Button col="1" row="0" text="Add task" @tap="onButtonTap" />
+                    </GridLayout>
 
-          <GridLayout columns="2*,*" rows="*" width="100%" height="20%">
-            <TextField col="0" row="0" v-model="textFieldValue" hint="Type new task..." />
-            <Button col="1" row="0" text="Add task" @tap="onButtonTap" />
-          </GridLayout>
-
-          <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:80%">
-            <v-template>
-              <Label :text="todo.name" class="list-group-item-heading" />
-            </v-template>
-          </ListView>
-        </StackLayout>
-      </TabViewItem>
-      <TabViewItem title="Completed">
-        <Label text="This tab will list completed tasks for tracking." textWrap="true" />
-      </TabViewItem>
-    </TabView>
-  </Page>
+                    <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%">
+                        <v-template>
+                            <Label :text="todo.name" class="list-group-item-heading" />
+                        </v-template>
+                    </ListView>
+                </StackLayout>
+            </TabViewItem>
+            <TabViewItem title="Completed">
+                <Label text="This tab will list completed tasks for tracking." textWrap="true" />
+            </TabViewItem>
+        </TabView>
+    </Page>
 </template>
 
 <script>
-  export default {
+    export default {
     methods: {
         onItemTap: function(args) {
             console.log('Item with index: ' + args.index + ' tapped');
         },
 
         onButtonTap() {
-      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
+            console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
+            this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
             this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
         },
     },
@@ -287,22 +287,25 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
     data() {
         return {
             todos: [],
+
             textFieldValue: "",
+
         };
     },
 }
+
 </script>
 
 <style scoped>
-  .home-panel {
-    vertical-align: center;
-    font-size: 20;
-    margin: 15;
-  }
+    .home-panel {
+        vertical-align: center;
+        font-size: 20;
+        margin: 15;
+    }
 
-  .description-label {
-    margin-bottom: 15;
-  }
+    .description-label {
+        margin-bottom: 15;
+    }
 </style>
 ```
 
@@ -324,7 +327,7 @@ Out-of-the-box, the `<ListView>` component detects a tap gesture for every item 
 
 ### Requirement implementation
 
-1. In the second `<TabViewItem>` block, drag and drop a `<ListView>` element, clean up its contents and set a height for it.
+1. In the second `<TabViewItem>` block, remove the `<Label>` element. Drag and drop a `<ListView>` element, clean up its contents and set a height for it.
 1. In the newly added `<ListView>` element show items from an array of completed tasks (`dones`).
 
   ```HTML
@@ -340,96 +343,112 @@ Out-of-the-box, the `<ListView>` component detects a tap gesture for every item 
   * Based on user selection, the method moves elements from the `todos` array to the `dones` array, deletes elements from the `todos` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
 
   ```JavaScript
-  onItemTap(args) {
-      action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
-        .then(result => {
-          console.log(result); // Logs the selected option for debugging.
-          switch (result) {
-            case 'Mark completed':
-              this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
-              break;
-            case 'Delete forever':
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
-              break;
-            case 'Cancel' || undefined: // Dismisses the dialog.
-              break;
-          }
-      }) 
-    },
+  onItemTap: function(args) {
+       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever']) 
+             .then(result => { 
+                console.log(result); // Logs the selected option for debugging.
+                switch (result) {
+                    case 'Mark completed': 
+                        this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
+                        this.todos.splice(args.index, 1); // Removes the tapped active  task.
+                        break;
+                    case 'Delete forever':
+                        this.todos.splice(args.index, 1); // Removes the tapped active task.
+                        break; 
+                    case 'Cancel' || undefined: // Dismisses the dialog
+                        break; 
+                }
+            })
+        },
   ```
 
-At the end of this stage, your code should resemble this sample:
+At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
-```JavaScript
-const Vue = require("nativescript-vue");
+```HTML
+<template>
+  <Page class="page">
+    <ActionBar title="My Tasks" class="action-bar" />
 
-new Vue({
-  data() {
-    return {
-      todos: [],
-      dones: [],
-      textFieldValue: "",
-    }
-  },
-  methods: {
-    onItemTap(args) {
-      action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
-        .then(result => {
-          console.log(result); // Logs the selected option for debugging.
-          switch (result) {
-            case 'Mark completed':
-              this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
-              break;
-            case 'Delete forever':
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
-              break;
-            case 'Cancel' || undefined: // Dismisses the dialog.
-              break;
-          }
-      }) 
+    <TabView height="100%">
+      <TabViewItem title="To Do">
+        <!-- Positions an input field, a button, and the list of tasks in a vertical stack. -->
+        <StackLayout orientation="vertical" width="100%" height="100%">
+
+          <GridLayout columns="2*,*" rows="*" width="100%" height="25%">
+            <TextField col="0" row="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" />
+            <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <Button col="1" row="0" text="Add task" @tap="onButtonTap" />
+          </GridLayout>
+
+          <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%">
+            <v-template>
+              <Label :text="todo.name" class="list-group-item-heading" />
+            </v-template>
+          </ListView>
+        </StackLayout>
+      </TabViewItem>
+      <TabViewItem title="Completed">
+        <ListView class="list-group" for="done in dones" @itemTap="onItemTap" style="height:75%">
+          <v-template>
+            <Label :text="done.name" class="list-group-item-heading" />
+          </v-template>
+        </ListView>
+      </TabViewItem>
+    </TabView>
+  </Page>
+</template>
+
+<script>
+  export default {
+    methods: {
+        onItemTap: function(args) {
+          action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever']) 
+             .then(result => { 
+                console.log(result); // Logs the selected option for debugging.
+                switch (result) {
+                    case 'Mark completed': 
+                        this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
+                        this.todos.splice(args.index, 1); // Removes the tapped active  task.
+                        break;
+                    case 'Delete forever':
+                        this.todos.splice(args.index, 1); // Removes the tapped active task.
+                        break; 
+                    case 'Cancel' || undefined: // Dismisses the dialog.
+                        break; 
+                }
+            })
+        },
+
+        onButtonTap() {
+            console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
+            this.todos.unshift({
+                name: this.textFieldValue
+            }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
+            this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+        },
     },
-    onButtonTap() {
-      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
-      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+
+    data() {
+        return {
+            dones: [],
+            todos: [],
+            textFieldValue: "",
+        };
     },
-  },
+}
+</script>
 
-  template: `
-    <Page class="page">
-      <ActionBar title="My Tasks" class="action-bar" />
-      
-      <TabView height="100%">
-        <TabViewItem title="To Do">
-          <!-- Positions an input field, a button, and the list of tasks in a grid. -->
-          <StackLayout orientation="vertical" width="100%" height="100%">
-            <GridLayout columns="2*,*" rows="auto" width="100%">
-              <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
-              <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
-            </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="todo.name" />
-              </v-template>
-            </ListView>
-          </StackLayout> 
-        </TabViewItem>
+<style scoped>
+  .home-panel {
+    vertical-align: center;
+    font-size: 20;
+    margin: 15;
+  }
 
-        <TabViewItem title="Completed">
-          <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="done.name" />
-              </v-template>
-            </ListView>
-        </TabViewItem>
-      </TabView>
-
-    </Page>
-  `,
-
-}).$start();
+  .description-label {
+    margin-bottom: 15;
+  }
+</style>
 ```
 
 ## Basic functionality: View, return to active tasks, and delete tasks from the Completed tab
@@ -448,120 +467,138 @@ This implementation step does not require any additional knowledge.
 
 ### Requirement implementation
 
-For the second tab, modify the `onDoneTap` method:
+For the second tab, create and modify the `onDoneTap` method:
 
 * Method shows an `action()` dialog.
 * Method logs user selection in the console for debugging.
 * Based on user selection, the method moves elements from the `dones` array to the `todos` array, deletes elements from the `dones` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
 
   ```JavaScript
-  onDoneTap(args) {
-    action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
-    .then(result => {
-      console.log(result); // Logs the selected option for debugging.
-      switch (result) {
-        case 'Mark to do':
-          this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks.
-          this.dones.splice(args.index, 1); // Removes the tapped completed task.
-          break;
-        case 'Delete forever':
-          this.dones.splice(args.index, 1);
-          break;
-        case 'Cancel'||undefined:
-          break;
-      }
-    })
-  },
+  onDoneTap: function(args) { 
+             action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
+            .then(result => { 
+                    console.log(result); // Logs the selected option for debugging. 
+                    switch (result) { 
+                        case 'Mark to do':
+                        this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks. 
+                            this.dones.splice(args.index,1); // Removes the tapped completed task. 
+                            break; 
+                        case 'Delete forever': 
+                            this.dones.splice(args.index, 1); // Removes the tapped completed task. 
+                            break; 
+                        case 'Cancel' || undefined: // Dismisses the dialog 
+                            break; 
+                    } 
+                }) 
+        },
   ```
 
-At the end of this stage, your code should resemble this sample:
+At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
-```JavaScript
-const Vue = require("nativescript-vue");
+```HTML
+<template>
+  <Page class="page">
+    <ActionBar title="My Tasks" class="action-bar" />
 
-new Vue({
-  data() {
-    return {
-      todos: [],
-      dones: [],
-      textFieldValue: "",
-    }
-  },
-  methods: {
-    onItemTap(args) {
-      action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
-        .then(result => {
-          console.log(result); // Logs the selected option for debugging.
-          switch (result) {
-            case 'Mark completed':
-              this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
-              break;
-            case 'Delete forever':
-              this.todos.splice(args.index, 1);
-              break;
-            case 'Cancel' || undefined:
-              break;
-          }
-      }) 
+    <TabView height="100%">
+      <TabViewItem title="To Do">
+        <!-- Positions an input field, a button, and the list of tasks in a vertical stack. -->
+        <StackLayout orientation="vertical" width="100%" height="100%">
+
+          <GridLayout columns="2*,*" rows="*" width="100%" height="25%">
+            <TextField col="0" row="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" />
+            <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <Button col="1" row="0" text="Add task" @tap="onButtonTap" />
+          </GridLayout>
+
+          <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%">
+            <v-template>
+              <Label :text="todo.name" class="list-group-item-heading" />
+            </v-template>
+          </ListView>
+        </StackLayout>
+      </TabViewItem>
+      <TabViewItem title="Completed">
+        <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%">
+          <v-template>
+            <Label :text="done.name" class="list-group-item-heading" />
+          </v-template>
+        </ListView>
+      </TabViewItem>
+    </TabView>
+  </Page>
+</template>
+
+<script>
+  export default {
+    methods: {
+        onItemTap: function(args) {
+       action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever']) 
+             .then(result => { 
+                console.log(result); // Logs the selected option for debugging.
+                switch (result) {
+                    case 'Mark completed': 
+                        this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
+                        this.todos.splice(args.index, 1); // Removes the tapped active  task.
+                        break;
+                    case 'Delete forever':
+                        this.todos.splice(args.index, 1); // Removes the tapped active task.
+                        break; 
+                    case 'Cancel' || undefined: // Dismisses the dialog
+                        break; 
+                }
+            })
+        },
+
+     onDoneTap: function(args) { 
+             action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
+            .then(result => { 
+                    console.log(result); // Logs the selected option for debugging. 
+                    switch (result) { 
+                        case 'Mark to do':
+                        this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks. 
+                            this.dones.splice(args.index,1); // Removes the tapped completed task. 
+                            break; 
+                        case 'Delete forever': 
+                            this.dones.splice(args.index, 1); // Removes the tapped completed task. 
+                            break; 
+                        case 'Cancel' || undefined: // Dismisses the dialog 
+                            break; 
+                    } 
+                }) 
+        },
+
+        onButtonTap() {
+            console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
+            this.todos.unshift({
+                name: this.textFieldValue
+            }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
+            this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
+        },
     },
-    onDoneTap(args) {
-      action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
-        .then(result => {
-          console.log(result); // Logs the selected option for debugging.
-          switch (result) {
-            case 'Mark to do':
-              this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks.
-              this.dones.splice(args.index, 1); // Removes the tapped completed task.
-              break;
-            case 'Delete forever':
-              this.dones.splice(args.index, 1); // Removes the tapped completed task.
-              break;
-            case 'Cancel'||undefined:
-              break;
-          }
-        })
+
+    data() {
+        return {
+            dones: [],
+            todos: [],
+            textFieldValue: "",
+        };
     },
-    onButtonTap() {
-      console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
-      this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
-    }
-  },
+}
 
-  template: `
-    <Page class="page">
-      <ActionBar title="My Tasks" class="action-bar" />
-      
-      <TabView height="100%">
-        <TabViewItem title="To Do">
-          <!-- Positions an input field, a button, and the list of tasks in a grid. -->
-          <StackLayout orientation="vertical" width="100%" height="100%">
-            <GridLayout columns="2*,*" rows="auto" width="100%">
-              <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
-              <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
-            </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height="100%" > <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="todo.name" />
-              </v-template>
-            </ListView>
-          </StackLayout> 
-        </TabViewItem>
+</script>
 
-        <TabViewItem title="Completed">
-          <ListView for="done in dones" @itemTap="onDoneTap" height="100%" > <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="done.name" />
-              </v-template>
-            </ListView>
-        </TabViewItem>
-      </TabView>
+<style scoped>
+  .home-panel {
+    vertical-align: center;
+    font-size: 20;
+    margin: 15;
+  }
 
-    </Page>
-  `,
-
-}).$start()
+  .description-label {
+    margin-bottom: 15;
+  }
+</style>
 ```
 
 ## Advanced design: Styled input field and button
@@ -576,7 +613,9 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-When you work with NativeScript and Vue.js, you can use application-wide CSS or inline CSS to style your app. Application-wide CSS is applied first and is handled in `app.css` in the root of your project. See also: [Styling](https://docs.nativescript.org/ui/styling).
+When you work with NativeScript and Vue.js, you can use application-wide CSS, scoped CSS, or inline CSS to style your app. Application-wide CSS is applied first and is handled in `app.css` in the root of your project. See also: [Styling](https://docs.nativescript.org/ui/styling).
+
+Scoped CSS is applied to the current component only and is handled in `HelloWorld.vue` in the `<style scoped>` block. See also: [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html).
 
 With type selectors, you can select a UI component and apply styling to it. To select a type, use the component name as provided in the code. For example, to select the tab view, use `TabView`.
 
@@ -584,7 +623,7 @@ With type selectors, you can select a UI component and apply styling to it. To s
 
 #### Style the input field
 
-In `app.css`, change the font size, the color, and the margins around the `<TextField>`.
+In `HelloWorld.vue` > `<style scoped>`, change the font size, the color, and the margins around the `<TextField>`.
 
 ```CSS
 TextField {
@@ -599,25 +638,21 @@ TextField {
 
 #### Style the button
 
-1. In `app.js` on line 63, add an `id` for the button.
-
-  ```HTML
-  <Button id="add-task-button" row="0" col="1" text="Add task" @tap="onButtonTap" />
-  ```
-1. In `app.css`, create a style for the button. Modify the style to create a colorful button with rounded corners.
+In the `<style scoped>` block, create a style for the button. Modify the style to create a colorful button with rounded corners.
 
   ```CSS
-  #add-task-button {
-    font-size: 20;
-    font-weight: bold;
-    color: white;
-    background-color: #53ba82;
-    margin-top: 20;
-    margin-bottom: 10;
-    margin-right: 20;
-    margin-left: 5;
-    border-radius: 20px;
-  }
+  Button { 
+         font-size: 20; 
+         font-weight: bold; 
+         color: white; 
+         background-color: #53ba82; 
+         height: 40;
+         margin-top: 10; 
+         margin-bottom: 10; 
+         margin-right: 10; 
+         margin-left: 10; 
+         border-radius: 20px; 
+    }
   ```
   
 ## Advanced design: Styled tab navigation
@@ -632,7 +667,7 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-`<TabView>` provides some styling properties out of the box. You can apply a text transform to each tab titles (`textTransform`) and change the font size and color globally (`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`). You can also change the background color of your tabs (`tabBackgroundColor`).
+`<TabView>` provides some styling properties out of the box. You can apply a text transform to each tab title (`textTransform`) and change the font size and color globally (`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`). You can also change the background color of your tabs (`tabBackgroundColor`).
 
 > **NOTE:** Currently, `tabTextFontSize` does not work on iOS and you cannot change the font size of tab titles on iOS.
 
@@ -640,7 +675,7 @@ Here's how your app will look at the start and at the end of this section.
 
 #### Change color and font size of selected tab title
 
-In `app.js`, on line 57, add the `selectedTabTextColor` and `tabTextFontSize` property. If you're testing this on iOS, the font size will not change but should work fine on Android.
+In `HelloWorld.vue`, add the `selectedTabTextColor` and `tabTextFontSize` property to the `<TabView>`. If you're testing this on iOS, the font size will not change but should work fine on Android.
 
 ```HTML
 <TabView height="100%" selectedTabTextColor="#53ba82" tabTextFontSize="20" >
@@ -648,7 +683,7 @@ In `app.js`, on line 57, add the `selectedTabTextColor` and `tabTextFontSize` pr
 
 #### Transform text
 
-In `app.js`, on lines 58 and 73, apply the `textTransform` property. You can use this property only on the `<TabViewItem>` level.
+Apply the `textTransform` property to the separate tabs. You can use this property only on the `<TabViewItem>` level.
 
 ```HTML
 <TabViewItem title="To Do" textTransform="uppercase" >
@@ -668,13 +703,13 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-`<ListView>` and `<Label>` have out of the box style properties that you can use to control elements such as the list separator or the text wrap from `app.js`. To change the font style, color, and positioning of text, you need to use CSS in `app.css`.
+`<ListView>` and `<Label>` have out-of-the-box style properties that you can use to control elements such as the list separator or the text wrap within the `<template>` block. To change the font style, color, and positioning of text, you need to use CSS in the `<style scoped>` block.
 
 To implement a style particularly for the text of active tasks, you can set an `id` for the `<Label>` element.
 
 ### Requirement implementation
 
-1. In `app.js`, on line 67, set an `id` for the `<Label>` that represents active tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
+1. Set an `id` for the `<Label>` that represents active tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
 
   ```HTML
   <Label id="active-task" :text="todo.name" textWrap="true" >
