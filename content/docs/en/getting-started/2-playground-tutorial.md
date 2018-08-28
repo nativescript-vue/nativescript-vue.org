@@ -669,16 +669,14 @@ Here's how your app will look at the start and at the end of this section.
 
 `<TabView>` provides some styling properties out of the box. You can apply a text transform to each tab title (`textTransform`) and change the font size and color globally (`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`). You can also change the background color of your tabs (`tabBackgroundColor`).
 
-> **NOTE:** Currently, `tabTextFontSize` does not work on iOS and you cannot change the font size of tab titles on iOS.
-
 ### Requirement implementation
 
 #### Change color and font size of selected tab title
 
-In `HelloWorld.vue`, add the `selectedTabTextColor` and `tabTextFontSize` property to the `<TabView>`. If you're testing this on iOS, the font size will not change but should work fine on Android.
+In `HelloWorld.vue`, add the `selectedTabTextColor` and `tabTextFontSize` property to the `<TabView>`.
 
 ```HTML
-<TabView height="100%" selectedTabTextColor="#53ba82" tabTextFontSize="20" >
+<TabView height="100%" selectedTabTextColor="#53ba82" tabTextFontSize="15" >
 ```
 
 #### Transform text
