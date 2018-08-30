@@ -613,9 +613,9 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-When you work with NativeScript and Vue.js, you can use application-wide CSS, scoped CSS, or inline CSS to style your app. Application-wide CSS is applied first and is handled in `app.css` in the root of your project. See also: [Styling](https://docs.nativescript.org/ui/styling).
+When you work with NativeScript and Vue.js, you can use application-wide CSS, scoped CSS, or inline CSS to style your app. Application-wide CSS is applied first and is handled in `app.css` in the root of your project. This tutorial does not explore application-wide CSS. See also: [Styling](https://docs.nativescript.org/ui/styling).
 
-Scoped CSS is applied to the current component only and is handled in `HelloWorld.vue` in the `<style scoped>` block. See also: [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html).
+Scoped CSS is applied to the current component only and is handled in `HelloWorld.vue` in the `<style scoped>` block. This tutorial relies almost exclusively on scoped CSS and inline CSS. See also: [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html).
 
 With type selectors, you can select a UI component and apply styling to it. To select a type, use the component name as provided in the code. For example, to select the tab view, use `TabView`.
 
@@ -710,14 +710,14 @@ To implement a style particularly for the text of active tasks, you can set an `
 1. Set an `id` for the `<Label>` that represents active tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
 
   ```HTML
-  <Label id="active-task" :text="todo.name" textWrap="true" >
+  <Label id="active-task" :text="todo.name" class="list-group-item-heading" />
   ```
-1. On line 65, add the `separatorColor` property and set it to `transparent`. This way, the separator will no longer appear in your list.
+1. Add the `separatorColor` property and set it to `transparent` for the `<ListView>` that shows active tasks. This way, the separator will no longer appear in your list.
 
   ```HTML
-  <ListView for="todo in todos" @itemTap="onItemTap" height="100%" separatorColor="transparent">
+  <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%" separatorColor="transparent" >
   ```
-1. In `app.css`, create the style for active tasks. Set font size, color, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
+1. In `<style scoped>`, create the style for active tasks. Set font size, color, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
 
   ```CSS
   #active-task {
@@ -744,17 +744,18 @@ This section applies the basic NativeScript knowledge from [Advanced design: Sty
 
 ### Requirement implementation
 
-1. In `app.js`, on line 76, set an `id` for the `<Label>` that represents completed tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
+1. Set an `id` for the `<Label>` that represents completed tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
 
   ```HTML
-  <Label id="completed-task" :text="done.name" textWrap="true" />
+  <Label id="completed-task" :text="done.name" class="list-group-item-heading" />
   ```
-1. On line 74, set an `id`, add the `separatorColor` property, and set it to `transparent`. This way, the separator will no longer appear in your list. You can use the `id` to style the margins for the `<ListView>`.
+1. Add the `separatorColor` property, and set it to `transparent` for the `<ListView>` that represents completed tasks. This way, the separator will no longer appear in your list.
 
   ```HTML
-  <ListView id="completed-list" for="done in dones" @itemTap="onDoneTap" height="100%" separatorColor="transparent" >
+  <ListView id="completed-list" class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%" separatorColor="transparent">
   ```
-1. In `app.css`, create the style for completed tasks. Set font size, color, text decoration, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
+
+1. In `<style scoped>`, create the style for completed tasks. Set font size, color, text decoration, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
 
   ```CSS
   #completed-task {
@@ -764,13 +765,5 @@ This section applies the basic NativeScript knowledge from [Advanced design: Sty
     padding-top: 5;
     padding-bottom: 10;
     text-decoration: line-through;
-  }
-  ```
-
-1. Create a style for the entire `<ListView>` and set a top margin for it. This way, text will not show directly below the action bar. Play with the top margin until you get a result that works for you.
-
-  ```CSS
-  #completed-list {
-    margin-top: 20;    
   }
   ```
