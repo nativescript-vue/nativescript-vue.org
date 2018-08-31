@@ -331,9 +331,9 @@ Out-of-the-box, the `<ListView>` component detects a tap gesture for every item 
 1. In the newly added `<ListView>` element show items from an array of completed tasks (`dones`).
 
   ```HTML
-  <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
+  <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%">
     <v-template>
-      <Label :text="done.name" />
+      <Label :text="done.name" class="list-group-item-heading" />
     </v-template>
   </ListView>
   ```
