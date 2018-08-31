@@ -46,7 +46,7 @@ Keep the apps running while you're experimenting with the code.
 
 ![](/screenshots/ns-playground/playground-layout.png)
 
-The left sidebar offers a file explorer and a **Components** panel. Most of your effort on your app will happen in `app.js` and `app.css`, containing the app functionality and taking care of the app styles, respectively. No need to deep dive in any other files for now.
+The left sidebar offers a file explorer and a **Components** panel. Most of your effort on your app will happen in `components` > `HelloWorld.vue`, where you'll be creating the user interface and the business logic behind it. No need to deep dive in any other files for now.
 
 The **Components** panel provides quick access to already pre-configured code for all available NativeScript UI components.
 
@@ -58,7 +58,7 @@ The bottom of the page is your best friend providing real-time error reports and
 
 ![](/screenshots/ns-playground/playground-drag-and-drop.gif)
 
-Just click a component from the **Components** panel and drag it to the code editor, somewhere inside the `template` block. Releasing the mouse button inserts some pre-written sample code for the respective component. Any methods that go with it (such as what happens on button or item tap) are automatically added at the top of the page before the `template` block. 
+Just click a component from the **Components** panel and drag it to the code editor, somewhere inside the `<template>` block in `components` > `HelloWorld.vue`. Releasing the mouse button inserts some pre-written sample code for the respective component. Any methods that go with it (such as what happens on button or item tap) are automatically added right below in the `<script>` block. 
 
 > **TIP:** Use the search of the **Components** panel to quickly find the element that you want to use. The search works only with the title of the component and not the actual name used in the code. For example: the search finds *text field* but does not find *textfield*.
 >
@@ -82,7 +82,7 @@ If at any point you stop seeing your changes applied on the device, click **QR c
 
 So, the component runs and shows on your screen. You're excited but you want to make it your own. Hack away at the default code suggested by the Playground. Fix sizes and labels, remove or add elements.
 
-Go to `app.css` and switch up the styling a bit. Experiment with colors and font sizes. 
+Scroll down to the `<style scoped>` block and switch up the styling a bit. Experiment with colors and font sizes. 
 
 # Part 2: Building an app
 
@@ -109,11 +109,11 @@ If you want to explore the [NativeScript Playground](https://play.nativescript.o
 
 ![](/screenshots/ns-playground/playground-home.png)
 
-All development effort for this tutorial happens in `app.js` and `app.css`, containing the app functionality and taking care of the app styles, respectively.
+All development for this tutorial happens in `components` > `HelloWorld.vue`, containing the front end, the code-behind logic, and most of the styles.
 
-The `app.js` for your newly created Vue.js project consists of a simple `template` declaration without any functionality. As you drag and drop user interface components to the app, the Playground also adds a `methods` block and populates it with code containing actual app functionality.
+`HelloWorld.vue` begins with a simple `<template>` block consisting of several labels and no connected code-behind logic. As you drag and drop user interface components to the app, the Playground populates the `<script>` block.
 
-In `app.js`, you'll be working in the `template` block to design the user interface or in the `methods` block to build the app functionality. The `template` block requires NativeScript-compatible XML. The `methods` block accepts both Vue.js and NativeScript JavaScript code.
+You'll be working in the `<template>` block to design the user interface or in the `<script>` block to build the app functionality. The `<template>` block requires NativeScript-compatible XML. The `<script>` block accepts both Vue.js and NativeScript JavaScript code.
 
 ## Basic design
 
@@ -127,7 +127,7 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-The `<Page>` element is the top-level user interface element of every NativeScript+Vue.js app. All other user interface elements are nested within.
+The `<Page>` element is the top-level user interface element of every NativeScript-Vue app. All other user interface elements are nested within.
 
 The `<ActionBar>` element shows an action bar for the `<Page>`. A `<Page>` cannot contain more than one `<ActionBar>`.
 
@@ -137,35 +137,52 @@ Typically, after the `<ActionBar>`, you will have navigation components (such as
 
 Use the `<TabView>` component to create a two-tab app. 
 
+1. Change the title of the `<ActionBar>` to reflect the app purpose.
 1. Remove the default `<ScrollView>` block and all its contents that come with the template.<br/>`<ScrollView>` components are top-level layout containers for scrollable content.
-1. Drag and drop the `<TabView>` component in its place.<br/>The Playground doesn't apply code formatting and doesn't take care of indentation when inserting new components.
-1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).<br/>On an iOS device the default height setting causes the tabs to show somewhere around the middle of the screen.
+1. Drag and drop the `<TabView>` component in its place.<br/>The Playground applies some code formatting, including taking care of indentation. However, the formatting is applied after the insertion and using the browser's undo feature only reverts the formatting and not the insertion of code.
+1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).
 1. Change the titles of the `<TabViewItem>` elements and their contents to reflect their purpose.<br/>At this point, text content for the tabs is shown in `<Label>` components with no styling and formatting. Apply the `textWrap="true"` property to the respective `<Label>` components to improve the visualization of the text.
 
-At the end of this stage, your code should resemble this sample:
+At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
-```JavaScript
-const Vue = require("nativescript-vue");
-
-new Vue({
-
-  template: `
-    <Page class="page">
-      <ActionBar title="My Tasks" class="action-bar" />
+```HTML
+<template>
+  <Page class="page">
+    <ActionBar title="My Tasks" class="action-bar" />
+    
+    <TabView height="100%">
+      <TabViewItem title="To Do">
+        <Label text="This tab will list active tasks and will let users add new tasks." textWrap="true" />
+      </TabViewItem>
       
-      <TabView height="100%">
-        <TabViewItem title="To Do">
-          <Label text="This tab will list active tasks and will let users add new tasks." textWrap="true" />
-        </TabViewItem>
-        <TabViewItem title="Completed">
-          <Label text="This tab will list completed tasks for tracking." textWrap="true" />
-        </TabViewItem>
-      </TabView>
+      <TabViewItem title="Completed">
+        <Label text="This tab will list completed tasks for tracking." textWrap="true" />
+      </TabViewItem>
+    
+    </TabView>
+  </Page>
+</template>
 
-    </Page>
-  `,
+<script>
+export default {
+  data () {
+    return {
+    };
+  },
+}
+</script>
 
-}).$start();
+<style scoped>
+.home-panel {
+  vertical-align: center;
+  font-size: 20;
+  margin: 15;
+}
+
+.description-label {
+  margin-bottom: 15;
+}
+</style>
 ```
 
 ## Basic functionality: Add tasks
@@ -200,71 +217,96 @@ Use a `<ListView>` to show tasks below the input field.
 1. Configure the `<GridLayout>`.
     * Set the grid to consist of two columns and one row.
     * Set the width of the grid to 100% so that it takes the entire width of the screen.
+    * Set the height of the grid to 25%. Otherwise, the `<ListView>` you'll be adding later might overlap the `<GridLayout>`.
     * Remove any additional settings for the grid.
-1. Drag and drop a `<TextField>` and a `<Button>` within the `<GridLayout>` block.<br/>The Playground adds JavaScript code to your code for the first time. Note the `data()` and `methods` blocks added above the `template` block. In next implementation steps, you will need to add code to these sections to create some of the app functionality.
-1. Drag and drop a `<ListView>` below the grid.<br/>The default code creates a list of countries and country flag icons.
+1. Drag and drop a `<TextField>` and a `<Button>` within the `<GridLayout>` block.<br/>The Playground adds JavaScript code to your code for the first time. Note the `data()` and `methods` blocks added in the `<script>` block below. In next implementation steps, you will need to add code to these sections to create some of the app functionality.
+1. Drag and drop a `<ListView>` below the grid.<br/>The default code creates a list of countries and country flag icons within a `<FlexboxLayout>`.
 1. Configure the positioning of the elements within the grid.
     * Set the `<TextField>` to inhabit the first column and the first row.
     * Set the `<Button>` to inhabit the second column and the first row.
-1. Clean up sample code from the `<TextField>` and the `<ListView>`. Set a height for the `<ListView>`.
-1. Log newly added tasks in the console.
-1. Add newly added tasks into the array of tasks. Use `unshift` to place new items at the top of the page.
-1. Clear the text field after input.
-1. List task name on the screen.
+1. Configure the `<TextField>`.
+    * Make the text field editable.
+    * Enable adding tasks using `Return` from the keyboard.
+1. Clean up and configure the `<ListView>`.
+    * Remove all its nested blocks except for the `<Label>`.
+    * Set its height to 75%. Otherwise, the `<ListView>` might overlap the `<GridLayout>`.
+    * Replace the `countries`-related binding with a binding to your array of active tasks.
+    * In the `<script>` block, remove the array of countries and create an empty array for your active tasks.
+1. In the `<scripts>` block, tie some logic to the tapping of the button.
+    * Log newly added tasks in the console.
+    * Add newly added tasks into the array of active tasks. Use `unshift` to place new items at the top of the page.
+    * Clear the text field after input.
+1. Use the `<Label>` in the `<ListView>` to list the newly added task on the screen.
 
-At the end of this stage, your code should resemble this sample:
+At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
-```JavaScript
-const Vue = require("nativescript-vue");
+```HTML
+<template>
+  <Page class="page">
+    <ActionBar title="My Tasks" class="action-bar" />
 
-new Vue({
-  data() {
-    return {
-      todos: [],
-      textFieldValue: "",
-    }
-  },
+    <TabView height="100%">
+      <TabViewItem title="To Do">
+        <!-- Positions an input field, a button, and the list of tasks in a vertical stack. -->
+        <StackLayout orientation="vertical" width="100%" height="100%">
+
+          <GridLayout columns="2*,*" rows="*" width="100%" height="25%">
+            <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <TextField col="0" row="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> 
+
+            <Button col="1" row="0" text="Add task" @tap="onButtonTap" />
+          </GridLayout>
+
+          <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%">
+            <v-template>
+              <Label :text="todo.name" class="list-group-item-heading" />
+            </v-template>
+          </ListView>
+        </StackLayout>
+      </TabViewItem>
+      <TabViewItem title="Completed">
+        <Label text="This tab will list completed tasks for tracking." textWrap="true" />
+      </TabViewItem>
+    </TabView>
+  </Page>
+</template>
+
+<script>
+export default {
   methods: {
-    onItemTap(args) {
-      console.log('Task with index: ' + args.index + ' tapped'); // Logs tapped tasks in the console for debugging.
+    onItemTap: function(args) {
+      console.log('Item with index: ' + args.index + ' tapped');
     },
+
     onButtonTap() {
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
+      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
       this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
     },
   },
 
+  data() {
+    return {
+      todos: [],
 
-  template: `
-    <Page class="page">
-      <ActionBar title="My Tasks" class="action-bar" />
-      
-      <TabView height="100%">
-        <TabViewItem title="To Do">
-          <!-- Positions an input field, a button, and the list of tasks in a grid. -->
-          <StackLayout orientation="vertical" width="100%" height="100%">
-            <GridLayout columns="2*,*" rows="auto" width="100%">
-              <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
-              <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
-            </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="todo.name" />
-              </v-template>
-            </ListView>
-          </StackLayout> 
-        </TabViewItem>
+      textFieldValue: "",
 
-        <TabViewItem title="Completed">
-          <Label text="This tab will list completed tasks for tracking." textWrap="true" />
-        </TabViewItem>
-      </TabView>
+    };
+  },
+}
+</script>
 
-    </Page>
-  `,
+<style scoped>
+.home-panel {
+  vertical-align: center;
+  font-size: 20;
+  margin: 15;
+}
 
-}).$start();
+.description-label {
+  margin-bottom: 15;
+}
+</style>
 ```
 
 ## Basic functionality: View, complete, and delete tasks from the To Do tab
@@ -279,19 +321,19 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-Out-of-the-box, the `<ListView>` component detects a tap gesture for every item and emits an event for it. The event carries information about the index of the tapped array item and the array item itself. To let the user choose the outcome of a tap gesture and expand the functionality of your add, you can tie a dialog to the event.
+Out-of-the-box, the `<ListView>` component detects a tap gesture for every item and emits an event for it. The event carries information about the index of the tapped array item and the array item itself. To let the user choose the outcome of a tap gesture and expand the functionality of your app, you can tie a dialog to the event.
 
 [`dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_) is a globablly available module that provides several configurable dialog types for apps: alert, action, prompt, login, confirmation. This implementation relies on [`action()`](/en/docs/elements/dialogs/action) to let the user choose if they want to mark a task as completed or delete it from the list of active tasks.
 
 ### Requirement implementation
 
-1. In the second `<TabViewItem>` block, drag and drop a `<ListView>` element, clean up its contents and set a height for it.
+1. In the second `<TabViewItem>` block, remove the `<Label>` element. Drag and drop a `<ListView>` element, clean up its contents and set a height for it.
 1. In the newly added `<ListView>` element show items from an array of completed tasks (`dones`).
 
   ```HTML
-  <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
+  <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%">
     <v-template>
-      <Label :text="done.name" />
+      <Label :text="done.name" class="list-group-item-heading" />
     </v-template>
   </ListView>
   ```
@@ -301,96 +343,112 @@ Out-of-the-box, the `<ListView>` component detects a tap gesture for every item 
   * Based on user selection, the method moves elements from the `todos` array to the `dones` array, deletes elements from the `todos` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
 
   ```JavaScript
-  onItemTap(args) {
-      action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
-        .then(result => {
-          console.log(result); // Logs the selected option for debugging.
-          switch (result) {
-            case 'Mark completed':
-              this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
-              break;
-            case 'Delete forever':
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
-              break;
-            case 'Cancel' || undefined: // Dismisses the dialog.
-              break;
-          }
-      }) 
-    },
+  onItemTap: function(args) {
+    action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever']) 
+      .then(result => { 
+        console.log(result); // Logs the selected option for debugging.
+        switch (result) {
+          case 'Mark completed': 
+            this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
+            this.todos.splice(args.index, 1); // Removes the tapped active  task.
+            break;
+          case 'Delete forever':
+            this.todos.splice(args.index, 1); // Removes the tapped active task.
+            break; 
+          case 'Cancel' || undefined: // Dismisses the dialog
+            break; 
+        }
+      })
+  },
   ```
 
-At the end of this stage, your code should resemble this sample:
+At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
-```JavaScript
-const Vue = require("nativescript-vue");
+```HTML
+<template>
+  <Page class="page">
+    <ActionBar title="My Tasks" class="action-bar" />
 
-new Vue({
-  data() {
-    return {
-      todos: [],
-      dones: [],
-      textFieldValue: "",
-    }
-  },
+    <TabView height="100%">
+      <TabViewItem title="To Do">
+        <!-- Positions an input field, a button, and the list of tasks in a vertical stack. -->
+        <StackLayout orientation="vertical" width="100%" height="100%">
+
+          <GridLayout columns="2*,*" rows="*" width="100%" height="25%">
+            <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <TextField col="0" row="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" />
+            <Button col="1" row="0" text="Add task" @tap="onButtonTap" />
+          </GridLayout>
+
+          <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%">
+            <v-template>
+              <Label :text="todo.name" class="list-group-item-heading" />
+            </v-template>
+          </ListView>
+        </StackLayout>
+      </TabViewItem>
+      <TabViewItem title="Completed">
+        <ListView class="list-group" for="done in dones" @itemTap="onItemTap" style="height:75%">
+          <v-template>
+            <Label :text="done.name" class="list-group-item-heading" />
+          </v-template>
+        </ListView>
+      </TabViewItem>
+    </TabView>
+  </Page>
+</template>
+
+<script>
+export default {
   methods: {
-    onItemTap(args) {
-      action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
-        .then(result => {
+    onItemTap: function(args) {
+      action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever']) 
+        .then(result => { 
           console.log(result); // Logs the selected option for debugging.
           switch (result) {
-            case 'Mark completed':
+            case 'Mark completed': 
               this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
+              this.todos.splice(args.index, 1); // Removes the tapped active  task.
               break;
             case 'Delete forever':
               this.todos.splice(args.index, 1); // Removes the tapped active task.
-              break;
+              break; 
             case 'Cancel' || undefined: // Dismisses the dialog.
-              break;
+              break; 
           }
-      }) 
+        })
     },
+
     onButtonTap() {
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
+      this.todos.unshift({
+          name: this.textFieldValue
+      }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
       this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
     },
   },
 
-  template: `
-    <Page class="page">
-      <ActionBar title="My Tasks" class="action-bar" />
-      
-      <TabView height="100%">
-        <TabViewItem title="To Do">
-          <!-- Positions an input field, a button, and the list of tasks in a grid. -->
-          <StackLayout orientation="vertical" width="100%" height="100%">
-            <GridLayout columns="2*,*" rows="auto" width="100%">
-              <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
-              <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
-            </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="todo.name" />
-              </v-template>
-            </ListView>
-          </StackLayout> 
-        </TabViewItem>
+  data() {
+    return {
+      dones: [],
+      todos: [],
+      textFieldValue: "",
+    };
+  },
+}
+</script>
 
-        <TabViewItem title="Completed">
-          <ListView for="done in dones" @tap="onDoneTap" height="100%"> <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="done.name" />
-              </v-template>
-            </ListView>
-        </TabViewItem>
-      </TabView>
+<style scoped>
+.home-panel {
+  vertical-align: center;
+  font-size: 20;
+  margin: 15;
+}
 
-    </Page>
-  `,
-
-}).$start();
+.description-label {
+  margin-bottom: 15;
+}
+</style>
 ```
 
 ## Basic functionality: View, return to active tasks, and delete tasks from the Completed tab
@@ -409,120 +467,137 @@ This implementation step does not require any additional knowledge.
 
 ### Requirement implementation
 
-For the second tab, modify the `onDoneTap` method:
+For the second tab, create and modify the `onDoneTap` method:
 
 * Method shows an `action()` dialog.
 * Method logs user selection in the console for debugging.
 * Based on user selection, the method moves elements from the `dones` array to the `todos` array, deletes elements from the `dones` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
 
   ```JavaScript
-  onDoneTap(args) {
+  onDoneTap: function(args) { 
     action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
-    .then(result => {
-      console.log(result); // Logs the selected option for debugging.
-      switch (result) {
-        case 'Mark to do':
-          this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks.
-          this.dones.splice(args.index, 1); // Removes the tapped completed task.
-          break;
-        case 'Delete forever':
-          this.dones.splice(args.index, 1);
-          break;
-        case 'Cancel'||undefined:
-          break;
-      }
-    })
+      .then(result => { 
+        console.log(result); // Logs the selected option for debugging. 
+        switch (result) { 
+          case 'Mark to do':
+            this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks. 
+            this.dones.splice(args.index,1); // Removes the tapped completed task. 
+            break; 
+          case 'Delete forever': 
+            this.dones.splice(args.index, 1); // Removes the tapped completed task. 
+            break; 
+          case 'Cancel' || undefined: // Dismisses the dialog 
+            break; 
+        } 
+      }) 
   },
   ```
 
-At the end of this stage, your code should resemble this sample:
+At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
-```JavaScript
-const Vue = require("nativescript-vue");
+```HTML
+<template>
+  <Page class="page">
+    <ActionBar title="My Tasks" class="action-bar" />
 
-new Vue({
-  data() {
-    return {
-      todos: [],
-      dones: [],
-      textFieldValue: "",
-    }
-  },
+    <TabView height="100%">
+      <TabViewItem title="To Do">
+        <!-- Positions an input field, a button, and the list of tasks in a vertical stack. -->
+        <StackLayout orientation="vertical" width="100%" height="100%">
+
+          <GridLayout columns="2*,*" rows="*" width="100%" height="25%">
+            <TextField col="0" row="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" />
+            <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
+            <Button col="1" row="0" text="Add task" @tap="onButtonTap" />
+          </GridLayout>
+
+          <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%">
+            <v-template>
+              <Label :text="todo.name" class="list-group-item-heading" />
+            </v-template>
+          </ListView>
+        </StackLayout>
+      </TabViewItem>
+      <TabViewItem title="Completed">
+        <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%">
+          <v-template>
+            <Label :text="done.name" class="list-group-item-heading" />
+          </v-template>
+        </ListView>
+      </TabViewItem>
+    </TabView>
+  </Page>
+</template>
+
+<script>
+export default {
   methods: {
-    onItemTap(args) {
-      action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever'])
-        .then(result => {
-          console.log(result); // Logs the selected option for debugging.
-          switch (result) {
-            case 'Mark completed':
-              this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
-              this.todos.splice(args.index, 1); // Removes the tapped active task.
-              break;
-            case 'Delete forever':
-              this.todos.splice(args.index, 1);
-              break;
-            case 'Cancel' || undefined:
-              break;
-          }
+    onItemTap: function(args) {
+     action('What do you want to do with this task?', 'Cancel', ['Mark completed', 'Delete forever']) 
+      .then(result => { 
+        console.log(result); // Logs the selected option for debugging.
+        switch (result) {
+          case 'Mark completed': 
+            this.dones.unshift(args.item); // Places the tapped active task at the top of the completed tasks.
+            this.todos.splice(args.index, 1); // Removes the tapped active  task.
+            break;
+          case 'Delete forever':
+            this.todos.splice(args.index, 1); // Removes the tapped active task.
+            break; 
+          case 'Cancel' || undefined: // Dismisses the dialog
+            break; 
+        }
+      })
+    },
+
+   onDoneTap: function(args) { 
+    action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
+      .then(result => { 
+        console.log(result); // Logs the selected option for debugging. 
+        switch (result) { 
+          case 'Mark to do':
+            this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks. 
+            this.dones.splice(args.index,1); // Removes the tapped completed task. 
+            break; 
+          case 'Delete forever': 
+            this.dones.splice(args.index, 1); // Removes the tapped completed task. 
+            break; 
+          case 'Cancel' || undefined: // Dismisses the dialog 
+            break; 
+        } 
       }) 
     },
-    onDoneTap(args) {
-      action('What do you want to do with this task?', 'Cancel', ['Mark to do', 'Delete forever'])
-        .then(result => {
-          console.log(result); // Logs the selected option for debugging.
-          switch (result) {
-            case 'Mark to do':
-              this.todos.unshift(args.item); // Places the tapped completed task at the top of the to do tasks.
-              this.dones.splice(args.index, 1); // Removes the tapped completed task.
-              break;
-            case 'Delete forever':
-              this.dones.splice(args.index, 1); // Removes the tapped completed task.
-              break;
-            case 'Cancel'||undefined:
-              break;
-          }
-        })
-    },
+
     onButtonTap() {
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
-      this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen. 
+      this.todos.unshift({
+        name: this.textFieldValue
+      }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
       this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
-    }
+    },
   },
 
-  template: `
-    <Page class="page">
-      <ActionBar title="My Tasks" class="action-bar" />
-      
-      <TabView height="100%">
-        <TabViewItem title="To Do">
-          <!-- Positions an input field, a button, and the list of tasks in a grid. -->
-          <StackLayout orientation="vertical" width="100%" height="100%">
-            <GridLayout columns="2*,*" rows="auto" width="100%">
-              <TextField row="0" col="0" v-model="textFieldValue" hint="Type new task..." editable="true" @returnPress="onButtonTap" /> <!-- Configures the text field and ensures that pressing Return on the keyboard produces the same result as tapping the button. -->
-              <Button row="0" col="1" text="Add task" @tap="onButtonTap" />
-            </GridLayout>
-            <ListView for="todo in todos" @itemTap="onItemTap" height="100%" > <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="todo.name" />
-              </v-template>
-            </ListView>
-          </StackLayout> 
-        </TabViewItem>
+  data() {
+    return {
+      dones: [],
+      todos: [],
+      textFieldValue: "",
+    };
+  },
+}
+</script>
 
-        <TabViewItem title="Completed">
-          <ListView for="done in dones" @itemTap="onDoneTap" height="100%" > <!-- Make sure to set a height or your list will not show on iOS. -->
-              <v-template>
-                <Label :text="done.name" />
-              </v-template>
-            </ListView>
-        </TabViewItem>
-      </TabView>
+<style scoped>
+.home-panel {
+  vertical-align: center;
+  font-size: 20;
+  margin: 15;
+}
 
-    </Page>
-  `,
-
-}).$start()
+.description-label {
+  margin-bottom: 15;
+}
+</style>
 ```
 
 ## Advanced design: Styled input field and button
@@ -537,7 +612,9 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-When you work with NativeScript and Vue.js, you can use application-wide CSS or inline CSS to style your app. Application-wide CSS is applied first and is handled in `app.css` in the root of your project. See also: [Styling](https://docs.nativescript.org/ui/styling).
+When you work with NativeScript and Vue.js, you can use application-wide CSS, scoped CSS, or inline CSS to style your app. Application-wide CSS is applied first and is handled in `app.css` in the root of your project. This tutorial does not explore application-wide CSS. See also: [Styling](https://docs.nativescript.org/ui/styling).
+
+Scoped CSS is applied to the current component only and is handled in `HelloWorld.vue` in the `<style scoped>` block. This tutorial relies almost exclusively on scoped CSS and inline CSS. See also: [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html).
 
 With type selectors, you can select a UI component and apply styling to it. To select a type, use the component name as provided in the code. For example, to select the tab view, use `TabView`.
 
@@ -545,39 +622,35 @@ With type selectors, you can select a UI component and apply styling to it. To s
 
 #### Style the input field
 
-In `app.css`, change the font size, the color, and the margins around the `<TextField>`.
+In `HelloWorld.vue` > `<style scoped>`, change the font size, the color, and the margins around the `<TextField>`.
 
 ```CSS
 TextField {
-    font-size: 20;
-    color: #53ba82;
-    margin-top: 10;
-    margin-bottom: 10;
-    margin-right: 5;
-    margin-left: 20;
+  font-size: 20;
+  color: #53ba82;
+  margin-top: 10;
+  margin-bottom: 10;
+  margin-right: 5;
+  margin-left: 20;
 }
 ```
 
 #### Style the button
 
-1. In `app.js` on line 63, add an `id` for the button.
-
-  ```HTML
-  <Button id="add-task-button" row="0" col="1" text="Add task" @tap="onButtonTap" />
-  ```
-1. In `app.css`, create a style for the button. Modify the style to create a colorful button with rounded corners.
+In the `<style scoped>` block, create a style for the button. Modify the style to create a colorful button with rounded corners.
 
   ```CSS
-  #add-task-button {
-    font-size: 20;
-    font-weight: bold;
-    color: white;
-    background-color: #53ba82;
-    margin-top: 20;
-    margin-bottom: 10;
-    margin-right: 20;
-    margin-left: 5;
-    border-radius: 20px;
+  Button { 
+    font-size: 20; 
+    font-weight: bold; 
+    color: white; 
+    background-color: #53ba82; 
+    height: 40;
+    margin-top: 10; 
+    margin-bottom: 10; 
+    margin-right: 10; 
+    margin-left: 10; 
+    border-radius: 20px; 
   }
   ```
   
@@ -593,23 +666,21 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-`<TabView>` provides some styling properties out of the box. You can apply a text transform to each tab titles (`textTransform`) and change the font size and color globally (`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`). You can also change the background color of your tabs (`tabBackgroundColor`).
-
-> **NOTE:** Currently, `tabTextFontSize` does not work on iOS and you cannot change the font size of tab titles on iOS.
+`<TabView>` provides some styling properties out of the box. You can apply a text transform to each tab title (`textTransform`) and change the font size and color globally (`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`). You can also change the background color of your tabs (`tabBackgroundColor`).
 
 ### Requirement implementation
 
 #### Change color and font size of selected tab title
 
-In `app.js`, on line 57, add the `selectedTabTextColor` and `tabTextFontSize` property. If you're testing this on iOS, the font size will not change but should work fine on Android.
+In `HelloWorld.vue`, add the `selectedTabTextColor` and `tabTextFontSize` property to the `<TabView>`.
 
 ```HTML
-<TabView height="100%" selectedTabTextColor="#53ba82" tabTextFontSize="20" >
+<TabView height="100%" selectedTabTextColor="#53ba82" tabTextFontSize="15" >
 ```
 
 #### Transform text
 
-In `app.js`, on lines 58 and 73, apply the `textTransform` property. You can use this property only on the `<TabViewItem>` level.
+Apply the `textTransform` property to the separate tabs. You can use this property only on the `<TabViewItem>` level.
 
 ```HTML
 <TabViewItem title="To Do" textTransform="uppercase" >
@@ -629,23 +700,23 @@ Here's how your app will look at the start and at the end of this section.
 
 ### Some NativeScript basics
 
-`<ListView>` and `<Label>` have out of the box style properties that you can use to control elements such as the list separator or the text wrap from `app.js`. To change the font style, color, and positioning of text, you need to use CSS in `app.css`.
+`<ListView>` and `<Label>` have out-of-the-box style properties that you can use to control elements such as the list separator or the text wrap within the `<template>` block. To change the font style, color, and positioning of text, you need to use CSS in the `<style scoped>` block.
 
 To implement a style particularly for the text of active tasks, you can set an `id` for the `<Label>` element.
 
 ### Requirement implementation
 
-1. In `app.js`, on line 67, set an `id` for the `<Label>` that represents active tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
+1. Set an `id` for the `<Label>` that represents active tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
 
   ```HTML
-  <Label id="active-task" :text="todo.name" textWrap="true" >
+  <Label id="active-task" :text="todo.name" class="list-group-item-heading" />
   ```
-1. On line 65, add the `separatorColor` property and set it to `transparent`. This way, the separator will no longer appear in your list.
+1. Add the `separatorColor` property and set it to `transparent` for the `<ListView>` that shows active tasks. This way, the separator will no longer appear in your list.
 
   ```HTML
-  <ListView for="todo in todos" @itemTap="onItemTap" height="100%" separatorColor="transparent">
+  <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%" separatorColor="transparent" >
   ```
-1. In `app.css`, create the style for active tasks. Set font size, color, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
+1. In `<style scoped>`, create the style for active tasks. Set font size, color, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
 
   ```CSS
   #active-task {
@@ -672,17 +743,18 @@ This section applies the basic NativeScript knowledge from [Advanced design: Sty
 
 ### Requirement implementation
 
-1. In `app.js`, on line 76, set an `id` for the `<Label>` that represents completed tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
+1. Set an `id` for the `<Label>` that represents completed tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
 
   ```HTML
-  <Label id="completed-task" :text="done.name" textWrap="true" />
+  <Label id="completed-task" :text="done.name" class="list-group-item-heading" />
   ```
-1. On line 74, set an `id`, add the `separatorColor` property, and set it to `transparent`. This way, the separator will no longer appear in your list. You can use the `id` to style the margins for the `<ListView>`.
+1. Add the `separatorColor` property, and set it to `transparent` for the `<ListView>` that represents completed tasks. This way, the separator will no longer appear in your list.
 
   ```HTML
-  <ListView id="completed-list" for="done in dones" @itemTap="onDoneTap" height="100%" separatorColor="transparent" >
+  <ListView id="completed-list" class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%" separatorColor="transparent">
   ```
-1. In `app.css`, create the style for completed tasks. Set font size, color, text decoration, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
+
+1. In `<style scoped>`, create the style for completed tasks. Set font size, color, text decoration, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
 
   ```CSS
   #completed-task {
@@ -692,13 +764,5 @@ This section applies the basic NativeScript knowledge from [Advanced design: Sty
     padding-top: 5;
     padding-bottom: 10;
     text-decoration: line-through;
-  }
-  ```
-
-1. Create a style for the entire `<ListView>` and set a top margin for it. This way, text will not show directly below the action bar. Play with the top margin until you get a result that works for you.
-
-  ```CSS
-  #completed-list {
-    margin-top: 20;    
   }
   ```
