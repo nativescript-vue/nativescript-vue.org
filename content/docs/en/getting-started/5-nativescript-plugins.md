@@ -1,6 +1,6 @@
 ---
 title: Using NativeScript Plugins
-contributors: [EddyVerbruggen, naderio, rigor789, ikoevska]
+contributors: [EddyVerbruggen, naderio, rigor789, ikoevska, jlooper]
 ---
 
 Plugins work as in [any other NativeScript app](https://docs.nativescript.org/plugins/plugins), but you may wonder how _UI_ plugins work with Vue.
