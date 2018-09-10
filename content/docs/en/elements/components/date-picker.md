@@ -11,7 +11,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
 ```html
-<DatePicker @loaded="onDatePickerLoaded" @dateChange="onDateChanged" />
+<DatePicker :date="someDate" />
 ```
 
 `<DatePicker>` provides two-way data binding using `v-model`.
