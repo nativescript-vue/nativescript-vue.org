@@ -32,7 +32,10 @@ contributors: [rigor789]
 
 | Name | Description |
 |------|-------------|
-| `tap` | Emitted when the button is tapped.
+| `navigatedFrom` | Emitted when the parent frame has been navigated away.
+| `navigatedTo` | Emitted when the parent frame has been navigated to this page.
+| `navigatingFrom` | Emitted when the parent frame is navigating away from this page.
+| `navigatingTo` | Emitted when the parent frame is navigating to this page.
 
 ## Native component
 
