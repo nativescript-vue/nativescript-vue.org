@@ -44,4 +44,4 @@ No te preocupes! A pesar de que hay una curva de aprendizaje para dominar **Nati
 **NativeScript-Vue** se encuentra en un estado avanzado (y bastante completo). En este momento estamos enfocados en dos cosas:
 
 * **Documentación**: No todo lo que podes hacer con **NativeScript-Vue** esta documentado en este sitio. Estamos constantemente agregando ejemplos y casos de uso, cualquier aporte es totalmente bienvenido.
-* **Aplicaciones de Ejemplo**: Estamos buscando personas para poner a prueba este *plugin* y recibir todo el *feedback* posible. Si estas interesado, unete al [Slack de NativeScript](https://developer.telerik.com/wp-login.php?action=slack-invitation) y avisanos sobre tu interes en el canal **#vue**.
+* **Aplicaciones de Ejemplo**: Estamos buscando personas para poner a prueba este *plugin* y recibir todo el feedback posible. Si estas interesado, unete al [Slack de NativeScript](https://developer.telerik.com/wp-login.php?action=slack-invitation) y avisanos sobre tu interes en el canal **#vue**.

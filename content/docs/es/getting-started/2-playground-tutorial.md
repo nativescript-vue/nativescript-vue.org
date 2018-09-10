@@ -5,7 +5,7 @@ contributors: [ianaya89]
 
 El [NativeScript Playground](https://play.nativescript.org?template=play-vue) es un lugar en la nube donde puedas dar tus primeros pasos con **NativeScript-Vue** desde tu navegador. Simplemente ingresa al link y comienza arrastrar y soltar componentes.
 
-Puedes trabajar con el *Playground* tanto como quieras: usarlo para probar como desarrollar con NativeScript o incluso dearrollar todo tu proyecto en la plataforma. Sin embarjo, cuando llegue el momento de llevar tu aplicación al mundo, vas a necesitar instalar las [herramientas de NativeScript localmente]((/es/docs/getting-started/installation) y luego [elegir uno de los templates disponibles](/es/docs/getting-started/templates).
+Puedes trabajar con el *Playground* tanto como quieras: usarlo para probar como desarrollar con NativeScript o incluso dearrollar todo tu proyecto en la plataforma. Sin embarjo, cuando llegue el momento de llevar tu aplicación al mundo, vas a necesitar instalar las [herramientas de NativeScript localmente](/es/docs/getting-started/installation) y luego [elegir uno de los templates disponibles](/es/docs/getting-started/templates).
 
 **Esta sección, consiste en dos partes:**
 * [Parte 1: Familiarizandose con el Playground](#parte-1-familiarizandose-con-el-playground)
