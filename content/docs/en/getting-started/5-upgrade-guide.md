@@ -4,7 +4,7 @@ contributors: [rigor789, jlooper]
 outdated: false
 ---
 
-If you scaffolded a NativeScript-Vue app using an the 1.3.1 version of the Vue-CLI template, it's time to upgrade to the newest version, 2.0, and this guide will help you do that. The new template has a different folder structure from the older one:
+If you scaffolded a NativeScript-Vue app using the 1.3.1 version of the Vue-CLI template, it's time to upgrade to the newest version, 2.0, and this guide will help you do that. The new template has a different folder structure from the older one:
 
 ![New folder structure](/screenshots/old-new-folder-structure.png)
 
@@ -46,7 +46,7 @@ To keep the previous behavior of having a single root Frame, you can change your
 
 **Example**
 
-```HTML
+```js
 // in prior versions
 // this automatically created a Page
 new Vue({
@@ -54,14 +54,14 @@ new Vue({
 }).$start()
 ```
 
-```HTML
+```js
 // in 2.0.0
 // the <Frame> and <Page> must exist in your template
 new Vue({
   template: `
-	<Frame>
+    <Frame>
       <Page>
-		  <Label text="Hello world"/>
+        <Label text="Hello world"/>
       </Page>
     </Frame>
   `
@@ -70,14 +70,14 @@ new Vue({
 
 This allows us to use a shared SideDrawer across different pages for example:
 
-```HTML
+```js
 new Vue({
   template: `
     <RadSideDrawer>
       <StackLayout ~drawerContent>...</StackLayout>
       <Frame ~mainContent>
         <Page>
-		 <Label text="Hello world"/>
+          <Label text="Hello world"/>
         </Page>
       </Frame>
     </RadSideDrawer>
@@ -87,7 +87,7 @@ new Vue({
 
 In its simplest form, however, edit `main.js`'s Vue initialization block to resemble:
 
-```HTML
+```js
 new Vue({
   render: h => h('frame', [h(HelloWorld)]),
 }).$start();
