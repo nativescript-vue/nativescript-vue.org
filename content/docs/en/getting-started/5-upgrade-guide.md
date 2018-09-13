@@ -42,7 +42,7 @@ Prior to 4.0 the root element was a Frame, which was implicitly created by Nativ
 
 With these changes, we are no longer able to automatically create a Frame and Page elements, so in 2.0.0 you are required to explicitly add these elements to your template.
 
-To keep the previous behavior of having a single root Frame, you can change your root Vue instance to have a <Frame> and a <Page> element.
+To keep the previous behavior of having a single root Frame, you can change your root Vue instance to have a `<Frame>` and a `<Page>` element.
 
 **Example**
 
