@@ -9,7 +9,7 @@ But if [you already have your system ready for native development](/en/docs/gett
 
 ```shell
 $ npm install -g @vue/cli @vue/cli-init
-$ vue init nativescript-vue/vue-cli-template <project-name>
+$ vue init nativescript-vue/vue-cli-template#legacy <project-name>
 $ cd <project-name>
 $ npm install
 ```

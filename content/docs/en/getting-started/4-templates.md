@@ -38,7 +38,7 @@ Originally built by [Pascal Martineau](https://github.com/lewebsimple/), this te
 
 ```shell
 $ npm install -g @vue/cli @vue/cli-init
-$ vue init nativescript-vue/vue-cli-template <project-name>
+$ vue init nativescript-vue/vue-cli-template#legacy <project-name>
 $ cd <project-name>
 $ npm install
 $ npm run watch:android
