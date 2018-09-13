@@ -1,11 +1,11 @@
 ---
 title: Using NativeScript Plugins
-contributors: [EddyVerbruggen, naderio, rigor789, ikoevska]
+contributors: [EddyVerbruggen, naderio, rigor789, ikoevska, jlooper]
 ---
 
-Plugins work as in [any other NativeScript app](https://docs.nativescript.org/plugins/plugins), but you may wonder how *UI* plugins work with Vue.
+Plugins work as in [any other NativeScript app](https://docs.nativescript.org/plugins/plugins), but you may wonder how _UI_ plugins work with Vue.
 
-UI plugins work almost identically to how you'd use a NativeScript UI plugin in an Angular app. 
+UI plugins work almost identically to how you'd use a NativeScript UI plugin in an Angular app.
 
 ## Sample use: nativescript-gradient
 
@@ -19,15 +19,15 @@ After you have [set up your system for NativeScript development](/en/docs/gettin
 $ npm install --save nativescript-gradient
 ```
 
-> **NOTE:** If you are using the [vue-cli-template](/en/docs/getting-started/templates/#nativescript-vuevue-cli-template), you may have to run the following:
+> **NOTE:** If your plugin doesn't work right away, you might need to clean the project by removing the Platforms folders:
 
 ```shell
-$ npm run clean
+$ rm -rf platforms
 ```
 
 ### Register the plugin in your app
 
-Open your app entry file (llikely `app.js` or `main.js`) and add the following line at the top:
+Open your app entry file (likely `app.js` or `main.js`) and add the following line at the top:
 
 ```JavaScript
 Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient)

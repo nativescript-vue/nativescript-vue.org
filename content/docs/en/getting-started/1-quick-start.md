@@ -1,6 +1,6 @@
 ---
 title: Quick Start
-contributors: [rigor789, eddyverbruggen, damain, ikoevska]
+contributors: [rigor789, eddyverbruggen, damain, ikoevska, jlooper]
 ---
 
 If you don't want the hassle of installing and configuring your system before you can have a taste of NativeScript-Vue, the [NativeScript Playground](/en/docs/getting-started/playground-tutorial) has you covered.
@@ -17,7 +17,7 @@ $ npm install
 Next, run your app using:
 
 ```shell
-$ npm run watch:<platform>
+$ tns run <platform> --bundle
 ```
 
 where platform is `ios` or `android`.
@@ -28,4 +28,4 @@ This set of commands performs the following operations on your system:
 2. Pulls the selected template (the Vue CLI-compatible NativeScript-Vue template) and creates a project locally. This template relies on `.vue` components and provides routing and Vuex state management out of the box. For more information about the available templates, see [Templates](/en/docs/getting-started/templates).
 3. Switches to the directory containing the newly created project.
 4. Installs any npm dependencies locally.
-5. Builds and runs the project on any connected devices or installed emulators for the selected platform. The `watch` option detects code changes and applies them automatically.
+5. Builds and runs the project on any connected devices or installed emulators for the selected platform. The `--bundle` option activates webpacking for your project.
