@@ -4,6 +4,8 @@ contributors: [rigor789, jlooper]
 outdated: false
 ---
 
+> Estimated time for the upgrade: **10-20 minutes**.
+
 If you scaffolded a NativeScript-Vue app using the 1.3.1 version of the Vue-CLI template, it's time to upgrade to the newest version, 2.0, and this guide will help you do that. The new template has a different folder structure from the older one:
 
 ![New folder structure](/screenshots/old-new-folder-structure.png)
