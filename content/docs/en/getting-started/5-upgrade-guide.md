@@ -127,3 +127,16 @@ $ tns run android --bundle
 $ # or
 $ tns run ios --bundle
 ```
+
+**Step 8 (Optional): Try HMR**
+
+Just recently nativescript received support for HMR (Hot Module Replacement). The latest version of NativeScript-Vue supports it out of the box, however you will need to install the latest (and greatest) version of the NativeScript CLI.
+
+```shell
+$ npm install -g nativescript@next
+$ cd <project-name>
+$ rm -rf platforms
+$ tns run android --hmr
+$ # or
+$ tns run ios --hmr
+```
