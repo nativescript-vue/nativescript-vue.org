@@ -12,7 +12,7 @@ To make integration easier we have published [`nativescript-vue-devtools`](https
 
 ```shell
 $ cd <project-folder>
-$ npm install --save @vue/devtools nativescript-toast nativescript-socket.io
+$ npm install --save @vue/devtools nativescript-toast nativescript-socket.io nativescript-vue-devtools
 ```
 
 ** 2. Optionally install Vue Devtools globally **
