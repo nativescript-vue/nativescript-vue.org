@@ -6,13 +6,13 @@ const multimatch = require('multimatch');
 
 // plugins
 const collections = require('metalsmith-collections');
+const minify = require('metalsmith-html-minifier');
 const linkcheck = require('metalsmith-linkcheck');
 const dates = require('metalsmith-jekyll-dates');
 const sitemap = require('metalsmith-sitemap');
 const static = require('metalsmith-static');
-const gzip = require('metalsmith-gzip');
-const minify = require('metalsmith-html-minifier');
 const watch = require('metalsmith-watch');
+const gzip = require('metalsmith-gzip');
 const when = require('metalsmith-if');
 const moment = require('moment');
 
@@ -120,11 +120,11 @@ Metalsmith(cwd)
   }))
   .use(versions({
     versions: [
-      { name: 'latest (2.0.0 alpha)', url: '//nativescript-vue.org' },
+      { name: 'latest (2.0.0)', url: '//nativescript-vue.org' },
       { name: 'v1.3.1', url: '//v1-3-1.nativescript-vue.org' },
     ],
     currentVersion: {
-      name: 'latest (2.0.0-alpha.2)',
+      name: 'latest (2.0.0)',
       branch: 'master'
     } // different for each branch
   }))
