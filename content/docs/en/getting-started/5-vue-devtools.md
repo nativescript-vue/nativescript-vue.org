@@ -12,7 +12,7 @@ To make integration easier we have published [`nativescript-vue-devtools`](https
 
 ```shell
 $ cd <project-folder>
-$ npm install --save @vue/devtools nativescript-toast nativescript-socket.io nativescript-vue-devtools
+$ npm install --save @vue/devtools@beta nativescript-toast nativescript-socket.io nativescript-vue-devtools
 ```
 
 ** 2. Optionally install Vue Devtools globally **
@@ -20,7 +20,7 @@ $ npm install --save @vue/devtools nativescript-toast nativescript-socket.io nat
 If you'd like to easily access Vue Devtools, it's a good idea to install it globally.
 
 ```shell
-$ npm install -g @vue/devtools
+$ npm install -g @vue/devtools@beta
 ```
 
 This will allow you to run the `vue-devtools` command regardless of the current directory you are in.
