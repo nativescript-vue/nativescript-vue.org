@@ -11,7 +11,7 @@ The easiest way to do routing in NativeScript-Vue is by using any of the followi
 
 > All examples on this page discuss how to handle routing between the `Master` and `Detail` components of a mobile app.
 
-### `$navigateTo`
+### `$navigateTo(Component, options)`
 
 You can call `$navigateTo` in the view or in a method.
 
@@ -104,17 +104,15 @@ this.$navigateTo(Detail, {
   transitionIOS: {},
   transitionAndroid: {},
   
-  context: {
-    propsData: {
-      foo: 'bar',
-    }
+  props: {
+    foo: 'bar',
   }
 });
 ```
 
 For more information about the options that you can pass, see [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
 
-### `$navigateBack`
+### `$navigateBack(options, backstackEntry = null)`
 
 In the `Detail` component, add a button that triggers the globally exposed `$navigateBack` function.
 
@@ -201,22 +199,26 @@ const Master = {
 
 const Detail = {
   template: `
-    <Page>
-      <ActionBar title="Detail"/>
-      <StackLayout>
-        <Button @tap="$modal.close" text="Close" />                    
-      </StackLayout>
-    </Page>
+    <Frame>
+      <Page>
+        <ActionBar title="Detail"/>
+        <StackLayout>
+          <Button @tap="$modal.close" text="Close" />                    
+        </StackLayout>
+      </Page>
+    </Frame>
   `
 };
 ```
+
+Note: We've wrapped the Detail page in a `<Frame>` element, which allows us to show the `<ActionBar>` as well as navigate further within the modal.
 
 #### Passing props to the modal
 
 `$showModal` accepts a second parameter. You can use the parameter to pass in a `context` object containing `propsData` to the target component. For example:
 
 ```JavaScript
-this.$showModal(Detail, { context: { propsData: { id: 14 }}});
+this.$showModal(Detail, { props: { id: 14 }});
 ```
 
 You also need to update the `Detail` component to be able to accept the `id` prop. You can do this by defining a `props` option inside the component:
