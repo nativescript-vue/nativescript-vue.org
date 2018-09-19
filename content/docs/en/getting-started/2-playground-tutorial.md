@@ -140,7 +140,7 @@ Use the `<TabView>` component to create a two-tab app.
 1. Change the title of the `<ActionBar>` to reflect the app purpose.
 1. Remove the default `<ScrollView>` block and all its contents that come with the template.<br/>`<ScrollView>` components are top-level layout containers for scrollable content.
 1. Drag and drop the `<TabView>` component in its place.<br/>The Playground applies some code formatting, including taking care of indentation. However, the formatting is applied after the insertion and using the browser's undo feature only reverts the formatting and not the insertion of code.
-1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).
+1. Configure the height of the `<TabView>` to fill the screen (set it to 100%). If you are using Android then you should also add the `androidTabsPosition` property to your `<TabView>` and set it to "bottom", otherwise the tabs will appear on the top of the screen.
 1. Change the titles of the `<TabViewItem>` elements and their contents to reflect their purpose.<br/>At this point, text content for the tabs is shown in `<Label>` components with no styling and formatting. Apply the `textWrap="true"` property to the respective `<Label>` components to improve the visualization of the text.
 
 At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
@@ -150,7 +150,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
   <Page class="page">
     <ActionBar title="My Tasks" class="action-bar" />
     
-    <TabView height="100%">
+    <TabView height="100%" androidTabsPosition="bottom">
       <TabViewItem title="To Do">
         <Label text="This tab will list active tasks and will let users add new tasks." textWrap="true" />
       </TabViewItem>
