@@ -388,7 +388,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
         </StackLayout>
       </TabViewItem>
       <TabViewItem title="Completed">
-        <ListView class="list-group" for="done in dones" @itemTap="onItemTap" style="height:75%">
+        <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%">
           <v-template>
             <Label :text="done.name" class="list-group-item-heading" />
           </v-template>
