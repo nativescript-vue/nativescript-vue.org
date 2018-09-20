@@ -215,7 +215,7 @@ Use a `<ListView>` to show tasks below the input field.
     * Remove background color.
     * Set width and height.
 1. Configure the `<GridLayout>`.
-    * Set the grid to consist of two columns and one row.
+    * Set the grid to consist of two columns and one row, with the width of the first column set to twice that of the second.
     * Set the width of the grid to 100% so that it takes the entire width of the screen.
     * Set the height of the grid to 25%. Otherwise, the `<ListView>` you'll be adding later might overlap the `<GridLayout>`.
     * Remove any additional settings for the grid.
