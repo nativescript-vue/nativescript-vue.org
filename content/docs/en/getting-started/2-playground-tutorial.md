@@ -751,7 +751,7 @@ This section applies the basic NativeScript knowledge from [Advanced design: Sty
 1. Add the `separatorColor` property, and set it to `transparent` for the `<ListView>` that represents completed tasks. This way, the separator will no longer appear in your list.
 
   ```HTML
-  <ListView id="completed-list" class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%" separatorColor="transparent">
+  <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%" separatorColor="transparent">
   ```
 
 1. In `<style scoped>`, create the style for completed tasks. Set font size, color, text decoration, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
