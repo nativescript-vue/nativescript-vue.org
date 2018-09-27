@@ -4,11 +4,11 @@ contributors: [sn0wil]
 outdated: false
 ---
 
-Эта страница сожержит обзор поддерживаемых в настоящий момент шаблонов, которые вы можете использовать для начала работы с NativeScript-Vue. Это также подразумевает, что [подготовили вашу систему для разработки с NativeScript](/ru/docs/getting-started/installation)
+Эта страница сожержит обзор актуальных в настоящий момент шаблонов, которые вы можете использовать для начала работы с NativeScript-Vue. Подразумевается, что вы уже [подготовили вашу систему для разработки с NativeScript](/ru/docs/getting-started/installation).
 
-> Этот список будет обновляться, так как появляются новые шаблоны, а некоторые становятся устаревшими. 
+> Этот список будет обновляться, так как шаблоны появляются и устаревают.
 
-**Шаблоны, поддерживаемые в настоящее время:**
+**Актуальные шаблоны:**
 
 * [nativescript-vue/vue-cli-template](#nativescript-vuevue-cli-template) 
 * [nativescript-vue/nativescript-vue-template](#nativescript-vuenativescript-vue-template) 
@@ -27,7 +27,7 @@ outdated: false
 * VueRouter &mdash; роутинг (опционально) &mdash; **экспериментально!**
 * Темы NativeScript
 
-Вы можете использовать [Vue CLI](https://github.com/vuejs/vue-cli) для загрузки вашего NativeScript-Vue приложения. Из коробки этот шаблон обеспеччивает поддержку [Vuex](https://vuex.vuejs.org/ru/), [Vue Router](https://github.com/vuejs/vue-router) и[Темы NativeScript](https://docs.nativescript.org/ui/theme). Изначально сделанный [Pascal Martineau](https://github.com/lewebsimple/),этот шаблон является официально поддерживаемым для разработки с использованием NativeScript-Vue.
+Вы можете использовать [Vue CLI](https://github.com/vuejs/vue-cli) для загрузки вашего NativeScript-Vue приложения. Из коробки этот шаблон обеспечивает поддержку [Vuex](https://vuex.vuejs.org/ru/), [Vue Router](https://github.com/vuejs/vue-router) и [Темы NativeScript](https://docs.nativescript.org/ui/theme). Этот шаблон, сделанный [Pascal Martineau](https://github.com/lewebsimple/), поддерживается официально и рекомендуется для использования с NativeScript-Vue.
 
 **Использование:**
 
@@ -49,7 +49,7 @@ $ npm run watch:ios
 * Чистый JS &mdash; без `.vue` файлов
 * Темы NativeScript
 
-Этот шаблон - простой способ раработки прилодежений с использованием NativeScript-Vue. Он не требует лишних шагов для сборки, потому что компоненты / приложение реализован на чистых `.js` файлах. 
+Это простой шаблон для разработки приложений с использованием NativeScript-Vue. Он не требует лишних шагов для сборки, потому что компоненты реализованы на чистых `.js` файлах.
 
 **Использование:**
 
