@@ -24,13 +24,13 @@ Instead, you need to **change to a new route using the `route.push` method**. Th
 
 ```HTML
 <Button class="btn btn-primary" @tap="$router.push('/counter')">Counter</Button>
-``` 
+```
 
 For detailed information about how to use the plugin in your NativeScript-Vue app, see [the Vue Router page](/en/docs/routing/vue-router/).
 
 ## Vuex
 
-Vuex is a state management pattern and library. It serves as a store for all the components in an app and implements rules to ensure that state is mutated in a predictable fashion. 
+Vuex is a state management pattern and library. It serves as a store for all the components in an app and implements rules to ensure that state is mutated in a predictable fashion.
 
 ### Install the plugin
 
@@ -44,7 +44,7 @@ The most recent version of Vuex will be added to your `package.json`.
 
 ### Import the plugin
 
-Open your app entry file (llikely `app.js` or `main.js`) and add the following line at the top:
+Open your app entry file (likely `app.js` or `main.js`) and add the following line at the top:
 
 ```js
 import Vuex from 'vuex'
@@ -106,6 +106,6 @@ new Vue({
 }).$start()
 ```
 
-For more information about Vuex, see [the Vuex documentation](https://vuex.vuejs.org). 
+For more information about Vuex, see [the Vuex documentation](https://vuex.vuejs.org).
 
 For more examples about how to manage the elements of Vuex, explore the [`/store` folder](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) of the NativeScript-Vue Groceries sample.
