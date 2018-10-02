@@ -1,9 +1,9 @@
 ---
-title: Использование Vue-плагинов
+title: Использование плагинов Vue
 contributors: [sn0wil, chimit]
 ---
 
-Это руководство описывает работу Vue-плагинов в NativeScript-Vue.
+Это руководство описывает работу плагинов Vue в NativeScript-Vue.
 
 * [Vue Router](#vue-router)
 * [Vuex](#vuex)
