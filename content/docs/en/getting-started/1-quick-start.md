@@ -18,7 +18,7 @@ But if [you already have your system ready for native development](/en/docs/gett
 $ npm install -g @vue/cli @vue/cli-init
 $ vue init nativescript-vue/vue-cli-template <project-name>
 $ cd <project-name>
-$ npm install
+$ npm install -D # or yarn install -D 
 $ tns run android --bundle
 $ # or
 $ tns run ios --bundle
