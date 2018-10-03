@@ -94,7 +94,7 @@ const Detail = {
 `$navigateTo` accepts a second `options` parameter. You can use the parameter to:
 
 * set the transition 
-* pass a `context` object with props to be used when instantiating the target component 
+* pass a `props` object to be used when instantiating the target component 
 
 For example: 
 
@@ -215,7 +215,7 @@ Note: We've wrapped the Detail page in a `<Frame>` element, which allows us to s
 
 #### Passing props to the modal
 
-`$showModal` accepts a second parameter. You can use the parameter to pass in a `context` object containing `propsData` to the target component. For example:
+`$showModal` accepts a second parameter. You can use the parameter to pass in a `props` object to the target component. For example:
 
 ```JavaScript
 this.$showModal(Detail, { props: { id: 14 }});
