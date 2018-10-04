@@ -50,7 +50,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 
 | Имя | Описание |
 |------|-------------|
-| `tabChange` | Срабатывает при нажатии на один из компонентов `<TabViewItem>`.
+| `selectedIndexChange` | Срабатывает при нажатии на один из компонентов `<TabViewItem>`.
 
 ## Нативный компонент
 
