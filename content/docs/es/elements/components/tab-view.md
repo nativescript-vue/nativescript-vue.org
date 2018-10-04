@@ -50,7 +50,7 @@ contributors: [ianaya89]
 
 | Nombre | Descripción |
 |------|-------------|
-| `tabChange` | Emitido cada vez que un componente `<TabViewItem>` es presionado.
+| `selectedIndexChange` | Emitido cada vez que un componente `<TabViewItem>` es presionado.
 
 ## Componente Nativo
 
