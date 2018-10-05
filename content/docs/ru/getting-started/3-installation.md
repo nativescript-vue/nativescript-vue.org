@@ -9,9 +9,9 @@ contributors: [sn0wil, lex111, chimit]
 
 - [Node.js](#nodejs)
 - [NativeScript CLI](#nativescript-cli)
-- [Windows](#windows) (для разработки Android-приложений на Windows)
-- [macOS](#macos) (для разработки iOS- и Android-приложений на macOS)
-- [Linux](#linux) (для разработки Android-приложений на Linux)
+- [Windows](#windows) (для разработки Android приложений на Windows)
+- [macOS](#macos) (для разработки iOS и Android приложений на macOS)
+- [Linux](#linux) (для разработки Android приложений на Linux)
 
 ### Node.js
 
