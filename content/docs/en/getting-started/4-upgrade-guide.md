@@ -34,7 +34,7 @@ Copy your old app's `App_Resources` folder from `./template/app/` and paste it i
 
 **Step 3: Merge `src` and `app` folders**
 
-Copy all the folders in `src` from your old app and paste them into the `app` folder in the new app.
+Copy all the folders in `src` from your old app and paste them into the `app` folder in the new app. If you have custom fonts, move the `src/assets/fonts` folder to `app/fonts` in order to let NativeScript to load them automatically.
 
 **Step 4: Edit `main.js`**
 
