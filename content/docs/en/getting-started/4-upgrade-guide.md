@@ -111,11 +111,48 @@ Change the path:
 <Image v-if="surprise" src="~/assets/images/NativeScript-Vue.png"/>
 ```
 
-**Step 6: Align `package.json`**
+**Step 6: Fix Manual Routing Props (if necessary)**
+
+If your app uses manual routing, please note that the syntax for passing props has changed.
+
+Old syntax:
+
+```js
+this.$navigateTo(NewPage, {
+                    transition: {},
+                    transitionIOS: {},
+                    transitionAndroid: {},
+
+                    context: {
+                        propsData: {
+                            name: this.name,
+                            value: this.value
+                        }
+                    }
+                });
+```
+
+New syntax:
+
+```js
+this.$navigateTo(NewPage, {
+                    transition: {},
+                    transitionIOS: {},
+                    transitionAndroid: {},
+
+                    props: {
+                        name: this.name,
+                        value: this.value
+                    }
+                });
+```
+
+
+**Step 7: Align `package.json`**
 
 Copy the relevant values from your old app's root `package.json` file into the new app's root `package.json` file. This will most likely entail copying the `Dependencies:` block, but you might also need to realign the new app's app version and description at the top of `package.json`.
 
-**Step 7: Clean and run**
+**Step 8: Clean and run**
 
 At this point, it's a good idea to clean the new app's folders (if you have run it prior) and reinstall any dependencies.
 
