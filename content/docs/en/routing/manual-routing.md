@@ -51,7 +51,7 @@ const Detail = {
 };
 
 new Vue({
-  render: h => h(Master)
+  render: h => h('frame', [h(Master)])
 }).$start()
 ```
 
@@ -171,7 +171,7 @@ const Detail = {
 };
 
 new Vue({
-  render: h => h(Master)
+  render: h => h('frame', [h(Master)])
 }).$start()
 ```
 
