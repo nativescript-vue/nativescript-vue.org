@@ -37,9 +37,9 @@ import VueDevtools from 'nativescript-vue-devtools'
 Vue.use(VueDevtools)
 ```
 
-Optional : if you use a real device, not an emulator, it will not run on `127.0.0.1`. You will need to connect it the to the same network as your host and tell `VueDevtools` your host ip like this :
+*Optional*: If you use a real device instead of an emulator, it will not be able to connect to your host machine by default. You will need to set the host config option to the IP of your dev machine:
 ```js
-Vue.use(VueDevtools, { host: '192.168.1.42' }) // not real device ip :)
+Vue.use(VueDevtools, { host: '192.168.1.42' })
 ```
 
 ** 4. Run Vue Devtools ** 
