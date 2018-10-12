@@ -213,7 +213,7 @@ Use a `<ListView>` to show tasks below the input field.
 1. Delete all `<Label>` components from the `<GridLayout>` block.
 1. Configure the `<StackLayout>`.
     * Remove background color.
-    * Set width and height.
+    * Set width and height both to `100%`.
 1. Configure the `<GridLayout>`.
     * Set the grid to consist of two columns and one row.
     * Set the width of the grid to 100% so that it takes the entire width of the screen.
