@@ -108,4 +108,4 @@ new Vue({
 
 For more information about Vuex, see [the Vuex documentation](https://vuex.vuejs.org).
 
-For more examples about how to manage the elements of Vuex, explore the [`/store` folder](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) of the NativeScript-Vue Groceries sample.
+For more examples about how to manage the elements of Vuex, explore the [`/store` folder](https://github.com/tralves/groceries-ns-vue/tree/master/app/store/) of the NativeScript-Vue Groceries sample.
