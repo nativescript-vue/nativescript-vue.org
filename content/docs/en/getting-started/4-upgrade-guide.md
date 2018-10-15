@@ -1,20 +1,24 @@
 ---
 title: Upgrade Guide
-contributors: [rigor789, jlooper]
+contributors: [rigor789, jlooper, ikoevska]
 outdated: false
 ---
 
 > Estimated time for the upgrade: **10-20 minutes**.
 
-If you scaffolded a NativeScript-Vue app using the 1.3.1 version of the Vue-CLI template, it's time to upgrade to the newest version, 2.0, and this guide will help you do that. The new template has a different folder structure from the older one:
+If you scaffolded a NativeScript-Vue app using the 1.3.1 version of the Vue-CLI template, it's time to upgrade to the newest 2.0 version. This guide will help you do that.
+
+The new template has a different folder structure from the older one:
 
 ![New folder structure](/screenshots/old-new-folder-structure.png)
 
-**Step 1**
+The upgrade process involves creating a new project from the updated template, copying files from your old app into the new one, and then rearranging and adding some files.
+
+## Step 1: Create new app
 
 Start by creating a new app using the Vue-CLI template.
 
-> **TIP:** Make sure you use the same preinstallation commands in this new project that you used when creating the older version; for example, if you installed Vuex in the CLI the first time, do it again now.
+> **TIP:** In your new project, use the same preinstallation commands that you used when creating the older version. For example, if you installed Vuex in the CLI the first time, do it again now.
 
 ```shell
 $ npm install -g @vue/cli @vue/cli-init
@@ -26,38 +30,41 @@ $ # or
 $ tns run ios --bundle
 ```
 
-The upgrade process involves copying files from your old app into the new project and then rearranging and adding some files.
+## Step 2: Replace the app resources
 
-**Step 2: Replace App Resources**
+First, copy your old app's `App_Resources` folder from `./template/app/`. Next, paste it into the new app's `app` folder. Make sure that you're replacing the new `App_Resources` folder.
 
-Copy your old app's `App_Resources` folder from `./template/app/` and paste it into the new app's `app` folder, replacing its `App_Resources` folder.
+## Step 3: Merge the `src` and `app` folders
 
-**Step 3: Merge `src` and `app` folders**
+Copy all the folders in `src` from your old app and paste them into the `app` folder in the new app.
 
-Copy all the folders in `src` from your old app and paste them into the `app` folder in the new app. If you have custom fonts, move the `src/assets/fonts` folder to `app/fonts` in order to let NativeScript to load them automatically.
+If you have custom fonts, move the `src/assets/fonts` folder to `app/fonts` to let NativeScript load them automatically.
 
-**Step 4: Edit `main.js`**
+## Step 4: Edit `main.js`
 
-NativeScript 4.0 introduced a new Frame element, and introduced a way to change the root element of our applications, allowing for sharing common view elements across pages (navigations).
+NativeScript 4.0 introduced two major improvements:
 
-Prior to 4.0 the root element was a Frame, which was implicitly created by NativeScript when our application started.
+* a new `<Frame>` element
+* a way to change the root element of our applications that lets you share common view elements across pages (navigations).
 
-With these changes, we are no longer able to automatically create a Frame and Page elements, so in 2.0.0 you are required to explicitly add these elements to your template.
+Prior to NativeScript 4.0, the root element was a `<Frame>` which was implicitly created by NativeScript when the application started.
 
-To keep the previous behavior of having a single root Frame, you can change your root Vue instance to have a `<Frame>` and a `<Page>` element.
+With the latest changes, `<Frame>` and `<Page>` elements are longer automatically created. So, in NativeScript-Vue 2.0.0, you need to explicitly add these elements to your template.
+
+To keep the previous behavior of having a single root `<Frame>`, you can change your root Vue instance to have a `<Frame>` and a `<Page>` element.
 
 **Example**
 
-```js
-// in prior versions
+```JavaScript
+// in older versions
 // this automatically created a Page
 new Vue({
   template: `<Label text="Hello world"/>`
 }).$start()
 ```
 
-```js
-// in 2.0.0
+```JavaScript
+// in NativeScript-Vue 2.0.0
 // the <Frame> and <Page> must exist in your template
 new Vue({
   template: `
@@ -70,7 +77,7 @@ new Vue({
 }).$start()
 ```
 
-This allows us to use a shared SideDrawer across different pages for example:
+This lets you use a shared element across different pages. For example, a `<SideDrawer>`:
 
 ```js
 new Vue({
@@ -95,11 +102,13 @@ new Vue({
 }).$start();
 ```
 
-**Step 5: Edit paths**
+## Step 5: Edit paths
 
-Since the folder structure has changed, you need to edit the paths in your new app to point to your styles, fonts, and images.
+Because the folder structure has changed, you need to edit the paths in your new app to point to your styles, fonts, and images.
 
-In your components, if you have images from your old app referenced like this:
+**Example**
+
+If you have images from your old app referenced like this:
 
 ```HTML
 <Image v-if="surprise" src="~/images/NativeScript-Vue.png"/>
@@ -111,9 +120,9 @@ Change the path:
 <Image v-if="surprise" src="~/assets/images/NativeScript-Vue.png"/>
 ```
 
-**Step 6: Fix Manual Routing Props (if necessary)**
+## (If needed) Step 6: Fix manual routing props
 
-If your app uses manual routing, please note that the syntax for passing props has changed.
+If your app uses manual routing, the syntax for passing props has changed.
 
 Old syntax:
 
@@ -147,14 +156,13 @@ this.$navigateTo(NewPage, {
                 });
 ```
 
-
-**Step 7: Align `package.json`**
+## Step 7: Align `package.json`
 
 Copy the relevant values from your old app's root `package.json` file into the new app's root `package.json` file. This will most likely entail copying the `Dependencies:` block, but you might also need to realign the new app's app version and description at the top of `package.json`.
 
-**Step 8: Clean and run**
+## Step 8: Clean and run
 
-At this point, it's a good idea to clean the new app's folders (if you have run it prior) and reinstall any dependencies.
+At this point, it's a good idea to clean the new app's folders and reinstall any dependencies.
 
 ```shell
 $ cd <project-name>
@@ -165,9 +173,9 @@ $ # or
 $ tns run ios --bundle
 ```
 
-**Step 8 (Optional): Try HMR**
+## (Optional) Step 8: Try HMR
 
-Just recently nativescript received support for HMR (Hot Module Replacement). The latest version of NativeScript-Vue supports it out of the box, however you will need to install the latest (and greatest) version of the NativeScript CLI.
+Just recently NativeScript received support for HMR (Hot Module Replacement). The latest version of NativeScript-Vue supports it out-of-the-box but you will need to install the latest (and greatest) version of the NativeScript CLI.
 
 ```shell
 $ npm install -g nativescript@next
