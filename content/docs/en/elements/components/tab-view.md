@@ -51,7 +51,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 
 | Name | Description |
 |------|-------------|
-| `selectedIndexChange` | Emitted when one of the `<TabViewItem>` components is tapped.
+| `selectedIndexChange` | Emits an event object with `value` property containing the index for every `<TabViewItem>` tapped.
 
 ## Native component
 
