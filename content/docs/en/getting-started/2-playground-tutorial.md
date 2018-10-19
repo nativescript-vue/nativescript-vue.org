@@ -259,7 +259,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
           <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%">
             <v-template>
-              <Label :text="todo.name" class="list-group-item-heading" />
+              <Label :text="todo.name" class="list-group-item-heading" textWrap="true" />
             </v-template>
           </ListView>
         </StackLayout>
@@ -333,7 +333,7 @@ Out-of-the-box, the `<ListView>` component detects a tap gesture for every item 
   ```HTML
   <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%">
     <v-template>
-      <Label :text="done.name" class="list-group-item-heading" />
+      <Label :text="done.name" class="list-group-item-heading" textWrap="true" />
     </v-template>
   </ListView>
   ```
@@ -382,7 +382,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
           <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%">
             <v-template>
-              <Label :text="todo.name" class="list-group-item-heading" />
+              <Label :text="todo.name" class="list-group-item-heading" textWrap="true" />
             </v-template>
           </ListView>
         </StackLayout>
@@ -390,7 +390,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
       <TabViewItem title="Completed">
         <ListView class="list-group" for="done in dones" @itemTap="onItemTap" style="height:75%">
           <v-template>
-            <Label :text="done.name" class="list-group-item-heading" />
+            <Label :text="done.name" class="list-group-item-heading" textWrap="true" />
           </v-template>
         </ListView>
       </TabViewItem>
@@ -513,7 +513,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
 
           <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%">
             <v-template>
-              <Label :text="todo.name" class="list-group-item-heading" />
+              <Label :text="todo.name" class="list-group-item-heading" textWrap="true" />
             </v-template>
           </ListView>
         </StackLayout>
@@ -521,7 +521,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
       <TabViewItem title="Completed">
         <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%">
           <v-template>
-            <Label :text="done.name" class="list-group-item-heading" />
+            <Label :text="done.name" class="list-group-item-heading" textWrap="true" />
           </v-template>
         </ListView>
       </TabViewItem>
@@ -709,7 +709,7 @@ To implement a style particularly for the text of active tasks, you can set an `
 1. Set an `id` for the `<Label>` that represents active tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
 
   ```HTML
-  <Label id="active-task" :text="todo.name" class="list-group-item-heading" />
+  <Label id="active-task" :text="todo.name" class="list-group-item-heading" textWrap="true" />
   ```
 1. Add the `separatorColor` property and set it to `transparent` for the `<ListView>` that shows active tasks. This way, the separator will no longer appear in your list.
 
@@ -746,7 +746,7 @@ This section applies the basic NativeScript knowledge from [Advanced design: Sty
 1. Set an `id` for the `<Label>` that represents completed tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
 
   ```HTML
-  <Label id="completed-task" :text="done.name" class="list-group-item-heading" />
+  <Label id="completed-task" :text="done.name" class="list-group-item-heading" textWrap="true" />
   ```
 1. Add the `separatorColor` property, and set it to `transparent` for the `<ListView>` that represents completed tasks. This way, the separator will no longer appear in your list.
 
