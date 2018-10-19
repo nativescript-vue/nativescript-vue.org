@@ -10,6 +10,9 @@ This page provides an overview of the currently supported Vue plugins that work 
 
 ## Vue Router
 
+> Currently, integration with Vue Router is **unsupported**. Until the team resolves the issue, please use [manual routing](/en/docs/routing/manual-routing).
+
+<!--
 > Currently, integration with Vue Router is **experimental**. For more information, see [the Vue Router page](/en/docs/routing/vue-router/).
 
 ### Install and require the plugin
@@ -27,6 +30,7 @@ Instead, you need to **change to a new route using the `route.push` method**. Th
 ```
 
 For detailed information about how to use the plugin in your NativeScript-Vue app, see [the Vue Router page](/en/docs/routing/vue-router/).
+-->
 
 ## Vuex
 
