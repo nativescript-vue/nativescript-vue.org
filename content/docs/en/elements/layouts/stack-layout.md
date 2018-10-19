@@ -70,6 +70,11 @@ The following example creates a diagonal stack of items with responsive sizes. I
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal_align_children.svg" />
 
+## Events
+| Name | Description |
+|------|-------------|
+`tap` | Emitted when the layout is tapped.
+
 ## Props
 
 | Name | Type | Description |
