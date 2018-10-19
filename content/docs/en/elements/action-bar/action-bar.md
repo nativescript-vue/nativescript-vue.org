@@ -1,10 +1,10 @@
 ---
 title: ActionBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionbar
-contributors: [rigor789, eddyverbruggen]
+contributors: [rigor789, eddyverbruggen, ikoevska]
 ---
 
-The ActionBar component is a NativeScript abstraction for the Android ActionBar and iOS NavigationBar.
+`<ActionBar>` is a UI component that provides a toolbar at the top of the activity window. This is the NativeScript abstraction for the Android [app bar](https://developer.android.com/training/appbar/) and the iOS [navigation bar](https://developer.apple.com/design/human-interface-guidelines/ios/bars/navigation-bars/).
 
 ---
 
@@ -44,7 +44,13 @@ because iOS applies a filter. To remove this filter and the border, set `flat` t
 
 | name | type | description |
 |------|------|-------------|
-| `title` | `String` | The title to be shown in the ActionBar.
-| `android.icon` | `String` | The icon to be shown on Android.
-| `android.iconVisibility` | `String` | Sets when the icon is visible.
-| `flat` | `boolean` | Removes the border and iOS color filter. Default `false`.
+| `title` | `String` | Gets or sets the title shown in the bar.
+| `android.icon` | `String` | Gets or sets the icon to be shown on Android devices.
+| `android.iconVisibility` | `String` | Gets or sets icon visibility on Android devices.
+| `flat` | `boolean` | Removes the border on Android and the translucency on iOS. Default value is `false`.
+
+## Native component
+
+| Android | iOS |
+|---------|-----|
+| [`android.widget.Toolbar`](https://developer.android.com/reference/android/widget/Toolbar.html)	| [`UINavigationBar`](https://developer.apple.com/documentation/uikit/uinavigationbar)
