@@ -20,7 +20,7 @@ contributors: [rigor789, eddyverbruggen]
 <ActionBar>
   <StackLayout orientation="horizontal">
     <Image src="res://icon" width="40" height="40" verticalAlignment="center" />
-    <Label text="ativeScript" fontSize="24" verticalAlignment="center" />
+    <Label text="NativeScript" fontSize="24" verticalAlignment="center" />
   </StackLayout>
 </ActionBar>
 ```
