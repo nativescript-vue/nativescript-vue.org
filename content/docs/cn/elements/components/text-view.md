@@ -47,7 +47,7 @@ contributors: [nuochong]
 | `editable` | `Boolean` | 当 `true`，表示用户可以编辑容器的内容。
 | `maxLength` | `Number` | 设置可以在容器中输入的最大字符数。
 | `keyboardType` | `KeyboardType` | 显示自定义键盘以便于文本输入。<br/>有效值： `datetime`, `phone`, `number`, `url`, 或 `email`。
-| `returnKeyType` | 获取或设置返回键的标签。<br/>有效值： `done`, `next`, `go`, `search`, 或 `send`。
+| `returnKeyType` | 获取或设置返回键的标签。<br/>有效值： `done`, `next`, `go`, `search`, 或 `send`。 | *暂且不支援*
 | `autocorrect` | `Boolean` | 启用或禁用自动更正。
 
 ## 活动
