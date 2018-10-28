@@ -17,10 +17,21 @@ You can call `$navigateTo` in the view or in a method.
 
 #### In the view
 
-In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly. 
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly.
 
-```Vue
+```js
 const Vue = require('nativescript-vue');
+
+const Detail = {
+  template: `
+    <Page>
+      <ActionBar title="Detail"/>
+      <StackLayout>
+        <Label text="Details.." />
+      </StackLayout>
+    </Page>
+  `
+};
 
 const Master = {
   template: `
@@ -39,6 +50,16 @@ const Master = {
   }
 };
 
+new Vue({
+  render: h => h('frame', [h(Master)])
+}).$start();
+```
+
+#### In a method
+
+Bind a button to a method and use `this.$navigateTo(Detail)` to navigate to the `Detail` component.
+
+```js
 const Detail = {
   template: `
     <Page>
@@ -50,16 +71,6 @@ const Detail = {
   `
 };
 
-new Vue({
-  render: h => h('frame', [h(Master)])
-}).$start()
-```
-
-#### In a method
-
-Bind a button to a method and use `this.$navigateTo(Detail)` to navigate to the `Detail` component.
-
-```Vue
 const Master = {
   template: `
     <Page>
@@ -76,34 +87,23 @@ const Master = {
     }
   }
 };
-
-const Detail = {
-  template: `
-    <Page>
-      <ActionBar title="Detail"/>
-      <StackLayout>
-        <Label text="Details.." />
-      </StackLayout>
-    </Page>
-  `
-};
 ```
 
 #### Passing props to the target component
 
 `$navigateTo` accepts a second `options` parameter. You can use the parameter to:
 
-* set the transition 
-* pass a `props` object to be used when instantiating the target component 
+* set the transition
+* pass a `props` object to be used when instantiating the target component
 
-For example: 
+For example:
 
-```JavaScript
+```js
 this.$navigateTo(Detail, {
   transition: {},
   transitionIOS: {},
   transitionAndroid: {},
-  
+
   props: {
     foo: 'bar',
   }
@@ -116,7 +116,7 @@ For more information about the options that you can pass, see [`NavigationEntry`
 
 In the `Detail` component, add a button that triggers the globally exposed `$navigateBack` function.
 
-```Vue
+```js
 const Detail = {
   template: `
     <Page>
@@ -137,10 +137,21 @@ You can call `$showModal` in the view or in a method. To close the modal, call `
 
 #### In the view
 
-In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$showModal(<propertyName>)` in the view directly. 
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$showModal(<propertyName>)` in the view directly.
 
-```Vue
+```js
 const Vue = require('nativescript-vue');
+
+const Detail = {
+  template: `
+    <Page>
+      <ActionBar title="Detail"/>
+      <StackLayout>
+        <Button @tap="$modal.close" text="Close" />
+      </StackLayout>
+    </Page>
+  `
+};
 
 const Master = {
   template: `
@@ -159,27 +170,29 @@ const Master = {
   }
 };
 
-const Detail = {
-  template: `
-    <Page>
-      <ActionBar title="Detail"/>
-      <StackLayout>
-        <Button @tap="$modal.close" text="Close" />                    
-      </StackLayout>
-    </Page>
-  `
-};
-
 new Vue({
   render: h => h('frame', [h(Master)])
-}).$start()
+}).$start();
 ```
 
 #### In a method
 
 Bind a button to a method and use `this.$showModal(Detail)` to navigate to the `Detail` component.
 
-```Vue
+```js
+const Detail = {
+  template: `
+    <Frame>
+      <Page>
+        <ActionBar title="Detail"/>
+        <StackLayout>
+          <Button @tap="$modal.close" text="Close" />
+        </StackLayout>
+      </Page>
+    </Frame>
+  `
+};
+
 const Master = {
   template: `
     <Page>
@@ -196,19 +209,6 @@ const Master = {
     }
   }
 };
-
-const Detail = {
-  template: `
-    <Frame>
-      <Page>
-        <ActionBar title="Detail"/>
-        <StackLayout>
-          <Button @tap="$modal.close" text="Close" />                    
-        </StackLayout>
-      </Page>
-    </Frame>
-  `
-};
 ```
 
 Note: We've wrapped the Detail page in a `<Frame>` element, which allows us to show the `<ActionBar>` as well as navigate further within the modal.
@@ -217,13 +217,13 @@ Note: We've wrapped the Detail page in a `<Frame>` element, which allows us to s
 
 `$showModal` accepts a second parameter. You can use the parameter to pass in a `props` object to the target component. For example:
 
-```JavaScript
+```js
 this.$showModal(Detail, { props: { id: 14 }});
 ```
 
 You also need to update the `Detail` component to be able to accept the `id` prop. You can do this by defining a `props` option inside the component:
 
-```vue
+```js
 const Detail = {
   props: ['id'],
   template: `
@@ -231,7 +231,7 @@ const Detail = {
       <ActionBar title="Detail"/>
       <StackLayout>
         <Label :text="id" />
-        <Button @tap="$modal.close" text="Close" />                    
+        <Button @tap="$modal.close" text="Close" />
       </StackLayout>
     </Page>
   `,
@@ -248,12 +248,12 @@ When calling `$showModal`, a promise is returned which resolves with any data pa
 
 In the following example, closing the modal outputs 'Foo' in the console.
 
-```JavaScript
+```js
 // ... inside Master
 this.$showModal(Detail).then(data => console.log(data));
 ```
 
-```HTML
+```html
 <!-- inside Detail -->
-<Button @tap="$modal.close('Foo')" text="Close" />    
+<Button @tap="$modal.close('Foo')" text="Close" />
 ```
