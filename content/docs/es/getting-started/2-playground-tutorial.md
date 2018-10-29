@@ -48,7 +48,7 @@ La barra lateral izquierda, ofrece un explorador de archivos y un panel **Compon
 
 El panel de **Components** provee una acceso rápido a código pre-configurado de los componentes de UI de NativeScript.
 
-Desde la parte superior de la página, puedes subir tus cambios de código para previsualizar las aplicaciones en tu dipositivo, guardar los cambios e incluso descargar el código.
+Desde la parte superior de la página, puedes subir tus cambios de código para previsualizar las aplicaciones en tu dispositivo, guardar los cambios e incluso descargar el código.
 
 En la parte inferior, encontrarás a tu mejor amigo a la hora de obtener información en tiempo real. En este panel vas a poder leer errores e informacion de *logging*
 
@@ -78,7 +78,7 @@ Si en algun punto dejas de visualizar en el dispositivo los cambios aplicados, h
 
 ### Configura tu código
 
-Ahora el componente se ejecuta y se muestra en la pantalla. Seguramente estas entusiasmado con los reultados pero quieres hacer algo por ti mismo.
+Ahora el componente se ejecuta y se muestra en la pantalla. Seguramente estas entusiasmado con los resultados pero quieres hacer algo por ti mismo.
 
 Puedes *hackear* el código sugerido por defecto, cambia tamaños, etiquetas o incluso agrega y quita elementos. Anímate a explorar.
 
