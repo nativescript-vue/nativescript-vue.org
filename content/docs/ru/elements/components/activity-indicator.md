@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicat
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
 
-`<ActivityIndicator>` - визуальный компонент, отображающий прогресс, сигнализирующий пользователя о том, что операция выполняется в фоновом режиме.
+`<ActivityIndicator>` - визуальный компонент, отображающий прогресс, сигнализирующий пользователю о том, что операция выполняется в фоновом режиме.
 
 ---
 
