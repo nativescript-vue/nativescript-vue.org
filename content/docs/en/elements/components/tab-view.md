@@ -1,7 +1,7 @@
 ---
 title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe, ramsesmoreno]
 ---
 
 `<TabView>` is a navigation component that shows content grouped into tabs and lets users switch between tabs.
@@ -35,7 +35,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
   </TabViewItem>
 </TabView>
 ```
-**NOTE:** Use images for tab icons instead of icon fonts.
+**NOTE:** Use images for tab icons instead of icon fonts. Because this is a native component, to control the size of the icons you should use resources as defined in https://github.com/nativescript-vue/nativescript-vue.org/blob/master/content/docs/en/elements/components/tab-view.md
 
 ## Props
 
