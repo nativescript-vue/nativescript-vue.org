@@ -1,6 +1,6 @@
 ---
 title: Manual Routing
-contributors: [eddyverbruggen, fartek, rigor789, ikoevska]
+contributors: [eddyverbruggen, fartek, rigor789, ikoevska, tralves]
 ---
 
 The easiest way to do routing in NativeScript-Vue is by using any of the following convenience functions:
@@ -17,7 +17,7 @@ You can call `$navigateTo` in the view or in a method.
 
 #### In the view
 
-In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly. 
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly.
 
 ```Vue
 const Vue = require('nativescript-vue');
@@ -93,17 +93,17 @@ const Detail = {
 
 `$navigateTo` accepts a second `options` parameter. You can use the parameter to:
 
-* set the transition 
-* pass a `props` object to be used when instantiating the target component 
+* set the transition
+* pass a `props` object to be used when instantiating the target component
 
-For example: 
+For example:
 
 ```JavaScript
 this.$navigateTo(Detail, {
   transition: {},
   transitionIOS: {},
   transitionAndroid: {},
-  
+
   props: {
     foo: 'bar',
   }
@@ -149,7 +149,7 @@ You can call `$showModal` in the view or in a method. To close the modal, call `
 
 #### In the view
 
-In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$showModal(<propertyName>)` in the view directly. 
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$showModal(<propertyName>)` in the view directly.
 
 ```Vue
 const Vue = require('nativescript-vue');
@@ -176,7 +176,7 @@ const Detail = {
     <Page>
       <ActionBar title="Detail"/>
       <StackLayout>
-        <Button @tap="$modal.close" text="Close" />                    
+        <Button @tap="$modal.close" text="Close" />
       </StackLayout>
     </Page>
   `
@@ -215,7 +215,7 @@ const Detail = {
       <Page>
         <ActionBar title="Detail"/>
         <StackLayout>
-          <Button @tap="$modal.close" text="Close" />                    
+          <Button @tap="$modal.close" text="Close" />
         </StackLayout>
       </Page>
     </Frame>
@@ -243,7 +243,7 @@ const Detail = {
       <ActionBar title="Detail"/>
       <StackLayout>
         <Label :text="id" />
-        <Button @tap="$modal.close" text="Close" />                    
+        <Button @tap="$modal.close" text="Close" />
       </StackLayout>
     </Page>
   `,
@@ -267,5 +267,5 @@ this.$showModal(Detail).then(data => console.log(data));
 
 ```HTML
 <!-- inside Detail -->
-<Button @tap="$modal.close('Foo')" text="Close" />    
+<Button @tap="$modal.close('Foo')" text="Close" />
 ```
