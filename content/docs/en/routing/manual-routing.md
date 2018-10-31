@@ -112,6 +112,18 @@ this.$navigateTo(Detail, {
 
 For more information about the options that you can pass, see [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
 
+#### Navigating widthin a frame
+
+Each [`<Frame>`](/en/docs/elements/components/frame) element has its own navigation stack. If you are using [`multiple frames`](/en/docs/elements/components/frame#multiple-frames), you may want to specify in which frame the navigation will occur. For instance, having a button in the side bar that changes the page in the main area. You do this by adding the `frame` option:
+
+```JavaScript
+this.$navigateTo(SomeComp, {
+  frame: '<id, or ref, or instance>'
+});
+```
+
+The value for the `frame` option can be the `<Frame>`'s `id` (e.g. `<Frame id="main-frame">`), or the `<Frame>`'s `ref` (e.g. `<Frame ref="mainFrame">`), or the `<Frame>` element instance.
+
 ### `$navigateBack(options, backstackEntry = null)`
 
 In the `Detail` component, add a button that triggers the globally exposed `$navigateBack` function.
