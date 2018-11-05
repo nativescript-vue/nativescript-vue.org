@@ -10,27 +10,7 @@ This page provides an overview of the currently supported Vue plugins that work 
 
 ## Vue Router
 
-> Currently, integration with Vue Router is **unsupported**. Until the team resolves the issue, please use [manual routing](/en/docs/routing/manual-routing).
-
-<!--
-> Currently, integration with Vue Router is **experimental**. For more information, see [the Vue Router page](/en/docs/routing/vue-router/).
-
-### Install and require the plugin
-
-For detailed information about how to install the plugin and make it available in your NativeScript-Vue app, see [the Vue Router page](/en/docs/routing/vue-router/).
-
-### Usage notes
-
-The routing strategy on mobile is different than the routing strategy in the browser and the familiar Vue format of router links does not work with NativeScript-Vue.
-
-Instead, you need to **change to a new route using the `route.push` method**. The following example shows how to use the `tap` event to change the route.
-
-```HTML
-<Button class="btn btn-primary" @tap="$router.push('/counter')">Counter</Button>
-```
-
-For detailed information about how to use the plugin in your NativeScript-Vue app, see [the Vue Router page](/en/docs/routing/vue-router/).
--->
+> Currently, integration with Vue Router is **unsupported**. Please use [manual routing](/en/docs/routing/manual-routing).
 
 ## Vuex
 
