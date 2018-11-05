@@ -1,10 +1,10 @@
 ---
 title: Page
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_page_.page
-contributors: [rigor789]
+contributors: [rigor789, ikoevska]
 ---
 
-`<Page>` is a UI component used to wrap content and optionally show an [`<ActionBar>`](/en/docs/elements/action-bar/action-bar).
+`<Page>` is a UI component that represents an application screen. NativeScript apps typically consist of one or more `<Page>` that wrap content such as an [`<ActionBar>`](/en/docs/elements/action-bar/action-bar) and other UI widgets.
 
 ---
 
@@ -21,21 +21,20 @@ contributors: [rigor789]
 
 | Name | Type | Description |
 |------|------|-------------|
-| `actionBarHidden` | `Boolean` | Shows or hides the ActionBar.<br/>Default value: `false`
+| `actionBarHidden` | `Boolean` | Shows or hides the `<ActionBar>` for the page.<br/>Default value: `false`.
 | `backgroundSpanUnderStatusBar` | `Boolean` | Gets or sets whether the background of the page spans under the status bar.<br/>Default value: `false`.
-| `androidStatusBarBackground` | `Color` | Gets or sets the color of the status bar on android.
-| `enableSwipeBackNavigation` | `Boolean` | Gets or sets whether the page can be swiped back on ios.<br/>Default value: `true`
-| `statusBarStyle` | `String` | Gets or sets the style of the status bar.<br/>Valid values:<br/>`"light"`,<br/>`"dark"`
-
+| `androidStatusBarBackground` | `Color` | (Android-only) Gets or sets the color of the status bar on Android devices.
+| `enableSwipeBackNavigation` | `Boolean` | (iOS-only) Gets or sets whether the page can be swiped back on iOS.<br/>Default value: `true`.
+| `statusBarStyle` | `String` | Gets or sets the style of the status bar.<br/>Valid values:<br/>`light`,<br/>`dark`.
 
 ## Events
 
 | Name | Description |
 |------|-------------|
-| `navigatedFrom` | Emitted when the parent frame has been navigated away.
-| `navigatedTo` | Emitted when the parent frame has been navigated to this page.
-| `navigatingFrom` | Emitted when the parent frame is navigating away from this page.
-| `navigatingTo` | Emitted when the parent frame is navigating to this page.
+| `navigatedFrom` | Emitted after the app has navigated away from the current page.
+| `navigatedTo` | Emitted after the app has navigated to the current page.
+| `navigatingFrom` | Emitted before the app has navigated away from the current page.
+| `navigatingTo` | Emitted before the app has navigated to the current page.
 
 ## Native component
 
