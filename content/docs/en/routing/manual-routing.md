@@ -122,7 +122,10 @@ this.$navigateTo(SomeComp, {
 });
 ```
 
-The value for the `frame` option can be the `<Frame>`'s `id` (e.g. `<Frame id="main-frame">`), or the `<Frame>`'s `ref` (e.g. `<Frame ref="mainFrame">`), or the `<Frame>` element instance.
+The value for the `frame` option can be one of the following:
+* the `id` of the `<Frame>` component (for example: `<Frame id="main-frame">`)
+* the `ref` for the `<Frame>` (for example: `<Frame ref="mainFrame">`)
+* the `<Frame>` instance itself
 
 ### `$navigateBack(options, backstackEntry = null)`
 
