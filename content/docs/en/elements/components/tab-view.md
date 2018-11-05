@@ -45,13 +45,13 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe]
 | `tabTextColor` | `Color` | (Style property) Gets or sets the text color of the tabs titles.
 | `tabBackgroundColor` | `Color` | (Style property) Gets or sets the background color of the tabs.
 | `selectedTabTextColor` | `Color` | (Style property) Gets or sets the text color of the selected tab title.
-| `androidTabsPosition` | `String` | Sets the position of the TabView in Android platform<br/>Valid values: `top` or `bottom`
+| `androidTabsPosition` | `String` | Sets the position of the TabView in Android platform<br/>Valid values: `top` or `bottom`.
 
 ## Events
 
 | Name | Description |
 |------|-------------|
-| `selectedIndexChange` | Emits an event object with `value` property containing the index for every `<TabViewItem>` tapped.
+| `selectedIndexChange` | Emits an event object containing a `value` property with the index of the tapped `<TabViewItem>`.
 
 ## Native component
 
