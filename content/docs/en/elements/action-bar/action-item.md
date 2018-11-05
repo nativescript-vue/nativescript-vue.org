@@ -1,14 +1,16 @@
 ---
 title: ActionItem
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionitem
-contributors: [rigor789]
+contributors: [rigor789, ikoevska]
 ---
 
-The ActionItem component is used to add additional action buttons to the ActionBar.
+`<ActionItem>` is a UI component that lets you add action buttons to the `<ActionBar>` component.
 
 ---
 
-```html
+#### Basic use
+
+```HTML
 <ActionBar title="My App">
   <ActionItem @tap="onTapShare"
     ios.systemIcon="9" ios.position="left"
@@ -21,9 +23,9 @@ The ActionItem component is used to add additional action buttons to the ActionB
 
 #### Conditionally showing action items
 
-ActionItems can be displayed based on a condition using the `v-show` directive.
+You can use the `v-show` directive to show `<ActionItem>` components based on a condition.
 
-```html
+```HTML
 <ActionBar title="My App">
   <ActionItem @tap="onTapEdit"
     v-show="!isEditing"
@@ -42,15 +44,21 @@ ActionItems can be displayed based on a condition using the `v-show` directive.
 
 ## Props
 
-| name | type | description |
+| Name | Type | Description |
 |------|------|-------------|
-| `ios.systemIcon` | `String` | Sets the icon for iOS.
-| `android.systemIcon` | `String` | Sets the icon for Android.
-| `ios.position` | `String` | Sets the position for iOS.<br>Possible values:<br>- `left` (default): Puts the item on the left side of the ActionBar.<br>- `right`: Puts the item on the right side of the ActionBar.
-| `android.position` | `String` | Sets the position for Android.<br>Possible values:<br>- `actionBar` (default): Puts the item in the ActionBar.<br>- `popup`: Puts the item in the options menu. Items will be rendered as text.<br>- `actionBarIfRoom`: Puts the item in the ActionBar if there is room for it. Otherwise, puts it in the options menu.
+| `ios.systemIcon` | `Number` | Gets or sets the icon of the `ActionItem` for iOS. The value must be a number from the [`UIBarButtonSystemItem` enumeration](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/#//apple_ref/c/tdef/UIBarButtonSystemItem).
+| `android.systemIcon` | `String` | Gets or sets the icon of the `ActionItem` for Android. The value must be the name of a [drawable resource](http://androiddrawables.com).
+| `ios.position` | `String` | Gets or sets the position of the `ActionItem` within the `ActionBar` for iOS.<br/>Valid values: `left` or `right`.<br/>Default value is `left`.
+| `android.position` | `String` | Gets or sets the position of the `ActionItem` within the `ActionBar` for Android.<br/>Valid values:<br/>`actionBar` (places the item in the ActionBar)<br/>`popup` (places the item in the options menu; renders items as text)<br/>`actionBarIfRoom` (places the item in the `ActionBar` if there is enough room for it there; otherwise, placess it in the options menu)<br/>Default value is `actionBar`.
 
 ## Events
 
-| name | description |
+| Name | Description |
 |------|-------------|
-| `tap`| Emitted when the ActionItem has been tapped.
+| `tap`| Emitted when the `ActionItem` is tapped.
+
+## Native component
+
+| Android | iOS |
+|---------|-----|
+| [`android.widget.Toolbar`](https://developer.android.com/reference/android/widget/Toolbar.html) | [`UINavigationItem`](https://developer.apple.com/documentation/uikit/uinavigationitem)
