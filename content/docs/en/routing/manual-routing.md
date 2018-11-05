@@ -114,7 +114,7 @@ For more information about the options that you can pass, see [`NavigationEntry`
 
 #### Navigating widthin a frame
 
-Each [`<Frame>`](/en/docs/elements/components/frame) element has its own navigation stack. If you are using [`multiple frames`](/en/docs/elements/components/frame#multiple-frames), you may want to specify in which frame the navigation will occur. For instance, having a button in the side bar that changes the page in the main area. You do this by adding the `frame` option:
+Each [`<Frame>`](/en/docs/elements/components/frame) element has its own navigation stack. If you are using [multiple frames](/en/docs/elements/components/frame#multiple-frames), you may want to specify in which frame the navigation will occur. For example, having a button in the side bar that changes the page in the main area. You can do this by adding the `frame` option:
 
 ```JavaScript
 this.$navigateTo(SomeComp, {
