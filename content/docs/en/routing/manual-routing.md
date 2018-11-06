@@ -3,7 +3,7 @@ title: Manual Routing
 contributors: [eddyverbruggen, fartek, rigor789, ikoevska, tralves]
 ---
 
-The easiest way to do routing in NativeScript-Vue is by using any of the following convenience functions:
+The easiest way to implement routing in NativeScript-Vue is to use any of the following convenience functions:
 
 * [`$navigateTo`](#navigateto)
 * [`$navigateBack`](#navigateback)
@@ -93,8 +93,8 @@ const Detail = {
 
 `$navigateTo` accepts a second `options` parameter. You can use the parameter to:
 
-* set the transition
-* pass a `props` object to be used when instantiating the target component
+* Set the transition 
+* Pass a `props` object to be used when instantiating the target component 
 
 For example:
 

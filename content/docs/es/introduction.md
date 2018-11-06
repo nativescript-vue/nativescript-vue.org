@@ -9,7 +9,7 @@ NativeScript es un *framework* open source destinado al desarrollo de aplicacion
 
 ## ¿Qué es [Vue.js](https://vuejs.org/)?
 
-Vue (pronunciado /vjuː/, como *view* en inglés) es un *framework* progresivo para desarrollar interfaces de usuario. El *core* de la librareria se enfoca en la capa visual del patron **MV***, es muy simple de utilizar y es muy práctico para integrar con otras librerias o proyectos existentes.
+Vue (pronunciado /vjuː/, como *view* en inglés) es un *framework* progresivo para desarrollar interfaces de usuario. El *core* de la librería se enfoca en la capa visual del patron **MV***, es muy simple de utilizar y es muy práctico para integrar con otras librerías o proyectos existentes.
 
 
 ## ¿Qué es **NativeScript-Vue**?
@@ -23,15 +23,15 @@ Si ya has utilizado Vue.js anteriormente, te resultará muy sencillo familiariza
 Hay muchas opciones para desarrollar aplicaciones móviles (nativas o híbridas). Aquí enumeramos algunas situaciones en las que creemos que **NativeScript-Vue** es una gran alternativa.
 
 * **Necesitas una verdadera aplicación nativa para Android y iOS**: NativeScript construye tus aplicaciones a través de interfaces de usuario nativas tanto para iOS como para Android. Las aplicaciones que crees no estarán basadas en la web (como las denominadas apps híbridas), por lo tanto no estan sujetas a las limitaciones relacionadas con los frameworks basados en *WebView*. NativeScript también provee [una gran colección de plugins](http://market.nativescript.org/) que te permiten interactuar con funcionalidades nativas de los sistemas operativos. Esto significa que si tu aplicación necesita recurrir a alguna API o funcionalidad de iOS/Android, vas a poder hacerlo usando NativeScript.
-* **Te gusta mucho JavaScript**: Con NativeScript programas las aplicaciones móviles usando JavaScript (no Objective-C, no Swift, y no Java). Si te gusta JavaScript, vas a disfrutar escribir aplicaciones nativas para iOS y Android usando el mismo lenguage con el que haces tus aplicaciones web.
+* **Te gusta mucho JavaScript**: Con NativeScript programas las aplicaciones móviles usando JavaScript (no Objective-C, no Swift, y no Java). Si te gusta JavaScript, vas a disfrutar escribir aplicaciones nativas para iOS y Android usando el mismo lenguaje con el que haces tus aplicaciones web.
 * **Te gusta mucho Vue**: Vue es mayormente conocido por su simplicidad en la capa visual de las aplicaciones. Si te gusta desarrollar aplicaciones web usando Vue, **NativeScript-Vue** es tu compañero ideal. Vas a poder utilizar la misma sintaxis para tareas comunes como *data-binding* y manejo de eventos.
 
 ## ¿Cuál es el truco?
 
 Si ya tienes experienca con Vue.js, hay dos cosas muy importantes que debes aprender para dominar **NativeScript-Vue**:
 
-* **Trabajar con NativeScript CLI**: NativeScript **NO** es un *framework* para desarrollar aplicaciones web, sino para desarrollar aplicaciones de iOS y Android. Vas a tener que aprender algunos comandos de NativeScript CL y algunas cosas básicas sobre simuladores de iOS y Androud.
-* **Aprender sobre los componentes UI de NativeScript**: Como NativeScript utiliza componentes nativos para la interfaz de usuario, elementos HTML como `<div>` y `<span>` no existen dentro de su escositema. En su lugar, necesitas aprender un [*set* de nuevos componentes](https://docs.nativescript.org/ui/components) que van a servir para *renderizar* las diferentes interfaces.
+* **Trabajar con NativeScript CLI**: NativeScript **NO** es un *framework* para desarrollar aplicaciones web, sino para desarrollar aplicaciones de iOS y Android. Vas a tener que aprender algunos comandos de NativeScript CL y algunas cosas básicas sobre simuladores de iOS y Android.
+* **Aprender sobre los componentes UI de NativeScript**: Como NativeScript utiliza componentes nativos para la interfaz de usuario, elementos HTML como `<div>` y `<span>` no existen dentro de su ecosistema. En su lugar, necesitas aprender un [*set* de nuevos componentes](https://docs.nativescript.org/ui/components) que van a servir para *renderizar* las diferentes interfaces.
 
 No te preocupes! A pesar de que hay una curva de aprendizaje para dominar **NativeScript-Vue**, te vas a dar cuenta que es mucho más sencillo que aprender iOS y Android desde el comienzo. Despues de todo, tus aplicaciones van a estar basadas en JavaScript y Vue.
 

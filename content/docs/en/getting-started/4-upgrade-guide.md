@@ -8,7 +8,7 @@ outdated: false
 
 If you scaffolded a NativeScript-Vue app using the 1.3.1 version of the Vue-CLI template, it's time to upgrade to the newest 2.0 version. This guide will help you do that.
 
-## Upgrade overivew
+## Upgrade overview
 
 The new template has a different folder structure:
 
