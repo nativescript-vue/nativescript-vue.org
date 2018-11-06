@@ -233,6 +233,7 @@ Use a `<ListView>` to show tasks below the input field.
     * Replace the `countries`-related binding with a binding to your array of active tasks.
     * In the `<script>` block, remove the array of countries and create an empty array for your active tasks.
 1. In the `<scripts>` block, tie some logic to the tapping of the button.
+    * Check if the input is an empty string.
     * Log newly added tasks in the console.
     * Add newly added tasks into the array of active tasks. Use `unshift` to place new items at the top of the page.
     * Clear the text field after input.
@@ -279,6 +280,7 @@ export default {
     },
 
     onButtonTap() {
+      if (this.textFieldValue === "") return; // Prevents users from entering an empty string.
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
       this.todos.unshift({ name: this.textFieldValue }); // Adds tasks in the ToDo array. Newly added tasks are immediately shown on the screen.
       this.textFieldValue = ""; // Clears the text field so that users can start adding new tasks immediately.
@@ -420,6 +422,7 @@ export default {
     },
 
     onButtonTap() {
+      if (this.textFieldValue === "") return; // Prevents users from entering an empty string.
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
       this.todos.unshift({
           name: this.textFieldValue
@@ -569,6 +572,7 @@ export default {
     },
 
     onButtonTap() {
+      if (this.textFieldValue === "") return; // Prevents users from entering an empty string.
       console.log("New task added: " + this.textFieldValue + "."); // Logs the newly added task in the console for debugging.
       this.todos.unshift({
         name: this.textFieldValue
