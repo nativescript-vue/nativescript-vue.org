@@ -1,6 +1,6 @@
 ---
 title: Manual Routing
-contributors: [eddyverbruggen, fartek, rigor789, ikoevska]
+contributors: [eddyverbruggen, fartek, rigor789, ikoevska, tralves]
 ---
 
 The easiest way to implement routing in NativeScript-Vue is to use any of the following convenience functions:
@@ -17,7 +17,7 @@ You can call `$navigateTo` in the view or in a method.
 
 #### In the view
 
-In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly. 
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly.
 
 ```Vue
 const Vue = require('nativescript-vue');
@@ -96,14 +96,14 @@ const Detail = {
 * Set the transition 
 * Pass a `props` object to be used when instantiating the target component 
 
-For example: 
+For example:
 
 ```JavaScript
 this.$navigateTo(Detail, {
   transition: {},
   transitionIOS: {},
   transitionAndroid: {},
-  
+
   props: {
     foo: 'bar',
   }
@@ -111,6 +111,21 @@ this.$navigateTo(Detail, {
 ```
 
 For more information about the options that you can pass, see [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
+
+#### Navigating within a frame
+
+Each [`<Frame>`](/en/docs/elements/components/frame) element has its own navigation stack. If you are using [multiple frames](/en/docs/elements/components/frame#multiple-frames), you may want to specify in which frame the navigation will occur. For example, having a button in the side bar that changes the page in the main area. You can do this by adding the `frame` option:
+
+```JavaScript
+this.$navigateTo(SomeComp, {
+  frame: '<id, or ref, or instance>'
+});
+```
+
+The value for the `frame` option can be one of the following:
+* the `id` of the `<Frame>` component (for example: `<Frame id="main-frame">`)
+* the `ref` for the `<Frame>` (for example: `<Frame ref="mainFrame">`)
+* the `<Frame>` instance itself
 
 ### `$navigateBack(options, backstackEntry = null)`
 
@@ -137,7 +152,7 @@ You can call `$showModal` in the view or in a method. To close the modal, call `
 
 #### In the view
 
-In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$showModal(<propertyName>)` in the view directly. 
+In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$showModal(<propertyName>)` in the view directly.
 
 ```Vue
 const Vue = require('nativescript-vue');
@@ -164,7 +179,7 @@ const Detail = {
     <Page>
       <ActionBar title="Detail"/>
       <StackLayout>
-        <Button @tap="$modal.close" text="Close" />                    
+        <Button @tap="$modal.close" text="Close" />
       </StackLayout>
     </Page>
   `
@@ -203,7 +218,7 @@ const Detail = {
       <Page>
         <ActionBar title="Detail"/>
         <StackLayout>
-          <Button @tap="$modal.close" text="Close" />                    
+          <Button @tap="$modal.close" text="Close" />
         </StackLayout>
       </Page>
     </Frame>
@@ -231,7 +246,7 @@ const Detail = {
       <ActionBar title="Detail"/>
       <StackLayout>
         <Label :text="id" />
-        <Button @tap="$modal.close" text="Close" />                    
+        <Button @tap="$modal.close" text="Close" />
       </StackLayout>
     </Page>
   `,
@@ -255,5 +270,5 @@ this.$showModal(Detail).then(data => console.log(data));
 
 ```HTML
 <!-- inside Detail -->
-<Button @tap="$modal.close('Foo')" text="Close" />    
+<Button @tap="$modal.close('Foo')" text="Close" />
 ```
