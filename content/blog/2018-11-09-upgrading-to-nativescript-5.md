@@ -1,8 +1,8 @@
 ---
-title: Updating to NativeScript 5.0
+title: Upgrading to NativeScript 5.0
 authors: [rigor789]
 toc: true
-intro: Now that NativeScript 5.0 has been released, you may want to update your Vue app. Let's see how!
+intro: Now that NativeScript 5.0 has been released, you may want to upgrade your Vue app. Let's see how!
 ---
 
 [NativeScript 5.0 has been released](https://www.nativescript.org/blog/nativescript-5.0-is-hot-out-of-the-oven) and it brings
