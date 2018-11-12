@@ -47,7 +47,7 @@ To apply multiple styles to the text in your `<TextView>`, you can use `<Formatt
 | `editable` | `Boolean` | When `true`, indicates that the user can edit the contents of the container.
 | `maxLength` | `Number` | Sets the maximum number of characters that can be entered in the container.
 | `keyboardType` | `KeyboardType` | Shows a custom keyboard for easier text input.<br/>Valid values: `datetime`, `phone`, `number`, `url`, or `email`.
-| `returnKeyType` | Gets or sets the label of the return key.<br/>Valid values: `done`, `next`, `go`, `search`, or `send`.
+| `returnKeyType` | Gets or sets the label of the return key. Currently supported only on iOS.<br/>Valid values: `done`, `next`, `go`, `search`, or `send`.
 | `autocorrect` | `Boolean` | Enables or disables autocorrect.
 
 ## Events
