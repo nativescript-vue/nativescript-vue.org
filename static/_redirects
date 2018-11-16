@@ -1,2 +1,0 @@
-# redirect old templates page since it no longer exists
-/:lang/docs/getting-started/templates /:lang/docs/getting-started/quick-start 301
