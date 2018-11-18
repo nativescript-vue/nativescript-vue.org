@@ -3,14 +3,14 @@ title: Usando Plugins de Vue
 contributors: [ianaya89]
 ---
 
-Esta seccioón provee un resumen de los plugins de Vue que funcionan con NativeScript-Vue.
+Esta sección provee un resumen de los plugins de Vue que funcionan con NativeScript-Vue.
 
 * [Vue Router](#vue-router)
 * [Vuex](#vuex)
 
 ## Vue Router
 
-> Actualmente, la integracion con Vue Router esta en modo **experimental**. Para más información puedes ver [la sección Vue Router](/es/docs/routing/vue-router/).
+> Actualmente, la integración con Vue Router esta en modo **experimental**. Para más información puedes ver [la sección Vue Router](/es/docs/routing/vue-router/).
 
 ### Instalar y registrar el plugin
 
@@ -28,7 +28,7 @@ En su lugar, lo que necesitas para **cambiar a una nueva ruta es método `route.
 
 ## Vuex
 
-Vuex es una libreria que se encarga de resolver el patron de manejo de estado, que básicamente sirve como un almacenamiento centralizado para todo los componentes de nuestra aplicación e implementa reglas para asegurarse que el estado (la información) se modifique de una manera predecible.
+Vuex es una libreria que se encarga de resolver el patrón de manejo de estado, que básicamente sirve como un almacenamiento centralizado para todo los componentes de nuestra aplicación e implementa reglas para asegurarse que el estado (la información) se modifique de una manera predecible.
 
 
 ### Instalar el plugin
@@ -106,4 +106,4 @@ new Vue({
 
 Para más información sobre el funcionamiento de Vue, puedes ver la [documentación oficial](https://vuex.vuejs.org).
 
-Para más informacion sobre como manejar elementos de Vuex, explora [el directorio `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) de la aplicación de ejemplo *NativeScript-Vue Groceries*.
+Para más información sobre como manejar elementos de Vuex, explora [el directorio `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) de la aplicación de ejemplo *NativeScript-Vue Groceries*.
