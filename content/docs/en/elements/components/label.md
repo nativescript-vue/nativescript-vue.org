@@ -6,7 +6,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 
 `<Label>` is a UI component that displays read-only text.
 
-**IMPORTANT**: This `<Label>` is **not** the same as the HTML `<Label>`.
+**IMPORTANT**: This `<Label>` is **not** the same as the HTML `<label>`.
 
 ---
 
