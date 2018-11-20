@@ -1,3 +1,4 @@
+
 ---
 title: Frame
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_frame_.frame
@@ -41,8 +42,23 @@ If you need to create multiple frames, you can do so by wrapping them in a Layou
   </Page>
 </Frame>
 ```
+##### Loading an external page as the default
+```html
+<Frame>
+  <Page>
+    <Home />
+  </Page>
+</Frame>
+```
+```js
+import Home from './Home';
 
-
+export default {
+  components: {
+    Home // Eq to Home: Home
+  }
+};
+```
 ## Native component
 
 | Android | iOS |
