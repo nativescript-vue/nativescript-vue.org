@@ -26,6 +26,9 @@ $
 $ tns run android --bundle
 $ # or
 $ tns run ios --bundle
+$
+$ # You may also try the new HMR mode by replacing --bundle
+$ # with --hmr, but note that this is a beta feature.
 ```
 
 This set of commands performs the following operations on your system:
