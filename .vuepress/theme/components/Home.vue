@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="font-sans leading-normal"
-    :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}"
-  >
+  <div class="font-sans leading-normal">
     <div class="min-h-screen">
       <div class="bg-blue-light">
         <div class="container mx-auto py-8 px-4 md:px-0">

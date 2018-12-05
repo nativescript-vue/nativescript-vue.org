@@ -6,12 +6,12 @@
   </div>
 </template>
 <script>
-    import TopStrip from "./components/TopStrip.vue";
-    import Home from "./components/Home.vue";
+import TopStrip from "./components/TopStrip.vue";
+import Home from "./components/Home.vue";
 
-    export default {
-        components: {TopStrip, Home}
-    }
+export default {
+  components: { TopStrip, Home }
+};
 </script>
 <style lang="stylus">
 @import './styles/theme.styl';
