@@ -5,10 +5,10 @@ module.exports = {
 		plugins: [require('tailwindcss')('./tailwind.config.js'), require('autoprefixer')],
 	},
 	themeConfig: {
-		nav: [{ text: 'Home', link: '/' }, { text: 'Docs', link: '/docs/en/introduction' }],
+		nav: [{ text: 'Home', link: '/' }, { text: 'Docs', link: '/docs/en/' }],
 		sidebar: {
 			'/docs/': [
-				'/docs/en/introduction',
+				'/docs/en/',
 				{
 					title: 'Elements/ActionBar',
 					collapsable: false,

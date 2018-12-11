@@ -1,6 +1,8 @@
 ---
 title: Introduction
 contributors: [rigor789, tjvantoll]
+layout: DocsLayout
+sidebar: auto
 ---
 
 ## What is [NativeScript](https://www.nativescript.org/)?

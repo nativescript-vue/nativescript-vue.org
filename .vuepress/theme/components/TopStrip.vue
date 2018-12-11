@@ -99,9 +99,25 @@
 </template>
 <script>
 export default {
-  name: 'TopStrip'
+  name: 'TopStrip',
+    data() {
+    return {
+      navOpen: false,
+    }
+  },
+  mounted() {
+      const selector = document.querySelector('.docSearch-input')
+      const lang = document.documentElement.lang || 'en'
+      const [version] = window.location.hostname.match(/v\d-\d-\d/) || ['master']
+
+      /*docsearch({
+        apiKey: '31f842779e5b33726ec73f8f973b2202',
+        indexName: 'nativescript-vue',
+        inputSelector: selector,
+        algoliaOptions: {facetFilters: [`lang:${lang}`, `version:${version}`]},
+        debug: false
+      })*/
+    },
+    
 };
 </script>
-<style>
-@import "../styles/styles.css";
-</style>
