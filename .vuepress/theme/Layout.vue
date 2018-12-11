@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
     <TopStrip/>
     <component :is="layout"></component>
   </div>

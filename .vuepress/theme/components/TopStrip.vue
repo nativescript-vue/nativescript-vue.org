@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-blue-dark md:border-t-8 border-green">
+  <div>
     <a
       href="https://www.youtube.com/watch?v=QtGBCj6gCLY?source=ns-vue"
       target="_blank"
       rel="noopener"
       class="block bg-blue-light md:bg-green md:border-t-8 border-green p-4 md:p-0 text-center no-underline text-white"
     >NativeScript-Vue 2.0: Back to the Vueture (Webinar) is now on YouTube</a>
-
+    <div id="app" class="bg-blue-dark md:border-t-8 border-green">
     <div class="container flex items-center flex-wrap px-4 md:px-0 mx-auto">
       <div class="flex-1 flex items-center">
         <a href="/">
@@ -94,6 +94,7 @@
           </div>
         </div>-->
       </div>
+    </div>
     </div>
   </div>
 </template>
