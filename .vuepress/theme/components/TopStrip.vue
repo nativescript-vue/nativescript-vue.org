@@ -9,7 +9,7 @@
 
     <div class="container flex items-center flex-wrap px-4 md:px-0 mx-auto">
       <div class="flex-1 flex items-center">
-        <a href="<%= meta.home(current) %>">
+        <a href="/">
           <div class="relative w-16 h-16">
             <img
               v-cloak
@@ -50,7 +50,10 @@
 
       <!-- Nav -->
       <div class="flex-col md:flex-row w-full md:w-auto">
-        <a
+        <span v-for="link in $site.themeConfig.nav">
+          <a class="no-underline text-blue-lightest md:ml-6 mr-4 py-4" :href="link.link">{{ link.text }}</a>
+        </span>
+        <!--<a
           href="<%= meta.lang(current, null, 'docs/introduction') %>"
           class="no-underline text-blue-lightest md:ml-6 mr-4 py-4"
         >Docs</a>
@@ -89,12 +92,16 @@
               >Forum</a>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
 </template>
-
+<script>
+export default {
+  name: 'TopStrip'
+};
+</script>
 <style>
 @import "../styles/styles.css";
 </style>

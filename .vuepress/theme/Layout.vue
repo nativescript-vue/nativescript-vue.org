@@ -1,16 +1,20 @@
 <template>
   <div>
-    <TopStrip/>
-    <Home/>
-    <Content/>
+    <component :is="layout"></component>
   </div>
 </template>
 <script>
-import TopStrip from "./components/TopStrip.vue";
-import Home from "./components/Home.vue";
+import HomeLayout from "./layouts/HomeLayout.vue";
+import DocsLayout from './layouts/DocsLayout.vue';
 
 export default {
-  components: { TopStrip, Home }
+  name: 'layout',
+  components: { HomeLayout, DocsLayout },
+  computed: {
+    layout() {
+      return this.$page.frontmatter.layout || 'home'
+    }
+  },
 };
 </script>
 <style lang="stylus">

@@ -1,4 +1,6 @@
 module.exports = {
+	title: 'NativeScript-Vue.org',
+	description: 'Description here',
 	postcss: {
 		plugins: [require('tailwindcss')('./tailwind.config.js'), require('autoprefixer')],
 	},
@@ -29,8 +31,8 @@ module.exports = {
 		// As a special case, the default locale can use '/' as its path.
 		'/': {
 			lang: 'en-US', // this will be set as the lang attribute on <html>
-			title: 'VuePress',
-			description: 'Vue-powered Static Site Generator',
+			title: 'NativeScript-Vue',
+			description: 'Awesome Mobile Apps',
 		},
 	},
 };
