@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans leading-normal" :class="{'max-h-screen': modalVisible, 'overflow-hidden': modalVisible}">
+  <div>
     <!--<QuickStart />-->
     <div class="bg-grey-lighter md:hidden">
         <div class="container mx-auto p-4">
@@ -13,8 +13,20 @@
         <div class="container mx-auto flex">
             <div class="hidden md:w-1/4 md:block border-r-4 min-h-full">
                 <div class="pl-4 md:pl-0 py-4 md:py-8">
-                    <ul id="docs-toc" class="list-reset">
-                        {{ $site.themeConfig.sidebar }}
+                    <ul id="docs-toc" v-for="item in $site.themeConfig.sidebar" class="list-reset">
+                        <li class="level-0">
+                            <ul class="list-reset">
+                                <li class="level-1">
+                                    <span>{{item.title}}</span>
+                                        <ul class="list-reset" v-for="link in item.children">
+                                            <li class="level-0">
+                                                <a class="-mr-1 block py-1 border-r-4 pr-2 hover:border-green border-green-lightest text-blue-dark no-underline leading-tight hover:underline"
+                                                :href="link.link">{{ link.text }}</a>
+                                            </li>
+                                        </ul>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -63,32 +75,7 @@ import Contributors from '../components/Contributors.vue';
 
 export default {
   name: 'DocsLayout',
-  components: {Contributors},
-    data() {
-      return {
-        modalVisible: false,
-        modalLoaded: false,
-        isMobile: false
-      }
-    },
-    created() {
-      this._resizeListener = () => {
-        this.isMobile = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 768
-      };
-      window.addEventListener('resize', this._resizeListener);
-      this._resizeListener();
-    },
-    destroyed() {
-      window.removeEventListener('resize', this._resizeListener)
-    },
-    methods: {},
-    directives: {
-      nav(el) {
-        el.addEventListener('change', (e) => {
-          window.location.href = e.target.value
-        })
-      }
-    }
+  components: {Contributors}
 }
 </script>
 <style lang="stylus">
