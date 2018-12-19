@@ -4,7 +4,7 @@ apiRef: https://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/
 contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, sombriks]
 ---
 
-`<RadSideDrawer>` is a UI side drawer component which plays a navigation role on application structure.
+`<RadSideDrawer>` is a UI component that provides side drawer navigation for apps.
 
 ## Installing the side drawer
 
