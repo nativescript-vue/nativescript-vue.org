@@ -20,7 +20,7 @@ Vue.use(RadSideDrawer);
 ```
 
 Then you can use it on your .vue file:
-
+## Basic use
 ```html
 <Page>
   <ActionBar title="Hello side drawer!">
