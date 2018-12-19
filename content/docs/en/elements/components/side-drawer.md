@@ -6,7 +6,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, sombriks]
 
 `<RadSideDrawer>` is a UI side drawer component which plays a navigation role on application structure.
 
-## Installing the side drawer:
+## Installing the side drawer
 
 ```shell
 $ tns plugin add nativescript-ui-sidedrawer
