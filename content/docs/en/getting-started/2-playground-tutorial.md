@@ -140,7 +140,7 @@ Use the `<TabView>` component to create a two-tab app.
 1. Change the title of the `<ActionBar>` to reflect the app purpose.
 1. Remove the default `<ScrollView>` block and all its contents that come with the template.<br/>`<ScrollView>` components are top-level layout containers for scrollable content.
 1. Drag and drop the `<TabView>` component in its place.<br/>The Playground applies some code formatting, including taking care of indentation. However, the formatting is applied after the insertion and using the browser's undo feature only reverts the formatting and not the insertion of code.
-1. Configure the height of the `<TabView>` to fill the screen (set it to 100%).
+1. Configure the height of the `<TabView>` to fill the screen (set it to 100%). <br/>For Android devices, consider adding the `androidTabsPosition` property and setting it to `bottom`. Otherwise, the tabs will appear at the top of the screen.
 1. Change the titles of the `<TabViewItem>` elements and their contents to reflect their purpose.<br/>At this point, text content for the tabs is shown in `<Label>` components with no styling and formatting. Apply the `textWrap="true"` property to the respective `<Label>` components to improve the visualization of the text.
 
 At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
@@ -150,7 +150,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
   <Page class="page">
     <ActionBar title="My Tasks" class="action-bar" />
     
-    <TabView height="100%">
+    <TabView height="100%" androidTabsPosition="bottom">
       <TabViewItem title="To Do">
         <Label text="This tab will list active tasks and will let users add new tasks." textWrap="true" />
       </TabViewItem>
@@ -246,7 +246,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
   <Page class="page">
     <ActionBar title="My Tasks" class="action-bar" />
 
-    <TabView height="100%">
+    <TabView height="100%" androidTabsPosition="bottom">
       <TabViewItem title="To Do">
         <!-- Positions an input field, a button, and the list of tasks in a vertical stack. -->
         <StackLayout orientation="vertical" width="100%" height="100%">
@@ -371,7 +371,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
   <Page class="page">
     <ActionBar title="My Tasks" class="action-bar" />
 
-    <TabView height="100%">
+    <TabView height="100%" androidTabsPosition="bottom">
       <TabViewItem title="To Do">
         <!-- Positions an input field, a button, and the list of tasks in a vertical stack. -->
         <StackLayout orientation="vertical" width="100%" height="100%">
@@ -503,7 +503,7 @@ At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
   <Page class="page">
     <ActionBar title="My Tasks" class="action-bar" />
 
-    <TabView height="100%">
+    <TabView height="100%" androidTabsPosition="bottom">
       <TabViewItem title="To Do">
         <!-- Positions an input field, a button, and the list of tasks in a vertical stack. -->
         <StackLayout orientation="vertical" width="100%" height="100%">
@@ -679,7 +679,7 @@ Here's how your app will look at the start and at the end of this section.
 In `HelloWorld.vue`, add the `selectedTabTextColor` and `tabTextFontSize` property to the `<TabView>`.
 
 ```HTML
-<TabView height="100%" selectedTabTextColor="#53ba82" tabTextFontSize="15" >
+<TabView height="100%" androidTabsPosition="bottom" selectedTabTextColor="#53ba82" tabTextFontSize="15" >
 ```
 
 #### Transform text
