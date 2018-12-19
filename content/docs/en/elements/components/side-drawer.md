@@ -1,15 +1,15 @@
 ---
 title: SideDrawer
-apiRef: https://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawer/overview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, sombriks]
+apiRef: https://docs.telerik.com/devtools/nativescript-ui/Controls/Vue/SideDrawer/overview
+contributors: [sombriks]
 ---
 
 `<RadSideDrawer>` is a UI component that provides side drawer navigation for apps.
 
-## Installing the side drawer
+# Installing the side drawer
 
 ```shell
-$ tns plugin add nativescript-ui-sidedrawer
+tns plugin add nativescript-ui-sidedrawer
 ```
 
 After that, you need to register it as a vue component:
@@ -19,8 +19,13 @@ import RadSideDrawer from "nativescript-ui-sidedrawer/vue";
 Vue.use(RadSideDrawer);
 ```
 
+You can do that inside a `.vue` file or inside the `app.js` which bootstraps 
+your vue-nativescript application.
+
 You can now use the component on your `.vue` file.
+
 ## Basic use
+
 ```html
 <Page>
   <ActionBar title="Hello side drawer!">
@@ -48,7 +53,7 @@ You can now use the component on your `.vue` file.
 
 ## Props
 
-| Name          | Type | Description                                              |
-| ------------- | ---- | -------------------------------------------------------- |
-| `drawerContent` | `View` | The visual elements displayed in the side drawer. |
+| Name            | Type   | Description                                           |
+| --------------- | ------ | ----------------------------------------------------- |
+| `drawerContent` | `View` | The visual elements displayed in the side drawer.     |
 | `mainContent`   | `View` | The visual elements displayed in the host view where the drawer is shown. |
