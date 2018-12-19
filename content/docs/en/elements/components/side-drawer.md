@@ -51,4 +51,4 @@ Then you can use it on your .vue file:
 | Name          | Type | Description                                              |
 | ------------- | ---- | -------------------------------------------------------- |
 | drawerContent | View | the UI element containing the drawer content             |
-| mainContent   | View | the UI element being displayed when the drawer is closed |
+| `mainContent`   | `View` | The visual elements displayed in the host view where the drawer is shown. |
