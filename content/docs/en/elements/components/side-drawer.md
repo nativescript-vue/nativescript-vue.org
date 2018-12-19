@@ -19,7 +19,7 @@ import RadSideDrawer from "nativescript-ui-sidedrawer/vue";
 Vue.use(RadSideDrawer);
 ```
 
-Then you can use it on your .vue file:
+You can now use the component on your `.vue` file.
 ## Basic use
 ```html
 <Page>
