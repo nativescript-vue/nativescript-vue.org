@@ -1,7 +1,8 @@
+
 ---
 title: Frame
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_frame_.frame
-contributors: [rigor789]
+contributors: [rigor789, PieterHartzer]
 ---
 
 `<Frame>` is a UI component used to display [`<Page>`](/en/docs/elements/components/page) elements. Every app needs at least a single `<Frame>`  element, usually set as the root element. 
@@ -42,6 +43,25 @@ If you need to create multiple frames, you can do so by wrapping them in a Layou
 </Frame>
 ```
 
+##### A frame with a default page from an external component
+
+```html
+<Frame>
+  <Page>
+    <Home />
+  </Page>
+</Frame>
+```
+
+```js
+import Home from './Home'
+
+export default {
+  components: {
+    Home
+  }
+}
+```
 
 ## Native component
 
