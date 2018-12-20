@@ -42,7 +42,9 @@ If you need to create multiple frames, you can do so by wrapping them in a Layou
   </Page>
 </Frame>
 ```
-##### Loading an external page as the default
+
+##### A frame with a default page from an external component
+
 ```html
 <Frame>
   <Page>
@@ -50,15 +52,17 @@ If you need to create multiple frames, you can do so by wrapping them in a Layou
   </Page>
 </Frame>
 ```
+
 ```js
-import Home from './Home';
+import Home from './Home'
 
 export default {
   components: {
-    Home // Eq to Home: Home
+    Home
   }
-};
+}
 ```
+
 ## Native component
 
 | Android | iOS |
