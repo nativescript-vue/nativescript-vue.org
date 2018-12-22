@@ -63,7 +63,7 @@ NativeScript 4.0 brings two major improvements:
 
 Before NativeScript 4.0, the root element was a `<Frame>` element which was implicitly created by NativeScript when the application started.
 
-With the latest changes, `<Frame>` and `<Page>` elements are longer automatically created. So, in NativeScript-Vue 2.0.0, you need to explicitly add these elements to your template.
+With the latest changes, `<Frame>` and `<Page>` elements are no longer automatically created. So, in NativeScript-Vue 2.0.0, you need to explicitly add these elements to your template.
 
 To keep the previous behavior of having a single root `<Frame>`, you can change your root Vue instance to have a `<Frame>` and a `<Page>` element.
 
