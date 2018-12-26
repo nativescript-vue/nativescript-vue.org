@@ -4,7 +4,7 @@ apiRef: https://docs.telerik.com/devtools/nativescript-ui/Controls/Vue/SideDrawe
 contributors: [sombriks]
 ---
 
-`<RadSideDrawer>` is a UI component that provides side drawer navigation for apps.
+`<RadSideDrawer>` is not available with the core NativeScript installation. You need to add it as a plugin to your project.
 
 ## Installing the side drawer
 
