@@ -9,7 +9,7 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe, 
 ---
 
 ```html
-<TabView :selectedIndex="selectedIndex">
+<TabView :selectedIndex="selectedIndex" @selectedIndexChange="indexChange">
   <TabViewItem title="Tab 1">
     <Label text="Content for Tab 1" />
   </TabViewItem>
@@ -17,6 +17,15 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe, 
     <Label text="Content for Tab 2" />
   </TabViewItem>
 </TabView>
+```
+
+```js
+methods: {
+  indexChange: function(args) {
+      let newIndex = args.value
+      console.log('Current tab index: ' + newIndex)
+  }
+}
 ```
 
 **NOTE:** Currently, `TabViewItem` expects a single child element. In most cases, you might want to wrap your content in a layout.
