@@ -257,6 +257,14 @@ The prop is now accessible throughout the component with `this.id`.
 
 For more information about props, see the [official Vue documentation](https://vuejs.org/v2/guide/components-props.html)
 
+#### Forcing the modal to be fullscreen
+
+This option only takes effect on Android, as iOS modals are always fullscreen.
+
+```JavaScript
+this.$showModal(Detail, { fullscreen: true, props: { id: 14 }});
+```
+
 #### Returning data from the modal
 
 When calling `$showModal`, a promise is returned which resolves with any data passed to the `$modal.close` function.
