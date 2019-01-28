@@ -28,7 +28,7 @@ The most recent version of Vuex will be added to your `package.json`.
 
 ### Import the plugin
 
-Open your app entry file (likely `app.js` or `main.js`) and add the following line at the top:
+Open your app entry file (likely `app.js`, `main.js` or `main.ts`) and add the following line at the top:
 
 ```js
 import Vuex from 'vuex'

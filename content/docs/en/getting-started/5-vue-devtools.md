@@ -31,7 +31,7 @@ After the installation is complete, you can run the `vue-devtools` command from 
 
 ## Step 3: Install the `nativescript-vue-devtools` plugin in your app
 
-To connect your application to the Vue DevTools, you need to modify `main.js`.
+To connect your application to the Vue DevTools, you need to modify `main.js` (or `main.ts`).
 
 In your code, import `nativescript-vue-devtools` and tell NativeScript-Vue about it using `Vue.use()`.
 
@@ -48,7 +48,7 @@ If you are using a real device instead of an emulator, set the `host` configurat
 Vue.use(VueDevtools, { host: '192.168.1.42' })
 ```
 
-## Step 4: Run Vue DevTools 
+## Step 4: Run Vue DevTools
 
 Run the following command to launch the Vue DevTools:
 
