@@ -42,7 +42,7 @@ If you need to create multiple frames, you can do so by wrapping them in a Layou
 </Frame>
 ```
 
-##### A frame with a default page from an external component
+#### A frame with a default page from an external component
 
 ```html
 <Frame>
