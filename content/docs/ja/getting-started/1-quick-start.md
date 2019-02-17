@@ -5,7 +5,7 @@ contributors: [Spice-Z]
 
 もしNativeScript-Vueを扱う前にインストールと設定で煩わされたくないのなら、[NativeScript Playground](/en/docs/getting-started/playground-tutorial)がぴったりです。
 
-ですがもし、[すでにあなたの開発環境をネイティブアプリの開発向けに準備している](/en/docs/getting-started/installation)のなら、[vue-cli-template](https://github.com/nativescript-vue/vue-cli-template)を使うことによって始めることができます:
+ですがもし、[すでにあなたの開発環境をネイティブアプリの開発向けに準備している](/ja/docs/getting-started/installation)のなら、[vue-cli-template](https://github.com/nativescript-vue/vue-cli-template)を使うことによって始めることができます:
 
 **サポートしている機能**
 
