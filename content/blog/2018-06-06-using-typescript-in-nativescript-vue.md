@@ -50,10 +50,10 @@ This should set up up with Typescript already. Simply rename .js files to .ts or
 
 **Use Class-style components**
 
-You can now install vue-class-components
+You can now install vue-class-component
 
 ```shell
-$ npm install --save-dev vue-class-components
+$ npm install --save-dev vue-class-component
 ```
 
 And write class-styled component code
