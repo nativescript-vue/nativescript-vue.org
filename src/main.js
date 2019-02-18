@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       docsearch({
         apiKey: '31f842779e5b33726ec73f8f973b2202',
         indexName: 'nativescript-vue',
-        inputSelector: 'docSearch-input',
+        inputSelector: '.docSearch-input',
         algoliaOptions: {facetFilters: [`lang:${lang}`, `version:${version}`]},
         debug: false
       })
