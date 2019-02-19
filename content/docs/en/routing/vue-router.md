@@ -17,7 +17,7 @@ In the command prompt, run:
 $ npm install --save vue-router
 ```
 
-In the entry file for your app (likely, `app.js` or `main.js`), require Vue and Vue Router and let them shake hands.
+In the entry file for your app (likely, `app.js`, `main.js` or `main.ts`), require Vue and Vue Router and let them shake hands.
 
 ```JavaScript
 const Vue = require('nativescript-vue');
