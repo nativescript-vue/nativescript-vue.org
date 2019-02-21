@@ -10,6 +10,8 @@ module.exports = {
 			{ text: 'Docs', link: '/docs/en/' },
 			{
 				text: 'Community',
+				link: '',
+				type: 'dropdown',
 				items: [
 					{ text: 'GitHub', link: 'https://github.com/nativescript-vue/nativescript-vue' },
 					{ text: 'Slack', link: 'https://developer.telerik.com/wp-login.php?action=slack-invitation' },

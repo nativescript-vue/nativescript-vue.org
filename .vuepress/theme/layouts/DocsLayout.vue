@@ -20,10 +20,11 @@
                   class="block text-blue-dark uppercase tracking-wide text-sm mt-4 mb-2"
                 >{{item.title}}</span>
                 <span v-for="link in item.children">
-                  <a
+                  <router-link
                     class="pl-2 -mr-1 block py-1 border-r-4 pr-2 hover:border-green border-green-lightest text-blue-dark no-underline leading-tight hover:underline"
-                    :href="link.link"
-                  >{{ link.text }}</a>
+                    :to="link.link"
+                  >{{ link.text }}</router-link>
+                  {{link.items}}
                 </span>
               </li>
             </ul>

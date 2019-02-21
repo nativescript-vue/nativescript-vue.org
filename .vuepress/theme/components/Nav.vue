@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="px-8 bg-blue-dark">
+  <nav id="app" class="px-8 bg-blue-dark">
     <div class="container flex items-center flex-wrap mx-auto">
       <div class="flex-1 flex items-center">
         <a href="/">
@@ -42,12 +42,14 @@
       </div>
 
       <!-- Nav -->
-      <div class="flex-col md:flex-row w-full md:w-auto">
-        <span v-for="link in $site.themeConfig.nav">
-          <a
-            class="no-underline text-blue-lightest md:ml-6 mr-4 py-4"
-            :href="link.link"
-          >{{ link.text }}</a>
+      <div class="nav-item flex-col md:flex-row w-full md:w-auto">
+        <span v-for="links in $site.themeConfig.nav">
+          <router-link class="no-underline text-blue-lightest md:ml-6 mr-4 py-4" :to="links.link">
+            {{ links.text }}
+            <span class="arrow"></span>
+          </router-link>
+
+          <span v-for="link in links.items">{{ link.text }}</span>
         </span>
         <!--<a
           href="<%= meta.lang(current, null, 'docs/introduction') %>"
@@ -91,16 +93,22 @@
         </div>-->
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 <script>
 export default {
   name: "Nav",
   data() {
     return {
-      navOpen: false
+      open: false
     };
   },
+  methods: {
+    toggle() {
+      this.open = !this.open;
+    }
+  },
+
   mounted() {
     const selector = document.querySelector(".docSearch-input");
     const lang = document.documentElement.lang || "en";
