@@ -40,7 +40,7 @@ $ tns run ios --bundle
 
 *iOS*: Copy your old app's `./template/app/App_Resources/iOS` folder. Then, paste it into the new app's `app/App_Resources` folder.  Make sure that you're replacing the new `App_Resources/iOS` folder.
 
-*Android*: Copy all the contents of your old app's `./template/app/App_Resources/Android` folder. Next, past it into the new app's `app/App_Resources/Android/src/main/res` folder.
+*Android*: Copy all the contents of your old app's `./template/app/App_Resources/Android` folder. Next, paste it into the new app's `app/App_Resources/Android/src/main/res` folder.
 
 
 ## Step 3: Merge the `src` and `app` folders
