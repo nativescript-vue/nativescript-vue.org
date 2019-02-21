@@ -2,7 +2,7 @@
   <div class="font-sans leading-normal">
     <div class="min-h-screen">
       <div class="bg-blue-light">
-        <div class="container mx-auto py-8 px-4 md:px-0">
+        <div class="container mx-auto py-8 px-8 md:auto">
           <div class="flex flex-wrap">
             <div class="w-full md:w-1/2 my-8">
               <h1
@@ -30,7 +30,7 @@
 
       <div class="container mx-auto py-8 px-4 md:px-0">
         <div class="flex flex-wrap -mx-3">
-          <div class="w-full md:w-1/3 px-4">
+          <div class="w-full md:w-1/3 px-8">
             <h2 class="text-blue-dark">Easy to get started with.</h2>
 
             <p class="text-blue-dark leading-normal">
@@ -104,6 +104,6 @@
 </template>
 <script>
 export default {
-  name: 'HomeBlock'
+  name: "HomeBlock"
 };
 </script>
