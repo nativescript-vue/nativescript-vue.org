@@ -18,7 +18,7 @@ contributors: [Spice-Z]
 
 ## Props
 
-| 名前 | 型 |説明 |
+| 名前 | 型 | 説明 |
 |------|------|-------------|
 | `text` | `String` | (iOS-only) ボタンのテキストを設定する。
 | `android.systemIcon` | `String` | (Androidのみ) ボタン内で表示されるアイコン。`ic_`というプリフェクスで始まるシステムアイコンを指定できる。使用可能なアイコンのすべてのリストは [the `R.drawable` Android class](https://developer.android.com/reference/android/R.drawable.html)に書いてあります。

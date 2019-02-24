@@ -18,7 +18,7 @@ contributors: [Spice-Z]
 
 ## Props
 
-| 名前 | 型 |説明 |
+| 名前 | 型 | 説明 |
 |------|------|-------------|
 | `text` | `String` | ボタンのラベルを取得・設定します。
 | `textWrap` | `Boolean` | ウィジェトがラベルのテキストを覆うかどうかについて取得・設定します。the text of the label. ラベルが長いときに有用です。デフォルトの値は`false`です。

@@ -14,7 +14,7 @@ contributors: [Spice-Z]
 <DatePicker :date="someDate" />
 ```
 
-`<DatePicker>` provides two-way data binding using `v-model`.
+`<DatePicker>`は`v-model`による双方向バインディングを提供します。
 
 ```html
 <DatePicker v-model="selectedDate" />
@@ -24,7 +24,7 @@ contributors: [Spice-Z]
 
 ## Props
 
-| 名前 | 型 |説明 |
+| 名前 | 型 | 説明 |
 |------|------|-------------|
 | `date` | `Date` | 日付を取得・設定する。
 | `minDate` | `Date` | 選択できる最短の日付を取得・設定する。

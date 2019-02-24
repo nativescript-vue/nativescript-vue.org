@@ -44,7 +44,7 @@ contributors: [Spice-Z]
 
 ## Props
 
-| 名前 | 型 |説明 |
+| 名前 | 型 | 説明 |
 |------|------|-------------|
 | `ios.systemIcon` | `Number` | iOSで、`ActionItem`のアイコンを取得・設定します。値は[`UIBarButtonSystemItem` enumeration](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/#//apple_ref/c/tdef/UIBarButtonSystemItem)で指定されている数字でなければいけません。
 | `android.systemIcon` | `String` | Androidで、`ActionItem`のアイコンを取得・設定します。値は [drawable resource](http://androiddrawables.com)で指定されている名前でなければいけません。
