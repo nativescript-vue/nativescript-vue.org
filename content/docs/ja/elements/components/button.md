@@ -1,5 +1,5 @@
 ---
-title: ボタン
+title: Button
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
 contributors: [Spice-Z]
 ---
@@ -16,20 +16,20 @@ contributors: [Spice-Z]
 
 [> screenshots for=Button <]
 
-## プロップス
+## Props
 
 | 名前 | 型 |説明 |
 |------|------|-------------|
-| `text` | `String` | ボタンのラベルを取得したり設定します。
-| `textWrap` | `Boolean` | ウィジェトがラベルのテキストを覆うかどうかについて取得したり設定します。the text of the label. ラベルが長いときに有用です。デフォルトの値は`false`です。
+| `text` | `String` | ボタンのラベルを取得・設定します。
+| `textWrap` | `Boolean` | ウィジェトがラベルのテキストを覆うかどうかについて取得・設定します。the text of the label. ラベルが長いときに有用です。デフォルトの値は`false`です。
 
-## イベント
+## Events
 
 | 名前 | 説明 |
 |------|-------------|
 | `tap` | ボタンがタップされたときに通達されます。
 
-## ネイティブコンポーネント
+## Native component
 
 | Android | iOS |
 |---------|-----|

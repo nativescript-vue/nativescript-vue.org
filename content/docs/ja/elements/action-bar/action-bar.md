@@ -43,7 +43,7 @@ contributors: [Spice-Z]
 <ActionBar title="My App" flat="true" />
 ```
 
-## プロップス
+## Props
 
 | 名前 | 型 | 説明 |
 |------|------|-------------|
@@ -52,7 +52,7 @@ contributors: [Spice-Z]
 | `android.iconVisibility` | `String` | Androidデバイス上でのアイコンの表示/非表示を設定します。
 | `flat` | `boolean` | Androidでは枠線を無くし、iOSでは透過フィルターを無くします。. デフォルトの値は`false`です。
 
-## ネイティブコンポーネント
+## Native component
 
 | Android | iOS |
 |---------|-----|

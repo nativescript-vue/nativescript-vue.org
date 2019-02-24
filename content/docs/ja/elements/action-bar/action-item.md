@@ -1,5 +1,5 @@
 ---
-title: アクションアイテム
+title: ActionItem
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionitem
 contributors: [Spice-Z]
 ---
@@ -42,22 +42,22 @@ contributors: [Spice-Z]
 </ActionBar>
 ```
 
-## プロップス
+## Props
 
 | 名前 | 型 |説明 |
 |------|------|-------------|
-| `ios.systemIcon` | `Number` | iOSで、`ActionItem`のアイコンを取得したり設定します。値は[`UIBarButtonSystemItem` enumeration](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/#//apple_ref/c/tdef/UIBarButtonSystemItem)で指定されている数字でなければいけません。
-| `android.systemIcon` | `String` | Androidで、`ActionItem`のアイコンを取得したり設定します。値は [drawable resource](http://androiddrawables.com)で指定されている名前でなければいけません。
-| `ios.position` | `String` | iOSの`ActionBar`内で`ActionItem`の位置を取得したり設定します。 <br/>使用できる値は: `left` が `right`です。<br/>デフォルトの値は`left`です。
-| `android.position` | `String` | Androidの`ActionBar`内で`ActionItem`の位置を取得したり設定します。<br/>使用できる値:<br/>`actionBar` (アイテムをアクションバー内に設置して下さい)<br/>`popup` (アイテムをオプションメニューの中に設定して下さい、テキストとして描写されます。)<br/>`actionBarIfRoom` (十分なスペースがあるなら、`ActionBar`の中にアイテムを設置してください。そうでなければ、オプションメニューの中に設置してください。)<br/>デフォルトの値は`actionBar`です。
+| `ios.systemIcon` | `Number` | iOSで、`ActionItem`のアイコンを取得・設定します。値は[`UIBarButtonSystemItem` enumeration](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/#//apple_ref/c/tdef/UIBarButtonSystemItem)で指定されている数字でなければいけません。
+| `android.systemIcon` | `String` | Androidで、`ActionItem`のアイコンを取得・設定します。値は [drawable resource](http://androiddrawables.com)で指定されている名前でなければいけません。
+| `ios.position` | `String` | iOSの`ActionBar`内で`ActionItem`の位置を取得・設定します。 <br/>使用できる値は: `left` が `right`です。<br/>デフォルトの値は`left`です。
+| `android.position` | `String` | Androidの`ActionBar`内で`ActionItem`の位置を取得・設定します。<br/>使用できる値:<br/>`actionBar` (アイテムをアクションバー内に設置して下さい)<br/>`popup` (アイテムをオプションメニューの中に設定して下さい、テキストとして描写されます。)<br/>`actionBarIfRoom` (十分なスペースがあるなら、`ActionBar`の中にアイテムを設置してください。そうでなければ、オプションメニューの中に設置してください。)<br/>デフォルトの値は`actionBar`です。
 
-## イベント
+## Events
 
 | 名前 | 説明 |
 |------|-------------|
 | `tap`| `ActionItem`がタップされたときに通達されます。
 
-## ネイティブコンポーネント
+## Native component
 
 | Android | iOS |
 |---------|-----|

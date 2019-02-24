@@ -1,5 +1,5 @@
 ---
-title: Aアクティビティインディケーター
+title: ActivityIndicator
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_activity_indicator_.activityindicator
 contributors: [Spice-Z]
 ---
@@ -14,19 +14,19 @@ contributors: [Spice-Z]
 
 [> screenshots for=ActivityIndicator <]
 
-## プロップス
+## Props
 
 | 名前 | 型 |説明 |
 |------|------|-------------|
-| `busy` | `Boolean` | インディケーターがアクティブかどうかを取得したり設定します。値が`true`のときにインディケーターがアクティブになります。
+| `busy` | `Boolean` | インディケーターがアクティブかどうかを取得・設定します。値が`true`のときにインディケーターがアクティブになります。
 
-## イベント
+## Events
 
 | 名前 | 説明 |
 |------|-------------|
 | `busyChange`| `busy`プロパティが変更されたときに通達されます。
 
-## ネイティブコンポーネント
+## Native component
 
 | Android | iOS |
 |---------|-----|

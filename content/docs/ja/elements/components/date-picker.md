@@ -26,12 +26,12 @@ contributors: [Spice-Z]
 
 | 名前 | 型 |説明 |
 |------|------|-------------|
-| `date` | `Date` | 日付を取得したり設定する。
-| `minDate` | `Date` | 選択できる最短の日付を取得したり設定する。
-| `maxDate` | `Date` | 選択できる最も遅いの日付を取得したり設定する。
-| `day` | `Number` | 日を取得したり設定する。
-| `month` | `Number` | 月を取得したり設定する。
-| `year` | `Number` | 年を取得したり設定する。
+| `date` | `Date` | 日付を取得・設定する。
+| `minDate` | `Date` | 選択できる最短の日付を取得・設定する。
+| `maxDate` | `Date` | 選択できる最も遅いの日付を取得・設定する。
+| `day` | `Number` | 日を取得・設定する。
+| `month` | `Number` | 月を取得・設定する。
+| `year` | `Number` | 年を取得・設定する。
 
 ## Events
 
