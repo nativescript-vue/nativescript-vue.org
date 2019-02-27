@@ -1,4 +1,5 @@
-# NativeScript-Vue website
+# NativeScript-Vue website [![Netlify Status](https://api.netlify.com/api/v1/badges/6b14c9ec-0c06-4ede-b8f6-0bdb13de2bfd/deploy-status)](https://app.netlify.com/sites/nativescript-vue/deploys)
+
 
 This is the source for the [nativescript-vue.org](https://nativescript-vue.org/) website.
 
