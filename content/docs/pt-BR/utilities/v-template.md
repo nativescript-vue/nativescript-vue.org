@@ -9,16 +9,16 @@ Isso é utilizado internamente pelo [Componente ListView](/pt-BR/docs/elements/c
 
 ## Propriedades
 
-| nome | tipo | descrição |
-|------|------|-------------|
-| `if` | `String` | A condição para usar este template.
-| `name` | `String` | O nome do template, se for omitido, ele será gerado automaticamente.
+| nome   | tipo     | descrição                                                            |
+| ------ | -------- | -------------------------------------------------------------------- |
+| `if`   | `String` | A condição para usar este template.                                  |
+| `name` | `String` | O nome do template, se for omitido, ele será gerado automaticamente. |
 
 # Uso avançado
 
 O restante desse documento é destinado para o usuários avançados que implementam seus próprios componentes que necessitam de um template ou vários templates.
 
-`v-template` does not render anything when placed into the template, instead it adds a `$templates` property to the parent element or component, which is a [`TemplateBag`](https://github.com/nativescript-vue/nativescript-vue/blob/master/platform/nativescript/runtime/components/v-template.js#L36) instance, and then registers itself as an available template.
+`v-template` não renderiza nada quando colocado no modelo, em vez disso, ele adiciona uma `$templates` propriedade ao elemento ou componente pai, que é uma [`TemplateBag`](https://github.com/nativescript-vue/nativescript-vue/blob/master/platform/nativescript/runtime/components/v-template.js#L36) instância, e depois se registra como um modelo disponível.
 
 ### TemplateBag
 
