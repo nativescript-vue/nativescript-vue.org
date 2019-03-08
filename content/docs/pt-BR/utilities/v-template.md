@@ -1,6 +1,6 @@
 ---
 title: componente v-template
-contributors: [alexhiroshi]
+contributors: [alexhiroshi, vitorleonel]
 ---
 
 O componente `v-template` é usado para demarcar uma parte do código que pode ser reutilizada como um template.
