@@ -12,7 +12,9 @@ After cloning the repository, do the following steps
 ``` bash
 cd nativescript-vue.org/
 npm install
-npm run build:js build:css build
+npm run build:js 
+npm run build:css 
+npm run build
 ```
 
 This sequence is only needed the first time. After that, the only command needed is:
