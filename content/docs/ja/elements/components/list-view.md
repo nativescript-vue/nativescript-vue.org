@@ -61,7 +61,7 @@ onItemTap(event) {
 
 ## Props
 
-| Name | Type | Description |
+| 名前 | 型 | 説明 |
 |------|------|-------------|
 | `for` | `String` | 要素をいてレートするための表現が入ります。<br/>例えば: <ul><li><code>item in listOfItems</code></li><li><code>(item, index) in listOfItems</code></li><li><code>item in [1, 2, 3, 4, 5]</code></li></ul>
 | `items` | `Array<any>` | `<ListView>`内で表示される要素の配列<br/>**このプロパティは発展的な利用の際に使います。`for`プロパティを変わりに使用してください。**
@@ -69,7 +69,7 @@ onItemTap(event) {
 
 ## Events
 
-| Name | Description |
+| 名前 | 説明 |
 |------|-------------|
 | `itemTap`| `<ListView>`の中の要素がタップされたときに発火します。タップされた要素は`event.item`で操作できます。
 

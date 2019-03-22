@@ -30,7 +30,7 @@ contributors: [Spice-Z]
 
 ## Events
 
-| 名前 | 型 |
+| 名前 | 説明 |
 |------|-------------|
 | `selectedIndexChange`| Emitted when the currently selected option (index) changes.
 
