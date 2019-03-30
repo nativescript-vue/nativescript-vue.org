@@ -14,7 +14,7 @@ Run the following command:
 
 ```shell
 $ cd <project-folder>
-$ npm install --save @vue/devtools@beta nativescript-toast nativescript-socket.io nativescript-vue-devtools
+$ npm install --save @vue/devtools nativescript-toasty nativescript-socketio nativescript-vue-devtools
 ```
 
 ## (Optional) Step 2: Install Vue DevTools globally
@@ -24,7 +24,7 @@ To easily access Vue DevTools, you can install the package globally.
 Run the following command:
 
 ```shell
-$ npm install -g @vue/devtools@beta
+$ npm install -g @vue/devtools
 ```
 
 After the installation is complete, you can run the `vue-devtools` command from any directory on your development machine.
