@@ -15,7 +15,7 @@ contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen, ikoevs
 <TextField :text="textFieldValue" hint="Enter text..." />
 ```
 
-`<TextField>` provdes two-way data binding using `v-model`.
+`<TextField>` provides two-way data binding using `v-model`.
 
 ```html
 <TextField v-model="textFieldValue" />
