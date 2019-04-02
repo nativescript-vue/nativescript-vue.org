@@ -6,7 +6,7 @@ contributors: [eddyverbruggen,ikoevska, misterbrownza]
 
 `<ScrollView>` is a UI component that shows a scrollable content area. Content can be scrolled vertically or horizontally.
 
-`<ScrollView>` can only have a single child Layout.
+It's important to note that `<ScrollView>` extends [`ContentView`](https://docs.nativescript.org/api-reference/classes/_ui_content_view_.contentview), so it can only have a single child element.
 
 ---
 
