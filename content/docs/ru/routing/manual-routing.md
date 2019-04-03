@@ -16,7 +16,7 @@ contributors: [sn0wil]
 ```js
 this.$navigateTo(Detail, {
   transition: {},
-  transitionIOS: {},
+  transitioniOS: {},
   transitionAndroid: {},
   
   context: {

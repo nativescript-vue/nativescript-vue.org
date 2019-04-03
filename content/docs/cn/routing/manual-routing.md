@@ -101,7 +101,7 @@ const Detail = {
 ```JavaScript
 this.$navigateTo(Detail, {
   transition: {},
-  transitionIOS: {},
+  transitioniOS: {},
   transitionAndroid: {},
   
   props: {

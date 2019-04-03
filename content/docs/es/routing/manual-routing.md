@@ -101,7 +101,7 @@ Por ejemplo:
 ```JavaScript
 this.$navigateTo(Detail, {
   transition: {},
-  transitionIOS: {},
+  transitioniOS: {},
   transitionAndroid: {},
 
   context: {

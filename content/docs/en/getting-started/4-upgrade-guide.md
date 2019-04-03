@@ -140,7 +140,7 @@ Your old syntax is likely to look like this.
 ```JavaScript
 this.$navigateTo(NewPage, {
                     transition: {},
-                    transitionIOS: {},
+                    transitioniOS: {},
                     transitionAndroid: {},
 
                     context: {
@@ -157,7 +157,7 @@ To preserve the manual routing behavior in your new app, change your syntax to t
 ```JavaScript
 this.$navigateTo(NewPage, {
                     transition: {},
-                    transitionIOS: {},
+                    transitioniOS: {},
                     transitionAndroid: {},
 
                     props: {
