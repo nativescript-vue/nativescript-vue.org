@@ -38,11 +38,14 @@ If you need to visualize one or more list items differently than the rest, you c
 </ListView>
 ```
 
-When you create conditions for `<v-template>`, you can use any valid JavaScript expression or any of the following helpers:
+When you create conditions for `<v-template>`, you can use a valid JavaScript expression with the following variables:
 
 * `$index`&mdash; the index of the current item
-* `$even`&mdash;`true` if the index of the current item is even
-* `$odd`&mdash;`true` if the index of the current item is odd
+* `$even`&mdash; `true` if the index of the current item is even
+* `$odd`&mdash; `true` if the index of the current item is odd
+* *`item`*&mdash; the *item* of the list (the name corresponds to the iterator in the `for` property). E.g. `if="item.text == 'danger'"`
+
+Only the above variables are available in this scope, and currently you do not have access to the component scope (component state, computed properties...). 
 
 ## An important note about `v-for`
 
@@ -77,7 +80,7 @@ onItemTap(event) {
 
 | Name | Description |
 |------|-------------|
-| `refresh()` | (Coming soon) Forces the `<ListView>` to reload all its items.
+| `refresh()` | Forces the `<ListView>` to reload all its items.
 
 ## Native component
 
