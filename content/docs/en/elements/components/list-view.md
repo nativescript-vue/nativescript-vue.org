@@ -80,7 +80,7 @@ onItemTap(event) {
 
 | Name | Description |
 |------|-------------|
-| `refresh()` | (Coming soon) Forces the `<ListView>` to reload all its items.
+| `refresh()` | Forces the `<ListView>` to reload all its items.
 
 ## Native component
 
