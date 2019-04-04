@@ -38,14 +38,14 @@ If you need to visualize one or more list items differently than the rest, you c
 </ListView>
 ```
 
-When you create conditions for `<v-template>`, you can use a valid JavaScript expression with of the following variables:
+When you create conditions for `<v-template>`, you can use a valid JavaScript expression with the following variables:
 
 * `$index`&mdash; the index of the current item
 * `$even`&mdash; `true` if the index of the current item is even
 * `$odd`&mdash; `true` if the index of the current item is odd
-* *`item`*&mdash; the *item* of the list. E.g. `if="item.text == 'danger'"`
+* *`item`*&mdash; the *item* of the list (the name corresponds to the iterator in the `for` property). E.g. `if="item.text == 'danger'"`
 
-You cannot use other variables (for example, the component state) other than the ones mentioned above.
+Only the above variables are available in this scope, and currently you do not have access to the component scope (component state, computed properties...). 
 
 ## An important note about `v-for`
 
