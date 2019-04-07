@@ -29,7 +29,7 @@ contributors: [Spice-Z]
 
 ## Events
 
-| 名前 | 型 |
+| 名前 | 説明 |
 |------|-------------|
 | `loadStarted`| `<WebView>`が読み込まれ始めた時に発火します。
 | `loadFinished`| `<WebView>`の読み込みが終わった時に発火します。
