@@ -22,7 +22,7 @@ $ npm run watch:<platform>
 
 onde platform é `ios` ou `android`.
 
-Este conjunto de comandos realiza as seguintes operações no seu systema:
+Este conjunto de comandos realiza as seguintes operações no seu sistema:
 
 1. Instala o Vue CLI e seu complemento de inicialização no seu sistema. Isto permite você usar NativeScript CLI e o Vue CLI no seu sistema. Ignore esse comando se você já possui o Vue CLI instalado.
 2. Extrai o template selecionado (o template NativeScript-Vue compativel com Vue CLI) e cria um projeto localmente. Este template depende dos componentes `.vue` e fornece roteamento e gerenciamento de estado Vuex pronto para o uso. Para mais informações sobre os templates disponíveis, veja a [documentação de templates](/pt-BR/docs/getting-started/templates).
