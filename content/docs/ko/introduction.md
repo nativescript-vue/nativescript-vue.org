@@ -1,6 +1,6 @@
 ---
 title: 소개
-contributors: [qgp9]
+contributors: [qgp9, charles-salmon]
 ---
 
 ## [네이티브스크립트](https://www.nativescript.org/)가 무엇인가요?
@@ -34,11 +34,11 @@ Vue에 이미 경험이 있다면 성공적으로 NativeScript-Vue를 배우기 
 
 ## 참여하고 싶으세요?
 
-NativeScript-Vue는 오픈소스 프레임워크이고 기여(컨트리뷰션)는 매우 권장됩니다. [프로젝트 컨트리뷰션 가이드](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md)를 확인하시고 **[네이티브-스크립트 커뮤니티 슬랙](https://developer.telerik.com/wp-login.php?action=slack-invitation)의 #vue 채널에 참여하세요**
+NativeScript-Vue는 오픈소스 프레임워크이고 기여(컨트리뷰션)는 매우 권장됩니다. [프로젝트 컨트리뷰션 가이드](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md)를 확인하시고 **[네이티브-스크립트 커뮤니티 슬랙](https://www.nativescript.org/slack-invitation-form)의 #vue 채널에 참여하세요**
 
 ## 이 프로젝트는 얼마나 안정적인가요?
 
 NativeScript-Vue는 비교적 기능적으로 완벽합니다. 현재 우리는 다음 두가지에 집중하고 있습니다:
 
 * **문서화**: 이 사이트에 NativeScript-Vue로 할 수 있는 모든 것이 문서화 되지는 않았습니다. 샘플과 유즈케이스들이 적극적으로 추가되고 있습니다. 또한 여러분의 기여도 환영합니다.
-* **예제앱**: 우리는 사람들이 이 플러그인을 사용해 보고 피드백을 주기를 바랍니다. 관심이 있으시면 [네이티브-스크립트 커뮤니티 슬랙](https://developer.telerik.com/wp-login.php?action=slack-invitation) 에 참여하시고 #vue 채널에서 알려주세요.
+* **예제앱**: 우리는 사람들이 이 플러그인을 사용해 보고 피드백을 주기를 바랍니다. 관심이 있으시면 [네이티브-스크립트 커뮤니티 슬랙](https://www.nativescript.org/slack-invitation-form) 에 참여하시고 #vue 채널에서 알려주세요.
