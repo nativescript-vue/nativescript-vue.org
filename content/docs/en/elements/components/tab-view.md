@@ -60,7 +60,7 @@ methods: {
 
 | Name | Description |
 |------|-------------|
-| `selectedIndexChange` | Emits an event object containing a `value` property with the index of the tapped `<TabViewItem>`.
+| `selectedIndexChange` | Emits [an event object](https://docs.nativescript.org/api-reference/interfaces/_ui_tab_view_.selectedindexchangedeventdata) containing an `newIndex` property with the index of the tapped `<TabViewItem>` (and an `oldIndex` property with the index of the previous tab).
 
 ## Native component
 
