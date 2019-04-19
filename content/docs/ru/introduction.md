@@ -1,6 +1,6 @@
 ---
 title: Введение
-contributors: [sn0wil, lex111, chimit]
+contributors: [sn0wil, lex111, chimit, charles-salmon]
 ---
 
 ## Что такое [NativeScript](https://www.nativescript.org/)?
@@ -40,11 +40,11 @@ NativeScript строит ваши приложения, используя на
 
 ## Хотите принять участие?
 
-NativeScript-Vue - проект с открытым исходным кодом, и новые участники горячо приветствуются. Ознакомтесь с [инструкцией по участию в проекте](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md) и **присоединитесь к нам на канале #vue в [NativeScript Community Slack](https://developer.telerik.com/wp-login.php?action=slack-invitation)**.
+NativeScript-Vue - проект с открытым исходным кодом, и новые участники горячо приветствуются. Ознакомтесь с [инструкцией по участию в проекте](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md) и **присоединитесь к нам на канале #vue в [NativeScript Community Slack](https://www.nativescript.org/slack-invitation-form)**.
 
 ## Насколько стабилен этот проект?
 
 NativeScript-Vue относительно завершен. В настоящее время мы сфокусированы на двух вещах:
 
 * **Документация**: Не все, что вы можете сделать в NativeScript-Vue, задокументировано на этом сайте. Мы активно добавляем примеры и различные случаи использования на сайт. Участие в этом приветствуется.
-* **Примеры приложений**: Мы ищем людей, использующих или готовых использовать этот плагин для сбора обратной связи. Если вы заинтересованы, присоединяйтесь к [NativeScript Community Slack](https://developer.telerik.com/wp-login.php?action=slack-invitation) и дайте нам знать об этом в канале #vue.
+* **Примеры приложений**: Мы ищем людей, использующих или готовых использовать этот плагин для сбора обратной связи. Если вы заинтересованы, присоединяйтесь к [NativeScript Community Slack](https://www.nativescript.org/slack-invitation-form) и дайте нам знать об этом в канале #vue.

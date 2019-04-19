@@ -1,6 +1,6 @@
 ---
 title: 介绍
-contributors: [nuochong]
+contributors: [nuochong, charles-salmon]
 ---
 
 ## 什么是 [NativeScript](https://www.nativescript.org/)?
@@ -36,11 +36,11 @@ NativeScript-Vue是一个NativeScript插件，允许您使用Vue.js来制作您�
 
 ## 想参与其中吗？
 
-NativeScript-Vue是一个开源项目，非常鼓励贡献。查看 [项目的贡献指南，](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md) 并 **加入我们的 [NativeScript Community Slack](https://developer.telerik.com/wp-login.php?action=slack-invitation)上的#vue频道**。
+NativeScript-Vue是一个开源项目，非常鼓励贡献。查看 [项目的贡献指南，](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md) 并 **加入我们的 [NativeScript Community Slack](https://www.nativescript.org/slack-invitation-form)上的#vue频道**。
 
 ## 这个项目有多稳定？
 
 NativeScript-Vue相对功能齐全。这时我们关注两件事：
 
 * **文档**: 本网站并未记录您在NativeScript-Vue中可以执行的所有操作。我们正在积极地向本网站添加样本和用例，欢迎您的贡献。
-* **示例应用程序**: 我们正在期待大家将插件放入其中并以我们的方式发送反馈。如果您有兴趣，请加入 [NativeScript Community Slack](https://developer.telerik.com/wp-login.php?action=slack-invitation) 并在#vue频道告诉我们。
+* **示例应用程序**: 我们正在期待大家将插件放入其中并以我们的方式发送反馈。如果您有兴趣，请加入 [NativeScript Community Slack](https://www.nativescript.org/slack-invitation-form) 并在#vue频道告诉我们。

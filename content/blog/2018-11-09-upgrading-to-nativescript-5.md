@@ -1,6 +1,7 @@
 ---
 title: Upgrading to NativeScript 5.0
 authors: [rigor789]
+contributors: [rigor789, charles-salmon]
 toc: true
 intro: Now that NativeScript 5.0 has been released, you may want to upgrade your Vue app. Let's see how!
 ---
@@ -64,6 +65,6 @@ $ npm install
 
 That's it, your app should now use NativeScript 5.0 when invoking `tns run android|ios` commands.
 
-If you encounter issues, please let us know on [the #vue channel on Slack](https://developer.telerik.com/wp-login.php?action=slack-invitation).
+If you encounter issues, please let us know on [the #vue channel on Slack](https://www.nativescript.org/slack-invitation-form).
 
 Happy coding!

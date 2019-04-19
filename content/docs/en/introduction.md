@@ -1,6 +1,6 @@
 ---
 title: Introduction
-contributors: [rigor789, tjvantoll]
+contributors: [rigor789, tjvantoll, charles-salmon]
 ---
 
 ## What is [NativeScript](https://www.nativescript.org/)?
@@ -36,11 +36,11 @@ Don’t worry though. Although there is a learning curve for working with Native
 
 ## Want to get involved?
 
-NativeScript-Vue is an open source project and contributions are very much encouraged. Check out the [project’s contributing guide](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md) and **join us on the #vue channel on the [NativeScript Community Slack](https://developer.telerik.com/wp-login.php?action=slack-invitation)**.
+NativeScript-Vue is an open source project and contributions are very much encouraged. Check out the [project’s contributing guide](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md) and **join us on the #vue channel on the [NativeScript Community Slack](https://www.nativescript.org/slack-invitation-form)**.
 
 ## How stable is this project?
 
 NativeScript-Vue is relatively feature-complete. At this time we’re focusing on two things:
 
 * **Documentation**: Not everything you can do in NativeScript-Vue is documented on this site. We’re actively adding samples and use cases to this site, and contributions are welcome.
-* **Sample apps**: We’re looking for people to put this plugin through its paces and send feedback our way. If you’re interested, join the [NativeScript Community Slack](https://developer.telerik.com/wp-login.php?action=slack-invitation) and let us know in the #vue channel.
+* **Sample apps**: We’re looking for people to put this plugin through its paces and send feedback our way. If you’re interested, join the [NativeScript Community Slack](https://www.nativescript.org/slack-invitation-form) and let us know in the #vue channel.
