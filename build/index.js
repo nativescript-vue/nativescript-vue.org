@@ -42,6 +42,7 @@ Metalsmith(cwd)
       'en': 'English',
       'cn': '中文',
       'es': 'Español',
+      'ja': '日本語',
       'ko': '한국어',
       'pt-BR': 'Português do Brasil',
       'ru': 'Русский'
@@ -117,7 +118,7 @@ Metalsmith(cwd)
   })
   .use(locales({
     defaultLocale: 'en',
-    locales: ['en', 'cn', 'es', 'ko', 'pt-BR', 'ru']
+    locales: ['en', 'cn', 'es', 'ja', 'ko', 'pt-BR', 'ru']
   }))
   .use(versions({
     versions: [
