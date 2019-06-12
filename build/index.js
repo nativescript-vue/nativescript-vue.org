@@ -65,6 +65,7 @@ Metalsmith(cwd)
       const order = [
         'introduction',
         'getting-started',
+        'core-concepts',
         'routing',
         'utilities',
         'elements:layouts',
