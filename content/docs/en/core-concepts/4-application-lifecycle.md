@@ -5,5 +5,5 @@ contributors: [epfromer]
 
 Application Lifecycle
 
-![playground welcome screen](/screenshots/ns-playground/playground-home.png)
+![playground welcome screen](https://docs.nativescript.org/img/ns-common.png)
 
