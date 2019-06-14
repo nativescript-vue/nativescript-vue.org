@@ -32,7 +32,7 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 
 | Name | Description |
 |------|-------------|
-| `selectedIndexChange`| Emitted when the currently selected option (index) changes. The new index can be retrieve on `$event.value`.
+| `selectedIndexChange`| Emitted when the currently selected option (index) changes. The new index can be retrieved via `$event.value`.
 
 ## Native component
 
