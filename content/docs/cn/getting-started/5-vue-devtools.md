@@ -12,7 +12,7 @@ outdated: false
 
 ```shell
 $ cd <project-folder>
-$ npm install --save @vue/devtools@beta nativescript-toast nativescript-socket.io nativescript-vue-devtools
+$ npm install --save @vue/devtools@beta nativescript-toasty nativescript-socketio nativescript-vue-devtools
 ```
 
 ** 2.可选择全局安装Vue Devtools **
