@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node build/index.js --dev",
     "build": "node build/index.js",
-    "build:css": "tailwind build src/styles.css -c ./tailwind.js -o static/styles.css",
+    "build:css": "tailwind build src/styles.css -c ./tailwind.config.js -o static/styles.css",
     "build:js": "babel src -d static",
     "build:samples": "node build/build-samples.js"
   },
@@ -31,7 +31,7 @@
     "metalsmith-ignore": "^0.1.2",
     "metalsmith-jekyll-dates": "0.0.5",
     "metalsmith-layouts": "^1.8.1",
-    "metalsmith-linkcheck": "^0.3.0",
+    "metalsmith-linkcheck": "^0.3.4",
     "metalsmith-multi-language": "^0.3.0",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-sitemap": "^1.2.0",
