@@ -21,8 +21,9 @@ The middle layer provides device independent functionality including user interf
 
 | Module | Description |
 |------|-------------|
-| [`Frame`](/en/docs/elements/components/frame) | <Frame> is a UI component used to display <Page> elements. Every app needs at least a single <Frame> element, usually set as the root element.
+| [`Frame`](/en/docs/elements/components/frame) | [`Frame`](/en/docs/elements/components/frame) is a UI component used to display [`Page`](/en/docs/elements/components/page) elements, and is also responsible for navigation the app. Every app needs at least a single [`Frame`](/en/docs/elements/components/frame) element, usually set as the root element.
+| [`Page`](/en/docs/elements/components/page) | [`Page`](/en/docs/elements/components/page) is a UI component that represents an application screen. NativeScript apps typically consist of one or more [`Page`](/en/docs/elements/components/page) that wrap content such as an <ActionBar> and other UI widgets.
 
 ### Runtimes
 
-The bottom layer provides the device specific [`iOS`](/en/docs/runtime/ios/overview) and [`Android`](/en/docs/runtime/android/overview) runtimes.
+The base layer provides the device specific [`iOS`](/en/docs/runtime/ios/overview) and [`Android`](/en/docs/runtime/android/overview) runtimes.
