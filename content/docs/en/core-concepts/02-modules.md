@@ -13,11 +13,11 @@ The top Application Framework layer consists of modules for [`routing and naviga
 
 ### Cross Platform Abstraction
 
-The middle layer provides device independent functionality including user interface element modules ([`primary elements`](/en/docs/core-concepts/modules#primary-elements), [`layouts`](/en/docs/core-concepts/modules#layouts), action bar, components, dialogs), core modules (console logging, images, timers), device modules (device info, file system access, gesture handling), and development tools (elements inspector, network inspector).
+The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components-widgets), dialogs), core modules (console logging, images, timers), device modules (device info, file system access, gesture handling), and development tools (elements inspector, network inspector).
 
 ### User Interface Elements
 
-#### Primary Elements
+#### Primary Components
 
 | Module | Description |
 |------|-------------|
@@ -28,8 +28,12 @@ The middle layer provides device independent functionality including user interf
 
 | Module | Description |
 |------|-------------|
-| [`AbsoluteLayout`](/en/docs/elements/layouts/absolute-layout) | Simplest layout container in NativeScript.  Used to position child elements at absolute coordinates without any constraints or resizing.
-| [`StackLayout`](/en/docs/elements/layouts/stack-layout) | Stack the child elements vertically (default) or horizontally.
+| [`AbsoluteLayout`](/en/docs/elements/layouts/absolute-layout) | Simplest layout container in NativeScript.  Position child elements at absolute coordinates without any constraints or resizing.
+| [`DockLayout`](/en/docs/elements/layouts/dock-layout) | Dock child elements to center or edges of layout.
+| [`FlexboxLayout`](/en/docs/elements/layouts/grid-layout) | Position child elements using CSS Flexbox properties.
+| [`GridLayout`](/en/docs/elements/layouts/grid-layout) | Arrange child elements in grid using row and column designations.
+| [`StackLayout`](/en/docs/elements/layouts/stack-layout) | Stack child elements vertically (default) or horizontally.
+| [`WrapLayout`](/en/docs/elements/layouts/wrap-layout) | Position child elements in rows or columns, based on the orientation property. When the space is filled, the container automatically wraps items onto a new row or column.
 
 #### Action Bar
 
