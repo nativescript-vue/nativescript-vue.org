@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "node build/index.js --dev",
     "build": "node build/index.js",
+    "start": "serve dist/",
     "build:css": "tailwind build src/styles.css -c ./tailwind.config.js -o static/styles.css",
     "build:js": "babel src -d static",
+    "prebuild": "run-s build:js build:css",
     "build:samples": "node build/build-samples.js"
   },
   "keywords": [],
@@ -56,5 +58,9 @@
     "unist-util-visit": "latest",
     "vfile-reporter": "^4.0.0",
     "vue-template-compiler": "^2.5.13"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "serve": "^11.0.1"
   }
 }
