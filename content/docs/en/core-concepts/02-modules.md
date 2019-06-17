@@ -47,7 +47,26 @@ The middle layer provides device independent functionality including user interf
 
 | Module | Description |
 |------|-------------|
-| [`ActivityIndicator`](/en/docs/elements/components/activity-indicator) | Progress indicator for long running operation.
+| [`ActivityIndicator`](/en/docs/elements/components/activity-indicator) | Circular progress indicator for long running operation.
+| [`Button`](/en/docs/elements/components/button) | A typical button.
+| [`DatePicker`](/en/docs/elements/components/date-picker) | Choose a date from a range.
+| [`HtmlView`](/en/docs/elements/components/html-view) | Display static HTML content.
+| [`Image`](/en/docs/elements/components/image) | Show an image.
+| [`Label`](/en/docs/elements/components/label) | Display simple, read-only text.
+| [`ListPicker`](/en/docs/elements/components/list-picker) | Select a value from a list.
+| [`ListView`](/en/docs/elements/components/list-view) | Display a vertically scrolled list.
+| [`Placeholder`](/en/docs/elements/components/placeholder) | Hold a place for a native element in the UI hierarchy.
+| [`Progress`](/en/docs/elements/components/progress) | Linear progress indicator for long running operation.
+| [`ScrollView`](/en/docs/elements/components/scroll-view) | Display content that is scrolled either vertically or horizontally.
+| [`SearchBar`](/en/docs/elements/components/search-bar) | An input field for entering search strings.
+| [`SegmentedBar`](/en/docs/elements/components/segmented-bar) | Display a horizontal set of buttons, with one selected.
+| [`Slider`](/en/docs/elements/components/slider) | Choose a value along a range.
+| [`Switch`](/en/docs/elements/components/switch) | Choose one of two states, like a light switch.
+| [`TabView`](/en/docs/elements/components/tab-view) | Select from multiple tabs, recorded in navigation flow.
+| [`TextField`](/en/docs/elements/components/text-field) | A single-line input field.
+| [`TextView`](/en/docs/elements/components/text-view) | A multi-line input field, which can also be used for multi-line read-only text.
+| [`TimePicker`](/en/docs/elements/components/time-picker) | Select a time.
+| [`WebView`](/en/docs/elements/components/web-view) | Display more complex HTML content, including from a remote URL or local file.
 
 #### Dialogs
 
