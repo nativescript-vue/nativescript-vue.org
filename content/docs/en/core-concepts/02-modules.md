@@ -13,7 +13,7 @@ The top Application Framework layer consists of modules for [`routing and naviga
 
 ### Cross Platform Abstraction
 
-The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components--widgets), dialogs), core modules (console logging, images, timers), device modules (device info, file system access, gesture handling), and development tools (elements inspector, network inspector).
+The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components--widgets), [`dialogs`](/en/docs/core-concepts/modules#dialogs)), core modules (console logging, images, timers), device modules (device info, file system access, gesture handling), and development tools (elements inspector, network inspector).
 
 ### User Interface Elements
 
@@ -70,9 +70,18 @@ The middle layer provides device independent functionality including user interf
 
 #### Dialogs
 
-to be specified...
+| Module | Description |
+|------|-------------|
+| [`ActionDialog`](/en/docs/elements/dialogs/action) | Choose from one of several actions, or cancel.
+| [`AlertDialog`](/en/docs/elements/dialogs/alert) | A simple message and ok button.
+| [`ConfirmDialog`](/en/docs/elements/dialogs/confirm) | Confirm an action with ok or cancel.
+| [`LoginDialog`](/en/docs/elements/dialogs/login) | Provide username and password to sign in.
+| [`PromptDialog`](/en/docs/elements/dialogs/prompt) | A message with a single line input and ok or cancel.
 
 ### Core Modules
+
+| Module | Description |
+|------|-------------|
 
 console logging, images, timers to be specified...
 
