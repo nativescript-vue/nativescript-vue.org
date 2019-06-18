@@ -84,8 +84,16 @@ The middle layer provides device independent functionality including user interf
 |------|-------------|
 | [`Application`](https://docs.nativescript.org/ns-framework-modules/application) | Check which platform app is running on.  Handle app lifecycle events (launch, resume, suspend and exit) and device events (screen orientation, low battery and low memory).
 | [`Application Settings`](https://docs.nativescript.org/ns-framework-modules/application-settings) | Store and retrieve strings, booleans and numbers in key / value store (e.g. user login status, preferences).
-
-console logging, images, timers to be specified...
+| [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
+| [`Connectivity`](https://docs.nativescript.org/ns-framework-modules/connectivity) | Monitor connection type and availability.
+| [`Console`](https://docs.nativescript.org/ns-framework-modules/console) | Log information to the console.
+| [`Observable`](https://docs.nativescript.org/ns-framework-modules/observable) | Monitor data changes using Observables.
+| [`ObservableArray`](https://docs.nativescript.org/ns-framework-modules/observable-array) | Monitor data changes for arrays of objects using Observables.
+| [`VirtualArray`](https://docs.nativescript.org/ns-framework-modules/virtual-array) | Advanced array object which loads items only when needed.
+| [`Fetch`](https://docs.nativescript.org/ns-framework-modules/fetch) | Perform HTTP GET and POST requests.
+| [`FTPMeter`](https://docs.nativescript.org/ns-framework-modules/fps-meter) | Log frames-per-second statistics for the app.
+| [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
+| [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
 
 ### Device Modules
 
