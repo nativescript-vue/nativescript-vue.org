@@ -1,9 +1,9 @@
 ---
-title: Modules
+title: Modules & Components
 contributors: [epfromer]
 ---
 
-NativeScript is built on a layered modular architecture.
+NativeScript is built on a layered architecture with collections of components grouped into modules.
 
 ![layered module architecture](/modules-en.png)
 
@@ -13,20 +13,20 @@ The top Application Framework layer consists of modules for [`routing and naviga
 
 ### Cross Platform Abstraction
 
-The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components--widgets), [`dialogs`](/en/docs/core-concepts/modules#dialogs)), [`framework core modules`](/en/docs/core-concepts/modules#framework-core-modules) (images, timers), [`device modules`](/en/docs/core-concepts/modules#device-modules) (device info, file system access, gesture handling), and [`development tools`](/en/docs/core-concepts/modules#development-tools) (console logging, tracing).
+The middle layer provides device independent components including user interface ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layout components`](/en/docs/core-concepts/modules#layout-components), [`action bar components`](/en/docs/core-concepts/modules#action-bar-components), [`common UI components`](/en/docs/core-concepts/modules#ui-components), [`dialog components`](/en/docs/core-concepts/modules#dialog-components)), [`core framework components`](/en/docs/core-concepts/modules#core-framework-components) (images, timers, console logging, tracing), and [`device components`](/en/docs/core-concepts/modules#device-components) (device info, file system access, gesture handling).  [`NativeScript Plugins`](/en/docs/core-concepts/using-plugins) are available to extend functionality of apps. 
 
-### User Interface Elements
+### User Interface
 
 #### Primary Components
 
-| Module | Description |
+| Component | Description |
 |------|-------------|
 | [`Frame`](/en/docs/elements/components/frame) | Used to display [`Page`](/en/docs/elements/components/page) elements, and is also responsible for navigation the app. Every app needs at least a single [`Frame`](/en/docs/elements/components/frame) element, usually set as the root element.
 | [`Page`](/en/docs/elements/components/page) | Represents an application screen. NativeScript apps typically consist of one or more [`Page`](/en/docs/elements/components/page) elements that wrap content such as an `<ActionBar>` and other UI widgets.
 
-#### Layouts
+#### Layout Components
 
-| Module | Description |
+| Component | Description |
 |------|-------------|
 | [`AbsoluteLayout`](/en/docs/elements/layouts/absolute-layout) | Simplest layout container in NativeScript.  Position child elements at absolute coordinates without any constraints or resizing.
 | [`DockLayout`](/en/docs/elements/layouts/dock-layout) | Dock child elements to center or edges of layout.
@@ -35,17 +35,17 @@ The middle layer provides device independent functionality including user interf
 | [`StackLayout`](/en/docs/elements/layouts/stack-layout) | Stack child elements vertically (default) or horizontally.
 | [`WrapLayout`](/en/docs/elements/layouts/wrap-layout) | Position child elements in rows or columns, based on the orientation property. Elements are wrapped if necessary.
 
-#### Action Bar
+#### Action Bar Components
 
-| Module | Description |
+| Component | Description |
 |------|-------------|
 | [`ActionBar`](/en/docs/elements/action-bar/action-bar) | A tool bar at the top of the [`Page`](/en/docs/elements/components/page).
 | [`ActionItem`](/en/docs/elements/action-bar/action-item) | Buttons for the [`ActionBar`](/en/docs/elements/action-bar/action-bar).
 | [`NavigationButton`](/en/docs/elements/action-bar/navigation-button) | [`ActionBar`](/en/docs/elements/action-bar/action-bar) button for navigation (e.g. "back").
 
-#### Components / Widgets
+#### UI Components
 
-| Module | Description |
+| Component | Description |
 |------|-------------|
 | [`ActivityIndicator`](/en/docs/elements/components/activity-indicator) | Circular progress indicator for long running operation.
 | [`Button`](/en/docs/elements/components/button) | A typical button.
@@ -68,9 +68,9 @@ The middle layer provides device independent functionality including user interf
 | [`TimePicker`](/en/docs/elements/components/time-picker) | Select a time.
 | [`WebView`](/en/docs/elements/components/web-view) | Display more complex HTML content, including from a remote URL or local file.
 
-#### Dialogs
+#### Dialog Components
 
-| Module | Description |
+| Component | Description |
 |------|-------------|
 | [`ActionDialog`](/en/docs/elements/dialogs/action) | Choose from one of several actions, or cancel.
 | [`AlertDialog`](/en/docs/elements/dialogs/alert) | A simple message and ok button.
@@ -78,38 +78,33 @@ The middle layer provides device independent functionality including user interf
 | [`LoginDialog`](/en/docs/elements/dialogs/login) | Provide username and password to sign in.
 | [`PromptDialog`](/en/docs/elements/dialogs/prompt) | A message with a single line input and ok or cancel.
 
-### Framework Core Modules
+### Core Framework Components
 
-| Module | Description |
+| Component | Description |
 |------|-------------|
 | [`Application`](https://docs.nativescript.org/ns-framework-modules/application) | Check which platform app is running on.  Handle app lifecycle events (launch, resume, suspend and exit) and device events (screen orientation, low battery and low memory).
 | [`Application Settings`](https://docs.nativescript.org/ns-framework-modules/application-settings) | Store and retrieve strings, booleans and numbers in key / value store (e.g. user login status, preferences).
 | [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
 | [`Connectivity`](https://docs.nativescript.org/ns-framework-modules/connectivity) | Monitor connection type and availability.
+| [`Console`](https://docs.nativescript.org/ns-framework-modules/console) | Log information to the console.
 | [`Observable`](https://docs.nativescript.org/ns-framework-modules/observable) | Monitor data changes using Observables.
 | [`ObservableArray`](https://docs.nativescript.org/ns-framework-modules/observable-array) | Monitor data changes for arrays of objects using Observables.
 | [`VirtualArray`](https://docs.nativescript.org/ns-framework-modules/virtual-array) | Advanced array object which loads items only when needed.
 | [`Fetch`](https://docs.nativescript.org/ns-framework-modules/fetch) | Perform HTTP GET and POST requests. Alternative to [`HTTP`](https://docs.nativescript.org/ns-framework-modules/http).
+| [`FPSMeter`](https://docs.nativescript.org/ns-framework-modules/fps-meter) | Log frames-per-second statistics for the app.
 | [`HTTP`](https://docs.nativescript.org/ns-framework-modules/http) | Perform HTTP GET and POST requests.  Alternative to [`Fetch`](https://docs.nativescript.org/ns-framework-modules/fetch).
 | [`ImageSource`](https://docs.nativescript.org/ns-framework-modules/image-source) | Manage images.
 | [`Timer`](https://docs.nativescript.org/ns-framework-modules/timer) | Create timers to run code at specific intervals.
+| [`Trace`](https://docs.nativescript.org/ns-framework-modules/trace) | Diagnostic logging.
 | [`XML`](https://docs.nativescript.org/ns-framework-modules/xml-parser) | Parse data from XML content.
 
-### Device Modules
+### Device Components
 
-| Module | Description |
+| Component | Description |
 |------|-------------|
 | [`FileSystem`](https://docs.nativescript.org/ns-framework-modules/file-system) | Manage files and folders.
 | [`Gestures`](https://docs.nativescript.org/ns-framework-modules/gestures) | Respond to gestures (tap, slide, pinch).
 | [`Platform`](https://docs.nativescript.org/ns-framework-modules/platform) | Get info about device (model, type, OS, version) and screen (scale, width, height).
-
-### Development Tools
-
-| Module | Description |
-|------|-------------|
-| [`Console`](https://docs.nativescript.org/ns-framework-modules/console) | Log information to the console.
-| [`FPSMeter`](https://docs.nativescript.org/ns-framework-modules/fps-meter) | Log frames-per-second statistics for the app.
-| [`Trace`](https://docs.nativescript.org/ns-framework-modules/trace) | Diagnostic logging.
 
 ### Runtimes
 
