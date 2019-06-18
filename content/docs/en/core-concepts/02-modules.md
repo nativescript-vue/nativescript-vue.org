@@ -13,7 +13,7 @@ The top Application Framework layer consists of modules for [`routing and naviga
 
 ### Cross Platform Abstraction
 
-The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components--widgets), [`dialogs`](/en/docs/core-concepts/modules#dialogs)), [`framework core modules`](/en/docs/core-concepts/modules#framework-core-modules) (console logging, images, timers), device modules (device info, file system access, gesture handling), and development tools (elements inspector, network inspector).
+The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components--widgets), [`dialogs`](/en/docs/core-concepts/modules#dialogs)), [`framework core modules`](/en/docs/core-concepts/modules#framework-core-modules) (console logging, images, timers), [`device modules`](/en/docs/core-concepts/modules#device-modules) (device info, file system access, gesture handling), and [`development tools`](/en/docs/core-concepts/modules#development-tools) (elements inspector, network inspector).
 
 ### User Interface Elements
 
@@ -86,25 +86,30 @@ The middle layer provides device independent functionality including user interf
 | [`Application Settings`](https://docs.nativescript.org/ns-framework-modules/application-settings) | Store and retrieve strings, booleans and numbers in key / value store (e.g. user login status, preferences).
 | [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
 | [`Connectivity`](https://docs.nativescript.org/ns-framework-modules/connectivity) | Monitor connection type and availability.
-| [`Console`](https://docs.nativescript.org/ns-framework-modules/console) | Log information to the console.
 | [`Observable`](https://docs.nativescript.org/ns-framework-modules/observable) | Monitor data changes using Observables.
 | [`ObservableArray`](https://docs.nativescript.org/ns-framework-modules/observable-array) | Monitor data changes for arrays of objects using Observables.
 | [`VirtualArray`](https://docs.nativescript.org/ns-framework-modules/virtual-array) | Advanced array object which loads items only when needed.
 | [`Fetch`](https://docs.nativescript.org/ns-framework-modules/fetch) | Perform HTTP GET and POST requests. Alternative to [`HTTP`](https://docs.nativescript.org/ns-framework-modules/http).
-| [`FPSMeter`](https://docs.nativescript.org/ns-framework-modules/fps-meter) | Log frames-per-second statistics for the app.
 | [`HTTP`](https://docs.nativescript.org/ns-framework-modules/http) | Perform HTTP GET and POST requests.  Alternative to [`Fetch`](https://docs.nativescript.org/ns-framework-modules/fetch).
 | [`ImageSource`](https://docs.nativescript.org/ns-framework-modules/image-source) | Manage images.
-| [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
-| [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
-| [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
+| [`Timer`](https://docs.nativescript.org/ns-framework-modules/timer) | Create timers to run code at specific intervals.
+| [`XML`](https://docs.nativescript.org/ns-framework-modules/xml-parser) | Parse data from XML content.
 
 ### Device Modules
 
-device info, file system access, gesture handling to be specified...
+| Module | Description |
+|------|-------------|
+| [`FileSystem`](https://docs.nativescript.org/ns-framework-modules/file-system) | Manage files and folders.
+| [`Gestures`](https://docs.nativescript.org/ns-framework-modules/gestures) | Respond to gestures (tap, slide, pinch).
+| [`Platform`](https://docs.nativescript.org/ns-framework-modules/platform) | Get info about device (model, type, OS, version) and screen (scale, width, height).
 
 ### Development Tools
 
-elements inspector, network inspector to be specified...
+| Module | Description |
+|------|-------------|
+| [`Console`](https://docs.nativescript.org/ns-framework-modules/console) | Log information to the console.
+| [`FPSMeter`](https://docs.nativescript.org/ns-framework-modules/fps-meter) | Log frames-per-second statistics for the app.
+| [`Trace`](https://docs.nativescript.org/ns-framework-modules/trace) | Diagnostic logging.
 
 ### Runtimes
 
