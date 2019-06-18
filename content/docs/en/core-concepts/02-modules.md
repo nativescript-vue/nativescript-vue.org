@@ -5,7 +5,7 @@ contributors: [epfromer]
 
 NativeScript is built on a layered modular architecture.
 
-![layered module architecture](https://docs.nativescript.org/img/ns-modules.png)
+![layered module architecture](/modules-en.png)
 
 ### Application Framework
 
@@ -13,7 +13,7 @@ The top Application Framework layer consists of modules for [`routing and naviga
 
 ### Cross Platform Abstraction
 
-The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components--widgets), [`dialogs`](/en/docs/core-concepts/modules#dialogs)), [`framework core modules`](/en/docs/core-concepts/modules#framework-core-modules) (console logging, images, timers), [`device modules`](/en/docs/core-concepts/modules#device-modules) (device info, file system access, gesture handling), and [`development tools`](/en/docs/core-concepts/modules#development-tools) (elements inspector, network inspector).
+The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components--widgets), [`dialogs`](/en/docs/core-concepts/modules#dialogs)), [`framework core modules`](/en/docs/core-concepts/modules#framework-core-modules) (images, timers), [`device modules`](/en/docs/core-concepts/modules#device-modules) (device info, file system access, gesture handling), and [`development tools`](/en/docs/core-concepts/modules#development-tools) (console logging, tracing).
 
 ### User Interface Elements
 

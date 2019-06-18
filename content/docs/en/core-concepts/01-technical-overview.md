@@ -5,7 +5,7 @@ contributors: [epfromer]
 
 NativeScript is composed of several parts: Runtimes, Core Modules, a CLI, and can be extended with Plugins.
 
-![technical overview](https://docs.nativescript.org/img/ns-common.png)
+![technical overview](/architecture-en.png)
 
 ### Runtimes
 
