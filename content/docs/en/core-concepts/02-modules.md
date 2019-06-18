@@ -13,7 +13,7 @@ The top Application Framework layer consists of modules for [`routing and naviga
 
 ### Cross Platform Abstraction
 
-The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components--widgets), [`dialogs`](/en/docs/core-concepts/modules#dialogs)), core modules (console logging, images, timers), device modules (device info, file system access, gesture handling), and development tools (elements inspector, network inspector).
+The middle layer provides device independent functionality including user interface element modules ([`primary components`](/en/docs/core-concepts/modules#primary-components), [`layouts`](/en/docs/core-concepts/modules#layouts), [`action bar`](/en/docs/core-concepts/modules#action-bar), [`components / widgets`](/en/docs/core-concepts/modules#components--widgets), [`dialogs`](/en/docs/core-concepts/modules#dialogs)), [`framework core modules`](/en/docs/core-concepts/modules#framework-core-modules) (console logging, images, timers), device modules (device info, file system access, gesture handling), and development tools (elements inspector, network inspector).
 
 ### User Interface Elements
 
@@ -78,10 +78,12 @@ The middle layer provides device independent functionality including user interf
 | [`LoginDialog`](/en/docs/elements/dialogs/login) | Provide username and password to sign in.
 | [`PromptDialog`](/en/docs/elements/dialogs/prompt) | A message with a single line input and ok or cancel.
 
-### Core Modules
+### Framework Core Modules
 
 | Module | Description |
 |------|-------------|
+| [`Application`](https://docs.nativescript.org/ns-framework-modules/application) | Check which platform app is running on.  Handle app lifecycle events (launch, resume, suspend and exit) and device events (screen orientation, low battery and low memory).
+| [`Application Settings`](https://docs.nativescript.org/ns-framework-modules/application-settings) | Store and retrieve strings, booleans and numbers in key / value store (e.g. user login status, preferences).
 
 console logging, images, timers to be specified...
 
