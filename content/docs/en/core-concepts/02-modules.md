@@ -90,8 +90,11 @@ The middle layer provides device independent functionality including user interf
 | [`Observable`](https://docs.nativescript.org/ns-framework-modules/observable) | Monitor data changes using Observables.
 | [`ObservableArray`](https://docs.nativescript.org/ns-framework-modules/observable-array) | Monitor data changes for arrays of objects using Observables.
 | [`VirtualArray`](https://docs.nativescript.org/ns-framework-modules/virtual-array) | Advanced array object which loads items only when needed.
-| [`Fetch`](https://docs.nativescript.org/ns-framework-modules/fetch) | Perform HTTP GET and POST requests.
-| [`FTPMeter`](https://docs.nativescript.org/ns-framework-modules/fps-meter) | Log frames-per-second statistics for the app.
+| [`Fetch`](https://docs.nativescript.org/ns-framework-modules/fetch) | Perform HTTP GET and POST requests. Alternative to [`HTTP`](https://docs.nativescript.org/ns-framework-modules/http).
+| [`FPSMeter`](https://docs.nativescript.org/ns-framework-modules/fps-meter) | Log frames-per-second statistics for the app.
+| [`HTTP`](https://docs.nativescript.org/ns-framework-modules/http) | Perform HTTP GET and POST requests.  Alternative to [`Fetch`](https://docs.nativescript.org/ns-framework-modules/fetch).
+| [`ImageSource`](https://docs.nativescript.org/ns-framework-modules/image-source) | Manage images.
+| [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
 | [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
 | [`Color`](https://docs.nativescript.org/ns-framework-modules/color) | Create color objects in variety of ways.
 
