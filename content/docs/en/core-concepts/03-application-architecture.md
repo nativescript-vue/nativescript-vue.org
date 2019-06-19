@@ -68,4 +68,4 @@ export default {
 </style>
 ```
 
-[`Page`](/en/docs/elements/components/page) is a UI compnent that represents a screen and wraps other components such as an [`ActionBar`](/en/docs/elements/action-bar/action-bar).
+[`<Page>`](/en/docs/elements/components/page) is a UI compnent that represents a screen and wraps other components such as an [`<ActionBar>`](/en/docs/elements/action-bar/action-bar).
