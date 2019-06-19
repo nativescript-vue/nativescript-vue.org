@@ -24,5 +24,5 @@ Use the [NativeScript CLI](https://github.com/NativeScript/nativescript-cli) to 
 A large collection of [NativeScript Plugins](/en/docs/core-concepts/using-plugins) are available to extend functionality of apps.  You can also develop plugins and contribute to the NativeScript community.
 
 <div class="guide-links">      
-  <span style="float: right;"><a href="/en/docs/core-concepts/modules">Modules & Components</a> →</span>
+  <span style="float: right;"><a href="/en/docs/core-concepts/modules.html">Modules & Components</a> →</span>
 </div>

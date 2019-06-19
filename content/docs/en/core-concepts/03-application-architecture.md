@@ -29,7 +29,11 @@ The template contains a [`<Frame>`](/en/docs/elements/components/frame) componen
 
 ### Components
 
-[Components](https://vuejs.org/v2/guide/components.html) are the main building block of Vue apps.  Both the [{N} CLI](https://github.com/NativeScript/nativescript-cli) and [{N} Playground](https://play.nativescript.org?template=play-vue) create a Vue [single file component](https://vuejs.org/v2/guide/single-file-components.html) in the app/components folder.
+[Components](https://vuejs.org/v2/guide/components.html) are the main building block of Vue apps.  Apps are organized as a tree of nested components.
+
+![technical overview](https://vuejs.org/images/components.png)
+
+Both the [{N} CLI](https://github.com/NativeScript/nativescript-cli) and [{N} Playground](https://play.nativescript.org?template=play-vue) create a Vue [single file component](https://vuejs.org/v2/guide/single-file-components.html) in the app/components folder.
 
 ```Vue
 <template>
@@ -71,6 +75,6 @@ export default {
 [`<Page>`](/en/docs/elements/components/page) is a UI compnent that represents a screen and wraps other components such as an [`<ActionBar>`](/en/docs/elements/action-bar/action-bar).  This example also contains a scrollable [`<ScrollView>`](/en/docs/elements/components/scroll-view) which contains a set of text [`<Label>s`](/en/docs/elements/components/label) in a simple vertical [`<StackLayout>`](/en/docs/elements/layouts/stack-layout).
 
 <div>
-  <span>← <a href="/en/docs/core-concepts/modules">Modules & Components</a></span>
-  <span style="float: right;"><a href="/en/docs/core-concepts/data-binding">Data Binding</a> →</span>
+  <span>← <a href="/en/docs/core-concepts/modules.html">Modules & Components</a></span>
+  <span style="float: right;"><a href="/en/docs/core-concepts/data-binding.html">Data Binding</a> →</span>
 </div>

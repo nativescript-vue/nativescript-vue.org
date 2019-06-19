@@ -111,6 +111,6 @@ The middle layer provides device independent components including user interface
 The base layer provides the device specific [iOS](/en/docs/runtime/ios/overview) and [Android](/en/docs/runtime/android/overview) runtimes.
 
 <div>
-  <span>← <a href="/en/docs/core-concepts/technical-overview">Technical Overview</a></span>
-  <span style="float: right;"><a href="/en/docs/core-concepts/application-architecture">Application Architecture</a> →</span>
+  <span>← <a href="/en/docs/core-concepts/technical-overview.html">Technical Overview</a></span>
+  <span style="float: right;"><a href="/en/docs/core-concepts/application-architecture.html">Application Architecture</a> →</span>
 </div>
