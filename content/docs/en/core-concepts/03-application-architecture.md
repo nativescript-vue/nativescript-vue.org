@@ -68,4 +68,9 @@ export default {
 </style>
 ```
 
-[`<Page>`](/en/docs/elements/components/page) is a UI compnent that represents a screen and wraps other components such as an [`<ActionBar>`](/en/docs/elements/action-bar/action-bar).
+[`<Page>`](/en/docs/elements/components/page) is a UI compnent that represents a screen and wraps other components such as an [`<ActionBar>`](/en/docs/elements/action-bar/action-bar).  This example also contains a scrollable [`<ScrollView>`](/en/docs/elements/components/scroll-view) which contains a set of text [`<Label>s`](/en/docs/elements/components/label) in a simple vertical [`<StackLayout>`](/en/docs/elements/layouts/stack-layout).
+
+<div>
+  <span>← <a href="/en/docs/core-concepts/modules">Modules & Components</a></span>
+  <span style="float: right;"><a href="/en/docs/core-concepts/data-binding">Data Binding</a> →</span>
+</div>
