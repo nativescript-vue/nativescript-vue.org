@@ -5,7 +5,9 @@ contributors: [epfromer]
 
 NativeScript is built on a layered architecture with collections of components grouped into modules.
 
-![layered module architecture](/modules-en.png)
+<center>
+<img src="/modules-en.png" width="400"/>
+</center>
 
 ### Application Framework
 
