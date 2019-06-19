@@ -5,7 +5,7 @@ contributors: [epfromer]
 
 ### Booting the Vue Instance
 
-Like a [`web-based Vue application`](https://vuejs.org/v2/guide/instance.html), a {N} Vue app starts with the creation of a new Vue instance.  With an app created by the [`{N} CLI`](https://github.com/NativeScript/nativescript-cli) or the [{N} Playground](https://play.nativescript.org?template=play-vue), this is done within app/app.js.
+Like a [web-based Vue application](https://vuejs.org/v2/guide/instance.html), a {N} Vue app starts with the creation of a new Vue instance.  With an app created by the [{N} CLI](https://github.com/NativeScript/nativescript-cli) or the [{N} Playground](https://play.nativescript.org?template=play-vue), this is done within app/app.js.
 
 ```Vue
 import Vue from "nativescript-vue";
@@ -25,11 +25,11 @@ new Vue({
 }).$start();
 ```
 
-The template contains a [`Frame`](/en/docs/elements/components/frame) component, which is a UI component used to display [`Page`](/en/docs/elements/components/page) components, and is also responsible for navigation the app.  Every app needs at least a single [`Frame`](/en/docs/elements/components/frame) component, usually set as the root element.
+The template contains a [`<Frame>`](/en/docs/elements/components/frame) component, which is a UI component used to display [`<Page>`](/en/docs/elements/components/page) components, and is also responsible for navigation the app.  Every app needs at least a single [`<Frame>`](/en/docs/elements/components/frame) component, usually set as the root element.
 
 ### Components
 
-[`Components`](https://vuejs.org/v2/guide/components.html) are the main building block of Vue apps.  Both the [`{N} CLI`](https://github.com/NativeScript/nativescript-cli) and [{N} Playground](https://play.nativescript.org?template=play-vue) create a Vue [single file component](https://vuejs.org/v2/guide/single-file-components.html) in the app/components folder.
+[Components](https://vuejs.org/v2/guide/components.html) are the main building block of Vue apps.  Both the [{N} CLI](https://github.com/NativeScript/nativescript-cli) and [{N} Playground](https://play.nativescript.org?template=play-vue) create a Vue [single file component](https://vuejs.org/v2/guide/single-file-components.html) in the app/components folder.
 
 ```Vue
 <template>
