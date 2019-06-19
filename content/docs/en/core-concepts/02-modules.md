@@ -21,8 +21,8 @@ The middle layer provides device independent components including user interface
 
 | Component | Description |
 |------|-------------|
-| [`Frame`](/en/docs/elements/components/frame) | Used to display [`Page`](/en/docs/elements/components/page) elements, and is also responsible for navigation the app. Every app needs at least a single [`Frame`](/en/docs/elements/components/frame) element, usually set as the root element.
-| [`Page`](/en/docs/elements/components/page) | Represents an application screen. NativeScript apps typically consist of one or more [`Page`](/en/docs/elements/components/page) elements that wrap content such as an `<ActionBar>` and other UI widgets.
+| [`Frame`](/en/docs/elements/components/frame) | Used to display [`Page`](/en/docs/elements/components/page) components, and is also responsible for navigation in the app. Every app needs at least a single [`Frame`](/en/docs/elements/components/frame) component, usually set as the root element.
+| [`Page`](/en/docs/elements/components/page) | Represents an application screen. NativeScript apps typically consist of one or more [`Page`](/en/docs/elements/components/page) components that wrap content such as an `<ActionBar>` and other UI components.
 
 #### Layout Components
 
