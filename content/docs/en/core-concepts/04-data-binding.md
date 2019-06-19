@@ -3,6 +3,12 @@ title: Data Binding
 contributors: [epfromer]
 ---
 
+{N} Vue fully supports [Vue's template syntax](https://vuejs.org/v2/guide/syntax.html), including one and two-way binding.  
+
+### One-Way Binding
+
+### Two-Way Binding
+
 https://vuejs.org/v2/guide/syntax.html
 
 * interpolations
