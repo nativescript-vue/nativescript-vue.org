@@ -3,11 +3,11 @@ title: Data Binding
 contributors: [epfromer]
 ---
 
-{N} Vue implements binding using the v-bind directive and its shorthand ':'.  
-
 ### Binding Text and Attributes
 
-One way text binding uses a slightly different syntax from Vue.  In this example we bind a data item to the text attribute of [`<Label>`](/en/docs/elements/components/label).  
+{N} Vue implements one way binding using the v-bind directive and its shorthand ':' using a slightly different syntax from Vue.  
+
+In this example we bind a data item to the text attribute of [`<Label>`](/en/docs/elements/components/label).  
 
 ```Vue
 <Label v-bind:text="`Answer: ${answer}`" />
