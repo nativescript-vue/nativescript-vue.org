@@ -7,7 +7,13 @@ contributors: [epfromer]
 
 ### Binding Text and Attributes
 
-One way text binding uses a slightly different syntax from Vue.  In this example we bind a data item to the text attribute of [`<Label>`](/en/docs/elements/components/label).  The string is delimited by backticks, and the data item is delimited by ${}.
+One way text binding uses a slightly different syntax from Vue.  In this example we bind a data item to the text attribute of [`<Label>`](/en/docs/elements/components/label).  
+
+```Vue
+<Label v-bind:text="`Answer: ${answer}`" />
+```
+
+The string is delimited by backticks, and the data item is delimited by ${}.
 
 Try it on the [Playground](https://play.nativescript.org/?template=play-vue&id=2I6c1p).
 
@@ -53,6 +59,11 @@ The string is updated whenever the data object's `answer` property changes.
 
 Like Vue, [valid JavaScript expressions](https://vuejs.org/v2/guide/syntax.html#Using-JavaScript-Expressions) may be used in bindings.  
 
+```Vue
+<Label :text="`Answer: ${answer + 1}`" />
+<Label :text="`Answer: ${backwardAnswer.split('').reverse().join('')}`" />
+```
+
 See this code on the [Playground](https://play.nativescript.org/?template=play-vue&id=78TQm5).
 
 ```Vue
@@ -94,7 +105,13 @@ See this code on the [Playground](https://play.nativescript.org/?template=play-v
 
 ### Class Binding
 
-Class binding works the same way as attribute binding described above.  In this example, the button tap will add the highlight class to the [`<Label>`](/en/docs/elements/components/label).  
+Class binding works the same way as attribute binding described above.    
+
+```Vue
+<Label :text="`Answer: ${answer}`" :class="highlighted ? 'highlight' : ''" />
+```
+
+In this example, the button tap will add the highlight class to the [`<Label>`](/en/docs/elements/components/label).
 
 Try it on the [Playground](https://play.nativescript.org/?template=play-vue&id=Clbu17).
 
@@ -147,10 +164,50 @@ Try it on the [Playground](https://play.nativescript.org/?template=play-vue&id=C
 
 ### Two-Way Binding
 
-https://vuejs.org/v2/guide/syntax.html
+Binding to and from a data item is done with the v-model directive.  Here, a [`<TextField>`](/en/docs/elements/components/text-field) is used so that you can enter the answer.  The data object is updated with every character input, as well as the [`<Label>`](/en/docs/elements/components/label) which displays the answer plus 'correct' when 42 is entered.
 
-* two way binding
-* directives
+```Vue
+<TextField v-model="answer" hint="Enter answer..." />
+<Label :text="`Your answer: ${answer} ${answer == 42 ? ', correct!' : ''}`" />
+```
+
+See this code on the [Playground](https://play.nativescript.org/?template=play-vue&id=3tnjwX).
+
+```Vue
+<template>
+    <Page class="page">
+        <ActionBar title="Home" class="action-bar" />
+        <StackLayout class="home-panel">
+            <Label textWrap="true" text="How many illustrations are in Alice's Adventures in Wonderland?"
+                class="h1 description-label" />
+            <TextField v-model="answer" hint="Enter answer..." />
+            <Label :text="`Your answer: ${answer} ${answer == 42 ? ', correct!' : ''}`" />
+        </StackLayout>
+    </Page>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                answer: ""
+            };
+        }
+    };
+</script>
+
+<style scoped>
+    .home-panel {
+        vertical-align: center;
+        font-size: 20;
+        margin: 15;
+    }
+
+    .description-label {
+        margin-bottom: 15;
+    }
+</style>
+```
 
 <div>
   <span>← <a href="/en/docs/core-concepts/application-architecture.html">Application Architecture</a></span>
