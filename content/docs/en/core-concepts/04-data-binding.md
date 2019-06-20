@@ -11,9 +11,11 @@ In this example we bind a data item to the text attribute of [`<Label>`](/en/doc
 
 ```Vue
 <Label v-bind:text="`Answer: ${answer}`" />
+<Label :text="`Shorthand Answer: ${answer}`" />
+<Label :text="'Shorthand Answer 2: ' + answer" />
 ```
 
-The string is delimited by backticks, and the data item is delimited by ${}.
+The string is delimited by backticks, and the data item is delimited by ${}.  You can also use single quotes and the addition operator.
 
 Try it on the [Playground](https://play.nativescript.org/?template=play-vue&id=2I6c1p).
 
@@ -26,6 +28,7 @@ Try it on the [Playground](https://play.nativescript.org/?template=play-vue&id=2
                 class="h1 description-label" />
             <Label v-bind:text="`Answer: ${answer}`" />
             <Label :text="`Shorthand Answer: ${answer}`" />
+            <Label :text="'Shorthand Answer 2: ' + answer" />
         </StackLayout>
     </Page>
 </template>
