@@ -10,5 +10,5 @@ https://docs.nativescript.org/core-concepts/events
 * playground example
 
 <div>
-  <span>← <a href="/en/docs/core-concepts/application-lifecycle.html">Application Lifecycle</a></span>
+  <span>← <a href="/en/docs/core-concepts/component-lifecycle.html">Component Lifecycle</a></span>
 </div>

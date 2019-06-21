@@ -1,11 +1,11 @@
 ---
-title: Application Lifecycle
+title: Component Lifecycle
 contributors: [epfromer]
 ---
 
 As noted in [Application Architecture](/en/docs/core-concepts/application-architecture.html), Vue apps are composed of components.  {N} Vue components follow the [same lifecycle](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram) as a traditional Vue app.  
 
-![technical overview](https://vuejs.org/images/lifecycle.png)
+![component lifecycle](https://vuejs.org/images/lifecycle.png)
 
 You can see the lifecycle in action in [this Playground example](https://play.nativescript.org/?template=play-vue&id=WBxsfQ).
 

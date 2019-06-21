@@ -214,5 +214,5 @@ See this code on the [Playground](https://play.nativescript.org/?template=play-v
 
 <div>
   <span>← <a href="/en/docs/core-concepts/application-architecture.html">Application Architecture</a></span>
-  <span style="float: right;"><a href="/en/docs/core-concepts/application-lifecycle.html">Application Lifecycle</a> →</span>
+  <span style="float: right;"><a href="/en/docs/core-concepts/component-lifecycle.html">Component Lifecycle</a> →</span>
 </div>
