@@ -91,6 +91,6 @@ Quando um elemento é filho direto de um GridLayout, você pode trabalhar com as
 | nome | tipo | descrição |
 |------|------|-------------|
 `row` | `Number` | Especifica a linha para este elemento. Combinado com uma propriedade `column`, especifica a coordenada da célula do elemento.<br/>A primeira linha é indicada por `0`.
-`column` | `Number` | Especifica a coluna para o elemente. Combinado com uma propriedade `row`, especifica a coordenada da célula do elemento.<br/>A primeira coluna é indica por `0`.
+`column` | `Number` | Especifica a coluna para o elemento. Combinado com uma propriedade `row`, especifica a coordenada da célula do elemento.<br/>A primeira coluna é indica por `0`.
 `rowSpan` | `Number` | Especifica o número de linhas que o elemento ocupa.
 `colSpan` | `Number` | Especifica o número de colunas que o elemento ocupa.
