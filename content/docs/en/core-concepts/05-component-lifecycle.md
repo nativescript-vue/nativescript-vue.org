@@ -120,9 +120,7 @@ Then, tap 'Hide FancyButton' to see:
 [iPhone]: 'destroyed: pretty much nothing left'
 ```
 
-*Igor: any differences web based Vue vs {N} Vue?*
-
 <div>
   <span>← <a href="/en/docs/core-concepts/data-binding.html">Data Binding</a></span>
-  <span style="float: right;"><a href="/en/docs/core-concepts/events.html">Events</a> →</span>
+  <span style="float: right;"><a href="/en/docs/core-concepts/system-events.html">System Events</a> →</span>
 </div>
