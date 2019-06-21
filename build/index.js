@@ -66,8 +66,6 @@ Metalsmith(cwd)
         'introduction',
         'getting-started',
         'core-concepts',
-        'runtime:android',
-        'runtime:ios',
         'routing',
         'utilities',
         'elements:layouts',

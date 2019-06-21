@@ -11,7 +11,7 @@ NativeScript is composed of several parts: Runtimes, Core Modules, a CLI, and ca
 
 ### Runtimes
 
-Two runtimes provide platform specific APIs to your apps via JavaScript Virtual Machines.  The [Android Runtime](/en/docs/runtime/android/overview) utilizes Google's V8 JVM, and WebKit's JavaScriptCore implements the [iOS Runtime](/en/docs/runtime/ios/overview).
+Two runtimes provide platform specific APIs to your apps via JavaScript Virtual Machines.  The [Android Runtime](https://docs.nativescript.org/core-concepts/android-runtime/overview) utilizes Google's V8 JVM, and WebKit's JavaScriptCore implements the [iOS Runtime](https://docs.nativescript.org/core-concepts/ios-runtime/Overview).
 
 ### Modules
 
