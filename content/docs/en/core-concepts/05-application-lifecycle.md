@@ -3,7 +3,7 @@ title: Application Lifecycle
 contributors: [epfromer]
 ---
 
-As noted in [Application Architecture](/en/docs/core-concepts/application-architecture.html), Vue apps are composed of components.  {N} components follow the [same lifecycle](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram) as a traditional Vue app.  
+As noted in [Application Architecture](/en/docs/core-concepts/application-architecture.html), Vue apps are composed of components.  {N} Vue components follow the [same lifecycle](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram) as a traditional Vue app.  
 
 ![technical overview](https://vuejs.org/images/lifecycle.png)
 
@@ -116,8 +116,8 @@ Tap on 'Tap me' a few times.  You'll see the button text update with the tap cou
 Then, tap 'Hide FancyButton' to see:
 
 ```sh
-[iPhone]: 'destroyed: pretty much nothing left'
 [iPhone]: 'beforeDestroy: cleanup is done here'
+[iPhone]: 'destroyed: pretty much nothing left'
 ```
 
 *Igor: any differences web based Vue vs {N} Vue?*
