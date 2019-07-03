@@ -1,7 +1,103 @@
 ---
-title: Modules & Components
+title: Application Architecture
 contributors: [epfromer]
 ---
+
+NativeScript is composed of several parts: Runtimes, Core Modules, a CLI, and can be extended with Plugins.
+
+<center>
+<img src="/architecture-en.png" width="500"/>
+</center>
+
+### Runtimes
+
+Two runtimes provide platform specific APIs to your apps via JavaScript Virtual Machines.  The [Android Runtime](https://docs.nativescript.org/core-concepts/android-runtime/overview) utilizes Google's V8 JVM, and WebKit's JavaScriptCore implements the [iOS Runtime](https://docs.nativescript.org/core-concepts/ios-runtime/Overview).
+
+### Modules
+
+[Modules](/en/docs/core-concepts/modules) provide abstractions on the platform specific runtimes and enable developers to create device independent apps in Angular, Vue, TypeScript and JavaScript.
+
+### NativeScript CLI
+
+Use the [NativeScript CLI](https://github.com/NativeScript/nativescript-cli) to create, build and deploy apps on Windows, MacOS and Linux, and then run and debug those apps on iOS and Android emulators or physical devices.
+
+### NativeScript Plugins
+
+A large collection of [NativeScript Plugins](/en/docs/core-concepts/using-plugins) are available to extend functionality of apps.  You can also develop plugins and contribute to the NativeScript community.
+
+## Booting the Vue Instance
+
+Like a [web-based Vue application](https://vuejs.org/v2/guide/instance.html), a {N} Vue app starts with the creation of a new Vue instance.  With an app created by the [{N} CLI](https://github.com/NativeScript/nativescript-cli) or the [{N} Playground](https://play.nativescript.org?template=play-vue), this is done within app/app.js.
+
+```Vue
+import Vue from "nativescript-vue";
+
+import HelloWorld from "./components/HelloWorld";
+
+new Vue({
+
+    template: `
+        <Frame>
+            <HelloWorld />
+        </Frame>
+        `,
+
+    components: {
+        HelloWorld
+    }
+}).$start();
+```
+
+The template contains a [`<Frame>`](/en/docs/elements/components/frame) component, which is a UI component used to display [`<Page>`](/en/docs/elements/components/page) components, and is also responsible for navigation the app.  Every app needs at least a single [`<Frame>`](/en/docs/elements/components/frame) component, usually set as the root element.
+
+### Components
+
+[Components](https://vuejs.org/v2/guide/components.html) are the main building block of Vue apps.  Apps are organized as a tree of nested components.
+
+![technical overview](https://vuejs.org/images/components.png)
+
+Both the [{N} CLI](https://github.com/NativeScript/nativescript-cli) and [{N} Playground](https://play.nativescript.org?template=play-vue) create a Vue [single file component](https://vuejs.org/v2/guide/single-file-components.html) in the app/components folder.
+
+```Vue
+<template>
+    <Page class="page">
+        <ActionBar title="Home" class="action-bar" />
+        <ScrollView>
+            <StackLayout class="home-panel">
+                <!--Add your page content here-->
+                <Label textWrap="true" text="Play with NativeScript!" class="h2 description-label" />
+                <Label textWrap="true" text="Write code in the editor or drag and drop components to build a NativeScript mobile application." class="h2 description-label" />
+                <Label textWrap="true" text="Scan the QR code with your mobile device and watch the changes sync live while you play with the code." class="h2 description-label" />
+            </StackLayout>
+        </ScrollView>
+    </Page>
+</template>
+
+<script>
+export default {
+    data () {
+        return {
+        };
+    },
+}
+</script>
+
+<style scoped>
+.home-panel {
+    vertical-align: center;
+    font-size: 20;
+    margin: 15;
+}
+
+.description-label {
+    margin-bottom: 15;
+}
+</style>
+```
+
+[`<Page>`](/en/docs/elements/components/page) is a UI component that represents a screen and wraps other components such as an [`<ActionBar>`](/en/docs/elements/action-bar/action-bar).  This example also contains a scrollable [`<ScrollView>`](/en/docs/elements/components/scroll-view) which contains a set of text [`<Label>s`](/en/docs/elements/components/label) in a simple vertical [`<StackLayout>`](/en/docs/elements/layouts/stack-layout).
+
+## Modules & Components
 
 NativeScript is built on a layered architecture with collections of components grouped into modules.
 
@@ -112,7 +208,6 @@ The middle layer provides device independent components including user interface
 
 The base layer provides the device specific [iOS](/en/docs/runtime/ios/overview) and [Android](/en/docs/runtime/android/overview) runtimes.
 
-<div>
-  <span>← <a href="/en/docs/core-concepts/technical-overview.html">Technical Overview</a></span>
-  <span style="float: right;"><a href="/en/docs/core-concepts/application-architecture.html">Application Architecture</a> →</span>
+<div class="guide-links">      
+  <span style="float: right;"><a href="/en/docs/core-concepts/data-binding.html">Data Binding</a> →</span>
 </div>

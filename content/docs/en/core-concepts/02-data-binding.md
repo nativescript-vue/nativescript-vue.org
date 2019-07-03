@@ -5,7 +5,7 @@ contributors: [epfromer]
 
 ### Binding Text and Attributes
 
-{N} Vue implements one way binding using the v-bind directive and its shorthand ':' using a slightly different syntax from Vue.  
+{N} Vue implements one way binding using the v-bind directive and its shorthand ':'.  
 
 In this example we bind a data item to the text attribute of [`<Label>`](/en/docs/elements/components/label).  
 

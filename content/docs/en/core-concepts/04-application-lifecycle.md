@@ -1,5 +1,5 @@
 ---
-title: System Events
+title: Application Lifecycle
 contributors: [epfromer]
 ---
 
@@ -37,7 +37,8 @@ new Vue({
     template: `
         <Frame>
             <HelloWorld />
-        </Frame>`,
+        </Frame>
+        `,
     components: {
         HelloWorld
     }
