@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_stack_la
 contributors: [Spice-Z]
 ---
 
-`<StackLayout>`は子要素を垂直(これがデフォルト)か平行方向へ積み重ねるレイアウトコンテナです。
+`<StackLayout>`は子要素を垂直(これがデフォルト)か水平方向へ積み重ねるレイアウトコンテナです。
 
 ## 例
 
@@ -21,9 +21,9 @@ contributors: [Spice-Z]
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical.svg" />
 
-### 並行方向への積み重ね
+### 水平方向への積み重ね
 
-次の例では3つの等しい大きさの要素を平行方向へ積み重ねています。要素は全体の高さを覆うように引き伸ばされます。要素は記述された順に配置されます。
+次の例では3つの等しい大きさの要素を水平方向へ積み重ねています。要素は全体の高さを覆うように引き伸ばされます。要素は記述された順に配置されます。
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
@@ -34,7 +34,7 @@ contributors: [Spice-Z]
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_horizontal.svg" />
 
-### 並行方向の整列を調節して積み重ねる
+### 水平方向の整列を調節して積み重ねる
 
 次の例ではレスポンシブなサイズ指定で対角線上に要素を積み重ねています。要素は垂直方向に積み重なっています。
 
@@ -52,9 +52,9 @@ contributors: [Spice-Z]
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/stack_layout_vertical_align_children.svg" />
 
-### ついちょく方向の整列を調節して積み重ねる
+### 垂直方向の整列を調節して積み重ねる
 
-次の例ではレスポンシブなサイズ指定で対角線上に要素を積み重ねています。要素は平行方向に積み重なっています。
+次の例ではレスポンシブなサイズ指定で対角線上に要素を積み重ねています。要素は水平方向に積み重なっています。
 
 ```html
 <StackLayout orientation="horizontal" backgroundColor="#3c495e">
