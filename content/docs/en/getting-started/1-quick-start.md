@@ -23,12 +23,9 @@ $ npm install
 $ # or
 $ yarn install
 $
-$ tns run android --bundle
+$ tns preview
 $ # or
-$ tns run ios --bundle
-$
-$ # You may also try the new HMR mode by replacing --bundle
-$ # with --hmr, but note that this is a beta feature.
+$ tns run
 ```
 
 This set of commands performs the following operations on your system:
@@ -37,4 +34,5 @@ This set of commands performs the following operations on your system:
 2. Creates a project using the [vue-cli-template](https://github.com/nativescript-vue/vue-cli-template).
 3. Switches to the directory containing the newly created project.
 4. Installs any npm dependencies locally.
-5. Builds and runs the project on any connected devices or installed emulators for the selected platform. The `--bundle` option triggers a webpack build, which compiles `.vue` files and watches for changes.
+5. If executing `tns preview`, produces a QR code which can be used to preview the app on a device.
+6. If executing `tns run`, builds and runs the project on all connected devices or in native emulators.
