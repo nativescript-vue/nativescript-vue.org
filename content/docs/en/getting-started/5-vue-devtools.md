@@ -65,9 +65,9 @@ Run the following command:
 
 ```shell
 $ rm -rf platforms
-$ tns run android --bundle
+$ tns run android
 $ # or
-$ tns run ios --bundle
+$ tns run ios
 ```
 
 If your machine and app are configured properly, you should see a few components in the component tree of Vue DevTools.

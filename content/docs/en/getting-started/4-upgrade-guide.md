@@ -31,9 +31,9 @@ $ npm install -g @vue/cli @vue/cli-init
 $ vue init nativescript-vue/vue-cli-template <project-name>
 $ cd <project-name>
 $ npm install
-$ tns run android --bundle
+$ tns preview
 $ # or
-$ tns run ios --bundle
+$ tns run
 ```
 
 ## Step 2: Replace `App_Resources`
@@ -181,12 +181,10 @@ Run the following command to clean the new app's folders and reinstall any depen
 $ cd <project-name>
 $ rm -rf platforms
 $ npm install
-$ tns run android --bundle
-$ # or
-$ tns run ios --bundle
+$ tns run
 ```
 
-## (Optional) Step 8: Try HMR
+## (Optional) Step 9: Try HMR
 
 NativeScript now provides support for HMR (Hot Module Replacement). The latest version of NativeScript-Vue provides out-of-the-box HMR support as well but requires the NativeScript CLI. 
 
@@ -196,7 +194,5 @@ Run the following command to get HMR support by installing the latest and greate
 $ npm install -g nativescript@next
 $ cd <project-name>
 $ rm -rf platforms
-$ tns run android --hmr
-$ # or
-$ tns run ios --hmr
+$ tns run
 ```
