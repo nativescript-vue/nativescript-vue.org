@@ -16,9 +16,16 @@ $ npm install
 
 e então execute o seu aplicativo usando:
 
-```shell
-$ npm run watch:<platform>
+```shell 
+$ tns run <platform>
 ```
+
+ou se preferir utilizar o aplicativo Nativescript Playground
+
+```shell 
+$ tns preview
+```
+
 
 onde platform é `ios` ou `android`.
 
