@@ -12,7 +12,7 @@ The easiest way to implement routing in NativeScript-Vue is to use any of the fo
 > All examples on this page discuss how to handle routing between the `Master` and `Detail` components of a mobile app.
 
 ### Configuring the `ActionBar`
-Remember to set another element (probably a `Layout`) to display the content when setting up an `ActionBar`. Supressing the `Layout` **will not** render a blank page and will result in error. 
+Remember to set another element (probably a `Layout`) to display the content when setting up an `ActionBar`. Suppressing the `Layout` **will not** render a blank page and will result in error. 
 ```Vue
 <Page>
   <ActionBar title="Master" />
@@ -155,7 +155,7 @@ const Detail = {
   `
 };
 ```
-The `$navigateBack` access the children's scope even when called using an `ActionBar` from its parent (when supressing the `ActionBar` on the child component). 
+The `$navigateBack` access the children's scope even when called using an `ActionBar` from its parent (when suppressing the `ActionBar` on the child component). 
 
 ### `$showModal`
 
