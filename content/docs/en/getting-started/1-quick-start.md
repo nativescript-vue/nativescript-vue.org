@@ -14,6 +14,8 @@ But if [you already have your system ready for native development](/en/docs/gett
 -   NativeScript themes
 -   Application presets
 
+> **Note**: If you choose to install DevTools, you won't be able to use `tns preview`, as the Preview app doesn't support one of the plugins DevTools uses.
+
 ```shell
 $ npm install -g @vue/cli @vue/cli-init
 $ vue init nativescript-vue/vue-cli-template <project-name>
@@ -36,6 +38,3 @@ This set of commands performs the following operations on your system:
 4. Installs any npm dependencies locally.
 5. If executing `tns preview`, produces a QR code which can be used to preview the app on a device.
 6. If executing `tns run`, builds and runs the project on all connected devices or in native emulators.
-
-**Note**: If you choose to install DevTools, you won't be able to use `tns preview`, as the Preview app
-doesn't support one of the plugins DevTools uses.
