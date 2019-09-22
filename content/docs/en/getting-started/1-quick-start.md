@@ -36,5 +36,5 @@ This set of commands performs the following operations on your system:
 2. Creates a project using the [vue-cli-template](https://github.com/nativescript-vue/vue-cli-template).
 3. Switches to the directory containing the newly created project.
 4. Installs any npm dependencies locally.
-5. If executing `tns preview`, produces a QR code which can be used to preview the app on a device.
+5. If executing `tns preview`, produces a QR code which can be used to preview the app on a device. The `--bundle` flag is responsible for running webpack which compiles the .vue files.
 6. If executing `tns run`, builds and runs the project on all connected devices or in native emulators.
