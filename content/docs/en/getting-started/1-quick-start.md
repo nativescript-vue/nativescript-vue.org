@@ -25,7 +25,7 @@ $ npm install
 $ # or
 $ yarn install
 $
-$ tns preview
+$ tns preview --bundle
 $ # or
 $ tns run
 ```
