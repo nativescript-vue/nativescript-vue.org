@@ -11,20 +11,20 @@ You can write applications for the web using Vue.js. Thanks to NativeScript-Vue,
 
 First, install the Vue CLI globally:
 
-```
+```bash
 npm install -g @vue/cli
 ```
 
 
 Then, scaffold a new Vue web application:
 
-```
+```bash
 vue create web-mobile-project
 ```
 
 Navigate to the newly created project and add `vue-cli-plugin-nativescript-vue`:
 
-```
+```bash
 cd web-mobile-project
 vue add vue-cli-plugin-nativescript-vue
 ```
@@ -35,13 +35,13 @@ Once the plugin is installed, you can run the web and mobile applications with t
 
 To build the web application and start a dev server, run:
 
-```
+```bash
 npm run serve:web
 ```
 
 To preview the mobile application, run:
 
-```
+```bash
 npm run preview:android
 # or
 npm run preview:ios
