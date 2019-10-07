@@ -3,6 +3,9 @@ title: Vue Router
 contributors: [qgp9]
 ---
 
+> Currently, integration with Vue Router is **unsupported**. Until the team resolves the issue, please use [manual routing](/en/docs/routing/manual-routing).
+
+<!--
 [수동 라우팅](/ko/docs/routing/manual-routing) 이 당신의 유스-케이스와 잘 맞지 않는다면, 완전히 지원되는 [Vue Router](https://router.vuejs.org/kr) 를 배워보세요.
 
 ## 설치
@@ -97,3 +100,5 @@ new Vue({
   router
 }).$start();
 ```
+
+-->

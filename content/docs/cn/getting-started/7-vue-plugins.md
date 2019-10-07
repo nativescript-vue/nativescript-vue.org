@@ -108,4 +108,4 @@ new Vue({
 
 有关Vuex的更多信息，请参阅 [Vuex文档](https://vuex.vuejs.org)。
 
-有关如何管理Vuex元素的更多示例，请浏览NativeScript-Vue Groceries示例的 [`/store` 文件夹](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) 。
+有关如何管理Vuex元素的更多示例，请浏览NativeScript-Vue Groceries示例的 [`/store` 文件夹](https://github.com/tralves/groceries-ns-vue/tree/master/app/store/) 。

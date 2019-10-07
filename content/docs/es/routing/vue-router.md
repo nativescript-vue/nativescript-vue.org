@@ -3,7 +3,11 @@ title: Vue Router
 contributors: [ianaya89]
 ---
 
-> Actualmente, la integración con **vue-router** esta en modo experimental. Si quieres utilizar una estrategia **no experimental** puedes checar [*manual routing*](/en/docs/routing/manual-routing).
+> Currently, integration with Vue Router is **unsupported**. Until the team resolves the issue, please use [manual routing](/en/docs/routing/manual-routing).
+
+<!--
+
+Actualmente, la integración con **vue-router** esta en modo experimental. Si quieres utilizar una estrategia **no experimental** puedes checar [*manual routing*](/en/docs/routing/manual-routing).
 
 Con el *router* puedes elegir entre direccionamiento [basado en componentes](https://router.vuejs.org/api/#router-view) o direccionamiento basado en páginas. En general, cuando se trabaja con aplicaciones móviles, se suele utilizar la estrategia basada en páginas.
 
@@ -111,3 +115,5 @@ También puedes encontrar varios [ejemplos de NativeScript-Vue](https://github.c
 * [app-with-page-routing](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples/app/app-with-page-routing.js)
 * [app-with-router](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples/app/app-with-router.js)
 * [app-with-router-pages](https://github.com/nativescript-vue/nativescript-vue/tree/master/samples/app/app-with-router-pages.js)
+
+-->

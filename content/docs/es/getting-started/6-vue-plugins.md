@@ -106,4 +106,4 @@ new Vue({
 
 Para más información sobre el funcionamiento de Vue, puedes ver la [documentación oficial](https://vuex.vuejs.org).
 
-Para más información sobre como manejar elementos de Vuex, explora [el directorio `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store/) de la aplicación de ejemplo *NativeScript-Vue Groceries*.
+Para más información sobre como manejar elementos de Vuex, explora [el directorio `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/app/store/) de la aplicación de ejemplo *NativeScript-Vue Groceries*.
