@@ -3,6 +3,9 @@ title: Vue Router
 contributors: [sn0wil]
 ---
 
+> Currently, integration with Vue Router is **unsupported**. Until the team resolves the issue, please use [manual routing](/en/docs/routing/manual-routing).
+
+<!--
 Если [Ручная маршрутизация](/ru/docs/routing/manual-routing) не подходит для вашего случая, то
 тогда вы будете счастливы изучить [the Vue router](https://router.vuejs.org/ru/), который поддерживается в настоящий момент is supported
 
@@ -104,3 +107,5 @@ new Vue({
   router
 }).$start();
 ```
+
+-->

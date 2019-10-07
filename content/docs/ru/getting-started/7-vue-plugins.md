@@ -108,4 +108,4 @@ new Vue({
 
 Больше информации о Vuex вы можете найти в [официальной документации по Vuex](https://vuex.vuejs.org/ru/).
 
-Хорошие примеры управления элементами Vuex вы можете найти в приложении Groceries в [папке `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/src/store).
+Хорошие примеры управления элементами Vuex вы можете найти в приложении Groceries в [папке `/store`](https://github.com/tralves/groceries-ns-vue/tree/master/app/store).
