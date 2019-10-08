@@ -4,14 +4,14 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_lay
 contributors: [ianaya89]
 ---
 
-El contenedor `DockLayout` provee un mecanismo de acoplamiento para los elementos hijos que permite ubicalor a los costados o en el centro del contenedor.
+El contenedor `DockLayout` provee un mecanismo de acoplamiento para los elementos hijos que permite ubicarlos a los costados o en el centro del contenedor.
 
 `<DockLayout>` se comporta de la siguiente forma:
 
 * Usa la propiedad `dock` para ubicar los elementos con los valores: `left`, `right`, `top`, `bottom`.
 * Permite acoplar un elemento hijo en el centro del contenedor. En ese caso, este deberá ser el último hijo del contenedor `<DockLayout>` y la propiedad de `stretchLastChild` (de `<DockLayout>`) deberá tener el valor `true`.
 * Fuerza restricciones de posicionamiento sobre los elementos hijos.
-* Redimensiona los elementos hijos en tiempo de ejecucion, cuando estos cambian de tamaño.Resizes its children at runtime when its size changes.
+* Redimensiona los elementos hijos en tiempo de ejecución, cuando estos cambian de tamaño.
 
 ## Ejemplos
 
@@ -29,7 +29,7 @@ El contenedor `DockLayout` provee un mecanismo de acoplamiento para los elemento
 
 ### Acoplar a cada lado estirando el último elemento hijo
 
-El siguiente ejemplo muestra como la propiedad `stretchLastChild` afecta la posicion de los elementos hijos en un contenedor `<DockLayout>`. El último elemento (con el la propiedad `dock="bottom"`), es estirado para que ocupe el resto del espacio disponible luego del posicionamiento de los primeros tres elementos.
+El siguiente ejemplo muestra como la propiedad `stretchLastChild` afecta la posición de los elementos hijos en un contenedor `<DockLayout>`. El último elemento (con la propiedad `dock="bottom"`), es estirado para que ocupe el resto del espacio disponible luego del posicionamiento de los primeros tres elementos.
 
 ```html
 <DockLayout stretchLastChild="true" backgroundColor="#3c495e">
