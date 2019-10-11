@@ -36,11 +36,12 @@ To connect your application to the Vue DevTools, you need to modify `main.js` (o
 In your code, import `nativescript-vue-devtools` and tell NativeScript-Vue about it using `Vue.use()`.
 
 ```JavaScript
-import Vue from 'nativescript-vue'
 import VueDevtools from 'nativescript-vue-devtools'
+import Vue from 'nativescript-vue'
 
 Vue.use(VueDevtools)
 ```
+> Make sure you import devtools before Vue, otherwise it might not work as expected.
 
 If you are using a real device instead of an emulator, set the `host` configuration option to point to the IP of your development machine. Otherwise, your device will not be able to connect to your host machine.
 
