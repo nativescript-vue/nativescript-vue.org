@@ -349,14 +349,14 @@ export default {
 
 ### NativeScriptの基本を少し
 
-Out-of-the-box, the `<ListView>`コンポーネントは毎回のタップを判定してイベントを発火させました。 component detects a tap gesture for every item and emits an event for it. そのイベントは配列の中でタップされた要素とそのインデクスを伝達します。To let the user choose the outcome of a tap gesture and expand the functionality of your app, you can tie a dialog to the event.
+画期的な`<ListView>`コンポーネントは、すべてのアイテムへのタップを検知し、イベントを実行します。ユーザが選択しアプリの機能を拡張できるよう、ダイアログをイベントに関連付けします。
 
-[`dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_) is a globablly available module that provides several configurable dialog types for apps: alert, action, prompt, login, confirmation. This implementation relies on [`action()`](/en/docs/elements/dialogs/action) to let the user choose if they want to mark a task as completed or delete it from the list of active tasks.
+[`dialogs`](https://docs.nativescript.org/api-reference/modules/_ui_dialogs_)は、アラート、アクション、プロンプト、ログイン、確認など、アプリに設定可能な複数のダイアログタイプを提供するモジュールです。この実装は[`action()`](/en/docs/elements/dialogs/action)に依存し、ユーザがタスクを完了とマークか、リストから削除するかを選択できるようにします。
 
 ### Requirement implementation
 
-1. In the second `<TabViewItem>` block, remove the `<Label>` element. Drag and drop a `<ListView>` element, clean up its contents and set a height for it.
-2. In the newly added `<ListView>` element show items from an array of completed tasks (`dones`).
+1. ２番目の`<TabViewItem>`タグの中から`<Label>`を削除します。ドラッグアンドドロップで`<ListView>`を追加し、タグの中を削除します。
+2. 新しく追加した`<ListView>`タグは完了したタスク(`dones`)が表示されます。
 
   ```HTML
   <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%">
@@ -365,10 +365,10 @@ Out-of-the-box, the `<ListView>`コンポーネントは毎回のタップを判
     </v-template>
   </ListView>
   ```
-1. Modify the `onItemTap` method.
-  * Method shows an `action()` dialog.
-  * Method logs user selection in the console for debugging.
-  * Based on user selection, the method moves elements from the `todos` array to the `dones` array, deletes elements from the `todos` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
+1. `onItemTap`メソッドの変更
+  * `action()`ダイアログの表示
+  * デバッグのためユーザの選択をコンソールに記録
+  * ユーザの選択をもとに、このメソッドは要素を`todos`配列から`dones`配列に移動し、`todos`配列から要素を削除するか、ダイアログを削除します。`splice()`を使用して配列の中を移動し、`unshift()`を使い最近の完了タスクが上に表示されるようにします。
 
   ```JavaScript
   onItemTap: function(args) {
@@ -390,7 +390,7 @@ Out-of-the-box, the `<ListView>`コンポーネントは毎回のタップを判
   },
   ```
 
-At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
+この段階の最後で、`<HelloWorld.vue>`は次のサンプルのようになります。
 
 ```HTML
 <template>
@@ -480,7 +480,7 @@ export default {
 </style>
 ```
 
-## Basic functionality: View, return to active tasks, and delete tasks from the Completed tab
+## 基本的な機能: 表示、アクティブタスクへ戻す、完了タブからタスクを削除する。
 
 ### このセクションでの進捗
 
@@ -496,11 +496,11 @@ This implementation step does not require any additional knowledge.
 
 ### Requirement implementation
 
-For the second tab, create and modify the `onDoneTap` method:
+２番目のタブでは `onDoneTap`メソッドを作成、変更をします。:
 
-* Method shows an `action()` dialog.
-* Method logs user selection in the console for debugging.
-* Based on user selection, the method moves elements from the `dones` array to the `todos` array, deletes elements from the `dones` array, or dismisses the dialog. Use `splice()` to avoid leaving holes in the array and `unshift()` to make sure that recently completed tasks are shown on top.
+* `action()`ダイアログの表示
+* デバッグのためユーザの選択をコンソールに記録
+* ユーザの選択をもとに、このメソッドは要素を`todos`配列から`dones`配列に移動し、`todos`配列から要素を削除するか、ダイアログを削除します。`splice()`を使用して配列の中を移動し、`unshift()`を使い最近の完了タスクが上に表示されるようにします。
 
   ```JavaScript
   onDoneTap: function(args) { 
@@ -522,7 +522,7 @@ For the second tab, create and modify the `onDoneTap` method:
   },
   ```
 
-At the end of this stage, your `<HelloWorld.vue>` should resemble this sample:
+この段階の最後で、`<HelloWorld.vue>`は次のサンプルのようになります。
 
 ```HTML
 <template>
@@ -630,7 +630,7 @@ export default {
 </style>
 ```
 
-## Advanced design: Styled input field and button
+## アドバンスデザイン: テキストエリアとボタンのスタイル
 
 ### このセクションでの進捗
 
@@ -642,17 +642,17 @@ export default {
 
 ### NativeScriptの基本を少し
 
-When you work with NativeScript and Vue.js, you can use application-wide CSS, scoped CSS, or inline CSS to style your app. Application-wide CSS is applied first and is handled in `app.css` in the root of your project. This tutorial does not explore application-wide CSS. See also: [Styling](https://docs.nativescript.org/ui/styling).
+NativeScriptとVue.jsを使う場合、アプリのデザインはCSSで行うことができます。アプリ全体のCSSが最初に適用され、プロジェクトのルートにある`app.css`で処理がされます。このチュートリアルでは、アプリ全体のCSSに関しては説明しません。[Styling](https://docs.nativescript.org/ui/styling)を参照してください。
 
-Scoped CSS is applied to the current component only and is handled in `HelloWorld.vue` in the `<style scoped>` block. This tutorial relies almost exclusively on scoped CSS and inline CSS. See also: [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html).
+スコープCSSは現在のコンポーネントにのみ適用され、`HelloWorld.vue`の`<style scoped>`に反映されます。このチュートリアルは、スコープCSSとインラインCSSに依存しています。[Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html)も観ておくといいでしょう。
 
-With type selectors, you can select a UI component and apply styling to it. To select a type, use the component name as provided in the code. For example, to select the tab view, use `TabView`.
+タイプセレクタを使用すると、UIコンポーネントを選択し、それにスタイルを適用できます。タブビューを選択するには`TabView`を使用するように、タイプセレクタを選択するには、コードで提供されているコンポーネント名を使います。
 
 ### Requirement implementation
 
-#### Style the input field
+#### テキストエリアのデザイン
 
-In `HelloWorld.vue` > `<style scoped>`, change the font size, the color, and the margins around the `<TextField>`.
+`HelloWorld.vue`の中の`<style scoped>`で、`<TextField>`のfont size、color、marginを変更しましょう。
 
 ```CSS
 TextField {
@@ -665,9 +665,9 @@ TextField {
 }
 ```
 
-#### Style the button
+#### ボタンをデザイン
 
-In the `<style scoped>` block, create a style for the button. Modify the style to create a colorful button with rounded corners.
+`<style scoped>`で、ボタンのデザインを作成します。角が丸いユニークなボタンを作成しましょう。
 
   ```CSS
   Button { 
@@ -696,21 +696,21 @@ In the `<style scoped>` block, create a style for the button. Modify the style t
 
 ### NativeScriptの基本を少し
 
-`<TabView>` provides some styling properties out of the box. You can apply a text transform to each tab title (`textTransform`) and change the font size and color globally (`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`). You can also change the background color of your tabs (`tabBackgroundColor`).
+`<TabView>`はすぐに使えるスタイルプロパティを提供しています。タブタイトルの文字を変形(`textTransform`)させたり、フォントサイズ、色(`tabTextFontSize`, `tabTextColor`, `selectedTabTextColor`)を変更することができます。タブの背景色(`tabBackgroundColor`)を変更することも可能です。
 
 ### Requirement implementation
 
-#### Change color and font size of selected tab title
+#### 選択されたタブタイトルの色、フォントサイズを変更する
 
-In `HelloWorld.vue`, add the `selectedTabTextColor` and `tabTextFontSize` property to the `<TabView>`.
+`HelloWorld.vue`の中の`<TabView>`に`selectedTabTextColor`、`tabTextFontSize`プロパティを追加します。
 
 ```HTML
 <TabView height="100%" androidTabsPosition="bottom" selectedTabTextColor="#53ba82" tabTextFontSize="15" >
 ```
 
-#### Transform text
+#### 文字の変形
 
-Apply the `textTransform` property to the separate tabs. You can use this property only on the `<TabViewItem>` level.
+`textTransform`プロパティをタブに追加していきましょう。このプロパティは`<TabViewItem>`のみに適応できます。
 
 ```HTML
 <TabViewItem title="To Do" textTransform="uppercase" >
@@ -730,23 +730,23 @@ Apply the `textTransform` property to the separate tabs. You can use this proper
 
 ### NativeScriptの基本を少し
 
-`<ListView>` and `<Label>` have out-of-the-box style properties that you can use to control elements such as the list separator or the text wrap within the `<template>` block. To change the font style, color, and positioning of text, you need to use CSS in the `<style scoped>` block.
+`<ListView>`と`<Label>`は、リストや`<template>`内のテキストラップや、要素をコントロールする画期的なスタイルプロパティを持っています。文字のフォントスタイル、スタイル、色、ポジションをCSSを使って変更するために`<style scoped>`を使うのです。
 
-To implement a style particularly for the text of active tasks, you can set an `id` for the `<Label>` element.
+特にアクティブなタスクのような実装に対してスタイルを適用させたいなら、`<Label>`に`id`を設定することができます。
 
 ### Requirement implementation
 
-1. Set an `id` for the `<Label>` that represents active tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
+1. アクティブなタスクを示す`<Label>`に`id`を設定し、折り返しを有効にします。折り返しを有効にすると、長いテキストがリストに正しく表示されるようになります。
 
   ```HTML
   <Label id="active-task" :text="todo.name" class="list-group-item-heading" textWrap="true" />
   ```
-1. Add the `separatorColor` property and set it to `transparent` for the `<ListView>` that shows active tasks. This way, the separator will no longer appear in your list.
+1. `<ListView>`に`separatorColor`プロパティを追加し、`transparent`を指定します。この方法で、仕切りが表示されなくなります。
 
   ```HTML
   <ListView class="list-group" for="todo in todos" @itemTap="onItemTap" style="height:75%" separatorColor="transparent" >
   ```
-1. In `<style scoped>`, create the style for active tasks. Set font size, color, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
+1. アクティブなタスクに対して、スタイルを`<style scoped>`で適用させます。このページのテキストにフォントサイズ、色、パディング、ポジションを設定します。自分好みになるまで、パディングとマージンをいじってみましょう。
 
   ```CSS
   #active-task {
@@ -769,22 +769,22 @@ To implement a style particularly for the text of active tasks, you can set an `
 
 ### NativeScriptの基本を少し
 
-This section applies the basic NativeScript knowledge from [Advanced design: Styled active tasks](#advanced-design-styled-active-tasks).
+このセクションではNative Scriptの基礎的な知識から、[高度なデザイン:アクティブなタスクのデザイン](#advanced-design-styled-active-tasks)までを学びます。
 
 ### Requirement implementation
 
-1. Set an `id` for the `<Label>` that represents completed tasks and enable text wrapping. Enabling text wrapping ensures that longer text shows properly in your list
+1. 完了したタスクを示す`<Label>`に`id`を設定し、折り返しを有効にします。折り返しを有効にすると、長いテキストがリストに正しく表示されるようになります。
 
   ```HTML
   <Label id="completed-task" :text="done.name" class="list-group-item-heading" textWrap="true" />
   ```
-1. Add the `separatorColor` property, and set it to `transparent` for the `<ListView>` that represents completed tasks. This way, the separator will no longer appear in your list.
+1. `<ListView>`に`separatorColor`プロパティを追加し、`transparent`を指定します。この方法で、仕切りが表示されなくなります。
 
   ```HTML
   <ListView class="list-group" for="done in dones" @itemTap="onDoneTap" style="height:75%" separatorColor="transparent">
   ```
 
-1. In `<style scoped>`, create the style for completed tasks. Set font size, color, text decoration, and some padding to position the text on the page. Play with margins and paddings until you get a result that works for you.
+1. 完了したタスクに対して、スタイルを`<style scoped>`で適用させます。このページのテキストにフォントサイズ、色、パディング、ポジションを設定します。自分好みになるまで、パディングとマージンをいじってみましょう。
 
   ```CSS
   #completed-task {
