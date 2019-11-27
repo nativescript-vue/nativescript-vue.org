@@ -8,6 +8,8 @@ contributors: [rigor789, ikoevska]
 
 ---
 
+#### A single page
+
 ```html
 <Page>
   <ActionBar title="My App" />
@@ -16,6 +18,33 @@ contributors: [rigor789, ikoevska]
   </GridLayout>
 </Page>
 ```
+
+#### Using the `loaded` event for triggering UI changes
+
+A typical scenario is performing UI changes after tha page is loaded. The recommended way to do it is by using the `loaded` event, triggered by NativeScript when the page is fully loaded:
+
+```html
+<Page @loaded="greet">
+  <ActionBar title="My App" />
+  <GridLayout>
+    <Label text="My Content"/>
+  </GridLayout>
+</Page>
+```
+
+```js
+export default {
+  methods: {
+    greet () {
+      alert('Hello!').then(() => {
+        console.log('Dialog closed')
+      })
+    }
+  }
+}
+```
+
+**NOTE**: For Vue developers with no much experience using NativeScript, it's common to approach this case by implementing the `mounted` Vue instance hook instead. This is a wrong approach if we want to change some UI, launch dialogs, or perform navigation, as the UI is not fully loaded yet.
 
 ## Props
 
@@ -31,6 +60,7 @@ contributors: [rigor789, ikoevska]
 
 | Name | Description |
 |------|-------------|
+| `loaded` | Emitted after the page has been loaded.
 | `navigatedFrom` | Emitted after the app has navigated away from the current page.
 | `navigatedTo` | Emitted after the app has navigated to the current page.
 | `navigatingFrom` | Emitted before the app has navigated away from the current page.

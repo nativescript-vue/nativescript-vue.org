@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
       this._resizeListener();
     },
     mounted: function mounted() {
-      var selector = document.querySelector('.docSearch-input');
       var lang = document.documentElement.lang || 'en';
 
       var _ref = window.location.hostname.match(/v\d-\d-\d/) || ['master'],
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       docsearch({
         apiKey: '31f842779e5b33726ec73f8f973b2202',
         indexName: 'nativescript-vue',
-        inputSelector: selector,
+        inputSelector: '.docSearch-input',
         algoliaOptions: { facetFilters: ['lang:' + lang, 'version:' + version] },
         debug: false
       });
