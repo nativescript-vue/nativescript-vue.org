@@ -44,7 +44,7 @@ export default {
 }
 ```
 
-**NOTE**: For Vue developers with no much experience using NativeScript, it's common to approach this case by implementing the `mounted` Vue instance hook instead. This is a wrong approach if we want to change some UI, launch dialogs, or perform navigation, as the UI is not fully loaded yet.
+> **NOTE**: Developers coming from a web background would usually reach for the `mounted` lifecycle hook Vue provides, however in NativeScript the application, and certain elements might not yet be loaded when the `mounted` hook is executed, thus certain actions such as alerts, dialogs, navigation etc. are not possible inside the `mounted` hook. To work around this limitation, the `loaded` event may be used, which only fires after the application is ready. In this case, we are using the `loaded` event of the [`<Page>`](/en/docs/elements/components/page) element, but this event is available for all NativeScript elements.
 
 ## Props
 
