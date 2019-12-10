@@ -35,7 +35,7 @@ A typical scenario is performing UI changes after tha page is loaded. The recomm
 ```js
 export default {
   methods: {
-    greet () {
+    greet() {
       alert('Hello!').then(() => {
         console.log('Dialog closed')
       })
