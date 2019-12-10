@@ -1,7 +1,7 @@
 ---
 title: Page
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_page_.page
-contributors: [rigor789, ikoevska]
+contributors: [rigor789, ikoevska, msaelices]
 ---
 
 `<Page>` is a UI component that represents an application screen. NativeScript apps typically consist of one or more `<Page>` that wrap content such as an [`<ActionBar>`](/en/docs/elements/action-bar/action-bar) and other UI widgets.
