@@ -46,9 +46,7 @@ If you need to create multiple frames, you can do so by wrapping them in a Layou
 
 ```html
 <Frame>
-  <Page>
-    <Home />
-  </Page>
+  <Home />
 </Frame>
 ```
 
