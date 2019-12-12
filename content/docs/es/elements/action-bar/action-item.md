@@ -1,14 +1,16 @@
 ---
 title: ActionItem
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionitem
-contributors: [ianaya89]
+contributors: [ianaya89, msaelices]
 ---
 
 El componente ActionItem es utilizado para agregar botones (con acciones) al componente `ActionBar`.
 
 ---
 
-```html
+#### Uso básico
+
+```HTML
 <ActionBar title="My App">
   <ActionItem @tap="onTapShare"
     ios.systemIcon="9" ios.position="left"
@@ -21,9 +23,9 @@ El componente ActionItem es utilizado para agregar botones (con acciones) al com
 
 #### Mostrando elementos con condicionales
 
-Los elementos `ActionItems` pueden ser representados usando condiciones con la directiva `v-show`.
+Los elementos `<ActionItem>` pueden ser representados usando condiciones con la directiva `v-show`.
 
-```html
+```HTML
 <ActionBar title="My App">
   <ActionItem @tap="onTapEdit"
     v-show="!isEditing"
@@ -54,3 +56,9 @@ Los elementos `ActionItems` pueden ser representados usando condiciones con la d
 | Nombre | Descripción |
 |------|-------------|
 | `tap`| Emitido cada vez que el item es presionado.
+
+## Componente nativo
+
+| Android | iOS |
+|---------|-----|
+| [`android.widget.Toolbar`](https://developer.android.com/reference/android/widget/Toolbar.html) | [`UINavigationItem`](https://developer.apple.com/documentation/uikit/uinavigationitem)

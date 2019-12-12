@@ -1,7 +1,7 @@
 ---
 title: ListView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_view_.listview
-contributors: [ianaya89]
+contributors: [ianaya89, msaelices]
 ---
 
 `<ListView>` es un componente de UI que muestra elementos en una lista verticalmente desplazable. Para estableceer como la lista muestra cada uno de los elementos puedes usar el componente `<v-template>`.
@@ -43,6 +43,9 @@ Cuando creas condiciones para un `<v-template>`, puedes usar cualquier expresió
 * `$index`&mdash; el índice del elemento actual
 * `$even`&mdash; `true` indica si el índice del elemento actual es par
 * `$odd`&mdash; `true` indica si el índice del elemento actual es impar
+* *`item`*&mdash; el elemento de la lista (el nombre corresponde al iterador en la cláusula `for`). E.g. `if="item.text == 'danger'"`
+
+Sólo las variables anteriormente descritas están disponibles en este ámbito, es decir, que actualmente no tienes acceso al ámbito del componente (estado, propiedades `computed`,...).
 
 ## Una nota importante sobre `v-for`
 

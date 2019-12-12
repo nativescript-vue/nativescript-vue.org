@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_wrap_lay
 contributors: [ianaya89]
 ---
 
-El contenedor `WrapLayout` permite posicionar los elementos hijos en filas o columnas, usando una propiedad de orientación. El contenedor coloca los elementos hasta que el espacio este totalmente ocupado y luego envuelve los elementos restantes en una nueva fila o columna.
+El contenedor `<WrapLayout>` permite posicionar los elementos hijos en filas o columnas, usando una propiedad de orientación. El contenedor coloca los elementos hasta que el espacio este totalmente ocupado y luego envuelve los elementos restantes en una nueva fila o columna.
 
 ## Ejemplos
 

@@ -1,7 +1,7 @@
 ---
 title: TabView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabview
-contributors: [ianaya89]
+contributors: [ianaya89, msaelices]
 ---
 
 `<TabView>` es un componente de navegación que muestra contenido agrupado en pestañas y permite a los usuarios cambiar la pestaña visible.
@@ -9,7 +9,7 @@ contributors: [ianaya89]
 ---
 
 ```html
-<TabView :selectedIndex="selectedIndex">
+<TabView :selectedIndex="selectedIndex" @selectedIndexChange="indexChange">
   <TabViewItem title="Tab 1">
     <Label text="Content for Tab 1" />
   </TabViewItem>
@@ -17,6 +17,15 @@ contributors: [ianaya89]
     <Label text="Content for Tab 2" />
   </TabViewItem>
 </TabView>
+```
+
+```js
+methods: {
+  indexChange: function(args) {
+      let newIndex = args.value
+      console.log('Current tab index: ' + newIndex)
+  }
+}
 ```
 
 **NOTA:** Actualmente, el componente `TabViewItem` espera recibir un solo elemento hijo. En la mayoría de los casos, necesitas envolver tu contenido en un componente contenedor o *layout*.
@@ -45,6 +54,7 @@ contributors: [ianaya89]
 | `tabTextColor` | `Color` | (Propiedad de Estilo) Obtiene o establece el color del texto para los títulos de las pestañas.
 | `tabBackgroundColor` | `Color` | (Propiedad de Estilo) Obtiene o establece el color de fondo de las pestañas.
 | `selectedTabTextColor` | `Color` | (Propiedad de Estilo) Obtiene o establece el color del texto de las pestañas.
+| `androidTabsPosition` | `String` | Obtiene o establece la posición del TabView en Android<br/>Valores válidos: `top` o `bottom`.
 
 ## Eventos
 
@@ -52,7 +62,7 @@ contributors: [ianaya89]
 |------|-------------|
 | `selectedIndexChange` | Emitido cada vez que un componente `<TabViewItem>` es presionado.
 
-## Componente Nativo
+## Componente nativo
 
 | Android | iOS |
 |---------|-----|

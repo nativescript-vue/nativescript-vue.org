@@ -86,7 +86,7 @@ El siguiente ejemplo crea una grilla *responsive* con compleja con ancho y altos
 
 ## Propiedades de elementos hijos
 
-Cuando un elemento es hijo directo de `GridLayout`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
+Cuando un elemento es hijo directo de `<GridLayout>`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
