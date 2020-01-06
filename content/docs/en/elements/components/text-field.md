@@ -29,6 +29,7 @@ contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen, ikoevs
 |------|------|-------------|
 | `text` | `String` | Gets or sets the value of the field.
 | `hint` | `String` | Gets or sets the placeholder text.
+| `isEnabled` | `Boolean` | Make the field disabled or enabled. Default value is `true`.
 | `editable` | `Boolean` | When `true`, indicates that the user can edit the value of the field.
 | `maxLength` | `Number` | Limits input to the spcified number of characters.
 | `secure` | `Boolean` | Hides the entered text when `true`. Use this property to create password input fields.<br/>Default value: `false`.
