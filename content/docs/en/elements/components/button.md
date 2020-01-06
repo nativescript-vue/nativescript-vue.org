@@ -22,6 +22,7 @@ For more information about the available gestures, see [Gestures in the official
 |------|------|-------------|
 | `text` | `String` | Sets the label of the button.
 | `textWrap` | `Boolean` | Gets or sets whether the widget wraps the text of the label. Useful for longer labels. Default value is `false`.
+| `isEnabled ` | `Boolean` | Make the button disabled or enabled. A disabled button is unusable and un-clickable. Default value is `true`. 
 
 ## Events
 
