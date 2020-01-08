@@ -6,7 +6,7 @@ contributors: [ianaya89, msaelices]
 
 El componente `<NavigationButton>` es una abstracción de NativeScript para el botón de Navegación de Android y el botón `atrás` de iOS.
 
-Extiende al componente [`<ActionItem>`](/en/docs/elements/action-bar/action-item).
+Extiende al componente [`<ActionItem>`](/es/docs/elements/action-bar/action-item).
 
 ---
 
