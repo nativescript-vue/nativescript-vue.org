@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_frame_.frame
 contributors: [msaelices]
 ---
 
-`<Frame>` es un componente de UI usado para mostrar elementos [`<Page>`](/en/docs/elements/components/page). Cada app necesita al menos un elemento `<Frame>`, que normalmente se establece como elemento raíz.
+`<Frame>` es un componente de UI usado para mostrar elementos [`<Page>`](/es/docs/elements/components/page). Cada app necesita al menos un elemento `<Frame>`, que normalmente se establece como elemento raíz.
 
 ---
 
