@@ -7,9 +7,12 @@ La manera más simple de usar rutas en NativeScript-Vue es usando cualquiera de 
 
 * [`$navigateTo`](#navigateto)
 * [`$navigateBack`](#navigateback)
-* [`$showModal`](#showmodal)
 
-> Todos los ejemplos de esta sección tratan sobre como manejar las rutas entre los componentes `Master` y `Detail` de la aplicación móvil.
+Para escenarios de navegación más complejos, puedes usar múltiples componentes `<Frame>` y componentes específicos de navegación:
+
+* [`Vista con Modal`](#navegación-mediante-una-vista-modal)
+* [`BottomNavigation y Tabs`](#navegación-usando-bottomnavigation-y-tabs)
+* [`SideDrawer`](#navegación-con-sidedrawer)
 
 ### `$navigateTo`
 

@@ -46,8 +46,8 @@ Los elementos `<ActionItem>` pueden ser representados usando condiciones con la 
 
 | Nombre | Tipo | Descripcioón |
 |------|------|-------------|
-| `ios.systemIcon` | `String` | Estabelece el ícono para iOS.
-| `android.systemIcon` | `String` | Estabelece ícono para Android.
+| `ios.systemIcon` | `Number` | Obtiene o establece el ícono para iOS. El valor debe ser un número de la [enumeración `UIBarButtonSystemItem`](https://developer.apple.com/documentation/uikit/uibarbuttonitem/systemitem).
+| `android.systemIcon` | `String` | Obtiene o Establece el ícono para Android. El valor debe ser el nombre de un [recurso drawable](https://developer.android.com/guide/topics/resources/drawable-resource)
 | `ios.position` | `String` | Estabelece la posición del item en iOS.<br>Valores posibles:<br>- `left` (valor por defecto): Coloca el item en el lado izquierdo del componente ActionBar.<br>- `right`: Coloca el item en el lado derecho del componente ActionBar.
 | `android.position` | `String` | Estabelece la posición del item en Android.<br>Valores posibles:<br>- `actionBar` (valor por defecto): Coloca el item en el componente `ActionBar`.<br>- `popup`: Coloca el item en el menú de opciones (el item será mostrado como texto)<br>- `actionBarIfRoom`: Coloca el item en el componente `ActionBar`, siempre y cuando haya espacio suficiente. De lo contrario, coloca el item en el menú de opciones.
 
