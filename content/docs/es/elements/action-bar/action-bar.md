@@ -1,11 +1,12 @@
 ---
 title: ActionBar
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_action_bar_.actionbar
-contributors: [ianaya89]
+contributors: [ianaya89, msaelices]
 ---
 
-El componente ActionBar es una abstraccio4n de NativeScript del `ActionBar` de Android y el `NavigationBar` de iOS.
+`<ActionBar>` es un componente UI que ofrece una barra de herramientas en la parte superior de la ventana. 
 
+El componente ActionBar es una abstraccio4n de NativeScript del `ActionBar` de Android y el `NavigationBar` de iOS.
 
 ---
 
@@ -48,3 +49,9 @@ Tanto en Android como en iOS, un pequeño borde es dibujado en la parte inferior
 | `android.icon` | `String` | El ícono para mostrar en Android.
 | `android.iconVisibility` | `String` | Indica cuando el ícono esta visible o no (solo Android).
 | `flat` | `boolean` | Elimina el borde y el filtro en iOS.<br> Valor por defecto: `false`.
+
+## Componente nativo
+
+| Android | iOS |
+|---------|-----|
+| [`android.widget.Toolbar`](https://developer.android.com/reference/android/widget/Toolbar.html)	| [`UINavigationBar`](https://developer.apple.com/documentation/uikit/uinavigationbar)

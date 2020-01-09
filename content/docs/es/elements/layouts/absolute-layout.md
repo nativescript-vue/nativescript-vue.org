@@ -2,11 +2,11 @@
 title: AbsoluteLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_absolute_layout_
 docRef: https://docs.nativescript.org/ui/layouts/layout-containers#absolutelayout
-contributors: [ianaya89]
+contributors: [ianaya89, msaelices]
 ---
 
 
-El contenedor `AbsoluteLayout` es el *layout* más simple de NativeScript. Usa coordenadas absolutas para posicionar los componentes hijos a partir del vértice superior izquierdo.
+El contenedor `<AbsoluteLayout>` es el *layout* más simple de NativeScript. Usa coordenadas absolutas para posicionar los componentes hijos a partir del vértice superior izquierdo.
 `AbsoluteLayout` no aplicará ninguna restricción de diseño a tus elementos hijos y tampoco los redimensionará en tiempo de ejecución (cuando cambie su tamaño).
 
 El contenedor `<AbsoluteLayout>` es el *layout* más simple de NativeScript
@@ -51,7 +51,7 @@ No tiene propiedades.
 
 ## Additional children props
 
-Cuando un elemento es hijo directo de AbsoluteLayout, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
+Cuando un elemento es hijo directo de `<AbsoluteLayout>`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
 
 | Name | Type | Description |
 |------|------|-------------|

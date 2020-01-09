@@ -1,10 +1,10 @@
 ---
 title: FlexboxLayout
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_flexbox_layout_
-contributors: [ianaya89]
+contributors: [ianaya89, msaelices]
 ---
 
-El contenedor `FlexboxLayout` es una implementación (no exacta) de [CSS Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox). Este contenedor, permite ubicar elemento hijos de forma horizontal y vertical.
+El contenedor `<FlexboxLayout>` es una implementación (no exacta) de [CSS Flexbox Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox). Este contenedor, permite ubicar elemento hijos de forma horizontal y vertical.
 
 ## Ejemplos
 
@@ -104,7 +104,7 @@ El siguiente ejemplo muestra como usar:
 
 ## Propiedades de elementos hijos
 
-Cuando un elemento es hijo directo de `FlexboxLayout`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
+Cuando un elemento es hijo directo de `<FlexboxLayout>`, las siguientes propiedades pueden ser utilizadas en ese elemento hijo:
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|

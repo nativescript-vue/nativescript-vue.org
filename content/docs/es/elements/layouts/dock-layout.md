@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_lay
 contributors: [ianaya89]
 ---
 
-El contenedor `DockLayout` provee un mecanismo de acoplamiento para los elementos hijos que permite ubicarlos a los costados o en el centro del contenedor.
+El contenedor `<DockLayout>` provee un mecanismo de acoplamiento para los elementos hijos que permite ubicarlos a los costados o en el centro del contenedor.
 
 `<DockLayout>` se comporta de la siguiente forma:
 

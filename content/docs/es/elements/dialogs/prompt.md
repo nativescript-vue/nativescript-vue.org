@@ -1,7 +1,7 @@
 ---
 title: PromptDialog
 apiRef: https://docs.nativescript.org/api-reference/modules/_ui_dialogs_#prompt
-contributors: [ianaya89]
+contributors: [ianaya89, msaelices]
 ---
 
 El método `prompt()` muestra en pantalla un diálogo que permite al usuario ingresar información en un campo de texto.
@@ -37,7 +37,7 @@ prompt({
 
 ## Configurar el tipo de campo
 
-También puedes configurar que tipo de campo deseas mostrar usando la propiedad `inputType`. Puedes optar entre los valores `text` (valor por defecto), `email` y `password`
+También puedes configurar que tipo de campo deseas mostrar usando la propiedad `inputType`. Puedes optar por texto plano (`text`) que es el valor por defecto, input para correo electrónico (`email`) y input que oculta el texto para constraseñas (`password`).
 
 ```JavaScript
 inputType: dialogs.inputType.text

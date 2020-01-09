@@ -15,14 +15,14 @@ Para usar NativeScript-Vue, necesitas preparar tu entorno local para poder compi
 
 ### Node.js
 
-Descargar e instalar la ultima version LTS de Node.js desde [https://nodejs.org/](https://nodejs.org/). Reiniciar la terminal y verificar que la instalación haya finalizado correctamente. Para eso puedes ejecutar el comando `node --version`.
+Descargar e instalar la ultima version _LTS_ de Node.js desde [https://nodejs.org/](https://nodejs.org/). Reiniciar la terminal y verificar que la instalación haya finalizado correctamente. Para eso puedes ejecutar el comando `node --version`.
 
 ### NativeScript CLI
 
 Para instalar NativeScript CLI, abre la terminal y ejecuta el siguiente comando:
 
 ```shell
-$ npm i -g nativescript
+$ npm install -g nativescript
 ```
 
 Puedes verificar que la instalación fue exitosa usando el comando `tns`. Una vez que lo ejecutes, deberías poder visualizar una lista de las comandos disponibles.

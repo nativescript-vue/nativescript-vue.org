@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_stack_la
 contributors: [ianaya89]
 ---
 
-El contenedor `StackLayout` apila los elementos hijos de forma vertical (comportamiento por defecto) u horizontal.
+El contenedor `<StackLayout>` apila los elementos hijos de forma vertical (comportamiento por defecto) u horizontal.
 
 ## Ejemplos
 
