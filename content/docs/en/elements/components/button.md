@@ -16,6 +16,22 @@ For more information about the available gestures, see [Gestures in the official
 
 [> screenshots for=Button <]
 
+## Styling the button
+
+If you need to style parts of the text, you can use a combination of a `FormattedString` and `Span` elements.
+
+```html
+<Button>
+  <FormattedString>
+    <Span text="This text has a " />
+    <Span text="red " style="color: red" />
+    <Span text="piece of text. " />
+    <Span text="Also, this bit is italic, " fontStyle="italic" />
+    <Span text="and this bit is bold." fontWeight="bold" />
+  </FormattedString>
+</Button>
+```
+
 ## Props
 
 | Name | Type | Description |
