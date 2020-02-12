@@ -610,7 +610,7 @@ export default {
 
 Asi es como tu aplicación luce al principio de la sección y como lo hará una vez que finalices la misma.
 
-| Pestaña 1 - Sin estukis | Pestaña 1 - Boton con estilos | Pestaña 1 - Campo de texto con estilos |
+| Pestaña 1 - Sin estilos | Pestaña 1 - Boton con estilos | Pestaña 1 - Campo de texto con estilos |
 |-----|-------------|----|
 | ![Sin estilos](/screenshots/ns-playground/input-field.jpg) | ![Boton con estilos](/screenshots/ns-playground/styled-button.jpg) | ![Campo de texto sin estilos](/screenshots/ns-playground/styled-input.jpg) |
 
