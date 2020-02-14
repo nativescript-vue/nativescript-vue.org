@@ -6,7 +6,7 @@ contributors: [Tardigrada777]
 
 `<Page>` - визуальный компонент, представляющий экран приложения. NativeScript приложения
 обычно состоят из одного или нескольких `<Page>` компонентов, которые содержат внутри себя
-другие UI-виджеты, например [`<ActionBar>`](/en/docs/elements/action-bar/action-bar).
+другие UI-виджеты, например [`<ActionBar>`](/ru/docs/elements/action-bar/action-bar).
 
 ---
 
