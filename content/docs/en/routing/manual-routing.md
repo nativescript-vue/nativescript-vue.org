@@ -346,7 +346,7 @@ new Vue({
 }).$start();
 ```
 
-To create a new application utilizing the `<ButtomNavigation>` component run:
+To create a new application utilizing the `<BottomNavigation>` component run:
 
 ```bash
 tns create my-app-name --template tns-template-tab-navigation-vue
