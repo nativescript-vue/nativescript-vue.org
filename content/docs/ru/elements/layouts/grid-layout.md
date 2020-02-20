@@ -48,7 +48,7 @@ contributors: [rigor789, ikoevska]
 ```
 <img class="md:w-1/2 lg:w-1/3" src="https://art.nativescript-vue.org/layouts/grid_layout_star_sizing.svg" />
 
-#### Grid layout with fixed and auto sizing
+#### Разметка сетки с фиксированным и автоматическим размером
 
 ```html
 <GridLayout columns="80, auto" rows="80, 80" backgroundColor="#3c495e">
