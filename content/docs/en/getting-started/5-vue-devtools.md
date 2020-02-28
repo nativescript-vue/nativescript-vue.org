@@ -17,6 +17,7 @@ $ cd <project-folder>
 $ npm install --save @vue/devtools nativescript-toasty nativescript-socketio nativescript-vue-devtools
 ```
 
+<!--
 ## (Optional) Step 2: Install Vue DevTools globally
 
 To easily access Vue DevTools, you can install the package globally.
@@ -28,8 +29,9 @@ $ npm install -g @vue/devtools
 ```
 
 After the installation is complete, you can run the `vue-devtools` command from any directory on your development machine.
+-->
 
-## Step 3: Install the `nativescript-vue-devtools` plugin in your app
+## Step 2: Install the `nativescript-vue-devtools` plugin in your app
 
 To connect your application to the Vue DevTools, you need to modify `main.js` (or `main.ts`).
 
@@ -49,20 +51,19 @@ If you are using a real device instead of an emulator, set the `host` configurat
 Vue.use(VueDevtools, { host: '192.168.1.42' })
 ```
 
-## Step 4: Run Vue DevTools
+## Step 3: Run Vue DevTools
 
-Run the following command to launch the Vue DevTools:
+Run the following command in a new terminal to launch Vue DevTools:
 
 ```shell
-$ # if installed globally
-$ vue-devtools
-$ # or
 $ npx vue-devtools
 ```
 
-## Step 5: Rebuild and run your app
+A window should open. Instructions shown in this window are not required in a NativeScript-Vue application, so please ignore them. 
 
-Run the following command:
+## Step 4: Rebuild and run your app
+
+Run the following commands:
 
 ```shell
 $ rm -rf platforms
@@ -72,3 +73,18 @@ $ tns run ios
 ```
 
 If your machine and app are configured properly, you should see a few components in the component tree of Vue DevTools.
+
+# Troubleshooting
+
+On Android API level 28 and above, cleartext traffic is disabled by default. In order to connect to Vue DevTools you will have to add 
+`android:usesCleartextTraffic="true"` to the `App_Resources/Android/src/main/AndroidManifest.xml` file:
+
+```xml
+<application
+ <!-- ... -->
+ android:usesCleartextTraffic="true"
+ <!-- ... -->
+</application>
+```
+
+After making the change, delete the `platforms` folder, and rebuild the app. Vue DevTools should now connect automatically. 
