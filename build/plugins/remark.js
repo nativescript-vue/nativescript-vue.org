@@ -1,3 +1,6 @@
+const low = require('lowlight');
+low.registerAlias('xml', [ 'vue', 'Vue' ]);
+
 const remark = require('remark');
 const lint = require('remark-preset-lint-recommended');
 const html = require('remark-html');
@@ -9,6 +12,7 @@ const squeezeParagraphs = require('remark-squeeze-paragraphs');
 const remarkPing = require('remark-ping');
 const shortcodes = require('remark-shortcodes');
 const report = require('vfile-reporter');
+
 
 function processMarkdown(contents) {
   return new Promise((resolve, reject) => {
