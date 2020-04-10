@@ -321,19 +321,19 @@ const App = {
       </TabStrip>
 
       <TabContentItem>
-        <Frame>
+        <Frame id="homeTabFrame">
           <Items />
         </Frame>
       </TabContentItem>
 
       <TabContentItem>
-        <Frame>
+        <Frame id="browseTabFrame">
           <Browse />
         </Frame>
       </TabContentItem>
 
       <TabContentItem>
-        <Frame>
+        <Frame id="searchTabFrame">
           <Search />
         </Frame>
       </TabContentItem>
