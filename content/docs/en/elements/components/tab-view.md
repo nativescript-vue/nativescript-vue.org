@@ -4,6 +4,8 @@ apiRef: https://docs.nativescript.org/api-reference/classes/_ui_tab_view_.tabvie
 contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, kharysharpe, ramsesmoreno]
 ---
 
+Note: In NativeScript 6 we introduced two new tab navigation components to the core modules suite. They are dubbed `BottomNavigation` and `Tabs` and are meant to be new and better alternatives to the existing `TabView` component. Read more [here](https://www.nativescript.org/blog/tabs-and-bottomnavigation-nativescripts-two-new-components).
+
 `<TabView>` is a navigation component that shows content grouped into tabs and lets users switch between tabs.
 
 ---
