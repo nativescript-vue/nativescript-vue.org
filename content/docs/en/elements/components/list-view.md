@@ -49,9 +49,15 @@ Only the above variables are available in this scope, and currently you do not h
 
 ## An important note about `v-for`
 
-`<ListView>` does not loop through list items as you would expect when using a [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) loop. Instead `<ListView>` only creates the necessary views to display the currently visible items on the screen, and reuses the views that are already off-screen when scrolled. This concept is called _view recycling_ and is commonly used in mobile apps to improve performance. 
+`<ListView>` does not loop through list items as you would expect when using a [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) loop. Instead `<ListView>` only creates the necessary views to display the currently visible items on the screen, and reuses the views that are already off-screen when scrolled. This concept is called _view recycling_ and is commonly used in mobile apps to improve performance.
 
-This is important because **you can't rely on event listeners attached inside the `v-template`**. Instead, you need to use the `itemTap` event which contains the index of the tapped item and the actual item from the list.
+**This is important, because you should not use `key` properties within your v-templates, as they will force the ListView to re-create the views and prevent view recycling from working properly.**
+
+To use multiple event listeners within a ListView, you can pass in the current item to the listener with `@tap="onTap(item, $event)"`.
+
+[Check out this playground with multiple buttons in each ListView cell](https://play.nativescript.org/?template=play-vue&id=ZEgWFu&v=1)
+
+If you only need to handle taps on the whole cell, you can use the `itemTap` event which contains the index of the tapped item and the actual item from the list.
 
 ```javascript
 onItemTap(event) {
