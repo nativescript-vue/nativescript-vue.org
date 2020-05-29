@@ -36,7 +36,7 @@ The following example creates a simple 2-by-2 grid with fixed column widths and 
 
 ### Grid layout with star sizing
 
-The following example creates a grid with responsive design, where space is alotted proportionally to child elements.
+The following example creates a grid with responsive design, where space is allotted proportionally to child elements.
 
 ```html
 <GridLayout columns="*, 2*" rows="2*, 3*" backgroundColor="#3c495e">
