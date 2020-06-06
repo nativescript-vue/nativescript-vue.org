@@ -11,7 +11,7 @@ This brings us to Parse. [Parse](http://parseplatform.org/) was handed over to t
 
 Lets see how we use Parse in NativeScript-Vue (it should also work in NativeScript). I am going to assume the following:
 * We are starting a new NativeScript-Vue project called `myApp` from scratch. 
-* You have already signed up for a Parse account at a hosting provider or created your own parse server on Heroku. If you dont have an account I would suggest [back4app.com](https://www.back4app.com) they have a generous free tier.
+* You have already signed up for a Parse account at a hosting provider or created your own parse server on Heroku. If you don't have an account I would suggest [back4app.com](https://www.back4app.com) they have a generous free tier.
 
 Lets jump into it.
 Open terminal and enter the following to create a new NativeScript-Vue app

@@ -21,7 +21,7 @@ contributors: [rigor789, ikoevska, msaelices]
 
 #### Using the `loaded` event for triggering UI changes
 
-A typical scenario is performing UI changes after tha page is loaded. The recommended way to do it is by using the `loaded` event, triggered by NativeScript when the page is fully loaded:
+A typical scenario is performing UI changes after the page is loaded. The recommended way to do it is by using the `loaded` event, triggered by NativeScript when the page is fully loaded:
 
 ```html
 <Page @loaded="greet">

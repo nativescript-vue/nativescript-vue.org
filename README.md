@@ -24,7 +24,7 @@ npm run build
 
 ## Serve the documentation
 
-Install the `serve` npm package globaly:
+Install the `serve` npm package globally:
 
 ```bash
 npm install -g serve

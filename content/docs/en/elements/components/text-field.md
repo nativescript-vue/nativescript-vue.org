@@ -31,7 +31,7 @@ contributors: [MisterBrownRSA, rigor789, TheOriginalJosh, eddyverbruggen, ikoevs
 | `hint` | `String` | Gets or sets the placeholder text.
 | `isEnabled` | `Boolean` | Make the field disabled or enabled. Default value is `true`.
 | `editable` | `Boolean` | When `true`, indicates that the user can edit the value of the field.
-| `maxLength` | `Number` | Limits input to the spcified number of characters.
+| `maxLength` | `Number` | Limits input to the specified number of characters.
 | `secure` | `Boolean` | Hides the entered text when `true`. Use this property to create password input fields.<br/>Default value: `false`.
 | `keyboardType` | `KeyboardType` | Shows a custom keyboard for easier text input.<br/>Valid values: `datetime`, `phone`, `number`, `url`, or `email`.
 | `returnKeyType` | `ReturnKeyType` | Gets or sets the label of the return key.<br/>Valid values: `done`, `next`, `go`, `search`, or `send`.
