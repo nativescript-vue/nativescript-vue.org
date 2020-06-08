@@ -14,9 +14,11 @@ For more complex navigation scenarios, you can use multiple `<Frame>` components
 * [`BottomNavigation & Tabs`](#bottomnavigation-and-tabs-navigation)
 * [`SideDrawer`](#sidedrawer-navigation)
 
-## NativeScript-Navigation
+## How Navigation Works
 
-![[NativeScript-Navigation](/static/NativeScript-Navigation.png)](/static/NativeScript-Navigation.png)
+Navigation Diagram
+
+![[NativeScript Navigation Diagram](/static/NativeScript-Navigation.png)](/static/natigateAnimate.gif)
 
 ### `$navigateTo(Component, options)`
 
