@@ -16,7 +16,7 @@ For more complex navigation scenarios, you can use multiple `<Frame>` components
 
 ## How Navigation Works
 
-Navigation Diagram
+Animated Navigation Diagram
 
 ![[NativeScript Navigation Diagram](/static/NativeScript-Navigation.png)](/static/natigateAnimate.gif)
 
