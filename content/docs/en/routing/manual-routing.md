@@ -16,10 +16,9 @@ For more complex navigation scenarios, you can use multiple `<Frame>` components
 
 ## How Navigation Works
 
-Watch animated **Navigation Diagram** *(click over to see full diagram)*
+![Watch animated **Navigation Diagram**](/static/natigateAnimate.gif)
 
-![[NativeScript Navigation Diagram](/static/NativeScript-Navigation.png)](/static/natigateAnimate.gif)
-
+[Link to full Navigation Diagram](/static/NativeScript-Navigation.png)
 ### `$navigateTo(Component, options)`
 
 You can call `$navigateTo` in the view or in a method.
