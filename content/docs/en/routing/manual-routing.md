@@ -14,6 +14,10 @@ For more complex navigation scenarios, you can use multiple `<Frame>` components
 * [`BottomNavigation & Tabs`](#bottomnavigation-and-tabs-navigation)
 * [`SideDrawer`](#sidedrawer-navigation)
 
+## NativeScript-Navigation
+
+![[NativeScript-Navigation](/static/NativeScript-Navigation.png)](/static/NativeScript-Navigation.png)
+
 ### `$navigateTo(Component, options)`
 
 You can call `$navigateTo` in the view or in a method.
@@ -96,8 +100,12 @@ const Detail = {
 
 `$navigateTo` accepts a second `options` parameter. You can use the parameter to:
 
-* Set the transition 
+* Set the transition: This attribute lets you specify the native transition for the nsRouterLink navigation. Accepted values are true, false, one of the predefined transitions 
+
 * Pass a `props` object to be used when instantiating the target component 
+
+
+* clearHistory - This attribute accepts a boolean value and indicates whether the navigation triggered by the nsRouterLink will clear the navigation history of the current outlet.
 
 For example:
 
