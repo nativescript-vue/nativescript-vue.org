@@ -17,7 +17,7 @@ But if [you already have your system ready for native development](/en/docs/gett
 > **Note**: If you choose to install DevTools, you won't be able to use `tns preview`, as the Preview app doesn't support one of the plugins DevTools uses.
 
 ```shell
-$ npm install -g @vue/cli @vue/cli-init
+$ sudo npm install -g @vue/cli @vue/cli-init
 $ vue init nativescript-vue/vue-cli-template <project-name>
 $ cd <project-name>
 $
