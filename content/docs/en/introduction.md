@@ -30,7 +30,7 @@ There are many options to build mobile apps. Here are some situations where we t
 If you have existing Vue experience, there are two big things you’ll need to learn to be successful with NativeScript-Vue.
 
 * **Working with the NativeScript CLI**: NativeScript is a framework for building iOS and Android apps, not web apps. You’ll need to learn how a few commands work in the NativeScript CLI, and some basics of how iOS simulators and Android Virtual Devices work.
-* **Learning the NativeScript UI components**: Because NativeScript uses native user interface components, HTML controls like `<div>` and `<span>` don’t exist in NativeScript. Instead you’ll need to learn a [new set of components](https://docs.nativescript.org/ui/components) you can use to render your interfaces.
+* **Learning the NativeScript UI components**: Because NativeScript uses native user interface components, HTML controls like `<div>` and `<span>` don’t exist in NativeScript. Instead you’ll need to learn a [new set of components](https://docs.nativescript.org/ui/overview) you can use to render your interfaces.
 
 Don’t worry though. Although there is a learning curve for working with NativeScript-Vue, you should find things much easier than learning iOS or Android from the ground up. After all, you’ll still be writing your source code in JavaScript and Vue.
 
