@@ -38,3 +38,13 @@ This set of commands performs the following operations on your system:
 4. Installs any npm dependencies locally.
 5. If executing `tns preview`, produces a QR code which can be used to preview the app on a device.
 6. If executing `tns run`, builds and runs the project on all connected devices or in native emulators.
+
+### If you're experiencing problems while installation
+
+1. I installed according to the instructions. But, it is giving me the error:
+```bash
+ENOENT: no such file or directory, open 'E:\Otabek\nativescript\anor\nativescript.config.js'
+```
+What I can do in such a situation?
+
+**Answer:** [Installing Nativescript correctly on devices] (https://nativescript-vue.org/en/docs/getting-started/installation/) or [Installing Nativescript](https://docs.nativescript.org/angular/start/quick-setup)
