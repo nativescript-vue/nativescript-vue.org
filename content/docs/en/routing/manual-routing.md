@@ -115,7 +115,7 @@ this.$navigateTo(Detail, {
 
 For more information about the options that you can pass, see [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
 
-#### Using transitions while navigating
+#### Specifying a transition
 
 You can use multiple transitions when routing.
 Can be one of the built-in transitions:
