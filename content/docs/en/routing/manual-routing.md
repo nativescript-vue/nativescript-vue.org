@@ -117,8 +117,7 @@ For more information about the options that you can pass, see [`NavigationEntry`
 
 #### Specifying a transition
 
-You can use multiple transitions when routing.
-Can be one of the built-in transitions:
+You can use any of the built-in transitions:
 
 - curl (same as curlUp) (iOS only)
 - curlUp (iOS only)
