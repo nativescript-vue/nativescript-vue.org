@@ -115,6 +115,37 @@ this.$navigateTo(Detail, {
 
 For more information about the options that you can pass, see [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
 
+#### Specifying a transition
+
+You can use any of the built-in transitions:
+
+- curl (same as curlUp) (iOS only)
+- curlUp (iOS only)
+- curlDown (iOS only)
+- explode (Android Lollipop(21) and up only)
+- fade
+- flip (same as flipRight)
+- flipRight
+- flipLeft
+- slide (same as slideLeft)
+- slideLeft
+- slideRight
+- slideTop
+- slideBottom
+
+For example:
+
+```JavaScript
+this.$navigateTo(Detail, {
+  transition: {
+    name: "slideLeft",
+    duration: 300,
+    curve: "easeIn"
+  },
+});
+```
+
+
 #### Navigating within a frame
 
 Each [`<Frame>`](/en/docs/elements/components/frame) element has its own navigation stack. If you are using [multiple frames](/en/docs/elements/components/frame#multiple-frames), you may want to specify in which frame the navigation will occur. For example, having a button in the side bar that changes the page in the main area. You can do this by adding the `frame` option:
