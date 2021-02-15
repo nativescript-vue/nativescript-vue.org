@@ -143,7 +143,6 @@ this.$navigateTo(Detail, {
     duration: 300,
     curve: "easeIn"
   },
-
 });
 ```
 
