@@ -1,20 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const store = new Vue({
+    data: {
+      isMobile: false
+    },
+    methods: {
+      _resizeListener() {
+        this.isMobile = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 768
+      }
+    },
+  })
+
+  // attach resize listener
+  window.addEventListener('resize', store._resizeListener);
+  store._resizeListener();
+
   new Vue({
     el: '#app',
+    name: 'NavApp',
 
     data: {
       modalVisible: false,
       modalLoaded: false,
-      isMobile: false,
       navOpen: false,
     },
-    created() {
-      this._resizeListener = () => {
-        this.isMobile = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 768
-      };
-      window.addEventListener('resize', this._resizeListener);
-      this._resizeListener();
+
+    computed: {
+      isMobile() {
+        return store.isMobile
+      }
     },
+
     mounted() {
       const lang = document.documentElement.lang || 'en'
       const [version] = window.location.hostname.match(/v\d-\d-\d/) || ['master']
@@ -27,10 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         debug: false
       })
     },
-    destroyed() {
-      window.removeEventListener('resize', this._resizeListener)
-    },
-    methods: {},
+
     directives: {
       nav(el) {
         el.addEventListener('change', (e) => {
@@ -39,4 +51,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  const carbonComponent = {
+    render: h => h('div', { class: 'carbon' }),
+
+    mounted() {
+      const script = document.createElement('script')
+      script.id = '_carbonads_js'
+      script.src = '//cdn.carbonads.com/carbon.js?serve=CESD42JM&placement=nativescript-vueorg'
+
+      this.$el.appendChild(script)
+    }
+  }
+
+  new Vue({
+    el: '#docs-app',
+    name: 'DocsApp',
+
+    computed: {
+      isMobile() {
+        return store.isMobile
+      }
+    },
+
+    components: {
+      carbonComponent
+    }
+  })
 });

@@ -44,9 +44,7 @@
 }
 
 .carbon {
-    margin-bottom: -32px;
-    padding-top: 32px;
-    padding-right: 4px;
+    padding-top: 16px;
 }
 
 #carbonads {
@@ -67,7 +65,7 @@
 }
 #carbonads .carbon-wrap {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #carbonads .carbon-img {
@@ -99,6 +97,22 @@
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+@screen md {
+    .carbon {
+        margin-bottom: -32px;
+        padding-top: 32px;
+        padding-right: 4px;
+    }
+
+    #carbonads .carbon-wrap {
+        flex-direction: column;
+    }
+
+    #carbonads .carbon-text {
+        padding: 10px;
+    }
 }
 
 @screen xl {
