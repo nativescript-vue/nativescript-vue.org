@@ -28,7 +28,7 @@ Run the following command to create a new project from the Vue-CLI template.
 
 ```shell
 $ npm install -g @vue/cli @vue/cli-init
-$ ns create <project-name> --template @nativescript/template-blank-vue 
+$ ns create <project-name> --vue
 $ cd <project-name>
 $ npm install
 $ tns preview
