@@ -182,51 +182,7 @@ const Detail = {
 
 Use `$showModal` to show the `Detail` page modally. This function behaves similarly to `$navigateTo`.
 
-You can call `$showModal` in the view or in a method. To close the modal, call `$modal.close`.
-
-#### In the view
-
-In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$showModal(<propertyName>)` in the view directly.
-
-```Vue
-import Vue from 'nativescript-vue';
-
-const Master = {
-  template: `
-    <Page>
-      <ActionBar title="Master" />
-      <StackLayout>
-        <Button text="To Details directly" @tap="$showModal(detailPage)" />
-      </StackLayout>
-    </Page>
-  `,
-
-  data() {
-    return {
-      detailPage: Detail
-    }
-  }
-};
-
-const Detail = {
-  template: `
-    <Page>
-      <ActionBar title="Detail"/>
-      <StackLayout>
-        <Button @tap="$modal.close" text="Close" />
-      </StackLayout>
-    </Page>
-  `
-};
-
-new Vue({
-  render: h => h('frame', [h(Master)])
-}).$start()
-```
-
-#### In a method
-
-Bind a button to a method and use `this.$showModal(Detail)` to navigate to the `Detail` component.
+To close the modal, call `$modal.close`.
 
 ```Vue
 const Master = {
@@ -315,80 +271,14 @@ this.$showModal(Detail).then(data => console.log(data));
 <Button @tap="$modal.close('Foo')" text="Close" />
 ```
 
-### BottomNavigation and Tabs Navigation
-
-The `<BottomNavigation>` and `<Tabs>` components enable the user to arbitrarily navigate between several UI containers at the same level. A key feature of these components is that they keep the state of the containers that are not visible. This means that when the user comes back to a previous tab, the data, scroll position and navigation state should be like they left them. 
-
-The examples below use the `<BottomNavigation>` component. You can use the same markup for the `<Tabs>` component. Just replace the `<BottomNavigation>` tags with `<Tabs>` tags.
-
-The `<BottomNavigation>` container provides its lateral navigation logic automatically by providing the user with tabs which they can select. To set up a `<BottomNavigation>` you need to simply declare the UI of each container (within a `<TabContentItem>`) and the title and icon you want to be shown in its representing tab (within a `<TabStripItem>`). Each separate UI container is represented by a `<TabContentItem>`. A `<TabContentItem>` can have one root component. As with other containers, you can enable forward and backward navigation inside each `<TabContentItem>` by embedding a `<Frame>` in it.
-
-```Vue
-import Vue from 'nativescript-vue';
-
-import Items from './components/Items.vue';
-import Browse from './components/Browse.vue';
-import Search from './components/Search.vue';
-
-const App = {
-  components: {
-    Items,
-    Browse,
-    Search
-  },
-
-  template: `
-    <BottomNavigation>
-      <TabStrip>
-        <TabStripItem>
-          <Label text="Home"></Label>
-        </TabStripItem>
-        <TabStripItem>
-          <Label text="Browse"></Label>
-        </TabStripItem>
-        <TabStripItem>
-          <Label text="Search"></Label>
-        </TabStripItem>
-      </TabStrip>
-
-      <TabContentItem>
-        <Frame id="homeTabFrame">
-          <Items />
-        </Frame>
-      </TabContentItem>
-
-      <TabContentItem>
-        <Frame id="browseTabFrame">
-          <Browse />
-        </Frame>
-      </TabContentItem>
-
-      <TabContentItem>
-        <Frame id="searchTabFrame">
-          <Search />
-        </Frame>
-      </TabContentItem>
-    </BottomNavigation>
-  `
-};
-
-new Vue({
-  render: h => h(App)
-}).$start();
-```
-
-To create a new application utilizing the `<BottomNavigation>` component run:
-
-```bash
-tns create my-app-name --template tns-template-tab-navigation-vue
-```
-
 ### SideDrawer Navigation
 
-The `<RadSideDrawer>` component enables the user to open a hidden view, i.e. drawer, containing navigation controls, or settings from the sides of the screen. For more information about it, read the [dedicated article](https://docs.nativescript.org/vuejs/ns-ui/SideDrawer/getting-started).
+We've built `<MultiDrawer>` to allow showing multiple drawers on the screen from all sides. Refer to the docs in the project github page: https://github.com/nativescript-vue/nativescript-vue-multi-drawer
 
-To create a new application utilizing the `<RadSideDrawer>` component run:
+Another option is the `<RadSideDrawer>` component. For more information, refer to the [dedicated article](https://v7.docs.nativescript.org/vuejs/ns-ui/SideDrawer/getting-started).
+
+To create a new application with `<RadSideDrawer>` run:
 
 ```bash
-tns create my-app-name --template tns-template-drawer-navigation-vue
+ns create myDrawerApp --template @nativescript/template-drawer-navigation-vue
 ```
