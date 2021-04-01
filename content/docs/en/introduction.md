@@ -43,4 +43,4 @@ NativeScript-Vue is an open source project and contributions are very much encou
 NativeScript-Vue is relatively feature-complete. At this time we’re focusing on two things:
 
 * **Documentation**: Not everything you can do in NativeScript-Vue is documented on this site. We’re actively adding samples and use cases to this site, and contributions are welcome.
-* **Sample apps**: We’re looking for people to put this plugin through its paces and send feedback our way. If you’re interested, join the [NativeScript Community Slack](https://www.nativescript.org/slack-invitation-form) and let us know in the #vue channel.
+* **Sample apps**: We’re looking for people to put this plugin through its paces and send feedback our way. If you’re interested, join the [NativeScript Community Discord](https://www.nativescript.org/discord) and let us know in the #vue channel.
