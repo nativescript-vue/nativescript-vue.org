@@ -22,6 +22,6 @@ To install the NativeScript CLI, open your terminal and run:
 $ npm install -g nativescript
 ```
 
-Verify the installation was successful by running `tns` in your terminal. You should see a list of the available commands.
+Verify the installation was successful by running `ns -v` in your terminal. You should see a list of the available commands.
 
 For setting up your system, follow the official docs here: https://docs.nativescript.org/environment-setup.html
