@@ -8,7 +8,7 @@ contributors: [rigor789, ikoevska]
 
 `<DockLayout>` has the following behavior:
 
-* Uses the `dock` property to dock its children to the `left`, `right`, `top`, `bottom` or center of the layout.<br/>To dock a child element to the center, it must be the **last child** of the container and you must set the `stretchLastChild` property of the parent to `true`.
+* Uses the `dock` property to dock its children to the `left`, `right`, `top`, `bottom` or `center` of the layout.<br/>To dock a child element to the center, it must be the **last child** of the container and you must set the `stretchLastChild` property of the parent to `true`.
 * Enforces layout constraints to its children.
 * Resizes its children at runtime when its size changes.
 
