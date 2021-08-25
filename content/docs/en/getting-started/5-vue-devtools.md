@@ -14,7 +14,7 @@ Run the following command:
 
 ```shell
 $ cd <project-folder>
-$ npm install --save @vue/devtools@^5.3.4 @triniwiz/nativescript-toasty @triniwiz/nativescript-socketio nativescript-vue-devtools
+$ npm install --save @vue/devtools@^5.3.4 @triniwiz/nativescript-toasty @triniwiz/nativescript-socketio@4.0.1 nativescript-vue-devtools
 ```
 
 <!--
