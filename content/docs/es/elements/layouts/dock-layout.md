@@ -8,7 +8,7 @@ El contenedor `<DockLayout>` provee un mecanismo de acoplamiento para los elemen
 
 `<DockLayout>` se comporta de la siguiente forma:
 
-* Usa la propiedad `dock` para ubicar los elementos con los valores: `left`, `right`, `top`, `bottom`.
+* Usa la propiedad `dock` para ubicar los elementos con los valores: `left`, `right`, `top`, `bottom` and `center`.
 * Permite acoplar un elemento hijo en el centro del contenedor. En ese caso, este deberá ser el último hijo del contenedor `<DockLayout>` y la propiedad de `stretchLastChild` (de `<DockLayout>`) deberá tener el valor `true`.
 * Fuerza restricciones de posicionamiento sobre los elementos hijos.
 * Redimensiona los elementos hijos en tiempo de ejecución, cuando estos cambian de tamaño.

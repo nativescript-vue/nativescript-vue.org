@@ -8,7 +8,7 @@ contributors: [nuochong]
 
 `<DockLayout>` 有以下行为：
 
-* 使用 `dock` 属性及其子元素停靠到布局的 `left`, `right`, `top`, `bottom` 或布局的中心。<br/>要将子元素停靠到中心，它必须是容器的 **最后** 一个子元素，并且必须将 `stretchLastChild` 父元素的属性设置为 `true`。
+* 使用 `dock` 属性及其子元素停靠到布局的 `left`, `right`, `top`, `bottom`, `center` 或布局的中心。<br/>要将子元素停靠到中心，它必须是容器的 **最后** 一个子元素，并且必须将 `stretchLastChild` 父元素的属性设置为 `true`。
 * 强制对其子项进行布局约束。
 * 当其大小发生变化时，将在运行时调整其子元素的大小。
 

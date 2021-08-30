@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_lay
 contributors: [qgp9]
 ---
 
-DockLayout는 도킹 메커니즘을 제공하는 레이아웃입니다. 자식 요소들은 레이아웃의 `left`, `right`, `top`, `bottom` 혹은 center 에 도킹될 수 있습니다. 자식 요소의 도킹 방향을 정의하려면 `dock` 프로퍼티를 사용합니다.
+DockLayout는 도킹 메커니즘을 제공하는 레이아웃입니다. 자식 요소들은 레이아웃의 `left`, `right`, `top`, `bottom` 혹은 `center` 에 도킹될 수 있습니다. 자식 요소의 도킹 방향을 정의하려면 `dock` 프로퍼티를 사용합니다.
 자식 요소를 DockLayout의 중간(center)에 위치시킬때, 자식요소는 반드시 DockLayout의 **마지막 자식** 이어야 하고
 DockLayout의 `stretchLastChild` 프로퍼티가 반드시 `true` 여야 합니다.
 

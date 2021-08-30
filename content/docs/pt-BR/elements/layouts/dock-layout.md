@@ -4,7 +4,7 @@ apiRef: https://docs.nativescript.org/api-reference/modules/_ui_layouts_dock_lay
 contributors: [alexhiroshi]
 ---
 
-DockLayout é um layout que fornece um mecanismo de encaixe para elementos filhos para `left`, `right`, `top`, `bottom` ou no centro do layout. Para definir o lado do encaixe do elemento filho, use a propriedade `dock`. Para encaixar um elemento filho no centro do DockLayout, o **último filho** do DockLayout e a propriedade `stretchLastChild` do DockLayout devem ser `true`.
+DockLayout é um layout que fornece um mecanismo de encaixe para elementos filhos para `left`, `right`, `top`, `bottom` ou no `centro` do layout. Para definir o lado do encaixe do elemento filho, use a propriedade `dock`. Para encaixar um elemento filho no centro do DockLayout, o **último filho** do DockLayout e a propriedade `stretchLastChild` do DockLayout devem ser `true`.
 
 ### Exemplos
 

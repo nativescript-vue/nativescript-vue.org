@@ -8,7 +8,7 @@ contributors: [Spice-Z]
 
 `<DockLayout>`の特徴は以下の通りです:
 
-* `dock`プロパティは、子要素を固定する方向をレイアウトの`left`, `right`, `top`, `bottom`か中央に設定するときに使います。<br/>子要素を中央へdockしたいときは、それはコンテナの中で**子要素の最後**である必要があり、 親要素の`stretchLastChild`プロパティを`true`にする必要があります。
+* `dock`プロパティは、子要素を固定する方向をレイアウトの`left`, `right`, `top`, `bottom`, `center`か中央に設定するときに使います。<br/>子要素を中央へdockしたいときは、それはコンテナの中で**子要素の最後**である必要があり、 親要素の`stretchLastChild`プロパティを`true`にする必要があります。
 * Enforces layout constraints to its children.
 * 子要素のサイズが変更された時、ランタイム上で子要素の大きさを変更します。
 
