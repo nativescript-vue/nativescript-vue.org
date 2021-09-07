@@ -45,7 +45,7 @@
     "remark": "^8.0.0",
     "remark-github": "^7.0.2",
     "remark-highlight.js": "^5.0.0",
-    "remark-html": "^7.0.0",
+    "remark-html": "^13.0.2",
     "remark-ping": "^1.0.8",
     "remark-preset-lint-recommended": "^3.0.1",
     "remark-shortcodes": "^0.1.4",
