@@ -10,7 +10,7 @@ O componente SegementedBar oferece uma maneira simples de mostrar uma coleção 
 
 ```html
 <SegmentedBar :items="listOfItems" selectedIndex="0"
-    @selectedIndexChange="onSelectedIndexChange" />
+    @selectedIndexChanged="onSelectedIndexChange" />
 ```
 
 **Nota**: Esse componente suporta two-way data binding usando `v-model`:
@@ -33,7 +33,7 @@ O componente SegementedBar oferece uma maneira simples de mostrar uma coleção 
 
 | nome | descrição |
 |------|-------------|
-| `selectedIndexChange`| Emitido quando um item da barra segmentada é tocado
+| `selectedIndexChanged`| Emitido quando um item da barra segmentada é tocado
 
 ## Componente Nativo
 | Android | iOS |

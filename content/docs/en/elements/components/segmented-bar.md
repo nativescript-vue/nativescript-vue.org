@@ -22,7 +22,7 @@ As opposed to `<TabView>`:
 
 ```html
 <SegmentedBar :items="listOfItems" selectedIndex="0"
-    @selectedIndexChange="onSelectedIndexChange" />
+    @selectedIndexChanged="onSelectedIndexChange" />
 ```
 
 `<SegmentedBar>` provides two-way data binding using `v-model`.
@@ -45,7 +45,7 @@ As opposed to `<TabView>`:
 
 | Name | Description |
 |------|-------------|
-| `selectedIndexChange`| Emitted when the an item on the segmented bar is tapped.
+| `selectedIndexChanged`| Emitted when the an item on the segmented bar is tapped.
 
 ## Native component
 

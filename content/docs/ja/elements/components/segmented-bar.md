@@ -22,7 +22,7 @@ contributors: [Spice-Z]
 
 ```html
 <SegmentedBar :items="listOfItems" selectedIndex="0"
-    @selectedIndexChange="onSelectedIndexChange" />
+    @selectedIndexChanged="onSelectedIndexChange" />
 ```
 
 `<SegmentedBar>`は`v-model`による双方向バインディングを提供します。
@@ -45,7 +45,7 @@ contributors: [Spice-Z]
 
 | 名前 | 説明 |
 |------|-------------|
-| `selectedIndexChange`| セグメントバーの要素がタップされたときに発火します。
+| `selectedIndexChanged`| セグメントバーの要素がタップされたときに発火します。
 
 ## Native component
 

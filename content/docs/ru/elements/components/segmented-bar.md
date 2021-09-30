@@ -22,7 +22,7 @@ contributors: [sn0wil]
 
 ```html
 <SegmentedBar :items="listOfItems" selectedIndex="0"
-    @selectedIndexChange="onSelectedIndexChange" />
+    @selectedIndexChanged="onSelectedIndexChange" />
 ```
 
 `<SegmentedBar>` обеспечивает двустороннюю привязку данных, используя `v-model`.
@@ -45,7 +45,7 @@ contributors: [sn0wil]
 
 | Имя | Описание |
 |------|-------------|
-| `selectedIndexChange`| Срабатывает при нажатии на элемент в области.
+| `selectedIndexChanged`| Срабатывает при нажатии на элемент в области.
 
 ## Нативный компонент
 
