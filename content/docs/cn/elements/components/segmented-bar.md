@@ -22,7 +22,7 @@ contributors: [nuochong]
 
 ```html
 <SegmentedBar :items="listOfItems" selectedIndex="0"
-    @selectedIndexChange="onSelectedIndexChange" />
+    @selectedIndexChanged="onSelectedIndexChange" />
 ```
 
 `<SegmentedBar>` 使用提供双向数据绑定 `v-model`。
@@ -45,7 +45,7 @@ contributors: [nuochong]
 
 | 名称 | 描述 |
 |------|-------------|
-| `selectedIndexChange`| 点击分段栏上的项目时发出。
+| `selectedIndexChanged`| 点击分段栏上的项目时发出。
 
 ## 原生组件
 

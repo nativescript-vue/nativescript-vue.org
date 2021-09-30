@@ -10,7 +10,7 @@ contributors: [qgp9]
 
 ```html
 <SegmentedBar :items="listOfItems" selectedIndex="0"
-    @selectedIndexChange="onSelectedIndexChange" />
+    @selectedIndexChanged="onSelectedIndexChange" />
 ```
 
 **노트**: 이 컴포넌트는 `v-model` 을 이용한 양방향(two-way) 바인딩을 지원합니다:
@@ -33,7 +33,7 @@ contributors: [qgp9]
 
 | 이름 | 설명 |
 |------|-------------|
-| `selectedIndexChange`| 세그멘트 바의 아이템이 탭될때 발생.
+| `selectedIndexChanged`| 세그멘트 바의 아이템이 탭될때 발생.
 
 ## Native Component
 | Android | iOS |

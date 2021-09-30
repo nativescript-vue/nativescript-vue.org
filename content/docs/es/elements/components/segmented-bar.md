@@ -22,7 +22,7 @@ Al contrario de lo que sucede con el componente `<TabView>`:
 
 ```html
 <SegmentedBar :items="listOfItems" selectedIndex="0"
-    @selectedIndexChange="onSelectedIndexChange" />
+    @selectedIndexChanged="onSelectedIndexChange" />
 ```
 
 `<SegmentedBar>` provee enlace de datos bidireccional (*two-way data binding*) usando `v-model`.
@@ -45,7 +45,7 @@ Al contrario de lo que sucede con el componente `<TabView>`:
 
 | Nombre | Descripción |
 |------|-------------|
-| `selectedIndexChange`| Emitido cada vez que un item es presionado.
+| `selectedIndexChanged`| Emitido cada vez que un item es presionado.
 
 ## Componente nativo
 
