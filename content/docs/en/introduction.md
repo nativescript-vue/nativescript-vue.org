@@ -9,7 +9,7 @@ NativeScript is an open source framework for building truly native mobile applic
 
 ## What is [Vue.js](https://vuejs.org/)?
 
-Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects.
+Vue (pronounced /vjuː/, like view) is a progressive javascript framework for building user interfaces. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects.
 
 ## What is NativeScript-Vue?
 
