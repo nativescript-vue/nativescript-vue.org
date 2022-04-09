@@ -38,7 +38,7 @@
     "metalsmith-static": "^0.0.5",
     "metalsmith-watch": "^1.0.3",
     "mkdirp": "^0.5.1",
-    "moment": "^2.20.1",
+    "moment": "^2.29.2",
     "multimatch": "^2.1.0",
     "parse5": "latest",
     "permalinks": "^1.2.1",
