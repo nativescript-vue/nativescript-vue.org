@@ -28,7 +28,7 @@
     "metalsmith-gzip": "^1.1.0",
     "metalsmith-html-minifier": "^3.0.0",
     "metalsmith-if": "^0.1.1",
-    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-ignore": "^1.0.0",
     "metalsmith-jekyll-dates": "0.0.5",
     "metalsmith-layouts": "^1.8.1",
     "metalsmith-linkcheck": "^0.3.0",
