@@ -152,3 +152,7 @@ Given the flexibility inherent in the generated code structure, the developer is
 ## Showcase Application
 
 For a real-world code-sharing project with NativeScript-Vue, check out [Jen Looper](https://twitter.com/jenlooper)'s code-sharing project, [mandala-me](https://github.com/jlooper/mandala-me).
+
+## Monorepo Template
+Thanks to [Vallemar](https://github.com/vallemar)'s for this great monorepor template containing NativeScript-Vue3-Vite [ns-monorepo-seed](https://github.com/vallemar/ns-monorepo-seed).
+
