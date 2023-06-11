@@ -18,7 +18,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "chalk": "latest",
-    "ejs": "^2.5.7",
+    "ejs": "^3.1.7",
     "hast-util-from-parse5": "latest",
     "hast-util-to-mdast": "^2.1.0",
     "jstransformer-ejs": "0.0.3",
