@@ -14,6 +14,16 @@ For more complex navigation scenarios, you can use multiple `<Frame>` components
 * [`BottomNavigation & Tabs`](#bottomnavigation-and-tabs-navigation)
 * [`SideDrawer`](#sidedrawer-navigation)
 
+### Configuring the `ActionBar`
+Remember to set another element (probably a `Layout`) to display the content when setting up an `ActionBar`. Suppressing the `Layout` **will not** render a blank page and will result in error. 
+```Vue
+<Page>
+  <ActionBar title="Master" />
+  <StackLayout /> <!-- Displaying a blank page! -->
+</Page>
+```
+If you don't provive the `ActionBar`, it will use the parents `ActionBar`. 
+
 ### `$navigateTo(Component, options)`
 
 You can call `$navigateTo` in the view or in a method.
@@ -21,6 +31,8 @@ You can call `$navigateTo` in the view or in a method.
 #### In the view
 
 In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly.
+
+
 
 ```Vue
 import Vue from 'nativescript-vue';
@@ -177,6 +189,7 @@ const Detail = {
   `
 };
 ```
+The `$navigateBack` access the children's scope even when called using an `ActionBar` from its parent (when suppressing the `ActionBar` on the child component). 
 
 ### Modal View Navigation
 
