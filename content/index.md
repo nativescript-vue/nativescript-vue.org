@@ -30,7 +30,7 @@ features:
 
 ### Does it work with Vue 3 or the Composition API?
 
-Yes! Since **3.0**, Vue 3 is supported. You can to use both the Options and the Composition API per your preference.
+Yes! Since **3.0**, Vue 3 is supported. You can use both the Options and the Composition API per your preference.
 
 ### What is NativeScript-Vue?
 
