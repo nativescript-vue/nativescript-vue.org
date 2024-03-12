@@ -1,2 +1,4 @@
 # redirect all languages to main/en
 /docs/:lang/* /docs/:splat
+
+# todo: more redirects as needed.
