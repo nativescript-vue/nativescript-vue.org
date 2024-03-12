@@ -1,0 +1,2 @@
+# redirect all languages to main/en
+/docs/:lang/* /docs/:splat
