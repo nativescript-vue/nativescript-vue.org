@@ -18,14 +18,28 @@ hero:
 
 features:
   - title: Full Vue 3 Experience
-    icon: <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 256 220.8"><path fill="#41B883" d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36Z"/><path fill="#41B883" d="m0 0 128 220.8L256 0h-51.2L128 132.48 50.56 0H0Z"/><path fill="#35495E" d="M50.56 0 128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56Z"/></svg>
-    details: The full Vue experience that runs as a mobile app. No translation layer, your actual Vue code runs as-is.
+    icon: |
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 256 220.8">
+        <path fill="#41B883" d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36Z"/>
+        <path fill="#41B883" d="m0 0 128 220.8L256 0h-51.2L128 132.48 50.56 0H0Z"/>
+        <path fill="#35495E" d="M50.56 0 128 133.12 204.8 0h-47.36L128 51.2 97.92 0H50.56Z"/>
+      </svg>
+    details: |
+      The full Vue experience that runs as a mobile app. No translation layer, your actual Vue code runs as-is.
   - title: Native API Access
     icon: ⚡️
-    details: Thanks to NativeScript's superpower, you get access to ALL native apis right in your JavaScript.
+    details: |
+      Thanks to NativeScript's superpower, you get access to ALL native apis right in your JavaScript.
+      <br>
+      <br>
+      <a href="/docs/full-native-api-access">Learn more &rightarrow;</a>
   - title: Unmatched flexibility
     icon: 💪
-    details: NativeScript supports libraries from various sources, <abbr title="Node Package Manager">NPM</abbr>, Cocoapods, <abbr title="Swift Package Manager">SPM</abbr>, Maven/Gradle and more.
+    details: |
+      NativeScript supports libraries from various sources, <abbr title="Node Package Manager">NPM</abbr>, Cocoapods, <abbr title="Swift Package Manager">SPM</abbr>, Maven/Gradle and more.
+      <br>
+      <br>
+      <a href="/docs/full-native-api-access">Learn more &rightarrow;</a>
 ---
 
 ### Does it work with Vue 3 or the Composition API?
