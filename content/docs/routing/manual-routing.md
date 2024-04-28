@@ -2,6 +2,7 @@
 title: Manual Routing
 contributors: [eddyverbruggen, fartek, rigor789, ikoevska, tralves, sis0k0]
 ---
+# Manual Routing
 
 The easiest way to implement routing in NativeScript-Vue is to use any of the following convenience functions:
 
@@ -23,73 +24,22 @@ You can call `$navigateTo` in the view or in a method.
 In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly.
 
 ```Vue
-import Vue from 'nativescript-vue';
-
-const Master = {
-  template: `
-    <Page>
-      <ActionBar title="Master" />
-      <StackLayout>
-        <Button text="To Details directly" @tap="$navigateTo(detailPage)" />
-      </StackLayout>
-    </Page>
-  `,
-
-  data() {
-    return {
-      detailPage: Detail
-    }
-  }
-};
-
-const Detail = {
-  template: `
-    <Page>
-      <ActionBar title="Detail"/>
-      <StackLayout>
-        <Label text="Details.." />
-      </StackLayout>
-    </Page>
-  `
-};
-
-new Vue({
-  render: h => h('frame', [h(Master)])
-}).$start()
+<Button row="2" @tap="$navigateTo(Details)" class="mt-4 px-4 py-2 bg-white border-2 border-blue-400 rounded-lg"
+horizontalAlignment="center">
+Go To Details
+</Button>
 ```
 
 #### In a method
 
 Bind a button to a method and use `this.$navigateTo(Detail)` to navigate to the `Detail` component.
 
-```Vue
-const Master = {
-  template: `
-    <Page>
-      <ActionBar title="Master" />
-      <StackLayout>
-        <Button text="To Details via method" @tap="goToDetailPage" />
-      </StackLayout>
-    </Page>
-  `,
+```JavaScript
 
-  methods: {
-    goToDetailPage() {
-      this.$navigateTo(Detail);
-    }
-  }
-};
+function goToComponent() {
+  $navigateTo(Details);
+}
 
-const Detail = {
-  template: `
-    <Page>
-      <ActionBar title="Detail"/>
-      <StackLayout>
-        <Label text="Details.." />
-      </StackLayout>
-    </Page>
-  `
-};
 ```
 
 #### Passing props to the target component
@@ -113,7 +63,7 @@ this.$navigateTo(Detail, {
 });
 ```
 
-For more information about the options that you can pass, see [`NavigationEntry`](https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationentry).
+For more information about the options that you can pass, see [`NavigationEntry`](https://docs.nativescript.org/api/interface/NavigationEntry).
 
 #### Specifying a transition
 
@@ -136,11 +86,11 @@ You can use any of the built-in transitions:
 For example:
 
 ```JavaScript
-this.$navigateTo(Detail, {
+$navigateTo(Details, {
   transition: {
-    name: "slideLeft",
-    duration: 300,
-    curve: "easeIn"
+    name: 'slide',
+    duration: 500,
+    curve: 'easeIn',
   },
 });
 ```
@@ -166,16 +116,11 @@ The value for the `frame` option can be one of the following:
 In the `Detail` component, add a button that triggers the globally exposed `$navigateBack` function.
 
 ```Vue
-const Detail = {
-  template: `
-    <Page>
-      <ActionBar title="Detail"/>
-      <StackLayout>
-        <Button text="Back to Master" @tap="$navigateBack" />
-      </StackLayout>
-    </Page>
-  `
-};
+<Label
+  text="Go Back"
+  @tap="$navigateBack"
+  class="text-center px-4 py-10 text-2xl text-gray-900 font-bold"
+/>
 ```
 
 ### Modal View Navigation

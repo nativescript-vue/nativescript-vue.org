@@ -46,6 +46,66 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: "Routing",
+        items: [
+          { text: "Manual Router", link: "/docs/routing/manual-routing" },
+          { text: "Vue Router", link: "/docs/routing/vue-router" },      
+        ],
+      },
+      {
+        text: "Utilities",
+        items: [
+          { text: "v-template", link: "/docs/utilities/v-template" },
+          { text: "v-view", link: "/docs/utilities/v-view" },
+        ],
+      },
+      {
+        text: "Elements",
+        items: [
+          { text: "Absolute Layout", link: "/docs/elements/layouts/absolute-layout.md" },
+          { text: "Dock Layout", link: "/docs/elements/layouts/dock-layout.md" },
+          { text: "Flexbox Layout", link: "/docs/elements/layouts/flexbox-layout.md" },
+          { text: "GridLayout", link: "/docs/elements/layouts/grid-layout.md" },
+          { text: "StackLayout", link: "/docs/elements/layouts/stack-layout.md" },
+          { text: "WrapLayout", link: "/docs/elements/layouts/wrap-layout.md" },
+        ],
+      },
+      {
+        text: "Elements : Action Bar",
+        items: [
+          { text: "Action Bar", link: "/docs/elements/action-bar" },
+          { text: "Action Item", link: "/docs/elements/action-item" },
+          { text: "Navigation Button", link: "/docs/elements/navigation-button" }
+        ],
+      },
+      {
+        text: "Elements : Components",
+        items: [
+          { text: "Activity Indicator", link: "/docs/components/activity-indicator" },
+          { text: "Button", link: "/docs/components/button" },
+          { text: "DatePicker", link: "/docs/components/date-picker" },
+          { text: "Label", link: "/docs/components/label" },
+          { text: "ListPicker", link: "/docs/components/list-picker" },
+          { text: "Progress", link: "/docs/components/progress" },
+          { text: "SearchBar", link: "/docs/components/search-bar" },
+          { text: "Slider", link: "/docs/components/slider" },
+          { text: "Switch", link: "/docs/components/switch" },
+          { text: "TextField", link: "/docs/components/text-field" },
+          { text: "TextView", link: "/docs/components/text-view" },
+          { text: "TimePicker", link: "/docs/components/time-picker" },
+        ]
+      },
+      {
+        text: "Elements : Dialogs",
+        items: [
+          { text: "Alert", link: "/docs/dialogs/alert" },
+          { text: "Confirm", link: "/docs/dialogs/confirm" },
+          { text: "Prompt", link: "/docs/dialogs/prompt" },
+          { text: "Login", link: "/docs/dialogs/login" },
+          { text: "Action Sheet", link: "/docs/dialogs/action-sheet" },
+        ]
+      }
     ],
 
     socialLinks: [
