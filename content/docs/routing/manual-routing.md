@@ -12,7 +12,7 @@ The easiest way to implement routing in NativeScript-Vue is to use any of the fo
 For more complex navigation scenarios, you can use multiple `<Frame>` components and a navigation-specific component:
 
 * [`Modal View`](#modal-view-navigation)
-* [`BottomNavigation & Tabs`](#bottomnavigation-and-tabs-navigation)
+* [`Bottom Navigation & Tabs`](#bottomnavigation-and-tabs-navigation)
 * [`SideDrawer`](#sidedrawer-navigation)
 
 ### `$navigateTo(Component, options)`
@@ -24,8 +24,7 @@ You can call `$navigateTo` in the view or in a method.
 In the `Master` component, use a `data` property to expose the `Detail` component. Invoke `$navigateTo(<propertyName>)` in the view directly.
 
 ```Vue
-<Button row="2" @tap="$navigateTo(Details)" class="mt-4 px-4 py-2 bg-white border-2 border-blue-400 rounded-lg"
-horizontalAlignment="center">
+<Button @tap="$navigateTo(Details)">
 Go To Details
 </Button>
 ```
@@ -101,7 +100,7 @@ $navigateTo(Details, {
 Each [`<Frame>`](/en/docs/elements/components/frame) element has its own navigation stack. If you are using [multiple frames](/en/docs/elements/components/frame#multiple-frames), you may want to specify in which frame the navigation will occur. For example, having a button in the side bar that changes the page in the main area. You can do this by adding the `frame` option:
 
 ```JavaScript
-this.$navigateTo(SomeComp, {
+$navigateTo(SomeComp, {
   frame: '<id, or ref, or instance>'
 });
 ```
@@ -129,36 +128,32 @@ Use `$showModal` to show the `Detail` page modally. This function behaves simila
 
 To close the modal, call `$modal.close`.
 
+```Javascript
+function openModal() {
+  const modal = Modal;
+  $showModal(modal, {
+    fullscreen: true,
+    animated: true,
+    stretched: true,
+    closeCallback: () => {
+      console.log('Modal closed');
+    },
+  });
+}
+```
+
 ```Vue
-const Master = {
-  template: `
-    <Page>
-      <ActionBar title="Master" />
-      <StackLayout>
-        <Button text="Show Details modally" @tap="showDetailPageModally" />
-      </StackLayout>
-    </Page>
-  `,
-
-  methods: {
-    showDetailPageModally() {
-      this.$showModal(Detail);
-    }
-  }
-};
-
-const Detail = {
-  template: `
-    <Frame>
-      <Page>
-        <ActionBar title="Detail"/>
-        <StackLayout>
-          <Button @tap="$modal.close" text="Close" />
-        </StackLayout>
-      </Page>
-    </Frame>
-  `
-};
+<template>
+ <Frame>
+  <Page>
+   <ActionBar title="Detail" />
+   <StackLayout>
+    <Label text="This is a modal!" />
+    <Button @tap="$modal.close" text="Close" />
+   </StackLayout>
+  </Page>
+ </Frame>
+</template>
 ```
 
 Note: We've wrapped the Detail page in a `<Frame>` element, which allows us to show the `<ActionBar>` as well as navigate further within the modal.
@@ -173,24 +168,43 @@ this.$showModal(Detail, { props: { id: 14 }});
 
 You also need to update the `Detail` component to be able to accept the `id` prop. You can do this by defining a `props` option inside the component:
 
-```vue
-const Detail = {
-  props: ['id'],
-  template: `
-    <Page>
-      <ActionBar title="Detail"/>
-      <StackLayout>
-        <Label :text="id" />
-        <Button @tap="$modal.close" text="Close" />
-      </StackLayout>
-    </Page>
-  `,
-};
+```Javascript
+function openModal() {
+  const modal = Modal;
+  $showModal(modal, {
+    props: {
+      id: 42,
+    },
+  });
+}
 ```
 
-The prop is now accessible throughout the component with `this.id`.
+```Vue
+<script lang="ts" setup>
 
-For more information about props, see the [official Vue documentation](https://vuejs.org/v2/guide/components-props.html)
+const props = defineProps({
+ id: Number,
+});
+
+console.log(props);
+
+</script>
+<template>
+ <Frame>
+  <Page>
+   <ActionBar title="Detail" />
+   <StackLayout>
+    <Label :text="id" />
+    <Button @tap="$modal.close" text="Close" />
+   </StackLayout>
+  </Page>
+ </Frame>
+</template>
+```
+
+The prop is now accessible throughout the component with `props.id`.
+
+For more information about props, see the [official Vue documentation](https://vuejs.org/guide/components/props.html)
 
 #### Forcing the modal to be fullscreen
 
@@ -207,15 +221,28 @@ When calling `$showModal`, a promise is returned which resolves with any data pa
 In the following example, closing the modal outputs 'Foo' in the console.
 
 ```JavaScript
-// ... inside Master
-this.$showModal(Detail).then(data => console.log(data));
+function openModal() {
+  const modal = Modal;
+  $showModal(modal, {
+    props: {
+      id: 42,
+    },
+    fullscreen: true,
+    animated: true,
+    stretched: true,
+    closeCallback: (data) => {
+      console.log(data);
+    },
+  });
+}
 ```
 
-```HTML
+```Vue
 <!-- inside Detail -->
 <Button @tap="$modal.close('Foo')" text="Close" />
 ```
 
+<!--
 ### SideDrawer Navigation
 
 We've built `<MultiDrawer>` to allow showing multiple drawers on the screen from all sides. Refer to the docs in the project github page: https://github.com/nativescript-vue/nativescript-vue-multi-drawer
@@ -227,3 +254,4 @@ To create a new application with `<RadSideDrawer>` run:
 ```bash
 ns create myDrawerApp --template @nativescript/template-drawer-navigation-vue
 ```
+-->
