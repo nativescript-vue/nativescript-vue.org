@@ -19,7 +19,7 @@ Pinia is a state management pattern and library. It serves as a store for all th
 
 ### Install the plugin
 
-Install P as you would normally in your Vue.js app. With npm, for example:
+Install Pinia as you would normally in your Vue.js app. With npm, for example:
 
 ```shell
 npm install --save pinia
@@ -31,7 +31,7 @@ The most recent version of Pinia will be added to your `package.json`.
 
 Open your app entry file (likely `app.js`, `main.js` or `app.ts`) and add the following line at the top:
 
-```js
+```ts
 import {createPinia} from "pinia";
 const pinia = createPinia();
 createApp(Main).use(pinia).start();
