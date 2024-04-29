@@ -34,6 +34,10 @@ export default defineConfig({
         items: [
           { text: "Installation", link: "/docs/getting-started/installation" },
           {
+            text: "Creating an Application",
+            link: "/docs/getting-started/creating-an-application",
+          },
+          {
             text: "NativeScript Plugins",
             link: "/docs/getting-started/nativescript-plugins",
           },
