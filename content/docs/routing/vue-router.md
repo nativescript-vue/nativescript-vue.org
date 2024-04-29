@@ -3,7 +3,7 @@ title: Vue Router (Unsupported)
 contributors: [eddyverbruggen, rigor789, ikoevska]
 ---
 
-> Currently, integration with Vue Router is **unsupported**. Until the team resolves the issue, please use [manual routing](/en/docs/routing/manual-routing).
+> Currently, integration with Vue Router is **unsupported**. Until the team resolves the issue, please use [manual routing](/docs/routing/manual-routing).
 
 <!--
 

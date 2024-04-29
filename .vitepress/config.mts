@@ -53,14 +53,14 @@ export default defineConfig({
           { text: "Vue Router", link: "/docs/routing/vue-router" },      
         ],
       },
-      {
+      /*{
         text: "Utilities",
         items: [
           { text: "v-template", link: "/docs/utilities/v-template" },
           { text: "v-view", link: "/docs/utilities/v-view" },
         ],
-      },
-      {
+      },*/
+      /*{
         text: "Elements",
         items: [
           { text: "Absolute Layout", link: "/docs/elements/layouts/absolute-layout.md" },
@@ -70,16 +70,16 @@ export default defineConfig({
           { text: "StackLayout", link: "/docs/elements/layouts/stack-layout.md" },
           { text: "WrapLayout", link: "/docs/elements/layouts/wrap-layout.md" },
         ],
-      },
-      {
+      },*/
+      /*{
         text: "Elements : Action Bar",
         items: [
           { text: "Action Bar", link: "/docs/elements/action-bar" },
           { text: "Action Item", link: "/docs/elements/action-item" },
           { text: "Navigation Button", link: "/docs/elements/navigation-button" }
         ],
-      },
-      {
+      },*/
+      /*{
         text: "Elements : Components",
         items: [
           { text: "Activity Indicator", link: "/docs/components/activity-indicator" },
@@ -95,8 +95,8 @@ export default defineConfig({
           { text: "TextView", link: "/docs/components/text-view" },
           { text: "TimePicker", link: "/docs/components/time-picker" },
         ]
-      },
-      {
+      },*/
+      /*{
         text: "Elements : Dialogs",
         items: [
           { text: "Alert", link: "/docs/dialogs/alert" },
@@ -105,7 +105,7 @@ export default defineConfig({
           { text: "Login", link: "/docs/dialogs/login" },
           { text: "Action Sheet", link: "/docs/dialogs/action-sheet" },
         ]
-      }
+      }*/
     ],
 
     socialLinks: [
