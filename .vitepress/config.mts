@@ -43,10 +43,6 @@ export default defineConfig({
             text: "Template Refs",
             link: "/docs/getting-started/template-refs",
           },
-          {
-            text: "NativeScript View",
-            link: "/docs/getting-started/nativescript-view",
-          },
           // { text: "Code Sharing", link: "/docs/getting-started/code-sharing" },
           {
             text: "Upgrade Guide",
@@ -61,6 +57,15 @@ export default defineConfig({
           {
             text: "Vue router (Unsupported)",
             link: "/docs/routing/vue-router",
+          },
+        ],
+      },
+      {
+        text: "Utilities",
+        items: [
+          {
+            text: "NativeScript View",
+            link: "/docs/utilities/nativescript-view",
           },
         ],
       },

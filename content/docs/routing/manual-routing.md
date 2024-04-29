@@ -14,6 +14,49 @@ For more complex navigation scenarios, you can use multiple `<Frame>` components
 
 * [`Modal View`](#modal-view-navigation)
 
+## Basic navigation concepts
+
+The navigation elements that NativeScript relies on are `Frame` and `Page`.
+
+- `Frame`. It is the main navigation element, it can have one or N depending on the design of the application. It is important that this element is declared before the `Page`.
+- `Page`. These are the elements that `Frame` will navigate between.
+
+A basic application structure for browsing is as follows.
+
+```vue
+// App.vue
+<script lang="ts" setup>
+import Detail from "./Detail.vue"
+</script>
+
+<template>
+  <Frame>
+    <Page>
+        <StackLayout>
+            <Button text="Navigate to Detail Page" @tap="$navigateTo(Detail)" />
+        </StackLayout>
+    </Page>
+  </Frame>
+</template>
+```
+
+Note that in the App.vue component `Frame` is declared and inside it has a `Page`. When the user presses the button they will navigate to the `Detail` component.
+
+```vue
+// Detail.vue
+<template>
+  <Page>
+      <StackLayout>
+          <Label text="Navigation to Detail component completed" />
+      </StackLayout>
+  </Page>
+</template>
+```
+
+As you can see, the Detail component does not have the `Frame` element but it does have the `Page` component, this is because NativeScript will use the `Frame` element declared in App.vue to navigate to the Detail component page.
+
+This is just a basic but useful example to understand how navigation works in NativeScript.
+
 ## View Navigation
 
 Use `$navigateTo` in the view or in a method.
