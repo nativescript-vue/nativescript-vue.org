@@ -3,6 +3,7 @@ title: DatePicker
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_date_picker_.datepicker
 contributors: [MisterBrownRSA, rigor789, ikoevska]
 ---
+# DatePicker
 
 `<DatePicker>` is a UI component that lets users select a date from a pre-configured range.
 

@@ -3,10 +3,11 @@ title: Button
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_button_.button
 contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
 ---
+# Button
 
 `<Button>` is a UI component that displays a button which reacts to a user gesture.
 
-For more information about the available gestures, see [Gestures in the official NativeScript documentation](https://docs.nativescript.org/ui/gestures).
+For more information about the available gestures, see [Gestures in the official NativeScript documentation](https://docs.nativescript.org/guide/gestures).
 
 ---
 

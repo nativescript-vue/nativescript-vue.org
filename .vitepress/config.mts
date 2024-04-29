@@ -79,23 +79,23 @@ export default defineConfig({
           { text: "Navigation Button", link: "/docs/elements/navigation-button" }
         ],
       },*/
-      /*{
+      {
         text: "Elements : Components",
         items: [
-          { text: "Activity Indicator", link: "/docs/components/activity-indicator" },
-          { text: "Button", link: "/docs/components/button" },
-          { text: "DatePicker", link: "/docs/components/date-picker" },
-          { text: "Label", link: "/docs/components/label" },
-          { text: "ListPicker", link: "/docs/components/list-picker" },
-          { text: "Progress", link: "/docs/components/progress" },
-          { text: "SearchBar", link: "/docs/components/search-bar" },
-          { text: "Slider", link: "/docs/components/slider" },
-          { text: "Switch", link: "/docs/components/switch" },
-          { text: "TextField", link: "/docs/components/text-field" },
-          { text: "TextView", link: "/docs/components/text-view" },
-          { text: "TimePicker", link: "/docs/components/time-picker" },
+          { text: "Activity Indicator", link: "/docs/elements/components/activity-indicator" },
+          { text: "Button", link: "/docs/elements/components/button" },
+          { text: "DatePicker", link: "/docs/elements/components/date-picker" },
+          // { text: "Label", link: "/docs/elements/components/label" },
+          // { text: "ListPicker", link: "/docs/elements/components/list-picker" },
+          // { text: "Progress", link: "/docs/elements/components/progress" },
+          // { text: "SearchBar", link: "/docs/elements/components/search-bar" },
+          // { text: "Slider", link: "/docs/elements/components/slider" },
+          // { text: "Switch", link: "/docs/elements/components/switch" },
+          // { text: "TextField", link: "/docs/elements/components/text-field" },
+          // { text: "TextView", link: "/docs/elements/components/text-view" },
+          // { text: "TimePicker", link: "/docs/elements/components/time-picker" },
         ]
-      },*/
+      },
       /*{
         text: "Elements : Dialogs",
         items: [
