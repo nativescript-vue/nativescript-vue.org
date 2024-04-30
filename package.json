@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev",
+    "dev": "vitepress dev --host",
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
@@ -12,7 +12,7 @@
   "author": "Igor Randjelovic",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "1.0.0-rc.45",
-    "vue": "^3.4.21"
+    "vitepress": "^1.1.4",
+    "vue": "^3.4.26"
   }
 }
