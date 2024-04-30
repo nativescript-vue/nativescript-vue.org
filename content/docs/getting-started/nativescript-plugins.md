@@ -4,7 +4,7 @@ contributors: [EddyVerbruggen, naderio, rigor789, ikoevska, jlooper]
 
 # Using NativeScript Plugins
 
-Plugins work as in [any other NativeScript app](https://docs.nativescript.org/plugins/plugins), but you may wonder how _UI_ plugins work with Vue.
+Plugins work as in [any other NativeScript app](https://docs.nativescript.org/plugins/), but you may wonder how _UI_ plugins work with Vue.
 
 UI plugins work almost identically to how you'd use a NativeScript UI plugin in an Angular app.
 
@@ -28,10 +28,12 @@ $ rm -rf platforms
 
 ### Register the plugin in your app
 
-Open your app entry file (likely `app.js`, `main.js` or `main.ts`) and add the following line at the top:
+Open your app entry file (likely `app.js`, `main.js`, `app.ts` or `main.ts`) and add the following line at the top:
 
 ```JavaScript
-Vue.registerElement('Gradient', () => require('nativescript-gradient').Gradient)
+import { registerElement } from "nativescript-vue";
+
+registerElement('Gradient', () => require('nativescript-gradient').Gradient)
 ```
 
 This requires and registers the plugin in your `Vue` instance. The `registerElement` function expects the name of the `<Element>` as the first argument, and a function that returns the plugin as its second argument. Provide the element name exactly as you are supposed to call it in your code. Provide the plugin name exactly as its npm package name.
@@ -40,7 +42,6 @@ This requires and registers the plugin in your `Vue` instance. The `registerElem
 
 ```HTML
 <Gradient direction="to right" colors="#FF0077, red, #FF00FF">
-  <Label text="Best gradient." horizontalAlignment="center"
-         style="color: white; padding: 20" />
+  <Label text="Best gradient." style="color: white; padding: 20" />
 </Gradient>
 ```

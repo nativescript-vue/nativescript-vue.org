@@ -1,57 +1,68 @@
 ---
-title: ListView
 apiRef: https://docs.nativescript.org/api-reference/classes/_ui_list_view_.listview
-contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska]
+contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, vallemar]
 ---
 
-`<ListView>` is a UI component that shows items in a vertically scrolling list. To set how the list shows individual items, you can use the `<v-template>` component.
+# ListView
+
+`<ListView>` is a UI component that shows items in a vertically scrolling list. To set how the list shows individual items, you can use the `<template>` element.
 
 ```html
-<ListView for="item in listOfItems" @itemTap="onItemTap">
-  <v-template>
+<ListView :items="listOfItems" @itemTap="onItemTap">
+  <template #default="{ item, index, even, odd } : { item: string, index: number, even: boolean, odd: boolean }">
     <!-- Shows the list item label in the default color and style. -->
-    <Label :text="item.text" />
-  </v-template>
+    <StackLayout>
+      <Label :text="item" />
+      <Label :text="`Item index ${index}`" />
+      <Label :text="`Is event ${even}`" />
+      <Label :text="`Is odd ${odd}`" />
+    </StackLayout>
+  </template>
 </ListView>
 ```
 
 ---
 
-[> screenshots for=ListView <]
 
-## Using `<ListView>` with multiple `<v-template>` blocks
+<img src="https://docs.nativescript.org/assets/ListView.2ba2d9f4.png" alt="drawing" width="200"/>
 
-The [`v-template` component](/en/docs/utilities/v-template) is used to define how each list item is shown on the screen. 
 
-If you need to visualize one or more list items differently than the rest, you can enclose them in additional `<v-template>` blocks and use conditions. You can have as many `<v-template>` blocks as needed within one `<ListView>`.
+## Using `<ListView>` with multiple `<template>` slots
 
-```html
-<ListView for="item in listOfItems" @itemTap="onItemTap"> 
-  <v-template>
-    <Label :text="item.text" /> 
-  </v-template>
+The `template` is used to define how each list item is shown on the screen. 
 
-  <v-template if="$odd">
-    <!-- For items with an odd index, shows the label in red. -->
-    <Label :text="item.text" color="red" />
-  </v-template>
-</ListView>
+If you need to visualize one or more list items differently than the rest, you can enclose them in additional `<template>` blocks using `v-slot` and `itemTemplateSelector` function.
+
+```vue
+<script lang="ts" setup>
+import { ListItem } from "nativescript-vue";
+
+function itemTemplate(args: ListItem<CustomType>){
+  return args.item.type === "header" ? "header" : "default";
+}
+
+</script>
+
+<template>
+  <ListView 
+    :items="listOfItems"  
+    :itemTemplateSelector="itemTemplate"
+  > 
+    <template #default="{ item }">
+      <Label :text="item.text" /> 
+    </template>
+
+    <template #header="{ item }">
+      <!-- For items with an type header, shows the label in red. -->
+      <Label :text="item.text" color="red" />
+    </template>
+  </ListView>
+</template>
 ```
 
-When you create conditions for `<v-template>`, you can use a valid JavaScript expression with the following variables:
+## An important note
 
-* `$index`&mdash; the index of the current item
-* `$even`&mdash; `true` if the index of the current item is even
-* `$odd`&mdash; `true` if the index of the current item is odd
-* *`item`*&mdash; the *item* of the list (the name corresponds to the iterator in the `for` property). E.g. `if="item.text == 'danger'"`
-
-Only the above variables are available in this scope, and currently you do not have access to the component scope (component state, computed properties...). 
-
-## An important note about `v-for`
-
-`<ListView>` does not loop through list items as you would expect when using a [`v-for`](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) loop. Instead `<ListView>` only creates the necessary views to display the currently visible items on the screen, and reuses the views that are already off-screen when scrolled. This concept is called _view recycling_ and is commonly used in mobile apps to improve performance.
-
-**This is important, because you should not use `key` properties within your v-templates, as they will force the ListView to re-create the views and prevent view recycling from working properly.**
+`<ListView>` only creates the necessary views to display the currently visible items on the screen, and reuses the views that are already off-screen when scrolled. This concept is called _view recycling_ and is commonly used in mobile apps to improve performance.
 
 To use multiple event listeners within a ListView, you can pass in the current item to the listener with `@tap="onTap(item, $event)"`.
 
@@ -66,30 +77,36 @@ onItemTap(event) {
 }
 ```
 
-**NOTE:** If a `v-for` is used on a `<ListView>` a warning will be printed to the console, and it will be converted to the `for` property.
+## ListView Props
 
-## Props
+| Name                   | Type                                                    | Description                                                       |
+| ---------------------- | ------------------------------------------------------- | ----------------------------------------------------------------- |
+| `items`                | `Array<any>`, `Ref<Array<any>>`, `ObservableArray<any>` | An array of items to be shown in the `<ListView>`.<br/>           |
+| `itemTemplateSelector` | `function(data:ListItem)`                               | A function to be called when selecting the template for the item. |
+| `separatorColor`       | `Color`                                                 | Sets the separator line color. Set to `transparent` to remove it. |
 
-| Name | Type | Description |
-|------|------|-------------|
-| `for` | `String` | Provides the expression for iterating through the items.<br/>For example: <ul><li><code>item in listOfItems</code></li><li><code>(item, index) in listOfItems</code></li><li><code>item in [1, 2, 3, 4, 5]</code></li></ul>
-| `items` | `Array<any>` | An array of items to be shown in the `<ListView>`.<br/>**This property is only for advanced use. Use the `for` property instead.**
-| `separatorColor` | `Color` | Sets the separator line color. Set to `transparent` to remove it.
+## Template Scoped Slots
+
+The template receives a `ListItem<T>` type object that is composed of the following properties.
+| Name    | Type      | Description                                      |
+| ------- | --------- | ------------------------------------------------ |
+| `item`  | `any`     | Item of array.                                   |
+| `index` | `number`  | Index of the current item.                       |
+| `even`  | `boolean` | `true` if the index of the current item is even. |
+| `odd`   | `boolean` | `true` if the index of the current item is odd.  |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| `itemTap`| Emitted when an item in the `<ListView>` is tapped. To access the tapped item, use `event.item`.
+| Name      | Description                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------------ |
+| `itemTap` | Emitted when an item in the `<ListView>` is tapped. To access the tapped item, use `event.item`. |
 
-## Methods
+## Complete documentation
 
-| Name | Description |
-|------|-------------|
-| `refresh()` | Forces the `<ListView>` to reload all its items.
+[`ListView`](https://docs.nativescript.org/ui/list-view)
 
 ## Native component
 
-| Android | iOS |
-|---------|-----|
-| [`android.widget.ListView`](https://developer.android.com/reference/android/widget/ListView.html) | [`UITableView`](https://developer.apple.com/documentation/uikit/uitableview)
+| Android                                                                                           | iOS                                                                          |
+| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.ListView`](https://developer.android.com/reference/android/widget/ListView.html) | [`UITableView`](https://developer.apple.com/documentation/uikit/uitableview) |
