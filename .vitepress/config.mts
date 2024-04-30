@@ -8,7 +8,7 @@ export default defineConfig({
 
   // todo: remove when content is ready
   ignoreDeadLinks: true,
-
+  cleanUrls: true,
   themeConfig: {
     logo: {
       dark: "https://art.nativescript-vue.org/NativeScript-Vue-White-Green.svg",
