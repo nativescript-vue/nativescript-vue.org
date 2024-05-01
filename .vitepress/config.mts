@@ -8,7 +8,7 @@ export default defineConfig({
 
   // todo: remove when content is ready
   ignoreDeadLinks: true,
-
+  cleanUrls: true,
   themeConfig: {
     logo: {
       dark: "https://art.nativescript-vue.org/NativeScript-Vue-White-Green.svg",
@@ -18,7 +18,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "Get Started", link: "/docs/getting-started/installation" },
     ],
 
     sidebar: [
