@@ -12,7 +12,7 @@
   "author": "Igor Randjelovic",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^1.1.4",
-    "vue": "^3.4.26"
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
   }
 }
