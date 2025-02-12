@@ -1,5 +1,13 @@
 import { defineConfig } from "vitepress";
 
+// TODO: Review this links when releasing the site
+const links = {
+  playground:
+    "https://stackblitz.com/fork/github/nativescript-vue/nativescript-vue/tree/main/packages/stackblitz-template?file=src%2Fcomponents%2FHome.vue&title=NativeScript%20Starter%20Vue3",
+  editLinkPattern:
+    "https://github.com/nativescript-vue/nativescript-vue.org/blob/v3/content/:path",
+};
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "content",
@@ -19,6 +27,10 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Get Started", link: "/docs/getting-started/installation" },
+      {
+        text: "Playground",
+        link: links.playground,
+      },
     ],
 
     sidebar: [
@@ -105,8 +117,7 @@ export default defineConfig({
       copyright: "Copyright © 2018-present Igor Randjelovic",
     },
     editLink: {
-      pattern:
-        "https://github.com/nativescript-vue/nativescript-vue.org/blob/v3/content/:path",
+      pattern: links.editLinkPattern,
     },
   },
 });
