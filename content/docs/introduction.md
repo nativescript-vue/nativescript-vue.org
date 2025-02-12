@@ -3,6 +3,8 @@ title: Introduction
 contributors: [rigor789, tjvantoll, charles-salmon]
 ---
 
+# Introduction
+
 ## What is [NativeScript](https://www.nativescript.org/)?
 
 NativeScript is an open source framework for building truly native mobile applications using JavaScript.

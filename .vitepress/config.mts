@@ -1,5 +1,13 @@
 import { defineConfig } from "vitepress";
 
+// TODO: Review this links when releasing the site
+const links = {
+  playground:
+    "https://stackblitz.com/fork/github/nativescript-vue/nativescript-vue/tree/main/packages/stackblitz-template?file=src%2Fcomponents%2FHome.vue&title=NativeScript%20Starter%20Vue3",
+  editLinkPattern:
+    "https://github.com/nativescript-vue/nativescript-vue.org/blob/v3/content/:path",
+};
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "content",
@@ -8,7 +16,7 @@ export default defineConfig({
 
   // todo: remove when content is ready
   ignoreDeadLinks: true,
-
+  cleanUrls: true,
   themeConfig: {
     logo: {
       dark: "https://art.nativescript-vue.org/NativeScript-Vue-White-Green.svg",
@@ -18,7 +26,11 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "Get Started", link: "/docs/getting-started/installation" },
+      {
+        text: "Playground",
+        link: links.playground,
+      },
     ],
 
     sidebar: [
@@ -103,6 +115,9 @@ export default defineConfig({
     footer: {
       message: "Released under the MIT License.",
       copyright: "Copyright © 2018-present Igor Randjelovic",
+    },
+    editLink: {
+      pattern: links.editLinkPattern,
     },
   },
 });

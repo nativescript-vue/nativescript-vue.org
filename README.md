@@ -4,44 +4,30 @@ This is the source for the [nativescript-vue.org](https://nativescript-vue.org/)
 
 Contributions are welcome, all the content is placed in the `content` directory.
 
-## How to build the documentation
+## Setup
 
-After cloning the repository, do the following steps
+Clone this repo to your local machine and install the dependencies.
 
 ```bash
 cd nativescript-vue.org/
 npm install
-npm run build:js
-npm run build:css
-npm run build
 ```
 
-This sequence is only needed the first time. After that, the only command needed is:
+## Start documentation
 
-```bash
-npm run build
-```
-
-## Serve the documentation
-
-Install the `serve` npm package globally:
-
-```bash
-npm install -g serve
-```
-
-Run the HTTP server using the already generated `dist/` directory:
-
-```bash
-serve dist/
-```
-
-Now, you can open the `http://localhost:5000` URL in your browser to see the generated docs.
-
-## How to build in watch mode
-
-In order to detect changes in the `content` directory and rebuild automatically the docs, run the following sentence:
+We use VitePress for rapid development and documenting. You can start it locally by
 
 ```bash
 npm run dev
 ```
+
+Now, you can open the URL generated in your browser to see the generated docs.
+
+## Build documentation
+Run the HTTP server using the already generated `dist/` directory:
+
+```bash
+npm run build
+npm run preview
+```
+
