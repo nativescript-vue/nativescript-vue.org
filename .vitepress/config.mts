@@ -104,5 +104,9 @@ export default defineConfig({
       message: "Released under the MIT License.",
       copyright: "Copyright © 2018-present Igor Randjelovic",
     },
+    editLink: {
+      pattern:
+        "https://github.com/nativescript-vue/nativescript-vue.org/blob/v3/content/:path",
+    },
   },
 });
