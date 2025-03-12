@@ -2,6 +2,8 @@
 
 NativeScript exposes all availabel native APIs directly to your JavaScript. It does not convert your JavaScript to native code (ie. to Java/Objective-C). To understand this concept let's look at some examples.
 
+## iOS
+
 In Objective-C you can get the current UIDevice, and read the `batteryLevel` (see [Apple batteryLevel docs](https://developer.apple.com/documentation/uikit/uidevice/1620042-batterylevel?language=objc)):
 
 ```objc
@@ -64,6 +66,8 @@ controllerC.doSomethingElse(); // Error // [!code error]
 :::
 
 This works because metadata is generated at compile time for all available APIs - this is done by the [metadata-generator located in the iOS Runtime](https://github.com/NativeScript/ios/tree/main/metadata-generator). This metadata is then used by the runtime to look up and translate **JavaScript** calls to native <abbr title="Foreign Function Interface">FFI</abbr> calls. The process of translating between the native world and JavaScript is called **Marshalling**. You can learn more about it in-depth in the [NativeScript Docs about Marshalling](https://docs.nativescript.org/guide/marshalling/)
+
+## Android
 
 Similar to iOS, the same concepts work on Android. For example, getting the current time in Java/Android can be done with the [Calendar class](<https://developer.android.com/reference/java/util/Calendar.html#getTime()>).
 

@@ -33,11 +33,11 @@ In nativescript-vue we can also use [`useTemplateRef​`](https://vuejs.org/guid
 
 ```vue
 <script setup>
-import { useTemplateRef, onMounted } from 'vue'
+import { useTemplateRef, onMounted } from "nativescript-vue"
 import { type Label } from "@nativescript/core"
 
 // the first argument must match the ref value in the template
-const label = useTemplateRef('my-label')
+const label = useTemplateRef('my-label');
 
 onMounted(() => {
   const labelView = label.value.nativeView as Label;

@@ -51,34 +51,37 @@ export default defineConfig({
 
     sidebar: [
       {
-        items: [
-          { text: "Introduction", link: "/docs/introduction" },
-          // { text: "Markdown Examples", link: "/markdown-examples" },
-          // { text: "Runtime API Examples", link: "/api-examples" },
-        ],
-      },
-      {
         text: "Getting Started",
         items: [
-          { text: "Installation", link: "/docs/getting-started/installation" },
+          { text: "Introduction", link: "/docs/getting-started/introduction" },
+          { text: "Quick Start", link: "/docs/getting-started/installation" },
           {
             text: "Creating an Application",
             link: "/docs/getting-started/creating-an-application",
           },
+        ],
+      },
+      {
+        text: "Essentials",
+        items: [
           {
             text: "NativeScript Plugins",
-            link: "/docs/getting-started/nativescript-plugins",
+            link: "/docs/essentials/nativescript-plugins",
           },
-          { text: "Vue Plugins", link: "/docs/getting-started/vue-plugins" },
-          { text: "Vue Devtools", link: "/docs/getting-started/vue-devtools" },
+          { text: "Vue Plugins", link: "/docs/essentials/vue-plugins" },
+          { text: "Vue Devtools", link: "/docs/essentials/vue-devtools" },
           {
             text: "Template Refs",
-            link: "/docs/getting-started/template-refs",
+            link: "/docs/essentials/template-refs",
+          },
+          {
+            text: "Full Native API Access",
+            link: "/docs/essentials/full-native-api-access",
           },
           // { text: "Code Sharing", link: "/docs/getting-started/code-sharing" },
           {
             text: "Upgrade Guide",
-            link: "/docs/getting-started/upgrade-guide",
+            link: "/docs/essentials/upgrade-guide",
           },
         ],
       },
@@ -92,6 +95,7 @@ export default defineConfig({
           },
         ],
       },
+
       {
         text: "Utilities",
         items: [
@@ -134,6 +138,15 @@ export default defineConfig({
     },
     editLink: {
       pattern: links.editLinkPattern,
+    },
+    search: {
+      provider: "local",
+      options: {
+        _render(src, env, md) {
+          if (env.path.includes("archived-docs")) return "";
+          return md.render(src, env);
+        },
+      },
     },
   },
 });
