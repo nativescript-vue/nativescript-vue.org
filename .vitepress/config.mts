@@ -30,7 +30,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Docs", link: "/docs/introduction" },
+      { text: "Docs", link: "/docs/getting-started/introduction" },
       {
         text: "Playground",
         link: links.playground,
@@ -56,16 +56,10 @@ export default defineConfig({
 
     sidebar: [
       {
-        items: [
-          { text: "Introduction", link: "/docs/introduction" },
-          // { text: "Markdown Examples", link: "/markdown-examples" },
-          // { text: "Runtime API Examples", link: "/api-examples" },
-        ],
-      },
-      {
         text: "Getting Started",
         items: [
-          { text: "Installation", link: "/docs/getting-started/installation" },
+          { text: "Introduction", link: "/docs/getting-started/introduction" },
+          { text: "Quick Start", link: "/docs/getting-started/installation" },
           {
             text: "Creating an Application",
             link: "/docs/getting-started/creating-an-application",
@@ -89,7 +83,7 @@ export default defineConfig({
             text: "Full Native API Access",
             link: "/docs/essentials/full-native-api-access",
           },
-            { text: "Routing", link: "/docs/routing" },
+          { text: "Routing", link: "/docs/routing" },
           {
             text: "Upgrade Guide",
             link: "/docs/essentials/upgrade-guide",
