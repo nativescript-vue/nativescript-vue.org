@@ -122,7 +122,8 @@ Metalsmith(cwd)
   }))
   .use(versions({
     versions: [
-      { name: 'latest (2.0.0)', url: '//nativescript-vue.org' },
+      { name: 'latest', url: '//nativescript-vue.org' },
+      { name: 'v2', url: '//v2.nativescript-vue.org' },
       { name: 'v1.3.1', url: '//v1-3-1.nativescript-vue.org' },
     ],
     currentVersion: {
