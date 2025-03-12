@@ -6,9 +6,12 @@ const links = {
     "https://stackblitz.com/fork/github/nativescript-vue/nativescript-vue/tree/main/packages/stackblitz-template?file=src%2Fcomponents%2FHome.vue&title=NativeScript%20Starter%20Vue3",
   editLinkPattern:
     "https://github.com/nativescript-vue/nativescript-vue.org/blob/v3/content/:path",
-  v2Docs: "https://v2.nativescript-vue.org/",
+  v2Docs: "https://nativescript-vue.netlify.app/",
+  // todo: replace once DNS is correctly set
+  // v2Docs: "https://v2.nativescript-vue.org/",
   v1Docs: "https://v1-3-1.nativescript-vue.org/",
   github: "https://github.com/nativescript-vue/nativescript-vue",
+  nativescriptDocs: "https://docs.nativescript.org/",
 };
 
 // https://vitepress.dev/reference/site-config
@@ -33,6 +36,10 @@ export default defineConfig({
       {
         text: "Playground",
         link: links.playground,
+      },
+      {
+        text: "NativeScript Docs",
+        link: links.nativescriptDocs,
       },
       {
         text: "v3",
@@ -82,16 +89,7 @@ export default defineConfig({
           },
         ],
       },
-      {
-        text: "Routing",
-        items: [
-          { text: "Manual routing", link: "/docs/routing/manual-routing" },
-          {
-            text: "Vue router (Unsupported)",
-            link: "/docs/routing/vue-router",
-          },
-        ],
-      },
+      { text: "Routing", link: "/docs/routing" },
       {
         text: "Utilities",
         items: [
