@@ -83,7 +83,7 @@ export default defineConfig({
             text: "Full Native API Access",
             link: "/docs/essentials/full-native-api-access",
           },
-          { text: "Routing", link: "/docs/routing" },
+          { text: "Routing", link: "/docs/essentials/routing" },
           {
             text: "Upgrade Guide",
             link: "/docs/essentials/upgrade-guide",
