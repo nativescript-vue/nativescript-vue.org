@@ -9,6 +9,7 @@ const links = {
   v2Docs: "https://v2.nativescript-vue.org/",
   v1Docs: "https://v1-3-1.nativescript-vue.org/",
   github: "https://github.com/nativescript-vue/nativescript-vue",
+  nativescriptDocs: "https://docs.nativescript.org/",
 };
 
 // https://vitepress.dev/reference/site-config
@@ -35,6 +36,10 @@ export default defineConfig({
         link: links.playground,
       },
       {
+        text: "NativeScript Docs",
+        link: links.nativescriptDocs,
+      },
+      {
         text: "v3",
         items: [
           { text: "Release Notes", link: `${links.github}/releases` },
@@ -51,10 +56,16 @@ export default defineConfig({
 
     sidebar: [
       {
+        items: [
+          { text: "Introduction", link: "/docs/introduction" },
+          // { text: "Markdown Examples", link: "/markdown-examples" },
+          // { text: "Runtime API Examples", link: "/api-examples" },
+        ],
+      },
+      {
         text: "Getting Started",
         items: [
-          { text: "Introduction", link: "/docs/getting-started/introduction" },
-          { text: "Quick Start", link: "/docs/getting-started/installation" },
+          { text: "Installation", link: "/docs/getting-started/installation" },
           {
             text: "Creating an Application",
             link: "/docs/getting-started/creating-an-application",
@@ -78,24 +89,13 @@ export default defineConfig({
             text: "Full Native API Access",
             link: "/docs/essentials/full-native-api-access",
           },
-          // { text: "Code Sharing", link: "/docs/getting-started/code-sharing" },
+            { text: "Routing", link: "/docs/routing" },
           {
             text: "Upgrade Guide",
             link: "/docs/essentials/upgrade-guide",
           },
         ],
       },
-      {
-        text: "Routing",
-        items: [
-          { text: "Manual routing", link: "/docs/routing/manual-routing" },
-          {
-            text: "Vue router (Unsupported)",
-            link: "/docs/routing/vue-router",
-          },
-        ],
-      },
-
       {
         text: "Utilities",
         items: [
@@ -121,6 +121,10 @@ export default defineConfig({
             link: "/docs/elements/components/root-layout",
           },
         ],
+      },
+      {
+        text: "NativeScript Docs",
+        link: links.nativescriptDocs,
       },
     ],
 
