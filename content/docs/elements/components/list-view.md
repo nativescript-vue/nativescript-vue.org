@@ -79,11 +79,15 @@ onItemTap(event) {
 
 ## ListView Props
 
-| Name                   | Type                                                    | Description                                                       |
-| ---------------------- | ------------------------------------------------------- | ----------------------------------------------------------------- |
-| `items`                | `Array<any>`, `Ref<Array<any>>`, `ObservableArray<any>` | An array of items to be shown in the `<ListView>`.<br/>           |
-| `itemTemplateSelector` | `function(data:ListItem)`                               | A function to be called when selecting the template for the item. |
-| `separatorColor`       | `Color`                                                 | Sets the separator line color. Set to `transparent` to remove it. |
+| Name                    | Type                                                    | Description                                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `items`                 | `Array<any>`, `Ref<Array<any>>`, `ObservableArray<any>` | An array of items to be shown in the `<ListView>`.<br/>                                                                                                                       |
+| `itemTemplateSelector`  | `function(data:ListItem)`                               | A function to be called when selecting the template for the item.                                                                                                             |
+| `separatorColor`        | `Color`                                                 | Sets the separator line color. Set to `transparent` to remove it.                                                                                                             |
+| `rowHeight`             | `nubmer`                                                | Gets or sets the row height of the ListView. Useful when your items have a fixed height, as the required calculations are greatly simplified and the rendering can be faster. |
+| `iosEstimatedRowHeight` | `nubmer`, `string`                                      | Gets or sets the estimated height of rows in the ListView. Default value: 44px.                                                                                               |
+ 
+ See the full documentation for [NativeScript ListView props.](https://docs.nativescript.org/ui/list-view#props)
 
 ## Template Scoped Slots
 
@@ -97,9 +101,15 @@ The template receives a `ListItem<T>` type object that is composed of the follow
 
 ## Events
 
-| Name      | Description                                                                                      |
-| --------- | ------------------------------------------------------------------------------------------------ |
-| `itemTap` | Emitted when an item in the `<ListView>` is tapped. To access the tapped item, use `event.item`. |
+| Name            | Description                                                                                                                                |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `itemTap`       | Emitted when an item in the `ListView` is tapped. To access the tapped item, use `event.item`.                                             |
+| `itemLoading`   | Emitted when the ListView is loading/recycling an item. args.view is set if the `ListView` is recycling an item, otherwise it's undefined. |
+| `loadMoreItems` | Emitted when the user reaches the end of the `ListView`. Useful for loading additional items (ie. infinite scroll).                        |
+| `itemTap`       | Emitted when an item in the `<ListView>` is tapped. To access the tapped item, use `event.item`.                                           |
+| `itemTap`       | Emitted when an item in the `<ListView>` is tapped. To access the tapped item, use `event.item`.                                           |
+ 
+ See the full documentation for [NativeScript ListView events.](https://docs.nativescript.org/ui/list-view#events)
 
 ## Complete documentation
 

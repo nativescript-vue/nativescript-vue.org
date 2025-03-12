@@ -6,6 +6,9 @@ const links = {
     "https://stackblitz.com/fork/github/nativescript-vue/nativescript-vue/tree/main/packages/stackblitz-template?file=src%2Fcomponents%2FHome.vue&title=NativeScript%20Starter%20Vue3",
   editLinkPattern:
     "https://github.com/nativescript-vue/nativescript-vue.org/blob/v3/content/:path",
+  v2Docs: "https://v2.nativescript-vue.org/",
+  v1Docs: "https://v1-3-1.nativescript-vue.org/",
+  github: "https://github.com/nativescript-vue/nativescript-vue",
 };
 
 // https://vitepress.dev/reference/site-config
@@ -26,10 +29,23 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Get Started", link: "/docs/getting-started/installation" },
+      { text: "Docs", link: "/docs/introduction" },
       {
         text: "Playground",
         link: links.playground,
+      },
+      {
+        text: "v3",
+        items: [
+          { text: "Release Notes", link: `${links.github}/releases` },
+          {
+            text: "Versions",
+            items: [
+              { text: "v2", link: links.v2Docs },
+              { text: "v1.3.1", link: links.v1Docs },
+            ],
+          },
+        ],
       },
     ],
 
@@ -108,7 +124,7 @@ export default defineConfig({
       { icon: "discord", link: "https://nativescript.org/discord" },
       {
         icon: "github",
-        link: "https://github.com/nativescript-vue/nativescript-vue",
+        link: links.github,
       },
     ],
 
