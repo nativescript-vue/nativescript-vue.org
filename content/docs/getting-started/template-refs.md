@@ -26,7 +26,7 @@ onMounted(() => {
 </template>
 ```
 
-## Using useTemplateRef
+## Using `useTemplateRef`
 
 In nativescript-vue we can also use [`useTemplateRef​`](https://vuejs.org/guide/essentials/template-refs#accessing-the-refs) just like in vue, to access the native view access the `.nativeView` property of the reactive value.
 
