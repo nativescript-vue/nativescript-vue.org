@@ -32,14 +32,14 @@ features:
       Thanks to NativeScript's superpower, you get access to ALL native apis right in your JavaScript.
       <br>
       <br>
-      <a href="/docs/full-native-api-access">Learn more &rightarrow;</a>
+      <a href="/docs/essentials/full-native-api-access">Learn more &rightarrow;</a>
   - title: Unmatched flexibility
     icon: 💪
     details: |
       NativeScript supports libraries from various sources, <abbr title="Node Package Manager">NPM</abbr>, Cocoapods, <abbr title="Swift Package Manager">SPM</abbr>, Maven/Gradle and more.
       <br>
       <br>
-      <a href="/docs/full-native-api-access">Learn more &rightarrow;</a>
+      <a href="/docs/essentials/full-native-api-access">Learn more &rightarrow;</a>
 ---
 
 ### Does it work with Vue 3 or the Composition API?
