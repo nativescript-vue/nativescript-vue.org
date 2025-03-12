@@ -15,7 +15,7 @@ A detailed guide can be found in the NativeScript docs: [Environment Setup](http
 Once you have your system ready, create a new NativeScript-Vue project using the NativeScript CLI:
 
 ```bash
-ns create myAwesomeApp --template @nativescript-vue/template-blank@rc
+ns create myAwesomeApp --template @nativescript-vue/template-blank
 
 cd myAwesomeApp
 ns run ios|android
