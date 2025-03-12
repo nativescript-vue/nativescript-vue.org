@@ -114,6 +114,10 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: "NativeScript Docs",
+        link: links.nativescriptDocs,
+      },
     ],
 
     socialLinks: [
