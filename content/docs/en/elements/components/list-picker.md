@@ -13,6 +13,11 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
     @selectedIndexChange="selectedIndexChanged" />
 ```
 
+```html
+<ListPicker :items="listOfItems" selectedIndex="0" textField="title" valueField="id" v-model="item_id"
+    @selectedIndexChange="selectedIndexChanged" />
+```
+
 `<ListPicker>` provides two-way data binding using `v-model`.
 
 ```html
@@ -27,6 +32,8 @@ contributors: [MisterBrownRSA, rigor789, ikoevska]
 |------|------|-------------|
 | `items` | `Array<String>` | Gets or sets the items displayed as options in the list picker.
 | `selectedIndex` | `Number` | Gets or sets the index of the currently selected item.
+| `textField` | `String` | Selects the displayed label from key-value pair object.
+| `valueField` | `String` | Selects the value field from key-value pair object.
 
 ## Events
 
