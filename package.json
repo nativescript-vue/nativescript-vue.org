@@ -37,7 +37,7 @@
     "metalsmith-sitemap": "^1.2.0",
     "metalsmith-static": "^0.0.5",
     "metalsmith-watch": "^1.0.3",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^0.5.6",
     "moment": "^2.20.1",
     "multimatch": "^2.1.0",
     "parse5": "latest",
