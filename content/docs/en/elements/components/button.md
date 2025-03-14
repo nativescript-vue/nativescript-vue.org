@@ -46,6 +46,14 @@ If you need to style parts of the text, you can use a combination of a `Formatte
 |------|-------------|
 | `tap` | Emitted when the button is tapped.
 
+### Child component as Button
+If you want to use the event @tap on a child component. You have to use the expression : ``@tap.native``, otherwise it wont works.
+Example :
+
+```js
+<myChildComponent text="Hello There" @tap.native="myFunction" />
+```
+
 ## Native component
 
 | Android | iOS |
