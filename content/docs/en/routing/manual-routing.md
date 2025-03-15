@@ -277,6 +277,8 @@ We've built `<MultiDrawer>` to allow showing multiple drawers on the screen from
 
 Another option is the `<RadSideDrawer>` component. For more information, refer to the [dedicated article](https://v7.docs.nativescript.org/vuejs/ns-ui/SideDrawer/getting-started).
 
+Another option is use the plugin nativescript-vue-navigator--> https://market.nativescript.org/plugins/nativescript-vue-navigator/
+
 To create a new application with `<RadSideDrawer>` run:
 
 ```bash
