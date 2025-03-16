@@ -22,9 +22,8 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, vallemar]
 ```
 
 ---
+<img src="https://docs.nativescript.org/assets/ListView.DcB5SJ9c.png" alt="drawing" width="200"/>
 
-
-<img src="https://docs.nativescript.org/assets/ListView.2ba2d9f4.png" alt="drawing" width="200"/>
 
 
 ## Using `<ListView>` with multiple `<template>` slots

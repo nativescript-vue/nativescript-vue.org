@@ -1,3 +1,19 @@
+@import "tailwindcss";
+@source './components/*.vue';
+@source '../../content/**/*.md';
+:root {
+}
+.dark {
+}
+@theme inline{
+  --color-ns: #65adf1;
+  --color-vue: var(--vp-c-green-1);
+  --color-bg: var(--vp-c-bg);
+  --color-divider: var(--vp-c-divider);
+}
+.text-color{
+  color: var(--vp-c-text-1) !important;
+}
 /**
  * Customize default theme styling by overriding CSS variables:
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
