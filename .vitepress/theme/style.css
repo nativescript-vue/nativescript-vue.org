@@ -158,8 +158,10 @@
 .text-color{
   color: var(--vp-c-text-1) !important;
 }
-.vp-doc a[href^="https://docs.nativescript.org"], 
+
 .vp-doc a[href^="https://www.nativescript.org"],
-.vp-doc a[href^="https://nativescript.org"] {
+.vp-doc a[href^="https://nativescript.org"],
+.vp-doc a[href^="https://docs.nativescript.org"], 
+.vp-doc a[href^="https://docs.nativescript.org"] code {
   color: var(--color-ns);
 }
