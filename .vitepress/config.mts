@@ -125,6 +125,10 @@ export default defineConfig({
         ],
       },
       {
+        text: "Contributing",
+        link: "/docs/contributing",
+      },
+      {
         text: "NativeScript Docs",
         link: links.nativescriptDocs,
       },

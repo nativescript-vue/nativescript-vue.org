@@ -38,7 +38,7 @@ Don’t worry though. Although there is a learning curve for working with Native
 
 ## Want to get involved?
 
-NativeScript-Vue is an open source project and contributions are very much encouraged. Check out the [project’s contributing guide](https://github.com/nativescript-vue/nativescript-vue/blob/master/CONTRIBUTING.md) and **join us on the #vue channel on the [NativeScript Community Discord](https://nativescript.org/discord)**.
+NativeScript-Vue is an open source project and contributions are very much encouraged. Check out the [project’s contributing guide](/docs/contributing) and **join us on the #vue channel on the [NativeScript Community Discord](https://nativescript.org/discord)**.
 
 ## How stable is this project?
 
