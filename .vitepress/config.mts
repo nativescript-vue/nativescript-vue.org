@@ -1,6 +1,8 @@
+import tailwindcss from "@tailwindcss/vite";
+import path from "path";
 import { defineConfig } from "vitepress";
+import { componentMarkdownUtils } from "./theme/utils/ComponentMarkdownUtils";
 
-// TODO: Review this links when releasing the site
 const links = {
   playground:
     "https://stackblitz.com/fork/github/nativescript-vue/nativescript-vue/tree/main/packages/stackblitz-template?file=src%2Fcomponents%2FHome.vue&title=NativeScript%20Starter%20Vue3",
@@ -12,13 +14,19 @@ const links = {
   nativescriptDocs: "https://docs.nativescript.org/",
 };
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        "@components": path.resolve(__dirname, "./theme/components"),
+        "@data": path.resolve(__dirname, "./theme/data"),
+      },
+    },
+  },
   srcDir: "content",
   title: "NativeScript-Vue",
   description: "Delightful mobile app development.",
-
-  // todo: remove when content is ready
   ignoreDeadLinks: true,
   cleanUrls: true,
   themeConfig: {
@@ -142,7 +150,11 @@ export default defineConfig({
       options: {
         _render(src, env, md) {
           if (env.path.includes("archived-docs")) return "";
-          return md.render(src, env);
+
+          return md.render(
+            componentMarkdownUtils.processSearchableVueContent(src),
+            env
+          );
         },
       },
     },
