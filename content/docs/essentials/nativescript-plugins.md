@@ -1,5 +1,5 @@
 ---
-contributors: [EddyVerbruggen, naderio, rigor789, ikoevska, jlooper]
+contributors: [rigor789, vallemar]
 ---
 
 # Using NativeScript Plugins
@@ -10,11 +10,9 @@ UI plugins work almost identically to how you'd use a NativeScript UI plugin in 
 
 ## Sample use: nativescript-gradient
 
-Let's review how you can use [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient). You can also check its use in the [listview sample](https://github.com/rigor789/nativescript-vue/tree/master/samples/app/app-with-list-view.js).
+Let's review how you can use [nativescript-gradient](https://github.com/EddyVerbruggen/nativescript-gradient).
 
-### Install the plugin using the NativeScript CLI
-
-After you have [set up your system for NativeScript development](/en/docs/getting-started/installation), run the following command:
+### Install plugin
 
 ```shell
 $ npm install --save nativescript-gradient

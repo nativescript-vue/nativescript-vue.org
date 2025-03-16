@@ -55,7 +55,7 @@ export default defineConfig({
             text: "Versions",
             items: [
               { text: "v2", link: links.v2Docs },
-              { text: "v1.3.1", link: links.v1Docs },
+              // { text: "v1.3.1", link: links.v1Docs },
             ],
           },
         ],

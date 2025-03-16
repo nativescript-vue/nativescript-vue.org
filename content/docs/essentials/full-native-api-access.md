@@ -69,7 +69,7 @@ This works because metadata is generated at compile time for all available APIs 
 
 ## Android
 
-Similar to iOS, the same concepts work on Android. For example, getting the current time in Java/Android can be done with the [Calendar class](<https://developer.android.com/reference/java/util/Calendar.html#getTime()>).
+Similar to iOS, the same concepts work on Android. For example, getting the current time in Java/Android can be done with the [Calendar class](<https://developer.android.com/reference/java/util/Calendar#getTime()>).
 
 ```java
 import java.util.Calendar;

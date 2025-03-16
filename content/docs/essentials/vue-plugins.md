@@ -11,7 +11,7 @@ This page provides an overview of the currently supported Vue plugins that work 
 
 ## Vue Router
 
-> Currently, integration with Vue Router is **unsupported**. Until the team resolves the issue, please use [manual routing](/en/docs/routing/manual-routing).
+> Currently, integration with Vue Router is **unsupported**. Until the team resolves the issue, please use [routing](/docs/essentials/routing).
 
 ## Pinia
 

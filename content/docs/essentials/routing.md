@@ -185,7 +185,7 @@ $navigateTo(Detail, {
 
 ### Navigating within a frame
 
-Each [`<Frame>`]([/en/docs/elements/components/frame](https://docs.nativescript.org/ui/frame)) element has its own navigation stack. If you are using [multiple frames](https://docs.nativescript.org/ui/frame#multiple-root-frames), you may want to specify in which frame the navigation will occur. For example, having a button in the side bar that changes the page in the main area. You can do this by adding the `frame` option:
+Each [`<Frame>`](https://docs.nativescript.org/ui/frame) element has its own navigation stack. If you are using [multiple frames](https://docs.nativescript.org/ui/frame#multiple-root-frames), you may want to specify in which frame the navigation will occur. For example, having a button in the side bar that changes the page in the main area. You can do this by adding the `frame` option:
 
 ```JavaScript
 $navigateTo(SomeComp, {

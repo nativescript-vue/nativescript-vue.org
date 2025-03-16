@@ -116,6 +116,6 @@ The template receives a `ListItem<T>` type object that is composed of the follow
 
 ## Native component
 
-| Android                                                                                           | iOS                                                                          |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [`android.widget.ListView`](https://developer.android.com/reference/android/widget/ListView.html) | [`UITableView`](https://developer.apple.com/documentation/uikit/uitableview) |
+| Android                                                                                      | iOS                                                                          |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.ListView`](https://developer.android.com/reference/android/widget/ListView) | [`UITableView`](https://developer.apple.com/documentation/uikit/uitableview) |
