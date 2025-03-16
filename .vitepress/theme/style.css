@@ -11,9 +11,7 @@
   --color-bg: var(--vp-c-bg);
   --color-divider: var(--vp-c-divider);
 }
-.text-color{
-  color: var(--vp-c-text-1) !important;
-}
+
 /**
  * Customize default theme styling by overriding CSS variables:
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
@@ -151,4 +149,17 @@
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+/**
+ * Custom CSS
+ * -------------------------------------------------------------------------- */
+
+.text-color{
+  color: var(--vp-c-text-1) !important;
+}
+.vp-doc a[href^="https://docs.nativescript.org"], 
+.vp-doc a[href^="https://www.nativescript.org"],
+.vp-doc a[href^="https://nativescript.org"] {
+  color: var(--color-ns); /* aquí pones tu color específico */
 }
