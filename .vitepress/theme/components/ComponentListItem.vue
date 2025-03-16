@@ -16,7 +16,7 @@ defineProps<{ data: DataComponent }>();
 
       <div v-if="data.vModel" class="flex items-center flex-wrap text-xs mt-3 text-color">
         <img class="h-[16px]! mr-1" src="/images/vue.png"></img>
-        Prop <span class="mx-1 text-vue"> {{  data.vModel }}</span> support <span class="text-vue ml-1">v-model</span></div>
+        <span class="mr-1 text-vue font-bold"> {{  data.vModel }}</span> prop supports <span class="text-vue font-bold ml-1">v-model</span></div>
     </a>
   </div>
 </template>
