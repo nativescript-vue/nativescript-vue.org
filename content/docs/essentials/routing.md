@@ -215,11 +215,11 @@ In the `Detail` component, add a button that triggers the globally exposed `$nav
 ```
 
 ## Modal View Navigation
+Navigation using modals - detached from the current backstack.
+
+### Showing a modal
 
 Use `$showModal` to show the `Detail` page modally. This function behaves similarly to `$navigateTo`.
-
-To close the modal, call `$modal.close`.
-
 
 ```vue
 //Master.vue
@@ -251,17 +251,16 @@ function showDetailPageModally(){
     <Page>
         <ActionBar title="Detail" />
         <StackLayout>
-            <Button @tap="$modal.close" text="Close" />
+            <Label text="I am a modal!" />
         </StackLayout>
     </Page>
   </Frame>
 </template>
 ```
 
-
 Note: We've wrapped the Detail page in a `<Frame>` element, which allows us to show the `<ActionBar>` as well as navigate further within the modal.
 
-### Passing props to the modal
+#### Passing props to the modal
 
 `$showModal` accepts a second parameter. You can use the parameter to pass in a `props` object to the target component. For example:
 
@@ -269,7 +268,7 @@ Note: We've wrapped the Detail page in a `<Frame>` element, which allows us to s
 $showModal(Detail, { props: { id: 14 }});
 ```
 
-### Forcing the modal to be fullscreen
+#### Forcing the modal to be fullscreen
 
 This option only takes effect on Android, as iOS modals are always fullscreen.
 
@@ -277,9 +276,37 @@ This option only takes effect on Android, as iOS modals are always fullscreen.
 $showModal(Detail, { fullscreen: true, props: { id: 14 }});
 ```
 
-### Returning data from the modal
+### Closing a modal
 
-When calling `$showModal`, a promise is returned which resolves with any data passed to the `$modal.close` function.
+To close a modal we can close it from the modal template using `$modal.close()` or using the `$closeModal` function.
+
+#### Close modal from modal template
+
+```vue
+<!-- inside Detail.vue -->
+<Button @tap="$modal.close()" text="Close" />
+```
+
+#### Close modal using `$closeModal`
+
+You can use the `$closeModal()` function from anywhere in your application, calling this function will close the last opened modal.
+
+```vue
+<script lang="ts" setup>
+import { $closeModal } from "nativescript-vue"
+
+function closeModal(){
+  $closeModal();
+}
+</script>
+<template>
+  <Button @tap="closeModal" text="Close" />
+</template>
+```
+
+#### Returning data from the modal
+
+When calling `$showModal`, a promise is returned which resolves with any data passed to the `$modal.close` or `$closeModal` functions.
 
 In the following example, closing the modal outputs 'Foo' in the console.
 
@@ -287,15 +314,29 @@ In the following example, closing the modal outputs 'Foo' in the console.
 // ... inside Master
 $showModal(Detail, { 
  closeCallback(data, ...args) {
-    // data type is any
-    // args type is any[]
+    console.log(data); // print: Foo
   }
 });
 ```
 
-```HTML
-<!-- inside Detail -->
+Examples:
+<br>
+Using `$modal.close`.
+```vue
+<!-- inside Detail.vue -->
 <Button @tap="$modal.close('Foo')" text="Close" />
 ```
 
+Using `$closeModal`.
+```vue
+<script lang="ts" setup>
+import { $closeModal } from "nativescript-vue"
 
+function closeModal(){
+  $closeModal("Foo");
+}
+</script>
+<template>
+  <Button @tap="closeModal" text="Close" />
+</template>
+```

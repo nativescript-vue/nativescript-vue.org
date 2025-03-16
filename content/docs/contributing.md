@@ -11,7 +11,7 @@ Thank you for your interest in contributing to NativeScript-Vue!
 Follow these steps to start contributing to the NativeScript-Vue codebase:
 
 ### Setup
-Clone the repository to your local environment:
+Clone the [repository](https://github.com/nativescript-vue/nativescript-vue) to your local environment:
 
 ```bash
 git clone https://github.com/nativescript-vue/nativescript-vue.git
