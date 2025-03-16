@@ -161,5 +161,5 @@
 .vp-doc a[href^="https://docs.nativescript.org"], 
 .vp-doc a[href^="https://www.nativescript.org"],
 .vp-doc a[href^="https://nativescript.org"] {
-  color: var(--color-ns); /* aquí pones tu color específico */
+  color: var(--color-ns);
 }
