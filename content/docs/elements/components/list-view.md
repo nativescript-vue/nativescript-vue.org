@@ -22,9 +22,8 @@ contributors: [MisterBrownRSA, rigor789, eddyverbruggen, ikoevska, vallemar]
 ```
 
 ---
+<img src="https://docs.nativescript.org/assets/ListView.DcB5SJ9c.png" alt="drawing" width="200"/>
 
-
-<img src="https://docs.nativescript.org/assets/ListView.2ba2d9f4.png" alt="drawing" width="200"/>
 
 
 ## Using `<ListView>` with multiple `<template>` slots
@@ -117,6 +116,6 @@ The template receives a `ListItem<T>` type object that is composed of the follow
 
 ## Native component
 
-| Android                                                                                           | iOS                                                                          |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [`android.widget.ListView`](https://developer.android.com/reference/android/widget/ListView.html) | [`UITableView`](https://developer.apple.com/documentation/uikit/uitableview) |
+| Android                                                                                      | iOS                                                                          |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`android.widget.ListView`](https://developer.android.com/reference/android/widget/ListView) | [`UITableView`](https://developer.apple.com/documentation/uikit/uitableview) |

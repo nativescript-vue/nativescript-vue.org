@@ -31,3 +31,10 @@ npm run build
 npm run preview
 ```
 
+## Good practices
+### Check broken links
+If you've modified a large portion of the documentation or added/modified links, it's a good idea to ensure that all the documentation links still work. To do this, you can run the command linkinator, which will return a report of the links that can't be resolved.
+```
+npm run build
+npm run check-links
+```
