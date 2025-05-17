@@ -1,6 +1,6 @@
 # Full Native API Access
 
-NativeScript exposes all availabel native APIs directly to your JavaScript. It does not convert your JavaScript to native code (ie. to Java/Objective-C). To understand this concept let's look at some examples.
+NativeScript exposes all available native APIs directly to your JavaScript. It does not convert your JavaScript to native code (ie. to Java/Objective-C). To understand this concept let's look at some examples.
 
 ## iOS
 
